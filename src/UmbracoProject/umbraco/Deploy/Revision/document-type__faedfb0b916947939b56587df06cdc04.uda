@@ -25,7 +25,7 @@
     {
       "Key": "457d62b3-4a00-43ae-af90-ac9d5ef8b316",
       "Name": "Footer Selection",
-      "SortOrder": 1,
+      "SortOrder": 2,
       "Alias": "footerSelection",
       "PropertyTypes": [
         {
