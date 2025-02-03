@@ -1,0 +1,27 @@
+{
+  "Name": "Accordion Section - Accordion List - Block List",
+  "Alias": "",
+  "EditorAlias": "Umbraco.BlockList",
+  "Configuration": {
+    "blocks": [
+      {
+        "contentElementTypeKey": "9dbad273-b39b-41f5-900a-37188dde2dd1",
+        "label": "{{heading}}",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      }
+    ],
+    "validationLimit": {},
+    "useSingleBlockMode": false,
+    "useLiveEditing": false,
+    "useInlineEditingAsDefault": false
+  },
+  "Udi": "umb://data-type/ddddc6b8f8c34bceb0b2ab3d9902fa23",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/9dbad273b39b41f5900a37188dde2dd1"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

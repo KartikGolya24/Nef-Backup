@@ -1,0 +1,29 @@
+{
+  "Name": "Video Section - Bill Cards - Block List",
+  "Alias": "",
+  "EditorAlias": "Umbraco.BlockList",
+  "Configuration": {
+    "blocks": [
+      {
+        "contentElementTypeKey": "822e67b3-c2e9-48a1-a561-4c21702d1ef7",
+        "label": "{{headingText}}",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      }
+    ],
+    "validationLimit": {
+      "max": 3
+    },
+    "useSingleBlockMode": false,
+    "useLiveEditing": false,
+    "useInlineEditingAsDefault": false
+  },
+  "Udi": "umb://data-type/94fc95a56fef46cba4e3a253fda74793",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/822e67b3c2e948a1a5614c21702d1ef7"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

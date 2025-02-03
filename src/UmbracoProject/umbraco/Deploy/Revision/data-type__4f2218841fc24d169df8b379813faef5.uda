@@ -1,0 +1,32 @@
+{
+  "Name": "Nav Menu With SubMenu - Sub Menu List - Block List",
+  "Alias": "",
+  "EditorAlias": "Umbraco.BlockList",
+  "Configuration": {
+    "blocks": [
+      {
+        "contentElementTypeKey": "a1876fd6-2537-4d63-9041-b87c0779cf29",
+        "label": "{{subMenu[0][\"name\"]}}",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      }
+    ],
+    "validationLimit": {},
+    "useSingleBlockMode": false,
+    "useLiveEditing": false,
+    "useInlineEditingAsDefault": false
+  },
+  "Parent": "umb://data-type-container/921fd3ccdb1949549a00ec35730aafe5",
+  "Udi": "umb://data-type/4f2218841fc24d169df8b379813faef5",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/921fd3ccdb1949549a00ec35730aafe5",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/a1876fd625374d639041b87c0779cf29"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

@@ -1,0 +1,65 @@
+{
+  "Name": "Customers Slider Section",
+  "Alias": "customersSliderSection",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "06b7ceb4-35d8-44a9-8d58-6cd2ac0b5bd2",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "004c9bea-5c60-4e01-acee-17e788123dff",
+          "Alias": "headingText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Heading Text"
+        },
+        {
+          "Key": "6354b795-2e25-4382-8586-500d7d3dfbc3",
+          "Alias": "sliderBlocks",
+          "DataType": "umb://data-type/1cb0ba26979a4f4d96ab23ce4e9b413a",
+          "Name": "Slider Blocks",
+          "SortOrder": 2
+        },
+        {
+          "Key": "fed56e5c-4a49-481f-9340-e678e2c22341",
+          "Alias": "descriptionText",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Description Text",
+          "SortOrder": 1
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/76bd13355dca4ed8a43f81835d3cc0c5",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/1cb0ba26979a4f4d96ab23ce4e9b413a",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

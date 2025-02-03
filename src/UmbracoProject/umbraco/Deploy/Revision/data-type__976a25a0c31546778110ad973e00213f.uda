@@ -1,0 +1,79 @@
+{
+  "Name": "Position Images Block - Position - Dropdown",
+  "Alias": "",
+  "EditorAlias": "Umbraco.DropDown.Flexible",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {
+    "multiple": false,
+    "items": [
+      {
+        "id": 1,
+        "value": "cap-doodle"
+      },
+      {
+        "id": 2,
+        "value": "top-left"
+      },
+      {
+        "id": 3,
+        "value": "top-right"
+      },
+      {
+        "id": 4,
+        "value": "right-center"
+      },
+      {
+        "id": 5,
+        "value": "left-center"
+      },
+      {
+        "id": 6,
+        "value": "left-bottom-center"
+      },
+      {
+        "id": 7,
+        "value": "left-bottom"
+      },
+      {
+        "id": 8,
+        "value": "left-corner"
+      },
+      {
+        "id": 9,
+        "value": "left-corner-bottom"
+      },
+      {
+        "id": 10,
+        "value": "center"
+      },
+      {
+        "id": 11,
+        "value": "center-right"
+      },
+      {
+        "id": 12,
+        "value": "right-bottom"
+      },
+      {
+        "id": 13,
+        "value": "top-center"
+      },
+      {
+        "id": 14,
+        "value": "top-left-center"
+      },
+      {
+        "id": 15,
+        "value": "bottom-right-center"
+      },
+      {
+        "id": 16,
+        "value": "bottom-center"
+      }
+    ]
+  },
+  "Udi": "umb://data-type/976a25a0c31546778110ad973e00213f",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

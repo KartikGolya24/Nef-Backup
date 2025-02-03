@@ -1,0 +1,108 @@
+{
+  "Name": "Service Card Block",
+  "Alias": "serviceCardBlock",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/1c7f2a1d72a84e7d8ea2e87876c51379",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "7a3cfebf-0e53-4c8e-9457-43a226d93bf4",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "026c2673-c3a4-4874-baa4-6c8e652a25e5",
+          "Alias": "textColor",
+          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+          "Name": "Text Color",
+          "SortOrder": 6
+        },
+        {
+          "Key": "1244fc2c-54b3-4a40-b37d-7b3648b66be0",
+          "Alias": "cardHeadingText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Card Heading Text",
+          "SortOrder": 2
+        },
+        {
+          "Key": "14fb1e43-bd4d-407b-9edd-07ac39631d55",
+          "Alias": "cardFooter",
+          "DataType": "umb://data-type/e3607360854842d0b73f4e480e6f404e",
+          "Name": "Card Footer",
+          "SortOrder": 5
+        },
+        {
+          "Key": "271f072d-4fb5-47f4-80be-9940d12cd89d",
+          "Alias": "cardButtonBorderColor",
+          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+          "Name": "Card Button Border Color",
+          "SortOrder": 7
+        },
+        {
+          "Key": "43a6798a-3bcf-4e0c-9113-80581a552855",
+          "Alias": "cardDescription",
+          "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+          "Name": "Card Description",
+          "SortOrder": 4
+        },
+        {
+          "Key": "92a1fd79-05ba-4127-af84-4ce6e799d435",
+          "Alias": "cardIcon",
+          "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+          "Name": "Card Icon"
+        },
+        {
+          "Key": "acde5eae-dc45-4bbc-8b94-90d25f9fa569",
+          "Alias": "headingTextColor",
+          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+          "Name": "Heading Text Color",
+          "SortOrder": 3
+        },
+        {
+          "Key": "baa51422-9e90-4f5c-bae5-aacee540faa8",
+          "Alias": "iconBgColor",
+          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+          "Name": "Icon Bg Color",
+          "SortOrder": 1
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/2505797aaaf349159baf599f3df4fb88",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/e3607360854842d0b73f4e480e6f404e",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/1c7f2a1d72a84e7d8ea2e87876c51379",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

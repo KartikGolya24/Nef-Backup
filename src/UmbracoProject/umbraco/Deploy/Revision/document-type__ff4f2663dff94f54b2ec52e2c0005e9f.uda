@@ -1,0 +1,54 @@
+{
+  "Name": "Electricity Exchange Spot Section",
+  "Alias": "electricityExchangeSpotSection",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "3f2ff4ce-aa3f-4acc-af50-20914ed38983",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "4f6101a1-8402-4e03-9ab6-d258d0f50a65",
+          "Alias": "exchangeSpotBlocks",
+          "DataType": "umb://data-type/98f5f24d5cdc4fd7a5fa054bf0ec3673",
+          "Name": "Exchange Spot Blocks",
+          "SortOrder": 1
+        },
+        {
+          "Key": "97d71e9e-bd94-4b10-8e4c-fef3e650a56d",
+          "Alias": "headingText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Heading Text"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/ff4f2663dff94f54b2ec52e2c0005e9f",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/98f5f24d5cdc4fd7a5fa054bf0ec3673",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

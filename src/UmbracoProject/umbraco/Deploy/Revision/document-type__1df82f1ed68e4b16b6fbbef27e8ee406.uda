@@ -1,0 +1,54 @@
+{
+  "Name": "Icon List With Link Block",
+  "Alias": "iconListWithLinkBlock",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/1c7f2a1d72a84e7d8ea2e87876c51379",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "8af503b5-d30b-47c4-9a6b-20a4d2d16c20",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "9bcd8a78-849f-4698-a51d-6c950a3775ea",
+          "Alias": "icon",
+          "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+          "Name": "Icon"
+        },
+        {
+          "Key": "9c75d3cc-b1fb-41f1-95f8-3c50e077e6ee",
+          "Alias": "link",
+          "DataType": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
+          "Name": "Link",
+          "SortOrder": 1
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/1df82f1ed68e4b16b6fbbef27e8ee406",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/1c7f2a1d72a84e7d8ea2e87876c51379",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

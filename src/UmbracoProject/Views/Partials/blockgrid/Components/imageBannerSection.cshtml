@@ -1,0 +1,11 @@
+﻿@using Umbraco.Cms.Core.Models.Blocks
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<ImageBannerSection>>
+@{
+    var content = Model?.Content;
+}
+
+
+<!-----------------------------banner----------------------------->
+<div class="banner">
+    <img src="@content?.Image?.MediaUrl()" class="img-fluid banner" alt="banner">
+</div>

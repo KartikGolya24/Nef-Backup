@@ -1,0 +1,33 @@
+{
+  "Name": "Home Navigation - Footer1 - Block List",
+  "Alias": "",
+  "EditorAlias": "Umbraco.BlockList",
+  "Configuration": {
+    "blocks": [
+      {
+        "contentElementTypeKey": "6bf50ae8-3438-4fc7-9a5c-a5b571deb53d",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      }
+    ],
+    "validationLimit": {
+      "max": 1
+    },
+    "useSingleBlockMode": false,
+    "useLiveEditing": false,
+    "useInlineEditingAsDefault": false
+  },
+  "Parent": "umb://data-type-container/921fd3ccdb1949549a00ec35730aafe5",
+  "Udi": "umb://data-type/1928e9de63ea4062a80d307fec419cf2",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/921fd3ccdb1949549a00ec35730aafe5",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/6bf50ae834384fc79a5ca5b571deb53d"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

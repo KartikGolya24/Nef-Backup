@@ -1,0 +1,32 @@
+{
+  "Name": "Text List With Icon - Text list - Block List",
+  "Alias": "",
+  "EditorAlias": "Umbraco.BlockList",
+  "Configuration": {
+    "blocks": [
+      {
+        "contentElementTypeKey": "2743b0bf-4604-46ab-857f-8d91329f51b4",
+        "label": "{{text}}",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      }
+    ],
+    "validationLimit": {},
+    "useSingleBlockMode": false,
+    "useLiveEditing": false,
+    "useInlineEditingAsDefault": false
+  },
+  "Parent": "umb://data-type-container/921fd3ccdb1949549a00ec35730aafe5",
+  "Udi": "umb://data-type/d427197213184aea960e84fc0abc176e",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/921fd3ccdb1949549a00ec35730aafe5",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/2743b0bf460446ab857f8d91329f51b4"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

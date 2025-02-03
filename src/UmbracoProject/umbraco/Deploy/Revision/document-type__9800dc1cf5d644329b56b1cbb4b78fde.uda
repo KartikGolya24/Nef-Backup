@@ -1,0 +1,111 @@
+{
+  "Name": "Electricity Price Slider Front Cards Block",
+  "Alias": "electricityPriceSliderFrontCardsBlock",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/8048648a322c4669a2f43ab083f3d243",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "0b0c7243-f967-4364-9edb-2b64ba1b0f41",
+      "Name": "Slider Card Content",
+      "SortOrder": 1,
+      "Alias": "sliderCardContent1",
+      "PropertyTypes": [
+        {
+          "Key": "10a3d4ae-ba30-4e26-b629-fdf52c54131e",
+          "Alias": "image",
+          "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+          "Name": "Image"
+        },
+        {
+          "Key": "132817cf-dc52-4f8e-ab7c-920d4542ba0d",
+          "Alias": "listIcon",
+          "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+          "Name": "List Icon",
+          "SortOrder": 1
+        },
+        {
+          "Key": "841dc11e-06b3-4b70-9550-bb997968e1c3",
+          "Alias": "listText",
+          "DataType": "umb://data-type/86da3672f5a640b3a5bce98af677671f",
+          "Name": "List Text",
+          "SortOrder": 2
+        },
+        {
+          "Key": "b242f61f-18ac-4c04-8273-dcf1219238ac",
+          "Alias": "backCardShowBtnText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Back Card Show btn text",
+          "SortOrder": 4
+        }
+      ]
+    },
+    {
+      "Key": "5c213a4f-6195-4e62-ba20-b7a70554a52a",
+      "Name": "Slider Card Head Content",
+      "Alias": "sliderCardHeadContent",
+      "PropertyTypes": [
+        {
+          "Key": "06e14955-8b92-4e67-8e06-7883551780e3",
+          "Alias": "backgroundColor",
+          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+          "Name": "Background Color",
+          "SortOrder": 3
+        },
+        {
+          "Key": "8a72f2b0-3766-4361-966d-2de47b250e02",
+          "Alias": "tagText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Tag Text",
+          "SortOrder": 1
+        },
+        {
+          "Key": "ad59b388-2286-45f8-81e5-80786a776b0b",
+          "Alias": "tagIcon",
+          "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+          "Name": "Tag Icon"
+        },
+        {
+          "Key": "f82cb6d4-da28-4dc8-8eff-751f14917eba",
+          "Alias": "headingText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Heading Text",
+          "SortOrder": 4
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/9800dc1cf5d644329b56b1cbb4b78fde",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/86da3672f5a640b3a5bce98af677671f",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/8048648a322c4669a2f43ab083f3d243",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

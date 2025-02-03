@@ -1,0 +1,73 @@
+{
+  "Name": "Navigation",
+  "Alias": "navigation",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-navigational-arrow color-black",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type/2109f566d115483084137e553c199f68",
+  "CompositionContentTypes": [
+    "umb://document-type/2109f566d115483084137e553c199f68"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "6360fa39-ad81-4dd3-9a6a-21cc294dad29",
+      "Name": "Footer Content",
+      "SortOrder": 1,
+      "Alias": "footerContent",
+      "PropertyTypes": [
+        {
+          "Key": "5d16251f-fc10-448c-bce5-5696dc579826",
+          "Alias": "footer1",
+          "DataType": "umb://data-type/1928e9de63ea4062a80d307fec419cf2",
+          "Name": "Footer1"
+        },
+        {
+          "Key": "ed65e772-338b-43cf-9d0b-9a01951f7052",
+          "Alias": "footer2",
+          "DataType": "umb://data-type/e9536e1d7af345c38998d6a4d4fed337",
+          "Name": "Footer2",
+          "SortOrder": 1
+        }
+      ]
+    },
+    {
+      "Key": "f731ce63-2bf9-485b-bf90-04020243612c",
+      "Name": "Top Header Navigation Content",
+      "Alias": "topHeaderNavigationContent",
+      "PropertyTypes": [
+        {
+          "Key": "f76c4d7e-2dc8-47dd-8ce9-f4009563bc18",
+          "Alias": "navigationItem",
+          "DataType": "umb://data-type/e1210b2f64924c5e9f1cdc77d1839e05",
+          "Name": "Navigation Item"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/e5b2aaf2928f4c6bae8e98f099f9cf27",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/1928e9de63ea4062a80d307fec419cf2",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/e1210b2f64924c5e9f1cdc77d1839e05",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/e9536e1d7af345c38998d6a4d4fed337",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/2109f566d115483084137e553c199f68",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

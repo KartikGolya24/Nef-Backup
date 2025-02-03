@@ -1,0 +1,61 @@
+{
+  "Name": "SEO Controls",
+  "Alias": "sEOControls",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-defrag",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/3a191b3dafc04e468ef53b9ee92592a7",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "6356edae-fa79-48c6-8bce-b0c1492db32a",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "654fbe5a-ccc0-4613-9ab8-4a75d913b57f",
+          "Alias": "metaDescription",
+          "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+          "Name": "Meta Description",
+          "SortOrder": 1
+        },
+        {
+          "Key": "a9e63f2b-a4fa-4a07-8b53-31cf0d2a1e87",
+          "Alias": "metaKeywords",
+          "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+          "Name": "Meta Keywords",
+          "SortOrder": 2
+        },
+        {
+          "Key": "aba543fa-9415-4673-b072-8293c0225e67",
+          "Alias": "metaTitle",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Meta Title"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/c9ab57ded3b44526a7ac22bacf19a079",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/3a191b3dafc04e468ef53b9ee92592a7",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

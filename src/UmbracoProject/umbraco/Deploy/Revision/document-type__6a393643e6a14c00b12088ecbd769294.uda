@@ -1,0 +1,54 @@
+{
+  "Name": "Position Images Block",
+  "Alias": "positionImagesBlock",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/1c7f2a1d72a84e7d8ea2e87876c51379",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "06c20620-94d1-4310-88e4-2e5f578da7f5",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "023e5ca0-ab7b-4ba6-8ddc-6ffcaf89646b",
+          "Alias": "image",
+          "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+          "Name": "Image"
+        },
+        {
+          "Key": "cb5a98a5-720e-44de-8610-7f9e09736e16",
+          "Alias": "position",
+          "DataType": "umb://data-type/976a25a0c31546778110ad973e00213f",
+          "Name": "Position",
+          "SortOrder": 1
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/6a393643e6a14c00b12088ecbd769294",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/976a25a0c31546778110ad973e00213f",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/1c7f2a1d72a84e7d8ea2e87876c51379",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

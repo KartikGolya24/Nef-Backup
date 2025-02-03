@@ -1,0 +1,26 @@
+{
+  "Name": "Global Setting",
+  "Alias": "globalSetting",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-settings-alt color-black",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type/2109f566d115483084137e553c199f68",
+  "CompositionContentTypes": [
+    "umb://document-type/2109f566d115483084137e553c199f68"
+  ],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/5dea8cf098a74ea9a10e7735802cbb43",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/2109f566d115483084137e553c199f68",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

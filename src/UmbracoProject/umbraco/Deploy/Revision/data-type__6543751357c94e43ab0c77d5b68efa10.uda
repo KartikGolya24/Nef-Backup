@@ -1,0 +1,16 @@
+{
+  "Name": "Nav Menu With SubMenu - Sub Menu - Multi URL Picker",
+  "Alias": "",
+  "EditorAlias": "Umbraco.MultiUrlPicker",
+  "Configuration": {
+    "minNumber": 0,
+    "maxNumber": 0,
+    "overlaySize": "small",
+    "hideAnchor": false,
+    "ignoreUserStartNodes": false
+  },
+  "Udi": "umb://data-type/6543751357c94e43ab0c77d5b68efa10",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

@@ -1,0 +1,43 @@
+{
+  "Name": "Electricity Price Slider Block",
+  "Alias": "electricityPriceSliderBlock",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/8048648a322c4669a2f43ab083f3d243",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "02f2e41c-5a47-4248-ae10-311bf49b9bf0",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "1c46c2c6-9eca-45e5-b0d9-39310a5ac076",
+          "Alias": "cards",
+          "DataType": "umb://data-type/a887232dc1564c0f8336bd7acfc50744",
+          "Name": "Cards"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/debb8a46d5c64282b3e3846db80faf11",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/a887232dc1564c0f8336bd7acfc50744",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/8048648a322c4669a2f43ab083f3d243",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

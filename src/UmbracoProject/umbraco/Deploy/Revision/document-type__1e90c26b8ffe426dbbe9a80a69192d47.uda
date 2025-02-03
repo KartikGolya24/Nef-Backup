@@ -1,0 +1,97 @@
+{
+  "Name": "Electricity Price Slider Back Cards Block",
+  "Alias": "electricityPriceSliderBackCardsBlock",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/8048648a322c4669a2f43ab083f3d243",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "114b7006-1702-405e-9ceb-1c403fd7fde0",
+      "Name": "Tag Content",
+      "Alias": "tagContent",
+      "PropertyTypes": [
+        {
+          "Key": "33c5a4b2-cb10-43af-9358-78b1c398ba4a",
+          "Alias": "backgroundColor",
+          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+          "Name": "Background Color",
+          "SortOrder": 2
+        },
+        {
+          "Key": "cc263c3e-4921-4f7b-8ee3-6f88dd942e90",
+          "Alias": "tagText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Tag Text",
+          "SortOrder": 1
+        },
+        {
+          "Key": "d63a035d-28cf-462b-9698-ce96136591d1",
+          "Alias": "tagIcon",
+          "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+          "Name": "Tag Icon"
+        }
+      ]
+    },
+    {
+      "Key": "84a49623-ec0b-4eaa-8349-0f4cec771c72",
+      "Name": "Card Content",
+      "SortOrder": 1,
+      "Alias": "cardContent",
+      "PropertyTypes": [
+        {
+          "Key": "0c7f7d44-c5ed-4c14-af13-a791a43a9074",
+          "Alias": "headingText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Heading Text"
+        },
+        {
+          "Key": "5153440b-5604-48af-8853-8e8cde6d0507",
+          "Alias": "forntBackButtonText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Fornt Back Button Text",
+          "SortOrder": 2
+        },
+        {
+          "Key": "97ef65c6-2226-41e9-8165-d0ae6ce0f2a6",
+          "Alias": "descriptionText",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Description Text",
+          "SortOrder": 1
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/1e90c26b8ffe426dbbe9a80a69192d47",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/8048648a322c4669a2f43ab083f3d243",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

@@ -1,0 +1,31 @@
+{
+  "Name": "Accordion Position Images - Dropdown",
+  "Alias": "",
+  "EditorAlias": "Umbraco.DropDown.Flexible",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {
+    "multiple": false,
+    "items": [
+      {
+        "id": 1,
+        "value": "right-top"
+      },
+      {
+        "id": 2,
+        "value": "left-bottom"
+      },
+      {
+        "id": 3,
+        "value": "right-bottom"
+      },
+      {
+        "id": 4,
+        "value": "left-top"
+      }
+    ]
+  },
+  "Udi": "umb://data-type/92aa64fcb6c54904a912534a0f194e92",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

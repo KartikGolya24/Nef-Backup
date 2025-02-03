@@ -1,0 +1,75 @@
+{
+  "Name": "Sell Electricity",
+  "Alias": "sellElectricity",
+  "DefaultTemplate": "umb://template/04f5f8928468422e96faabfea3968151",
+  "AllowedTemplates": [
+    "umb://template/04f5f8928468422e96faabfea3968151"
+  ],
+  "HistoryCleanup": {},
+  "Icon": "icon-document",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/3e5c1ac20a48406c917e220b4bada863",
+  "CompositionContentTypes": [
+    "umb://document-type/c9ab57ded3b44526a7ac22bacf19a079"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "38811c4c-18fa-4b7d-a1d0-c388f697b8e4",
+      "Name": "Content",
+      "SortOrder": 1,
+      "Alias": "content1",
+      "PropertyTypes": [
+        {
+          "Key": "5e063332-50ef-49b4-bab0-c237d56f85ec",
+          "Alias": "grid",
+          "DataType": "umb://data-type/689cc4f9a73a4e588296e6ee102f3504",
+          "Name": "Grid"
+        }
+      ]
+    },
+    {
+      "Key": "9364f28d-ae52-43dc-8b57-29af6d690862",
+      "Name": "Footer Selection",
+      "SortOrder": 2,
+      "Alias": "footerSelection",
+      "PropertyTypes": [
+        {
+          "Key": "95765ea6-5662-4590-ac38-c30c03c5107f",
+          "Alias": "selectFooter",
+          "DataType": "umb://data-type/0b6a45e744ba430d9da54e46060b9e03",
+          "Name": "Select Footer"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/04f08bbd8b7c463ab064d9b11b8cc51c",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0b6a45e744ba430d9da54e46060b9e03",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/689cc4f9a73a4e588296e6ee102f3504",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/3e5c1ac20a48406c917e220b4bada863",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/c9ab57ded3b44526a7ac22bacf19a079",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://template/04f5f8928468422e96faabfea3968151",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

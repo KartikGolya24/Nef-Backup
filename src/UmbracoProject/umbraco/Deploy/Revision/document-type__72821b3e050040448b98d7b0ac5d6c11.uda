@@ -1,0 +1,131 @@
+{
+  "Name": "Home Navigation",
+  "Alias": "homeNavigation",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-navigational-arrow color-black",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type/7c70e5655197457cb72434df43c5a0b2",
+  "CompositionContentTypes": [
+    "umb://document-type/7c70e5655197457cb72434df43c5a0b2"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "29880a30-6e1b-4664-8ea7-0305de80eaf1",
+      "Name": "Header Content",
+      "Alias": "headerContent",
+      "PropertyTypes": [
+        {
+          "Key": "136c32d4-58a1-4724-a69c-f03c54c2b40d",
+          "Alias": "mitNefButtonBgColor",
+          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+          "Name": "Mit Nef button bg Color",
+          "SortOrder": 7
+        },
+        {
+          "Key": "1c9d3505-3289-48d2-8337-fca93c160c29",
+          "Alias": "mitNefIcon",
+          "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+          "Name": "Mit Nef Icon",
+          "SortOrder": 5
+        },
+        {
+          "Key": "1d02a5dc-3cb0-417a-9511-cc215f98b30a",
+          "Alias": "searchPlaceholder",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Search Placeholder",
+          "SortOrder": 3
+        },
+        {
+          "Key": "48ee6933-3328-46ab-adb2-ee318035c631",
+          "Alias": "mitNefText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Mit Nef Text",
+          "SortOrder": 6
+        },
+        {
+          "Key": "4f381115-b42c-45f0-a66e-fd29511119f1",
+          "Alias": "searchIcon",
+          "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+          "Name": "Search Icon",
+          "SortOrder": 4
+        },
+        {
+          "Key": "8b286726-b04f-4b03-9389-c78944ec9495",
+          "Alias": "mitNefButtonTextColor",
+          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+          "Description": "pick mit nef button text color",
+          "Name": "Mit Nef button Text Color",
+          "SortOrder": 8
+        },
+        {
+          "Key": "953d3e8c-f0f9-4208-bd16-dbca71c8c7cb",
+          "Alias": "navigationItem",
+          "DataType": "umb://data-type/9b6d00a90e5b42afbd338ab1d24bcd5b",
+          "Name": "Navigation Item",
+          "SortOrder": 1
+        },
+        {
+          "Key": "97decb57-3d45-4dee-a6be-159d853f7ab4",
+          "Alias": "menuTextColor",
+          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+          "Name": "Menu Text Color",
+          "SortOrder": 2
+        },
+        {
+          "Key": "a4ae692b-c376-4949-8051-4c3d89fc9725",
+          "Alias": "logo",
+          "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+          "Name": "Logo"
+        }
+      ]
+    },
+    {
+      "Key": "922e5399-9eda-44fe-bd14-3e35be7f9b43",
+      "Name": "Mobile Category Content",
+      "SortOrder": 1,
+      "Alias": "mobileCategoryContent",
+      "PropertyTypes": [
+        {
+          "Key": "cd0cdce1-fb9c-4774-834c-dc382e7547e7",
+          "Alias": "category",
+          "DataType": "umb://data-type/b09a8475ff6a4d3b837c0f6c766e0276",
+          "Name": "Category"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/72821b3e050040448b98d7b0ac5d6c11",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/9b6d00a90e5b42afbd338ab1d24bcd5b",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/b09a8475ff6a4d3b837c0f6c766e0276",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/7c70e5655197457cb72434df43c5a0b2",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

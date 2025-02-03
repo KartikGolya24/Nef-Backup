@@ -1,0 +1,43 @@
+{
+  "Name": "Description Text",
+  "Alias": "descriptionText",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/1c7f2a1d72a84e7d8ea2e87876c51379",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "2c030bc1-b18f-4884-b5d3-fa18556cf9d4",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "d88a07db-af95-4b77-8ae8-b04ce4bbc37e",
+          "Alias": "richTextContent",
+          "DataType": "umb://data-type/1d1ebdddd50d4903a02511c7b2f07cb9",
+          "Name": "RichText Content"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/79f62ef394a04edba3a2641f88e709d6",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/1d1ebdddd50d4903a02511c7b2f07cb9",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/1c7f2a1d72a84e7d8ea2e87876c51379",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

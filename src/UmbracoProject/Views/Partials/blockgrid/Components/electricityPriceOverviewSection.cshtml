@@ -1,0 +1,182 @@
+﻿@using Umbraco.Cms.Core.Models.Blocks
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<ElectricityPriceOverviewSection>>
+
+@{
+    var content = Model?.Content;
+}
+
+<!------------------------------------electricity-price section---------------------------------->
+<div class="electricity-price">
+    <div class="container">
+        <div class="electricity-price-detail">
+            <div class="head-part">
+                <div class="content black-950" style="color:#@content?.TextColor">
+                    <h2 class="black-950 fw-600">@content?.HeadingText</h2>
+                    @Html.Raw(content?.DescriptionText)
+                </div>
+                <button type="button" class="btn dark_blue_bg white" id="customerTypesButton" style="color:#@content?.CustomerTypesButtonTextColor;background-color:#@content?.CustomerTypesButtonBgColor">@content?.CustomerTypesButtonText</button>
+            </div>
+        </div>
+    </div>
+    <div class="electricity-price-slider owl-slider-section">
+        <div class="owl-carousel owl-theme">
+            @if (content?.SliderCards?.Count > 0)
+            {
+                @foreach (var item in content?.SliderCards)
+                {
+                    <div class="customer-card border_black-100">
+                        <div class="card-inner">
+                            @{
+                                var cards = item?.Content as ElectricityPriceSliderBlock;
+                            }
+
+                            @if (cards?.Cards?.Count > 0)
+                            {
+                                foreach (var card in cards?.Cards)
+                                {
+                                    @if (card?.Content?.ContentType?.Alias == "electricityPriceSliderFrontCardsBlock")
+                                    {
+                                        var frontCard = card?.Content as ElectricityPriceSliderFrontCardsBlock;
+                                        <div class="card-front">
+                                            <div class="card-head">
+                                                <div class="tag dark_blue_bg" style="background-color:#@frontCard?.BackgroundColor">
+                                                    <img src="@frontCard?.TagIcon?.MediaUrl()" alt="" class="img-fluid" />
+                                                    @frontCard?.TagText
+                                                </div>
+                                                <h4 class="title black-950 fw-600 mt-16 mb-32">
+                                                    @frontCard?.HeadingText
+                                                </h4>
+                                            </div>
+                                            <div class="card-content">
+                                                <div class="card-image mb-32">
+                                                    <img src="@frontCard?.Image?.MediaUrl()" alt="" class="img-fluid" />
+                                                </div>
+                                                <ul class="card-list">
+                                                    @if (frontCard?.ListText?.Count() > 0)
+                                                    {
+                                                        @foreach (var text in frontCard?.ListText)
+                                                        {
+                                                            <li>
+                                                                @if (frontCard?.ListIcon?.Content != null)
+                                                                {
+                                                                    <img src="@frontCard?.ListIcon?.MediaUrl()" alt="" class="img-fluid" />
+                                                                }
+                                                                @text
+                                                            </li>
+                                                        }
+                                                    }
+                                                </ul>
+                                                <button type="button" class="btn black-950 white-bg border_black-200 mt-32">
+                                                    @frontCard?.BackCardShowBtnText
+                                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <g clip-path="url(#clip0_1_8594)">
+                                                            <path d="M12.0052 22.3502C17.7208 22.3502 22.3541 17.7169 22.3541 12.0013C22.3541 6.28572 17.7208 1.65234 12.0052 1.65234C6.28963 1.65234 1.65625 6.28572 1.65625 12.0013C1.65625 17.7169 6.28963 22.3502 12.0052 22.3502Z"
+                                                                  stroke="#989898"
+                                                                  stroke-width="1.71"
+                                                                  stroke-linecap="round"
+                                                                  stroke-linejoin="round"></path>
+                                                            <path d="M9.61719 16.778H14.3936"
+                                                                  stroke="#989898"
+                                                                  stroke-width="1.71"
+                                                                  stroke-linecap="round"
+                                                                  stroke-linejoin="round"></path>
+                                                            <path d="M12.0062 16.778V11.2055H10.4141"
+                                                                  stroke="#989898"
+                                                                  stroke-width="1.71"
+                                                                  stroke-linecap="round"
+                                                                  stroke-linejoin="round"></path>
+                                                            <path d="M12.0035 7.6223C11.7837 7.6223 11.6055 7.4441 11.6055 7.22427C11.6055 7.00444 11.7837 6.82623 12.0035 6.82623"
+                                                                  stroke="#989898"
+                                                                  stroke-width="1.71"
+                                                                  stroke-linecap="round"
+                                                                  stroke-linejoin="round"></path>
+                                                            <path d="M12.0039 7.62237C12.2237 7.62237 12.4019 7.44416 12.4019 7.22433C12.4019 7.0045 12.2237 6.82629 12.0039 6.82629"
+                                                                  stroke="#989898"
+                                                                  stroke-width="1.71"
+                                                                  stroke-linecap="round"
+                                                                  stroke-linejoin="round"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_1_8594">
+                                                                <rect width="24" height="24" fill="white"></rect>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    }
+                                    else if (card?.Content?.ContentType?.Alias == "electricityPriceSliderBackCardsBlock")
+                                    {
+                                        var backCard = card?.Content as ElectricityPriceSliderBackCardsBlock;
+                                        <div class="card-back">
+                                            <div class="card-head">
+                                                <div class="tag light_blue_bg" style="background-color:#@backCard?.BackgroundColor">
+                                                    <img src="@backCard?.TagIcon?.MediaUrl()" alt="" class="img-fluid" />
+                                                    @backCard?.TagText
+                                                </div>
+                                                <h4 class="title white fw-600 mt-16 mb-32">@backCard?.HeadingText</h4>
+                                            </div>
+                                            <div class="card-content">
+                                                <div class="card-list">
+                                                    @Html?.Raw(backCard?.DescriptionText)
+                                                </div>
+                                                @* <ul class="card-list">
+                                            <li class="white">
+                                                Det er tallsgst at bruge el mellem Id 00 og H 06 og dernst mellem kl 21 og kl 00 og det gmlder
+                                                b5de indlsob of el og transport of el 61 drabolig
+                                            </li>
+                                            <li class="white">
+                                                Sons elkunde beteler du b5de dit elselskab (for indkob of el), dit netselskab (for vansport of
+                                                el PI din tglig) og Hat. (for elefgft)
+                                            </li>
+                                            <li class="white">
+                                                Du ken de bdsrum elts5 reducere p5 bete to ud of cre poster pl din elregrang, hem do
+                                                plenlaegger dir elforbrug deserter.
+                                            </li>
+                                        </ul> *@
+                                                <button type="button" class="btn white dark_blue_bg border_light_blue mt-32">@backCard?.ForntBackButtonText</button>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                            }
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      responsiveClass: true,
+      nav: true,
+      margin: 48,
+      autoplayTimeout: 4000,
+      smartSpeed: 400,
+      items: 3,
+      nav: true,
+      navText: [
+        "<img src='/assets/img/icons/arrow-left.svg' alt=''>",
+        "<img src='/assets/img/icons/arrow-right.svg' alt=''>",
+      ],
+      responsive: {
+        0: {
+          items: 1,
+          nav: false,
+        },
+        600: {
+          items: 2,
+          nav: true,
+        },
+        1000: {
+          items: 3,
+          nav: true,
+        },
+      },
+    });
+</script>

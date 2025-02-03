@@ -1,0 +1,31 @@
+{
+  "Name": "Order nef Power - Order Electricity Blocks - Block List",
+  "Alias": "",
+  "EditorAlias": "Umbraco.BlockList",
+  "Configuration": {
+    "blocks": [
+      {
+        "contentElementTypeKey": "ecb9dcca-21a4-45d3-9739-82e1a88a9336",
+        "settingsElementTypeKey": "69e8ea9e-0a61-4a79-a509-76740b15a531",
+        "label": "{{heading}}",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      }
+    ],
+    "validationLimit": {},
+    "useSingleBlockMode": false,
+    "useLiveEditing": false,
+    "useInlineEditingAsDefault": false
+  },
+  "Udi": "umb://data-type/27971d095b2b4c16b657c0c9a5efcf0e",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/69e8ea9e0a614a79a50976740b15a531"
+    },
+    {
+      "Udi": "umb://document-type/ecb9dcca21a445d3973982e1a88a9336"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

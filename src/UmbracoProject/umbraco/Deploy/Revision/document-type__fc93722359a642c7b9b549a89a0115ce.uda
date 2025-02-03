@@ -1,0 +1,54 @@
+{
+  "Name": "Text List With Icon",
+  "Alias": "textListWithIcon",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/3e7a48fd2cf849f18318195b96c0c9d9",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "ac34d37d-013c-42b0-a2f2-abe61dacd5a3",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "b3b14271-8e45-4860-abde-9f0182df1480",
+          "Alias": "textList",
+          "DataType": "umb://data-type/d427197213184aea960e84fc0abc176e",
+          "Name": "Text list"
+        },
+        {
+          "Key": "edc5d6e0-3232-4422-881c-905a239a0d28",
+          "Alias": "backgroundColor",
+          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+          "Name": "Background Color",
+          "SortOrder": 1
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/fc93722359a642c7b9b549a89a0115ce",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/d427197213184aea960e84fc0abc176e",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/3e7a48fd2cf849f18318195b96c0c9d9",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

@@ -1,0 +1,32 @@
+{
+  "Name": "Home Navigation - Category - Block List",
+  "Alias": "",
+  "EditorAlias": "Umbraco.BlockList",
+  "Configuration": {
+    "blocks": [
+      {
+        "contentElementTypeKey": "bd10efc5-7ec9-4aa5-ad68-ac4c4518cd9c",
+        "label": "{{categoryLink[0][\"name\"]}}",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      }
+    ],
+    "validationLimit": {},
+    "useSingleBlockMode": false,
+    "useLiveEditing": false,
+    "useInlineEditingAsDefault": false
+  },
+  "Parent": "umb://data-type-container/921fd3ccdb1949549a00ec35730aafe5",
+  "Udi": "umb://data-type/b09a8475ff6a4d3b837c0f6c766e0276",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/921fd3ccdb1949549a00ec35730aafe5",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/bd10efc57ec94aa5ad68ac4c4518cd9c"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

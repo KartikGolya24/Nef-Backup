@@ -1,0 +1,65 @@
+{
+  "Name": "Content Block",
+  "Alias": "contentBlock",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/3e7a48fd2cf849f18318195b96c0c9d9",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "6a98e9e3-fad9-4492-b294-6124c8e8a028",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "17b90903-2239-47f3-9368-526d5f434454",
+          "Alias": "headingText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Heading Text"
+        },
+        {
+          "Key": "4c23f428-ccac-45df-9ba0-b4cdcff99591",
+          "Alias": "descriptionText",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Description Text",
+          "SortOrder": 1
+        },
+        {
+          "Key": "9514bb05-bad6-4584-a4b3-c02a44ce6a53",
+          "Alias": "textColor",
+          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+          "Name": "Text Color",
+          "SortOrder": 2
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/cbb58a2bf2eb41d3818b0e28776b4d79",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/3e7a48fd2cf849f18318195b96c0c9d9",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

@@ -1,0 +1,38 @@
+{
+  "Name": "Public Charging Section - Blocks - Block List",
+  "Alias": "",
+  "EditorAlias": "Umbraco.BlockList",
+  "Configuration": {
+    "blocks": [
+      {
+        "contentElementTypeKey": "2b9b5183-7d43-41d0-9b10-4262bb305313",
+        "label": "{{heading}}",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      },
+      {
+        "contentElementTypeKey": "1fe8058c-d8f2-4b74-8fc9-11630264463b",
+        "label": "{{heading}}",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      }
+    ],
+    "validationLimit": {
+      "max": 2
+    },
+    "useSingleBlockMode": false,
+    "useLiveEditing": false,
+    "useInlineEditingAsDefault": false
+  },
+  "Udi": "umb://data-type/976ca5ea77a34107b1b931d27f6e3d16",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/1fe8058cd8f24b748fc911630264463b"
+    },
+    {
+      "Udi": "umb://document-type/2b9b51837d4341d09b104262bb305313"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

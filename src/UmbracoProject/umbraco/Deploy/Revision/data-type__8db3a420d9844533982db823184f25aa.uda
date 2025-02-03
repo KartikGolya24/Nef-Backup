@@ -1,0 +1,37 @@
+{
+  "Name": "Form Section - Blocks - Block List",
+  "Alias": "",
+  "EditorAlias": "Umbraco.BlockList",
+  "Configuration": {
+    "blocks": [
+      {
+        "contentElementTypeKey": "0a9b87e6-6131-4502-9163-eab146befa4c",
+        "label": "{{headingText}}",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      },
+      {
+        "contentElementTypeKey": "3b987f70-d511-4485-b091-f70511b13d04",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      }
+    ],
+    "validationLimit": {
+      "max": 2
+    },
+    "useSingleBlockMode": false,
+    "useLiveEditing": false,
+    "useInlineEditingAsDefault": false
+  },
+  "Udi": "umb://data-type/8db3a420d9844533982db823184f25aa",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/0a9b87e6613145029163eab146befa4c"
+    },
+    {
+      "Udi": "umb://document-type/3b987f70d5114485b091f70511b13d04"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

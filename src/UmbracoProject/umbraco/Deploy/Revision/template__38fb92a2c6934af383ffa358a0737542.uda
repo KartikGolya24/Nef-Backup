@@ -1,0 +1,21 @@
+{
+  "Name": "Buy Electricity",
+  "Alias": "BuyElectricity",
+  "File": "umb://template-file/BuyElectricity.cshtml",
+  "Master": "umb://template/2aa50de1008b4efb8fc84d3fcf929c3a",
+  "Udi": "umb://template/38fb92a2c6934af383ffa358a0737542",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/BuyElectricity.cshtml",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://template/2aa50de1008b4efb8fc84d3fcf929c3a",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.TemplateArtifact",
+  "__version": "13.3.2"
+}

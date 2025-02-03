@@ -1,0 +1,184 @@
+{
+  "Name": "Footer Section Block",
+  "Alias": "footerSectionBlock",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/2b7f4b3cba984f98a0947442dc65acdc",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "77540524-41b3-43e1-9d6d-ea7499cd0ed4",
+      "Name": "Top Footer Content",
+      "Alias": "topFooterContent",
+      "PropertyTypes": [
+        {
+          "Key": "51e9b570-4858-4171-a7fc-58377a64c6f3",
+          "Alias": "backgroundColor",
+          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+          "Description": "Pick a color for top footer",
+          "Name": "Background Color",
+          "SortOrder": 1
+        },
+        {
+          "Key": "981d04a1-e984-4758-805d-4e413cf950d2",
+          "Alias": "buttonList",
+          "DataType": "umb://data-type/c109e9940d1d4f6b8130b37c583d77df",
+          "Name": "Button List",
+          "SortOrder": 2
+        },
+        {
+          "Key": "eab8e477-8913-4f25-991a-6e39e6abc403",
+          "Alias": "headingText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Heading Text"
+        }
+      ]
+    },
+    {
+      "Key": "f6617267-0547-4741-a66b-027bcfd1387c",
+      "Name": "Bottom Footer Content",
+      "SortOrder": 1,
+      "Alias": "bottomFooterContent",
+      "PropertyTypes": [
+        {
+          "Key": "12ada0da-886b-4ad9-a454-66d204b7bc90",
+          "Alias": "mobileImage",
+          "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+          "Name": "Mobile Image",
+          "SortOrder": 8
+        },
+        {
+          "Key": "227c00fa-7b83-4f68-b25c-cab8551d845a",
+          "Alias": "bottomBackgroundColor",
+          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+          "Description": "pick bottom footer backgoround color",
+          "Name": "Background Color",
+          "SortOrder": 1
+        },
+        {
+          "Key": "3eef120d-0eef-4765-8197-cb07e945d2bc",
+          "Alias": "openingTimeHeadLabel",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Add opening time head label here",
+          "Name": "Opening Time Head Label",
+          "SortOrder": 5
+        },
+        {
+          "Key": "41b29ae2-e356-4d08-a32b-45e579704538",
+          "Alias": "socialLinkList",
+          "DataType": "umb://data-type/6a274202b52f4447b1c5c72dd4608dde",
+          "Name": "Social Link List",
+          "SortOrder": 3
+        },
+        {
+          "Key": "5052c9c2-9ca1-42dd-aef7-aa32e4a8e53c",
+          "Alias": "footerLinks",
+          "DataType": "umb://data-type/dc5256dbe96c49e0a0503b511c2408b5",
+          "Name": "Footer Links",
+          "SortOrder": 10
+        },
+        {
+          "Key": "7d256948-39b9-49fd-bd73-730dc6177a0d",
+          "Alias": "openingTimeDescription",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Description": "Add opening time description here",
+          "Name": "Opening Time Text",
+          "SortOrder": 4
+        },
+        {
+          "Key": "90f61801-e27c-4885-87d8-b4c49cfae07b",
+          "Alias": "desktopImage",
+          "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+          "Name": "DeskTop Image",
+          "SortOrder": 7
+        },
+        {
+          "Key": "9f1a7433-199b-4979-b1af-1ac79ddcbbd2",
+          "Alias": "accordionMenuList",
+          "DataType": "umb://data-type/2899a195afb246babc896598df1979e0",
+          "Name": "Accordion Menu List",
+          "SortOrder": 6
+        },
+        {
+          "Key": "da0fa3a3-6097-4daa-a2c8-17157f282e73",
+          "Alias": "footerTextColor",
+          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+          "Name": "Footer Text Color",
+          "SortOrder": 11
+        },
+        {
+          "Key": "f359d9ef-eb0d-4969-89cd-2ddb1e6e5188",
+          "Alias": "copyRightText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Copy Right Text",
+          "SortOrder": 9
+        },
+        {
+          "Key": "f683b412-cbb7-4dba-b8e9-f0840404535c",
+          "Alias": "footerLogo",
+          "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+          "Name": "Footer Logo"
+        },
+        {
+          "Key": "fed71a71-2c3d-42c8-9e27-cd4fc846a789",
+          "Alias": "footerAddress",
+          "DataType": "umb://data-type/ca90c9500aff4e72b976a30b1ac57dad",
+          "Name": "Footer Address",
+          "SortOrder": 2
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/6bf50ae834384fc79a5ca5b571deb53d",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2899a195afb246babc896598df1979e0",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/6a274202b52f4447b1c5c72dd4608dde",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/c109e9940d1d4f6b8130b37c583d77df",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/ca90c9500aff4e72b976a30b1ac57dad",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/dc5256dbe96c49e0a0503b511c2408b5",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/2b7f4b3cba984f98a0947442dc65acdc",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

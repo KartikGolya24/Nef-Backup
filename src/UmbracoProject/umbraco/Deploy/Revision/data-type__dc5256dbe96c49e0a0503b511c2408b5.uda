@@ -1,0 +1,16 @@
+{
+  "Name": "Common Multi URL Picker",
+  "Alias": "",
+  "EditorAlias": "Umbraco.MultiUrlPicker",
+  "Configuration": {
+    "minNumber": 0,
+    "maxNumber": 0,
+    "overlaySize": "small",
+    "hideAnchor": false,
+    "ignoreUserStartNodes": false
+  },
+  "Udi": "umb://data-type/dc5256dbe96c49e0a0503b511c2408b5",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

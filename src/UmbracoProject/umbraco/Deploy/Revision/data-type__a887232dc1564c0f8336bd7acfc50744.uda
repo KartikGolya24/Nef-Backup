@@ -1,0 +1,51 @@
+{
+  "Name": "Electricity Price Overview Section - Slider Cards - Block Grid",
+  "Alias": "",
+  "EditorAlias": "Umbraco.BlockGrid",
+  "Configuration": {
+    "blocks": [
+      {
+        "columnSpanOptions": [],
+        "rowMinSpan": 1,
+        "rowMaxSpan": 1,
+        "allowAtRoot": true,
+        "allowInAreas": true,
+        "areas": [],
+        "contentElementTypeKey": "9800dc1c-f5d6-4432-9b56-b1cbb4b78fde",
+        "label": "{{headingText}}",
+        "editorSize": "medium",
+        "inlineEditing": false,
+        "forceHideContentEditorInOverlay": false
+      },
+      {
+        "columnSpanOptions": [],
+        "rowMinSpan": 1,
+        "rowMaxSpan": 1,
+        "allowAtRoot": true,
+        "allowInAreas": true,
+        "areas": [],
+        "contentElementTypeKey": "1e90c26b-8ffe-426d-bbe9-a80a69192d47",
+        "label": "{{headingText}}",
+        "editorSize": "medium",
+        "inlineEditing": false,
+        "forceHideContentEditorInOverlay": false
+      }
+    ],
+    "blockGroups": [],
+    "validationLimit": {
+      "max": 2
+    },
+    "useLiveEditing": false
+  },
+  "Udi": "umb://data-type/a887232dc1564c0f8336bd7acfc50744",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/1e90c26b8ffe426dbbe9a80a69192d47"
+    },
+    {
+      "Udi": "umb://document-type/9800dc1cf5d644329b56b1cbb4b78fde"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

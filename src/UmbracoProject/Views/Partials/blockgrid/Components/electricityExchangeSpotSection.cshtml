@@ -1,0 +1,38 @@
+﻿@using Umbraco.Cms.Core.Models.Blocks
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<ElectricityExchangeSpotSection>>
+
+@{
+    var content = Model?.Content;
+}
+
+<!-------------------------------------- earn price-minus --------------------->
+
+<div class="electricity-exchange">
+    <div class="container">
+        <div class="section-heading">
+            <h2 class="black-950 fw-600">@content?.HeadingText</h2>
+        </div>
+        <div class="row">
+            @if (content?.ExchangeSpotBlocks?.Count > 0)
+            {
+                @foreach (var item in content?.ExchangeSpotBlocks)
+                {
+                    var blockModel = item?.Content as ExchangeSpotBlock;
+                    <div class="col-lg-3 col-md-6">
+                        <div class="electricity-card dark_blue_bg">
+                            <div class="card-header">
+                                <img src="@blockModel?.Icon?.MediaUrl()" class="img-fluid" alt="">
+                            </div>
+                            <div class="card-body white">
+                                <p class="para fw-700">@blockModel?.Title</p>
+                                <p class="small fw-600">(@blockModel?.SubTitle)</p>
+                                @Html?.Raw(blockModel?.DescriptionText)
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>
+

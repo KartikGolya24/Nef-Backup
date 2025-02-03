@@ -1,0 +1,99 @@
+﻿@using Umbraco.Cms.Core.Models.Blocks
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@using UmbracoProject.App_Code.Models
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    Layout = null;
+    var roots = Umbraco?.ContentAtRoot();
+    var homeRoots = roots?.Where(x => x.IsDocumentType("home"))?.ToList();
+    var globalWebSiteSetting = roots?.Where(x => x.IsDocumentType("globalWebSiteSetting"))?.FirstOrDefault();
+    var globalNavigation = globalWebSiteSetting?.Children<Navigation>()?.FirstOrDefault();
+
+    var homeWebSiteSetting = Model?.Root()?.Children<WebSiteSetting>()?.FirstOrDefault();
+    var navigation = homeWebSiteSetting?.Children<HomeNavigation>()?.FirstOrDefault();
+
+    var footerSelectionValue = string.Empty;
+    if (Model?.HasValue("selectFooter") == true)
+        footerSelectionValue = Model.Value<string>("selectFooter");
+
+    var footer = globalNavigation?.Footer1?.FirstOrDefault()?.Content;
+    var footerName = "Footer1";
+
+    if (!string.IsNullOrWhiteSpace(footerSelectionValue))
+    {
+        if (footerSelectionValue == "Footer2")
+        {
+            footer = globalNavigation?.Footer2?.FirstOrDefault()?.Content;
+            footerName = "Footer2";
+        }
+    }
+
+    FooterModel footerModel = new() { FooterContent = footer, FooterName = footerName};
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nef Fonden - Home</title>
+    <!------------------------ owl slider ------------------------->
+    <link rel="stylesheet" href="~/assets/libs/owl/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="~/assets/libs/owl/css/owl.theme.default.min.css" />
+    <!-------------------style css--------------->
+
+    <link rel="stylesheet" href="~/assets/style/css/style.css">
+    <script src="~/assets/js/jquery.js"></script>
+    <script src="~/assets/libs/owl/js/owl.carousel.min.js"></script>
+</head>
+
+<body>
+
+    <!--------------------------- top-header------------------------->
+    <div class="top-header turquoise_bg">
+        <div class="top-header-tabs">
+            <ul class="tabs-item" id="pills-tab" role="tablist">
+                @foreach (var item in homeRoots)
+                {
+                    <li class="tabs-list">
+                        <a href="@item?.Url()" class="tabs-link" id="privat-tab">@item?.Name</a>
+                    </li>
+                }
+            </ul>
+        </div>
+
+        <div class="top-header-navigation">
+            <ul class="navigation-item">
+                @foreach (var item in globalNavigation?.NavigationItem)
+                {
+                    <li class="navigation-list">
+                        <a href="@item?.Url" class="navigation-link black-800 fw-400">@item?.Name</a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+    <div class="tab-outer" id="pills-tabContent">
+        <div class="Privat-tab fade show active" id="privat" role="tabpanel" aria-labelledby="privat-tab">
+
+            @Html.Partial("_Header", navigation)
+
+            @RenderBody()
+
+            @Html.Partial("_Footer", footerModel)
+            <!-- <div class="tab-pane fade" id="erhverv" role="tabpanel" aria-labelledby="erhverv-tab">.b.</div> -->
+        </div>
+    </div>
+    <!--------------------------jquery------------------>
+   
+
+    <!------------------------bootstrap 5--------------->
+    <script src="~/assets/libs/bs5/js/bootstrap.min.js"></script>
+
+   
+    <script src="~/assets/js/custom.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+{
+  "Name": "Navigation - Navigation Item - Multi URL Picker",
+  "Alias": "",
+  "EditorAlias": "Umbraco.MultiUrlPicker",
+  "Configuration": {
+    "minNumber": 0,
+    "maxNumber": 0,
+    "overlaySize": "small",
+    "hideAnchor": false,
+    "ignoreUserStartNodes": false
+  },
+  "Udi": "umb://data-type/e1210b2f64924c5e9f1cdc77d1839e05",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

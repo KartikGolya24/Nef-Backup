@@ -1,0 +1,65 @@
+{
+  "Name": "Customer Slider Blocks",
+  "Alias": "customerSliderBlocks",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/1c7f2a1d72a84e7d8ea2e87876c51379",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "15878890-b345-4e78-a101-e61b8623e7a6",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "483854d6-6e0c-408f-b785-767cbf6e3321",
+          "Alias": "thumbnail",
+          "DataType": "umb://data-type/ad9f0cf2bda245d59ea1a63cfc873fd3",
+          "Name": "Thumbnail"
+        },
+        {
+          "Key": "6e07d32a-dba7-4080-9fc2-724bf076592a",
+          "Alias": "buttonText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Button Text",
+          "SortOrder": 2
+        },
+        {
+          "Key": "96a05705-95b5-4467-b4cc-e9574d565e25",
+          "Alias": "video",
+          "DataType": "umb://data-type/371720d012a1486281874527cf4e7209",
+          "Name": "Video",
+          "SortOrder": 1
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/63408b6c963d43c5bfc4dfd8d4cb62ab",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/371720d012a1486281874527cf4e7209",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/ad9f0cf2bda245d59ea1a63cfc873fd3",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/1c7f2a1d72a84e7d8ea2e87876c51379",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

@@ -1,0 +1,75 @@
+{
+  "Name": "Colors - Color Picker",
+  "Alias": "",
+  "EditorAlias": "Umbraco.ColorPicker",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {
+    "useLabel": false,
+    "items": [
+      {
+        "id": 1,
+        "value": "{\"value\":\"000000\",\"label\":\"000000\"}"
+      },
+      {
+        "id": 2,
+        "value": "{\"value\":\"284655\",\"label\":\"284655\"}"
+      },
+      {
+        "id": 3,
+        "value": "{\"value\":\"f8f0f7\",\"label\":\"f8f0f7\"}"
+      },
+      {
+        "id": 4,
+        "value": "{\"value\":\"4878a2\",\"label\":\"4878a2\"}"
+      },
+      {
+        "id": 5,
+        "value": "{\"value\":\"eef4f4\",\"label\":\"eef4f4\"}"
+      },
+      {
+        "id": 6,
+        "value": "{\"value\":\"aad29b\",\"label\":\"aad29b\"}"
+      },
+      {
+        "id": 7,
+        "value": "{\"value\":\"192a33\",\"label\":\"192a33\"}"
+      },
+      {
+        "id": 8,
+        "value": "{\"value\":\"37b4b4\",\"label\":\"37b4b4\"}"
+      },
+      {
+        "id": 9,
+        "value": "{\"value\":\"a45699\",\"label\":\"a45699\"}"
+      },
+      {
+        "id": 10,
+        "value": "{\"value\":\"dcdcdc\",\"label\":\"dcdcdc\"}"
+      },
+      {
+        "id": 11,
+        "value": "{\"value\":\"ffffff\",\"label\":\"ffffff\"}"
+      },
+      {
+        "id": 12,
+        "value": "{\"value\":\"464646\",\"label\":\"464646\"}"
+      },
+      {
+        "id": 13,
+        "value": "{\"value\":\"292929\",\"label\":\"292929\"}"
+      },
+      {
+        "id": 14,
+        "value": "{\"value\":\"7c7c7c\",\"label\":\"7c7c7c\"}"
+      },
+      {
+        "id": 15,
+        "value": "{\"value\":\"efefef\",\"label\":\"efefef\"}"
+      }
+    ]
+  },
+  "Udi": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

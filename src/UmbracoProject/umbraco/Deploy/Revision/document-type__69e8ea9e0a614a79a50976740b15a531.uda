@@ -1,0 +1,54 @@
+{
+  "Name": "Setting Model",
+  "Alias": "settingModel",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/a77d75d6f4ff4519b1dedc0b5bad7282",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "06d15f9e-9476-4bd3-98ab-3b334a2aa2a1",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "b834f123-eaa9-4814-9dce-e62687215cd7",
+          "Alias": "paddingTopBottom",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Padding Top Bottom",
+          "SortOrder": 1
+        },
+        {
+          "Key": "d14b409e-3e9b-4097-a32c-aad08a5043fa",
+          "Alias": "backgroundColor",
+          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+          "Name": "Background Color"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/69e8ea9e0a614a79a50976740b15a531",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/a77d75d6f4ff4519b1dedc0b5bad7282",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

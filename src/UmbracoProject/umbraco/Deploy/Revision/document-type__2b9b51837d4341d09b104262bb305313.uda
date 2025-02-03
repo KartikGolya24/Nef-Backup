@@ -1,0 +1,76 @@
+{
+  "Name": "Public Charging Location Link Block",
+  "Alias": "publicChargingLocationLinkBlock",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/1c7f2a1d72a84e7d8ea2e87876c51379",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "e8e6e530-e395-41ed-aa89-025cf055ccbe",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "084d616a-e5e3-4f10-9900-872a1b760c87",
+          "Alias": "description",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Description",
+          "SortOrder": 2
+        },
+        {
+          "Key": "4ca3299e-6658-434d-9437-e52667f1db0a",
+          "Alias": "locationLink",
+          "DataType": "umb://data-type/dc5256dbe96c49e0a0503b511c2408b5",
+          "Name": "location Link",
+          "SortOrder": 3
+        },
+        {
+          "Key": "663d63ee-46a6-47e8-aa7d-1b697a9cfc2a",
+          "Alias": "heading",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Heading",
+          "SortOrder": 1
+        },
+        {
+          "Key": "dc7832c4-7ddd-46fb-aace-d9f1b006a66b",
+          "Alias": "image",
+          "DataType": "umb://data-type/ad9f0cf2bda245d59ea1a63cfc873fd3",
+          "Name": "Image"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/2b9b51837d4341d09b104262bb305313",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/ad9f0cf2bda245d59ea1a63cfc873fd3",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/dc5256dbe96c49e0a0503b511c2408b5",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/1c7f2a1d72a84e7d8ea2e87876c51379",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

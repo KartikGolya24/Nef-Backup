@@ -1,0 +1,30 @@
+{
+  "Name": "WebSite Setting",
+  "Alias": "webSiteSetting",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-settings color-black",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "AllowedChildContentTypes": [
+      "umb://document-type/72821b3e050040448b98d7b0ac5d6c11",
+      "umb://document-type/b6ff1a9d5ac447788911c03d95499710"
+    ]
+  },
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/7c70e5655197457cb72434df43c5a0b2",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/72821b3e050040448b98d7b0ac5d6c11",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://document-type/b6ff1a9d5ac447788911c03d95499710",
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

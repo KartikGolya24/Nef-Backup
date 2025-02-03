@@ -1,0 +1,153 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<HomeNavigation>
+@{
+    var menuWithSubMenu = Model?.NavigationItem?.Where(x => x.Content.HasValue("subMenuList"))?.ToList();
+    var menuWithoutSubMenu = Model?.NavigationItem?.Where(x => !x.Content.HasValue("subMenuList"))?.ToList();
+}
+<!---------------------------header--------------------------->
+<header class="header">
+    <nav class="navbar">
+        <a href="" class="header-logo">
+            <img src="@Model?.Logo?.MediaUrl()" class="img-fluid" alt="header-logo" />
+        </a>
+        <div class="header-nav d-none d-lg-flex">
+            <div class="navbar-nav">
+                <div class="navbar-nav-list">
+                    @if (menuWithSubMenu?.Count > 0)
+                    {
+                        <ul class="nav-item">
+                            @foreach (var item in menuWithSubMenu)
+                            {
+                                var menu = item?.Content as NavMenuWithSubMenu;
+
+                                <li class="nav-list has-submenu">
+                                    <a href="javascript:void(0)" class="nav-link black-950 fw-500" style="color:#@Model?.MenuTextColor">@menu?.Menu?.Name</a>
+
+                                    <ul class="submenu">
+                                        @foreach (var item1 in menu?.SubMenuList)
+                                        {
+                                            var subMenu = item1?.Content as NavSubMenuWithIcon;
+
+                                            <li class="submenu-list-item @(subMenu?.IsItalic==true?"italic":"")" style="color:#@Model?.MenuTextColor">
+                                                <a href="@subMenu?.SubMenu?.Url">@subMenu?.SubMenu?.Name</a>
+                                            </li>
+                                        }
+                                    </ul>
+                                </li>
+                            }
+                        </ul>
+                    }
+                    @if (menuWithoutSubMenu?.Count > 0)
+                    {
+                        <ul class="nav-item">
+                            @foreach (var item in menuWithoutSubMenu)
+                            {
+                                var menu = item?.Content as NavMenuWithSubMenu;
+                                <li class="nav-list">
+                                    <a href="@menu?.Menu?.Url" class="nav-link black-950 fw-500" style="color:#@Model?.MenuTextColor">@menu?.Menu?.Name</a>
+                                </li>
+                            }
+                        </ul>
+                    }
+                </div>
+            </div>
+            <form action="" class="navbar-form">
+                <div class="search-input d-none d-xl-block">
+                    <input type="text" name="" class="form-control search" id="" placeholder="@Model?.SearchPlaceholder" />
+                    <img src="@Model?.SearchIcon?.MediaUrl()" class="img-fluid search-icon" alt="search-icon" />
+                </div>
+                <div class="search-btn d-xl-none">
+                    <img src="@Model?.SearchIcon?.MediaUrl()" class="img-fluid search-icon" alt="search-icon" />
+                </div>
+                <div class="mit-nef-btn btn dark_blue_bg white dark_blue_btn" style="color:#@Model?.MitNefButtonTextColor;background-color:#@Model?.MitNefButtonBgColor;">
+                    <img src="@Model?.MitNefIcon?.MediaUrl()" class="img-fluid" alt="electricity-icon" />
+                    <p class="fw-400">@Model?.MitNefText</p>
+                </div>
+            </form>
+        </div>
+
+        <div class="header-nav d-flex justify-content-end d-lg-none">
+            <div class="mobile-header-nav d-flex d-lg-none align-items-center">
+                <div class="mit-nef-btn btn dark_blue_bg white dark_blue_btn" style="color:#@Model?.MitNefButtonTextColor;background-color:#@Model?.MitNefButtonBgColor;">
+                    <img src="@Model?.MitNefIcon?.MediaUrl()" class="img-fluid" alt="electricity-icon" />
+                    <p class="fw-400">@Model?.MitNefText</p>
+                </div>
+                <div class="search-btn">
+                    <img src="@Model?.SearchIcon?.MediaUrl()" class="img-fluid search-icon" alt="search-icon" />
+                </div>
+                <div class="menu-toggle-icon" id="menu-toggle-icon">
+                    <span></span>
+                </div>
+                <div class="mobile-menu">
+                    <div class="search">
+                        <input type="text" name="search" placeholder="@Model?.SearchPlaceholder" class="form-control search" />
+                        <img src="@Model?.SearchIcon?.MediaUrl()" class="img-fluid search-icon" alt="search-icon" />
+                    </div>
+                    <nav class="navigation">
+                        <ul class="mobile-menu-list">
+                            @if (menuWithSubMenu?.Count > 0)
+                            {
+                                var count = 1;
+                                @foreach (var item in menuWithSubMenu)
+                                {
+                                    var id = $"collapse{count}";
+                                    var menu = item?.Content as NavMenuWithSubMenu;
+                                    <li class="accordion mobile-item">
+                                        <button class="accordion-button nav-item-title fw-600 collapsed"
+                                                type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#@id"
+                                                aria-expanded="true"
+                                                aria-controls="@id">
+                                            @menu?.Menu?.Name
+                                        </button>
+                                        <ul class="accordion-collapse collapse" id="@id" aria-labelledby="@id">
+                                            @foreach (var item1 in menu?.SubMenuList)
+                                            {
+                                                var subMenu = item1?.Content as NavSubMenuWithIcon;
+                                                <li>
+                                                    <a href="@subMenu?.SubMenu?.Url" class="nav-link">
+                                                        <img src="@subMenu?.Icon?.MediaUrl()" alt="icon" class="img-fluid icon" />
+                                                        @subMenu?.SubMenu?.Name
+                                                    </a>
+                                                </li>
+                                            }
+
+                                        </ul>
+                                    </li>
+                                    count++;
+                                }
+                            }
+
+                            @if (menuWithoutSubMenu?.Count > 0)
+                            {
+                                @foreach (var item in menuWithoutSubMenu)
+                                {
+                                    var menu = item?.Content as NavMenuWithSubMenu;
+                                    <li class="mobile-item">
+                                        <a href="@menu?.Menu?.Url" class="nav-item-title fw-600"> @menu?.Menu?.Name</a>
+                                    </li>
+                                }
+                            }
+                        </ul>
+                    </nav>
+                    <div class="mobile-menu-footer">
+                        <div class="flex-Bx">
+                            @foreach (var item in Model?.Category)
+                            {
+                                var category = item?.Content as CategorySectionBlock;
+
+                                <div class="flex-item">
+                                    <div class="icon-wrap border_light_blue border-2">
+                                        <img src="@category?.CategoryIcon?.MediaUrl()" alt="icon" />
+                                    </div>
+                                    <span>@category?.CategoryLink?.Name</span>
+                                </div>
+                                <div class="seperator"></div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

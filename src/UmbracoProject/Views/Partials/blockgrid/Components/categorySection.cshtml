@@ -1,0 +1,33 @@
+﻿@using Umbraco.Cms.Core.Models.Blocks
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<CategorySection>>
+
+@{
+    var content = Model?.Content;
+}
+
+
+<!--------------------------------- category ------------------------------------>
+<div class="category-item">
+    <div class="container-fluid px-0">
+        <div class="row">
+            @if (content?.CategoryBlocks?.Count > 0)
+            {
+                @foreach (var item in content?.CategoryBlocks)
+                {
+                    var category = item?.Content as CategorySectionBlock;
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="category-list">
+                            <a href="@category?.CategoryLink?.Url" class="">
+                                <div class="category-img border_light_blue border-2">
+                                    <img src="@category?.CategoryIcon?.MediaUrl()" class="img-fluid" alt="img" />
+                                </div>
+                                <p class="fw-600 dark_blue">@category?.CategoryLink?.Name</p>
+                            </a>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>

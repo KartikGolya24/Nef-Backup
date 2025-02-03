@@ -1,0 +1,43 @@
+{
+  "Name": "About Buy Electricity Section",
+  "Alias": "aboutBuyElectricitySection",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "c9e9ca22-a63e-4d7b-9cc8-4f4757dcff5a",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "612c0c58-ad3a-4a08-9e34-824ff9bf4ac1",
+          "Alias": "contentBlocks",
+          "DataType": "umb://data-type/79117072f23c477fbae5841fadb4cdc6",
+          "Name": "Content Blocks"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/46abc16fdb79455aa44e827937d59b80",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/79117072f23c477fbae5841fadb4cdc6",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

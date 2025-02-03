@@ -1,0 +1,9 @@
+{
+  "Name": "Custom Block List DataType",
+  "Alias": "",
+  "ContainedObjectType": "30a2a501-1978-4ddb-a57b-f7efed43ba3c",
+  "Udi": "umb://data-type-container/921fd3ccdb1949549a00ec35730aafe5",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContainerArtifact",
+  "__version": "13.3.2"
+}

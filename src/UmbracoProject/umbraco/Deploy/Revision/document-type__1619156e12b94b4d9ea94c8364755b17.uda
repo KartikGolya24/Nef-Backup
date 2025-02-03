@@ -1,0 +1,65 @@
+{
+  "Name": "Order Nef Electricity Section",
+  "Alias": "orderNefElectricitySection",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "f1a95ad1-9f7e-47d7-9773-b10af2a4232a",
+      "Name": "Head Content",
+      "Alias": "headContent1",
+      "PropertyTypes": [
+        {
+          "Key": "565be5c7-0fb2-48de-b9cf-487c0d4dbfc9",
+          "Alias": "headingText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Heading Text"
+        },
+        {
+          "Key": "aab888e5-06b4-40a0-935a-ae4806e7d684",
+          "Alias": "descriptionText",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Description Text",
+          "SortOrder": 1
+        },
+        {
+          "Key": "f354b1ed-0e1c-4c3a-8776-595e38e83b96",
+          "Alias": "orderElectricityBlocks",
+          "DataType": "umb://data-type/27971d095b2b4c16b657c0c9a5efcf0e",
+          "Name": "Order Electricity Blocks",
+          "SortOrder": 2
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/1619156e12b94b4d9ea94c8364755b17",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/27971d095b2b4c16b657c0c9a5efcf0e",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

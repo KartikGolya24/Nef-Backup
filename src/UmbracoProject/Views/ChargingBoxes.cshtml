@@ -1,0 +1,6 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ChargingBoxes>
+@{
+	Layout = "Master.cshtml";
+}
+
+@await Html.GetBlockGridHtmlAsync(Model, "grid")

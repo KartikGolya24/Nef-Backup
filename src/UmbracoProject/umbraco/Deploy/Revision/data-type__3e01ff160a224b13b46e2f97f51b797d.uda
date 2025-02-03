@@ -1,0 +1,16 @@
+{
+  "Name": "Footer Menu Accordion - Menu Items - Multi URL Picker",
+  "Alias": "",
+  "EditorAlias": "Umbraco.MultiUrlPicker",
+  "Configuration": {
+    "minNumber": 0,
+    "maxNumber": 0,
+    "overlaySize": "small",
+    "hideAnchor": false,
+    "ignoreUserStartNodes": false
+  },
+  "Udi": "umb://data-type/3e01ff160a224b13b46e2f97f51b797d",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

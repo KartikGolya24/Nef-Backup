@@ -1,0 +1,43 @@
+{
+  "Name": "Service Card Section",
+  "Alias": "serviceCardSection",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "630c801c-6e0d-4ff6-acd9-c7ae42339e47",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "a034de0d-3a8a-4cc5-8a0b-5495c9f3bea0",
+          "Alias": "cards",
+          "DataType": "umb://data-type/3035a101ad5e4d5cb0dc525e398a0b75",
+          "Name": "Cards"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/107ddf30d663400da98805a78b8c2c8b",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/3035a101ad5e4d5cb0dc525e398a0b75",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

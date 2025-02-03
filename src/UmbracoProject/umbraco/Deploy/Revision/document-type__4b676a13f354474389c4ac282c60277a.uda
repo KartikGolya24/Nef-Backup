@@ -1,0 +1,65 @@
+{
+  "Name": "Contact Section",
+  "Alias": "contactSection",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "4140a4a7-358c-472d-a6be-3edbcf50e5ac",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "2bc1be0f-bba9-40ef-82d9-fb62a00846fa",
+          "Alias": "headingLabel",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Heading Label"
+        },
+        {
+          "Key": "40b336c0-bc8d-43eb-8a84-2df5feb46a7d",
+          "Alias": "sectionContent",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Section Content",
+          "SortOrder": 1
+        },
+        {
+          "Key": "53f55f9d-4e71-43ed-8b5c-a9eb738003b0",
+          "Alias": "buttonList",
+          "DataType": "umb://data-type/2f42fd89a2a44d95aece4e93b933793f",
+          "Name": "Button List",
+          "SortOrder": 2
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/4b676a13f354474389c4ac282c60277a",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2f42fd89a2a44d95aece4e93b933793f",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

@@ -1,0 +1,65 @@
+{
+  "Name": "Footer Menu Accordion",
+  "Alias": "footerMenuAccordion",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science color-black",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/2b7f4b3cba984f98a0947442dc65acdc",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "7c0227bd-864f-4ef3-ad11-3a83185b1c78",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "6136db67-b34a-490b-9ee6-8074ed2b2ae1",
+          "Alias": "color",
+          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+          "Name": "Text Color",
+          "SortOrder": 2
+        },
+        {
+          "Key": "de3a5d84-24c7-4985-ae0b-58c6b9f35ae6",
+          "Alias": "menuItems",
+          "DataType": "umb://data-type/dc5256dbe96c49e0a0503b511c2408b5",
+          "Name": "Menu Items",
+          "SortOrder": 1
+        },
+        {
+          "Key": "e45dbe03-0e0e-47ed-871b-7e5f8388ed12",
+          "Alias": "headText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Head Text"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/28a214f63b6d46fcb4538bbae5b5edc7",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/dc5256dbe96c49e0a0503b511c2408b5",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/2b7f4b3cba984f98a0947442dc65acdc",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

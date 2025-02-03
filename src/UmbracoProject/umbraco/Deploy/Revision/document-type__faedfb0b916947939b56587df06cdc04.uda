@@ -1,0 +1,97 @@
+{
+  "Name": "Home",
+  "Alias": "home",
+  "DefaultTemplate": "umb://template/97dafec00e9b4f79b9dfcf5f15f54a24",
+  "AllowedTemplates": [
+    "umb://template/97dafec00e9b4f79b9dfcf5f15f54a24"
+  ],
+  "HistoryCleanup": {},
+  "Icon": "icon-home color-black",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "AllowedAtRoot": true,
+    "AllowedChildContentTypes": [
+      "umb://document-type/7c70e5655197457cb72434df43c5a0b2",
+      "umb://document-type/bb0eeeba02f54c4c9686896d9dfbc8b9",
+      "umb://document-type/04f08bbd8b7c463ab064d9b11b8cc51c",
+      "umb://document-type/09baeb644add4e8594a63ea521038043"
+    ]
+  },
+  "Parent": "umb://document-type-container/3e5c1ac20a48406c917e220b4bada863",
+  "CompositionContentTypes": [
+    "umb://document-type/c9ab57ded3b44526a7ac22bacf19a079"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "457d62b3-4a00-43ae-af90-ac9d5ef8b316",
+      "Name": "Footer Selection",
+      "SortOrder": 1,
+      "Alias": "footerSelection",
+      "PropertyTypes": [
+        {
+          "Key": "7ecc065b-7bf7-41ae-8ed2-f5592bfc6b8c",
+          "Alias": "selectFooter",
+          "DataType": "umb://data-type/0b6a45e744ba430d9da54e46060b9e03",
+          "Name": "Select Footer"
+        }
+      ]
+    },
+    {
+      "Key": "f4dd139f-ae63-4533-9543-a37a027a3b07",
+      "Name": "Content Section",
+      "SortOrder": 1,
+      "Alias": "contentSection",
+      "PropertyTypes": [
+        {
+          "Key": "8023333d-d7d4-4d94-8076-96a9369dafb9",
+          "Alias": "grid",
+          "DataType": "umb://data-type/689cc4f9a73a4e588296e6ee102f3504",
+          "Name": "Grid"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/faedfb0b916947939b56587df06cdc04",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0b6a45e744ba430d9da54e46060b9e03",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/689cc4f9a73a4e588296e6ee102f3504",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/3e5c1ac20a48406c917e220b4bada863",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/04f08bbd8b7c463ab064d9b11b8cc51c",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://document-type/09baeb644add4e8594a63ea521038043",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://document-type/7c70e5655197457cb72434df43c5a0b2",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://document-type/bb0eeeba02f54c4c9686896d9dfbc8b9",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://document-type/c9ab57ded3b44526a7ac22bacf19a079",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://template/97dafec00e9b4f79b9dfcf5f15f54a24",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

@@ -1,0 +1,66 @@
+﻿@using Umbraco.Cms.Core.Models.Blocks
+@using UmbracoProject.App_Code.Helpers
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<AccordionSection>>
+
+@{
+    var content = Model?.Content;
+}
+
+<!------------------------------------- Accordion Section ----------------------------->
+<div class="turquoise_bg faq-section ">
+    <div class="container">
+        <div class="faq-container">
+            <div class="accordion accordion-flush accordian-section" id="accordionFlushExample">
+                @if (content?.AccordionList?.Count > 0)
+                {
+                    var headingCount = 0;
+                    var collapseCount = 0;
+                    @foreach (var item in content?.AccordionList)
+                    {
+                        var flushHeading = $"flush-heading{headingCount++}";
+                        var flushCollapse = $"flush-collapse{collapseCount++}";
+                        var accordionModel = item?.Content as AccordionBlock;
+                        <div class="accordion-item ">
+                            <h2 class="accordion-header " id="@flushHeading">
+                                <button class="accordion-button collapsed  black-950" type="button" data-bs-toggle="collapse" data-bs-target="#@flushCollapse" aria-expanded="false" aria-controls="@flushCollapse">
+                                    @accordionModel?.Heading
+                                </button>
+                            </h2>
+                            <div id="@flushCollapse" class="accordion-collapse collapse" aria-labelledby="@flushHeading" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body black-700 p-0">
+                                    @accordionModel?.DescriptionText
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+            <div class="faq-contact space_blue">
+                @if (!string.IsNullOrWhiteSpace(content?.ContactTitle?.ToString()))
+                {
+                    @Html?.Raw(content?.ContactTitle)
+                }
+
+                @if (content?.ContactButtons?.Count > 0)
+                {
+                    <div class="multiple-buttons m-auto justify-content-center">
+                        @Html.GetBlockListHtml(content?.ContactButtons)
+                    </div>
+                }
+
+            </div>
+
+        </div>
+        @if (content?.PositionImages?.Count() > 0)
+        {
+            @foreach (var item in content?.PositionImages)
+            {
+                var imageModel = item?.Content as AccordionPositionImages;
+                var position = CommonHelper.GetTagIconPosition(imageModel?.Position);
+                <div class="@position">
+                    <img src="@imageModel?.Image?.MediaUrl()" class="img-fluid" alt="">
+                </div>
+            }
+        }
+    </div>
+</div>

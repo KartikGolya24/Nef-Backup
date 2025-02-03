@@ -1,0 +1,87 @@
+﻿@using Umbraco.Cms.Core.Models.Blocks
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<TwoColumnSection>>
+
+@{
+    var content = Model?.Content;
+    var settings = Model?.Settings as SettingModel;
+}
+
+@if (content?.SectionColumn?.Count > 0)
+{
+    var padding = !string.IsNullOrWhiteSpace(settings?.PaddingTopBottom) ? $"padding:{settings?.PaddingTopBottom} 0px" :"";
+    <div class="alt-section" style="background-color:#@settings?.BackgroundColor;@padding">
+        <div class="container">
+            <div class="row align-items-center">
+                @foreach (var item in content?.SectionColumn)
+                {
+
+                    var alias = item?.Content?.ContentType?.Alias;
+                    @if (alias == "twoColumnContentBlock")
+                    {
+                        var contentBlock = item?.Content as TwoColumnContentBlock;
+                        <div class="col-lg-6">
+                            <div class="section-detail">
+                                <div class="section-content black-950" style="color:#@contentBlock?.TextColor">
+                                    @if (!string.IsNullOrWhiteSpace(contentBlock?.HeadingText))
+                                    {
+                                        <h2 class="fw-600" style="color:#@contentBlock?.HeadingTextColor">@contentBlock?.HeadingText</h2>
+                                    }
+
+                                    @if (contentBlock?.ContentBlocks?.Count > 0)
+                                    {
+                                        @foreach (var block in contentBlock?.ContentBlocks)
+                                        {
+                                            var aliasName = block?.Content?.ContentType?.Alias;
+                                            if (aliasName == "descriptionText")
+                                            {
+                                                var richTextContent = block?.Content as DescriptionText;
+                                                @Html?.Raw(richTextContent?.RichTextContent)
+                                            }
+                                            else if (aliasName == "textListWithIcon")
+                                            {
+                                                var textList = block?.Content as TextListWithIcon;
+                                                @if (textList?.TextList?.Count > 0)
+                                                {
+                                                    <ul class="square_icon_list mt-24">
+                                                        @Html.GetBlockListHtml(textList?.TextList)
+                                                    </ul>
+                                                }
+                                            }
+                                        }
+                                    }
+                                </div>
+
+                                @if (contentBlock?.ButtonList?.Count > 0)
+                                {
+                                    <div class="multiple-buttons">
+                                        @Html.GetBlockListHtml(contentBlock?.ButtonList)
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    }
+                    else if (alias == "twoColumnMediaBlock")
+                    {
+                        var mediaBlock = item?.Content as TwoColumnMediaBlock;
+
+                        <div class="col-lg-6">
+                            <div class="section-img overflow-hidden overflow-md-visible">
+                                <img src="@mediaBlock?.Image?.MediaUrl()" class="img-fluid" alt="img" />
+                                @if (mediaBlock?.PositionImages?.Count > 0)
+                                {
+                                    @foreach (var image in mediaBlock?.PositionImages)
+                                    {
+                                        var imageModel = image?.Content as PositionImagesBlock;
+                                        <div class="section-position-img @imageModel?.Position d-block">
+                                            <img src="@imageModel?.Image?.MediaUrl()" class="img-fluid" alt="" />
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+}

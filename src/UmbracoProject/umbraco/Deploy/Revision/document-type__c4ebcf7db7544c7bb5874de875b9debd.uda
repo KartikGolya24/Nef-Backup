@@ -1,0 +1,43 @@
+{
+  "Name": "Public Charging Section",
+  "Alias": "publicChargingSection",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "808ac6a4-8a45-4cd5-acdd-d31a0bb7be83",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "d1aca0a4-5d50-4540-a7a4-b32e255d0d01",
+          "Alias": "blocks",
+          "DataType": "umb://data-type/976ca5ea77a34107b1b931d27f6e3d16",
+          "Name": "Blocks"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/c4ebcf7db7544c7bb5874de875b9debd",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/976ca5ea77a34107b1b931d27f6e3d16",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

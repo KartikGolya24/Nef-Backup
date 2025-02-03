@@ -1,0 +1,88 @@
+{
+  "Name": "Accordion Section",
+  "Alias": "accordionSection",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "3c2f7f9a-1aaf-42ab-9089-8682ccab1298",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "2f93358b-0fbd-4463-9dee-93c81f6dacfc",
+          "Alias": "headingText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Heading Text"
+        },
+        {
+          "Key": "4ae79efc-898a-49d0-8ee7-3dc2428dea04",
+          "Alias": "accordionList",
+          "DataType": "umb://data-type/ddddc6b8f8c34bceb0b2ab3d9902fa23",
+          "Name": "Accordion List",
+          "SortOrder": 1
+        },
+        {
+          "Key": "8fc1673d-5230-47f7-8b59-4e6a21460890",
+          "Alias": "contactButtons",
+          "DataType": "umb://data-type/2f42fd89a2a44d95aece4e93b933793f",
+          "Name": "Contact Buttons",
+          "SortOrder": 3
+        },
+        {
+          "Key": "cd44eea0-5d95-4ae1-9060-738e2a807350",
+          "Alias": "contactTitle",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Contact Title",
+          "SortOrder": 2
+        },
+        {
+          "Key": "de3f04bf-0d00-4a72-b1b7-556a43b58231",
+          "Alias": "positionImages",
+          "DataType": "umb://data-type/4d5ef22553b746cb8adf329536e76445",
+          "Mandatory": true,
+          "Name": "Position Images",
+          "SortOrder": 4
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/4527cc25f8d843dc85d07c220ffe955c",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2f42fd89a2a44d95aece4e93b933793f",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/4d5ef22553b746cb8adf329536e76445",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/ddddc6b8f8c34bceb0b2ab3d9902fa23",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

@@ -1,0 +1,44 @@
+{
+  "Name": "Two Column Section",
+  "Alias": "twoColumnSection",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "e0d64c56-92f7-4079-9ea7-f87104af79fd",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "e6e42dbe-2468-4f00-a5b7-afe269ab5c11",
+          "Alias": "sectionColumn",
+          "DataType": "umb://data-type/4aad96a05dee420e9bdd1cf368a922f3",
+          "Description": "add two column for two column section",
+          "Name": "Section Column"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/84d652e4246e42cba0d665dd910a8201",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/4aad96a05dee420e9bdd1cf368a922f3",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

@@ -1,0 +1,90 @@
+{
+  "Name": "Video Section",
+  "Alias": "videoSection",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "75a79820-86cd-4b2f-a67d-715a32f33451",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "1bc7b6b0-42bb-4975-9ef1-f5f5c4323ff4",
+          "Alias": "billCards",
+          "DataType": "umb://data-type/94fc95a56fef46cba4e3a253fda74793",
+          "Name": "Bill Cards",
+          "SortOrder": 5
+        },
+        {
+          "Key": "259d69e7-c5fe-44d5-b365-f5a7e683d0b1",
+          "Alias": "video",
+          "DataType": "umb://data-type/371720d012a1486281874527cf4e7209",
+          "Name": "Video",
+          "SortOrder": 1
+        },
+        {
+          "Key": "472b7568-7d0a-4e65-8f59-2bd5f7a72e95",
+          "Alias": "videoButtonText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Video Button Text",
+          "SortOrder": 2
+        },
+        {
+          "Key": "4e11da43-ac3d-477e-8571-f8e92f5b5bee",
+          "Alias": "positionImages",
+          "DataType": "umb://data-type/d8a26c36dc9143c3a0917a3a69610a3f",
+          "Name": "Position Images",
+          "SortOrder": 3
+        },
+        {
+          "Key": "607da8a3-2d08-4e6d-b287-8c10409359df",
+          "Alias": "videoTopHeading",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Video Top Heading"
+        },
+        {
+          "Key": "7678b1e1-6ecc-4570-bc50-80a7f967eaa3",
+          "Alias": "videoBottomHeading",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Video Bottom Heading",
+          "SortOrder": 4
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/6e701af81fc64449b08daa89a54c69ac",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/371720d012a1486281874527cf4e7209",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/94fc95a56fef46cba4e3a253fda74793",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/d8a26c36dc9143c3a0917a3a69610a3f",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

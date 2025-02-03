@@ -1,0 +1,92 @@
+﻿@using Umbraco.Cms.Core.Models.Blocks
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<OrderNefElectricitySection>>
+@{
+    var content = Model?.Content;
+}
+
+<!-------------------------------------- order nef power --------------------->
+<div class="order-nef-power">
+    <div class="container">
+        <div class="section-heading">
+            <h2 class="black-950 fw-600">@content?.HeadingText</h2>
+            <p class="black-950">@content?.DescriptionText</p>
+        </div>
+        <div class="row">
+            @if (content?.OrderElectricityBlocks?.Count > 0)
+            {
+                var count = 1;
+                @foreach (var item in content?.OrderElectricityBlocks)
+                {
+                    var electricityBlock = item?.Content as OrderNefElectricityBlock;
+                    var setting = item?.Settings as SettingModel;
+                    
+                    <div class="col-md-6">
+                        <div class="order-nef-card d-flex h-100 flex-column justify-content-between" style="background-color:#@setting?.BackgroundColor">
+                            <div class="card-body">
+                                <h3 class="fw-100" style="color:#@electricityBlock?.TextColor">@electricityBlock?.Heading</h3>
+                                <ul style="color:#@electricityBlock?.TextColor">
+                                    @if (electricityBlock?.TextList?.Count() > 0)
+                                    {
+                                        @foreach (var list in electricityBlock.TextList)
+                                        {
+                                            <li>
+                                                <p class="">@list</p>
+                                            </li>
+                                        }
+                                    }
+                                </ul>
+                            </div>
+                            <div class="card-footer">
+                                <div class="multiple-buttons m-auto">
+                                    @Html.GetBlockListHtml(electricityBlock?.LinkList)
+                                    @if (!string.IsNullOrWhiteSpace(electricityBlock?.SeeMoreButtonText))
+                                    {
+                                        <button type="button"
+                                                class="btn border_black-200 light_blue_bg white"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#readMorePopup@(count)" style="border:1px solid #@electricityBlock?.ButtonBorderColor">
+                                            @electricityBlock?.SeeMoreButtonText
+                                        </button>
+                                    }
+                                </div>
+                            </div>
+
+                            @if (electricityBlock?.PositionImages?.Count > 0)
+                            {
+                                @foreach (var image in electricityBlock?.PositionImages)
+                                {
+                                    var imageModel = image?.Content as PositionImagesBlock;
+                                    <div class="position-img @imageModel?.Position">
+                                        <img src="@imageModel?.Image?.MediaUrl()" class="img-fluid" alt="" />
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </div>
+
+                    <!-------------------------------------------Modal ------------------------------->
+                    <div class="modal fade"
+                         id="readMorePopup@(count)"
+                         data-bs-keyboard="false"
+                         tabindex="-1"
+                         aria-labelledby="staticBackdropLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <h4 class="modal-title" id="staticBackdropLabel">@electricityBlock?.ModelHeadingText</h4>
+                                </div>
+                                <div class="modal-body">
+                                    @Html?.Raw(electricityBlock?.ModelDescriptionText)
+                                    <a href="@electricityBlock?.ModelLink?.Url" class="btn dark_blue_bg white">@electricityBlock?.ModelLink?.Name</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    count++;
+                }
+            }
+        </div>
+    </div>
+</div>

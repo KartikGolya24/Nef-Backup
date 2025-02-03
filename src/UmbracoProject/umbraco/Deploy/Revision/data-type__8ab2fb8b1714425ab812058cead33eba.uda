@@ -1,0 +1,26 @@
+{
+  "Name": "Electricity Price Overview Section - Slider Cards - Block List",
+  "Alias": "",
+  "EditorAlias": "Umbraco.BlockList",
+  "Configuration": {
+    "blocks": [
+      {
+        "contentElementTypeKey": "debb8a46-d5c6-4282-b3e3-846db80faf11",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      }
+    ],
+    "validationLimit": {},
+    "useSingleBlockMode": false,
+    "useLiveEditing": false,
+    "useInlineEditingAsDefault": false
+  },
+  "Udi": "umb://data-type/8ab2fb8b1714425ab812058cead33eba",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/debb8a46d5c64282b3e3846db80faf11"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

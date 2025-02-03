@@ -1,0 +1,76 @@
+{
+  "Name": "Public Charging  App Info Block",
+  "Alias": "publicChargingAppInfoBlock",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/1c7f2a1d72a84e7d8ea2e87876c51379",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "113c2778-df91-4944-beab-b48999ee3442",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "6aea40f0-a5d8-4eb1-894d-053415e323d3",
+          "Alias": "sectionImage",
+          "DataType": "umb://data-type/ad9f0cf2bda245d59ea1a63cfc873fd3",
+          "Name": "Section Image",
+          "SortOrder": 3
+        },
+        {
+          "Key": "a388ab84-7819-428c-abbc-b5f3138d32ef",
+          "Alias": "description",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Description",
+          "SortOrder": 1
+        },
+        {
+          "Key": "ed7d4c4a-b08c-471f-a78c-0b1ca767324c",
+          "Alias": "heading",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Heading"
+        },
+        {
+          "Key": "fd21904c-38a4-429f-8402-1efd22967a2c",
+          "Alias": "buttonList",
+          "DataType": "umb://data-type/2f42fd89a2a44d95aece4e93b933793f",
+          "Name": "Button List",
+          "SortOrder": 2
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/1fe8058cd8f24b748fc911630264463b",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2f42fd89a2a44d95aece4e93b933793f",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/ad9f0cf2bda245d59ea1a63cfc873fd3",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/1c7f2a1d72a84e7d8ea2e87876c51379",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

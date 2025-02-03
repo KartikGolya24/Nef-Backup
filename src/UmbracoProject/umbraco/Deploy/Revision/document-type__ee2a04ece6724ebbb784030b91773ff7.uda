@@ -1,0 +1,55 @@
+{
+  "Name": "Accordion Position Images",
+  "Alias": "accordionPositionImages",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/3e7a48fd2cf849f18318195b96c0c9d9",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "ca997b6e-5b24-4bbe-9555-484cd25c08c0",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "71c1d4dc-17f2-4ded-9f2a-389f8fa775d6",
+          "Alias": "position",
+          "DataType": "umb://data-type/92aa64fcb6c54904a912534a0f194e92",
+          "Mandatory": true,
+          "Name": "Position",
+          "SortOrder": 1
+        },
+        {
+          "Key": "ee986e7d-3d8d-4759-8e11-fb0631ffc0f3",
+          "Alias": "image",
+          "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
+          "Name": "Image"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/ee2a04ece6724ebbb784030b91773ff7",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/92aa64fcb6c54904a912534a0f194e92",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/3e7a48fd2cf849f18318195b96c0c9d9",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

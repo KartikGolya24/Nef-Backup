@@ -1,0 +1,65 @@
+{
+  "Name": "Footer Social Link",
+  "Alias": "footerSocialLink",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/2b7f4b3cba984f98a0947442dc65acdc",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "6977df39-d400-41c7-aea2-509ffec2b761",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "309ffb58-d7b6-4626-9f0e-a284cdc73556",
+          "Alias": "socialLink",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Social Link",
+          "SortOrder": 1
+        },
+        {
+          "Key": "aa803cd0-3b07-42ed-9c98-e29efd850564",
+          "Alias": "icon",
+          "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+          "Name": "Icon"
+        },
+        {
+          "Key": "c966a5f3-b6c6-4f9f-9ab2-d83213155ced",
+          "Alias": "backgroundColor",
+          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+          "Name": "Background Color",
+          "SortOrder": 2
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/a78a6493b4204ada9d6d4090de9a1b06",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/2b7f4b3cba984f98a0947442dc65acdc",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

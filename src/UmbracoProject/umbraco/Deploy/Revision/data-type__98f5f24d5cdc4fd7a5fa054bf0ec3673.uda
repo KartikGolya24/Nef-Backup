@@ -1,0 +1,29 @@
+{
+  "Name": "Electricity Exchange Spot - Exchange Spot Blocks - Block List",
+  "Alias": "",
+  "EditorAlias": "Umbraco.BlockList",
+  "Configuration": {
+    "blocks": [
+      {
+        "contentElementTypeKey": "2851a657-7184-4c37-af77-a61270daf453",
+        "label": "{{title}}",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      }
+    ],
+    "validationLimit": {
+      "max": 4
+    },
+    "useSingleBlockMode": false,
+    "useLiveEditing": false,
+    "useInlineEditingAsDefault": false
+  },
+  "Udi": "umb://data-type/98f5f24d5cdc4fd7a5fa054bf0ec3673",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/2851a65771844c37af77a61270daf453"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

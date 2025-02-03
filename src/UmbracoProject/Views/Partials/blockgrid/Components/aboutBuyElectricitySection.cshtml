@@ -1,0 +1,50 @@
+﻿@using Umbraco.Cms.Core.Models.Blocks
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<AboutBuyElectricitySection>>
+@{
+    var content = Model?.Content;
+}
+
+<div class="container">
+    <div class="electricity-banner text-center">
+        <div class="row align-items-center">
+            @if (content?.ContentBlocks?.Count > 0)
+            {
+                @foreach (var item in content?.ContentBlocks)
+                {
+                    var alias = item?.Content?.ContentType?.Alias;
+                    if (alias == "contentBlock")
+                    {
+                        var contentModel = item?.Content as ContentBlock;
+                        <div class="col-md-9">
+                            <div class="content" style="color:#@contentModel?.TextColor">
+                                <h1>@contentModel?.HeadingText</h1>
+                                @Html.Raw(contentModel?.DescriptionText)
+                            </div>
+                        </div>
+                    }
+                    else if (alias == "textListWithIcon")
+                    {
+                        var contentModel = item?.Content as TextListWithIcon;
+                        <div class="col-md-3">
+                            <ul class="electricity-banner-list turquoise_bg" style="background-color:#@contentModel?.BackgroundColor">
+                                
+                                @if (contentModel?.TextList?.Count > 0)
+                                {
+                                    @foreach (var text in contentModel?.TextList)
+                                    {
+                                        var list = text?.Content as TextWithIcon;
+                                        <li>
+                                            <img src="@list?.Icon?.MediaUrl()" class="img-fluid" alt="img" />
+                                            <p class="para" style="color:#@list?.TextColor">@list?.Text</p>
+                                        </li>
+                                    }
+                                }
+                            </ul>
+                        </div>
+                    }
+                }
+            }
+        </div>
+    </div>
+</div>
+

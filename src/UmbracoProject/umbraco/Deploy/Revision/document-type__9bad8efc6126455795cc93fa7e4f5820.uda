@@ -1,0 +1,107 @@
+{
+  "Name": "Electricity Price Overview Section",
+  "Alias": "electricityPriceOverviewSection",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "73b60adc-14e1-479a-bb06-7dbbcbef2d4d",
+      "Name": "Electricity Price Detail",
+      "Alias": "electricityPriceDetail",
+      "PropertyTypes": [
+        {
+          "Key": "3ccc604a-9815-4baa-a809-ba706d6d9a5f",
+          "Alias": "descriptionText",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Description Text",
+          "SortOrder": 1
+        },
+        {
+          "Key": "76eb502d-0422-464c-a612-2d6467e22c27",
+          "Alias": "textColor",
+          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+          "Name": "Text Color",
+          "SortOrder": 2
+        },
+        {
+          "Key": "87dae4b2-2e29-41a3-8da5-5071b51052f5",
+          "Alias": "customerTypesButtonBgColor",
+          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+          "Description": "pick customer types button bg color",
+          "Name": "Button Bg Color",
+          "SortOrder": 5
+        },
+        {
+          "Key": "94672423-206c-45da-a110-b74108dc20de",
+          "Alias": "customerTypesButtonTextColor",
+          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+          "Description": "pick customer types button text color",
+          "Name": "Button Text color",
+          "SortOrder": 4
+        },
+        {
+          "Key": "e424ff65-c339-4280-97a4-2f02404f21b9",
+          "Alias": "headingText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Heading Text"
+        },
+        {
+          "Key": "f4ce2abc-fea1-4ffa-b4d9-004761945317",
+          "Alias": "customerTypesButtonText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "enter customer types button text",
+          "Name": "Customer Types Button Text",
+          "SortOrder": 3
+        }
+      ]
+    },
+    {
+      "Key": "c45eeb80-c69f-4c87-a729-7fb2562a7c02",
+      "Name": "Electricity Price Slider",
+      "SortOrder": 1,
+      "Alias": "electricityPriceSlider",
+      "PropertyTypes": [
+        {
+          "Key": "ecbe5e44-bf8c-495a-a548-dc8686e662f2",
+          "Alias": "sliderCards",
+          "DataType": "umb://data-type/8ab2fb8b1714425ab812058cead33eba",
+          "Name": "Slider Cards"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/9bad8efc6126455795cc93fa7e4f5820",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/8ab2fb8b1714425ab812058cead33eba",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

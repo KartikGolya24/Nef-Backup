@@ -1,0 +1,479 @@
+.electricity-exchange {
+    padding: 64px 0px;
+
+    .row {
+        margin: 0 -8px;
+
+        [class*=col-] {
+            padding: 0 8px;
+        }
+    }
+
+    .electricity-card {
+        padding: 16px;
+        border-radius: 16px;
+        height: 100%;
+
+        .card-header {
+            margin-bottom: 24px;
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            p {
+                &.small {
+                    font-size: 14px;
+                    line-height: 32px;
+                    margin-bottom: 8px;
+                }
+
+                &.white:not(.fw-700) {
+                    line-height: 25px;
+                }
+            }
+        }
+    }
+
+}
+
+.alt-contact {
+    border-bottom: 1px solid $black-100;
+    padding: 64px 0px;
+
+    &.sell-electricity {
+        .section-detail {
+            .section-content {
+                h2 {
+                    max-width: 545px;
+                }
+
+                p {
+                    max-width: 512px;
+                }
+            }
+        }
+    }
+
+    .section-detail {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        max-width: 512px;
+
+        &.mx-w-545 {
+            max-width: 545px;
+        }
+
+        .section-content {
+            h2 {
+                margin-bottom: 16px;
+            }
+
+            p {
+                max-width: 512px;
+                margin-bottom: 16px;
+
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+
+    .contact-form {
+        padding: 24px;
+        border-radius: 16px;
+        max-width: 600px;
+        margin: auto;
+        height: 100%;
+
+        .row {
+            margin: 0px -8px;
+        }
+
+        .row>* {
+            padding-right: 8px;
+            padding-left: 8px;
+            gap: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        &:last-child {}
+
+        .btn {
+            margin-top: 16px;
+        }
+
+        .form-submitted {
+            padding: 137px 44px;
+            text-align: center;
+
+            p {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+}
+
+.electricity-banner {
+    padding: 64px 0px;
+
+    .col-md-3 {
+        width: 25.16%;
+    }
+
+    .col-md-9 {
+        width: 74.84%;
+    }
+
+    .content {
+        text-align: left;
+        max-width: 720px;
+
+        p {
+            margin-top: 40px;
+        }
+    }
+
+    .electricity-banner-list {
+        border-radius: 16px;
+        padding: 24px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        li {
+            display: flex;
+            align-items: center;
+            text-align: left;
+
+            img {
+                width: 24px;
+            }
+
+            p {
+                padding-left: 16px;
+            }
+        }
+    }
+}
+
+.order-nef-power {
+    padding: 64px 0px;
+
+    .row {
+        margin: 0 -12px;
+
+        [class*=col-] {
+            padding: 0 12px;
+        }
+    }
+
+    .section-heading {
+        margin-bottom: 96px;
+
+        h2 {
+            margin-bottom: 8px;
+        }
+    }
+
+    .order-nef-card {
+        padding: 32px;
+        border-radius: 16px;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: $transition;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #000000, $alpha: 0.1);
+            opacity: 0;
+            visibility: hidden;
+            border-radius: 16px;
+        }
+
+        .position-img {
+            width: max-content;
+            position: absolute;
+            top: 32px;
+            right: 32px;
+        }
+
+        .card-body {
+            margin-bottom: 63px;
+            max-width: 288px;
+            position: relative;
+            z-index: 1;
+
+            h3 {
+                margin-bottom: 32px;
+            }
+
+            ul {
+                padding-left: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                li {
+                    list-style: inherit;
+                }
+            }
+        }
+
+        .card-footer {
+            position: relative;
+            z-index: 1;
+
+            .btn.light_blue_bg {
+                &:hover {
+                    background-color: $white;
+                    color: $black-950;
+                }
+            }
+        }
+
+        &:hover {
+            &::after {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
+
+.electricity-price {
+    padding: 64px 0px;
+
+    .electricity-price-detail {
+        .head-part {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .content {
+                max-width: 960px;
+
+                h2 {
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+
+    .electricity-price-slider {
+        .owl-carousel {
+            .owl-stage-outer {
+                .owl-stage {
+                    height: auto;
+                }
+            }
+        }
+
+        .customer-card {
+            padding: 32px;
+            border-radius: 16px;
+            transition: $transition;
+            width: 100%;
+            height: 810px;
+            perspective: 1000px;
+
+            .card-inner {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                transition: transform 0.6s;
+                transform-style: preserve-3d;
+
+                .card-head {
+                    .tag {
+                        display: inline-flex;
+                        align-items: center;
+                        padding: 8px;
+                        border-radius: 8px;
+                        gap: 8px;
+                        color: $white;
+
+                        img {
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+
+                    .title {
+                        min-height: 74px;
+                    }
+                }
+
+                .card-content {
+                    .card-image {
+                        img {
+                            border-radius: 16px;
+                        }
+                    }
+
+                    .card-list {
+                        li {
+                            font-size: 18px;
+                            line-height: 32px;
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
+
+                            &:not(:last-child) {
+                                margin-bottom: 8px;
+                            }
+
+                            svg {
+                                flex-shrink: 0;
+                            }
+
+                            img {
+                                width: 32px;
+                                height: 32px;
+                                flex-shrink: 0;
+                            }
+                        }
+                    }
+                }
+
+                .card-front,
+                .card-back {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
+                    display: flex;
+                    flex-direction: column;
+                    transition: $transition;
+
+                    .card-content {
+                        height: 100%;
+                        flex-direction: column;
+                        display: flex;
+
+                        .card-list {
+                            flex: 1;
+                        }
+                    }
+                }
+
+                .card-back {
+                    transform: rotateY(180deg);
+
+                    .card-head {
+                        .title {
+                            font-style: italic;
+                        }
+                    }
+
+                    .card-content {
+                        .card-list {
+                            li:not(:last-child) {
+                                margin-bottom: 32px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.show-details {
+                background-color: $dark_blue;
+
+                .card-inner {
+                    transform: rotateY(180deg);
+                }
+            }
+        }
+    }
+}
+
+.electricity-bill {
+    padding: 64px 0px;
+    border-bottom: 1px solid $black-100;
+
+    .row {
+        margin: 0 -28px;
+
+        [class*=col-] {
+            padding: 0 28px;
+        }
+    }
+
+    .section-heading {
+        h2 {
+            margin-bottom: 64px;
+        }
+    }
+
+    .electricity-bill-detail {
+
+        // padding: 0px 151px;
+        .video-img {
+            max-width: 960px;
+            margin: 0px auto 96px;
+            width: 100%;
+            height: 560px;
+            border-radius: 16px;
+        }
+
+        .electricity-bill-list {
+            padding: 0 55px;
+
+            .electricity-bill-card {
+                .card-header {
+                    width: 48px;
+                    height: 48px;
+                    padding: 12px;
+                    border-radius: 8px;
+                    margin-bottom: 32px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    svg {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+
+                .card-body {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    padding-right: 22px;
+
+                    ul {
+                        padding-left: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 12px;
+
+                        li {
+                            list-style: inherit;
+
+                            &::marker {
+                                color: $light_blue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.home-charging-section {}

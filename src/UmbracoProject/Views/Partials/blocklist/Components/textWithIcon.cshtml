@@ -1,0 +1,11 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem<TextWithIcon>>;
+@{
+    var content = Model?.Content;
+}
+
+<li>
+    <span class="light_blue_bg" style="background-color:#@content?.IconBgColor">
+        <img src="@content?.Icon?.MediaUrl()" class="img-fluid" alt="" />
+    </span>
+    <p class="@(content?.IsItalic == true ? "italic" : "")" style="color:#@content?.TextColor">@content?.Text</p>
+</li>

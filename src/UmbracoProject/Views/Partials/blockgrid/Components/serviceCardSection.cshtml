@@ -1,0 +1,52 @@
+﻿@using Umbraco.Cms.Core.Models.Blocks
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<ServiceCardSection>>
+@{
+    var content = Model?.Content?.Cards;
+}
+
+<div class="service-card">
+    <div class="container">
+        @if (content?.Count > 0)
+        {
+            <div class="row">
+                @foreach (var item in content)
+                {
+                    var serviceBlock = item.Content as ServiceCardBlock;
+                    var settings = item.Settings as SettingModel;
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-outer dark_blue_bg" style="background-color:#@(settings?.BackgroundColor);">
+                            <div class="card-detail">
+                                <div class="card-icon" style="border:1px solid #@serviceBlock?.CardButtonBorderColor;background-color:#@serviceBlock?.IconBgColor">
+                                    <img src="@serviceBlock?.CardIcon?.MediaUrl()" class="img-fluid" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="white" style="color:#@(serviceBlock?.HeadingTextColor)">@serviceBlock?.CardHeadingText</h3>
+                                    <p class="black-100" style="color:#@(serviceBlock?.TextColor)">
+                                        @serviceBlock?.CardDescription
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-button">
+                                    @if (serviceBlock?.CardFooter?.Count > 0)
+                                    {
+                                        @foreach (var buttons in serviceBlock?.CardFooter)
+                                        {
+                                            var button = buttons.Content as IconListWithLinkBlock;
+
+                                            <button type="button" class="btn border_light_blue white dark_blue_bg" style="color:#@(serviceBlock?.TextColor); background-color:#@(settings?.BackgroundColor);border:1px solid #@(serviceBlock?.CardButtonBorderColor);">
+                                                <img src="@button?.Icon?.MediaUrl()" class="img-fluid" alt="">
+                                                @button?.Link?.Name
+                                            </button>
+                                        }
+                                    }
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</div>

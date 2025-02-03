@@ -1,0 +1,112 @@
+﻿@using Umbraco.Cms.Core.Models.Blocks
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<CustomersSliderSection>>
+@{
+    var content = Model?.Content;
+}
+
+<!-------------------------------------- owl carousal --------------------->
+
+<div class="dark_blue_bg owl-slider-section buy_charging-slider">
+    <div class="container-fluid px-0">
+        <div class="section-heading white">
+            <h2 class="white">@content?.HeadingText</h2>
+           @Html?.Raw(content?.DescriptionText)
+        </div>
+
+        <div class="owl-carousel owl-theme">
+            @if (content?.SliderBlocks?.Count > 0)
+            {
+                var count = 1;
+                @foreach (var item in content?.SliderBlocks)
+                {
+                    var videoTargetId = $"staticBackdrop{count++}";
+                    var itemModel = item?.Content as CustomerSliderBlocks;
+                    <div class="video-img">
+                        <img src="@itemModel?.Thumbnail?.MediaUrl()" class="img-fluid" alt="img">
+                        <button type="button" data-href="@itemModel?.Video?.MediaUrl()" class="videoBtn" data-bs-toggle="modal" data-bs-target=".static_Backdrop">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M5.14854 0.856903C4.66921 0.856903 4.1979 0.978984 3.779 1.21147C3.35204 1.42935 2.99164 1.75848 2.73601 2.16427C2.47646 2.57623 2.33481 3.05143 2.32641 3.53826L2.32629 20.4466L2.32641 20.4613C2.33481 20.9482 2.47646 21.4234 2.73601 21.8353C2.99164 22.2411 3.35204 22.5703 3.779 22.7881C4.1979 23.0206 4.66921 23.1427 5.14854 23.1427C5.63506 23.1427 6.11331 23.0168 6.53689 22.7775C6.54675 22.772 6.55649 22.7662 6.56611 22.7602L20.2397 14.3032C20.664 14.0888 21.0221 13.7628 21.2752 13.3598C21.5371 12.9429 21.6761 12.4605 21.6761 11.9681C21.6761 11.4757 21.5371 10.9933 21.2752 10.5763C21.0218 10.1729 20.6632 9.84664 20.2384 9.6323L6.56365 1.23778C6.55484 1.23236 6.54591 1.22711 6.53689 1.22201C6.11331 0.982675 5.63506 0.856903 5.14854 0.856903Z"
+                                      fill="white" />
+                            </svg>
+                            @itemModel?.ButtonText
+                        </button>
+                    </div>
+
+                }
+            }
+        </div>
+    </div>
+</div>
+<!-------------------------------------------Modal ------------------------------->
+<div class="modal fade static_Backdrop" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <video width="100%" height="240" controls>
+                    <source src="" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                </video>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn dark_blue_bg white" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      responsiveClass: true,
+      nav: true,
+      margin: 24,
+      autoplayTimeout: 4000,
+      smartSpeed: 400,
+      center: true,
+      items: 2.8,
+      nav: true,
+      navText: [
+        "<img src='/assets/img/icons/arrow-left.svg' alt=''>",
+        "<img src='/assets/img/icons/arrow-right.svg' alt=''>",
+      ],
+      responsive: {
+        0: {
+          items: 1,
+          nav: false,
+        },
+        600: {
+          items: 2,
+          nav: true,
+        },
+        1000: {
+          items: 2.75,
+          nav: true,
+        },
+      },
+    });
+</script>
+<!-- Script to bind the video URL -->
+<script>
+    $(document).on('click', '.videoBtn', function () {
+        // Grab the URL from the button's data-href attribute
+        // debugger
+        var videoURL = $(this).data('href');
+        // console.log(videoURL)
+        // Get the target modal's id (e.g., "#modalId")
+        var targetModal = $(this).data('bs-target');
+        // Find the modal element
+        var modal = $(targetModal);
+
+        // Update the <source> element for the mp4 video
+        modal.find('video source[type="video/mp4"]').attr('src', videoURL);
+
+        // Reload the video element so it picks up the new source
+        modal.find('video').get(0).load();
+    });
+</script>

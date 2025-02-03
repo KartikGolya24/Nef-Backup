@@ -1,0 +1,54 @@
+{
+  "Name": "Nav Menu With SubMenu",
+  "Alias": "navMenuWithSubMenu",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/3501213194844c4992664a527b547a6c",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "23719253-593f-4488-aa4c-70eedd451db6",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "27f9c5ca-f7de-485d-81ab-0f68e2bfe8d8",
+          "Alias": "menu",
+          "DataType": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
+          "Name": "Menu"
+        },
+        {
+          "Key": "c6ec06ea-5f34-415d-b308-2e5764011266",
+          "Alias": "subMenuList",
+          "DataType": "umb://data-type/4f2218841fc24d169df8b379813faef5",
+          "Name": "Sub Menu List",
+          "SortOrder": 1
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/bcd788964781405abc75b0e32f46669e",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/4f2218841fc24d169df8b379813faef5",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/3501213194844c4992664a527b547a6c",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

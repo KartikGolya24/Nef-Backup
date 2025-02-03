@@ -1,0 +1,111 @@
+﻿@using Umbraco.Cms.Core.Models.Blocks
+@using Umbraco.Forms.Web
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<FormSection>>
+
+@{
+    var content = Model?.Content;
+    var settings = Model?.Settings as SettingModel;
+}
+
+<!--------------------------------------section contact-form---------------------------->
+<div class="alt-contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="section-detail position-relative gap-0 py-48">
+                    <div class="section-content">
+                        <h2 class="black-950 fw-600">Skift din eksisterende ladeboks</h2>
+                        <p class="black-700">
+                            Træt af din gamle ladeboks? Så skift til en ny lille og fiks ladeboks gennem nef
+                            Strøm.
+                        </p>
+                        <p class="black-700">
+                            Du får ladeboksen til 6.500 DKK inkl. moms. Herudover betaler du en timepris for
+                            nedtagning af den gamle ladeboks og opsætning af den nye.
+                        </p>
+                        <p class="black-700">
+                            Mod en timepris sørger vores montører for gennemgang, test og opgradering af den
+                            eksisterende installation, for at sikre korrekt opsætning af den nye ladeboks
+                        </p>
+                    </div>
+                    <div class="buy_charging-doodles">
+                        <img src="~/assets/img/bg-img/doodle11.svg" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="contact-form turquoise_bg">
+                    <form action="">
+                        <h4 class="mb-8 space_blue fw-600">Udfyld formularen for et uforpligtende tilbud</h4>
+                        <p class="mb-40 space_blue">
+                            Du får ladeboksen til <b class="italic fw-600">6.500 DKK inkl. moms.</b>
+                            Herudover betaler du en timepris for nedtagning af den gamle ladeboks og opsætning af den nye.
+                        </p>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="" class="label">For- og efternavn</label>
+                                    <input type="text" class="form-control error" placeholder="Navn">
+                                    <p class="error-text">
+                                        <img src="~/assets/img/icons/error-icon.svg" alt="">Fejl - Indtast en
+                                        korrekt emailadresse
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="" class="label">Adresse</label>
+                                    <input type="text" class="form-control" placeholder="Adresse">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="" class="label">Post nr.</label>
+                                    <input type="text" class="form-control" placeholder="Post nr.">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="" class="label">By</label>
+                                    <input type="text" class="form-control" placeholder="By">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="" class="label">Telefon</label>
+                                    <input type="tel" class="form-control" placeholder="Telefon">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="" class="label">Email</label>
+                                    <input type="email" class="form-control" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="" class="label">Evt. kommentar</label>
+                                    <textarea type="text" class="form-control" placeholder="kommentar"></textarea>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <button type="button" class="btn light_blue_bg white">Anmod om tilbud</button>
+                    </form>
+                    <!-- <div class="form-submitted">
+                      <div class="icon">
+                        <img src="assets/img/icons/thumbs-up-black.svg" alt="" class="img-fluid">
+                      </div>
+                      <div class="content text-center">
+                        <h2 class="black_950 fw-600 mb-8">Du vil blive kontaktet</h2>
+                        <p class="para mb-32">Du har nu udfyldet formularen korrekt og vil blive kontaktet af nef</p>
+                        <button type="button" class="btn light_blue_bg white mx-auto">Bestil nef Sol&Vind</button>
+                      </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

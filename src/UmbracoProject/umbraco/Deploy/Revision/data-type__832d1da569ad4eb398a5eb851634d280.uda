@@ -1,0 +1,29 @@
+{
+  "Name": "Home Charging Section - Blocks - Block List",
+  "Alias": "",
+  "EditorAlias": "Umbraco.BlockList",
+  "Configuration": {
+    "blocks": [
+      {
+        "contentElementTypeKey": "52f265ca-bbe3-4244-958a-8c4a075519a3",
+        "label": "{{title}}",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      }
+    ],
+    "validationLimit": {
+      "max": 3
+    },
+    "useSingleBlockMode": false,
+    "useLiveEditing": false,
+    "useInlineEditingAsDefault": false
+  },
+  "Udi": "umb://data-type/832d1da569ad4eb398a5eb851634d280",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/52f265cabbe34244958a8c4a075519a3"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

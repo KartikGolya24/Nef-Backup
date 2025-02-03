@@ -1,0 +1,13 @@
+{
+  "Name": "Common Text List - Repeatable textstrings",
+  "Alias": "",
+  "EditorAlias": "Umbraco.MultipleTextstring",
+  "Configuration": {
+    "Minimum": 0,
+    "Maximum": 0
+  },
+  "Udi": "umb://data-type/86da3672f5a640b3a5bce98af677671f",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

@@ -1,0 +1,27 @@
+{
+  "Name": "Customers Slider Section - Slider Blocks - Block List",
+  "Alias": "",
+  "EditorAlias": "Umbraco.BlockList",
+  "Configuration": {
+    "blocks": [
+      {
+        "contentElementTypeKey": "63408b6c-963d-43c5-bfc4-dfd8d4cb62ab",
+        "label": "",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      }
+    ],
+    "validationLimit": {},
+    "useSingleBlockMode": false,
+    "useLiveEditing": false,
+    "useInlineEditingAsDefault": false
+  },
+  "Udi": "umb://data-type/1cb0ba26979a4f4d96ab23ce4e9b413a",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/63408b6c963d43c5bfc4dfd8d4cb62ab"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}
