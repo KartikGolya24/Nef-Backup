@@ -49,7 +49,7 @@
         {
           "Key": "12ada0da-886b-4ad9-a454-66d204b7bc90",
           "Alias": "mobileImage",
-          "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+          "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
           "Name": "Mobile Image",
           "SortOrder": 8
         },
@@ -94,7 +94,7 @@
         {
           "Key": "90f61801-e27c-4885-87d8-b4c49cfae07b",
           "Alias": "desktopImage",
-          "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+          "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
           "Name": "DeskTop Image",
           "SortOrder": 7
         },
@@ -140,6 +140,10 @@
   "Dependencies": [
     {
       "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
       "Ordering": true
     },
     {
