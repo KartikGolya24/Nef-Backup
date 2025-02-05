@@ -22,6 +22,20 @@
           "Alias": "image",
           "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
           "Name": "Image"
+        },
+        {
+          "Key": "12334faf-1069-4193-a164-f19f896b2cf0",
+          "Alias": "scrollButtonText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Scroll Button Text",
+          "SortOrder": 2
+        },
+        {
+          "Key": "9aab0f3d-fad1-4920-927a-09c1432934f7",
+          "Alias": "isEnableScrollButton",
+          "DataType": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
+          "Name": "IsEnableScrollButton",
+          "SortOrder": 1
         }
       ]
     }
@@ -30,7 +44,15 @@
   "Udi": "umb://document-type/e4109cf416884dc1bb18a313d0b9e706",
   "Dependencies": [
     {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
       "Udi": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
       "Ordering": true
     },
     {

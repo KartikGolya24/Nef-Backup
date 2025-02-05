@@ -1,4 +1,5 @@
 ﻿@using Umbraco.Cms.Core.Models.Blocks
+@using UmbracoProject.App_Code.Helpers
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<ElectricityPriceOverviewSection>>
 
 @{
@@ -49,7 +50,7 @@
                                             </div>
                                             <div class="card-content">
                                                 <div class="card-image mb-32">
-                                                    <img src="@frontCard?.Image?.MediaUrl()" alt="" class="img-fluid" />
+                                                    <img src="@frontCard?.Image?.GetWebp()" alt="" class="img-fluid" />
                                                 </div>
                                                 <ul class="card-list">
                                                     @if (frontCard?.ListText?.Count() > 0)

@@ -18,6 +18,13 @@
       "Alias": "content",
       "PropertyTypes": [
         {
+          "Key": "1794a7a8-fc36-483d-8dd3-86522653aa3e",
+          "Alias": "textColor",
+          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+          "Name": "Text Color",
+          "SortOrder": 2
+        },
+        {
           "Key": "2bc1be0f-bba9-40ef-82d9-fb62a00846fa",
           "Alias": "headingLabel",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
@@ -35,7 +42,7 @@
           "Alias": "buttonList",
           "DataType": "umb://data-type/2f42fd89a2a44d95aece4e93b933793f",
           "Name": "Button List",
-          "SortOrder": 2
+          "SortOrder": 3
         }
       ]
     }
@@ -45,6 +52,10 @@
   "Dependencies": [
     {
       "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
       "Ordering": true
     },
     {

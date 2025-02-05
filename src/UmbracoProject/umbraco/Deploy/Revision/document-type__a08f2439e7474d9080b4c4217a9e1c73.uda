@@ -1,0 +1,32 @@
+{
+  "Name": "Information Page",
+  "Alias": "informationPage",
+  "DefaultTemplate": "umb://template/7d816c3d515d44bcb3a09714dd7c829f",
+  "AllowedTemplates": [
+    "umb://template/7d816c3d515d44bcb3a09714dd7c829f"
+  ],
+  "HistoryCleanup": {},
+  "Icon": "icon-document",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/3e5c1ac20a48406c917e220b4bada863",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/a08f2439e7474d9080b4c4217a9e1c73",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/3e5c1ac20a48406c917e220b4bada863",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://template/7d816c3d515d44bcb3a09714dd7c829f",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

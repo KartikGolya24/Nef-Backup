@@ -16,19 +16,19 @@
     if (Model?.HasValue("selectFooter") == true)
         footerSelectionValue = Model.Value<string>("selectFooter");
 
-    var footer = globalNavigation?.Footer1?.FirstOrDefault()?.Content;
+    var footer = navigation?.Footer1?.FirstOrDefault()?.Content;
     var footerName = "Footer1";
 
     if (!string.IsNullOrWhiteSpace(footerSelectionValue))
     {
         if (footerSelectionValue == "Footer2")
         {
-            footer = globalNavigation?.Footer2?.FirstOrDefault()?.Content;
+            footer = navigation?.Footer2?.FirstOrDefault()?.Content;
             footerName = "Footer2";
         }
     }
 
-    FooterModel footerModel = new() { FooterContent = footer, FooterName = footerName};
+    FooterModel footerModel = new() { FooterContent = footer, FooterName = footerName };
 }
 
 <!DOCTYPE html>
@@ -56,8 +56,9 @@
             <ul class="tabs-item" id="pills-tab" role="tablist">
                 @foreach (var item in homeRoots)
                 {
+                    var rootLink = item?.Url() == "/" ? "active" : "";
                     <li class="tabs-list">
-                        <a href="@item?.Url()" class="tabs-link" id="privat-tab">@item?.Name</a>
+                        <a href="@item?.Url()" class="tabs-link @rootLink">@item?.Name</a>
                     </li>
                 }
             </ul>
@@ -86,14 +87,60 @@
         </div>
     </div>
     <!--------------------------jquery------------------>
-   
-
     <!------------------------bootstrap 5--------------->
     <script src="~/assets/libs/bs5/js/bootstrap.min.js"></script>
 
-   
-    <script src="~/assets/js/custom.js"></script>
 
+    <script src="~/assets/js/custom.js"></script>
+    <script>
+           $(document).ready(function () {
+            var currentUrl = window.location.pathname; // Get current page URL
+
+            // Handle active class for left navigation (tabs)
+            $(".tabs-link").each(function () {
+                if ($(this).attr("href") === currentUrl) {
+                    $(".tabs-link").removeClass("active"); // Remove 'active' from all tabs
+                    $(this).addClass("active"); // Add 'active' to the matching tab
+                }
+            });
+
+            // Handle active class for right navigation
+            $(".navigation-link").each(function () {
+                if ($(this).attr("href") === currentUrl) {
+                    $(".navigation-link").removeClass("active"); // Remove 'active' from all nav links
+                    $(this).addClass("active"); // Add 'active' to the matching navigation link
+                }
+            });
+
+            // Click event to update active class dynamically
+            $(".tabs-link, .navigation-link").on("click", function () {
+                $(".tabs-link, .navigation-link").removeClass("active"); // Remove active from all
+                $(this).addClass("active"); // Add active to clicked item
+            });
+        });
+
+
+        //     $(document).ready(function () {
+        //         debugger
+        //     // Handle click event
+        //     $(".tabs-link").on("click", function (e) {
+
+        //         $(".tabs-link").removeClass("active"); // Remove 'active' from all links
+        //         $(this).addClass("active"); // Add 'active' to the clicked link
+
+        //         // Store active tab in localStorage to persist after page refresh
+        //         localStorage.setItem("activeTab", $(this).attr("href"));
+        //     });
+
+        //     // On page load, restore active tab
+        //     var activeTab = localStorage.getItem("activeTab");
+        //     if (activeTab) {
+        //         $(".tabs-link").removeClass("active");
+        //         $(".tabs-link[href='" + activeTab + "']").addClass("active");
+        //     }
+        // });
+
+    </script>
 </body>
 
 </html>

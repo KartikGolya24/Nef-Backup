@@ -20,15 +20,29 @@
         {
           "Key": "2287a794-5af0-4e1e-8de1-3553112d1fca",
           "Alias": "image",
-          "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+          "DataType": "umb://data-type/ad9f0cf2bda245d59ea1a63cfc873fd3",
           "Name": "Image"
+        },
+        {
+          "Key": "4ac1526a-eb8c-4310-8b8b-1c48e480c89c",
+          "Alias": "videoButtonText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Video Button Text",
+          "SortOrder": 2
+        },
+        {
+          "Key": "cfc7d36f-047b-4738-85a0-c031c5a27e8f",
+          "Alias": "video",
+          "DataType": "umb://data-type/371720d012a1486281874527cf4e7209",
+          "Name": "Video",
+          "SortOrder": 1
         },
         {
           "Key": "df0a870e-7496-403c-98ba-b9a86c4cf0db",
           "Alias": "positionImages",
           "DataType": "umb://data-type/d8a26c36dc9143c3a0917a3a69610a3f",
           "Name": "Position Images",
-          "SortOrder": 1
+          "SortOrder": 3
         }
       ]
     }
@@ -37,7 +51,15 @@
   "Udi": "umb://document-type/3eccc04b66674f399173a11ffdeb79f5",
   "Dependencies": [
     {
-      "Udi": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/371720d012a1486281874527cf4e7209",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/ad9f0cf2bda245d59ea1a63cfc873fd3",
       "Ordering": true
     },
     {

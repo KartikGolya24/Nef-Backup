@@ -14,6 +14,27 @@
   ],
   "PropertyGroups": [
     {
+      "Key": "25e33af0-bd01-4a6f-ba32-d8ebee6e815d",
+      "Name": "Footer Content",
+      "SortOrder": 2,
+      "Alias": "footerContent1",
+      "PropertyTypes": [
+        {
+          "Key": "488aeb8a-6de0-4e49-b0dd-f87e60abcca5",
+          "Alias": "footer1",
+          "DataType": "umb://data-type/1928e9de63ea4062a80d307fec419cf2",
+          "Name": "Footer1"
+        },
+        {
+          "Key": "5450f947-4321-4f52-8725-d7bcd3824cbb",
+          "Alias": "footer2",
+          "DataType": "umb://data-type/e9536e1d7af345c38998d6a4d4fed337",
+          "Name": "Footer2",
+          "SortOrder": 1
+        }
+      ]
+    },
+    {
       "Key": "29880a30-6e1b-4664-8ea7-0305de80eaf1",
       "Name": "Header Content",
       "Alias": "headerContent",
@@ -110,6 +131,10 @@
       "Ordering": true
     },
     {
+      "Udi": "umb://data-type/1928e9de63ea4062a80d307fec419cf2",
+      "Ordering": true
+    },
+    {
       "Udi": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
       "Ordering": true
     },
@@ -119,6 +144,10 @@
     },
     {
       "Udi": "umb://data-type/b09a8475ff6a4d3b837c0f6c766e0276",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/e9536e1d7af345c38998d6a4d4fed337",
       "Ordering": true
     },
     {

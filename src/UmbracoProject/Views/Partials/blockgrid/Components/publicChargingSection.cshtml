@@ -1,4 +1,5 @@
 ﻿@using Umbraco.Cms.Core.Models.Blocks
+@using UmbracoProject.App_Code.Helpers
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<PublicChargingSection>>
 @{
     var content = Model?.Content;
@@ -43,7 +44,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="section-img">
-                                <img src="@itemModel?.Image?.MediaUrl()" class="img-fluid" alt="img">
+                                <img src="@itemModel?.Image?.GetWebp()" class="img-fluid" alt="img">
                             </div>
                         </div>
                     </div>
@@ -73,7 +74,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="section-img">
-                                    <img src="@itemModel?.SectionImage?.MediaUrl()" class="img-fluid" alt="img">
+                                    <img src="@itemModel?.SectionImage?.GetWebp()" class="img-fluid" alt="img">
                                 </div>
                             </div>
 
