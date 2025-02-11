@@ -6,121 +6,132 @@
 }
 
 <!----------------------------------------- Footer --------------------->
-<footer class="container-fluid footer px-0 position-relative">
+<footer class="footer">
 
     <div class="top-footer text-center space_blue_bg" style="background-color:#@content?.BackgroundColor">
-        <h3 class="white" style="color:#@content?.FooterTextColor">@content?.HeadingText</h3>
-        @if (content?.ButtonList?.Count > 0)
-        {
-            <div class="multiple-buttons justify-content-center">
-                @foreach (var item in content?.ButtonList)
-                {
-                    var buttonList = item.Content as IconLinkList;
-                    <button type="button" class="btn light_blue_bg white" style="background-color:#@buttonList?.LinkBgColor;color:#@buttonList?.LinkTextColor;">
-                        <img src="@buttonList?.Icon?.MediaUrl()" class="img-fluid" alt="footer-logo">
-                        @buttonList?.Link?.Name
-                    </button>
-
-                }
-            </div>
-        }
-    </div>
-
-    <div class="bottom-footer dark_blue_bg @(footerName == "Footer2"?"style2":"")" style="background-color:#@content?.BottomBackgroundColor">
-        <div class="footer-detail">
-            <div class="footer-address">
-                <div class="footer-logo">
-                    <img src="@content?.FooterLogo?.MediaUrl()" class="img-fluid" alt="footer-logo">
-                </div>
-                <div class="address white" style="color:#@content?.FooterTextColor">
-                    @Html?.Raw(content?.FooterAddress)
-                </div>
-                @if (content?.SocialLinkList?.Count > 0)
-                {
-                    <div class="social-icon">
-                        <ul class="social-item">
-
-                            @foreach (var item in content?.SocialLinkList)
-                            {
-                                var socialLink = item?.Content as FooterSocialLink;
-
-                                <li class="social-list light_blue_bg" style="background-color:#@socialLink?.BackgroundColor">
-                                    <a href="@socialLink?.SocialLink" class="social-link">
-                                        <img src="@socialLink?.Icon?.MediaUrl()" class="img-fluid" alt="social-icon">
-                                    </a>
-                                </li>
-                            }
-                        </ul>
-                    </div>
-                }
-            </div>
-
-            <div class="footer-menu accordion">
-                @{
-                    var count = 1;
-                    var hasOpeningTimeValu = content?.OpeningTimeDescription?.ToString();
-                }
-
-                @if (!string.IsNullOrWhiteSpace(content?.OpeningTimeDescription?.ToString()))
-                {
-                    var id = $"collapse{count}";
-                    <div class="footer-menu-list white accordion-item" style="color:#@content?.FooterTextColor">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#@id" aria-expanded="true" aria-controls="@id" style="color:#@content?.FooterTextColor">
-                            @content?.OpeningTimeHeadLabel
+        <div class="container-xl">
+            <h3 class="white" style="color:#@content?.TopFooterTextColor">@content?.HeadingText</h3>
+            @if (content?.ButtonList?.Count > 0)
+            {
+                <div class="multiple-buttons justify-content-center">
+                    @foreach (var item in content?.ButtonList)
+                    {
+                        var buttonList = item.Content as IconLinkList;
+                        <button type="button" class="btn @buttonList?.ButtonTheme" style="border:1px solid #@buttonList?.BorderColor">
+                            <img src="@buttonList?.Icon?.MediaUrl()" class="img-fluid" alt="footer-logo">
+                            @buttonList?.Link?.Name
                         </button>
 
-                        <div class="accordion-collapse collapse" id="@id" aria-labelledby="@id">
-                            @Html?.Raw(content?.OpeningTimeDescription)
-                        </div>
-                    </div>
-                    count++;
-                }
-
-                @if (content?.AccordionMenuList?.Count > 0)
-                {
-                    @foreach (var item in content?.AccordionMenuList)
-                    {
-                        var id = $"collapse{count}";
-                        var accordion = item?.Content as FooterMenuAccordion;
-
-                        <div class="footer-menu-list white accordion-item" style="color:#@content?.FooterTextColor">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#@id" aria-expanded="true" aria-controls="@id" style="color:#@content?.FooterTextColor">
-                                @accordion?.HeadText
-                            </button>
-                            <ul class="accordion-collapse collapse" id="@id" aria-labelledby="@id">
-                                @foreach (var link in accordion?.MenuItems)
-                                {
-                                    <li><a href="@link?.Url" class="white" style="color:#@content?.FooterTextColor">@link?.Name</a></li>
-                                }
-                            </ul>
-                        </div>
-                        count++;
                     }
-                }
-            </div>
-            @if (content?.DesktopImage != null)
-            {
-                <div class="position-img">
-                    <img src="@content?.DesktopImage?.MediaUrl()" class="img-fluid @(footerName == "Footer2"?"opacity-30":"")" alt="img">
-                </div>
-            }
-            @if (content?.MobileImage != null)
-            {
-                <div class="mobile-visible d-lg-none">
-                    <img src="@content?.MobileImage?.MediaUrl()" class="img-fluid opacity-30" alt="img">
                 </div>
             }
         </div>
+    </div>
 
-        <div class="copyright">
-            <span class="small white" style="color:#@content?.FooterTextColor">@content?.CopyRightText</span>
-            @if (content?.FooterLinks?.Count() >0)
-            {
-                @foreach (var item in content?.FooterLinks)
+    <div class="bottom-footer dark_blue_bg @(footerName == "Footer2"?"style2":"")" style="background-color:#@content?.BottomBackgroundColor">
+        <div class="container-xl">
+            <div class="footer-detail">
+                <div class="footer-address">
+                    <div class="footer-logo">
+                        <img src="@content?.FooterLogo?.MediaUrl()" class="img-fluid" alt="footer-logo">
+                    </div>
+                    <div class="address white" style="color:#@content?.FooterTextColor">
+                        @Html?.Raw(content?.FooterAddress)
+                    </div>
+                    @if (content?.SocialLinkList?.Count > 0)
+                    {
+                        <div class="social-icon">
+                            <ul class="social-item">
+
+                                @foreach (var item in content?.SocialLinkList)
+                                {
+                                    var socialLink = item?.Content as FooterSocialLink;
+
+                                    <li class="social-list light_blue_bg" style="background-color:#@socialLink?.BackgroundColor">
+                                        <a href="@socialLink?.SocialLink" class="social-link">
+                                            <img src="@socialLink?.Icon?.MediaUrl()" class="img-fluid" alt="social-icon">
+                                        </a>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    }
+                </div>
+
+                <div class="footer-menu accordion">
+                    @{
+                        var count = 1;
+                        var hasOpeningTimeValu = content?.OpeningTimeDescription?.ToString();
+                    }
+
+                    @if (!string.IsNullOrWhiteSpace(content?.OpeningTimeDescription?.ToString()))
+                    {
+                        var id = $"collapse{count}";
+                        <div class="footer-menu-list white accordion-item" style="color:#@content?.FooterTextColor">
+                            <button 
+                                class="accordion-button collapsed" 
+                                type="button" 
+                                data-bs-toggle="collapse" 
+                                data-bs-target="#@id" 
+                                aria-expanded="true" 
+                                aria-controls="@id" 
+                                style="color:#@content?.FooterTextColor"
+                                >
+                                @content?.OpeningTimeHeadLabel
+                            </button>
+
+                            <div class="accordion-collapse collapse" id="@id" aria-labelledby="@id">
+                                @Html?.Raw(content?.OpeningTimeDescription)
+                            </div>
+                        </div>
+                        count++;
+                    }
+
+                    @if (content?.AccordionMenuList?.Count > 0)
+                    {
+                        @foreach (var item in content?.AccordionMenuList)
+                        {
+                            var id = $"collapse{count}";
+                            var accordion = item?.Content as FooterMenuAccordion;
+
+                            <div class="footer-menu-list white accordion-item" style="color:#@content?.FooterTextColor">
+                                <button class="accordion-button collapsed @(footerName == "Footer2"?"fw-700":"")" type="button" data-bs-toggle="collapse" data-bs-target="#@id" aria-expanded="true" aria-controls="@id" style="color:#@content?.FooterTextColor">
+                                    @accordion?.HeadText
+                                </button>
+                                <ul class="accordion-collapse collapse" id="@id" aria-labelledby="@id">
+                                    @foreach (var link in accordion?.MenuItems)
+                                    {
+                                        <li class="@(footerName == "Footer2"?"mb-3":"")"><a href="@link?.Url" class="white" style="color:#@content?.FooterTextColor">@link?.Name</a></li>
+                                    }
+                                </ul>
+                            </div>
+                            count++;
+                        }
+                    }
+                </div>
+                @if (content?.DesktopImage != null)
                 {
-                    <span class="small"><a href="@item?.Url" class="white" style="color:#@content?.FooterTextColor">@item?.Name</a></span>
+                    <div class="position-img">
+                        <img src="@content?.DesktopImage?.MediaUrl()" class="img-fluid" alt="img">
+                    </div>
                 }
-            }
+                @if (content?.MobileImage != null)
+                {
+                    <div class="mobile-visible d-lg-none">
+                        <img src="@content?.MobileImage?.MediaUrl()" class="img-fluid opacity-30" alt="img">
+                    </div>
+                }
+            </div>
+            <div class="copyright">
+                <span class="small white" style="color:#@content?.FooterTextColor">@content?.CopyRightText</span>
+                @if (content?.FooterLinks?.Count() > 0)
+                {
+                    @foreach (var item in content?.FooterLinks)
+                    {
+                        <span class="small"><a href="@item?.Url" class="white" style="color:#@content?.FooterTextColor">@item?.Name</a></span>
+                    }
+                }
+            </div>
         </div>
     </div>
 </footer>

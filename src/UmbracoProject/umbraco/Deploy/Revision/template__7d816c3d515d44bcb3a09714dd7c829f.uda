@@ -2,10 +2,16 @@
   "Name": "Information Page",
   "Alias": "InformationPage",
   "File": "umb://template-file/InformationPage.cshtml",
+  "Master": "umb://template/2aa50de1008b4efb8fc84d3fcf929c3a",
   "Udi": "umb://template/7d816c3d515d44bcb3a09714dd7c829f",
   "Dependencies": [
     {
       "Udi": "umb://template-file/InformationPage.cshtml",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://template/2aa50de1008b4efb8fc84d3fcf929c3a",
       "Ordering": true,
       "Mode": "Exist"
     }

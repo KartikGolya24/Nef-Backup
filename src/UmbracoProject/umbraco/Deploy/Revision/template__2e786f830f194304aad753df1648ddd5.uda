@@ -1,0 +1,21 @@
+{
+  "Name": "Information Page With Auto Generate Link",
+  "Alias": "InformationPageWithAutoGenerateLink",
+  "File": "umb://template-file/InformationPageWithAutoGenerateLink.cshtml",
+  "Master": "umb://template/2aa50de1008b4efb8fc84d3fcf929c3a",
+  "Udi": "umb://template/2e786f830f194304aad753df1648ddd5",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/InformationPageWithAutoGenerateLink.cshtml",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://template/2aa50de1008b4efb8fc84d3fcf929c3a",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.TemplateArtifact",
+  "__version": "13.3.2"
+}

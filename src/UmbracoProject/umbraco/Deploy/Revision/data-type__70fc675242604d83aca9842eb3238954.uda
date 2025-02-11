@@ -1,0 +1,26 @@
+{
+  "Name": "Nef Address Block - Heading - Block List",
+  "Alias": "",
+  "EditorAlias": "Umbraco.BlockList",
+  "Configuration": {
+    "blocks": [
+      {
+        "contentElementTypeKey": "79f62ef3-94a0-4edb-a3a2-641f88e709d6",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      }
+    ],
+    "validationLimit": {},
+    "useSingleBlockMode": false,
+    "useLiveEditing": false,
+    "useInlineEditingAsDefault": false
+  },
+  "Udi": "umb://data-type/70fc675242604d83aca9842eb3238954",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/79f62ef394a04edba3a2641f88e709d6"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

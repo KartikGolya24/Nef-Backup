@@ -1,5 +1,25 @@
 
 $(document).ready(function () {
+
+   
+    $(document).on('click', '.videoBtn', function () {
+        // Grab the URL from the button's data-href attribute
+        debugger
+        var videoURL = $(this).data('href');
+        // console.log(videoURL)
+        // Get the target modal's id (e.g., "#modalId")
+        var targetModal = $(this).data('bs-target');
+        // Find the modal element
+        var modal = $(targetModal);
+
+        // Update the <source> element for the mp4 video
+        modal.find('video source[type="video/mp4"]').attr('src', videoURL);
+
+        // Reload the video element so it picks up the new source
+        modal.find('video').get(0).load();
+    });
+
+
     $("#menu-toggle-icon").click(function (event) {
         event.stopPropagation();
         $(this).toggleClass("active");
@@ -50,7 +70,8 @@ $(document).ready(function () {
         updateCardStyles('orderTVOption', 'light_purple_bg border_dark_purple', 'border_black-100');
         updateCardStyles('orderInternetOption', 'turquoise_bg border_dark_blue h-auto', 'border_black-100 h-auto');
       });
-      
+
+
       
       $('#customerTypesButton').on('click', function() {
         $('.electricity-price-slider').toggleClass('d-none');

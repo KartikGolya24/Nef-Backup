@@ -8,7 +8,11 @@
 <div class="contact-section-outer">
     <div class="container">
         <div class="contact-section text-center black-950">
-            <h1>@ContactSection?.HeadingLabel</h1>
+            @if (!string.IsNullOrWhiteSpace(ContactSection?.HeadingLabel))
+            {
+                <h1>@ContactSection?.HeadingLabel</h1>
+            }
+
             <div class="contact-section-para black-950" style="color:#@ContactSection?.TextColor">
                 @Html?.Raw(ContactSection?.SectionContent)
             </div>

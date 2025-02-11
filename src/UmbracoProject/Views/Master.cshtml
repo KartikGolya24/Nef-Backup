@@ -9,6 +9,7 @@
     var globalWebSiteSetting = roots?.Where(x => x.IsDocumentType("globalWebSiteSetting"))?.FirstOrDefault();
     var globalNavigation = globalWebSiteSetting?.Children<Navigation>()?.FirstOrDefault();
 
+    var globalSetting = Model?.Root()?.Children<WebSiteSetting>()?.FirstOrDefault().Children<HomeGlobalSetting>().FirstOrDefault();
     var homeWebSiteSetting = Model?.Root()?.Children<WebSiteSetting>()?.FirstOrDefault();
     var navigation = homeWebSiteSetting?.Children<HomeNavigation>()?.FirstOrDefault();
 
@@ -37,46 +38,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nef Fonden - Home</title>
+    <title>@Model?.Value("metaTitle")</title>
     <!------------------------ owl slider ------------------------->
     <link rel="stylesheet" href="~/assets/libs/owl/css/owl.carousel.min.css" />
     <link rel="stylesheet" href="~/assets/libs/owl/css/owl.theme.default.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.min.css" rel="stylesheet">
+
     <!-------------------style css--------------->
 
     <link rel="stylesheet" href="~/assets/style/css/style.css">
     <script src="~/assets/js/jquery.js"></script>
     <script src="~/assets/libs/owl/js/owl.carousel.min.js"></script>
+    @* <script src="https://cdn.jsdelivr.net/npm/@@coreui/coreui@5.2.0/dist/js/coreui.bundle.min.js" integrity="sha384-JdRP5GRWP6APhoVS1OM/pOKMWe7q9q8hpl+J2nhCfVJKoS+yzGtELC5REIYKrymn" crossorigin="anonymous"></script> *@
+    @* <script src="~/assets/libs/coreui-5.2.0-dist/js/coreui.js"></script> *@
+    @* <script src="~/assets/libs/coreui-5.2.0-dist/js/coreui.bundle.js"></script> *@
 </head>
 
 <body>
-
+    @{
+        var tab = "";
+    }
     <!--------------------------- top-header------------------------->
-    <div class="top-header turquoise_bg">
-        <div class="top-header-tabs">
-            <ul class="tabs-item" id="pills-tab" role="tablist">
-                @foreach (var item in homeRoots)
-                {
-                    var rootLink = item?.Url() == "/" ? "active" : "";
-                    <li class="tabs-list">
-                        <a href="@item?.Url()" class="tabs-link @rootLink">@item?.Name</a>
-                    </li>
-                }
-            </ul>
-        </div>
+    <div class="top-header-outer @(globalSetting?.TabBackgroundTheme)">
+        <div class="container-xl">
+            <div class="top-header">
+                <div class="top-header-tabs">
+                    <ul class="tabs-item" id="pills-tab" role="tablist">
+                        @foreach (var item in homeRoots)
+                        {
+                             tab = Model?.Url()?.Contains("/erhverv/") == true ? "erhverv-tab" : Model?.Url()?.Contains("/repraesentantskabsvalg-2025/") == true ? "Repræsentantskabsvalg-tab" : "privat-tab";
+                            var rootLink = item?.Url() == "/" ? "active" : "";
+                            <li class="tabs-list">
+                                <a href="@item?.Url()" id="@tab" class="tabs-link @rootLink">@item?.Name</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
 
-        <div class="top-header-navigation">
-            <ul class="navigation-item">
-                @foreach (var item in globalNavigation?.NavigationItem)
-                {
-                    <li class="navigation-list">
-                        <a href="@item?.Url" class="navigation-link black-800 fw-400">@item?.Name</a>
-                    </li>
-                }
-            </ul>
+                <div class="top-header-navigation">
+                    <ul class="navigation-item">
+                        @foreach (var item in globalNavigation?.NavigationItem)
+                        {
+                            <li class="navigation-list">
+                                <a href="@item?.Url" class="navigation-link black-800 fw-400">@item?.Name</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
     <div class="tab-outer" id="pills-tabContent">
-        <div class="Privat-tab fade show active" id="privat" role="tabpanel" aria-labelledby="privat-tab">
+        <div class="@(globalSetting?.TabName?.Trim() == "Erhverv" ? "business-tab" :"") fade show active">
 
             @Html.Partial("_Header", navigation)
 
@@ -90,36 +103,59 @@
     <!------------------------bootstrap 5--------------->
     <script src="~/assets/libs/bs5/js/bootstrap.min.js"></script>
 
-
+    @* <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script> *@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
     <script src="~/assets/js/custom.js"></script>
+
+    <!-------------------------------------------Modal ------------------------------->
+    <div class="modal fade"
+         id="staticBackdrop"
+         data-bs-backdrop="static"
+         data-bs-keyboard="false"
+         tabindex="-1"
+         aria-labelledby="staticBackdropLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <video width="100%" height="240" controls>
+                        <source src="https://www.youtube.com/watch?v=AFDYnd-XPa8&t=1149s" type="video/mp4" />
+                        <source src="movie.ogg" type="video/ogg" />
+                    </video>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn dark_blue_bg white" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
-           $(document).ready(function () {
-            var currentUrl = window.location.pathname; // Get current page URL
+             var currentUrl = window.location.pathname; // Get current page URL
 
-            // Handle active class for left navigation (tabs)
-            $(".tabs-link").each(function () {
-                if ($(this).attr("href") === currentUrl) {
-                    $(".tabs-link").removeClass("active"); // Remove 'active' from all tabs
-                    $(this).addClass("active"); // Add 'active' to the matching tab
-                }
-            });
-
-            // Handle active class for right navigation
-            $(".navigation-link").each(function () {
-                if ($(this).attr("href") === currentUrl) {
-                    $(".navigation-link").removeClass("active"); // Remove 'active' from all nav links
-                    $(this).addClass("active"); // Add 'active' to the matching navigation link
-                }
-            });
-
-            // Click event to update active class dynamically
-            $(".tabs-link, .navigation-link").on("click", function () {
-                $(".tabs-link, .navigation-link").removeClass("active"); // Remove active from all
-                $(this).addClass("active"); // Add active to clicked item
-            });
+        // Handle active class for left navigation (tabs)
+        $(".tabs-link").each(function () {
+            if ($(this).attr("href") === currentUrl) {
+                $(".tabs-link").removeClass("active"); // Remove 'active' from all tabs
+                $(this).addClass("active"); // Add 'active' to the matching tab
+            }
         });
-
-
+        // Handle active class for right navigation
+        $(".navigation-link").each(function () {
+            if ($(this).attr("href") === currentUrl) {
+                $(".navigation-link").removeClass("active"); // Remove 'active' from all nav links
+                $(this).addClass("active"); // Add 'active' to the matching navigation link
+            }
+        });
+        // Click event to update active class dynamically
+        $(".tabs-link, .navigation-link").on("click", function () {
+            $(".tabs-link, .navigation-link").removeClass("active"); // Remove active from all
+            $(this).addClass("active"); // Add active to clicked item
+        });
         //     $(document).ready(function () {
         //         debugger
         //     // Handle click event
@@ -141,6 +177,7 @@
         // });
 
     </script>
+
 </body>
 
 </html>

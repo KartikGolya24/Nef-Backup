@@ -82,6 +82,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops Logo => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "logo");
 
 		///<summary>
+		/// Logo Url
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("logoUrl")]
+		public virtual global::Umbraco.Cms.Core.Models.Link LogoUrl => this.Value<global::Umbraco.Cms.Core.Models.Link>(_publishedValueFallback, "logoUrl");
+
+		///<summary>
 		/// Menu Text Color
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
@@ -90,20 +98,20 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual string MenuTextColor => this.Value<string>(_publishedValueFallback, "menuTextColor");
 
 		///<summary>
-		/// Mit Nef button bg Color
+		/// Mit Button BorderColor
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("mitNefButtonBgColor")]
-		public virtual string MitNefButtonBgColor => this.Value<string>(_publishedValueFallback, "mitNefButtonBgColor");
+		[ImplementPropertyType("mitButtonBorderColor")]
+		public virtual string MitButtonBorderColor => this.Value<string>(_publishedValueFallback, "mitButtonBorderColor");
 
 		///<summary>
-		/// Mit Nef button Text Color: pick mit nef button text color
+		/// Mit Button Theme
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("mitNefButtonTextColor")]
-		public virtual string MitNefButtonTextColor => this.Value<string>(_publishedValueFallback, "mitNefButtonTextColor");
+		[ImplementPropertyType("mitButtonTheme")]
+		public virtual string MitButtonTheme => this.Value<string>(_publishedValueFallback, "mitButtonTheme");
 
 		///<summary>
 		/// Mit Nef Icon
@@ -114,12 +122,12 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops MitNefIcon => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "mitNefIcon");
 
 		///<summary>
-		/// Mit Nef Text
+		/// Mit Nef Link
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("mitNefText")]
-		public virtual string MitNefText => this.Value<string>(_publishedValueFallback, "mitNefText");
+		[ImplementPropertyType("mitNefLink")]
+		public virtual global::Umbraco.Cms.Core.Models.Link MitNefLink => this.Value<global::Umbraco.Cms.Core.Models.Link>(_publishedValueFallback, "mitNefLink");
 
 		///<summary>
 		/// Navigation Item

@@ -40,66 +40,72 @@
       "Alias": "headerContent",
       "PropertyTypes": [
         {
-          "Key": "136c32d4-58a1-4724-a69c-f03c54c2b40d",
-          "Alias": "mitNefButtonBgColor",
-          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
-          "Name": "Mit Nef button bg Color",
-          "SortOrder": 7
+          "Key": "01de0b40-13d9-4372-9db3-86cf3270f1c1",
+          "Alias": "logoUrl",
+          "DataType": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
+          "Name": "Logo Url",
+          "SortOrder": 1
         },
         {
           "Key": "1c9d3505-3289-48d2-8337-fca93c160c29",
           "Alias": "mitNefIcon",
           "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
           "Name": "Mit Nef Icon",
-          "SortOrder": 5
+          "SortOrder": 6
         },
         {
           "Key": "1d02a5dc-3cb0-417a-9511-cc215f98b30a",
           "Alias": "searchPlaceholder",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
           "Name": "Search Placeholder",
-          "SortOrder": 3
+          "SortOrder": 4
+        },
+        {
+          "Key": "2631ed3a-2353-4e41-a2e9-07260fd7073a",
+          "Alias": "mitButtonTheme",
+          "DataType": "umb://data-type/36564b1fa93643ee88423df7234ea0bf",
+          "Name": "Mit Button Theme",
+          "SortOrder": 8
         },
         {
           "Key": "48ee6933-3328-46ab-adb2-ee318035c631",
-          "Alias": "mitNefText",
-          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-          "Name": "Mit Nef Text",
-          "SortOrder": 6
+          "Alias": "mitNefLink",
+          "DataType": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
+          "Name": "Mit Nef Link",
+          "SortOrder": 7
         },
         {
           "Key": "4f381115-b42c-45f0-a66e-fd29511119f1",
           "Alias": "searchIcon",
           "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
           "Name": "Search Icon",
-          "SortOrder": 4
+          "SortOrder": 5
         },
         {
-          "Key": "8b286726-b04f-4b03-9389-c78944ec9495",
-          "Alias": "mitNefButtonTextColor",
+          "Key": "922dccd1-490b-465c-bdfa-33511e4dbbc8",
+          "Alias": "mitButtonBorderColor",
           "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
-          "Description": "pick mit nef button text color",
-          "Name": "Mit Nef button Text Color",
-          "SortOrder": 8
+          "Name": "Mit Button BorderColor",
+          "SortOrder": 9
         },
         {
           "Key": "953d3e8c-f0f9-4208-bd16-dbca71c8c7cb",
           "Alias": "navigationItem",
           "DataType": "umb://data-type/9b6d00a90e5b42afbd338ab1d24bcd5b",
           "Name": "Navigation Item",
-          "SortOrder": 1
+          "SortOrder": 2
         },
         {
           "Key": "97decb57-3d45-4dee-a6be-159d853f7ab4",
           "Alias": "menuTextColor",
           "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
           "Name": "Menu Text Color",
-          "SortOrder": 2
+          "SortOrder": 3
         },
         {
           "Key": "a4ae692b-c376-4949-8051-4c3d89fc9725",
           "Alias": "logo",
-          "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+          "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
           "Name": "Logo"
         }
       ]
@@ -127,11 +133,19 @@
       "Ordering": true
     },
     {
+      "Udi": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
+      "Ordering": true
+    },
+    {
       "Udi": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
       "Ordering": true
     },
     {
       "Udi": "umb://data-type/1928e9de63ea4062a80d307fec419cf2",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/36564b1fa93643ee88423df7234ea0bf",
       "Ordering": true
     },
     {
@@ -144,6 +158,10 @@
     },
     {
       "Udi": "umb://data-type/b09a8475ff6a4d3b837c0f6c766e0276",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
       "Ordering": true
     },
     {

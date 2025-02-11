@@ -1,0 +1,87 @@
+{
+  "Name": "Common info Section Block",
+  "Alias": "commonInfoSectionBlock",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/d86cd3920b8d4973b36dd2fb0212513a",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "82f8d809-f32c-409f-876b-9293e33c3bde",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "201c7876-8b4d-455f-a0ac-b0161d0d396b",
+          "Alias": "description",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Description",
+          "SortOrder": 1
+        },
+        {
+          "Key": "40ba8431-845a-435d-9668-408c36be0152",
+          "Alias": "helpDescriptionText",
+          "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+          "Name": "Help Description Text",
+          "SortOrder": 3
+        },
+        {
+          "Key": "70715abf-9f71-4f22-afe9-54f3714720ec",
+          "Alias": "accordionList",
+          "DataType": "umb://data-type/ddddc6b8f8c34bceb0b2ab3d9902fa23",
+          "Name": "Accordion List",
+          "SortOrder": 2
+        },
+        {
+          "Key": "837c27e9-8cb2-4c71-b9fb-9a7c9ff39676",
+          "Alias": "buttonLink",
+          "DataType": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
+          "Name": "Button Link",
+          "SortOrder": 4
+        },
+        {
+          "Key": "9921059e-0db5-4034-a99a-12683253bc07",
+          "Alias": "heading",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Heading"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/fc52a2cd48d140579cd263d7f5ff7475",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/ddddc6b8f8c34bceb0b2ab3d9902fa23",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/d86cd3920b8d4973b36dd2fb0212513a",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

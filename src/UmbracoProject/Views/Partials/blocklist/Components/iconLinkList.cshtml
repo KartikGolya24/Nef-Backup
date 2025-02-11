@@ -3,7 +3,7 @@
     var content = Model?.Content;
 }
 
-<a href="@content?.Link?.Url" class="btn dark_blue_bg white" style="background-color:#@content?.LinkBgColor;color:#@content?.LinkTextColor;border:1px solid #@content?.BorderColor">
+<a href="@content?.Link?.Url" class="btn @content?.ButtonTheme" style="border:1px solid #@content?.BorderColor">
     @if (content?.Icon?.Content != null)
     {
         <img src="@content?.Icon?.MediaUrl()" class="img-fluid" alt="">

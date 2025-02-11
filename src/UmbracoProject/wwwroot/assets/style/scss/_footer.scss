@@ -9,16 +9,14 @@
     }
 
     .bottom-footer {
-        padding: 64px 48px 48px 48px;
-        display: flex;
-        flex-direction: column;
-        gap: 96px;
+        padding: 64px 0 48px;
         position: relative;
 
         .footer-detail {
             flex-wrap: wrap;
             display: flex;
             gap: 48px;
+            margin-bottom: 96px;
 
             .footer-address {
                 min-width: 256px;

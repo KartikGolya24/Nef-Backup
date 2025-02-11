@@ -1,0 +1,27 @@
+{
+  "Name": "Latest Update Section Block - Updates Block - Block List",
+  "Alias": "",
+  "EditorAlias": "Umbraco.BlockList",
+  "Configuration": {
+    "blocks": [
+      {
+        "contentElementTypeKey": "c856276d-0a7e-4c5a-9402-d98fc10bfeef",
+        "label": "{{time}}",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      }
+    ],
+    "validationLimit": {},
+    "useSingleBlockMode": false,
+    "useLiveEditing": false,
+    "useInlineEditingAsDefault": false
+  },
+  "Udi": "umb://data-type/c43b245236ce4a12b84e2cfed2934e89",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/c856276d0a7e4c5a9402d98fc10bfeef"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

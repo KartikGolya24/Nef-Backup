@@ -1,0 +1,67 @@
+{
+  "Name": "Icon Link List - Button Theme - Dropdown",
+  "Alias": "",
+  "EditorAlias": "Umbraco.DropDown.Flexible",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {
+    "multiple": false,
+    "items": [
+      {
+        "id": 1,
+        "value": "dark_blue_btn"
+      },
+      {
+        "id": 2,
+        "value": "space_blue_btn"
+      },
+      {
+        "id": 3,
+        "value": "steel_blue_btn"
+      },
+      {
+        "id": 4,
+        "value": "light_blue_btn"
+      },
+      {
+        "id": 5,
+        "value": "dark_purple_btn"
+      },
+      {
+        "id": 6,
+        "value": "light_pink_btn"
+      },
+      {
+        "id": 7,
+        "value": "light_purple_btn"
+      },
+      {
+        "id": 8,
+        "value": "turquoise_btn"
+      },
+      {
+        "id": 9,
+        "value": "light_green_btn"
+      },
+      {
+        "id": 10,
+        "value": "medium_green_btn"
+      },
+      {
+        "id": 11,
+        "value": "dark_pink_btn"
+      },
+      {
+        "id": 12,
+        "value": "dark_green_btn"
+      },
+      {
+        "id": 13,
+        "value": "white_bg_btn"
+      }
+    ]
+  },
+  "Udi": "umb://data-type/36564b1fa93643ee88423df7234ea0bf",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

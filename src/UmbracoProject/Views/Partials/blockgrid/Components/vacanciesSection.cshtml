@@ -1,0 +1,59 @@
+﻿@using Umbraco.Cms.Core.Models.Blocks
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<VacanciesSection>>
+@{
+    var content = Model?.Content;
+}
+
+<!-------------------------------------- positions --------------------->
+
+<div class="available-section">
+    <div class="container">
+        <div class="section-heading black-950">
+            <h2 class="fw-600">@content?.Heading</h2>
+            @Html?.Raw(content?.Description)
+        </div>
+
+        <ul class="position-list">
+            @if (content?.Positions?.Count > 0)
+            {
+                var count = 1;
+                @foreach (var item in content?.Positions)
+                {
+
+                    var positionModel = item?.Content as VacanciesPositionsBlocks;
+                    <li style="@(count > 3 ?"display:none":"")">
+                        <a href="@positionModel?.PositionLink?.Url" class="">
+                            <div class="position-content">
+                                <h4 class="black-950 fw-600">@positionModel?.PositionLink?.Name</h4>
+                                <p class="black-500">@positionModel?.PositionLocation</p>
+                            </div>
+                            <div class="position-img">
+                                <img src="~/assets/img/icons/line-arrow-right.svg" class="img-fluid" alt="img" />
+                            </div>
+                        </a>
+                    </li>
+                    count++;
+                }
+            }
+        </ul>
+        @if (content?.Positions?.Count > 3)
+        {
+            <button type="button" class="btn border_black-200 white_bg_btn load_more_vacancies">@content?.LoadMoreButtonText</button>
+        }
+    </div>
+</div>
+<script>
+     $(document).ready(function () {
+         $(".load_more_vacancies").click(function () {
+             debugger
+            let positionList = $(".position-list");
+            let hiddenBlocks = positionList.find("li:hidden").slice(0, 3);
+
+            hiddenBlocks.show();
+
+            if (positionList.find("li:hidden").length === 0) {
+                $(this).hide();
+            }
+        });
+    });
+</script>

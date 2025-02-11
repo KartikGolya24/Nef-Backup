@@ -1,10 +1,10 @@
 {
-  "Name": "Date Picker with time",
+  "Name": "Dk Date Picker with time",
   "Alias": "",
   "EditorAlias": "Umbraco.DateTime",
   "DatabaseType": "Date",
   "Configuration": {
-    "format": "YYYY-MM-DD HH:mm:ss",
+    "format": "DD.MM.YYYY HH.mm",
     "offsetTime": false
   },
   "Udi": "umb://data-type/e4d66c0fb935420081f0025f7256b89a",

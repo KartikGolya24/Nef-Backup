@@ -1,0 +1,129 @@
+{
+  "Name": "Latest Update Section Block",
+  "Alias": "latestUpdateSectionBlock",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/d86cd3920b8d4973b36dd2fb0212513a",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "11295161-74cf-4045-bd1b-ea4588d23195",
+      "Name": "Css Content",
+      "SortOrder": 2,
+      "Alias": "cssContent",
+      "PropertyTypes": [
+        {
+          "Key": "543bfa3f-7c27-458c-98b7-f95d596cd5cd",
+          "Alias": "addSectionClass",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Add Section Class"
+        }
+      ]
+    },
+    {
+      "Key": "2e81b97c-8380-4afd-8e1a-758ad323d42c",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "17869817-4a9d-44f8-8380-9ede1289426d",
+          "Alias": "buttonLink",
+          "DataType": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
+          "Name": "Button Link",
+          "SortOrder": 4
+        },
+        {
+          "Key": "3505136d-abfd-4db1-9c0e-6f8906a5f962",
+          "Alias": "heading",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Heading"
+        },
+        {
+          "Key": "44d26424-4d88-40bd-9b08-eb7b63b6c6be",
+          "Alias": "opratingMapDescription",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Oprating Map Description",
+          "SortOrder": 3
+        },
+        {
+          "Key": "4c534f08-c8cd-4364-84d1-489f6bbf060a",
+          "Alias": "mapIframeSrc",
+          "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+          "Name": "Map Iframe Src",
+          "SortOrder": 2
+        },
+        {
+          "Key": "9e8211d5-9131-48fa-b26e-805a9b953a56",
+          "Alias": "description",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Description",
+          "SortOrder": 1
+        }
+      ]
+    },
+    {
+      "Key": "d0576895-7228-4ec7-b96f-0dd24d1ddd1b",
+      "Name": "Updates Content",
+      "SortOrder": 1,
+      "Alias": "updatesContent",
+      "PropertyTypes": [
+        {
+          "Key": "c1e96580-f283-4abf-871a-84bdae2d80a5",
+          "Alias": "loadMoreButtonText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Load More button Text",
+          "SortOrder": 2
+        },
+        {
+          "Key": "e1c76f9d-6ed5-4327-9511-4c6318d066cf",
+          "Alias": "updatesBlock",
+          "DataType": "umb://data-type/c43b245236ce4a12b84e2cfed2934e89",
+          "Name": "Updates Block",
+          "SortOrder": 1
+        },
+        {
+          "Key": "f43fd856-4c11-4908-a019-0e8a51059185",
+          "Alias": "updateHeading",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Heading"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/4d41b70fba514cd599ac0bfd0fdcce06",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/c43b245236ce4a12b84e2cfed2934e89",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/d86cd3920b8d4973b36dd2fb0212513a",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

@@ -50,14 +50,6 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Card Button Border Color
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("cardButtonBorderColor")]
-		public virtual string CardButtonBorderColor => this.Value<string>(_publishedValueFallback, "cardButtonBorderColor");
-
-		///<summary>
 		/// Card Description
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
@@ -90,27 +82,11 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops CardIcon => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "cardIcon");
 
 		///<summary>
-		/// Heading Text Color
+		/// Service Card Theme
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("headingTextColor")]
-		public virtual string HeadingTextColor => this.Value<string>(_publishedValueFallback, "headingTextColor");
-
-		///<summary>
-		/// Icon Bg Color
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("iconBgColor")]
-		public virtual string IconBgColor => this.Value<string>(_publishedValueFallback, "iconBgColor");
-
-		///<summary>
-		/// Text Color
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("textColor")]
-		public virtual string TextColor => this.Value<string>(_publishedValueFallback, "textColor");
+		[ImplementPropertyType("serviceCardTheme")]
+		public virtual string ServiceCardTheme => this.Value<string>(_publishedValueFallback, "serviceCardTheme");
 	}
 }

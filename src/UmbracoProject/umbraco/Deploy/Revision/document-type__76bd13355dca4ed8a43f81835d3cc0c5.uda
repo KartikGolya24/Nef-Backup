@@ -28,6 +28,13 @@
           "Alias": "sliderBlocks",
           "DataType": "umb://data-type/1cb0ba26979a4f4d96ab23ce4e9b413a",
           "Name": "Slider Blocks",
+          "SortOrder": 3
+        },
+        {
+          "Key": "c8bb6c65-2944-4f23-bead-caf7de472fc5",
+          "Alias": "color",
+          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+          "Name": "Color",
           "SortOrder": 2
         },
         {
@@ -45,6 +52,10 @@
   "Dependencies": [
     {
       "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
       "Ordering": true
     },
     {

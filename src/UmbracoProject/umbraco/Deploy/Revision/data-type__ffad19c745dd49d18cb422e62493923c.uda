@@ -1,0 +1,27 @@
+{
+  "Name": "Vacancies Section - Positions - Block List",
+  "Alias": "",
+  "EditorAlias": "Umbraco.BlockList",
+  "Configuration": {
+    "blocks": [
+      {
+        "contentElementTypeKey": "9eaafc35-0fef-42ed-8609-48072922760c",
+        "label": "{{positionLink[0][\"name\"]}}",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      }
+    ],
+    "validationLimit": {},
+    "useSingleBlockMode": false,
+    "useLiveEditing": false,
+    "useInlineEditingAsDefault": false
+  },
+  "Udi": "umb://data-type/ffad19c745dd49d18cb422e62493923c",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/9eaafc350fef42ed860948072922760c"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

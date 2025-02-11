@@ -72,6 +72,101 @@
             }
         }
 
+        &.dark_blue_bg {
+            background-color: $dark_blue;
+            .card-icon {
+                border: 2px solid $light_blue;
+                svg {
+                    path {
+                        stroke: $white;
+                    }
+                }
+            }
+            .card-body {
+                h3 {
+                    color: $white;
+                }
+                p {
+                    color: $black-100;
+                }
+            }
+        }
+        &.light_purple_bg {
+            background-color: $light_purple;
+            .card-icon {
+                background-color: $dark_purple;
+                svg {
+                    path {
+                        stroke: $white;
+                    }
+                }
+            }
+            .card-body {
+                h3 {
+                    color: $black-950;
+                }
+                p {
+                    color: $black-800;
+                }
+            }
+        }
+        &.steel_blue_bg {
+            background-color: $steel_blue;
+            .card-icon {
+                border: 2px solid $white;
+                svg {
+                    path {
+                        stroke: $white;
+                    }
+                }
+            }
+            .card-body {
+                h3 {
+                    color: $white;
+                }
+                p {
+                    color: $white;
+                }
+            }
+        }
+        &.turquoise_bg {
+            background-color: $turquoise;
+            .card-icon {
+                background-color: $light_blue;
+                svg {
+                    path {
+                        stroke: $white;
+                    }
+                }
+            }
+            .card-body {
+                h3 {
+                    color: $black-950;
+                }
+                p {
+                    color: $black-800;
+                }
+            }
+        }
+        &.space_blue_bg {
+            background-color: $space_blue;
+            .card-icon {
+                border: 2px solid $light_blue;
+                svg {
+                    path {
+                        stroke: $white;
+                    }
+                }
+            }
+            .card-body {
+                h3 {
+                    color: $white;
+                }
+                p {
+                    color: $black-100;
+                }
+            }
+        }
     }
 }
 

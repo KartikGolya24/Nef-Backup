@@ -14,14 +14,14 @@
                     var serviceBlock = item.Content as ServiceCardBlock;
                     var settings = item.Settings as SettingModel;
                     <div class="col-lg-4 col-md-6">
-                        <div class="card-outer dark_blue_bg" style="background-color:#@(settings?.BackgroundColor);">
+                        <div class="card-outer @serviceBlock?.ServiceCardTheme">
                             <div class="card-detail">
-                                <div class="card-icon" style="border:1px solid #@serviceBlock?.CardButtonBorderColor;background-color:#@serviceBlock?.IconBgColor">
+                                <div class="card-icon">
                                     <img src="@serviceBlock?.CardIcon?.MediaUrl()" class="img-fluid" alt="">
                                 </div>
                                 <div class="card-body">
-                                    <h3 class="white" style="color:#@(serviceBlock?.HeadingTextColor)">@serviceBlock?.CardHeadingText</h3>
-                                    <p class="black-100" style="color:#@(serviceBlock?.TextColor)">
+                                    <h3>@serviceBlock?.CardHeadingText</h3>
+                                    <p>
                                         @serviceBlock?.CardDescription
                                     </p>
                                 </div>
@@ -32,12 +32,12 @@
                                     {
                                         @foreach (var buttons in serviceBlock?.CardFooter)
                                         {
-                                            var button = buttons.Content as IconListWithLinkBlock;
+                                            var button = buttons.Content as IconLinkList;
 
-                                            <button type="button" class="btn border_light_blue white dark_blue_bg" style="color:#@(serviceBlock?.TextColor); background-color:#@(settings?.BackgroundColor);border:1px solid #@(serviceBlock?.CardButtonBorderColor);">
+                                            <a href="@button?.Link?.Url" class="btn @button?.ButtonTheme" style="border:1px solid #@(button?.BorderColor);">
                                                 <img src="@button?.Icon?.MediaUrl()" class="img-fluid" alt="">
                                                 @button?.Link?.Name
-                                            </button>
+                                            </a>
                                         }
                                     }
                                 </div>

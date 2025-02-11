@@ -1,0 +1,27 @@
+{
+  "Name": "Information Page With Auto Generate Link - Nef Address Blocks - Block List",
+  "Alias": "",
+  "EditorAlias": "Umbraco.BlockList",
+  "Configuration": {
+    "blocks": [
+      {
+        "contentElementTypeKey": "33ddecaf-4b5d-4976-b8f4-a276345e9053",
+        "label": "{{heading}}",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      }
+    ],
+    "validationLimit": {},
+    "useSingleBlockMode": false,
+    "useLiveEditing": false,
+    "useInlineEditingAsDefault": false
+  },
+  "Udi": "umb://data-type/d99b701d7fe34f6ab0ef86e9a45715d6",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/33ddecaf4b5d4976b8f4a276345e9053"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

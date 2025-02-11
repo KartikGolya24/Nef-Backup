@@ -12,10 +12,39 @@
   "CompositionContentTypes": [
     "umb://document-type/7c70e5655197457cb72434df43c5a0b2"
   ],
-  "PropertyGroups": [],
+  "PropertyGroups": [
+    {
+      "Key": "5cd20713-b957-40e1-a98a-ead340667b5c",
+      "Name": "Settings",
+      "Alias": "settings",
+      "PropertyTypes": [
+        {
+          "Key": "aea49e3d-8ee9-4481-91e1-790f22199768",
+          "Alias": "tabName",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Tab Name"
+        },
+        {
+          "Key": "c920e7b5-97ab-43e6-8c21-f5cd93436175",
+          "Alias": "tabBackgroundTheme",
+          "DataType": "umb://data-type/d0cc1e07c82348af8e67da2523c82825",
+          "Name": "Tab Background Theme",
+          "SortOrder": 1
+        }
+      ]
+    }
+  ],
   "PropertyTypes": [],
   "Udi": "umb://document-type/b6ff1a9d5ac447788911c03d95499710",
   "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/d0cc1e07c82348af8e67da2523c82825",
+      "Ordering": true
+    },
     {
       "Udi": "umb://document-type/7c70e5655197457cb72434df43c5a0b2",
       "Ordering": true

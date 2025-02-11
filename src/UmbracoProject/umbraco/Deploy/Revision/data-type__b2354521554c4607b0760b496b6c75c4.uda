@@ -1,0 +1,49 @@
+{
+  "Name": "Information Page - Blocks - Block Grid",
+  "Alias": "",
+  "EditorAlias": "Umbraco.BlockGrid",
+  "Configuration": {
+    "blocks": [
+      {
+        "columnSpanOptions": [],
+        "rowMinSpan": 1,
+        "rowMaxSpan": 1,
+        "allowAtRoot": true,
+        "allowInAreas": true,
+        "areas": [],
+        "contentElementTypeKey": "4d41b70f-ba51-4cd5-99ac-0bfd0fdcce06",
+        "label": "{{heading}}",
+        "editorSize": "medium",
+        "inlineEditing": false,
+        "forceHideContentEditorInOverlay": false
+      },
+      {
+        "columnSpanOptions": [],
+        "rowMinSpan": 1,
+        "rowMaxSpan": 1,
+        "allowAtRoot": true,
+        "allowInAreas": true,
+        "areas": [],
+        "contentElementTypeKey": "fc52a2cd-48d1-4057-9cd2-63d7f5ff7475",
+        "label": "{{heading}}",
+        "editorSize": "medium",
+        "inlineEditing": false,
+        "forceHideContentEditorInOverlay": false
+      }
+    ],
+    "blockGroups": [],
+    "validationLimit": {},
+    "useLiveEditing": false
+  },
+  "Udi": "umb://data-type/b2354521554c4607b0760b496b6c75c4",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/4d41b70fba514cd599ac0bfd0fdcce06"
+    },
+    {
+      "Udi": "umb://document-type/fc52a2cd48d140579cd263d7f5ff7475"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

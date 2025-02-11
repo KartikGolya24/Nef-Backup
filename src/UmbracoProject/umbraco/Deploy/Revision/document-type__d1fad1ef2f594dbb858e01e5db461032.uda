@@ -1,0 +1,65 @@
+{
+  "Name": "Inner About Section",
+  "Alias": "innerAboutSection",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "74c9fae4-648a-4fd5-b924-7d962630ee45",
+      "Name": "content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "16dac1c0-4311-4e42-afe9-d6246144669f",
+          "Alias": "buttonList",
+          "DataType": "umb://data-type/2f42fd89a2a44d95aece4e93b933793f",
+          "Name": "Button List",
+          "SortOrder": 2
+        },
+        {
+          "Key": "a5e1b3f7-1c49-4a3b-84bb-9a0c07127ae7",
+          "Alias": "heading",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Heading"
+        },
+        {
+          "Key": "c0eeab71-221a-442d-8296-691ddd758d6d",
+          "Alias": "descriptionText",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Description Text",
+          "SortOrder": 1
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/d1fad1ef2f594dbb858e01e5db461032",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2f42fd89a2a44d95aece4e93b933793f",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

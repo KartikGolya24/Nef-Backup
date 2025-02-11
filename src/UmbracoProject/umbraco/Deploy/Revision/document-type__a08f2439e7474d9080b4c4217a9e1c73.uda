@@ -12,13 +12,125 @@
     "AllowedChildContentTypes": []
   },
   "Parent": "umb://document-type-container/3e5c1ac20a48406c917e220b4bada863",
-  "CompositionContentTypes": [],
-  "PropertyGroups": [],
+  "CompositionContentTypes": [
+    "umb://document-type/c9ab57ded3b44526a7ac22bacf19a079"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "4fc34617-919f-4775-8bfe-440ec6a98899",
+      "Name": "Banner Section",
+      "SortOrder": 1,
+      "Alias": "bannerSection",
+      "PropertyTypes": [
+        {
+          "Key": "633833d1-125f-4c0c-92d6-acd1bbb7b76a",
+          "Alias": "iconImage",
+          "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
+          "Name": "Icon Image",
+          "SortOrder": 3
+        },
+        {
+          "Key": "7316d7ce-2fdc-42cf-bc63-9bc0e49ddfb1",
+          "Alias": "descriptionText",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Description Text",
+          "SortOrder": 1
+        },
+        {
+          "Key": "9f212e83-39c6-43bd-b86a-8ab35c72e450",
+          "Alias": "buttonList",
+          "DataType": "umb://data-type/2f42fd89a2a44d95aece4e93b933793f",
+          "Name": "Button List",
+          "SortOrder": 2
+        },
+        {
+          "Key": "a87f49c9-a489-4c8a-86c1-e7998d45cb49",
+          "Alias": "heading",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Heading"
+        }
+      ]
+    },
+    {
+      "Key": "5d007241-d860-4e35-bd93-9e994ddf9acd",
+      "Name": "Left Slider Content",
+      "SortOrder": 2,
+      "Alias": "leftSliderContent1",
+      "PropertyTypes": [
+        {
+          "Key": "6db2a29c-a495-40b6-9007-a1e9da302253",
+          "Alias": "blocks",
+          "DataType": "umb://data-type/b2354521554c4607b0760b496b6c75c4",
+          "Name": "Blocks"
+        }
+      ]
+    },
+    {
+      "Key": "d8474dcc-578e-4870-aa19-2d2104718d55",
+      "Name": "Right Side Content",
+      "SortOrder": 3,
+      "Alias": "rightSideContent",
+      "PropertyTypes": [
+        {
+          "Key": "48ea24c5-e059-4ba6-a1ff-fb0f85b83280",
+          "Alias": "relativeLinks",
+          "DataType": "umb://data-type/dc5256dbe96c49e0a0503b511c2408b5",
+          "Name": "Relative Links",
+          "SortOrder": 1
+        },
+        {
+          "Key": "d8c90c40-4f37-44cf-8bec-3c8132968105",
+          "Alias": "nefAddressBlocks",
+          "DataType": "umb://data-type/d99b701d7fe34f6ab0ef86e9a45715d6",
+          "Name": "Nef Address Blocks",
+          "SortOrder": 2
+        },
+        {
+          "Key": "fe514865-f916-4949-af28-17683114bc3f",
+          "Alias": "relativeLinkHeading",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Relative Link Heading"
+        }
+      ]
+    }
+  ],
   "PropertyTypes": [],
   "Udi": "umb://document-type/a08f2439e7474d9080b4c4217a9e1c73",
   "Dependencies": [
     {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2f42fd89a2a44d95aece4e93b933793f",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/b2354521554c4607b0760b496b6c75c4",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/d99b701d7fe34f6ab0ef86e9a45715d6",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/dc5256dbe96c49e0a0503b511c2408b5",
+      "Ordering": true
+    },
+    {
       "Udi": "umb://document-type-container/3e5c1ac20a48406c917e220b4bada863",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/c9ab57ded3b44526a7ac22bacf19a079",
       "Ordering": true
     },
     {

@@ -1,6 +1,244 @@
-﻿@using Umbraco.Cms.Web.Common.PublishedModels;
-@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.InformationPage>
-@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<InformationPage>
 @{
-	Layout = null;
+    Layout = "Master.cshtml";
 }
+<style>
+    .paradiv p {
+    font-size: 18px;
+    line-height: 32px;
+    }
+</style>
+<!---------------------------------- other-section-banner ------------------------->
+<div class="section-banner">
+    <div class="container position-relative">
+        <div class="section-banner-inner black-700 paradiv">
+            <h1 class="black-950">@Model?.Heading</h1>
+            @Html?.Raw(Model?.DescriptionText)
+            <div class="multiple-buttons">
+                @Html?.GetBlockListHtml(Model?.ButtonList)
+            </div>
+        </div>
+        <div class="doodles-img">
+            <img src="@Model?.IconImage?.MediaUrl()" class="img-fluid" alt="img">
+        </div>
+    </div>
+</div>
+
+
+
+<!---------------------------------- section-sidebar-------------------- ------->
+<div class="status-alt-sidebar">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="status-left-part">
+                    <div class="operating-section">
+                        @if (Model?.Blocks?.Count > 0)
+                        {
+                            @foreach (var item in Model?.Blocks)
+                            {
+                                var alias = item?.Content?.ContentType?.Alias;
+                                @if (alias == "latestUpdateSectionBlock")
+                                {
+                                    var itemModel = item?.Content as LatestUpdateSectionBlock;
+
+                                    <div class="operating-first-section @itemModel?.AddSectionClass">
+                                        <h2>@itemModel?.Heading</h2>
+                                        @Html?.Raw(itemModel?.Description)
+                                        <!-- <img src="assets/img/bg-img/operating-map.png" class="img-fluid" alt="img"> -->
+                                        @if (!string.IsNullOrWhiteSpace(itemModel?.MapIframeSrc))
+                                        {
+                                            <iframe src="@itemModel?.MapIframeSrc" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        }
+                                        <div class="operating-map">
+                                            @Html?.Raw(itemModel?.OpratingMapDescription)
+                                            <a href="@itemModel?.ButtonLink?.Url" class="btn light_blue_btn">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_25_3041)">
+                                                        <path d="M2.0714 7.11625C1.51266 7.01905 1.51266 6.21694 2.0714 6.11974C4.09562 5.76758 5.70561 4.22579 6.14497 2.21868L6.17866 2.06483C6.29954 1.51261 7.08582 1.50917 7.21153 2.06031L7.25242 2.23961C7.70805 4.23723 9.31848 5.76602 11.3371 6.11719C11.8987 6.21491 11.8987 7.02109 11.3371 7.11878C9.31848 7.46997 7.70805 8.99876 7.25242 10.9964L7.21153 11.1757C7.08582 11.7268 6.29954 11.7234 6.17866 11.1712L6.14497 11.0173C5.70561 9.01022 4.09562 7.46841 2.0714 7.11625Z" stroke="#ffffff" stroke-width="1.71003" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M11.2527 21.6614C10.4273 22.1928 9.44491 22.4258 8.4688 22.3215C7.49267 22.2172 6.58165 21.7821 5.88717 21.0882L5.28216 20.4832C5.0138 20.2119 4.86328 19.8457 4.86328 19.4642C4.86328 19.0826 5.0138 18.7166 5.28216 18.4453L7.82959 15.9137C8.09813 15.6464 8.46165 15.4963 8.8406 15.4963C9.21954 15.4963 9.58306 15.6464 9.85161 15.9137C10.1229 16.1821 10.489 16.3326 10.8706 16.3326C11.2521 16.3326 11.6183 16.1821 11.8895 15.9137L15.9495 11.8538C16.2179 11.5825 16.3684 11.2164 16.3684 10.8348C16.3684 10.4532 16.2179 10.0871 15.9495 9.81583C15.6821 9.54729 15.532 9.18376 15.532 8.80482C15.532 8.42587 15.6821 8.06235 15.9495 7.7938L18.4014 5.24638C18.6727 4.97804 19.0389 4.82751 19.4203 4.82751C19.802 4.82751 20.1682 4.97804 20.4393 5.24638L21.0443 5.85139C21.7506 6.53607 22.2007 7.44226 22.3195 8.41872C22.4382 9.3952 22.2187 10.3829 21.6971 11.2169C18.9209 15.3386 15.3744 18.8852 11.2527 21.6614Z" stroke="#ffffff" stroke-width="1.71003" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_25_3041">
+                                                            <rect width="24" height="24" fill="white"></rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                @itemModel?.ButtonLink?.Name
+                                            </a>
+                                        </div>
+                                        @if (itemModel?.UpdatesBlock?.Count > 0)
+                                        {
+                                            var sortedBlocks = itemModel.UpdatesBlock
+                                            .OrderByDescending(block => (block?.Content as LatestUpdatesBlocks)?.Time)
+                                            .ToList();
+                                            var count = 1;
+
+
+                                            <div class="update-power">
+                                                <h4>Seneste opdateringer omkring strøm</h4>
+                                                <div class="update-power-list">
+                                                    @foreach (var block in sortedBlocks)
+                                                    {
+                                                        var blockModel = block?.Content as LatestUpdatesBlocks;
+
+                                                        <div class="update-power-box turquoise_bg" style="@(count > 4 ?"display:none":"")">
+                                                            <span class="caption">@blockModel?.Time.ToString("dd.MM.yyyy, 'Kl.' HH.mm")</span>
+
+                                                            @Html?.Raw(blockModel?.Description)
+                                                        </div>
+                                                        count++;
+                                                    }
+                                                </div>
+                                                @if (itemModel?.UpdatesBlock?.Count > 4)
+                                                {
+                                                    <button type="button" class="btn border_black-200 white-bg_btn black-950 load_more_update">
+                                                        @itemModel?.LoadMoreButtonText
+                                                    </button>
+                                                }
+                                            </div>
+                                        }
+                                    </div>
+
+                                }
+                                @if (alias == "commonInfoSectionBlock")
+                                {
+                                    var itemModel = item?.Content as CommonInfoSectionBlock;
+                                    <div class="operating-first-section second-section">
+                                        <h2>@itemModel?.Heading</h2>
+
+                                        @Html?.Raw(itemModel?.Description)
+
+                                        @if (itemModel?.AccordionList?.Count > 0)
+                                        {
+                                            var headingCount = 0;
+                                            var collapseCount = 0;
+                                            <div class="personal-data-faq">
+                                                <div class="accordion accordion-flush accordian-section " id="accordionFlushExample">
+                                                    @foreach (var accordion in itemModel?.AccordionList)
+                                                    {
+                                                        var flushHeading = $"flush-heading{headingCount++}";
+                                                        var flushCollapse = $"flush-collapse{collapseCount++}";
+                                                        var accordionModel = accordion?.Content as AccordionBlock;
+                                                        <div class="accordion-item">
+                                                            <h2 class="accordion-header " id="@flushHeading">
+                                                                <button class="accordion-button collapsed  black-950" type="button" data-bs-toggle="collapse" data-bs-target="#@flushCollapse" aria-expanded="false" aria-controls="@flushCollapse">
+                                                                    @accordionModel?.Heading
+                                                                </button>
+                                                            </h2>
+                                                            <div id="@flushCollapse" class="accordion-collapse collapse" aria-labelledby="@flushHeading" data-bs-parent="#accordionFlushExample">
+                                                                <div class="accordion-body black-700 p-0">
+                                                                    @accordionModel?.DescriptionText
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <br />
+                                            <br />
+                                        }
+
+                                        <div class="operating-map">
+                                            <p>@itemModel?.HelpDescriptionText</p>
+                                            <a href="@itemModel?.ButtonLink?.Url" class="btn light_blue_btn">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_25_3041)">
+                                                        <path d="M2.0714 7.11625C1.51266 7.01905 1.51266 6.21694 2.0714 6.11974C4.09562 5.76758 5.70561 4.22579 6.14497 2.21868L6.17866 2.06483C6.29954 1.51261 7.08582 1.50917 7.21153 2.06031L7.25242 2.23961C7.70805 4.23723 9.31848 5.76602 11.3371 6.11719C11.8987 6.21491 11.8987 7.02109 11.3371 7.11878C9.31848 7.46997 7.70805 8.99876 7.25242 10.9964L7.21153 11.1757C7.08582 11.7268 6.29954 11.7234 6.17866 11.1712L6.14497 11.0173C5.70561 9.01022 4.09562 7.46841 2.0714 7.11625Z" stroke="#ffffff" stroke-width="1.71003" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M11.2527 21.6614C10.4273 22.1928 9.44491 22.4258 8.4688 22.3215C7.49267 22.2172 6.58165 21.7821 5.88717 21.0882L5.28216 20.4832C5.0138 20.2119 4.86328 19.8457 4.86328 19.4642C4.86328 19.0826 5.0138 18.7166 5.28216 18.4453L7.82959 15.9137C8.09813 15.6464 8.46165 15.4963 8.8406 15.4963C9.21954 15.4963 9.58306 15.6464 9.85161 15.9137C10.1229 16.1821 10.489 16.3326 10.8706 16.3326C11.2521 16.3326 11.6183 16.1821 11.8895 15.9137L15.9495 11.8538C16.2179 11.5825 16.3684 11.2164 16.3684 10.8348C16.3684 10.4532 16.2179 10.0871 15.9495 9.81583C15.6821 9.54729 15.532 9.18376 15.532 8.80482C15.532 8.42587 15.6821 8.06235 15.9495 7.7938L18.4014 5.24638C18.6727 4.97804 19.0389 4.82751 19.4203 4.82751C19.802 4.82751 20.1682 4.97804 20.4393 5.24638L21.0443 5.85139C21.7506 6.53607 22.2007 7.44226 22.3195 8.41872C22.4382 9.3952 22.2187 10.3829 21.6971 11.2169C18.9209 15.3386 15.3744 18.8852 11.2527 21.6614Z" stroke="#ffffff" stroke-width="1.71003" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_25_3041">
+                                                            <rect width="24" height="24" fill="white"></rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                @itemModel?.ButtonLink?.Name
+                                            </a>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        }
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="sidebar">
+                    <div class="sidebar-item">
+                        @if (Model?.RelativeLinks?.Count() > 0)
+                        {
+                            <div class="sidebar-list">
+                                <h4>Relevante links</h4>
+                                <ul>
+                                    @foreach (var item in Model?.RelativeLinks)
+                                    {
+                                        <li>
+                                            <a href="@item?.Url">@item?.Name</a>
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        }
+
+                        @if (Model?.NefAddressBlocks?.Count > 0)
+                        {
+                            @foreach (var address in Model?.NefAddressBlocks)
+                            {
+                                var addressModel = address?.Content as NefAddressBlock;
+                                <div class="sidebar-list">
+                                    <h4>@addressModel?.Heading</h4>
+                                    <div class="sidebar-detail">
+                                        @if (addressModel?.ContentBlock?.Count > 0)
+                                        {
+                                            @foreach (var item in addressModel?.ContentBlock)
+                                            {
+                                                var block = item?.Content as DescriptionText;
+                                                <div class="sidebar-detail-list">
+                                                    @Html.Raw(block?.RichTextContent)
+                                                </div>
+                                            }
+                                        }
+                                    </div>
+
+                                </div>
+                            }
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <input type="text" class="form-control" id="datepicker">
+
+</div>
+<script>
+    $(document).ready(function(){
+        $('#datepicker').datepicker({
+            format: 'mm/dd/yyyy',
+            startDate: '-3d'
+        });
+    });
+</script>
+
+<script>
+     $(document).ready(function () {
+         $(".load_more_update").click(function () {
+            let updateContainer = $(this).closest(".update-power");
+            let hiddenBlocks = updateContainer.find(".update-power-box:hidden").slice(0, 4);
+
+            hiddenBlocks.show();
+
+            if (updateContainer.find(".update-power-box:hidden").length === 0) {
+                $(this).hide();
+            }
+        });
+    });
+</script>

@@ -11,11 +11,11 @@
     <div class="container">
         <div class="electricity-price-detail">
             <div class="head-part">
-                <div class="content black-950" style="color:#@content?.TextColor">
-                    <h2 class="black-950 fw-600">@content?.HeadingText</h2>
+                <div class="content black-950">
+                    <h2 class="fw-600">@content?.HeadingText</h2>
                     @Html.Raw(content?.DescriptionText)
                 </div>
-                <button type="button" class="btn dark_blue_bg white" id="customerTypesButton" style="color:#@content?.CustomerTypesButtonTextColor;background-color:#@content?.CustomerTypesButtonBgColor">@content?.CustomerTypesButtonText</button>
+                <button type="button" class="btn @content?.ButtonTheme" id="customerTypesButton" style="border:1px solid #@content?.ButtonBorderColor">@content?.CustomerTypesButtonText</button>
             </div>
         </div>
     </div>
@@ -122,21 +122,7 @@
                                                 <div class="card-list">
                                                     @Html?.Raw(backCard?.DescriptionText)
                                                 </div>
-                                                @* <ul class="card-list">
-                                            <li class="white">
-                                                Det er tallsgst at bruge el mellem Id 00 og H 06 og dernst mellem kl 21 og kl 00 og det gmlder
-                                                b5de indlsob of el og transport of el 61 drabolig
-                                            </li>
-                                            <li class="white">
-                                                Sons elkunde beteler du b5de dit elselskab (for indkob of el), dit netselskab (for vansport of
-                                                el PI din tglig) og Hat. (for elefgft)
-                                            </li>
-                                            <li class="white">
-                                                Du ken de bdsrum elts5 reducere p5 bete to ud of cre poster pl din elregrang, hem do
-                                                plenlaegger dir elforbrug deserter.
-                                            </li>
-                                        </ul> *@
-                                                <button type="button" class="btn white dark_blue_bg border_light_blue mt-32">@backCard?.ForntBackButtonText</button>
+                                                <button type="button" class="btn white dark_blue_btn border_light_blue mt-32">@backCard?.ForntBackButtonText</button>
                                             </div>
                                         </div>
                                     }

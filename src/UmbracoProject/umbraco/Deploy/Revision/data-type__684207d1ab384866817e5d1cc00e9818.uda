@@ -1,0 +1,27 @@
+{
+  "Name": "Information Page With Auto Generate Link - Blocks - Block List",
+  "Alias": "",
+  "EditorAlias": "Umbraco.BlockList",
+  "Configuration": {
+    "blocks": [
+      {
+        "contentElementTypeKey": "9e34c0c8-8e49-4c33-985f-b130badd1e34",
+        "label": "{{heading}}",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      }
+    ],
+    "validationLimit": {},
+    "useSingleBlockMode": false,
+    "useLiveEditing": false,
+    "useInlineEditingAsDefault": false
+  },
+  "Udi": "umb://data-type/684207d1ab384866817e5d1cc00e9818",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/9e34c0c88e494c33985fb130badd1e34"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

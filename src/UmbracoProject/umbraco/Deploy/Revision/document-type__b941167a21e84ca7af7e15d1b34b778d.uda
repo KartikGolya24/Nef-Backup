@@ -1,0 +1,112 @@
+{
+  "Name": "Information Page With Auto Generate Link",
+  "Alias": "informationPageWithAutoGenerateLink",
+  "DefaultTemplate": "umb://template/2e786f830f194304aad753df1648ddd5",
+  "AllowedTemplates": [
+    "umb://template/2e786f830f194304aad753df1648ddd5"
+  ],
+  "HistoryCleanup": {},
+  "Icon": "icon-document",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/3e5c1ac20a48406c917e220b4bada863",
+  "CompositionContentTypes": [
+    "umb://document-type/c9ab57ded3b44526a7ac22bacf19a079"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "781e30f8-23ef-4923-a3a6-3aa213f6812f",
+      "Name": "Banner Section",
+      "SortOrder": 1,
+      "Alias": "bannerSection",
+      "PropertyTypes": [
+        {
+          "Key": "5cab39ee-6f70-4295-969e-d654f30ab8ee",
+          "Alias": "bannerHeading",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Banner Heading"
+        },
+        {
+          "Key": "f6ca87b6-6edf-4726-93c4-5ed9814a9831",
+          "Alias": "bannerDescription",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Banner Description",
+          "SortOrder": 1
+        }
+      ]
+    },
+    {
+      "Key": "b4c47c76-de5c-411f-84e9-073d1dd8d804",
+      "Name": "Right Content",
+      "SortOrder": 3,
+      "Alias": "rightContent",
+      "PropertyTypes": [
+        {
+          "Key": "39ba711d-969e-4432-95ac-d1973c13d85e",
+          "Alias": "autoGenerateLinkBlockHeading",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "enter heading of auto generate links block heading",
+          "Name": "Auto Generate Link Block Heading"
+        },
+        {
+          "Key": "e9e86fc8-ea1d-449f-94a8-281ef02951d7",
+          "Alias": "nefAddressBlocks",
+          "DataType": "umb://data-type/d99b701d7fe34f6ab0ef86e9a45715d6",
+          "Name": "Nef Address Blocks",
+          "SortOrder": 3
+        }
+      ]
+    },
+    {
+      "Key": "c8692e51-a644-40fe-af14-3fcdc819a75e",
+      "Name": "Left Content",
+      "SortOrder": 2,
+      "Alias": "leftContent",
+      "PropertyTypes": [
+        {
+          "Key": "83b1f819-1ee8-49ad-a180-765f8ef06549",
+          "Alias": "blocks",
+          "DataType": "umb://data-type/684207d1ab384866817e5d1cc00e9818",
+          "Name": "Blocks"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/b941167a21e84ca7af7e15d1b34b778d",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/684207d1ab384866817e5d1cc00e9818",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/d99b701d7fe34f6ab0ef86e9a45715d6",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/3e5c1ac20a48406c917e220b4bada863",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/c9ab57ded3b44526a7ac22bacf19a079",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://template/2e786f830f194304aad753df1648ddd5",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

@@ -382,9 +382,12 @@
         padding: 64px 0;
     }
 
-    .top-header {
-        padding-left: 48px;
+    .top-header-outer {
+        .top-header {
+            padding-left: 0;
+        }
     }
+
 
     .mobile-header-nav {
         gap: 16px;
@@ -995,6 +998,24 @@
         align-items: flex-start;
         gap: 32px;
     }
+
+    .account-action {
+        .steps-action {
+            .step {
+                .step-head {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 10px;
+                    .right {
+                        width: 100%;
+                    }
+                    .checkmark {
+                        margin-left: auto;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -1011,6 +1032,7 @@
 }
 
 @media screen and (max-width: 576px) {
+    
     .electricity-price-slider {
         padding-left: 16px;
         padding-right: 16px;
@@ -1128,13 +1150,8 @@
         padding-right: 16px !important;
     }
 
-    .top-header {
-        padding: 0px 16px;
-    }
 
     .header {
-        padding-left: 16px;
-        padding-right: 16px;
 
         .navbar {
             gap: 32px;

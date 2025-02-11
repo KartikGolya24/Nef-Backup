@@ -6,7 +6,7 @@
     "umb://template/97dafec00e9b4f79b9dfcf5f15f54a24"
   ],
   "HistoryCleanup": {},
-  "Icon": "icon-home color-black",
+  "Icon": "icon-document color-black",
   "Thumbnail": "folder.png",
   "Permissions": {
     "AllowedAtRoot": true,
@@ -15,7 +15,9 @@
       "umb://document-type/bb0eeeba02f54c4c9686896d9dfbc8b9",
       "umb://document-type/04f08bbd8b7c463ab064d9b11b8cc51c",
       "umb://document-type/09baeb644add4e8594a63ea521038043",
-      "umb://document-type/faedfb0b916947939b56587df06cdc04"
+      "umb://document-type/faedfb0b916947939b56587df06cdc04",
+      "umb://document-type/b941167a21e84ca7af7e15d1b34b778d",
+      "umb://document-type/a08f2439e7474d9080b4c4217a9e1c73"
     ]
   },
   "Parent": "umb://document-type-container/3e5c1ac20a48406c917e220b4bada863",
@@ -77,6 +79,14 @@
     },
     {
       "Udi": "umb://document-type/7c70e5655197457cb72434df43c5a0b2",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://document-type/a08f2439e7474d9080b4c4217a9e1c73",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://document-type/b941167a21e84ca7af7e15d1b34b778d",
       "Mode": "Exist"
     },
     {

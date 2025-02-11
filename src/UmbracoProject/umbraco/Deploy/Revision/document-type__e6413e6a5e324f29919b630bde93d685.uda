@@ -18,13 +18,6 @@
       "Alias": "content",
       "PropertyTypes": [
         {
-          "Key": "0b0afd63-311b-406b-8e1f-caa91d222968",
-          "Alias": "linkTextColor",
-          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
-          "Name": "Link Text Color",
-          "SortOrder": 3
-        },
-        {
           "Key": "1ca2a32f-2890-4fe5-a488-6f0f8717c700",
           "Alias": "icon",
           "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
@@ -35,7 +28,7 @@
           "Alias": "borderColor",
           "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
           "Name": "Border Color",
-          "SortOrder": 4
+          "SortOrder": 3
         },
         {
           "Key": "864f0a97-0655-47a7-bcd6-5467b51f14f2",
@@ -45,10 +38,11 @@
           "SortOrder": 1
         },
         {
-          "Key": "8788f5e7-d75e-4534-9617-7e371ee51cb2",
-          "Alias": "linkBgColor",
-          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
-          "Name": "Link Bg Color",
+          "Key": "a8e8c931-acc1-4715-a946-354dd6ac20dc",
+          "Alias": "buttonTheme",
+          "DataType": "umb://data-type/36564b1fa93643ee88423df7234ea0bf",
+          "Mandatory": true,
+          "Name": "Button Theme",
           "SortOrder": 2
         }
       ]
@@ -59,6 +53,10 @@
   "Dependencies": [
     {
       "Udi": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/36564b1fa93643ee88423df7234ea0bf",
       "Ordering": true
     },
     {

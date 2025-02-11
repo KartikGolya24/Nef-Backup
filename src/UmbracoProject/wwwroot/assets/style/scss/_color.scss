@@ -42,6 +42,9 @@
 
 
 /*========================== color =======================*/
+.dark_green{
+    background-color: #2A4854;
+}
 .dark_blue{
     color: #284655;
 }
@@ -85,10 +88,10 @@
     border: 1px solid #4878A2;
 }
 .border_light_blue{
-    border: 1px solid #37B4B4;
+    border: 1px solid #37B4B4 !important;
 }
 .border_dark_purple{
-    border: 1px solid #A45699;
+    border: 1px solid #A45699 !important;
 }
 .border_light_purple{
     border: 1px solid #F8F0F7;
@@ -136,7 +139,7 @@
     border: 1px solid  #bdbdbd;
 }
 .border_black-200{
-    border: 1px solid  #dcdcdc;
+    border: 1px solid  #dcdcdc !important;
 }
 .border_black-100{
     border: 1px solid  #efefef;

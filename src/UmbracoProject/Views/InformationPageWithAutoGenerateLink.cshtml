@@ -1,0 +1,128 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<InformationPageWithAutoGenerateLink>
+@{
+    Layout = "Master.cshtml";
+
+}
+<style>
+    .paradiv p{
+        font-size: 18px;
+        line-height: 32px;
+    }
+</style>
+<!---------------------------------- other-section-banner ------------------------->
+<div class="section-banner">
+    <div class="container">
+        <div class="section-banner-inner delivery-banner paradiv black-700">
+            <h1 class="black-950">@Model?.BannerHeading</h1>
+           
+                @Html.Raw(Model?.BannerDescription)
+            
+        </div>
+    </div>
+
+</div>
+
+
+<!---------------------------------- section-sidebar-------------------- ------->
+<div class="status-alt-sidebar deliver-section">
+    <div class="container">
+        <div class="row flex-column-reverse flex-lg-row">
+            <div class="col-lg-8">
+                <div class="status-left-part">
+
+                    <div class="delivery-detail-section">
+                        @if (Model?.Blocks?.Count > 0)
+                        {
+                            @foreach (var block in Model?.Blocks)
+                            {
+                                var blockModel = block?.Content as InformationContentBlock;
+                                var id = blockModel?.Heading?.Replace(" ", "_");
+                                <div class="delivery-detail-list paradiv black-700" id="@id">
+                                    <h3 class="black-950 fw-600">@blockModel?.Heading</h3>
+                                    @if (blockModel?.Blocks?.Count > 0)
+                                    {
+                                        @foreach (var item in blockModel?.Blocks)
+                                        {
+                                            @if (item?.Content?.ContentType?.Alias == "descriptionText")
+                                            {
+                                                var blockDes = item?.Content as DescriptionText;
+                                                @Html?.Raw(blockDes?.RichTextContent)
+                                            }
+                                            @if (item?.Content?.ContentType?.Alias == "dotListBlock")
+                                            {
+                                                var blockText = item?.Content as DotListBlock;
+                                                <br />
+                                                <ul class="dot-list">
+                                                    @if (blockText?.TextList?.Count() > 0)
+                                                    {
+
+                                                        @foreach (var text in blockText?.TextList)
+                                                        {
+                                                            <li>
+                                                                <p class="para">
+                                                                    @text
+                                                                </p>
+                                                            </li>
+                                                        }
+                                                    }
+                                                </ul>
+                                                <br />
+                                            }
+                                        }
+                                    }
+
+                                </div>
+
+                            }
+                        }
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar">
+                    <div class="sidebar-item">
+
+                        <div class="sidebar-list">
+                            <h4 class="black-950 fw-600">@Model?.AutoGenerateLinkBlockHeading</h4>
+                            @if (Model?.Blocks?.Count > 0)
+                            {
+                                @foreach (var item in Model?.Blocks)
+                                {
+                                    var blockModel = item?.Content as InformationContentBlock;
+                                    var id = blockModel?.Heading?.Replace(" ", "_");
+                                    <a href="#@id" class="nav-link black-700"><p class="para">@blockModel?.Heading</p></a>
+                                }
+                            }
+
+                        </div>
+                        @if (Model?.NefAddressBlocks?.Count > 0)
+                        {
+                            @foreach (var address in Model?.NefAddressBlocks)
+                            {
+                                var addressModel = address?.Content as NefAddressBlock;
+                                <div class="sidebar-list">
+                                    <h4>@addressModel?.Heading</h4>
+                                    <div class="sidebar-detail">
+                                        @if (addressModel?.ContentBlock?.Count > 0)
+                                        {
+                                            @foreach (var item in addressModel?.ContentBlock)
+                                            {
+                                                var block = item?.Content as DescriptionText;
+                                                <div class="sidebar-detail-list">
+                                                    @Html.Raw(block?.RichTextContent)
+                                                </div>
+                                            }
+                                        }
+                                    </div>
+
+                                </div>
+                            }
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+{
+  "Name": "Service Card Block - Service Card Theme - Dropdown",
+  "Alias": "",
+  "EditorAlias": "Umbraco.DropDown.Flexible",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {
+    "multiple": false,
+    "items": [
+      {
+        "id": 1,
+        "value": "dark_blue_bg"
+      },
+      {
+        "id": 2,
+        "value": "light_purple_bg"
+      },
+      {
+        "id": 3,
+        "value": "steel_blue_bg"
+      }
+    ]
+  },
+  "Udi": "umb://data-type/9e5db865664d4c7c871294f4b39840f3",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

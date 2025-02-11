@@ -1,0 +1,27 @@
+{
+  "Name": "Information Page - Blocks - Block List",
+  "Alias": "",
+  "EditorAlias": "Umbraco.BlockList",
+  "Configuration": {
+    "blocks": [
+      {
+        "contentElementTypeKey": "4d41b70f-ba51-4cd5-99ac-0bfd0fdcce06",
+        "label": "{{heading}}",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      }
+    ],
+    "validationLimit": {},
+    "useSingleBlockMode": false,
+    "useLiveEditing": false,
+    "useInlineEditingAsDefault": false
+  },
+  "Udi": "umb://data-type/d0b96c7af5384b968d9439ad1db917ab",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/4d41b70fba514cd599ac0bfd0fdcce06"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

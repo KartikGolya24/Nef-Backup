@@ -27,6 +27,8 @@
     gap: 10px;
     width: max-content;
     height: 48px;
+    color: $black-950;
+    border: 1px solid transparent;
 
     img,
     svg {
@@ -34,29 +36,36 @@
         height: 24px;
     }
 
-    &.light_blue_bg {
+    &.light_blue_btn {
+        color: $white;
+        background-color: $light_blue;
         &:hover {
             background-color: #237373;
             color: $white;
-
         }
     }
 
-    &.light_purple_bg {
+    &.light_purple_btn {
+        color: $black-950;
+        background-color: $light_purple;
         &:hover {
             background-color: #D7DCDC;
             border-color: $dark_purple;
         }
     }
 
-    &.dark_blue_bg {
+    &.dark_blue_btn {
+        color: $white;
+        background-color: $dark_blue;
         &:hover {
             background-color: #3e6579;
             color: $white;
         }
     }
 
-    &.steel_blue_bg {
+    &.steel_blue_btn {
+        background-color: $steel_blue;
+        color: $white;
         &:hover {
             background-color: #305f88;
             color: $white;
@@ -64,22 +73,28 @@
         }
     }
 
-    &.dark_purple_bg {
+    &.dark_purple_btn {
+        background-color: $dark_purple;
+        color: $white;
         &:hover {
             background-color: #6C3965;
             color: $white;
         }
     }
 
-    &.white-bg {
+    &.white_bg_btn {
+        color: $black-950;
+        background-color: $white;
+        border-color: $black-200 !important;
         &:hover {
             background-color: #F2F2F2;
             color: $black-950;
-            border-color: $black-200;
         }
     }
 
-    &.dark_green_bg {
+    &.dark_green_btn {
+        color: $white;
+        background-color: $dark_green;
         &:hover {
             background-color: #1a2f38;
             color: $white;
@@ -93,14 +108,18 @@
         }
     }
 
-    &.turquoise_bg {
+    &.turquoise_bg_btn {
+        background-color: $turquoise;
+        color: $black-950;
         &:hover {
             background-color: #ffffff;
             border-color: #37B4B4;
         }
     }
 
-    &.space_blue_bg {
+    &.space_blue_btn {
+        color: $white;
+        background-color: $space_blue;
         &:hover {
             background-color: #264352;
             border-color: #37B4B4;
@@ -108,21 +127,25 @@
         }
     }
 
-    &.dark_pink_bg {
+    &.dark_pink_btn {
+        background-color: $dark_pink;
+        color: $white;
         &:hover {
             border: 1px solid $dark_pink;
-            background-color: $dark_purple;
+            background-color: #d54e98;
             color: $white;
         }
     }
 }
 
 .business-tab {
-    .form-control {
-        color: $white;
-
-        &:focus {
+    .header {
+        .form-control {
             color: $white;
+    
+            &:focus {
+                color: $white;
+            }
         }
     }
 }
@@ -257,13 +280,13 @@ textarea {
     line-height: 24px;
 }
 
-.dark_blue_btn {
-    &:hover {
-        background-color: $dark_blue;
-        color: $white;
-        border: 0px;
-    }
-}
+// .dark_blue_btn {
+//     &:hover {
+//         background-color: $dark_blue;
+//         color: $white;
+//         border: 0px;
+//     }
+// }
 
 
 //================================ search-input =================================

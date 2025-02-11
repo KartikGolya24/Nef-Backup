@@ -1,0 +1,23 @@
+﻿@using Umbraco.Cms.Core.Models.Blocks
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<InnerAboutSection>>
+@{
+    var ContactSection = Model?.Content;
+}
+
+<div class="contact-section-outer">
+    <div class="container">
+        <div class="contact-section text-center">
+            <h2 class="black-950 fw-600">@ContactSection?.Heading</h2>
+            <div class="contact-section-para black-950">
+                @Html?.Raw(ContactSection?.DescriptionText)
+            </div>
+            <div class="multiple-buttons m-auto">
+                @if (ContactSection?.ButtonList?.Count > 0)
+                {
+                    @Html.GetBlockListHtml(ContactSection?.ButtonList)
+                }
+
+            </div>
+        </div>
+    </div>
+</div>

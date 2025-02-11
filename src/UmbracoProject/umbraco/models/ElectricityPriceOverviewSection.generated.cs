@@ -50,12 +50,20 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Button Bg Color: pick customer types button bg color
+		/// Button Border Color
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("customerTypesButtonBgColor")]
-		public virtual string CustomerTypesButtonBgColor => this.Value<string>(_publishedValueFallback, "customerTypesButtonBgColor");
+		[ImplementPropertyType("buttonBorderColor")]
+		public virtual string ButtonBorderColor => this.Value<string>(_publishedValueFallback, "buttonBorderColor");
+
+		///<summary>
+		/// Button Theme
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("buttonTheme")]
+		public virtual string ButtonTheme => this.Value<string>(_publishedValueFallback, "buttonTheme");
 
 		///<summary>
 		/// Customer Types Button Text: enter customer types button text
@@ -64,14 +72,6 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("customerTypesButtonText")]
 		public virtual string CustomerTypesButtonText => this.Value<string>(_publishedValueFallback, "customerTypesButtonText");
-
-		///<summary>
-		/// Button Text color: pick customer types button text color
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("customerTypesButtonTextColor")]
-		public virtual string CustomerTypesButtonTextColor => this.Value<string>(_publishedValueFallback, "customerTypesButtonTextColor");
 
 		///<summary>
 		/// Description Text
@@ -96,13 +96,5 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("sliderCards")]
 		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel SliderCards => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "sliderCards");
-
-		///<summary>
-		/// Text Color
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("textColor")]
-		public virtual string TextColor => this.Value<string>(_publishedValueFallback, "textColor");
 	}
 }

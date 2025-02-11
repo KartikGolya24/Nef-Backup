@@ -23,20 +23,27 @@
           "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
           "Description": "Pick a color for top footer",
           "Name": "Background Color",
-          "SortOrder": 1
+          "SortOrder": 2
         },
         {
           "Key": "981d04a1-e984-4758-805d-4e413cf950d2",
           "Alias": "buttonList",
           "DataType": "umb://data-type/c109e9940d1d4f6b8130b37c583d77df",
           "Name": "Button List",
-          "SortOrder": 2
+          "SortOrder": 3
         },
         {
           "Key": "eab8e477-8913-4f25-991a-6e39e6abc403",
           "Alias": "headingText",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
           "Name": "Heading Text"
+        },
+        {
+          "Key": "f6ab70a7-673a-4334-8c8b-7b7149bb1362",
+          "Alias": "topFooterTextColor",
+          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+          "Name": "Top Footer Text Color",
+          "SortOrder": 1
         }
       ]
     },
@@ -122,7 +129,7 @@
         {
           "Key": "f683b412-cbb7-4dba-b8e9-f0840404535c",
           "Alias": "footerLogo",
-          "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+          "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
           "Name": "Footer Logo"
         },
         {
@@ -156,10 +163,6 @@
     },
     {
       "Udi": "umb://data-type/2899a195afb246babc896598df1979e0",
-      "Ordering": true
-    },
-    {
-      "Udi": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
       "Ordering": true
     },
     {

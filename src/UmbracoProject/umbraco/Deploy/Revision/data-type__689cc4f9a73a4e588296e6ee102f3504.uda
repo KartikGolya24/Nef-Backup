@@ -195,6 +195,7 @@
         "allowInAreas": true,
         "areas": [],
         "contentElementTypeKey": "76bd1335-5dca-4ed8-a43f-81835d3cc0c5",
+        "settingsElementTypeKey": "69e8ea9e-0a61-4a79-a509-76740b15a531",
         "label": "{{headingText}}",
         "editorSize": "medium",
         "inlineEditing": false,
@@ -208,6 +209,45 @@
         "allowInAreas": true,
         "areas": [],
         "contentElementTypeKey": "c4ebcf7d-b754-4c7b-b587-4de875b9debd",
+        "label": "",
+        "editorSize": "medium",
+        "inlineEditing": false,
+        "forceHideContentEditorInOverlay": false
+      },
+      {
+        "columnSpanOptions": [],
+        "rowMinSpan": 1,
+        "rowMaxSpan": 1,
+        "allowAtRoot": true,
+        "allowInAreas": true,
+        "areas": [],
+        "contentElementTypeKey": "d1fad1ef-2f59-4dbb-858e-01e5db461032",
+        "label": "{{heading}}",
+        "editorSize": "medium",
+        "inlineEditing": false,
+        "forceHideContentEditorInOverlay": false
+      },
+      {
+        "columnSpanOptions": [],
+        "rowMinSpan": 1,
+        "rowMaxSpan": 1,
+        "allowAtRoot": true,
+        "allowInAreas": true,
+        "areas": [],
+        "contentElementTypeKey": "7fb164ff-26c7-41cb-923a-259613998135",
+        "label": "{{heading}}",
+        "editorSize": "medium",
+        "inlineEditing": false,
+        "forceHideContentEditorInOverlay": false
+      },
+      {
+        "columnSpanOptions": [],
+        "rowMinSpan": 1,
+        "rowMaxSpan": 1,
+        "allowAtRoot": true,
+        "allowInAreas": true,
+        "areas": [],
+        "contentElementTypeKey": "e8864d08-640a-4133-ae5c-45085d0dfa4d",
         "label": "",
         "editorSize": "medium",
         "inlineEditing": false,
@@ -251,6 +291,9 @@
       "Udi": "umb://document-type/76bd13355dca4ed8a43f81835d3cc0c5"
     },
     {
+      "Udi": "umb://document-type/7fb164ff26c741cb923a259613998135"
+    },
+    {
       "Udi": "umb://document-type/84d652e4246e42cba0d665dd910a8201"
     },
     {
@@ -263,7 +306,13 @@
       "Udi": "umb://document-type/c4ebcf7db7544c7bb5874de875b9debd"
     },
     {
+      "Udi": "umb://document-type/d1fad1ef2f594dbb858e01e5db461032"
+    },
+    {
       "Udi": "umb://document-type/e4109cf416884dc1bb18a313d0b9e706"
+    },
+    {
+      "Udi": "umb://document-type/e8864d08640a4133ae5c45085d0dfa4d"
     },
     {
       "Udi": "umb://document-type/f32b42ee950743ba97c76bb723dfdb20"

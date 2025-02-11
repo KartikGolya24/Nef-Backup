@@ -21,10 +21,10 @@
                     var setting = item?.Settings as SettingModel;
                     
                     <div class="col-md-6">
-                        <div class="order-nef-card d-flex h-100 flex-column justify-content-between" style="background-color:#@setting?.BackgroundColor">
+                        <div class="order-nef-card">
                             <div class="card-body">
-                                <h3 class="fw-100" style="color:#@electricityBlock?.TextColor">@electricityBlock?.Heading</h3>
-                                <ul style="color:#@electricityBlock?.TextColor">
+                                <h3 class="white fw-100">@electricityBlock?.Heading</h3>
+                                <ul class="white">
                                     @if (electricityBlock?.TextList?.Count() > 0)
                                     {
                                         @foreach (var list in electricityBlock.TextList)
@@ -42,7 +42,7 @@
                                     @if (!string.IsNullOrWhiteSpace(electricityBlock?.SeeMoreButtonText))
                                     {
                                         <button type="button"
-                                                class="btn border_black-200 light_blue_bg white"
+                                                class="btn border_black-200 white_bg_btn"
                                                 data-bs-toggle="modal"
                                                 data-bs-target="#readMorePopup@(count)" style="border:1px solid #@electricityBlock?.ButtonBorderColor">
                                             @electricityBlock?.SeeMoreButtonText
@@ -79,7 +79,8 @@
                                 </div>
                                 <div class="modal-body">
                                     @Html?.Raw(electricityBlock?.ModelDescriptionText)
-                                    <a href="@electricityBlock?.ModelLink?.Url" class="btn dark_blue_bg white">@electricityBlock?.ModelLink?.Name</a>
+                                    <br />
+                                    <a href="@electricityBlock?.ModelLink?.Url" class="btn dark_blue_btn">@electricityBlock?.ModelLink?.Name</a>
                                 </div>
                             </div>
                         </div>

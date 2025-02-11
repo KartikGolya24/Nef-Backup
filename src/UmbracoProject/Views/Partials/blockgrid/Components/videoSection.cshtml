@@ -28,7 +28,7 @@
                         </div>
                     }
                 }
-                <button type="button" class="videoBtn" tabindex="0" data-href="@content?.Video?.MediaUrl()" class="videoBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <button type="button" data-href="@content?.Video?.MediaUrl()" class="videoBtn" tabindex="0" data-href="@content?.Video?.MediaUrl()" class="videoBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"
                               clip-rule="evenodd"
@@ -37,27 +37,6 @@
                     </svg>
                     @content?.VideoButtonText
                 </button>
-
-                <div class="modal fade static_Backdrop" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                     aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <video width="100%" height="240" controls>
-                                    <source src="@content?.Video?.MediaUrl()" type="video/mp4">
-                                    <source src="@content?.Video?.MediaUrl()" type="video/ogg">
-                                </video>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn dark_blue_bg white" data-bs-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
             </div>
 
