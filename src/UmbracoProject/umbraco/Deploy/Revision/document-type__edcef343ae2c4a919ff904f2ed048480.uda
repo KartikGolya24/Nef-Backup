@@ -1,6 +1,6 @@
 {
-  "Name": "Text List With Icon",
-  "Alias": "textListWithIcon",
+  "Name": "Two Column Numbering Text List",
+  "Alias": "twoColumnNumberingTextList",
   "AllowedTemplates": [],
   "HistoryCleanup": {},
   "Icon": "icon-science",
@@ -13,35 +13,31 @@
   "CompositionContentTypes": [],
   "PropertyGroups": [
     {
-      "Key": "ac34d37d-013c-42b0-a2f2-abe61dacd5a3",
+      "Key": "4e46ec43-0a2a-46ee-9708-8c70f2a93dd2",
       "Name": "Content",
       "Alias": "content",
       "PropertyTypes": [
         {
-          "Key": "b3b14271-8e45-4860-abde-9f0182df1480",
-          "Alias": "textList",
-          "DataType": "umb://data-type/d427197213184aea960e84fc0abc176e",
-          "Name": "Text list"
+          "Key": "1786d17e-c88c-46f2-826e-38e1e9bee590",
+          "Alias": "title",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Title"
         },
         {
-          "Key": "edc5d6e0-3232-4422-881c-905a239a0d28",
-          "Alias": "backgroundColor",
-          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
-          "Name": "Background Color",
+          "Key": "803cc279-e325-4623-b978-b69b0031c431",
+          "Alias": "description",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Description",
           "SortOrder": 1
         }
       ]
     }
   ],
   "PropertyTypes": [],
-  "Udi": "umb://document-type/fc93722359a642c7b9b549a89a0115ce",
+  "Udi": "umb://document-type/edcef343ae2c4a919ff904f2ed048480",
   "Dependencies": [
     {
-      "Udi": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
-      "Ordering": true
-    },
-    {
-      "Udi": "umb://data-type/d427197213184aea960e84fc0abc176e",
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
       "Ordering": true
     },
     {

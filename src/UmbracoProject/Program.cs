@@ -1,3 +1,4 @@
+
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 builder.CreateUmbracoBuilder()
@@ -25,5 +26,12 @@ app.UseUmbraco()
         u.UseBackOfficeEndpoints();
         u.UseWebsiteEndpoints();
     });
+
+// Use a redirect for the root URL.
+app.MapGet("/", context =>
+{
+    context.Response.Redirect("/privat", permanent: true);
+    return Task.CompletedTask;
+});
 
 await app.RunAsync();

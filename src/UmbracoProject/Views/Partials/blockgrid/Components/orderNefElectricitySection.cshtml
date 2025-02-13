@@ -7,9 +7,9 @@
 <!-------------------------------------- order nef power --------------------->
 <div class="order-nef-power">
     <div class="container">
-        <div class="section-heading">
-            <h2 class="black-950 fw-600">@content?.HeadingText</h2>
-            <p class="black-950">@content?.DescriptionText</p>
+        <div class="section-heading black-950">
+            <h2 class="fw-600">@content?.HeadingText</h2>
+            @Html?.Raw(content?.DescriptionText)
         </div>
         <div class="row">
             @if (content?.OrderElectricityBlocks?.Count > 0)
@@ -19,7 +19,7 @@
                 {
                     var electricityBlock = item?.Content as OrderNefElectricityBlock;
                     var setting = item?.Settings as SettingModel;
-                    
+
                     <div class="col-md-6">
                         <div class="order-nef-card">
                             <div class="card-body">
@@ -51,43 +51,60 @@
                                 </div>
                             </div>
 
-                            @if (electricityBlock?.PositionImages?.Count > 0)
-                            {
-                                @foreach (var image in electricityBlock?.PositionImages)
+                            <div class="position-img">
+                                @if (electricityBlock?.DefaultTagImage?.Content != null)
                                 {
-                                    var imageModel = image?.Content as PositionImagesBlock;
-                                    <div class="position-img @imageModel?.Position">
-                                        <img src="@imageModel?.Image?.MediaUrl()" class="img-fluid" alt="" />
-                                    </div>
+                                    <img src="@electricityBlock?.DefaultTagImage.MediaUrl()" class="img-fluid defaultImage" alt="" />
                                 }
-                            }
-                        </div>
-                    </div>
+                                @if (electricityBlock?.HoverTagImage?.Content != null)
+                                {
+                                    <img src="@electricityBlock?.HoverTagImage?.MediaUrl()" class="img-fluid hoverImage d-none" alt="" />
+                                }
+                            </div>
 
-                    <!-------------------------------------------Modal ------------------------------->
-                    <div class="modal fade"
-                         id="readMorePopup@(count)"
-                         data-bs-keyboard="false"
-                         tabindex="-1"
-                         aria-labelledby="staticBackdropLabel"
-                         aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    <h4 class="modal-title" id="staticBackdropLabel">@electricityBlock?.ModelHeadingText</h4>
-                                </div>
-                                <div class="modal-body">
-                                    @Html?.Raw(electricityBlock?.ModelDescriptionText)
-                                    <br />
-                                    <a href="@electricityBlock?.ModelLink?.Url" class="btn dark_blue_btn">@electricityBlock?.ModelLink?.Name</a>
+
+                            <!-------------------------------------------Modal ------------------------------->
+                            <div class="modal fade"
+                                 id="readMorePopup@(count)"
+                                 data-bs-keyboard="false"
+                                 tabindex="-1"
+                                 aria-labelledby="staticBackdropLabel"
+                                 aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            <h4 class="modal-title" id="staticBackdropLabel">@electricityBlock?.ModelHeadingText</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            @Html?.Raw(electricityBlock?.ModelDescriptionText)
+                                            <br />
+                                            <a href="@electricityBlock?.ModelLink?.Url" class="btn dark_blue_btn">@electricityBlock?.ModelLink?.Name</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     count++;
                 }
             }
         </div>
     </div>
 </div>
+<script>
+     $(document).ready(function () {
+
+        $(".order-nef-card").hover(
+            function () {
+                $(this).find(".defaultImage").addClass("d-none");
+                $(this).find(".hoverImage").removeClass("d-none");
+            },
+            function () {
+                $(this).find(".defaultImage").removeClass("d-none");
+                $(this).find(".hoverImage").addClass("d-none");
+            }
+        );
+    });
+</script>

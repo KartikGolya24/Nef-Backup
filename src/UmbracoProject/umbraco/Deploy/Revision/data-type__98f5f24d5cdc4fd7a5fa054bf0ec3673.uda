@@ -18,8 +18,13 @@
     "useLiveEditing": false,
     "useInlineEditingAsDefault": false
   },
+  "Parent": "umb://data-type-container/921fd3ccdb1949549a00ec35730aafe5",
   "Udi": "umb://data-type/98f5f24d5cdc4fd7a5fa054bf0ec3673",
   "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/921fd3ccdb1949549a00ec35730aafe5",
+      "Ordering": true
+    },
     {
       "Udi": "umb://document-type/2851a65771844c37af77a61270daf453"
     }

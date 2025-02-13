@@ -90,8 +90,9 @@
 
 @media screen and (max-width: 1399px) {
     .footer .position-img {
-        right: 0;
+        right: -100px;
         max-width: none;
+        top: 60%;
     }
 
     .h-proposition {
@@ -110,6 +111,12 @@
 }
 
 @media screen and (max-width: 1199px) {
+
+    .alt-section .section-position-img.bottom-right-center {
+        transform: translate(-40%, 65%);
+        top: 0;
+        bottom: 0;
+    }
 
     .section-banner .section-banner-inner {
         max-width: 500px;
@@ -135,8 +142,8 @@
     }
 
     .footer .position-img {
-        bottom: auto;
-        top: 0;
+        top: -80px;
+        right: 0;
         transform: none;
     }
 

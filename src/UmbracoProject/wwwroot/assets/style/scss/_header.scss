@@ -40,9 +40,18 @@
                         .nav-list{
                             .nav-link{
                                 font-size: 14px;
+                                color: $black-950;
+                                font-weight: 500;
                             }
                             &.has-submenu {
                                 position: relative;
+                                .nav-link {
+                                    .arrow-icon {
+                                        width: 12px;
+                                        height: 12px;
+                                        margin-left: 2px;
+                                    }
+                                }
                                 .submenu {
                                     position: absolute;
                                     top: 100%;
@@ -51,7 +60,7 @@
                                     opacity: 0;
                                     visibility: hidden;
                                     transition: $transition;
-                                    min-width: 10rem;
+                                    min-width: 216px;
                                     padding: 20px 0;
                                     margin: 12px 0 0;
                                     text-align: left;
@@ -63,7 +72,9 @@
                                     border: 1px solid $black-200;
                                     .submenu-list-item {
                                         a {
-                                            display: block;
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 12px;
                                             font-size: 14px;
                                             line-height: 20px;
                                             padding: 8px 16px;

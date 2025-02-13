@@ -104,8 +104,6 @@
             margin-bottom: 24px;
         }
 
-        &:last-child {}
-
         .btn {
             margin-top: 16px;
         }
@@ -124,8 +122,6 @@
 }
 
 .electricity-banner {
-    padding: 64px 0px;
-
     .col-md-3 {
         width: 25.16%;
     }
@@ -237,7 +233,7 @@
             }
         }
 
-        &:hover {
+        &:hover, &:focus, &:active, &:focus-visible {
             background-color: $light_blue;
 
             .card-body {

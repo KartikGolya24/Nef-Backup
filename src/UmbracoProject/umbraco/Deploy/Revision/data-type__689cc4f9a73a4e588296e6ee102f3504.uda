@@ -11,19 +11,6 @@
         "allowAtRoot": true,
         "allowInAreas": true,
         "areas": [],
-        "contentElementTypeKey": "0eb7ffce-d442-4d03-841f-80d1342dd01a",
-        "label": "{{headingLabel}}",
-        "editorSize": "medium",
-        "inlineEditing": false,
-        "forceHideContentEditorInOverlay": false
-      },
-      {
-        "columnSpanOptions": [],
-        "rowMinSpan": 1,
-        "rowMaxSpan": 1,
-        "allowAtRoot": true,
-        "allowInAreas": true,
-        "areas": [],
         "contentElementTypeKey": "e4109cf4-1688-4dc1-bb18-a313d0b9e706",
         "label": "",
         "editorSize": "medium",
@@ -37,21 +24,9 @@
         "allowAtRoot": true,
         "allowInAreas": true,
         "areas": [],
-        "contentElementTypeKey": "107ddf30-d663-400d-a988-05a78b8c2c8b",
+        "contentElementTypeKey": "af11de72-9ffe-45d1-bf9b-49618e2e9310",
+        "settingsElementTypeKey": "69e8ea9e-0a61-4a79-a509-76740b15a531",
         "label": "",
-        "editorSize": "medium",
-        "inlineEditing": false,
-        "forceHideContentEditorInOverlay": false
-      },
-      {
-        "columnSpanOptions": [],
-        "rowMinSpan": 1,
-        "rowMaxSpan": 1,
-        "allowAtRoot": true,
-        "allowInAreas": true,
-        "areas": [],
-        "contentElementTypeKey": "4b676a13-f354-4743-89c4-ac282c60277a",
-        "label": "{{headingLabel}}",
         "editorSize": "medium",
         "inlineEditing": false,
         "forceHideContentEditorInOverlay": false
@@ -77,7 +52,35 @@
         "allowAtRoot": true,
         "allowInAreas": true,
         "areas": [],
+        "contentElementTypeKey": "4b676a13-f354-4743-89c4-ac282c60277a",
+        "settingsElementTypeKey": "69e8ea9e-0a61-4a79-a509-76740b15a531",
+        "label": "{{heading | ncRichText | truncate:true:80}}",
+        "editorSize": "medium",
+        "inlineEditing": false,
+        "forceHideContentEditorInOverlay": false
+      },
+      {
+        "columnSpanOptions": [],
+        "rowMinSpan": 1,
+        "rowMaxSpan": 1,
+        "allowAtRoot": true,
+        "allowInAreas": true,
+        "areas": [],
+        "contentElementTypeKey": "107ddf30-d663-400d-a988-05a78b8c2c8b",
+        "label": "",
+        "editorSize": "medium",
+        "inlineEditing": false,
+        "forceHideContentEditorInOverlay": false
+      },
+      {
+        "columnSpanOptions": [],
+        "rowMinSpan": 1,
+        "rowMaxSpan": 1,
+        "allowAtRoot": true,
+        "allowInAreas": true,
+        "areas": [],
         "contentElementTypeKey": "46abc16f-db79-455a-a44e-827937d59b80",
+        "settingsElementTypeKey": "69e8ea9e-0a61-4a79-a509-76740b15a531",
         "label": "",
         "editorSize": "medium",
         "inlineEditing": false,
@@ -117,7 +120,7 @@
         "allowInAreas": true,
         "areas": [],
         "contentElementTypeKey": "6e701af8-1fc6-4449-b08d-aa89a54c69ac",
-        "label": "{{videoTopHeading}}",
+        "label": "",
         "editorSize": "medium",
         "inlineEditing": false,
         "forceHideContentEditorInOverlay": false
@@ -221,19 +224,6 @@
         "allowAtRoot": true,
         "allowInAreas": true,
         "areas": [],
-        "contentElementTypeKey": "d1fad1ef-2f59-4dbb-858e-01e5db461032",
-        "label": "{{heading}}",
-        "editorSize": "medium",
-        "inlineEditing": false,
-        "forceHideContentEditorInOverlay": false
-      },
-      {
-        "columnSpanOptions": [],
-        "rowMinSpan": 1,
-        "rowMaxSpan": 1,
-        "allowAtRoot": true,
-        "allowInAreas": true,
-        "areas": [],
         "contentElementTypeKey": "7fb164ff-26c7-41cb-923a-259613998135",
         "label": "{{heading}}",
         "editorSize": "medium",
@@ -252,6 +242,19 @@
         "editorSize": "medium",
         "inlineEditing": false,
         "forceHideContentEditorInOverlay": false
+      },
+      {
+        "columnSpanOptions": [],
+        "rowMinSpan": 1,
+        "rowMaxSpan": 1,
+        "allowAtRoot": true,
+        "allowInAreas": true,
+        "areas": [],
+        "contentElementTypeKey": "e76a46eb-425b-45f8-aaaa-6828422dfd65",
+        "label": "",
+        "editorSize": "medium",
+        "inlineEditing": false,
+        "forceHideContentEditorInOverlay": false
       }
     ],
     "blockGroups": [],
@@ -260,9 +263,6 @@
   },
   "Udi": "umb://data-type/689cc4f9a73a4e588296e6ee102f3504",
   "Dependencies": [
-    {
-      "Udi": "umb://document-type/0eb7ffced4424d03841f80d1342dd01a"
-    },
     {
       "Udi": "umb://document-type/107ddf30d663400da98805a78b8c2c8b"
     },
@@ -300,16 +300,19 @@
       "Udi": "umb://document-type/9bad8efc6126455795cc93fa7e4f5820"
     },
     {
+      "Udi": "umb://document-type/af11de729ffe45d1bf9b49618e2e9310"
+    },
+    {
       "Udi": "umb://document-type/bf38185552924e24b8226a92ee00bb48"
     },
     {
       "Udi": "umb://document-type/c4ebcf7db7544c7bb5874de875b9debd"
     },
     {
-      "Udi": "umb://document-type/d1fad1ef2f594dbb858e01e5db461032"
+      "Udi": "umb://document-type/e4109cf416884dc1bb18a313d0b9e706"
     },
     {
-      "Udi": "umb://document-type/e4109cf416884dc1bb18a313d0b9e706"
+      "Udi": "umb://document-type/e76a46eb425b45f8aaaa6828422dfd65"
     },
     {
       "Udi": "umb://document-type/e8864d08640a4133ae5c45085d0dfa4d"

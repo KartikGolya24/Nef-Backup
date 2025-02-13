@@ -11,7 +11,9 @@
         "forceHideContentEditorInOverlay": false
       }
     ],
-    "validationLimit": {},
+    "validationLimit": {
+      "max": 2
+    },
     "useSingleBlockMode": false,
     "useLiveEditing": false,
     "useInlineEditingAsDefault": false

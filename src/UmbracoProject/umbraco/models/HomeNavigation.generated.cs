@@ -90,14 +90,6 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::Umbraco.Cms.Core.Models.Link LogoUrl => this.Value<global::Umbraco.Cms.Core.Models.Link>(_publishedValueFallback, "logoUrl");
 
 		///<summary>
-		/// Menu Text Color
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("menuTextColor")]
-		public virtual string MenuTextColor => this.Value<string>(_publishedValueFallback, "menuTextColor");
-
-		///<summary>
 		/// Mit Button BorderColor
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
@@ -152,5 +144,13 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("searchPlaceholder")]
 		public virtual string SearchPlaceholder => this.Value<string>(_publishedValueFallback, "searchPlaceholder");
+
+		///<summary>
+		/// Submenu Menu Arrow
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("submenuMenuArrow")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops SubmenuMenuArrow => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "submenuMenuArrow");
 	}
 }

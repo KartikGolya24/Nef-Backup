@@ -2,17 +2,12 @@
 @{
     Layout = "Master.cshtml";
 }
-<style>
-    .paradiv p {
-    font-size: 18px;
-    line-height: 32px;
-    }
-</style>
+
 <!---------------------------------- other-section-banner ------------------------->
 <div class="section-banner">
     <div class="container position-relative">
-        <div class="section-banner-inner black-700 paradiv">
-            <h1 class="black-950">@Model?.Heading</h1>
+        <div class="section-banner-inner">
+            <h1>@Model?.Heading</h1>
             @Html?.Raw(Model?.DescriptionText)
             <div class="multiple-buttons">
                 @Html?.GetBlockListHtml(Model?.ButtonList)
@@ -141,7 +136,10 @@
                                         }
 
                                         <div class="operating-map">
-                                            <p>@itemModel?.HelpDescriptionText</p>
+                                            @if (!string.IsNullOrWhiteSpace(itemModel?.HelpDescriptionText))
+                                            {
+                                                <p>@itemModel?.HelpDescriptionText</p>
+                                            }
                                             <a href="@itemModel?.ButtonLink?.Url" class="btn light_blue_btn">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <g clip-path="url(#clip0_25_3041)">
@@ -214,19 +212,113 @@
         </div>
     </div>
 </div>
-
+@* 
 <div class="container">
-    <input type="text" class="form-control" id="datepicker">
+    <label for="options" class="form-label">Vælg en mulighed</label>
+    <select id="options" class="form-select">
+        <option value="">Vælg venligst</option>
+        <option value="option1">Jeg flytter ind på leveringsadressen</option>
+        <option value="option2">Jeg ønsker at skifte til nef Strøm</option>
+    </select>
 
+    <label for="deliveryDate" class="form-label mt-3">Ønsket leveringsdato</label>
+    <input type="text" id="deliveryDate" class="form-control datepicker">
 </div>
 <script>
-    $(document).ready(function(){
-        $('#datepicker').datepicker({
-            format: 'mm/dd/yyyy',
-            startDate: '-3d'
-        });
+    $(document).ready(function () {
+        const optionsSelect = $("#options");
+        const dateInput = $("#deliveryDate");
+
+        // Define Danish public holidays (YYYY-MM-DD format)
+        const holidays = [
+            "2025-01-01", "2025-04-18", "2025-04-21", "2025-05-01",
+            "2025-05-08", "2025-06-05", "2025-12-24", "2025-12-25", "2025-12-26"
+        ];
+
+        function isHoliday(date) {
+            //const formattedDate = date.toISOString().split('T')[0];
+            const formattedDate = date.toLocaleDateString("sv-SE"); // "YYYY-MM-DD" format
+            return holidays.includes(formattedDate);
+        }
+
+        function getNextBusinessDay(date) {
+            let nextDay = new Date(date);
+            do {
+                nextDay.setDate(nextDay.getDate() + 1);
+            } while (nextDay.getDay() === 0 || nextDay.getDay() === 6 || isHoliday(nextDay));
+            return nextDay;
+        }
+
+        function addBusinessDays(startDate, days) {
+            let date = new Date(startDate);
+            let count = 0;
+            while (count < days) {
+                date.setDate(date.getDate() + 1);
+                if (date.getDay() !== 0 && date.getDay() !== 6 && !isHoliday(date)) {
+                    count++;
+                }
+            }
+            return date;
+        }
+
+        function subtractBusinessDays(startDate, days) {
+            let date = new Date(startDate);
+            let count = 0;
+            while (count < days) {
+                date.setDate(date.getDate() - 1);
+                if (date.getDay() !== 0 && date.getDay() !== 6 && !isHoliday(date)) {
+                    count++;
+                }
+            }
+            return date;
+        }
+
+        function updateDatePicker() {
+            let today = new Date();
+            let minDate = today, maxDate = null;
+
+            if (optionsSelect.val() === "option1") {
+                // "Jeg flytter ind på leveringsadressen"
+                minDate = subtractBusinessDays(today, 5);
+                maxDate = addBusinessDays(today, 60);
+            } else if (optionsSelect.val() === "option2") {
+                // "Jeg ønsker at skifte til nef Strøm"
+                let now = new Date();
+                let currentHour = now.getHours();
+
+                if (currentHour < 12) {
+                    minDate = addBusinessDays(today, 1);
+                } else {
+                    minDate = addBusinessDays(today, 2);
+                }
+
+                // Ensure minDate is the next business day (if it falls on a holiday)
+                if (isHoliday(minDate)) {
+                    minDate = getNextBusinessDay(minDate);
+                }
+            }
+
+            dateInput.datepicker("destroy").datepicker({
+                format: "dd-mm-yyyy",
+                startDate: minDate,
+                endDate: maxDate,
+                autoclose: true,
+                todayHighlight: true,
+                daysOfWeekDisabled: [0, 6], // Disable weekends
+                beforeShowDay: function (date) {
+                    if (isHoliday(date)) {
+                        return { enabled: false, classes: "text-danger", tooltip: "Holiday" };
+                    }
+                    return true;
+                }
+            });
+        }
+
+        optionsSelect.change(updateDatePicker);
+        updateDatePicker();
     });
 </script>
+ *@
 
 <script>
      $(document).ready(function () {

@@ -22,27 +22,34 @@
           "Alias": "textColor",
           "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
           "Name": "Text Color",
-          "SortOrder": 2
-        },
-        {
-          "Key": "2bc1be0f-bba9-40ef-82d9-fb62a00846fa",
-          "Alias": "headingLabel",
-          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-          "Name": "Heading Label"
+          "SortOrder": 3
         },
         {
           "Key": "40b336c0-bc8d-43eb-8a84-2df5feb46a7d",
           "Alias": "sectionContent",
           "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
           "Name": "Section Content",
-          "SortOrder": 1
+          "SortOrder": 2
         },
         {
           "Key": "53f55f9d-4e71-43ed-8b5c-a9eb738003b0",
           "Alias": "buttonList",
           "DataType": "umb://data-type/2f42fd89a2a44d95aece4e93b933793f",
           "Name": "Button List",
-          "SortOrder": 3
+          "SortOrder": 4
+        },
+        {
+          "Key": "c63b2aad-60c1-4b18-928f-5374f9da1c4c",
+          "Alias": "sectionClass",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Section Class",
+          "SortOrder": 1
+        },
+        {
+          "Key": "c699bf6a-b75b-430e-89dd-9a75d4651d36",
+          "Alias": "heading",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Heading"
         }
       ]
     }

@@ -2,10 +2,11 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<AboutBuyElectricitySection>>
 @{
     var content = Model?.Content;
+    var setting = Model?.Settings as SettingModel;
 }
 
-<div class="container">
-    <div class="electricity-banner text-center">
+<div class="electricity-banner @setting?.CssClass">
+    <div class="container">
         <div class="row align-items-center">
             @if (content?.ContentBlocks?.Count > 0)
             {
@@ -16,9 +17,13 @@
                     {
                         var contentModel = item?.Content as ContentBlock;
                         <div class="col-md-9">
-                            <div class="content" style="color:#@contentModel?.TextColor">
-                                <h1>@contentModel?.HeadingText</h1>
-                                @Html.Raw(contentModel?.DescriptionText)
+                            <div class="contact-section-outer">
+                                <div class="contact-section">
+                                    <h1>@contentModel?.HeadingText</h1>
+                                    <div class="contact-section-para" style="color:#@contentModel?.TextColor">
+                                        @Html.Raw(contentModel?.DescriptionText)
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     }
@@ -27,7 +32,7 @@
                         var contentModel = item?.Content as TextListWithIcon;
                         <div class="col-md-3">
                             <ul class="electricity-banner-list turquoise_bg" style="background-color:#@contentModel?.BackgroundColor">
-                                
+
                                 @if (contentModel?.TextList?.Count > 0)
                                 {
                                     @foreach (var text in contentModel?.TextList)

@@ -1,0 +1,43 @@
+{
+  "Name": "Banner Two Column Section",
+  "Alias": "bannerTwoColumnSection",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "4e5d77dd-7a6c-40d1-8db3-4d626c9fc236",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "5021e501-641e-41fb-9637-8114dbcc89c4",
+          "Alias": "blocks",
+          "DataType": "umb://data-type/ef69265746794742be9cbfaee2183aae",
+          "Name": "Blocks"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/af11de729ffe45d1bf9b49618e2e9310",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/ef69265746794742be9cbfaee2183aae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

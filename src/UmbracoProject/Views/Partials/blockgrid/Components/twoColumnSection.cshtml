@@ -48,6 +48,31 @@
                                                     </ul>
                                                 }
                                             }
+                                            else if (aliasName == "numbringListBlock")
+                                            {
+
+                                                var numberingList = block?.Content as NumbringListBlock;
+                                                @if (numberingList?.Blocks?.Count > 0)
+                                                {
+                                                    var count = 1;
+                                                    <ul class="square_icon_list mb-0">
+                                                        @foreach (var listText in numberingList?.Blocks)
+                                                        {
+                                                            var listModel = listText?.Content as TwoColumnNumberingTextList;
+
+                                                            <li class="align-items-start">
+                                                                <span class="dark_purple_bg">
+                                                                    <p class="white">@(count++)</p>
+                                                                </span>
+                                                                <p class="black-700">
+                                                                    <span class="fw-700 d-block black-950">@listModel?.Title</span>
+                                                                    @listModel?.Description
+                                                                </p>
+                                                            </li>
+                                                        }
+                                                    </ul>
+                                                }
+                                            }
                                         }
                                     }
                                 </div>

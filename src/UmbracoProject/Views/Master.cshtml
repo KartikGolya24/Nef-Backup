@@ -49,9 +49,6 @@
     <link rel="stylesheet" href="~/assets/style/css/style.css">
     <script src="~/assets/js/jquery.js"></script>
     <script src="~/assets/libs/owl/js/owl.carousel.min.js"></script>
-    @* <script src="https://cdn.jsdelivr.net/npm/@@coreui/coreui@5.2.0/dist/js/coreui.bundle.min.js" integrity="sha384-JdRP5GRWP6APhoVS1OM/pOKMWe7q9q8hpl+J2nhCfVJKoS+yzGtELC5REIYKrymn" crossorigin="anonymous"></script> *@
-    @* <script src="~/assets/libs/coreui-5.2.0-dist/js/coreui.js"></script> *@
-    @* <script src="~/assets/libs/coreui-5.2.0-dist/js/coreui.bundle.js"></script> *@
 </head>
 
 <body>
@@ -66,8 +63,8 @@
                     <ul class="tabs-item" id="pills-tab" role="tablist">
                         @foreach (var item in homeRoots)
                         {
-                             tab = Model?.Url()?.Contains("/erhverv/") == true ? "erhverv-tab" : Model?.Url()?.Contains("/repraesentantskabsvalg-2025/") == true ? "Repræsentantskabsvalg-tab" : "privat-tab";
-                            var rootLink = item?.Url() == "/" ? "active" : "";
+                             tab = Model?.Url()?.Contains("/erhverv/") == true ? "erhverv-tab" : Model?.Url()?.Contains("/repraesentantskabsvalg/") == true ? "Repræsentantskabsvalg-tab" : "privat-tab";
+                            var rootLink = item?.Url() == "/privat/" ? "active" : "";
                             <li class="tabs-list">
                                 <a href="@item?.Url()" id="@tab" class="tabs-link @rootLink">@item?.Name</a>
                             </li>
@@ -103,8 +100,7 @@
     <!------------------------bootstrap 5--------------->
     <script src="~/assets/libs/bs5/js/bootstrap.min.js"></script>
 
-    @* <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script> *@
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script> 
     <script src="~/assets/js/custom.js"></script>
 
     <!-------------------------------------------Modal ------------------------------->
@@ -124,7 +120,7 @@
                 <div class="modal-body">
                     <video width="100%" height="240" controls>
                         <source src="https://www.youtube.com/watch?v=AFDYnd-XPa8&t=1149s" type="video/mp4" />
-                        <source src="movie.ogg" type="video/ogg" />
+                        <source src="" type="video/ogg" />
                     </video>
                 </div>
                 <div class="modal-footer">

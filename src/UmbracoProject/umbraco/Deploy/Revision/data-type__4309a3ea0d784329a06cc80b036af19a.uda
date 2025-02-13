@@ -9,6 +9,7 @@
       "max": 1
     },
     "enableLocalFocalPoint": false,
+    "crops": [],
     "ignoreUserStartNodes": false
   },
   "Udi": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",

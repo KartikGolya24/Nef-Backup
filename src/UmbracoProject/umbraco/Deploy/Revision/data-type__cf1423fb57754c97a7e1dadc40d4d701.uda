@@ -1,32 +1,30 @@
 {
-  "Name": "Video Section - Bill Cards - Block List",
+  "Name": "Numbring List Block - Blocks - Block List",
   "Alias": "",
   "EditorAlias": "Umbraco.BlockList",
   "Configuration": {
     "blocks": [
       {
-        "contentElementTypeKey": "822e67b3-c2e9-48a1-a561-4c21702d1ef7",
-        "label": "{{headingText}}",
+        "contentElementTypeKey": "edcef343-ae2c-4a91-9ff9-04f2ed048480",
+        "label": "{{title}}",
         "editorSize": "medium",
         "forceHideContentEditorInOverlay": false
       }
     ],
-    "validationLimit": {
-      "max": 3
-    },
+    "validationLimit": {},
     "useSingleBlockMode": false,
     "useLiveEditing": false,
     "useInlineEditingAsDefault": false
   },
   "Parent": "umb://data-type-container/921fd3ccdb1949549a00ec35730aafe5",
-  "Udi": "umb://data-type/94fc95a56fef46cba4e3a253fda74793",
+  "Udi": "umb://data-type/cf1423fb57754c97a7e1dadc40d4d701",
   "Dependencies": [
     {
       "Udi": "umb://data-type-container/921fd3ccdb1949549a00ec35730aafe5",
       "Ordering": true
     },
     {
-      "Udi": "umb://document-type/822e67b3c2e948a1a5614c21702d1ef7"
+      "Udi": "umb://document-type/edcef343ae2c4a919ff904f2ed048480"
     }
   ],
   "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",

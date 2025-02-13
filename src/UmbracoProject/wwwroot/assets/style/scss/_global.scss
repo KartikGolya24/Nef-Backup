@@ -888,6 +888,7 @@ li {
                 .accordion-body {
                     font-size: 16px;
                     line-height: 24px;
+                    color: $black-700;
                 }
             }
         }
@@ -903,24 +904,24 @@ li {
         justify-content: space-between;
         align-items: center;
         gap: 20px;
-    
+
         .top-header-tabs {
             max-width: 260px;
             overflow-x: auto;
             scrollbar-width: none;
             -ms-overflow-style: none;
-    
+
             &::-webkit-scrollbar {
                 display: none;
             }
-    
+
             .tabs-item {
                 display: flex;
                 align-items: center;
                 gap: 16px;
-    
+
                 .tabs-list {
-    
+
                     .tabs-link {
                         font-size: 12px;
                         color: $black-800;
@@ -928,14 +929,14 @@ li {
                         padding: 10px 0px;
                         display: block;
                         white-space: nowrap;
-    
+
                         &.active {
                             // border-bottom: 2px solid;
                             color: $dark_blue;
                             font-weight: 700;
                             font-style: italic;
                             position: relative;
-    
+
                             &::before {
                                 content: '';
                                 position: absolute;
@@ -946,7 +947,7 @@ li {
                                 border: 1px solid $dark_blue;
                             }
                         }
-    
+
                         &#erhverv-tab {
                             &.active {
                                 &::before {
@@ -954,35 +955,37 @@ li {
                                 }
                             }
                         }
-    
+
                         &#Repræsentantskabsvalg-tab {
                             &.active {
                                 color: $dark_pink;
+
                                 &::before {
                                     border-color: $dark_pink;
                                 }
                             }
                         }
                     }
-    
+
                 }
             }
         }
-    
+
         .top-header-navigation {
             max-width: 260px;
             overflow-x: auto;
             scrollbar-width: none;
             -ms-overflow-style: none;
-    
+
             &::-webkit-scrollbar {
                 display: none;
             }
+
             .navigation-item {
                 display: flex;
                 align-items: center;
                 gap: 16px;
-    
+
                 .navigation-list {
                     .navigation-link {
                         display: block;
@@ -994,25 +997,26 @@ li {
                 }
             }
         }
-    
+
     }
+
     &.space_blue_bg {
         .top-header-tabs {
             .tabs-item {
                 .tabs-list {
                     .tabs-link {
                         color: $white;
-    
+
                         &.active {
                             opacity: 1;
                             color: $white;
                         }
                     }
-    
+
                 }
             }
         }
-    
+
         .top-header-navigation {
             .navigation-item {
                 .navigation-list {
@@ -1023,23 +1027,23 @@ li {
             }
         }
     }
-    
+
     &.light_pink_bg {
         .top-header-tabs {
             .tabs-item {
                 .tabs-list {
                     .tabs-link {
                         color: $black-800;
-    
+
                         &.active {
                             color: $dark_pink;
                         }
                     }
-    
+
                 }
             }
         }
-    
+
         .top-header-navigation {
             .navigation-item {
                 .navigation-list {
@@ -1088,13 +1092,37 @@ li {
     position: relative;
     padding: 64px 0px;
 
+    [class*=container] {
+        position: relative;
+    }
+
     .section-banner-inner {
         display: flex;
         flex-direction: column;
         gap: 40px;
         max-width: 720px;
 
-        &.delivery-banner {
+        h1 {
+            color: $black-950;
+            font-size: 48px;
+            line-height: 56px;
+        }
+
+        p {
+            color: $black-700;
+            font-size: 18px;
+            line-height: 32px;
+        }
+
+        &.gap-32 {
+            gap: 32px;
+        }
+
+        &.gap-40 {
+            gap: 40px;
+        }
+
+        &.max-960 {
             max-width: 960px;
         }
     }
@@ -1123,13 +1151,98 @@ li {
         max-width: 960px;
         margin: auto;
 
+        h1 {
+            color: $black-950;
+            font-size: 48px;
+            line-height: 56px;
+        }
+
         .contact-section-para {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 24px;
+
+            &.gap-32 {
+                gap: 32px;
+            }
+
+            &.gap-40 {
+                gap: 40px;
+            }
+
+            &.gap-16 {
+                gap: 16px;
+            }
+
+            p {
+                color: $black-700;
+                font-size: 18px;
+                line-height: 32px;
+            }
+
+            &.blackText-ln28 {
+                p {
+                    color: $black-950;
+                    line-height: 28px;
+                }
+            }
+
+            &.black-950 {
+                p {
+                    color: $black_950;
+                }
+            }
+        }
+        &.max-720 {
+            max-width: 720px;
+        }
+    }
+
+    &.bold-paragraph-text {
+        .contact-section {
+            .contact-section-para {
+                p {
+                    color: $black-950;
+                    line-height: 28px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    &.style2 {
+        .contact-section {
+            h2 {
+                font-weight: 600;
+                color: $black-950;
+            }
+            .contact-section-para {
+                gap: 16px;
+                p {
+                    font-size: 18px;
+                    line-height: 28px;
+                    strong, b {
+                        font-weight: 600;
+                    }
+                }
+            }
         }
     }
 }
+
+.alt-contact-section {
+    .contact-section-outer {
+        .contact-section {
+            margin: 0;
+            max-width: 720px;
+            .contact-section-para {
+                p {
+                    color: $black-950;
+                }
+            }
+        }
+    }
+}
+
 
 //================================================ Section =================================
 .alt-section {
@@ -1161,6 +1274,35 @@ li {
 
     &.nef-fiber {
         padding: 64px 0px;
+    }
+
+    &.alt-imagetext-contactSection {
+        padding: 64px 0;
+        .contact-section-outer {
+            padding: 0;
+            .contact-section {
+                max-width: 512px;
+                margin: 0;
+                gap: 16px;
+
+                .contact-section-para {
+                    &.blackText-16 {
+                        p {
+                            font-size: 16px;
+                            line-height: 24px;
+                            color: $black-950;
+                        }
+                    }
+                    &.blackText-18 {
+                        p {
+                            font-size: 18px;
+                            line-height: 32px;
+                            color: $black-700;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     &.charging-station {
@@ -1620,7 +1762,7 @@ li {
     padding: 64px 0px 160px;
 
     &.deliver-section {
-        padding-block-end: 96px 0px 160px;
+        padding: 96px 0px 160px;
     }
 
 
@@ -1657,7 +1799,7 @@ li {
                 &.second-section {
                     gap: 0px;
 
-                    & > p {
+                    &>p {
                         padding: 16px 0px 40px;
                     }
 
@@ -1676,7 +1818,7 @@ li {
                     .condition-section-list {
                         gap: 0px;
 
-                        & > p {
+                        &>p {
                             padding: 16px 0px 40px;
                         }
 
@@ -1723,6 +1865,7 @@ li {
 
                             p {
                                 max-width: 512px;
+                                color: $space_blue;
                             }
 
                         }
@@ -1750,6 +1893,17 @@ li {
                             }
                         }
                     }
+                    &:first-child {
+                        padding-top: 0;
+                        .personal-data-section {
+                            h2 {
+                                margin-bottom: 16px;
+                                & + p {
+                                    margin-bottom: 40px;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -1757,16 +1911,28 @@ li {
         .delivery-detail-section {
             display: flex;
             flex-direction: column;
-            gap: 40px;
+            gap: 80px;
 
             .delivery-detail-list {
-                h3+p {
-                    padding-top: 16px;
+                h3 {
+                    color: $black-950;
+                    font-weight: 600;
+                    margin-bottom: 16px;
+                }
+                p {
+                    color: $black-700;
+                    font-size: 18px;
+                    line-height: 32px;
                 }
 
-                &.network {
-                    .para {
-                        padding: 16px 0px 40px;
+                .dot-list {
+                    padding-top: 32px;
+                    padding-bottom: 32px;
+                    li {
+                        &::marker {
+                            width: 20px;
+                            height: 20px;
+                        }
                     }
                 }
             }
@@ -1790,6 +1956,12 @@ li {
                     font-weight: 600;
                 }
 
+                p {
+                    font-size: 18px;
+                    line-height: 32px;
+                    color: $black-700;
+                }
+
                 ul {
                     display: flex;
                     flex-direction: column;
@@ -1800,7 +1972,7 @@ li {
                             position: relative;
                             font-size: 18px;
                             line-height: 32px;
-                            padding-left: 10px;
+                            padding-left: 12px;
                             color: $black-700;
 
                             &::after {
@@ -1821,10 +1993,10 @@ li {
                     display: flex;
                     flex-direction: column;
                     gap: 16px;
+
                     .sidebar-detail-list {
                         p {
-                            font-size: 18px;
-                            line-height: 32px;
+                            color: $black-950;
                         }
                     }
                 }

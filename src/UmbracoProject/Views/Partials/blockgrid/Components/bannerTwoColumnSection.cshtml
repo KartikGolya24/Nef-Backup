@@ -1,0 +1,50 @@
+﻿@using Umbraco.Cms.Core.Models.Blocks
+@using UmbracoProject.App_Code.Helpers
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<BannerTwoColumnSection>>
+
+@{
+    var content = Model?.Content;
+    var settings = Model?.Settings as SettingModel;
+}
+
+@if (content?.Blocks?.Count > 0)
+{
+    var padding = !string.IsNullOrWhiteSpace(settings?.PaddingTopBottom) ? $"padding:{settings?.PaddingTopBottom} 0px" : "";
+    <div class="alt-section @settings?.CssClass">
+        <div class="container">
+            <div class="row align-items-center">
+                @foreach (var item in content?.Blocks)
+                {
+                    var alias = item?.Content?.ContentType?.Alias;
+                    @if (alias == "bannerContentSection")
+                    {
+                        var contentModel = item?.Content as BannerContentSection;
+                        <div class="col-lg-6">
+                            <div class="contact-section-outer">
+                                <div class="contact-section">
+                                    <h1>@contentModel?.Heading</h1>
+                                    <div class="contact-section-para ">
+                                        @Html.Raw(contentModel?.Description)
+                                    </div>
+                                </div>
+                                <div class="multiple-buttons">
+                                    @Html.GetBlockListHtml(contentModel?.ButtonList)
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    @if (alias == "bannerImageSection")
+                    {
+                        var imageModel = item?.Content as BannerImageSection;
+                        <div class="col-lg-6">
+                            <div class="section-img">
+                                <img src="@imageModel?.Image.GetWebp()" class="img-fluid" alt="img">
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+
+}

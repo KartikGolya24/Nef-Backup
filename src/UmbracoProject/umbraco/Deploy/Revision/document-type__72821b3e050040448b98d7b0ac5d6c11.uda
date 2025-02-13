@@ -96,17 +96,17 @@
           "SortOrder": 2
         },
         {
-          "Key": "97decb57-3d45-4dee-a6be-159d853f7ab4",
-          "Alias": "menuTextColor",
-          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
-          "Name": "Menu Text Color",
-          "SortOrder": 3
-        },
-        {
           "Key": "a4ae692b-c376-4949-8051-4c3d89fc9725",
           "Alias": "logo",
           "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
           "Name": "Logo"
+        },
+        {
+          "Key": "cc0bd289-ce1e-4f7b-b492-1ec280d30044",
+          "Alias": "submenuMenuArrow",
+          "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
+          "Name": "Submenu Menu Arrow",
+          "SortOrder": 10
         }
       ]
     },

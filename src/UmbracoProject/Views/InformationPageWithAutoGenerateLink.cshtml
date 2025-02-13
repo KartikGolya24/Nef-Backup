@@ -3,17 +3,11 @@
     Layout = "Master.cshtml";
 
 }
-<style>
-    .paradiv p{
-        font-size: 18px;
-        line-height: 32px;
-    }
-</style>
 <!---------------------------------- other-section-banner ------------------------->
 <div class="section-banner">
     <div class="container">
-        <div class="section-banner-inner delivery-banner paradiv black-700">
-            <h1 class="black-950">@Model?.BannerHeading</h1>
+        <div class="section-banner-inner max-960">
+            <h1>@Model?.BannerHeading</h1>
            
                 @Html.Raw(Model?.BannerDescription)
             
@@ -37,7 +31,7 @@
                             {
                                 var blockModel = block?.Content as InformationContentBlock;
                                 var id = blockModel?.Heading?.Replace(" ", "_");
-                                <div class="delivery-detail-list paradiv black-700" id="@id">
+                                <div class="delivery-detail-list" id="@id">
                                     <h3 class="black-950 fw-600">@blockModel?.Heading</h3>
                                     @if (blockModel?.Blocks?.Count > 0)
                                     {
@@ -51,7 +45,7 @@
                                             @if (item?.Content?.ContentType?.Alias == "dotListBlock")
                                             {
                                                 var blockText = item?.Content as DotListBlock;
-                                                <br />
+                                                
                                                 <ul class="dot-list">
                                                     @if (blockText?.TextList?.Count() > 0)
                                                     {
@@ -66,7 +60,6 @@
                                                         }
                                                     }
                                                 </ul>
-                                                <br />
                                             }
                                         }
                                     }

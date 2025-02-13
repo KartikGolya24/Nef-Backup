@@ -1,6 +1,6 @@
 {
-  "Name": "Inner About Section",
-  "Alias": "innerAboutSection",
+  "Name": "Banner Content Section",
+  "Alias": "bannerContentSection",
   "AllowedTemplates": [],
   "HistoryCleanup": {},
   "Icon": "icon-science",
@@ -9,39 +9,39 @@
     "IsElementType": true,
     "AllowedChildContentTypes": []
   },
-  "Parent": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+  "Parent": "umb://document-type-container/1c7f2a1d72a84e7d8ea2e87876c51379",
   "CompositionContentTypes": [],
   "PropertyGroups": [
     {
-      "Key": "74c9fae4-648a-4fd5-b924-7d962630ee45",
-      "Name": "content",
+      "Key": "cfb2d291-92dc-4242-bbec-9f8d316af63c",
+      "Name": "Content",
       "Alias": "content",
       "PropertyTypes": [
         {
-          "Key": "16dac1c0-4311-4e42-afe9-d6246144669f",
+          "Key": "092bd811-4543-4baf-b5a0-d0c702d2c742",
+          "Alias": "heading",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Heading"
+        },
+        {
+          "Key": "a17227bf-475d-4529-8f82-26381d9f91b3",
           "Alias": "buttonList",
           "DataType": "umb://data-type/2f42fd89a2a44d95aece4e93b933793f",
           "Name": "Button List",
           "SortOrder": 2
         },
         {
-          "Key": "a5e1b3f7-1c49-4a3b-84bb-9a0c07127ae7",
-          "Alias": "heading",
-          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-          "Name": "Heading"
-        },
-        {
-          "Key": "c0eeab71-221a-442d-8296-691ddd758d6d",
-          "Alias": "descriptionText",
+          "Key": "d5b15798-0982-4118-b77e-bb2e88471ba4",
+          "Alias": "description",
           "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
-          "Name": "Description Text",
+          "Name": "Description",
           "SortOrder": 1
         }
       ]
     }
   ],
   "PropertyTypes": [],
-  "Udi": "umb://document-type/d1fad1ef2f594dbb858e01e5db461032",
+  "Udi": "umb://document-type/b7009ada54664413b9366923ce1b8581",
   "Dependencies": [
     {
       "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
@@ -56,7 +56,7 @@
       "Ordering": true
     },
     {
-      "Udi": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+      "Udi": "umb://document-type-container/1c7f2a1d72a84e7d8ea2e87876c51379",
       "Ordering": true
     }
   ],

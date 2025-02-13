@@ -25,6 +25,13 @@
           "SortOrder": 1
         },
         {
+          "Key": "cb1e35df-1050-4c39-84c1-0032786f5339",
+          "Alias": "cssClass",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Css Class",
+          "SortOrder": 2
+        },
+        {
           "Key": "d14b409e-3e9b-4097-a32c-aad08a5043fa",
           "Alias": "backgroundColor",
           "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",

@@ -14,6 +14,12 @@
         "contentElementTypeKey": "fc937223-59a6-42c7-b9b5-49a89a0115ce",
         "editorSize": "medium",
         "forceHideContentEditorInOverlay": false
+      },
+      {
+        "contentElementTypeKey": "ed326dc0-5570-44d4-b7d2-198457073f4f",
+        "label": "",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
       }
     ],
     "validationLimit": {},
@@ -30,6 +36,9 @@
     },
     {
       "Udi": "umb://document-type/79f62ef394a04edba3a2641f88e709d6"
+    },
+    {
+      "Udi": "umb://document-type/ed326dc0557044d4b7d2198457073f4f"
     },
     {
       "Udi": "umb://document-type/fc93722359a642c7b9b549a89a0115ce"

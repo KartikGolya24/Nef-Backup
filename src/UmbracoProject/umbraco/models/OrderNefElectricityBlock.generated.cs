@@ -58,12 +58,28 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual string ButtonBorderColor => this.Value<string>(_publishedValueFallback, "buttonBorderColor");
 
 		///<summary>
+		/// Default Tag Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("defaultTagImage")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops DefaultTagImage => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "defaultTagImage");
+
+		///<summary>
 		/// Heading
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("heading")]
 		public virtual string Heading => this.Value<string>(_publishedValueFallback, "heading");
+
+		///<summary>
+		/// Hover Tag Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("hoverTagImage")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops HoverTagImage => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "hoverTagImage");
 
 		///<summary>
 		/// Link List
@@ -98,28 +114,12 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::Umbraco.Cms.Core.Models.Link ModelLink => this.Value<global::Umbraco.Cms.Core.Models.Link>(_publishedValueFallback, "modelLink");
 
 		///<summary>
-		/// Position Images
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("positionImages")]
-		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel PositionImages => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "positionImages");
-
-		///<summary>
 		/// See more Button Text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("seeMoreButtonText")]
 		public virtual string SeeMoreButtonText => this.Value<string>(_publishedValueFallback, "seeMoreButtonText");
-
-		///<summary>
-		/// Text Color
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("textColor")]
-		public virtual string TextColor => this.Value<string>(_publishedValueFallback, "textColor");
 
 		///<summary>
 		/// Text List

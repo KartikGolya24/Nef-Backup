@@ -46,11 +46,11 @@
       "Alias": "content",
       "PropertyTypes": [
         {
-          "Key": "3c5847f3-c288-4773-a0ab-d1a89829ab67",
-          "Alias": "textColor",
-          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
-          "Name": "Text Color",
-          "SortOrder": 4
+          "Key": "2b60e5c3-6bfe-4a12-b883-155ae1d665a6",
+          "Alias": "defaultTagImage",
+          "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
+          "Name": "Default Tag Image",
+          "SortOrder": 5
         },
         {
           "Key": "50d9978d-3631-4448-8ad5-191d853ebe0c",
@@ -66,18 +66,11 @@
           "SortOrder": 1
         },
         {
-          "Key": "654f94a9-e002-4b46-9727-d62de53e4a5f",
-          "Alias": "positionImages",
-          "DataType": "umb://data-type/d8a26c36dc9143c3a0917a3a69610a3f",
-          "Name": "Position Images",
-          "SortOrder": 3
-        },
-        {
           "Key": "9a4ea3a7-a221-42ce-95b8-48d43328c208",
           "Alias": "seeMoreButtonText",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
           "Name": "See more Button Text",
-          "SortOrder": 5
+          "SortOrder": 3
         },
         {
           "Key": "c33150bb-f8e2-45fa-a3f9-c225aa88f2b6",
@@ -92,7 +85,14 @@
           "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
           "Description": "pick a color for see more button border",
           "Name": "Button Border color",
-          "SortOrder": 7
+          "SortOrder": 4
+        },
+        {
+          "Key": "cae1f2bf-2f93-4605-9254-b1ee6ac2bdc9",
+          "Alias": "hoverTagImage",
+          "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
+          "Name": "Hover Tag Image",
+          "SortOrder": 6
         }
       ]
     }
@@ -102,6 +102,10 @@
   "Dependencies": [
     {
       "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
       "Ordering": true
     },
     {
@@ -122,10 +126,6 @@
     },
     {
       "Udi": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
-      "Ordering": true
-    },
-    {
-      "Udi": "umb://data-type/d8a26c36dc9143c3a0917a3a69610a3f",
       "Ordering": true
     },
     {

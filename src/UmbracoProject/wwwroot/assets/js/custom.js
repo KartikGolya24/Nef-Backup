@@ -4,7 +4,6 @@ $(document).ready(function () {
    
     $(document).on('click', '.videoBtn', function () {
         // Grab the URL from the button's data-href attribute
-        debugger
         var videoURL = $(this).data('href');
         // console.log(videoURL)
         // Get the target modal's id (e.g., "#modalId")

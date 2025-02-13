@@ -1,32 +1,40 @@
 {
-  "Name": "Video Section - Bill Cards - Block List",
+  "Name": "Banner Two Column Section - Blocks - Block List",
   "Alias": "",
   "EditorAlias": "Umbraco.BlockList",
   "Configuration": {
     "blocks": [
       {
-        "contentElementTypeKey": "822e67b3-c2e9-48a1-a561-4c21702d1ef7",
-        "label": "{{headingText}}",
+        "contentElementTypeKey": "b7009ada-5466-4413-b936-6923ce1b8581",
+        "label": "{{heading}}",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      },
+      {
+        "contentElementTypeKey": "bfa1add7-e966-42fc-8314-a2a94ddb8e2e",
         "editorSize": "medium",
         "forceHideContentEditorInOverlay": false
       }
     ],
     "validationLimit": {
-      "max": 3
+      "max": 2
     },
     "useSingleBlockMode": false,
     "useLiveEditing": false,
     "useInlineEditingAsDefault": false
   },
   "Parent": "umb://data-type-container/921fd3ccdb1949549a00ec35730aafe5",
-  "Udi": "umb://data-type/94fc95a56fef46cba4e3a253fda74793",
+  "Udi": "umb://data-type/ef69265746794742be9cbfaee2183aae",
   "Dependencies": [
     {
       "Udi": "umb://data-type-container/921fd3ccdb1949549a00ec35730aafe5",
       "Ordering": true
     },
     {
-      "Udi": "umb://document-type/822e67b3c2e948a1a5614c21702d1ef7"
+      "Udi": "umb://document-type/b7009ada54664413b9366923ce1b8581"
+    },
+    {
+      "Udi": "umb://document-type/bfa1add7e96642fc8314a2a94ddb8e2e"
     }
   ],
   "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",

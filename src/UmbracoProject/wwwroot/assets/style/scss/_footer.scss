@@ -10,7 +10,11 @@
 
     .bottom-footer {
         padding: 64px 0 48px;
-        position: relative;
+        overflow: hidden;
+
+        [class*=container] {
+            position: relative;
+        }
 
         .footer-detail {
             flex-wrap: wrap;
@@ -171,7 +175,7 @@
 
     .position-img {
         position: absolute;
-        right: 93px;
+        right: 16px;
         top: 50%;
         transform: translate(0, -50%);
     }
