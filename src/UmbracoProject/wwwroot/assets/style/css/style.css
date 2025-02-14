@@ -12961,7 +12961,8 @@ li {
   font-size: 18px;
   line-height: 28px;
 }
-.contact-section-outer.style2 .contact-section .contact-section-para p strong, .contact-section-outer.style2 .contact-section .contact-section-para p b {
+.contact-section-outer.style2 .contact-section .contact-section-para p strong,
+.contact-section-outer.style2 .contact-section .contact-section-para p b {
   font-weight: 600;
 }
 
@@ -13385,124 +13386,92 @@ li {
 .status-alt-sidebar .status-left-part {
   max-width: 720px;
 }
-.status-alt-sidebar .status-left-part .operating-section {
+.status-alt-sidebar .status-left-part .status-boxes-outer {
   display: flex;
   flex-direction: column;
   gap: 160px;
 }
-.status-alt-sidebar .status-left-part .operating-section h2, .status-alt-sidebar .status-left-part .operating-section .h2,
-.status-alt-sidebar .status-left-part .operating-section h4,
-.status-alt-sidebar .status-left-part .operating-section .h4 {
+.status-alt-sidebar .status-left-part .status-boxes-outer h2, .status-alt-sidebar .status-left-part .status-boxes-outer .h2,
+.status-alt-sidebar .status-left-part .status-boxes-outer h4,
+.status-alt-sidebar .status-left-part .status-boxes-outer .h4 {
   color: #292929;
   font-weight: 600;
 }
-.status-alt-sidebar .status-left-part .operating-section p {
+.status-alt-sidebar .status-left-part .status-boxes-outer p {
   font-size: 18px;
   line-height: 32px;
   color: #525252;
 }
-.status-alt-sidebar .status-left-part .operating-section .operating-first-section.second-section {
-  gap: 0px;
-}
-.status-alt-sidebar .status-left-part .operating-section .operating-first-section.second-section > p {
-  padding: 16px 0px 40px;
-}
-.status-alt-sidebar .status-left-part .operating-section .operating-first-section.second-section .operating-map {
-  gap: 16px;
-}
-.status-alt-sidebar .status-left-part .operating-section .operating-first-section.condition-section {
+.status-alt-sidebar .status-left-part .status-boxes-outer .status-box {
   display: flex;
   flex-direction: column;
-  gap: 160px;
 }
-.status-alt-sidebar .status-left-part .operating-section .operating-first-section.condition-section .condition-section-list {
-  gap: 0px;
+.status-alt-sidebar .status-left-part .status-boxes-outer .status-box .box-header h2, .status-alt-sidebar .status-left-part .status-boxes-outer .status-box .box-header .h2 {
+  margin-bottom: 16px;
 }
-.status-alt-sidebar .status-left-part .operating-section .operating-first-section.condition-section .condition-section-list > p {
-  padding: 16px 0px 40px;
-}
-.status-alt-sidebar .status-left-part .operating-section .operating-first-section.condition-section .condition-section-list .operating-map {
+.status-alt-sidebar .status-left-part .status-boxes-outer .status-box .box-footer {
+  display: flex;
+  flex-direction: column;
   gap: 16px;
+  margin-top: 40px;
 }
-.status-alt-sidebar .status-left-part .operating-section .operating-first-section img {
-  margin: 64px 0px;
+.status-alt-sidebar .status-left-part .status-boxes-outer .status-box .map-section h2, .status-alt-sidebar .status-left-part .status-boxes-outer .status-box .map-section .h2 {
+  margin-bottom: 0;
 }
-.status-alt-sidebar .status-left-part .operating-section .operating-first-section iframe {
+.status-alt-sidebar .status-left-part .status-boxes-outer .status-box .map-section iframe {
   margin: 64px 0;
   height: 409px;
   width: 100%;
 }
-.status-alt-sidebar .status-left-part .operating-section .operating-first-section .operating-map {
-  display: flex;
-  flex-direction: column;
+.status-alt-sidebar .status-left-part .status-boxes-outer .status-box .map-section .box-footer {
   gap: 40px;
+  margin-top: 0;
 }
-.status-alt-sidebar .status-left-part .operating-section .operating-first-section .update-power {
-  padding-top: 80px;
+.status-alt-sidebar .status-left-part .status-boxes-outer .status-box .update-power {
+  padding-top: 40px;
   display: flex;
   gap: 32px;
   flex-direction: column;
 }
-.status-alt-sidebar .status-left-part .operating-section .operating-first-section .update-power .update-power-list {
+.status-alt-sidebar .status-left-part .status-boxes-outer .status-box .update-power .update-power-list {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.status-alt-sidebar .status-left-part .operating-section .operating-first-section .update-power .update-power-list .update-power-box {
+.status-alt-sidebar .status-left-part .status-boxes-outer .status-box .update-power .update-power-list .update-power-box {
   border-radius: 8px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-.status-alt-sidebar .status-left-part .operating-section .operating-first-section .update-power .update-power-list .update-power-box p {
+.status-alt-sidebar .status-left-part .status-boxes-outer .status-box .update-power .update-power-list .update-power-box p {
   max-width: 512px;
   color: #192A33;
 }
-.status-alt-sidebar .status-left-part .operating-section .operating-first-section .personal-data {
-  padding-top: 160px;
+.status-alt-sidebar .status-left-part .status-boxes-outer .status-box .data-faq {
+  padding: 44px 0px;
 }
-.status-alt-sidebar .status-left-part .operating-section .operating-first-section .personal-data .perosnal-data-section p {
-  margin: 16px 0px;
-}
-.status-alt-sidebar .status-left-part .operating-section .operating-first-section .personal-data .perosnal-data-section .personal-data-faq {
-  padding: 40px 0px;
-  margin-bottom: 40px;
-}
-.status-alt-sidebar .status-left-part .operating-section .operating-first-section .personal-data .perosnal-data-section .perosnal-data-button p {
-  padding-bottom: 16px;
-}
-.status-alt-sidebar .status-left-part .operating-section .operating-first-section .personal-data:first-child {
-  padding-top: 0;
-}
-.status-alt-sidebar .status-left-part .operating-section .operating-first-section .personal-data:first-child .personal-data-section h2, .status-alt-sidebar .status-left-part .operating-section .operating-first-section .personal-data:first-child .personal-data-section .h2 {
-  margin-bottom: 16px;
-}
-.status-alt-sidebar .status-left-part .operating-section .operating-first-section .personal-data:first-child .personal-data-section h2 + p, .status-alt-sidebar .status-left-part .operating-section .operating-first-section .personal-data:first-child .personal-data-section .h2 + p {
-  margin-bottom: 40px;
-}
-.status-alt-sidebar .status-left-part .delivery-detail-section {
-  display: flex;
-  flex-direction: column;
+.status-alt-sidebar .status-left-part .status-boxes-outer.delivery-detail-section {
   gap: 80px;
 }
-.status-alt-sidebar .status-left-part .delivery-detail-section .delivery-detail-list h3, .status-alt-sidebar .status-left-part .delivery-detail-section .delivery-detail-list .h3 {
+.status-alt-sidebar .status-left-part .status-boxes-outer.delivery-detail-section .box-header h3, .status-alt-sidebar .status-left-part .status-boxes-outer.delivery-detail-section .box-header .h3 {
+  margin-bottom: 16px;
   color: #292929;
   font-weight: 600;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer.delivery-detail-section .box-header p:not(:last-child) {
   margin-bottom: 16px;
 }
-.status-alt-sidebar .status-left-part .delivery-detail-section .delivery-detail-list p {
-  color: #525252;
-  font-size: 18px;
-  line-height: 32px;
+.status-alt-sidebar .status-left-part .status-boxes-outer.delivery-detail-section .dot-list {
+  margin-top: 32px;
 }
-.status-alt-sidebar .status-left-part .delivery-detail-section .delivery-detail-list .dot-list {
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-.status-alt-sidebar .status-left-part .delivery-detail-section .delivery-detail-list .dot-list li::marker {
+.status-alt-sidebar .status-left-part .status-boxes-outer.delivery-detail-section .dot-list li::marker {
   width: 20px;
   height: 20px;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer.delivery-detail-section .box-footer {
+  margin-top: 32px;
 }
 .status-alt-sidebar .sidebar {
   position: sticky;
@@ -14242,9 +14211,6 @@ li {
     height: 550px !important;
   }
   .status-alt-sidebar .sidebar .sidebar-item {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
     gap: 0;
   }
   .status-alt-sidebar .sidebar .sidebar-item .sidebar-list {
@@ -14616,7 +14582,7 @@ li {
     width: 100%;
   }
   .status-alt-sidebar .sidebar {
-    padding-top: 40px;
+    padding-bottom: 40px;
   }
   .status-alt-sidebar .status-left-part .operating-section {
     gap: 64px;

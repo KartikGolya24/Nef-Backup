@@ -18,16 +18,37 @@
       "Alias": "content",
       "PropertyTypes": [
         {
+          "Key": "313e5c8c-a9f9-4e5c-acd7-dd543efb0def",
+          "Alias": "helpDescriptionText",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Help Description Text",
+          "SortOrder": 3
+        },
+        {
           "Key": "382e0f3a-88e8-45bf-be36-1122ac9ebc3d",
           "Alias": "heading",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
           "Name": "Heading"
         },
         {
-          "Key": "af939eb5-f112-4838-8ffc-86c9acd8dee7",
-          "Alias": "blocks",
-          "DataType": "umb://data-type/c977bd20ba1d41d0addcf95df8cc4dd8",
-          "Name": "Blocks",
+          "Key": "3e62d543-f552-40b3-b918-482b9591ed3a",
+          "Alias": "dotList",
+          "DataType": "umb://data-type/86da3672f5a640b3a5bce98af677671f",
+          "Name": "Dot List",
+          "SortOrder": 2
+        },
+        {
+          "Key": "d6d3877a-dee4-4dee-895c-69ebd4979073",
+          "Alias": "buttonLink",
+          "DataType": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
+          "Name": "Button Link",
+          "SortOrder": 4
+        },
+        {
+          "Key": "e3d7ae51-05ba-4323-8458-4f2e6ae72dda",
+          "Alias": "descriptionText",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Description Text",
           "SortOrder": 1
         }
       ]
@@ -41,7 +62,15 @@
       "Ordering": true
     },
     {
-      "Udi": "umb://data-type/c977bd20ba1d41d0addcf95df8cc4dd8",
+      "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/86da3672f5a640b3a5bce98af677671f",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
       "Ordering": true
     },
     {

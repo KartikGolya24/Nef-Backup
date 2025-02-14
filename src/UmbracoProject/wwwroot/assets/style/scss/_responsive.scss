@@ -265,9 +265,6 @@
     .status-alt-sidebar {
         .sidebar {
             .sidebar-item {
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: space-between;
                 gap: 0;
 
                 .sidebar-list {
@@ -822,7 +819,7 @@
         }
 
         .sidebar {
-            padding-top: 40px;
+            padding-bottom: 40px;
         }
 
         .status-left-part {
