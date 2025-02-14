@@ -244,6 +244,7 @@
         </div>
     </div>
 </div>
+
 @* 
 <div class="container">
     <label for="options" class="form-label">Vælg en mulighed</label>
@@ -351,18 +352,3 @@
     });
 </script>
  *@
-
-<script>
-     $(document).ready(function () {
-         $(".load_more_update").click(function () {
-            let updateContainer = $(this).closest(".update-power");
-            let hiddenBlocks = updateContainer.find(".update-power-box:hidden").slice(0, 4);
-
-            hiddenBlocks.show();
-
-            if (updateContainer.find(".update-power-box:hidden").length === 0) {
-                $(this).hide();
-            }
-        });
-    });
-</script>

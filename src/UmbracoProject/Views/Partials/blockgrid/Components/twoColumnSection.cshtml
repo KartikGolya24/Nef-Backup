@@ -9,6 +9,7 @@
 
 @if (content?.SectionColumn?.Count > 0)
 {
+    int index = 0;
     var padding = !string.IsNullOrWhiteSpace(settings?.PaddingTopBottom) ? $"padding:{settings?.PaddingTopBottom} 0px" : "";
     <div class="alt-section" style="background-color:#@settings?.BackgroundColor;@padding">
         <div class="container">
@@ -21,7 +22,7 @@
                     {
                         var contentBlock = item?.Content as TwoColumnContentBlock;
                         <div class="col-lg-6">
-                            <div class="section-detail">
+                            <div class="section-detail @(index == 1?"ms-auto":"")">
                                 <div class="section-content black-950" style="color:#@contentBlock?.TextColor">
                                     @if (!string.IsNullOrWhiteSpace(contentBlock?.HeadingText))
                                     {
@@ -85,6 +86,7 @@
                                 }
                             </div>
                         </div>
+                       
                     }
                     else if (alias == "twoColumnMediaBlock")
                     {
@@ -137,6 +139,7 @@
                             }
                         </div>
                     }
+                    index++;
                 }
             </div>
         </div>

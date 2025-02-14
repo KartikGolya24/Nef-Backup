@@ -42,17 +42,3 @@
         }
     </div>
 </div>
-<script>
-     $(document).ready(function () {
-         $(".load_more_vacancies").click(function () {
-            let positionList = $(".position-list");
-            let hiddenBlocks = positionList.find("li:hidden").slice(0, 3);
-
-            hiddenBlocks.show();
-
-            if (positionList.find("li:hidden").length === 0) {
-                $(this).hide();
-            }
-        });
-    });
-</script>

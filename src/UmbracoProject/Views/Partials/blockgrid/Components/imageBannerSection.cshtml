@@ -19,12 +19,3 @@
         </a>
     }
 </div>
-
-@if (content?.IsEnableScrollButton == true)
-{
-    <script>
-        document.getElementById("scrollButton").addEventListener("click", function () {
-            window.scrollBy({ top: 550, behavior: "smooth" });
-        });
-    </script>
-}
