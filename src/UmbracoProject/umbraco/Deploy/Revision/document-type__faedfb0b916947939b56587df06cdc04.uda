@@ -25,20 +25,6 @@
   ],
   "PropertyGroups": [
     {
-      "Key": "457d62b3-4a00-43ae-af90-ac9d5ef8b316",
-      "Name": "Footer Selection",
-      "SortOrder": 2,
-      "Alias": "footerSelection",
-      "PropertyTypes": [
-        {
-          "Key": "7ecc065b-7bf7-41ae-8ed2-f5592bfc6b8c",
-          "Alias": "selectFooter",
-          "DataType": "umb://data-type/0b6a45e744ba430d9da54e46060b9e03",
-          "Name": "Select Footer"
-        }
-      ]
-    },
-    {
       "Key": "f4dd139f-ae63-4533-9543-a37a027a3b07",
       "Name": "Content Section",
       "SortOrder": 1,
@@ -56,10 +42,6 @@
   "PropertyTypes": [],
   "Udi": "umb://document-type/faedfb0b916947939b56587df06cdc04",
   "Dependencies": [
-    {
-      "Udi": "umb://data-type/0b6a45e744ba430d9da54e46060b9e03",
-      "Ordering": true
-    },
     {
       "Udi": "umb://data-type/689cc4f9a73a4e588296e6ee102f3504",
       "Ordering": true
