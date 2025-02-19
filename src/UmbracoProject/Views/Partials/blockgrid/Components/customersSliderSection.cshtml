@@ -8,10 +8,10 @@
 
 <!-------------------------------------- owl carousal --------------------->
 
-<div class="owl-slider-section buy_charging-slider" style="background-color:#@setting?.BackgroundColor">
+<div class="owl-slider-section dot_slider @content?.Theme @setting?.CssClass">
     <div class="container-fluid px-0">
-        <div class="section-heading white" style="color:#@content?.Color">
-            <h2 class="fw-600">@content?.HeadingText</h2>
+        <div class="section-heading">
+            <h2>@content?.HeadingText</h2>
            @Html?.Raw(content?.DescriptionText)
         </div>
 

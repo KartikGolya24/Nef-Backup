@@ -31,20 +31,6 @@
           "SortOrder": 3
         },
         {
-          "Key": "9896bb20-87cc-453f-9287-ed6e9f80193a",
-          "Alias": "textColor",
-          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
-          "Name": "Text Color",
-          "SortOrder": 4
-        },
-        {
-          "Key": "caedd7c4-5ac4-4ceb-b5f4-66f9936f06fe",
-          "Alias": "headingTextColor",
-          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
-          "Name": "Heading Text Color",
-          "SortOrder": 1
-        },
-        {
           "Key": "f0e01c7b-1454-489b-b4e8-55b2d4cf9ef9",
           "Alias": "contentBlocks",
           "DataType": "umb://data-type/7591b4d92acb4d82b153841747107d83",
@@ -59,10 +45,6 @@
   "Dependencies": [
     {
       "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-      "Ordering": true
-    },
-    {
-      "Udi": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
       "Ordering": true
     },
     {

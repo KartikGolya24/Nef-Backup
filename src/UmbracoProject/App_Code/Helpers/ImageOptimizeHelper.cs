@@ -13,7 +13,7 @@ namespace UmbracoProject.App_Code.Helpers
                 var mb = media.Value<int>("umbracoBytes") * 0.000001;
                 if (Math.Round(mb, 1) <= 0.6)
                 {
-                    quality = 100;
+                    quality = 85;
                 }
                 else if (Math.Round(mb, 1) >= 0.7 && Math.Round(mb, 1) <= 1)
                 {
@@ -54,7 +54,14 @@ namespace UmbracoProject.App_Code.Helpers
                 url = media?.Url() ?? "";
                 if (!url.IsNullOrWhiteSpace() && !Path.GetExtension(url).Equals(".svg"))
                 {
-                    url = $"{url}?format=webp&quality={quality}&width={width}&height={height}";
+                    if (height == 0)
+                    {
+                        url = $"{url}?format=webp&quality={quality}&width={width}";
+                    }
+                    else
+                    {
+                        url = $"{url}?format=webp&quality={quality}&width={width}&height={height}";
+                    }
                 }
             }
 
@@ -101,6 +108,21 @@ namespace UmbracoProject.App_Code.Helpers
             }
 
             return url;
+        }
+
+
+        public static string ReformatUrl(string url)
+        {
+            if (string.IsNullOrEmpty(url))
+                return url;
+
+            // Split existing query parameters
+            var parts = url.Split('?', 2);
+            var baseUrl = parts[0];
+            var queryParams = parts.Length > 1 ? parts[1] : "";
+
+            // Add WebP & Quality first
+            return $"{baseUrl}?format=webp&quality=80{(string.IsNullOrEmpty(queryParams) ? "" : "&" + queryParams)}";
         }
     }
 }

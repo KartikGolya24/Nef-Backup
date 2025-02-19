@@ -58,6 +58,13 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual string DescriptionText => this.Value<string>(_publishedValueFallback, "descriptionText");
 
 		///<summary>
+		/// Form
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
+		[ImplementPropertyType("form")]
+		public virtual global::System.Nullable<global::System.Guid> Form => this.Value<global::System.Nullable<global::System.Guid>>(_publishedValueFallback, "form");
+
+		///<summary>
 		/// Heading Text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]

@@ -7,25 +7,38 @@
             string tagImagePosition = string.Empty;
             switch (dropPostion)
             {
-                case "right-top":
+                case "bottom-corner-right":
                     tagImagePosition = "img1";
                     break;
 
-                case "left-bottom":
+                case "top-corner-right":
+                    tagImagePosition = "img11";
+                    break;
+
+                case "top-corner-left":
                     tagImagePosition = "img2";
                     break;
 
-                case "right-bottom":
-                    tagImagePosition = "img1 top-auto";
+                case "top-left":
+                    tagImagePosition = "img22";
                     break;
 
-                case "left-top":
+                case "top-center-left":
                     tagImagePosition = "img3";
+                    break;
+
+                case "bottom-left":
+                    tagImagePosition = "img4";
+                    break;
+
+                case "slight-left-bottom":
+                    tagImagePosition = "img55";
                     break;
             }
 
             return tagImagePosition;
 
         }
+
     }
 }

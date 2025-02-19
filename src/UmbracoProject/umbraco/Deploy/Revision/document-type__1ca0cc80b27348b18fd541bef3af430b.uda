@@ -1,0 +1,43 @@
+{
+  "Name": "Two Column Content Blocks Setting Model",
+  "Alias": "twoColumnContentBlocksSettingModel",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/a77d75d6f4ff4519b1dedc0b5bad7282",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "732452e3-9a79-4e1b-ac92-eee45873015c",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "d51edb9a-d1ac-42b2-baef-5c34e894c3c9",
+          "Alias": "cssClass",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Css Class"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/1ca0cc80b27348b18fd541bef3af430b",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/a77d75d6f4ff4519b1dedc0b5bad7282",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.3.2"
+}

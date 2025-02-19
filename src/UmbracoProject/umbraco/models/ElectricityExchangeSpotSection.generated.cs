@@ -64,5 +64,13 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("headingText")]
 		public virtual string HeadingText => this.Value<string>(_publishedValueFallback, "headingText");
+
+		///<summary>
+		/// Theme
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("theme")]
+		public virtual string Theme => this.Value<string>(_publishedValueFallback, "theme");
 	}
 }

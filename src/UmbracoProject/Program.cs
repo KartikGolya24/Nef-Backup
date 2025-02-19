@@ -7,7 +7,7 @@ builder.CreateUmbracoBuilder()
     .AddDeliveryApi()
     .AddComposers()
     .Build();
-
+builder.Services.AddHttpContextAccessor();
 WebApplication app = builder.Build();
 
 await app.BootUmbracoAsync();

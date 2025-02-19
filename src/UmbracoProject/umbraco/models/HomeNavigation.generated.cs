@@ -50,6 +50,22 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
+		/// Accordion Menu List
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("accordionMenuList")]
+		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel AccordionMenuList => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "accordionMenuList");
+
+		///<summary>
+		/// Background Color
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("backgroundColor")]
+		public virtual string BackgroundColor => this.Value<string>(_publishedValueFallback, "backgroundColor");
+
+		///<summary>
 		/// Category
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
@@ -58,20 +74,60 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel Category => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "category");
 
 		///<summary>
-		/// Footer1
+		/// Copy Right Text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("footer1")]
-		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel Footer1 => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "footer1");
+		[ImplementPropertyType("copyRightText")]
+		public virtual string CopyRightText => this.Value<string>(_publishedValueFallback, "copyRightText");
 
 		///<summary>
-		/// Footer2
+		/// DeskTop Image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("footer2")]
-		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel Footer2 => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "footer2");
+		[ImplementPropertyType("deskTopImage")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops DeskTopImage => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "deskTopImage");
+
+		///<summary>
+		/// Footer Address
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("footerAddress")]
+		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString FooterAddress => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "footerAddress");
+
+		///<summary>
+		/// Footer Links
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("footerLinks")]
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link> FooterLinks => this.Value<global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link>>(_publishedValueFallback, "footerLinks");
+
+		///<summary>
+		/// Footer Logo
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("footerLogo")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops FooterLogo => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "footerLogo");
+
+		///<summary>
+		/// Footer Text Color
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("footerTextColor")]
+		public virtual string FooterTextColor => this.Value<string>(_publishedValueFallback, "footerTextColor");
+
+		///<summary>
+		/// Heading Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("headingText")]
+		public virtual string HeadingText => this.Value<string>(_publishedValueFallback, "headingText");
 
 		///<summary>
 		/// Logo
@@ -122,6 +178,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::Umbraco.Cms.Core.Models.Link MitNefLink => this.Value<global::Umbraco.Cms.Core.Models.Link>(_publishedValueFallback, "mitNefLink");
 
 		///<summary>
+		/// Mobile Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("mobileImage")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops MobileImage => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "mobileImage");
+
+		///<summary>
 		/// Navigation Item
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
@@ -146,11 +210,27 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual string SearchPlaceholder => this.Value<string>(_publishedValueFallback, "searchPlaceholder");
 
 		///<summary>
+		/// Social Link List
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("socialLinkList")]
+		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel SocialLinkList => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "socialLinkList");
+
+		///<summary>
 		/// Submenu Menu Arrow
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("submenuMenuArrow")]
 		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops SubmenuMenuArrow => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "submenuMenuArrow");
+
+		///<summary>
+		/// Top Footer Button List
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("topFooterButtonList")]
+		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel TopFooterButtonList => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "topFooterButtonList");
 	}
 }

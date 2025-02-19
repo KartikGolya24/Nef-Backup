@@ -1,0 +1,161 @@
+﻿@using Umbraco.Forms.Core.Models
+@using UmbracoProject.App_Code.Models
+@model FormViewModel
+
+@if (Model != null)
+{
+    @if (Model?.Form?.Id == new Guid("1642f23d-5f9f-4d2e-87b4-e6f55be9843a"))
+    {
+        var formInstanceId = "sunbeamForm-" + Guid.NewGuid().ToString("N");
+        <form asp-action="SubmitForm" asp-controller="CustomForm" id="@formInstanceId">
+            @Html.AntiForgeryToken()
+            @Html.Hidden("FormId", @Model?.Form?.Id)
+            @Html.Hidden("ReturnUrl", @Model?.ActionUrl)
+            @if (TempData["submitMessage"] != null)
+            {
+                <h3 class="mb-lg-5 text-success">@TempData["submitMessage"]</h3>
+                TempData["submitMessage"] = null;
+            }
+            <div class="row">
+                @foreach (var item in Model?.Form?.AllFields)
+                {
+                    var fieldType = item?.Settings?.FirstOrDefault(x => x.Key == "FieldType").Value;
+                    var placeholder = item?.Settings?.FirstOrDefault(x => x.Key == "Placeholder").Value;
+                    var numberOfRows = item?.Settings?.FirstOrDefault(x => x.Key == "NumberOfRows").Value;
+                    @if (fieldType == "email")
+                    {
+                        <input type="hidden" class="regex_email" value="@item?.RegEx" />
+                    }
+                    @switch (fieldType)
+                    {
+                        case "text":
+                        case "email":
+                        case "number":
+                            var isGSrn = item?.Alias == "gSRNNummer";
+                            var maximumLength = item?.Settings?.FirstOrDefault(x => x.Key == "MaximumLength").Value;
+                            <div class="col-md-@(fieldType == "number" && isGSrn ? 12 : 6)">
+                                <div class="form-group">
+                                    <label for="@item?.Alias" class="label">@item?.Caption</label>
+                                    <input type="@fieldType"
+                                           name="@item?.Alias"
+                                           id="@item?.Alias"
+                                           maxlength="@maximumLength"
+                                           placeholder="@placeholder"
+                                           class="form-control @(item?.Mandatory == true ? "required" : "") @(fieldType == "email" ? "email-field" : "") @(isGSrn ? "gsrn-field" : "")" />
+                                    @if (item?.Mandatory == true)
+                                    {
+                                        <p class="error-text d-none">
+                                            <img src="~/assets/img/icons/error-icon.svg" alt=""> @item?.RequiredErrorMessage
+                                        </p>
+                                    }
+                                    @if (fieldType == "email")
+                                    {
+                                        <p class="error-text email-error d-none">
+                                            <img src="~/assets/img/icons/error-icon.svg" alt=""> @item?.InvalidErrorMessage
+                                        </p>
+                                    }
+                                    @if (isGSrn)
+                                    {
+                                        <p class="error-text gsrn-error d-none">
+                                            <img src="~/assets/img/icons/error-icon.svg" alt=""> gSRNNummer must be exactly 18 digits
+                                        </p>
+                                    }
+                                </div>
+                            </div>
+                            break;
+                    }
+
+                    @if (!string.IsNullOrWhiteSpace(numberOfRows))
+                    {
+                        var raw = Convert.ToInt32(numberOfRows);
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="@item?.Alias" class="label">@item?.Caption</label>
+                                <textarea name="@item?.Alias" id="@item?.Alias" class="form-control @(item?.Mandatory == true ? "required" : "")" placeholder="@placeholder"></textarea>
+                                @if (item?.Mandatory == true)
+                                {
+                                    <p class="error-text d-none">
+                                        <img src="~/assets/img/icons/error-icon.svg" alt=""> @item?.RequiredErrorMessage
+                                    </p>
+                                }
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+
+            <button type="button" class="btn dark_green_btn white sunbeam_story_form"> @Model?.Form?.SubmitLabel</button>
+            <button type="submit" class="btn light_blue_btn d-none">@Model?.Form?.SubmitLabel</button>
+        </form>
+
+        <script>
+            $(document).ready(function () {
+                $(document).on('click','.sunbeam_story_form',function () {
+                     var form = $(this).closest("form");
+                    var isValid = true;
+                    form.find(".required").each(function () {
+                        var field = $(this);
+                        if ($.trim(field.val()) === "") {
+                            isValid = false;
+                            field.addClass("error");
+                            field.siblings(".error-text").removeClass("d-none");
+                        } else {
+                            field.removeClass("error");
+                            field.siblings(".error-text").addClass("d-none");
+                        }
+                    });
+
+                    form.find(".email-field").each(function () {
+                        var emailField = $(this);
+                        var emailVal = $.trim(emailField.val());
+                        var emailPatternStr = $.trim(form.find(".regex_email").val());
+                        var emailPattern = new RegExp(emailPatternStr);
+
+                        if (emailVal !== "" && !emailPattern.test(emailVal)) {
+                            isValid = false;
+                            emailField.addClass("error");
+                            emailField.siblings(".email-error").removeClass("d-none");
+                        } else {
+                            emailField.removeClass("error");
+                            emailField.siblings(".email-error").addClass("d-none");
+                        }
+                    });
+
+                    debugger
+                        var gsrnField = form.find(".gsrn-field");
+                        var gsrnVal = $.trim(gsrnField.val());
+                        var gsrnPattern = /^\d{18}$/;
+
+                        if (gsrnVal !== "" && !gsrnPattern.test(gsrnVal)) {
+                            isValid = false;
+                            gsrnField.addClass("error");
+                            gsrnField.siblings(".gsrn-error").removeClass("d-none");
+                        } else {
+                            gsrnField.removeClass("error");
+                            gsrnField.siblings(".gsrn-error").addClass("d-none");
+                        }
+
+
+                    if (isValid) {
+                        $(this).next().click()
+                    }
+                });
+
+                 $(document).on("input", " .gsrn-field", function () {
+                    var val = $(this).val();
+                    $(this).val(val.replace(/\D/g, "").substring(0, 18));
+                 });
+            });
+
+        </script>
+
+    }
+    else
+    {
+        <p>Form not found.</p>
+    }
+}
+else
+{
+    <p>Form not found.</p>
+}

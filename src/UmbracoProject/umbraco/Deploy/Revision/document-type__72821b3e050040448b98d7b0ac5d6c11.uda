@@ -14,30 +14,9 @@
   ],
   "PropertyGroups": [
     {
-      "Key": "25e33af0-bd01-4a6f-ba32-d8ebee6e815d",
-      "Name": "Footer Content",
-      "SortOrder": 2,
-      "Alias": "footerContent1",
-      "PropertyTypes": [
-        {
-          "Key": "488aeb8a-6de0-4e49-b0dd-f87e60abcca5",
-          "Alias": "footer1",
-          "DataType": "umb://data-type/1928e9de63ea4062a80d307fec419cf2",
-          "Name": "Footer1"
-        },
-        {
-          "Key": "5450f947-4321-4f52-8725-d7bcd3824cbb",
-          "Alias": "footer2",
-          "DataType": "umb://data-type/e9536e1d7af345c38998d6a4d4fed337",
-          "Name": "Footer2",
-          "SortOrder": 1
-        }
-      ]
-    },
-    {
       "Key": "29880a30-6e1b-4664-8ea7-0305de80eaf1",
       "Name": "Header Content",
-      "Alias": "headerContent",
+      "Alias": "headerContent/headerContent",
       "PropertyTypes": [
         {
           "Key": "01de0b40-13d9-4372-9db3-86cf3270f1c1",
@@ -111,10 +90,115 @@
       ]
     },
     {
+      "Key": "49615aa9-48a5-4ff9-9d68-7a1ea484d276",
+      "Name": "Top Footer Content",
+      "Alias": "footerContent/topFooterContent",
+      "PropertyTypes": [
+        {
+          "Key": "4d5ac121-3a0d-4b59-b012-b3896c6efbc0",
+          "Alias": "topFooterButtonList",
+          "DataType": "umb://data-type/2f42fd89a2a44d95aece4e93b933793f",
+          "Name": "Top Footer Button List",
+          "SortOrder": 1
+        },
+        {
+          "Key": "af6dc68d-e846-4374-959f-d662b52e6061",
+          "Alias": "headingText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Heading Text"
+        }
+      ]
+    },
+    {
+      "Key": "5bac70a0-a0a5-4380-b6f5-df5715244c6c",
+      "Name": "Bottom Footer Content",
+      "SortOrder": 1,
+      "Alias": "footerContent/bottomFooterContent",
+      "PropertyTypes": [
+        {
+          "Key": "070ea48d-f235-4ca4-b08b-8fe3ad628b24",
+          "Alias": "footerAddress",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Footer Address",
+          "SortOrder": 2
+        },
+        {
+          "Key": "57cb3530-c2eb-4648-857b-eb802fd3ac64",
+          "Alias": "mobileImage",
+          "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
+          "Name": "Mobile Image",
+          "SortOrder": 6
+        },
+        {
+          "Key": "758e4189-5572-43d2-b643-3c06ec5e6669",
+          "Alias": "footerLogo",
+          "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
+          "Name": "Footer Logo"
+        },
+        {
+          "Key": "93185cba-564f-4a5f-a956-3f4cbff20b2e",
+          "Alias": "footerTextColor",
+          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+          "Name": "Footer Text Color",
+          "SortOrder": 9
+        },
+        {
+          "Key": "97676839-1f0b-4e20-945d-6be2cc987f87",
+          "Alias": "backgroundColor",
+          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+          "Name": "Background Color",
+          "SortOrder": 1
+        },
+        {
+          "Key": "9a1fc8f0-54ff-496c-9c14-59b33663ddc2",
+          "Alias": "socialLinkList",
+          "DataType": "umb://data-type/6a274202b52f4447b1c5c72dd4608dde",
+          "Name": "Social Link List",
+          "SortOrder": 3
+        },
+        {
+          "Key": "ad79735a-4903-4d92-9a46-9565d8f273c6",
+          "Alias": "accordionMenuList",
+          "DataType": "umb://data-type/2899a195afb246babc896598df1979e0",
+          "Name": "Accordion Menu List",
+          "SortOrder": 4
+        },
+        {
+          "Key": "b2d0ce85-ccb9-4acc-a49d-addd7cb12632",
+          "Alias": "footerLinks",
+          "DataType": "umb://data-type/dc5256dbe96c49e0a0503b511c2408b5",
+          "Name": "Footer Links",
+          "SortOrder": 8
+        },
+        {
+          "Key": "c4888474-92e6-4c67-9804-417d400e9bcf",
+          "Alias": "deskTopImage",
+          "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
+          "Name": "DeskTop Image",
+          "SortOrder": 5
+        },
+        {
+          "Key": "ca02430f-0f4b-496d-800b-ee7848886c8f",
+          "Alias": "copyRightText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Copy Right Text",
+          "SortOrder": 7
+        }
+      ]
+    },
+    {
+      "Key": "85964285-613b-444c-9c5f-035935b20cc2",
+      "Name": "Footer Content",
+      "SortOrder": 1,
+      "Type": 1,
+      "Alias": "footerContent",
+      "PropertyTypes": []
+    },
+    {
       "Key": "922e5399-9eda-44fe-bd14-3e35be7f9b43",
       "Name": "Mobile Category Content",
       "SortOrder": 1,
-      "Alias": "mobileCategoryContent",
+      "Alias": "headerContent/mobileCategoryContent",
       "PropertyTypes": [
         {
           "Key": "cd0cdce1-fb9c-4774-834c-dc382e7547e7",
@@ -123,6 +207,13 @@
           "Name": "Category"
         }
       ]
+    },
+    {
+      "Key": "92fafeba-65c2-4c6f-ba03-c4d2a7a31353",
+      "Name": "Header Content",
+      "Type": 1,
+      "Alias": "headerContent",
+      "PropertyTypes": []
     }
   ],
   "PropertyTypes": [],
@@ -141,7 +232,15 @@
       "Ordering": true
     },
     {
-      "Udi": "umb://data-type/1928e9de63ea4062a80d307fec419cf2",
+      "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2899a195afb246babc896598df1979e0",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2f42fd89a2a44d95aece4e93b933793f",
       "Ordering": true
     },
     {
@@ -150,6 +249,10 @@
     },
     {
       "Udi": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/6a274202b52f4447b1c5c72dd4608dde",
       "Ordering": true
     },
     {
@@ -165,7 +268,7 @@
       "Ordering": true
     },
     {
-      "Udi": "umb://data-type/e9536e1d7af345c38998d6a4d4fed337",
+      "Udi": "umb://data-type/dc5256dbe96c49e0a0503b511c2408b5",
       "Ordering": true
     },
     {

@@ -18,14 +18,14 @@ using Umbraco.Extensions;
 
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
-	/// <summary>Two Column Content Block</summary>
-	[PublishedModel("twoColumnContentBlock")]
-	public partial class TwoColumnContentBlock : PublishedElementModel
+	/// <summary>Two Column Dot List</summary>
+	[PublishedModel("twoColumnDotList")]
+	public partial class TwoColumnDotList : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
-		public new const string ModelTypeAlias = "twoColumnContentBlock";
+		public new const string ModelTypeAlias = "twoColumnDotList";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
@@ -34,14 +34,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 			=> PublishedModelUtility.GetModelContentType(publishedSnapshotAccessor, ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<TwoColumnContentBlock, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<TwoColumnDotList, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(publishedSnapshotAccessor), selector);
 #pragma warning restore 0109
 
 		private IPublishedValueFallback _publishedValueFallback;
 
 		// ctor
-		public TwoColumnContentBlock(IPublishedElement content, IPublishedValueFallback publishedValueFallback)
+		public TwoColumnDotList(IPublishedElement content, IPublishedValueFallback publishedValueFallback)
 			: base(content, publishedValueFallback)
 		{
 			_publishedValueFallback = publishedValueFallback;
@@ -50,27 +50,19 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Button List
+		/// Dot List
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("buttonList")]
-		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel ButtonList => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "buttonList");
+		[ImplementPropertyType("dotList")]
+		public virtual global::System.Collections.Generic.IEnumerable<string> DotList => this.Value<global::System.Collections.Generic.IEnumerable<string>>(_publishedValueFallback, "dotList");
 
 		///<summary>
-		/// Content Blocks
+		/// List Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("contentBlocks")]
-		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel ContentBlocks => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "contentBlocks");
-
-		///<summary>
-		/// Heading Text
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("headingText")]
-		public virtual string HeadingText => this.Value<string>(_publishedValueFallback, "headingText");
+		[ImplementPropertyType("listTitle")]
+		public virtual string ListTitle => this.Value<string>(_publishedValueFallback, "listTitle");
 	}
 }

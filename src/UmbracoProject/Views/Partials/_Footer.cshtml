@@ -1,20 +1,17 @@
-﻿@using UmbracoProject.App_Code.Models
-@model FooterModel
-@{
-    var content = Model?.FooterContent as FooterSectionBlock;
-    var footerName = Model?.FooterName;
-}
+﻿@* @using UmbracoProject.App_Code.Models
+@model FooterModel *@
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<HomeNavigation>
 
 <!----------------------------------------- Footer --------------------->
 <footer class="footer">
 
-    <div class="top-footer text-center space_blue_bg" style="background-color:#@content?.BackgroundColor">
+    <div class="top-footer text-center space_blue_bg">
         <div class="container-xl">
-            <h3 class="white" style="color:#@content?.TopFooterTextColor">@content?.HeadingText</h3>
-            @if (content?.ButtonList?.Count > 0)
+            <h3 class="white">@Model?.HeadingText</h3>
+            @if (Model?.TopFooterButtonList?.Count > 0)
             {
                 <div class="multiple-buttons justify-content-center">
-                    @foreach (var item in content?.ButtonList)
+                    @foreach (var item in Model?.TopFooterButtonList)
                     {
                         var buttonList = item.Content as IconLinkList;
                         <button type="button" class="btn @buttonList?.ButtonTheme" style="border:1px solid #@buttonList?.BorderColor">
@@ -28,22 +25,22 @@
         </div>
     </div>
 
-    <div class="bottom-footer dark_blue_bg @(footerName == "Footer2"?"style2":"")" style="background-color:#@content?.BottomBackgroundColor">
+    <div class="bottom-footer dark_blue_bg style2" style="background-color:#@Model?.BackgroundColor">
         <div class="container-xl">
             <div class="footer-detail">
                 <div class="footer-address">
                     <div class="footer-logo">
-                        <img src="@content?.FooterLogo?.MediaUrl()" class="img-fluid" alt="footer-logo">
+                        <img src="@Model?.FooterLogo?.MediaUrl()" class="img-fluid" alt="footer-logo">
                     </div>
-                    <div class="address white" style="color:#@content?.FooterTextColor">
-                        @Html?.Raw(content?.FooterAddress)
+                    <div class="address white" style="color:#@Model?.FooterTextColor">
+                        @Html?.Raw(Model?.FooterAddress)
                     </div>
-                    @if (content?.SocialLinkList?.Count > 0)
+                    @if (Model?.SocialLinkList?.Count > 0)
                     {
                         <div class="social-icon">
                             <ul class="social-item">
 
-                                @foreach (var item in content?.SocialLinkList)
+                                @foreach (var item in Model?.SocialLinkList)
                                 {
                                     var socialLink = item?.Content as FooterSocialLink;
 
@@ -59,49 +56,23 @@
                 </div>
 
                 <div class="footer-menu accordion">
-                    @{
+
+                    @if (Model?.AccordionMenuList?.Count > 0)
+                    {
                         var count = 1;
-                        var hasOpeningTimeValu = content?.OpeningTimeDescription?.ToString();
-                    }
-
-                    @if (!string.IsNullOrWhiteSpace(content?.OpeningTimeDescription?.ToString()))
-                    {
-                        var id = $"collapse{count}";
-                        <div class="footer-menu-list white accordion-item" style="color:#@content?.FooterTextColor">
-                            <button 
-                                class="accordion-button collapsed" 
-                                type="button" 
-                                data-bs-toggle="collapse" 
-                                data-bs-target="#@id" 
-                                aria-expanded="true" 
-                                aria-controls="@id" 
-                                style="color:#@content?.FooterTextColor"
-                                >
-                                @content?.OpeningTimeHeadLabel
-                            </button>
-
-                            <div class="accordion-collapse collapse" id="@id" aria-labelledby="@id">
-                                @Html?.Raw(content?.OpeningTimeDescription)
-                            </div>
-                        </div>
-                        count++;
-                    }
-
-                    @if (content?.AccordionMenuList?.Count > 0)
-                    {
-                        @foreach (var item in content?.AccordionMenuList)
+                        @foreach (var item in Model?.AccordionMenuList)
                         {
                             var id = $"collapse{count}";
                             var accordion = item?.Content as FooterMenuAccordion;
 
-                            <div class="footer-menu-list white accordion-item" style="color:#@content?.FooterTextColor">
-                                <button class="accordion-button collapsed @(footerName == "Footer2"?"fw-700":"")" type="button" data-bs-toggle="collapse" data-bs-target="#@id" aria-expanded="true" aria-controls="@id" style="color:#@content?.FooterTextColor">
+                            <div class="footer-menu-list white accordion-item" style="color:#@Model?.FooterTextColor">
+                                <button class="accordion-button collapsed fw-700" type="button" data-bs-toggle="collapse" data-bs-target="#@id" aria-expanded="true" aria-controls="@id" style="color:#@Model?.FooterTextColor">
                                     @accordion?.HeadText
                                 </button>
                                 <ul class="accordion-collapse collapse" id="@id" aria-labelledby="@id">
                                     @foreach (var link in accordion?.MenuItems)
                                     {
-                                        <li class="@(footerName == "Footer2"?"mb-3":"")"><a href="@link?.Url" class="white" style="color:#@content?.FooterTextColor">@link?.Name</a></li>
+                                        <li class="mb-3"><a href="@link?.Url" class="white" style="color:#@Model?.FooterTextColor">@link?.Name</a></li>
                                     }
                                 </ul>
                             </div>
@@ -109,26 +80,26 @@
                         }
                     }
                 </div>
-                @if (content?.DesktopImage != null)
+                @if (Model?.DeskTopImage != null)
                 {
                     <div class="position-img">
-                        <img src="@content?.DesktopImage?.MediaUrl()" class="img-fluid" alt="img">
+                        <img src="@Model?.DeskTopImage?.MediaUrl()" class="img-fluid" alt="img">
                     </div>
                 }
-                @if (content?.MobileImage != null)
+                @if (Model?.MobileImage != null)
                 {
                     <div class="mobile-visible d-lg-none">
-                        <img src="@content?.MobileImage?.MediaUrl()" class="img-fluid opacity-30" alt="img">
+                        <img src="@Model?.MobileImage?.MediaUrl()" class="img-fluid opacity-30" alt="img">
                     </div>
                 }
             </div>
             <div class="copyright">
-                <span class="small white" style="color:#@content?.FooterTextColor">@content?.CopyRightText</span>
-                @if (content?.FooterLinks?.Count() > 0)
+                <span class="small white" style="color:#@Model?.FooterTextColor">@Model?.CopyRightText</span>
+                @if (Model?.FooterLinks?.Count() > 0)
                 {
-                    @foreach (var item in content?.FooterLinks)
+                    @foreach (var item in Model?.FooterLinks)
                     {
-                        <span class="small"><a href="@item?.Url" class="white" style="color:#@content?.FooterTextColor">@item?.Name</a></span>
+                        <span class="small"><a href="@item?.Url" class="white" style="color:#@Model?.FooterTextColor">@item?.Name</a></span>
                     }
                 }
             </div>

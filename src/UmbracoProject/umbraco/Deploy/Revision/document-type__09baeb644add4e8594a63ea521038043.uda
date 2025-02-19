@@ -1,10 +1,7 @@
 {
   "Name": "Charging Boxes",
   "Alias": "chargingBoxes",
-  "DefaultTemplate": "umb://template/e2cbd35d5e764777b663db0cc4a27502",
-  "AllowedTemplates": [
-    "umb://template/e2cbd35d5e764777b663db0cc4a27502"
-  ],
+  "AllowedTemplates": [],
   "HistoryCleanup": {},
   "Icon": "icon-document",
   "Thumbnail": "folder.png",
@@ -63,11 +60,6 @@
     {
       "Udi": "umb://document-type/c9ab57ded3b44526a7ac22bacf19a079",
       "Ordering": true
-    },
-    {
-      "Udi": "umb://template/e2cbd35d5e764777b663db0cc4a27502",
-      "Ordering": true,
-      "Mode": "Exist"
     }
   ],
   "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",

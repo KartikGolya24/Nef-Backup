@@ -8,19 +8,31 @@
     "items": [
       {
         "id": 1,
-        "value": "right-top"
+        "value": "bottom-corner-right"
       },
       {
         "id": 2,
-        "value": "left-bottom"
+        "value": "top-corner-right"
       },
       {
         "id": 3,
-        "value": "right-bottom"
+        "value": "top-corner-left"
       },
       {
         "id": 4,
-        "value": "left-top"
+        "value": "top-left"
+      },
+      {
+        "id": 5,
+        "value": "top-center-left"
+      },
+      {
+        "id": 6,
+        "value": "bottom-left"
+      },
+      {
+        "id": 7,
+        "value": "slight-left-bottom"
       }
     ]
   },

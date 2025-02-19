@@ -12,12 +12,20 @@
       },
       {
         "contentElementTypeKey": "fc937223-59a6-42c7-b9b5-49a89a0115ce",
+        "settingsElementTypeKey": "1ca0cc80-b273-48b1-8fd5-41bef3af430b",
         "editorSize": "medium",
         "forceHideContentEditorInOverlay": false
       },
       {
         "contentElementTypeKey": "ed326dc0-5570-44d4-b7d2-198457073f4f",
+        "settingsElementTypeKey": "1ca0cc80-b273-48b1-8fd5-41bef3af430b",
         "label": "",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      },
+      {
+        "contentElementTypeKey": "b7ea380c-440a-4e54-ad12-9d454fabeba8",
+        "settingsElementTypeKey": "1ca0cc80-b273-48b1-8fd5-41bef3af430b",
         "editorSize": "medium",
         "forceHideContentEditorInOverlay": false
       }
@@ -35,7 +43,13 @@
       "Ordering": true
     },
     {
+      "Udi": "umb://document-type/1ca0cc80b27348b18fd541bef3af430b"
+    },
+    {
       "Udi": "umb://document-type/79f62ef394a04edba3a2641f88e709d6"
+    },
+    {
+      "Udi": "umb://document-type/b7ea380c440a4e54ad129d454fabeba8"
     },
     {
       "Udi": "umb://document-type/ed326dc0557044d4b7d2198457073f4f"

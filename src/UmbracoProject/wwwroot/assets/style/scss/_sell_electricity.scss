@@ -13,6 +13,8 @@
         padding: 16px;
         border-radius: 16px;
         height: 100%;
+        background-color: $dark_blue;
+        color: $white;
 
         .card-header {
             margin-bottom: 24px;
@@ -23,25 +25,53 @@
             flex-direction: column;
             gap: 8px;
 
-            p {
-                &.small {
+            .title {
+                font-size: 18px;
+                line-height: 32px;
+                font-weight: 700;
+                margin-bottom: 8px;
+                
+                & + p {
                     font-size: 14px;
                     line-height: 32px;
-                    margin-bottom: 8px;
+                    font-weight: 600;
                 }
+            }
 
-                &.white:not(.fw-700) {
-                    line-height: 25px;
+            p {
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: 500;
+                &:not(:last-child) {
+                    margin-bottom: 8px;
                 }
             }
         }
     }
 
+    &.dark_blue_bg {
+        .section-heading h2 {
+            color: $white;
+        }
+        .electricity-card {
+            background-color: $white;
+            color: $dark_blue;
+        }
+    }
 }
 
 .alt-contact {
     border-bottom: 1px solid $black-100;
     padding: 64px 0px;
+
+    .flex-row-reverse {
+        .buy_charging-doodles {
+            img {
+                right: auto;
+                left: -50px;
+            }
+        }
+    }
 
     &.sell-electricity {
         .section-detail {
@@ -62,6 +92,7 @@
         flex-direction: column;
         gap: 40px;
         max-width: 512px;
+        position: relative;
 
         &.mx-w-545 {
             max-width: 545px;
@@ -70,11 +101,14 @@
         .section-content {
             h2 {
                 margin-bottom: 16px;
+                font-weight: 600;
+                color: $black-950;
             }
 
             p {
                 max-width: 512px;
                 margin-bottom: 16px;
+                color: $black-950;
 
                 &:last-child {
                     margin-bottom: 0px;
@@ -89,6 +123,27 @@
         max-width: 600px;
         margin: auto;
         height: 100%;
+
+        .form-outer {
+            .form-headings {
+                margin-bottom: 40px;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                .form-title {
+                    font-weight: 600;
+                    color: $space_blue;
+                }
+
+                p {
+                    color: $space_blue;
+                    font-size: 18px;
+                    line-height: 32px;
+                }
+            }
+        }
+
 
         .row {
             margin: 0px -8px;
@@ -112,9 +167,30 @@
             padding: 137px 44px;
             text-align: center;
 
-            p {
-                max-width: 400px;
-                margin: 0 auto;
+            .icon {
+                img {
+                    height: 168px;
+                    width: 168px;
+                }
+            }
+
+            .content {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                h2 {
+                    color: $black-950;
+                    font-weight: 600;
+                    margin-bottom: 8px;
+                }
+
+                p {
+                    font-size: 18px;
+                    line-height: 32px;
+                    max-width: 400px;
+                    margin: 0 auto 32px;
+                }
             }
         }
     }
@@ -157,6 +233,8 @@
 
             p {
                 padding-left: 16px;
+                font-size: 18px;
+                line-height: 32px;
             }
         }
     }
@@ -190,14 +268,23 @@
         justify-content: space-between;
         flex-direction: column;
         height: 100%;
+        overflow: hidden;
 
 
         .position-img {
             width: max-content;
             position: absolute;
-            top: 32px;
-            right: 32px;
+            top: -40px;
+            right: 0px;
+
+            img {
+                height: 300px;
+                width: 300px;
+                object-fit: cover;
+            }
         }
+
+
 
         .card-body {
             margin-bottom: 63px;
@@ -233,7 +320,10 @@
             }
         }
 
-        &:hover, &:focus, &:active, &:focus-visible {
+        &:hover,
+        &:focus,
+        &:active,
+        &:focus-visible {
             background-color: $light_blue;
 
             .card-body {
@@ -259,6 +349,7 @@
                     color: $white;
                 }
             }
+
         }
     }
 }
@@ -399,6 +490,7 @@
                                 gap: 8px;
                                 margin-bottom: 32px;
                                 color: $white;
+
                                 &:not(:last-child) {
                                     margin-bottom: 32px;
                                 }
@@ -474,6 +566,17 @@
                     gap: 20px;
                     padding-right: 22px;
 
+                    .card-title {
+                        font-weight: 600;
+                        color: $black-950;
+                        & + p {
+                            color: $black-700;
+                            font-size: 18px;
+                            line-height: 32px;
+                        }
+                    }
+
+
                     ul {
                         padding-left: 20px;
                         display: flex;
@@ -482,6 +585,12 @@
 
                         li {
                             list-style: inherit;
+
+                            p {
+                                font-size: 16px;
+                                line-height: 27px;
+                                color: $black-700;
+                            }
 
                             &::marker {
                                 color: $light_blue;

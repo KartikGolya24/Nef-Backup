@@ -1,0 +1,23 @@
+{
+  "Name": "Customers Slider Section - Theme - Dropdown",
+  "Alias": "",
+  "EditorAlias": "Umbraco.DropDown.Flexible",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {
+    "multiple": false,
+    "items": [
+      {
+        "id": 1,
+        "value": "dark_blue_bg"
+      },
+      {
+        "id": 2,
+        "value": "turquoise_bg"
+      }
+    ]
+  },
+  "Udi": "umb://data-type/153c423a60414a3fb3aeace4cb67697c",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

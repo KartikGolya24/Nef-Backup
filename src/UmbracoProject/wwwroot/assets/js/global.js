@@ -77,7 +77,7 @@
 
     //scroll button on home banner
     $("#scrollButton").click(function () {
-        window.scrollBy({ top: 560, behavior: "smooth" });
+        window.scrollBy({ top: 660, behavior: "smooth" });
     })
 
 })

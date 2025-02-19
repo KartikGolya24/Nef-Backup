@@ -31,7 +31,7 @@
                     {
                         var contentModel = item?.Content as TextListWithIcon;
                         <div class="col-md-3">
-                            <ul class="electricity-banner-list turquoise_bg" style="background-color:#@contentModel?.BackgroundColor">
+                            <ul class="electricity-banner-list turquoise_bg">
 
                                 @if (contentModel?.TextList?.Count > 0)
                                 {
@@ -40,7 +40,7 @@
                                         var list = text?.Content as TextWithIcon;
                                         <li>
                                             <img src="@list?.Icon?.MediaUrl()" class="img-fluid" alt="img" />
-                                            <p class="para" style="color:#@list?.TextColor">@list?.Text</p>
+                                            <p class="para black-950">@list?.Text</p>
                                         </li>
                                     }
                                 }

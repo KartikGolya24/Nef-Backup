@@ -43,18 +43,18 @@
     }
 }
 
-@media screen and (min-width: 1440px) {
-    .banner {
-        height: 560px;
+// @media screen and (min-width: 1440px) {
+//     .banner {
+//         height: 560px;
 
-        img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            object-position: center center;
-        }
-    }
-}
+//         img {
+//             height: 100%;
+//             width: 100%;
+//             object-fit: cover;
+//             object-position: center center;
+//         }
+//     }
+// }
 
 @media screen and (max-width: 1440px) {
     .electricity-price {
@@ -75,18 +75,18 @@
     }
 }
 
-@media screen and (max-width: 1439px) {
-    .banner {
-        height: 424px;
+// @media screen and (max-width: 1439px) {
+//     .banner {
+//         height: 424px;
 
-        img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            object-position: center center;
-        }
-    }
-}
+//         img {
+//             height: 100%;
+//             width: 100%;
+//             object-fit: cover;
+//             object-position: center center;
+//         }
+//     }
+// }
 
 @media screen and (max-width: 1399px) {
     .footer .position-img {
@@ -1162,9 +1162,9 @@
         }
     }
 
-    .banner {
-        height: 324px;
-    }
+    // .banner {
+    //     height: 324px;
+    // }
 
     .footer {
         .bottom-footer {

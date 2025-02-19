@@ -178,5 +178,11 @@
         right: 16px;
         top: 50%;
         transform: translate(0, -50%);
+
+        img {
+            height: 400px;
+            width: 400px;
+            object-fit: none;
+        }
     }
 }

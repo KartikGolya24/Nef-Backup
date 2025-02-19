@@ -39,7 +39,7 @@
         "allowInAreas": true,
         "areas": [],
         "contentElementTypeKey": "84d652e4-246e-42cb-a0d6-65dd910a8201",
-        "settingsElementTypeKey": "69e8ea9e-0a61-4a79-a509-76740b15a531",
+        "settingsElementTypeKey": "2ce5fcb6-83ea-45e7-9fe6-7b25299be80d",
         "label": "",
         "editorSize": "medium",
         "inlineEditing": false,
@@ -268,6 +268,9 @@
     },
     {
       "Udi": "umb://document-type/1619156e12b94b4d9ea94c8364755b17"
+    },
+    {
+      "Udi": "umb://document-type/2ce5fcb683ea45e79fe67b25299be80d"
     },
     {
       "Udi": "umb://document-type/4527cc25f8d843dc85d07c220ffe955c"

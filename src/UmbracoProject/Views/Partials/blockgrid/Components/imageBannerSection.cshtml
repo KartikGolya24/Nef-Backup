@@ -1,5 +1,6 @@
 ﻿@using Umbraco.Cms.Core.Models.Blocks
 @using UmbracoProject.App_Code.Helpers
+@using PictureRenderer
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<ImageBannerSection>>
 @{
     var content = Model?.Content;
@@ -8,13 +9,63 @@
 
 <!-----------------------------banner----------------------------->
 <div class="banner">
+    @if (content?.Image?.MediaUrl() != null )
+    {
 
-    <img src="@content?.Image.GetWebp()" class="img-fluid banner" alt="banner">
+        @* <img src="@content?.Image.GetWebp()" class="img-fluid banner" alt="banner"> *@
+
+        @* <img src="@content?.Image?.GetCropUrl(width: 1440, height: 424, preferFocalPoint: true)" class="img-fluid banner" alt="banner">  *@
+
+        @* <img src="@content?.Image?.GetCropUrl("laptop")" class="img-fluid banner" alt="banner">  *@
+
+
+       @*  <picture>
+            <!-- Mobile (393px x 324px) -->
+            <source media="(max-width: 393px)"
+                    srcset="@content?.Image?.GetCropUrl(width: 393, height: 324, preferFocalPoint: true,quality:80)">
+
+            <!-- Tablet (1024px x 424px) -->
+            <source media="(max-width: 1024px)"
+                    srcset="@content?.Image?.GetCropUrl(width: 1024, height: 424, preferFocalPoint: true,quality:80)">
+
+            <!-- Laptop (1440px x 424px) -->
+            <source media="(max-width: 1440px) and (max-height: 424px)"
+                    srcset="@content?.Image?.GetCropUrl(width: 1440, height: 424, preferFocalPoint: true,quality:80)">
+
+            <!-- Default (Desktop 1440px x 560px) -->
+            <img class="img-fluid"
+                 src="@content?.Image?.GetCropUrl(width: 1440, height: 560, preferFocalPoint: true,quality:80)">
+            alt="article">
+        </picture> *@
+
+
+        <picture>
+            <!-- Mobile (393px x 324px) -->
+            <source media="(max-width: 393px)"
+                    srcset="@ImageOptimizeHelper.ReformatUrl(content?.Image?.GetCropUrl(width: 393, height: 324, preferFocalPoint: true))">
+
+            <!-- Tablet (1024px x 424px) -->
+            <source media="(max-width: 1024px)"
+                    srcset="@ImageOptimizeHelper.ReformatUrl(content?.Image?.GetCropUrl(width: 1024, height: 424, preferFocalPoint: true))">
+
+            <!-- Laptop (1440px x 424px) -->
+            <source media="(max-width: 1440px) and (max-height: 424px)"
+                    srcset="@ImageOptimizeHelper.ReformatUrl(content?.Image?.GetCropUrl(width: 1440, height: 424, preferFocalPoint: true))">
+
+            <!-- Default (Desktop 1440px x 560px) -->
+            <img class="img-fluid banner"
+                 src="@ImageOptimizeHelper.ReformatUrl(content?.Image?.GetCropUrl(width: 1440, height: 560, preferFocalPoint: true))"
+                 alt="article">
+        </picture>
+
+
+    }
+
     @if (content?.IsEnableScrollButton == true)
     {
 
         <a class="scroll-down" id="scrollButton">
-            <p class="black-950 para">Scroll</p>
+            <p class="black-950 para">@content?.ScrollButtonText</p>
             <img src="~/assets/img/icons/line-arrow-down.svg" class="img-fluid" alt="">
         </a>
     }

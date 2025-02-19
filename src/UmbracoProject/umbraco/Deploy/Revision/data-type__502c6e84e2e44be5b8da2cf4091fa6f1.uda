@@ -1,0 +1,18 @@
+{
+  "Name": "Proposition Section - Proposition Blocks - Block List",
+  "Alias": "",
+  "EditorAlias": "Umbraco.BlockList",
+  "Configuration": {
+    "blocks": [],
+    "validationLimit": {
+      "max": 3
+    },
+    "useSingleBlockMode": false,
+    "useLiveEditing": false,
+    "useInlineEditingAsDefault": false
+  },
+  "Udi": "umb://data-type/502c6e84e2e44be5b8da2cf4091fa6f1",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

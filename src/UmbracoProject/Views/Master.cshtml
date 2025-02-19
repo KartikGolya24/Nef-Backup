@@ -13,23 +13,23 @@
     var homeWebSiteSetting = Model?.Root()?.Children<WebSiteSetting>()?.FirstOrDefault();
     var navigation = homeWebSiteSetting?.Children<HomeNavigation>()?.FirstOrDefault();
 
-    var footerSelectionValue = string.Empty;
-    if (Model?.HasValue("selectFooter") == true)
-        footerSelectionValue = Model.Value<string>("selectFooter");
+    // var footerSelectionValue = string.Empty;
+    // if (Model?.HasValue("selectFooter") == true)
+    //     footerSelectionValue = Model.Value<string>("selectFooter");
 
-    var footer = navigation?.Footer1?.FirstOrDefault()?.Content;
-    var footerName = "Footer1";
+    // var footer = navigation?.Footer1?.FirstOrDefault()?.Content;
+    // var footerName = "Footer1";
 
-    if (!string.IsNullOrWhiteSpace(footerSelectionValue))
-    {
-        if (footerSelectionValue == "Footer2")
-        {
-            footer = navigation?.Footer2?.FirstOrDefault()?.Content;
-            footerName = "Footer2";
-        }
-    }
+    // if (!string.IsNullOrWhiteSpace(footerSelectionValue))
+    // {
+    //     if (footerSelectionValue == "Footer2")
+    //     {
+    //         footer = navigation?.Footer2?.FirstOrDefault()?.Content;
+    //         footerName = "Footer2";
+    //     }
+    // }
 
-    FooterModel footerModel = new() { FooterContent = footer, FooterName = footerName };
+    // FooterModel footerModel = new() { FooterContent = footer, FooterName = footerName };
 }
 
 <!DOCTYPE html>
@@ -40,15 +40,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@Model?.Value("metaTitle")</title>
     <!------------------------ owl slider ------------------------->
-    <link rel="stylesheet" href="~/assets/libs/owl/css/owl.carousel.min.css" async/>
-    <link rel="stylesheet" href="~/assets/libs/owl/css/owl.theme.default.min.css" async />
+    <link rel="stylesheet" href="~/assets/libs/owl/css/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="~/assets/libs/owl/css/owl.theme.default.min.css"/>
     @* <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.min.css" rel="stylesheet" async> *@
 
     <!-------------------style css--------------->
 
-    <link rel="stylesheet" href="~/assets/style/css/style.css" async>
-    <script src="~/assets/js/jquery.js" async></script>
-    <script src="~/assets/libs/owl/js/owl.carousel.min.js" defer></script>
+    <link rel="stylesheet" href="~/assets/style/css/style.css">
+    <script src="~/assets/js/jquery.js"></script>
+    <script src="~/assets/libs/owl/js/owl.carousel.min.js"></script>
 </head>
 
 <body>
@@ -92,7 +92,7 @@
 
             @RenderBody()
 
-            @Html.Partial("_Footer", footerModel)
+            @Html.Partial("_Footer", navigation)
             <!-- <div class="tab-pane fade" id="erhverv" role="tabpanel" aria-labelledby="erhverv-tab">.b.</div> -->
         </div>
     </div>
@@ -101,8 +101,8 @@
     <script src="~/assets/libs/bs5/js/bootstrap.min.js" async></script>
 
      @* <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>  *@
-    <script src="~/assets/js/custom.js" defer></script>
-    <script src="~/assets/js/global.js" defer></script>
+    <script src="~/assets/js/custom.js" async></script>
+    <script src="~/assets/js/global.js" async></script>
     <!-------------------------------------------Modal ------------------------------->
     <div class="modal fade"
          id="staticBackdrop"

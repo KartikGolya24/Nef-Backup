@@ -22,14 +22,14 @@
           "Alias": "isItalic",
           "DataType": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
           "Name": "Is Italic",
-          "SortOrder": 4
+          "SortOrder": 3
         },
         {
-          "Key": "0ce287e8-27e6-4cae-8cad-6ab8c663bbfc",
-          "Alias": "textColor",
-          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
-          "Name": "Text Color",
-          "SortOrder": 5
+          "Key": "3c49c18d-546c-4adf-a619-91afcc6a5ca7",
+          "Alias": "hasBackground",
+          "DataType": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
+          "Name": "Has Background",
+          "SortOrder": 1
         },
         {
           "Key": "5a4595b0-664b-4123-bc0a-d60e08736b33",
@@ -43,13 +43,6 @@
           "Alias": "icon",
           "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
           "Name": "Icon"
-        },
-        {
-          "Key": "a2452c2f-f736-4e38-99c5-6fa85cc965ec",
-          "Alias": "iconBgColor",
-          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
-          "Name": "Icon Bg Color",
-          "SortOrder": 6
         }
       ]
     }
@@ -57,10 +50,6 @@
   "PropertyTypes": [],
   "Udi": "umb://document-type/2743b0bf460446ab857f8d91329f51b4",
   "Dependencies": [
-    {
-      "Udi": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
-      "Ordering": true
-    },
     {
       "Udi": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
       "Ordering": true

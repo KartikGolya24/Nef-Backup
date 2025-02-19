@@ -1,6 +1,6 @@
 {
-  "Name": "Text List With Icon",
-  "Alias": "textListWithIcon",
+  "Name": "Two Column Dot List",
+  "Alias": "twoColumnDotList",
   "AllowedTemplates": [],
   "HistoryCleanup": {},
   "Icon": "icon-science",
@@ -13,24 +13,35 @@
   "CompositionContentTypes": [],
   "PropertyGroups": [
     {
-      "Key": "ac34d37d-013c-42b0-a2f2-abe61dacd5a3",
+      "Key": "8fe7156f-5fad-45b9-b9f4-f1b1ad5e8df8",
       "Name": "Content",
       "Alias": "content",
       "PropertyTypes": [
         {
-          "Key": "b3b14271-8e45-4860-abde-9f0182df1480",
-          "Alias": "textList",
-          "DataType": "umb://data-type/d427197213184aea960e84fc0abc176e",
-          "Name": "Text list"
+          "Key": "ab57c51e-b20f-4862-a6ef-9843865d56b4",
+          "Alias": "dotList",
+          "DataType": "umb://data-type/86da3672f5a640b3a5bce98af677671f",
+          "Name": "Dot List",
+          "SortOrder": 1
+        },
+        {
+          "Key": "e4d044ca-e368-4da4-9ffb-ff92e11b80cc",
+          "Alias": "listTitle",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "List Title"
         }
       ]
     }
   ],
   "PropertyTypes": [],
-  "Udi": "umb://document-type/fc93722359a642c7b9b549a89a0115ce",
+  "Udi": "umb://document-type/b7ea380c440a4e54ad129d454fabeba8",
   "Dependencies": [
     {
-      "Udi": "umb://data-type/d427197213184aea960e84fc0abc176e",
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/86da3672f5a640b3a5bce98af677671f",
       "Ordering": true
     },
     {

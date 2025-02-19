@@ -18,6 +18,13 @@
       "Alias": "content",
       "PropertyTypes": [
         {
+          "Key": "7b5374f1-567f-4b31-a6cb-dd71c6fd659d",
+          "Alias": "form",
+          "DataType": "umb://data-type/d7934b3f03724ab3b063e7d6527d82b0",
+          "Name": "Form",
+          "SortOrder": 3
+        },
+        {
           "Key": "bf308f43-ddf1-4909-92c6-81ff5f27e7bc",
           "Alias": "descriptionText",
           "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
@@ -53,6 +60,10 @@
     },
     {
       "Udi": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/d7934b3f03724ab3b063e7d6527d82b0",
       "Ordering": true
     },
     {

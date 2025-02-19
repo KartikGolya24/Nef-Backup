@@ -1,0 +1,14 @@
+{
+  "Name": "Form Section Form Block - Form - Form Picker",
+  "Alias": "",
+  "EditorAlias": "UmbracoForms.FormPicker",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {
+    "allowedFolders": [],
+    "allowedForms": []
+  },
+  "Udi": "umb://data-type/d7934b3f03724ab3b063e7d6527d82b0",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.3.2"
+}

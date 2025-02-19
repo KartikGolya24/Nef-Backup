@@ -50,20 +50,19 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
+		/// Has Background
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
+		[ImplementPropertyType("hasBackground")]
+		public virtual bool HasBackground => this.Value<bool>(_publishedValueFallback, "hasBackground");
+
+		///<summary>
 		/// Icon
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("icon")]
 		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops Icon => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "icon");
-
-		///<summary>
-		/// Icon Bg Color
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("iconBgColor")]
-		public virtual string IconBgColor => this.Value<string>(_publishedValueFallback, "iconBgColor");
 
 		///<summary>
 		/// Is Italic
@@ -79,13 +78,5 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("text")]
 		public virtual string Text => this.Value<string>(_publishedValueFallback, "text");
-
-		///<summary>
-		/// Text Color
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("textColor")]
-		public virtual string TextColor => this.Value<string>(_publishedValueFallback, "textColor");
 	}
 }

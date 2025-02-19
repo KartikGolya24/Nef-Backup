@@ -21,28 +21,28 @@
           "Key": "004c9bea-5c60-4e01-acee-17e788123dff",
           "Alias": "headingText",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-          "Name": "Heading Text"
+          "Name": "Heading Text",
+          "SortOrder": 1
         },
         {
           "Key": "6354b795-2e25-4382-8586-500d7d3dfbc3",
           "Alias": "sliderBlocks",
           "DataType": "umb://data-type/1cb0ba26979a4f4d96ab23ce4e9b413a",
           "Name": "Slider Blocks",
-          "SortOrder": 3
+          "SortOrder": 4
         },
         {
-          "Key": "c8bb6c65-2944-4f23-bead-caf7de472fc5",
-          "Alias": "color",
-          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
-          "Name": "Color",
-          "SortOrder": 2
+          "Key": "f3e7a2ed-1a2d-45f7-9146-f244c2d51a6d",
+          "Alias": "theme",
+          "DataType": "umb://data-type/153c423a60414a3fb3aeace4cb67697c",
+          "Name": "Theme"
         },
         {
           "Key": "fed56e5c-4a49-481f-9340-e678e2c22341",
           "Alias": "descriptionText",
           "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
           "Name": "Description Text",
-          "SortOrder": 1
+          "SortOrder": 2
         }
       ]
     }
@@ -55,7 +55,7 @@
       "Ordering": true
     },
     {
-      "Udi": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+      "Udi": "umb://data-type/153c423a60414a3fb3aeace4cb67697c",
       "Ordering": true
     },
     {

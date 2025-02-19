@@ -1,6 +1,6 @@
 {
-  "Name": "Form Section",
-  "Alias": "formSection",
+  "Name": "Global Setting Model",
+  "Alias": "globalSettingModel",
   "AllowedTemplates": [],
   "HistoryCleanup": {},
   "Icon": "icon-science",
@@ -9,43 +9,43 @@
     "IsElementType": true,
     "AllowedChildContentTypes": []
   },
-  "Parent": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+  "Parent": "umb://document-type-container/a77d75d6f4ff4519b1dedc0b5bad7282",
   "CompositionContentTypes": [],
   "PropertyGroups": [
     {
-      "Key": "1a75128f-b5f9-4f30-b47c-df0064c86930",
+      "Key": "3bc5ac8a-dd8f-4b59-b4d9-763f53abd513",
       "Name": "Content",
       "Alias": "content",
       "PropertyTypes": [
         {
-          "Key": "36b2299d-86e3-4f08-94cb-a5a956bf03a7",
-          "Alias": "class",
+          "Key": "1abfc42b-b929-4f27-8cef-5fd978be3a6f",
+          "Alias": "paddingTopBottom",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-          "Name": "Class"
+          "Name": "Padding Top Bottom",
+          "SortOrder": 1
         },
         {
-          "Key": "72d7ac93-8234-4c29-a26f-6dd570ce6549",
-          "Alias": "blocks",
-          "DataType": "umb://data-type/8db3a420d9844533982db823184f25aa",
-          "Name": "Blocks",
-          "SortOrder": 1
+          "Key": "7b135943-8dfa-4963-8276-16b6a1633432",
+          "Alias": "theme",
+          "DataType": "umb://data-type/33444e620cf54e36ae231f78bfad0cac",
+          "Name": "Theme"
         }
       ]
     }
   ],
   "PropertyTypes": [],
-  "Udi": "umb://document-type/6274d9f92ce448c8a5a51b8d20ab06c9",
+  "Udi": "umb://document-type/2ce5fcb683ea45e79fe67b25299be80d",
   "Dependencies": [
     {
       "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
       "Ordering": true
     },
     {
-      "Udi": "umb://data-type/8db3a420d9844533982db823184f25aa",
+      "Udi": "umb://data-type/33444e620cf54e36ae231f78bfad0cac",
       "Ordering": true
     },
     {
-      "Udi": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+      "Udi": "umb://document-type-container/a77d75d6f4ff4519b1dedc0b5bad7282",
       "Ordering": true
     }
   ],

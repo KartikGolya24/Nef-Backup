@@ -1,6 +1,6 @@
 {
-  "Name": "Form Section Content Block",
-  "Alias": "formSectionContentBlock",
+  "Name": "Propositions Blocks",
+  "Alias": "propositionsBlocks",
   "AllowedTemplates": [],
   "HistoryCleanup": {},
   "Icon": "icon-science",
@@ -13,36 +13,35 @@
   "CompositionContentTypes": [],
   "PropertyGroups": [
     {
-      "Key": "52d882a3-6216-4acf-9947-fd457f3fb1ea",
+      "Key": "8b96ce8d-8343-4003-9e75-a54d9c6b4da9",
       "Name": "Content",
       "Alias": "content",
       "PropertyTypes": [
         {
-          "Key": "18955c03-92cd-4d30-947f-77eb8c9663ba",
-          "Alias": "descriptionText",
+          "Key": "09503bb4-3264-469f-af1c-82453a4ed0e2",
+          "Alias": "title",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Title",
+          "SortOrder": 1
+        },
+        {
+          "Key": "884e3d23-6287-4d55-b27c-29b1537198bd",
+          "Alias": "description",
           "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
-          "Name": "Description Text",
+          "Name": "Description",
           "SortOrder": 2
         },
         {
-          "Key": "2bc65ab0-b532-46d2-a797-868467f5e8d3",
-          "Alias": "image",
+          "Key": "fc9a3f39-9a70-4947-8a7d-11b1ad0c21fe",
+          "Alias": "icon",
           "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
-          "Name": "Image",
-          "SortOrder": 3
-        },
-        {
-          "Key": "9040f76c-67d7-4167-afb2-dbc3eecca93a",
-          "Alias": "headingText",
-          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-          "Name": "Heading Text",
-          "SortOrder": 1
+          "Name": "Icon"
         }
       ]
     }
   ],
   "PropertyTypes": [],
-  "Udi": "umb://document-type/0a9b87e6613145029163eab146befa4c",
+  "Udi": "umb://document-type/e5b2e0ed58314f0f89195f64b81573de",
   "Dependencies": [
     {
       "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",

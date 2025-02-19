@@ -4,14 +4,14 @@
 
 @{
     var content = Model?.Content;
-    var settings = Model?.Settings as SettingModel;
+    var settings = Model?.Settings as GlobalSettingModel;
 }
 
 @if (content?.SectionColumn?.Count > 0)
 {
-    int index = 0;
     var padding = !string.IsNullOrWhiteSpace(settings?.PaddingTopBottom) ? $"padding:{settings?.PaddingTopBottom} 0px" : "";
-    <div class="alt-section" style="background-color:#@settings?.BackgroundColor;@padding">
+    int index = 0;
+    <div class="alt-section @settings?.Theme" style="@padding">
         <div class="container">
             <div class="row align-items-center">
                 @foreach (var item in content?.SectionColumn)
@@ -21,12 +21,13 @@
                     @if (alias == "twoColumnContentBlock")
                     {
                         var contentBlock = item?.Content as TwoColumnContentBlock;
+                        var setting = item?.Settings as TwoColumnContentBlocksSettingModel;
                         <div class="col-lg-6">
                             <div class="section-detail @(index == 1?"ms-auto":"")">
-                                <div class="section-content black-950" style="color:#@contentBlock?.TextColor">
+                                <div class="section-content black-950">
                                     @if (!string.IsNullOrWhiteSpace(contentBlock?.HeadingText))
                                     {
-                                        <h2 class="fw-600" style="color:#@contentBlock?.HeadingTextColor">@contentBlock?.HeadingText</h2>
+                                        <h2>@contentBlock?.HeadingText</h2>
                                     }
 
                                     @if (contentBlock?.ContentBlocks?.Count > 0)
@@ -44,7 +45,7 @@
                                                 var textList = block?.Content as TextListWithIcon;
                                                 @if (textList?.TextList?.Count > 0)
                                                 {
-                                                    <ul class="square_icon_list mt-24">
+                                                    <ul class="square_icon_list @setting?.CssClass">
                                                         @Html.GetBlockListHtml(textList?.TextList)
                                                     </ul>
                                                 }
@@ -56,22 +57,40 @@
                                                 @if (numberingList?.Blocks?.Count > 0)
                                                 {
                                                     var count = 1;
-                                                    <ul class="square_icon_list mb-0">
+                                                    <ul class="square_icon_list mb-0 @setting?.CssClass">
                                                         @foreach (var listText in numberingList?.Blocks)
                                                         {
                                                             var listModel = listText?.Content as TwoColumnNumberingTextList;
 
                                                             <li class="align-items-start">
-                                                                <span class="dark_purple_bg">
-                                                                    <p class="white">@(count++)</p>
-                                                                </span>
-                                                                <p class="black-700">
-                                                                    <span class="fw-700 d-block black-950">@listModel?.Title</span>
-                                                                    @listModel?.Description
-                                                                </p>
+                                                                <div class="icon-box">
+                                                                    <span>@(count++)</span>
+                                                                </div>
+                                                                <div class="list-information-text">
+                                                                    <h5 class="list-inner-title">@listModel?.Title</h5>
+                                                                    <p>@listModel?.Description</p>
+                                                                </div>
                                                             </li>
                                                         }
                                                     </ul>
+                                                }
+                                            }
+                                            else if (aliasName == "twoColumnDotList")
+                                            {
+                                                var dotListModel = block?.Content as TwoColumnDotList;
+                                                @if (dotListModel?.DotList?.Count() > 0)
+                                                {
+                                                    <div class="dot-list-outer">
+                                                        <p>@dotListModel?.ListTitle</p>
+                                                        <ul class="section_dot_list @setting?.CssClass">
+                                                            @foreach (var text in dotListModel?.DotList)
+                                                            {
+                                                                <li>
+                                                                    <p>@text</p>
+                                                                </li>
+                                                            }
+                                                        </ul>
+                                                    </div>
                                                 }
                                             }
                                         }
@@ -86,7 +105,7 @@
                                 }
                             </div>
                         </div>
-                       
+
                     }
                     else if (alias == "twoColumnMediaBlock")
                     {
@@ -96,7 +115,7 @@
                             @if (mediaBlock?.Video?.Content != null)
                             {
                                 <div class="section-img video-img">
-                                    <img src="@mediaBlock?.Image?.GetWebp()" class="img-fluid h-400" alt="img" />
+                                    <img src="@mediaBlock?.Image?.GetWebp(534,0)" class="img-fluid h-400" alt="img" />
                                     <button type="button" data-href="@mediaBlock?.Video?.MediaUrl()" class="videoBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd"
@@ -123,7 +142,7 @@
                             {
                                 <div class="section-img overflow-hidden overflow-md-visible">
 
-                                    <img src="@mediaBlock?.Image?.GetWebp()" class="img-fluid" alt="img" />
+                                    <img src="@mediaBlock?.Image?.GetWebp(534,0)" class="img-fluid" alt="img" />
 
                                     @if (mediaBlock?.PositionImages?.Count > 0)
                                     {

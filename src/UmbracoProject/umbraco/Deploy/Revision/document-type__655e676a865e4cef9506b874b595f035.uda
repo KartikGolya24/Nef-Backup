@@ -1,6 +1,6 @@
 {
-  "Name": "Electricity Exchange Spot Section",
-  "Alias": "electricityExchangeSpotSection",
+  "Name": "Proposition Section",
+  "Alias": "propositionSection",
   "AllowedTemplates": [],
   "HistoryCleanup": {},
   "Icon": "icon-science",
@@ -13,46 +13,46 @@
   "CompositionContentTypes": [],
   "PropertyGroups": [
     {
-      "Key": "3f2ff4ce-aa3f-4acc-af50-20914ed38983",
+      "Key": "95667bd6-3e82-46c2-aa6f-1a25ca9b2c85",
       "Name": "Content",
       "Alias": "content",
       "PropertyTypes": [
         {
-          "Key": "1a28a829-d685-4a4d-8322-4072e4ed2627",
-          "Alias": "theme",
-          "DataType": "umb://data-type/da8bb2e8c626413aba1505832672552a",
-          "Name": "Theme"
-        },
-        {
-          "Key": "4f6101a1-8402-4e03-9ab6-d258d0f50a65",
-          "Alias": "exchangeSpotBlocks",
-          "DataType": "umb://data-type/98f5f24d5cdc4fd7a5fa054bf0ec3673",
-          "Name": "Exchange Spot Blocks",
+          "Key": "411f4f2e-0780-45bc-9aa4-b73ff019686a",
+          "Alias": "propositionBlocks",
+          "DataType": "umb://data-type/502c6e84e2e44be5b8da2cf4091fa6f1",
+          "Name": "Proposition Blocks",
           "SortOrder": 2
         },
         {
-          "Key": "97d71e9e-bd94-4b10-8e4c-fef3e650a56d",
-          "Alias": "headingText",
+          "Key": "6a0e369d-1928-431b-8291-81b99d8d7b8d",
+          "Alias": "heading",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-          "Name": "Heading Text",
+          "Name": "Heading"
+        },
+        {
+          "Key": "897d2b8f-23a0-4448-9a56-5524ed96f7f9",
+          "Alias": "description",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Description",
           "SortOrder": 1
         }
       ]
     }
   ],
   "PropertyTypes": [],
-  "Udi": "umb://document-type/ff4f2663dff94f54b2ec52e2c0005e9f",
+  "Udi": "umb://document-type/655e676a865e4cef9506b874b595f035",
   "Dependencies": [
     {
       "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
       "Ordering": true
     },
     {
-      "Udi": "umb://data-type/98f5f24d5cdc4fd7a5fa054bf0ec3673",
+      "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
       "Ordering": true
     },
     {
-      "Udi": "umb://data-type/da8bb2e8c626413aba1505832672552a",
+      "Udi": "umb://data-type/502c6e84e2e44be5b8da2cf4091fa6f1",
       "Ordering": true
     },
     {
