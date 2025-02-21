@@ -10,20 +10,7 @@
       "max": 1
     },
     "enableLocalFocalPoint": true,
-    "crops": [
-      {
-        "alias": "laptop",
-        "label": "Laptop",
-        "width": 1440,
-        "height": 424
-      },
-      {
-        "alias": "tablet",
-        "label": "Tablet",
-        "width": 1024,
-        "height": 424
-      }
-    ],
+    "crops": [],
     "ignoreUserStartNodes": false
   },
   "Udi": "umb://data-type/ad9f0cf2bda245d59ea1a63cfc873fd3",
