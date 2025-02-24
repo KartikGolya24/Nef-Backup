@@ -1,5 +1,13 @@
 .available-section{
     padding: 64px 0px;
+    .section-heading {
+        h2 {
+            color: $black-950;
+        }
+        p {
+            color: $black-950;
+        }
+    }
     .position-list{
         max-width: 800px;
         margin: auto;
@@ -19,6 +27,11 @@
                 .position-content{
                     h4{
                         margin-bottom: 4px;
+                        color: $black-950;
+                        font-weight: 600;
+                    }
+                    p {
+                        color: $black-500;
                     }
                 }
 

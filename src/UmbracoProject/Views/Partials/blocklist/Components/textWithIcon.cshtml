@@ -4,15 +4,8 @@
 }
 
 <li>
-    @if (content?.HasBackground == true)
-    {
-        <div class="icon-box">
-            <img src="@content?.Icon?.MediaUrl()" class="img-fluid" alt="" />
-        </div>
-    }
-    else
-    {
+    <div class="icon-box">
         <img src="@content?.Icon?.MediaUrl()" class="img-fluid" alt="" />
-    }
+    </div>
     <p class="@(content?.IsItalic == true ? "italic" : "")">@content?.Text</p>
 </li>

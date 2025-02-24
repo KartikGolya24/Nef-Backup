@@ -1,0 +1,23 @@
+{
+  "Name": "Home Navigation - Footer Theme - Dropdown",
+  "Alias": "",
+  "EditorAlias": "Umbraco.DropDown.Flexible",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {
+    "multiple": false,
+    "items": [
+      {
+        "id": 1,
+        "value": "turquoise_bg"
+      },
+      {
+        "id": 2,
+        "value": "dark_blue_bg"
+      }
+    ]
+  },
+  "Udi": "umb://data-type/899ccf10007f4512a2902f666eb4a561",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.4.0"
+}

@@ -122,6 +122,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual string FooterTextColor => this.Value<string>(_publishedValueFallback, "footerTextColor");
 
 		///<summary>
+		/// Footer Theme
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("footerTheme")]
+		public virtual string FooterTheme => this.Value<string>(_publishedValueFallback, "footerTheme");
+
+		///<summary>
 		/// Heading Text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
@@ -192,6 +200,22 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("navigationItem")]
 		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel NavigationItem => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "navigationItem");
+
+		///<summary>
+		/// Opening Time Heading
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("openingTimeHeading")]
+		public virtual string OpeningTimeHeading => this.Value<string>(_publishedValueFallback, "openingTimeHeading");
+
+		///<summary>
+		/// Opening Times
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("openingTimes")]
+		public virtual global::System.Collections.Generic.IEnumerable<string> OpeningTimes => this.Value<global::System.Collections.Generic.IEnumerable<string>>(_publishedValueFallback, "openingTimes");
 
 		///<summary>
 		/// Search Icon

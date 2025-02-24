@@ -57,12 +57,12 @@
 
                             <div class="col-lg-4 col-md-6">
                                 <div class="electricity-bill-card">
-                                    <div class="card-header black-bg-100">
+                                    <div class="icon-box">
                                         <img src="@node?.Icon?.MediaUrl()" alt="" />
                                     </div>
                                     <div class="card-body">
-                                        <h4 class="black-950 fw-600">@node?.HeadingText</h4>
-                                        <p class="para black-700">
+                                        <h4 class="card-title">@node?.HeadingText</h4>
+                                        <p>
                                             @node?.DescriptionText
                                         </p>
                                         <ul>
@@ -71,7 +71,7 @@
                                                 @foreach (var text in node?.TextList)
                                                 {
                                                     <li>
-                                                        <p class="black-700">@text</p>
+                                                        <p>@text</p>
                                                     </li>
                                                 }
                                             }

@@ -30,42 +30,42 @@
           "Alias": "mitNefIcon",
           "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
           "Name": "Mit Nef Icon",
-          "SortOrder": 6
+          "SortOrder": 5
         },
         {
           "Key": "1d02a5dc-3cb0-417a-9511-cc215f98b30a",
           "Alias": "searchPlaceholder",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
           "Name": "Search Placeholder",
-          "SortOrder": 4
+          "SortOrder": 3
         },
         {
           "Key": "2631ed3a-2353-4e41-a2e9-07260fd7073a",
           "Alias": "mitButtonTheme",
           "DataType": "umb://data-type/36564b1fa93643ee88423df7234ea0bf",
           "Name": "Mit Button Theme",
-          "SortOrder": 8
+          "SortOrder": 7
         },
         {
           "Key": "48ee6933-3328-46ab-adb2-ee318035c631",
           "Alias": "mitNefLink",
           "DataType": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
           "Name": "Mit Nef Link",
-          "SortOrder": 7
+          "SortOrder": 6
         },
         {
           "Key": "4f381115-b42c-45f0-a66e-fd29511119f1",
           "Alias": "searchIcon",
           "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
           "Name": "Search Icon",
-          "SortOrder": 5
+          "SortOrder": 4
         },
         {
           "Key": "922dccd1-490b-465c-bdfa-33511e4dbbc8",
           "Alias": "mitButtonBorderColor",
           "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
           "Name": "Mit Button BorderColor",
-          "SortOrder": 9
+          "SortOrder": 8
         },
         {
           "Key": "953d3e8c-f0f9-4208-bd16-dbca71c8c7cb",
@@ -85,7 +85,7 @@
           "Alias": "submenuMenuArrow",
           "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
           "Name": "Submenu Menu Arrow",
-          "SortOrder": 10
+          "SortOrder": 9
         }
       ]
     },
@@ -120,69 +120,90 @@
           "Alias": "footerAddress",
           "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
           "Name": "Footer Address",
-          "SortOrder": 2
+          "SortOrder": 3
+        },
+        {
+          "Key": "47a88f77-c95a-44b2-a658-860589cc2064",
+          "Alias": "openingTimeHeading",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Opening Time Heading",
+          "SortOrder": 5
         },
         {
           "Key": "57cb3530-c2eb-4648-857b-eb802fd3ac64",
           "Alias": "mobileImage",
           "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
           "Name": "Mobile Image",
-          "SortOrder": 6
+          "SortOrder": 9
+        },
+        {
+          "Key": "743def86-8494-4d45-a424-b250cf23ea28",
+          "Alias": "footerTheme",
+          "DataType": "umb://data-type/899ccf10007f4512a2902f666eb4a561",
+          "Name": "Footer Theme"
         },
         {
           "Key": "758e4189-5572-43d2-b643-3c06ec5e6669",
           "Alias": "footerLogo",
           "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
-          "Name": "Footer Logo"
+          "Name": "Footer Logo",
+          "SortOrder": 1
         },
         {
           "Key": "93185cba-564f-4a5f-a956-3f4cbff20b2e",
           "Alias": "footerTextColor",
           "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
           "Name": "Footer Text Color",
-          "SortOrder": 9
+          "SortOrder": 12
         },
         {
           "Key": "97676839-1f0b-4e20-945d-6be2cc987f87",
           "Alias": "backgroundColor",
           "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
           "Name": "Background Color",
-          "SortOrder": 1
+          "SortOrder": 2
         },
         {
           "Key": "9a1fc8f0-54ff-496c-9c14-59b33663ddc2",
           "Alias": "socialLinkList",
           "DataType": "umb://data-type/6a274202b52f4447b1c5c72dd4608dde",
           "Name": "Social Link List",
-          "SortOrder": 3
+          "SortOrder": 4
         },
         {
           "Key": "ad79735a-4903-4d92-9a46-9565d8f273c6",
           "Alias": "accordionMenuList",
           "DataType": "umb://data-type/2899a195afb246babc896598df1979e0",
           "Name": "Accordion Menu List",
-          "SortOrder": 4
+          "SortOrder": 7
         },
         {
           "Key": "b2d0ce85-ccb9-4acc-a49d-addd7cb12632",
           "Alias": "footerLinks",
           "DataType": "umb://data-type/dc5256dbe96c49e0a0503b511c2408b5",
           "Name": "Footer Links",
-          "SortOrder": 8
+          "SortOrder": 11
+        },
+        {
+          "Key": "bb92ccbc-de7b-4e11-9e24-4a01ed09934e",
+          "Alias": "openingTimes",
+          "DataType": "umb://data-type/86da3672f5a640b3a5bce98af677671f",
+          "Name": "Opening Times",
+          "SortOrder": 6
         },
         {
           "Key": "c4888474-92e6-4c67-9804-417d400e9bcf",
           "Alias": "deskTopImage",
           "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
           "Name": "DeskTop Image",
-          "SortOrder": 5
+          "SortOrder": 8
         },
         {
           "Key": "ca02430f-0f4b-496d-800b-ee7848886c8f",
           "Alias": "copyRightText",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
           "Name": "Copy Right Text",
-          "SortOrder": 7
+          "SortOrder": 10
         }
       ]
     },
@@ -253,6 +274,14 @@
     },
     {
       "Udi": "umb://data-type/6a274202b52f4447b1c5c72dd4608dde",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/86da3672f5a640b3a5bce98af677671f",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/899ccf10007f4512a2902f666eb4a561",
       "Ordering": true
     },
     {

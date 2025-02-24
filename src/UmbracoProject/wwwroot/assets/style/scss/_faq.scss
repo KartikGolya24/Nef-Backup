@@ -1,6 +1,20 @@
 .faq-section {
     position: relative;
     padding: 64px 0px;
+    overflow: hidden;
+
+    .headings {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        max-width: 720px;
+        margin: 0 auto 48px;
+        .title {
+            color: $black-950;
+            font-weight: 600;
+        }
+    }
 
     [class*=container] {
         position: relative;
@@ -9,6 +23,12 @@
     .faq-container {
         max-width: 720px;
         margin: auto;
+    }
+
+    [class*=img] img{
+        width: 400px;
+        height: 400px;
+        object-fit: none;
     }
 
     .img1 {
@@ -20,8 +40,12 @@
     .img11 {
         width: fit-content;
         position: absolute;
-        right: -100px;
-        top: -80px;
+        right: -40px;
+        top: -20px;
+
+        @media screen and (max-width: 1199px) {
+            right: -200px;
+        }
     }
 
     .img2 {
@@ -34,14 +58,14 @@
     .img22 {
         width: fit-content;
         position: absolute;
-        left: -50px;
-        top: 0;
+        left: -90px;
+        top: -90px;
     }
 
     .img3 {
         width: fit-content;
         position: absolute;
-        left: 0;
+        left: -50px;
         top: 50%;
         transform: translateY(-50%);
 
@@ -53,11 +77,11 @@
     .img4 {
         width: fit-content;
         position: absolute;
-        left: 0;
-        bottom: 0;
+        left: -100px;
+        bottom: -100px;
 
-        @media screen and (max-width: 1245px) {
-            left: 0;
+        @media screen and (max-width: 1199px) {
+            left: -150px;
         }
     }
 
@@ -67,8 +91,8 @@
         bottom: 0;
         left: -90px;
 
-        @media screen and (max-width: 1245px) {
-            left: 0;
+        @media screen and (max-width: 1199px) {
+            left: -150px;
         }
     }
 
@@ -82,6 +106,18 @@
         h3 {
             font-size: 32px;
             line-height: 45.15px;
+            color: $space_blue;
+            font-weight: 600;
+        }
+    }
+    &.dark_blue_bg {
+        .headings {
+            .title {
+                color: $white;
+            }
+            p {
+                color: $white;
+            }
         }
     }
 }

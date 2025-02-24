@@ -21,7 +21,7 @@
                     @if (alias == "twoColumnContentBlock")
                     {
                         var contentBlock = item?.Content as TwoColumnContentBlock;
-                        var setting = item?.Settings as TwoColumnContentBlocksSettingModel;
+                        
                         <div class="col-lg-6">
                             <div class="section-detail @(index == 1?"ms-auto":"")">
                                 <div class="section-content black-950">
@@ -34,6 +34,7 @@
                                     {
                                         @foreach (var block in contentBlock?.ContentBlocks)
                                         {
+                                            var setting = block?.Settings as TwoColumnContentBlocksSettingModel;
                                             var aliasName = block?.Content?.ContentType?.Alias;
                                             if (aliasName == "descriptionText")
                                             {
@@ -45,7 +46,7 @@
                                                 var textList = block?.Content as TextListWithIcon;
                                                 @if (textList?.TextList?.Count > 0)
                                                 {
-                                                    <ul class="square_icon_list @setting?.CssClass">
+                                                    <ul class="@setting?.CssClass">
                                                         @Html.GetBlockListHtml(textList?.TextList)
                                                     </ul>
                                                 }

@@ -25,7 +25,7 @@
         </div>
     </div>
 
-    <div class="bottom-footer dark_blue_bg style2" style="background-color:#@Model?.BackgroundColor">
+    <div class="bottom-footer @Model?.FooterTheme">
         <div class="container-xl">
             <div class="footer-detail">
                 <div class="footer-address">
@@ -56,40 +56,59 @@
                 </div>
 
                 <div class="footer-menu accordion">
+                    @{
+                        var count = 1;
+                    }
+                    @if (Model?.OpeningTimes?.Count() > 0)
+                    {
+                        var id = $"collapse{count++}";
+                        <div class="footer-menu-list white accordion-item" style="color:#@Model?.FooterTextColor">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#@id" aria-expanded="true" aria-controls="@id">
+                                @Model?.OpeningTimeHeading
+                            </button>
+                            <ul class="accordion-collapse collapse" id="@id" aria-labelledby="@id">
+                                @foreach (var item in Model?.OpeningTimes)
+                                {
+                                    <li>@item</li>
+                                }
+                            </ul>
+                        </div>
+
+                    }
 
                     @if (Model?.AccordionMenuList?.Count > 0)
                     {
-                        var count = 1;
                         @foreach (var item in Model?.AccordionMenuList)
                         {
-                            var id = $"collapse{count}";
+                            var id = $"collapse{count++}";
                             var accordion = item?.Content as FooterMenuAccordion;
 
                             <div class="footer-menu-list white accordion-item" style="color:#@Model?.FooterTextColor">
-                                <button class="accordion-button collapsed fw-700" type="button" data-bs-toggle="collapse" data-bs-target="#@id" aria-expanded="true" aria-controls="@id" style="color:#@Model?.FooterTextColor">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#@id" aria-expanded="true" aria-controls="@id" style="color:#@Model?.FooterTextColor">
                                     @accordion?.HeadText
                                 </button>
                                 <ul class="accordion-collapse collapse" id="@id" aria-labelledby="@id">
                                     @foreach (var link in accordion?.MenuItems)
                                     {
-                                        <li class="mb-3"><a href="@link?.Url" class="white" style="color:#@Model?.FooterTextColor">@link?.Name</a></li>
+                                        <li><a href="@link?.Url" class="white" style="color:#@Model?.FooterTextColor">@link?.Name</a></li>
                                     }
                                 </ul>
                             </div>
-                            count++;
                         }
                     }
+
                 </div>
-                @if (Model?.DeskTopImage != null)
+                @if (!string.IsNullOrWhiteSpace(Model?.DeskTopImage?.MediaUrl()))
                 {
                     <div class="position-img">
                         <img src="@Model?.DeskTopImage?.MediaUrl()" class="img-fluid" alt="img">
                     </div>
                 }
-                @if (Model?.MobileImage != null)
+                @if (!string.IsNullOrWhiteSpace(Model?.MobileImage?.MediaUrl()))
                 {
                     <div class="mobile-visible d-lg-none">
-                        <img src="@Model?.MobileImage?.MediaUrl()" class="img-fluid opacity-30" alt="img">
+                        <img src="@Model?.MobileImage?.MediaUrl()" class="img-fluid" alt="img">
                     </div>
                 }
             </div>

@@ -85,6 +85,10 @@
       {
         "id": 20,
         "value": "turquoise_bg"
+      },
+      {
+        "id": 21,
+        "value": "white-bg-black-500"
       }
     ]
   },

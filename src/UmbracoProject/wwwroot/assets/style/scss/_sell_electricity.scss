@@ -49,7 +49,7 @@
         }
     }
 
-    &.dark_blue_bg {
+    &.dark_blue_bg, &.dark_green_bg {
         .section-heading h2 {
             color: $white;
         }
@@ -63,6 +63,7 @@
 .alt-contact {
     border-bottom: 1px solid $black-100;
     padding: 64px 0px;
+    
 
     .flex-row-reverse {
         .buy_charging-doodles {
@@ -108,7 +109,7 @@
             p {
                 max-width: 512px;
                 margin-bottom: 16px;
-                color: $black-950;
+                color: $black-700;
 
                 &:last-child {
                     margin-bottom: 0px;
@@ -193,6 +194,12 @@
                 }
             }
         }
+
+        &.dark_blue_bg, &.dark_green_bg, &.dark_purple_bg, &.dark_pink_bg {
+            .label {
+                color: $white;
+            }
+        }
     }
 
 }
@@ -257,6 +264,10 @@
         h2 {
             margin-bottom: 8px;
         }
+
+        p {
+            color: $black-950;
+        }
     }
 
     .order-nef-card {
@@ -269,7 +280,6 @@
         flex-direction: column;
         height: 100%;
         overflow: hidden;
-
 
         .position-img {
             width: max-content;
@@ -307,6 +317,14 @@
                 li {
                     color: $space_blue;
                     list-style: inherit;
+                    color: $space_blue;
+                    font-size: 16px;
+                    line-height: 27px;
+                    p {
+                        color: $space_blue;
+                        font-size: 16px;
+                        line-height: 27px;
+                    }
                 }
             }
         }
@@ -334,6 +352,9 @@
                 ul {
                     li {
                         color: $white;
+                        p {
+                            color: $white;
+                        }
                     }
                 }
             }
@@ -368,6 +389,11 @@
 
                 h2 {
                     margin-bottom: 8px;
+                    color: $black-950;
+                    font-weight: 600;
+                }
+                p {
+                    color: $black-950;
                 }
             }
         }
@@ -414,6 +440,9 @@
 
                     .title {
                         min-height: 74px;
+                        color: $black-950;
+                        font-weight: 600;
+                        margin: 16px 0 32px;
                     }
                 }
 
@@ -477,6 +506,7 @@
                     .card-head {
                         .title {
                             font-style: italic;
+                            color: $white;
                         }
                     }
 
@@ -544,7 +574,7 @@
             padding: 0 55px;
 
             .electricity-bill-card {
-                .card-header {
+                .icon-box {
                     width: 48px;
                     height: 48px;
                     padding: 12px;
@@ -553,6 +583,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    background-color: $black-100;
 
                     svg {
                         width: 24px;

@@ -5,6 +5,18 @@
 
         h3 {
             margin-bottom: 32px;
+            color: $black-950;
+            font-weight: 600;
+        }
+        &.space_blue_bg, &.dark_green_bg, &.dark_blue_bg, &.steel_blue_bg {
+            h3 {
+                color: $white;
+            }
+        }
+        &.medium_green_bg, &.turquoise_bg, &.light_purple_bg, &.medium_green_bg {
+            h3 {
+                color: $dark_blue;
+            }
         }
     }
 
@@ -14,6 +26,7 @@
 
         [class*=container] {
             position: relative;
+            padding: 0 16px;
         }
 
         .footer-detail {
