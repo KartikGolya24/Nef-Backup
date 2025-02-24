@@ -32,7 +32,7 @@
                     break;
 
                 case "slight-left-bottom":
-                    tagImagePosition = "img55";
+                    tagImagePosition = "img5";
                     break;
             }
 
