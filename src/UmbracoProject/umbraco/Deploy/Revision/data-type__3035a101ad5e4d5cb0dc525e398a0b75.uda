@@ -6,7 +6,6 @@
     "blocks": [
       {
         "contentElementTypeKey": "2505797a-aaf3-4915-9baf-599f3df4fb88",
-        "settingsElementTypeKey": "69e8ea9e-0a61-4a79-a509-76740b15a531",
         "label": "{{cardHeadingText}}",
         "editorSize": "medium",
         "forceHideContentEditorInOverlay": false
@@ -28,9 +27,6 @@
     },
     {
       "Udi": "umb://document-type/2505797aaaf349159baf599f3df4fb88"
-    },
-    {
-      "Udi": "umb://document-type/69e8ea9e0a614a79a50976740b15a531"
     }
   ],
   "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
