@@ -1,11 +1,17 @@
 {
   "Deploy": {
     "Project": {
-      "Name": "nef dk",
+      "Name": "nef.dk",
       "Alias": "nef-dk",
       "Id": "6a88a00f-21ce-4ef4-9d6f-37ba7b24a7c4",
-      "TrialExpireDate": "",
+      "Url": "https://www.s1.umbraco.io/project/nef-dk",
       "Workspaces": [
+        {
+          "Id": "7696b6e1-149e-4169-a634-6f3b1efb42cb",
+          "Name": "Development",
+          "Type": "development",
+          "Url": "https://dev-nef-dk.euwest01.umbraco.io"
+        },
         {
           "Id": "34e80426-9f79-496f-9286-6f52ed676763",
           "Name": "Live",
