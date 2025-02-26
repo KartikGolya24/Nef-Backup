@@ -11,14 +11,14 @@
 {
     var padding = !string.IsNullOrWhiteSpace(settings?.PaddingTopBottom) ? $"padding:{settings?.PaddingTopBottom} 0px" : "";
     int index = 0;
-    <div class="alt-section @settings?.Theme" style="@padding">
+    <div class="alt-section @settings?.Theme @settings?.Class" style="@padding">
         <div class="container">
             <div class="row align-items-center">
                 @foreach (var item in content?.SectionColumn)
                 {
 
                     var alias = item?.Content?.ContentType?.Alias;
-                    @if (alias == "twoColumnContentBlock")
+                    @if (alias == TwoColumnContentBlock.ModelTypeAlias)
                     {
                         var contentBlock = item?.Content as TwoColumnContentBlock;
                         
@@ -36,12 +36,12 @@
                                         {
                                             var setting = block?.Settings as TwoColumnContentBlocksSettingModel;
                                             var aliasName = block?.Content?.ContentType?.Alias;
-                                            if (aliasName == "descriptionText")
+                                            if (aliasName == DescriptionText.ModelTypeAlias)
                                             {
                                                 var richTextContent = block?.Content as DescriptionText;
                                                 @Html?.Raw(richTextContent?.RichTextContent)
                                             }
-                                            else if (aliasName == "textListWithIcon")
+                                            else if (aliasName == TextListWithIcon.ModelTypeAlias)
                                             {
                                                 var textList = block?.Content as TextListWithIcon;
                                                 @if (textList?.TextList?.Count > 0)
@@ -51,7 +51,7 @@
                                                     </ul>
                                                 }
                                             }
-                                            else if (aliasName == "numbringListBlock")
+                                            else if (aliasName == NumbringListBlock.ModelTypeAlias)
                                             {
 
                                                 var numberingList = block?.Content as NumbringListBlock;
@@ -76,7 +76,7 @@
                                                     </ul>
                                                 }
                                             }
-                                            else if (aliasName == "twoColumnDotList")
+                                            else if (aliasName == TwoColumnDotList.ModelTypeAlias)
                                             {
                                                 var dotListModel = block?.Content as TwoColumnDotList;
                                                 @if (dotListModel?.DotList?.Count() > 0)
@@ -108,7 +108,7 @@
                         </div>
 
                     }
-                    else if (alias == "twoColumnMediaBlock")
+                    else if (alias == TwoColumnMediaBlock.ModelTypeAlias)
                     {
                         var mediaBlock = item?.Content as TwoColumnMediaBlock;
 

@@ -1,0 +1,50 @@
+﻿@using Umbraco.Cms.Core.Models.Blocks
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<ContactUsSection>>
+
+@{
+    var content = Model?.Content;
+}
+
+<section class="contact-us">
+    <div class="container">
+        @if (!string.IsNullOrWhiteSpace(content?.SectionTitle))
+        {
+            <div class="headings">
+                <h2>@content?.SectionTitle</h2>
+            </div>
+        }
+        <div class="contact-us-detail">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="sidebar-list">
+                        @if (!string.IsNullOrWhiteSpace(content?.Heading))
+                        {
+                            <h4 class="title">@content?.Heading</h4>
+                        }
+                        @if (content?.ContentBlocks?.Count > 0)
+                        {
+                            <div class="sidebar-detail">
+                                @foreach (var item in content?.ContentBlocks)
+                                {
+                                    var itemModel = item?.Content as DescriptionText;
+                                    <div class="sidebar-detail-list">
+                                        @Html?.Raw(itemModel?.RichTextContent)
+                                    </div>
+                                }
+                            </div>
+                        }
+
+                    </div>
+                </div>
+                @if (!string.IsNullOrWhiteSpace(content?.Image?.MediaUrl()))
+                {
+                    <div class="col-md-6">
+                        <div class="images-bx">
+                            <img src="@content?.Image?.MediaUrl()" alt="section picture">
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>

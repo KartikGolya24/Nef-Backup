@@ -25,6 +25,13 @@
           "SortOrder": 1
         },
         {
+          "Key": "42746cec-337b-40a4-86d2-19ac340e5152",
+          "Alias": "class",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Class",
+          "SortOrder": 2
+        },
+        {
           "Key": "7b135943-8dfa-4963-8276-16b6a1633432",
           "Alias": "theme",
           "DataType": "umb://data-type/33444e620cf54e36ae231f78bfad0cac",

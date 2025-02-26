@@ -82,14 +82,6 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual string CopyRightText => this.Value<string>(_publishedValueFallback, "copyRightText");
 
 		///<summary>
-		/// DeskTop Image
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("deskTopImage")]
-		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops DeskTopImage => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "deskTopImage");
-
-		///<summary>
 		/// Footer Address
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
@@ -186,14 +178,6 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::Umbraco.Cms.Core.Models.Link MitNefLink => this.Value<global::Umbraco.Cms.Core.Models.Link>(_publishedValueFallback, "mitNefLink");
 
 		///<summary>
-		/// Mobile Image
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("mobileImage")]
-		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops MobileImage => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "mobileImage");
-
-		///<summary>
 		/// Navigation Item
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
@@ -248,6 +232,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("submenuMenuArrow")]
 		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops SubmenuMenuArrow => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "submenuMenuArrow");
+
+		///<summary>
+		/// Tag Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("tagImage")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops TagImage => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "tagImage");
 
 		///<summary>
 		/// Top Footer Button List

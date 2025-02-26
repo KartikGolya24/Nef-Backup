@@ -80,7 +80,6 @@
         "allowInAreas": true,
         "areas": [],
         "contentElementTypeKey": "46abc16f-db79-455a-a44e-827937d59b80",
-        "settingsElementTypeKey": "69e8ea9e-0a61-4a79-a509-76740b15a531",
         "label": "",
         "editorSize": "medium",
         "inlineEditing": false,
@@ -159,6 +158,7 @@
         "allowInAreas": true,
         "areas": [],
         "contentElementTypeKey": "4527cc25-f8d8-43dc-85d0-7c220ffe955c",
+        "settingsElementTypeKey": "69e8ea9e-0a61-4a79-a509-76740b15a531",
         "label": "",
         "editorSize": "medium",
         "inlineEditing": false,
@@ -255,6 +255,32 @@
         "editorSize": "medium",
         "inlineEditing": false,
         "forceHideContentEditorInOverlay": false
+      },
+      {
+        "columnSpanOptions": [],
+        "rowMinSpan": 1,
+        "rowMaxSpan": 1,
+        "allowAtRoot": true,
+        "allowInAreas": true,
+        "areas": [],
+        "contentElementTypeKey": "ad940964-e0ec-48f6-b045-ffe63b9d62d4",
+        "label": "{{sectionTitle}}",
+        "editorSize": "medium",
+        "inlineEditing": false,
+        "forceHideContentEditorInOverlay": false
+      },
+      {
+        "columnSpanOptions": [],
+        "rowMinSpan": 1,
+        "rowMaxSpan": 1,
+        "allowAtRoot": true,
+        "allowInAreas": true,
+        "areas": [],
+        "contentElementTypeKey": "36696209-d5c5-4488-907b-d611ef234e65",
+        "label": "{{sectionTitle}}",
+        "editorSize": "medium",
+        "inlineEditing": false,
+        "forceHideContentEditorInOverlay": false
       }
     ],
     "blockGroups": [],
@@ -271,6 +297,9 @@
     },
     {
       "Udi": "umb://document-type/2ce5fcb683ea45e79fe67b25299be80d"
+    },
+    {
+      "Udi": "umb://document-type/36696209d5c54488907bd611ef234e65"
     },
     {
       "Udi": "umb://document-type/4527cc25f8d843dc85d07c220ffe955c"
@@ -301,6 +330,9 @@
     },
     {
       "Udi": "umb://document-type/9bad8efc6126455795cc93fa7e4f5820"
+    },
+    {
+      "Udi": "umb://document-type/ad940964e0ec48f6b045ffe63b9d62d4"
     },
     {
       "Udi": "umb://document-type/af11de729ffe45d1bf9b49618e2e9310"

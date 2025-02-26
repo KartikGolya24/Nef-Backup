@@ -99,16 +99,10 @@
                     }
 
                 </div>
-                @if (!string.IsNullOrWhiteSpace(Model?.DeskTopImage?.MediaUrl()))
+                @if (!string.IsNullOrWhiteSpace(Model?.TagImage?.MediaUrl()))
                 {
                     <div class="position-img">
-                        <img src="@Model?.DeskTopImage?.MediaUrl()" class="img-fluid" alt="img">
-                    </div>
-                }
-                @if (!string.IsNullOrWhiteSpace(Model?.MobileImage?.MediaUrl()))
-                {
-                    <div class="mobile-visible d-lg-none">
-                        <img src="@Model?.MobileImage?.MediaUrl()" class="img-fluid" alt="img">
+                        <img src="@Model?.TagImage?.MediaUrl()" class="img-fluid" alt="img">
                     </div>
                 }
             </div>

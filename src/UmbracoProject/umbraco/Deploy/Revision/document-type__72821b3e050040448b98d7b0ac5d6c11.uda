@@ -130,13 +130,6 @@
           "SortOrder": 5
         },
         {
-          "Key": "57cb3530-c2eb-4648-857b-eb802fd3ac64",
-          "Alias": "mobileImage",
-          "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
-          "Name": "Mobile Image",
-          "SortOrder": 9
-        },
-        {
           "Key": "743def86-8494-4d45-a424-b250cf23ea28",
           "Alias": "footerTheme",
           "DataType": "umb://data-type/899ccf10007f4512a2902f666eb4a561",
@@ -193,9 +186,9 @@
         },
         {
           "Key": "c4888474-92e6-4c67-9804-417d400e9bcf",
-          "Alias": "deskTopImage",
+          "Alias": "tagImage",
           "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
-          "Name": "DeskTop Image",
+          "Name": "Tag Image",
           "SortOrder": 8
         },
         {

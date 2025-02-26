@@ -1,0 +1,123 @@
+{
+  "Name": "Candidate Page",
+  "Alias": "candidatePage",
+  "DefaultTemplate": "umb://template/5bd11222cffe403dafe29a0dc202fed2",
+  "AllowedTemplates": [
+    "umb://template/5bd11222cffe403dafe29a0dc202fed2"
+  ],
+  "HistoryCleanup": {},
+  "Icon": "icon-document",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/3e5c1ac20a48406c917e220b4bada863",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "a183e85d-1090-45ba-a61e-6dce54ff7e22",
+      "Name": "Grid Content",
+      "SortOrder": 1,
+      "Alias": "gridContent",
+      "PropertyTypes": [
+        {
+          "Key": "f9b0eaa3-c807-4a1f-9377-b595dfcf53b5",
+          "Alias": "grid",
+          "DataType": "umb://data-type/1168a046c2bf42ff8c4b29c296c8b68f",
+          "Name": "Grid"
+        }
+      ]
+    },
+    {
+      "Key": "d1234e02-a3d5-4ca9-9d9c-ac5d2e27f142",
+      "Name": "Banner Content",
+      "Alias": "bannerContent",
+      "PropertyTypes": [
+        {
+          "Key": "12c07b41-917b-4396-a752-156a7b8c5cee",
+          "Alias": "buttonTheme",
+          "DataType": "umb://data-type/36564b1fa93643ee88423df7234ea0bf",
+          "Name": "Button Theme",
+          "SortOrder": 6
+        },
+        {
+          "Key": "29b94ec8-1cff-442b-89e4-6c00fbf31bdd",
+          "Alias": "image",
+          "DataType": "umb://data-type/ad9f0cf2bda245d59ea1a63cfc873fd3",
+          "Name": "Image"
+        },
+        {
+          "Key": "ba42b609-df85-4af5-b3e2-7c6e4ad84804",
+          "Alias": "videoButtonText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Video Button Text",
+          "SortOrder": 2
+        },
+        {
+          "Key": "c80a07a1-12d4-4582-83c2-be5cc9ae6b5e",
+          "Alias": "readyToVoteLink",
+          "DataType": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
+          "Name": "Ready to Vote Link",
+          "SortOrder": 5
+        },
+        {
+          "Key": "dba35461-9322-4ea9-a4b5-0d8b1a7b9e3a",
+          "Alias": "description",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Description",
+          "SortOrder": 4
+        },
+        {
+          "Key": "f4cc63f7-79fd-43cb-af48-a6c3142013fd",
+          "Alias": "video",
+          "DataType": "umb://data-type/371720d012a1486281874527cf4e7209",
+          "Name": "Video",
+          "SortOrder": 1
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/823c4194953f488c94d24d4b1756a077",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/1168a046c2bf42ff8c4b29c296c8b68f",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/36564b1fa93643ee88423df7234ea0bf",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/371720d012a1486281874527cf4e7209",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/ad9f0cf2bda245d59ea1a63cfc873fd3",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/3e5c1ac20a48406c917e220b4bada863",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://template/5bd11222cffe403dafe29a0dc202fed2",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.4.0"
+}

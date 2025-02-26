@@ -2,10 +2,9 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<AboutBuyElectricitySection>>
 @{
     var content = Model?.Content;
-    var setting = Model?.Settings as SettingModel;
 }
 
-<div class="electricity-banner @setting?.CssClass">
+<div class="electricity-banner alt-contact-section">
     <div class="container">
         <div class="row align-items-center">
             @if (content?.ContentBlocks?.Count > 0)

@@ -29,6 +29,12 @@
           "DataType": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
           "Name": "Category Link",
           "SortOrder": 1
+        },
+        {
+          "Key": "d70b88f3-5d22-48d9-9b84-fdf756ec89f2",
+          "Alias": "isItalic",
+          "DataType": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
+          "Name": "Is Italic"
         }
       ]
     }
@@ -38,6 +44,10 @@
   "Dependencies": [
     {
       "Udi": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
       "Ordering": true
     },
     {

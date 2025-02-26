@@ -30,8 +30,8 @@
                 line-height: 32px;
                 font-weight: 700;
                 margin-bottom: 8px;
-                
-                & + p {
+
+                &+p {
                     font-size: 14px;
                     line-height: 32px;
                     font-weight: 600;
@@ -42,6 +42,7 @@
                 font-size: 16px;
                 line-height: 24px;
                 font-weight: 500;
+
                 &:not(:last-child) {
                     margin-bottom: 8px;
                 }
@@ -49,10 +50,12 @@
         }
     }
 
-    &.dark_blue_bg, &.dark_green_bg {
+    &.dark_blue_bg,
+    &.dark_green_bg {
         .section-heading h2 {
             color: $white;
         }
+
         .electricity-card {
             background-color: $white;
             color: $dark_blue;
@@ -63,7 +66,7 @@
 .alt-contact {
     border-bottom: 1px solid $black-100;
     padding: 64px 0px;
-    
+
 
     .flex-row-reverse {
         .buy_charging-doodles {
@@ -195,7 +198,10 @@
             }
         }
 
-        &.dark_blue_bg, &.dark_green_bg, &.dark_purple_bg, &.dark_pink_bg {
+        &.dark_blue_bg,
+        &.dark_green_bg,
+        &.dark_purple_bg,
+        &.dark_pink_bg {
             .label {
                 color: $white;
             }
@@ -284,7 +290,7 @@
         .position-img {
             width: max-content;
             position: absolute;
-            top: -40px;
+            top: -60px;
             right: 0px;
 
             img {
@@ -320,6 +326,7 @@
                     color: $space_blue;
                     font-size: 16px;
                     line-height: 27px;
+
                     p {
                         color: $space_blue;
                         font-size: 16px;
@@ -352,6 +359,7 @@
                 ul {
                     li {
                         color: $white;
+
                         p {
                             color: $white;
                         }
@@ -392,6 +400,7 @@
                     color: $black-950;
                     font-weight: 600;
                 }
+
                 p {
                     color: $black-950;
                 }
@@ -600,7 +609,8 @@
                     .card-title {
                         font-weight: 600;
                         color: $black-950;
-                        & + p {
+
+                        &+p {
                             color: $black-700;
                             font-size: 18px;
                             line-height: 32px;

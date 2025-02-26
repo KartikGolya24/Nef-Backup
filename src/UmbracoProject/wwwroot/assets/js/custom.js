@@ -1,6 +1,4 @@
-
 $(document).ready(function () {
-
     $("#menu-toggle-icon").click(function (event) {
         event.stopPropagation();
         $(this).toggleClass("active");
@@ -17,45 +15,56 @@ $(document).ready(function () {
         }
     });
 
-    $(document).ready(function () {
-        function updateCardStyles(groupName, activeClasses, defaultClasses) {
-            // Reset styles for all cards in the group
-            $(`input[name="${groupName}"]`).closest('.ordering-card')
-                .removeClass(activeClasses)
-                .addClass(defaultClasses);
-
-            // Apply active styles to the selected card
-            const checkedRadio = $(`input[name="${groupName}"]:checked`);
-            if (checkedRadio.length) {
-                checkedRadio.closest('.ordering-card')
-                    .addClass(activeClasses)
-                    .removeClass(defaultClasses);
-            }
-        }
-
-        // Attach change event to all radio groups
-        $('input[name="orderElectricityOption"]').on('change', function () {
-            updateCardStyles('orderElectricityOption', 'turquoise_bg border_dark_blue', 'border_black-100');
-        });
-
-        $('input[name="orderTVOption"]').on('change', function () {
-            updateCardStyles('orderTVOption', 'light_purple_bg border_dark_purple', 'border_black-100');
-        });
-
-        $('input[name="orderInternetOption"]').on('change', function () {
-            updateCardStyles('orderInternetOption', 'turquoise_bg border_dark_blue h-auto', 'border_black-100 h-auto');
-        });
-
-        // Initial check on page load for all groups
-        updateCardStyles('orderElectricityOption', 'turquoise_bg border_dark_blue', 'border_black-100');
-        updateCardStyles('orderTVOption', 'light_purple_bg border_dark_purple', 'border_black-100');
-        updateCardStyles('orderInternetOption', 'turquoise_bg border_dark_blue h-auto', 'border_black-100 h-auto');
+    $(".search").click(function (event) {
+        event.stopPropagation();
+        $(this).siblings(".searched-list").addClass("active");
     });
 
+    $(document).click(function (event) {
+        if (!$(event.target).closest(".searched-list, .search").length) {
+            $(".searched-list").removeClass("active");
+        }
+    });
 
+    function updateCardStyles(groupName, activeClasses, defaultClasses) {
+        // Reset styles for all cards in the group
+        $(`input[name="${groupName}"]`).closest(".ordering-card").removeClass(activeClasses).addClass(defaultClasses);
 
-    $('#customerTypesButton').on('click', function () {
-        $('.electricity-price-slider').toggleClass('d-none');
+        // Apply active styles to the selected card
+        const checkedRadio = $(`input[name="${groupName}"]:checked`);
+        if (checkedRadio.length) {
+            checkedRadio.closest(".ordering-card").addClass(activeClasses).removeClass(defaultClasses);
+        }
+    }
+
+    // Attach change event to all radio groups
+    $('input[name="orderElectricityOption"]').on("change", function () {
+        updateCardStyles("orderElectricityOption", "turquoise_bg border_dark_blue", "border_black-100");
+    });
+
+    $('input[name="orderTVOption"]').on("change", function () {
+        updateCardStyles("orderTVOption", "light_purple_bg border_dark_purple", "border_black-100");
+    });
+
+    $('input[name="orderInternetOption"]').on("change", function () {
+        updateCardStyles("orderInternetOption", "turquoise_bg border_dark_blue h-auto", "border_black-100 h-auto");
+    });
+
+    // Click event on the whole card to select the radio button
+    $(".ordering-card").click(function () {
+        const radio = $(this).find('input[type="radio"]');
+        if (!radio.prop("checked")) {
+            radio.prop("checked", true).trigger("change");
+        }
+    });
+
+    // Initial check on page load for all groups
+    updateCardStyles("orderElectricityOption", "turquoise_bg border_dark_blue", "border_black-100");
+    updateCardStyles("orderTVOption", "light_purple_bg border_dark_purple", "border_black-100");
+    updateCardStyles("orderInternetOption", "turquoise_bg border_dark_blue h-auto", "border_black-100 h-auto");
+
+    $("#customerTypesButton").on("click", function () {
+        $(".electricity-price-slider").toggleClass("d-none");
     });
 
     $(".customer-card .card-front .btn").on("click", function (e) {
@@ -68,8 +77,14 @@ $(document).ready(function () {
         $(this).closest(".customer-card").removeClass("show-details");
     });
 
+    // candidate cards
+    $(".candidate-card-list .col-lg-3").hide().slice(0, 4).show();
 
-
+    // On click, show all hidden cards
+    $(".candidates-section .bottom-arrow").click(function () {
+        $(".candidate-card-list .col-lg-3:hidden").fadeIn();
+        $(this).hide(); // Hide the button after clicking
+    });
 
     // document.querySelectorAll('.accordian-section .accordion-item').forEach(item => {
     //     const collapse = item.querySelector('.accordion-collapse');
@@ -80,9 +95,6 @@ $(document).ready(function () {
     //         item.classList.remove('expanded');
     //     });
     // });
-
-
-
 });
 // document.addEventListener('DOMContentLoaded', () => {
 //     const cards = document.querySelectorAll('.ordering-card');
@@ -106,10 +118,9 @@ $(document).ready(function () {
 //     });
 //   });
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
     const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
-    popoverTriggerList.forEach(popoverTriggerEl => {
+    popoverTriggerList.forEach((popoverTriggerEl) => {
         new bootstrap.Popover(popoverTriggerEl);
     });
 });
-

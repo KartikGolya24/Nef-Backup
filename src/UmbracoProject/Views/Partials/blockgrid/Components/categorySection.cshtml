@@ -5,9 +5,8 @@
     var content = Model?.Content;
 }
 
-
 <!--------------------------------- category ------------------------------------>
-<div class="category-item">
+<div class="category-item border-top border_clr-100">
     <div class="container-fluid px-0">
         <div class="row">
             @if (content?.CategoryBlocks?.Count > 0)
@@ -22,7 +21,15 @@
                                 <div class="category-img border_light_blue">
                                     <img src="@category?.CategoryIcon?.MediaUrl()" class="img-fluid" alt="img" />
                                 </div>
-                                <p>@category?.CategoryLink?.Name</p>
+                                
+                                <p>
+                                    @if (category?.IsItalic == true)
+                                    {
+                                        <em>@category?.CategoryLink?.Name</em>
+                                    }else{
+                                        @category?.CategoryLink?.Name
+                                    }
+                                </p>
                             </a>
                         </div>
                     </div>

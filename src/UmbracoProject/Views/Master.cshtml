@@ -64,10 +64,10 @@
                     <ul class="tabs-item" id="pills-tab" role="tablist">
                         @foreach (var item in homeRoots)
                         {
-                             tab = Model?.Url()?.Contains("/erhverv/") == true ? "erhverv-tab" : Model?.Url()?.Contains("/repraesentantskabsvalg/") == true ? "Repræsentantskabsvalg-tab" : "privat-tab";
-                            var rootLink = item?.Url() == "/privat/" ? "active" : "";
+                            tab = item?.Url()?.Contains("/erhverv/") == true ? "erhverv-tab" : item?.Url()?.Contains("/repraesentantskabsvalg/") == true ? "Repræsentantskabsvalg-tab" : "privat-tab";
+                            @* var rootLink = item?.Url() == "/privat/" ? "active" : ""; *@
                             <li class="tabs-list">
-                                <a href="@item?.Url()" id="@tab" class="tabs-link @rootLink">@item?.Name</a>
+                                <a href="@item?.Url()" id="@tab" class="tabs-link @(Model?.Url()?.Contains(item?.Url())== true ?"active":"") ">@item?.Name</a>
                             </li>
                         }
                     </ul>

@@ -6,7 +6,6 @@
     "blocks": [
       {
         "contentElementTypeKey": "ecb9dcca-21a4-45d3-9739-82e1a88a9336",
-        "settingsElementTypeKey": "69e8ea9e-0a61-4a79-a509-76740b15a531",
         "label": "{{heading}}",
         "editorSize": "medium",
         "forceHideContentEditorInOverlay": false
@@ -23,9 +22,6 @@
     {
       "Udi": "umb://data-type-container/921fd3ccdb1949549a00ec35730aafe5",
       "Ordering": true
-    },
-    {
-      "Udi": "umb://document-type/69e8ea9e0a614a79a50976740b15a531"
     },
     {
       "Udi": "umb://document-type/ecb9dcca21a445d3973982e1a88a9336"

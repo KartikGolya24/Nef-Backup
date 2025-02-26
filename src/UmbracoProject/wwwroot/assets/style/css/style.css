@@ -11150,6 +11150,8 @@ textarea.form-control {
 }
 .footer .bottom-footer .footer-detail .footer-menu .footer-menu-list {
   min-width: 216px;
+  position: relative;
+  z-index: 1;
 }
 .footer .bottom-footer .footer-detail .footer-menu .footer-menu-list p {
   margin-bottom: 20px;
@@ -11730,7 +11732,7 @@ textarea.form-control {
 .order-nef-power .order-nef-card .position-img {
   width: max-content;
   position: absolute;
-  top: -40px;
+  top: -60px;
   right: 0px;
 }
 .order-nef-power .order-nef-card .position-img img {
@@ -15242,6 +15244,13 @@ li {
     gap: 64px;
     padding-bottom: 48px;
   }
+  .footer .bottom-footer .footer-detail {
+    margin-bottom: 0;
+    gap: 0;
+  }
+  .footer .bottom-footer .footer-detail .footer-address {
+    margin-bottom: 48px;
+  }
   .footer .bottom-footer .footer-detail .footer-menu .footer-menu-list {
     min-width: 1px;
   }
@@ -15270,7 +15279,10 @@ li {
     padding-bottom: 12px;
   }
   .footer .bottom-footer .footer-detail .position-img {
-    display: none;
+    position: static;
+  }
+  .footer .bottom-footer .footer-detail .position-img img {
+    object-fit: inherit;
   }
   .footer .bottom-footer .footer-detail .mobile-visible {
     display: block;
@@ -15506,7 +15518,7 @@ li {
     width: 100%;
   }
   .status-alt-sidebar .sidebar {
-    padding-bottom: 40px;
+    padding-top: 40px;
   }
   .status-alt-sidebar .status-left-part .operating-section {
     gap: 64px;
@@ -15726,6 +15738,11 @@ li {
   .candidates-section .candidate-card {
     padding-left: 0;
     padding-right: 0;
+  }
+  .footer .bottom-footer .footer-detail .position-img img {
+    object-fit: none;
+    height: auto;
+    width: auto;
   }
 }
 

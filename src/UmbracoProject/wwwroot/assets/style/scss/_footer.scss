@@ -88,6 +88,8 @@
 
                 .footer-menu-list {
                     min-width: 216px;
+                    position: relative;
+                    z-index: 1;
 
                     p {
                         margin-bottom: 20px;

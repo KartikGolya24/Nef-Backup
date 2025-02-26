@@ -1,0 +1,85 @@
+{
+  "Name": "Contact us Section",
+  "Alias": "contactUsSection",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "6ec2c5c6-5061-4ba3-b19e-cb1571c56f24",
+      "Name": "Image Content",
+      "SortOrder": 2,
+      "Alias": "imageContent",
+      "PropertyTypes": [
+        {
+          "Key": "b90f22a2-1bff-481e-ba44-d5f199986e97",
+          "Alias": "image",
+          "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
+          "Name": "Image"
+        }
+      ]
+    },
+    {
+      "Key": "a692babc-c70a-453c-83b1-ae04a1edb2e2",
+      "Name": "Title Content",
+      "Alias": "titleContent",
+      "PropertyTypes": [
+        {
+          "Key": "fa2a0459-3574-4cb6-9894-04b26af5dc62",
+          "Alias": "sectionTitle",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Section Title"
+        }
+      ]
+    },
+    {
+      "Key": "e11c13d2-7689-43f5-9f3b-5538dad9d645",
+      "Name": "Contact Details Content",
+      "SortOrder": 1,
+      "Alias": "contactDetailsContent",
+      "PropertyTypes": [
+        {
+          "Key": "907d551c-0996-4eb8-9c39-abe9e18b607c",
+          "Alias": "heading",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Heading"
+        },
+        {
+          "Key": "e1ff538b-0935-4a8f-9263-f529b91838b4",
+          "Alias": "contentBlocks",
+          "DataType": "umb://data-type/70fc675242604d83aca9842eb3238954",
+          "Name": "Content Blocks"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/ad940964e0ec48f6b045ffe63b9d62d4",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/70fc675242604d83aca9842eb3238954",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.4.0"
+}

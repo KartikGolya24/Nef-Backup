@@ -1,0 +1,49 @@
+{
+  "Name": "Candidates",
+  "Alias": "candidates",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-item-arrangement",
+  "Thumbnail": "folder.png",
+  "IsContainer": true,
+  "Permissions": {
+    "AllowedChildContentTypes": [
+      "umb://document-type/823c4194953f488c94d24d4b1756a077"
+    ]
+  },
+  "Parent": "umb://document-type-container/3e5c1ac20a48406c917e220b4bada863",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "7be6efe9-0029-4c44-b34a-dd329b7b71ad",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "c061fb3b-8540-49b7-a229-a320e110e5ba",
+          "Alias": "learnMoreButtonText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Learn More button Text"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/62b399aad90049bea24fad0c7f802611",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/3e5c1ac20a48406c917e220b4bada863",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/823c4194953f488c94d24d4b1756a077",
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.4.0"
+}

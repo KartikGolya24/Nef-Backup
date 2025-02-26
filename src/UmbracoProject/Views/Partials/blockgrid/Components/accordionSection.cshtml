@@ -4,11 +4,20 @@
 
 @{
     var content = Model?.Content;
+    var setting = Model?.Settings as SettingModel;
+    var padding = !string.IsNullOrWhiteSpace(setting?.PaddingTopBottom) ? $"padding:{setting?.PaddingTopBottom} 0px" : "";
+
 }
 
 <!------------------------------------- Accordion Section ----------------------------->
-<div class="turquoise_bg faq-section ">
+<div class="faq-section @setting?.CssClass" style="@padding">
     <div class="container">
+        @if (!string.IsNullOrWhiteSpace(content?.HeadingText))
+        {
+            <div class="headings">
+                <h3 class="title">@content?.HeadingText</h3>
+            </div>
+        }
         <div class="faq-container">
             <div class="accordion accordion-flush accordian-section" id="accordionFlushExample">
                 @if (content?.AccordionList?.Count > 0)
@@ -20,7 +29,7 @@
                         var flushHeading = $"flush-heading{headingCount++}";
                         var flushCollapse = $"flush-collapse{collapseCount++}";
                         var accordionModel = item?.Content as AccordionBlock;
-                        <div class="accordion-item ">
+                        <div class="accordion-item">
                             <h2 class="accordion-header " id="@flushHeading">
                                 <button class="accordion-button collapsed  black-950" type="button" data-bs-toggle="collapse" data-bs-target="#@flushCollapse" aria-expanded="false" aria-controls="@flushCollapse">
                                     @accordionModel?.Heading

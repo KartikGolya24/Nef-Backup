@@ -1,0 +1,43 @@
+{
+  "Name": "Candidates Section",
+  "Alias": "candidatesSection",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "3997517a-a767-4221-93c4-dc86166e21d2",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "00f47395-bb81-4e24-855c-85346a1a3ab0",
+          "Alias": "sectionTitle",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Section Title"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/36696209d5c54488907bd611ef234e65",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.4.0"
+}

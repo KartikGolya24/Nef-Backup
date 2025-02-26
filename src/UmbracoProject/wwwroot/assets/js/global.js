@@ -1,16 +1,25 @@
 ﻿$(document).ready(function () {
 
+    //var currentUrl = window.location.pathname;
+    //var activePath = GetActiveTab(currentUrl);
+    //$(".tabs-link").removeClass("active");
+    //$(".tabs-link[href='" + activePath + "']").addClass("active");
 
-    //making navigation menu action START
-    var currentUrl = window.location.pathname; // Get current page URL
-    $(".tabs-link").each(function () {
-        if ($(this).attr("href") === currentUrl) {
-            $(".tabs-link").removeClass("active"); // Remove 'active' from all tabs
-            $(this).addClass("active"); // Add 'active' to the matching tab
-        }
-    });
-    //making navigation menu action END
+    //$(".tabs-link").on("click", function (e) {
+    //    $(".tabs-link").removeClass("active");
+    //    $(this).addClass("active");
+    //});
 
+    //function GetActiveTab(path) {
+    //    if (path.includes("/erhverv/")) {
+    //        return "/erhverv/";
+    //    } else if (path.includes("/repraesentantskabsvalg/")) {
+    //        return "/repraesentantskabsvalg/";
+    //    }
+    //    else {
+    //        return "/privat/"
+    //    }
+    //};
 
 
     $(document).on('click', '.videoBtn', function () {
