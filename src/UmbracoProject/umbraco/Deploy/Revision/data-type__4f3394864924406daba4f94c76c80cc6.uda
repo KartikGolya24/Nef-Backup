@@ -1,0 +1,23 @@
+{
+  "Name": "Form Section - Form Section Theme - Dropdown",
+  "Alias": "",
+  "EditorAlias": "Umbraco.DropDown.Flexible",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {
+    "multiple": false,
+    "items": [
+      {
+        "id": 1,
+        "value": "white-bg"
+      },
+      {
+        "id": 2,
+        "value": "light_pink_bg"
+      }
+    ]
+  },
+  "Udi": "umb://data-type/4f3394864924406daba4f94c76c80cc6",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.4.0"
+}
