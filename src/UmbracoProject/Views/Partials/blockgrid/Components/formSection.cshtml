@@ -27,9 +27,9 @@
 }
 
 <!--------------------------------------section contact-form---------------------------->
-<div class="alt-contact">
+<div class="alt-contact @content?.FormSectionTheme">
     <div class="container">
-        <div class="row @content?.Class">
+        <div class="row">
             @if (content?.Blocks?.Count > 0)
             {
                 @foreach (var item in content.Blocks)
@@ -65,7 +65,7 @@
                         };
 
                         <div class="col-lg-6">
-                            <div class="contact-form turquoise_bg">
+                            <div class="contact-form @formContentModel?.FormTheme">
                                     @await Html.PartialAsync("~/Views/Partials/_RenderForm.cshtml", model)
                             </div>
                         </div>

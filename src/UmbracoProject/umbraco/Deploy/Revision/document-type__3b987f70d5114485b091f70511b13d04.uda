@@ -50,21 +50,28 @@
           "Alias": "form",
           "DataType": "umb://data-type/d7934b3f03724ab3b063e7d6527d82b0",
           "Name": "Form",
-          "SortOrder": 3
+          "SortOrder": 2
         },
         {
-          "Key": "bf308f43-ddf1-4909-92c6-81ff5f27e7bc",
-          "Alias": "descriptionText",
-          "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
-          "Name": "Description Text",
-          "SortOrder": 1
+          "Key": "955d9ddb-8004-4d5a-b902-7354c1951316",
+          "Alias": "submitButtonTheme",
+          "DataType": "umb://data-type/36564b1fa93643ee88423df7234ea0bf",
+          "Name": "Submit Button Theme",
+          "SortOrder": 4
         },
         {
           "Key": "cb87f80c-fe57-4e58-bdd0-06ea80a3bb90",
           "Alias": "formTheme",
           "DataType": "umb://data-type/693473f8c62c42d2abf3b0228668ab4f",
           "Name": "Form Theme",
-          "SortOrder": 4
+          "SortOrder": 3
+        },
+        {
+          "Key": "d809e585-9030-45c7-8983-a15c6d2c2534",
+          "Alias": "descriptionText",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Description Text",
+          "SortOrder": 1
         },
         {
           "Key": "f5b03177-98d8-4a65-94e5-d26eb118df8b",
@@ -91,15 +98,15 @@
       "Ordering": true
     },
     {
+      "Udi": "umb://data-type/36564b1fa93643ee88423df7234ea0bf",
+      "Ordering": true
+    },
+    {
       "Udi": "umb://data-type/693473f8c62c42d2abf3b0228668ab4f",
       "Ordering": true
     },
     {
       "Udi": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
-      "Ordering": true
-    },
-    {
-      "Udi": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
       "Ordering": true
     },
     {

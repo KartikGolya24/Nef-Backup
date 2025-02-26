@@ -63,7 +63,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("descriptionText")]
-		public virtual string DescriptionText => this.Value<string>(_publishedValueFallback, "descriptionText");
+		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString DescriptionText => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "descriptionText");
 
 		///<summary>
 		/// Form
@@ -73,12 +73,28 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::System.Nullable<global::System.Guid> Form => this.Value<global::System.Nullable<global::System.Guid>>(_publishedValueFallback, "form");
 
 		///<summary>
+		/// Form Theme
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("formTheme")]
+		public virtual string FormTheme => this.Value<string>(_publishedValueFallback, "formTheme");
+
+		///<summary>
 		/// Heading Text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("headingText")]
 		public virtual string HeadingText => this.Value<string>(_publishedValueFallback, "headingText");
+
+		///<summary>
+		/// Submit Button Theme
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("submitButtonTheme")]
+		public virtual string SubmitButtonTheme => this.Value<string>(_publishedValueFallback, "submitButtonTheme");
 
 		///<summary>
 		/// Success Message
