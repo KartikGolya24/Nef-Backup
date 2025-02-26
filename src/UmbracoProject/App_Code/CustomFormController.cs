@@ -5,46 +5,40 @@ using Umbraco.Cms.Core.Routing;
 using Umbraco.Cms.Core.Services;
 using Umbraco.Cms.Core.Web;
 using Umbraco.Cms.Infrastructure.Persistence;
-using Umbraco.Cms.Web.Common.Controllers;
 using Umbraco.Cms.Web.Website.Controllers;
 using Umbraco.Forms.Core.Models;
 using Umbraco.Forms.Core.Persistence.Dtos;
 using Umbraco.Forms.Core.Services;
-using UmbracoProject.App_Code.Models;
 
-namespace UmbracoProject.App_Code
+namespace UmbracoProject.App_Code;
+
+public class CustomFormController(
+    IRecordService recordService,
+    IFormService formService,
+    IUmbracoContextAccessor umbracoContextAccessor,
+    IUmbracoDatabaseFactory umbracoDatabaseFactory,
+    ServiceContext serviceContext,
+    AppCaches appCaches,
+    IProfilingLogger profilingLogger,
+    IPublishedUrlProvider publishedUrlProvider
+    ) : SurfaceController(umbracoContextAccessor, umbracoDatabaseFactory, serviceContext, appCaches, profilingLogger, publishedUrlProvider)
 {
-    public class CustomFormController : SurfaceController
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="requestModel"></param>
+    /// <returns></returns>
+    /// <exception cref="InvalidOperationException"></exception>
+    [HttpPost]
+    public async Task<IActionResult> SubmitForm([FromBody] List<KeyValuePair<string, string>> requestModel)
     {
-        private readonly IRecordService _recordService;
-        private readonly IFormService _formService;
-
-        public CustomFormController(IUmbracoContextAccessor umbracoContextAccessor, IUmbracoDatabaseFactory umbracoDatabaseFactory, ServiceContext serviceContext, AppCaches appCaches, IProfilingLogger profilingLogger, IPublishedUrlProvider publishedUrlProvider, IRecordService recordService, IFormService formService) : base(umbracoContextAccessor, umbracoDatabaseFactory, serviceContext, appCaches, profilingLogger, publishedUrlProvider)
+        if (requestModel is not null && requestModel.Count > 0)
         {
-            _recordService = recordService;
-            _formService = formService;
-        }
+            var submittedValues = requestModel.ToDictionary(kvp => kvp.Key, kvp => (string)kvp.Value);
 
-        [ValidateAntiForgeryToken]
-        [HttpPost]
-        public async Task<IActionResult> SubmitForm(SunbeamStoryFormRequestModel requestModel)
-        {
-            // Form has single field with alias of "name".
-            Form? form = _formService.Get(requestModel.FormId);
-            if (form == null)
-            {
-                throw new InvalidOperationException($"Could not find form with ID: {requestModel.FormId} Error Line 28 controller CustomFormController");
-            }
+            _ = Guid.TryParse(submittedValues["formId"], out Guid formId);
 
-            var submittedValues = new Dictionary<string, object>
-            {
-                { "fuldeNavn", requestModel.fuldeNavn },
-                { "adresse", requestModel.adresse ?? string.Empty },
-                { "telefon", requestModel?.telefon == null ? 0 : requestModel.telefon },
-                { "email", requestModel.email }, 
-                { "gSRNNummer", requestModel?.gSRNNummer == null ? 0 : requestModel.gSRNNummer },
-                { "evtKommentar", requestModel?.evtKommentar ?? string.Empty }
-            };
+            Form? form = formService.Get(formId) ?? throw new InvalidOperationException($"Could not find form with ID: {formId}");
 
             var record = new Record
             {
@@ -52,7 +46,6 @@ namespace UmbracoProject.App_Code
                 Form = form.Id,
                 Culture = Thread.CurrentThread.CurrentCulture.Name,
             };
-
             foreach (Field field in form.AllFields)
             {
                 var recordField = new RecordField(field)
@@ -61,15 +54,15 @@ namespace UmbracoProject.App_Code
                     FieldId = field.Id,
                     Key = Guid.NewGuid(),
                     Record = record.Id,
-                    Values = new List<object>() { submittedValues[field.Alias] }
+                    Values = new List<object>() { string.IsNullOrWhiteSpace(submittedValues[field.Alias]) ? string.Empty : submittedValues[field.Alias] }
                 };
                 record.RecordFields.Add(field.Id, recordField);
             }
-
-            await _recordService.SubmitAsync(record, form);
-
-            TempData["submitMessage"] = "Thank you";
-            return Redirect(requestModel.ReturnUrl);
+            await recordService.SubmitAsync(record, form);
+            return Ok();
         }
+        return BadRequest();
+
     }
+
 }

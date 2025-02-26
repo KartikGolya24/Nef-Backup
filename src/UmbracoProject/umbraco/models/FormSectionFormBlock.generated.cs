@@ -50,6 +50,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
+		/// After Success Redirection Button
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("afterSuccessRedirectionButton")]
+		public virtual global::Umbraco.Cms.Core.Models.Link AfterSuccessRedirectionButton => this.Value<global::Umbraco.Cms.Core.Models.Link>(_publishedValueFallback, "afterSuccessRedirectionButton");
+
+		///<summary>
 		/// Description Text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
@@ -73,11 +81,19 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual string HeadingText => this.Value<string>(_publishedValueFallback, "headingText");
 
 		///<summary>
-		/// Render Form
+		/// Success Message
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("renderForm")]
-		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString RenderForm => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "renderForm");
+		[ImplementPropertyType("successMessage")]
+		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString SuccessMessage => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "successMessage");
+
+		///<summary>
+		/// Success Message Icon
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("successMessageIcon")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops SuccessMessageIcon => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "successMessageIcon");
 	}
 }

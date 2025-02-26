@@ -2,13 +2,11 @@
 @using Umbraco.Cms.Core.Web
 @using Umbraco.Forms.Web
 @using Umbraco.Forms.Web.Models
-@using Umbraco.Forms.Web.Services
 @using Microsoft.AspNetCore.Http
 @using UmbracoProject.App_Code.Models
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<FormSection>>
 @inject IHttpContextAccessor _contextAccessor;
 @inject IUmbracoContextAccessor _UMBcontextAccessor;
-@inject IFormRenderingService _formRenderingService;
 
 @{
     var content = Model?.Content;
@@ -18,7 +16,7 @@
 
 @{
     // Get the current page from the Umbraco context
-    IPublishedContent currentPage = null;
+    IPublishedContent? currentPage = null;
     if (_UMBcontextAccessor.TryGetUmbracoContext(out var umbracoContext))
     {
         currentPage = umbracoContext.PublishedRequest?.PublishedContent;
@@ -34,9 +32,9 @@
         <div class="row @content?.Class">
             @if (content?.Blocks?.Count > 0)
             {
-                @foreach (var item in content?.Blocks)
+                @foreach (var item in content.Blocks)
                 {
-                    @if (item?.Content?.ContentType?.Alias == "formSectionContentBlock")
+                    @if (item?.Content?.ContentType?.Alias == FormSectionContentBlock.ModelTypeAlias)
                     {
                         var itemModel = item?.Content as FormSectionContentBlock;
                         <div class="col-lg-6">
@@ -56,48 +54,19 @@
                             </div>
                         </div>
                     }
-                    @if (item?.Content?.ContentType?.Alias == "formSectionFormBlock")
+                    @if (item?.Content?.ContentType?.Alias == FormSectionFormBlock.ModelTypeAlias)
                     {
                         var formContentModel = item?.Content as FormSectionFormBlock;
 
-                        var formModel1 = _formRenderingService.GetFormModelAsync(_contextAccessor.HttpContext, formContentModel?.Form ?? new Guid());
-                        var formModel = _formRenderingService.GetForm(formContentModel?.Form ?? new Guid());
-
                         var model = new UmbracoProject.App_Code.Models.FormViewModel()
                         {
-                            Form = formModel,
-                            ActionUrl = currentPageUrl
+                            FormId = formContentModel?.Form ?? Guid.Empty,
+                            FormContent = formContentModel
                         };
 
                         <div class="col-lg-6">
                             <div class="contact-form turquoise_bg">
-                                <div class="form-outer">
-                                    <div class="form-headings">
-                                        @if (!string.IsNullOrWhiteSpace(formContentModel?.HeadingText))
-                                        {
-                                            <h4 class="form-title">@formContentModel?.HeadingText</h4>
-                                        }
-                                        @if (!string.IsNullOrWhiteSpace(formContentModel?.DescriptionText))
-                                        {
-                                            <p>
-                                                @formContentModel?.DescriptionText
-                                            </p>
-                                        }
-                                    </div>
-
                                     @await Html.PartialAsync("~/Views/Partials/_RenderForm.cshtml", model)
-
-                                </div>
-                                <!-- <div class="form-submitted">
-                                  <div class="icon">
-                                    <img src="assets/img/icons/thumbs-up-black.svg" alt="" class="img-fluid">
-                                  </div>
-                                  <div class="content">
-                                    <h2>Du vil blive kontaktet</h2>
-                                    <p>Du har nu udfyldet formularen korrekt og vil blive kontaktet af nef</p>
-                                    <button type="button" class="btn light_blue_btn">Bestil nef Sol&Vind</button>
-                                  </div>
-                                </div> -->
                             </div>
                         </div>
                     }
@@ -204,3 +173,4 @@
         </div>
     </div>
 </div>
+<script src="~/assets/js/forms.js"></script>
