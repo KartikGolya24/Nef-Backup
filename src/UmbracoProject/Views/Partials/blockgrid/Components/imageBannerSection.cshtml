@@ -39,15 +39,15 @@
 
         <picture>
             <!-- Mobile (393px x 324px) -->
-            <source media="(min-width: 393px)"
+            <source media="(max-width: 393px)"
                     srcset="@ImageOptimizeHelper.ReformatUrl(content?.Image?.GetCropUrl(width: 393, height: 324, preferFocalPoint: true))">
 
             <!-- Tablet (1024px x 424px) -->
-            <source media="(min-width: 1024px)"
+            <source media="(max-width: 1024px)"
                     srcset="@ImageOptimizeHelper.ReformatUrl(content?.Image?.GetCropUrl(width: 1024, height: 424, preferFocalPoint: true))">
 
             <!-- Laptop (1440px x 424px) -->
-            <source media="(min-width: 1440px)"
+            <source media="(max-width: 1440px)"
                     srcset="@ImageOptimizeHelper.ReformatUrl(content?.Image?.GetCropUrl(width: 1440, height: 424, preferFocalPoint: true))">
 
             <!-- Default (Desktop 1440px x 560px) -->
