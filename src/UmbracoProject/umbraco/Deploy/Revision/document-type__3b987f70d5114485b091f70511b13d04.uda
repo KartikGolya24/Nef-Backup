@@ -60,6 +60,13 @@
           "SortOrder": 1
         },
         {
+          "Key": "cb87f80c-fe57-4e58-bdd0-06ea80a3bb90",
+          "Alias": "formTheme",
+          "DataType": "umb://data-type/693473f8c62c42d2abf3b0228668ab4f",
+          "Name": "Form Theme",
+          "SortOrder": 4
+        },
+        {
           "Key": "f5b03177-98d8-4a65-94e5-d26eb118df8b",
           "Alias": "headingText",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
@@ -81,6 +88,10 @@
     },
     {
       "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/693473f8c62c42d2abf3b0228668ab4f",
       "Ordering": true
     },
     {
