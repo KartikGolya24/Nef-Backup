@@ -55,7 +55,8 @@
           "Key": "e1ff538b-0935-4a8f-9263-f529b91838b4",
           "Alias": "contentBlocks",
           "DataType": "umb://data-type/70fc675242604d83aca9842eb3238954",
-          "Name": "Content Blocks"
+          "Name": "Content Blocks",
+          "SortOrder": 1
         }
       ]
     }

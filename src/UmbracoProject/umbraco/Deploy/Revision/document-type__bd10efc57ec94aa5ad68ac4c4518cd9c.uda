@@ -34,7 +34,8 @@
           "Key": "d70b88f3-5d22-48d9-9b84-fdf756ec89f2",
           "Alias": "isItalic",
           "DataType": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
-          "Name": "Is Italic"
+          "Name": "Is Italic",
+          "SortOrder": 2
         }
       ]
     }
