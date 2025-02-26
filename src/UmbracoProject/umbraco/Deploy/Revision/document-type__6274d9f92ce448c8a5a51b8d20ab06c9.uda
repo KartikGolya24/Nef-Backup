@@ -18,12 +18,6 @@
       "Alias": "content",
       "PropertyTypes": [
         {
-          "Key": "36b2299d-86e3-4f08-94cb-a5a956bf03a7",
-          "Alias": "class",
-          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-          "Name": "Class"
-        },
-        {
           "Key": "72d7ac93-8234-4c29-a26f-6dd570ce6549",
           "Alias": "blocks",
           "DataType": "umb://data-type/8db3a420d9844533982db823184f25aa",
@@ -36,10 +30,6 @@
   "PropertyTypes": [],
   "Udi": "umb://document-type/6274d9f92ce448c8a5a51b8d20ab06c9",
   "Dependencies": [
-    {
-      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-      "Ordering": true
-    },
     {
       "Udi": "umb://data-type/8db3a420d9844533982db823184f25aa",
       "Ordering": true
