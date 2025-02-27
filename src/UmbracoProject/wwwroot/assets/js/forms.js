@@ -39,7 +39,8 @@
 
     }
     function callAjax($contactForm, requestModel) {
-        $contactForm.find('.form-outer').hide();
+        $('.form_submit_btn').prop('disabled', true); // Disable button during submission to avoid multiple entries
+
         let $formOuter = $contactForm.find('.form-outer');
         let $formSubmissionSection = $contactForm.find('.form-submitted');
         $formOuter.hide();
@@ -52,9 +53,11 @@
                 xhr.setRequestHeader("RequestVerificationToken", $('body').find('input:hidden[name="__RequestVerificationToken"]').val());
             },
             success: function () {
+                $contactForm.find('.form-outer').hide();
                 $formSubmissionSection.removeClass('d-none');
             },
             error: function (err) {
+                $('.form_submit_btn').prop('disabled', false);
                 $formOuter.show();
                 console.warn(err);
             }
