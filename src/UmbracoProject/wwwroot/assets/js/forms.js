@@ -146,8 +146,16 @@
         }
     });
 
+    // Ensure the field to enter only 18 digits
     $(document).on("input", " .gsrn-field", function () {
         var val = $(this).val();
         $(this).val(val.replace(/\D/g, "").substring(0, 18));
+    });
+
+    // Remove error messages when typing on input fields
+    $(document).on("input", ".required, .regex-reuired", function () {
+        let $form = $(this).closest("form");
+        $(this).removeClass('error')
+        $form.find('.error-text').addClass('d-none');
     });
 });
