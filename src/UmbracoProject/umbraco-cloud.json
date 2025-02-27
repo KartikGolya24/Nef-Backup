@@ -7,6 +7,12 @@
       "Url": "https://www.s1.umbraco.io/project/nef-dk",
       "Workspaces": [
         {
+          "Id": "0375ddb7-d958-46fb-bfe4-3567e0822ff2",
+          "Name": "Development",
+          "Type": "development",
+          "Url": "https://dev-nef-dk.euwest01.umbraco.io"
+        },
+        {
           "Id": "34e80426-9f79-496f-9286-6f52ed676763",
           "Name": "Live",
           "Type": "live",
