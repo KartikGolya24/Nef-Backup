@@ -12,7 +12,6 @@
       },
       {
         "contentElementTypeKey": "b7ea380c-440a-4e54-ad12-9d454fabeba8",
-        "settingsElementTypeKey": "1ca0cc80-b273-48b1-8fd5-41bef3af430b",
         "editorSize": "medium",
         "forceHideContentEditorInOverlay": false
       },
@@ -33,9 +32,6 @@
     {
       "Udi": "umb://data-type-container/921fd3ccdb1949549a00ec35730aafe5",
       "Ordering": true
-    },
-    {
-      "Udi": "umb://document-type/1ca0cc80b27348b18fd541bef3af430b"
     },
     {
       "Udi": "umb://document-type/79f62ef394a04edba3a2641f88e709d6"
