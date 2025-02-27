@@ -32,13 +32,14 @@
         <div class="row">
             @if (content?.Blocks?.Count > 0)
             {
+                int index = 0;
                 @foreach (var item in content.Blocks)
                 {
                     @if (item?.Content?.ContentType?.Alias == FormSectionContentBlock.ModelTypeAlias)
                     {
                         var itemModel = item?.Content as FormSectionContentBlock;
                         <div class="col-lg-6">
-                            <div class="section-detail mx-w-545">
+                            <div class="section-detail @(index == 1?"ms-auto":"")">
                                 <div class="section-content d-flex flex-column black-950">
                                     <h2>
                                         @itemModel?.HeadingText
@@ -70,6 +71,7 @@
                             </div>
                         </div>
                     }
+                    index++;
                 }
             }
             else
