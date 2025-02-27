@@ -2,13 +2,14 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<OrderNefElectricitySection>>
 @{
     var content = Model?.Content;
+    var setting = Model?.Settings as SectionSettingModel;
 }
 
 <!-------------------------------------- order nef power --------------------->
-<div class="order-nef-power">
+<div class="order-nef-power @setting?.Theme">
     <div class="container">
-        <div class="section-heading black-950">
-            <h2 class="fw-600">@content?.HeadingText</h2>
+        <div class="section-heading">
+            <h2>@content?.HeadingText</h2>
             @Html?.Raw(content?.DescriptionText)
         </div>
         <div class="row">
@@ -18,13 +19,12 @@
                 @foreach (var item in content?.OrderElectricityBlocks)
                 {
                     var electricityBlock = item?.Content as OrderNefElectricityBlock;
-                    var setting = item?.Settings as SettingModel;
 
                     <div class="col-md-6">
                         <div class="order-nef-card">
                             <div class="card-body">
-                                <h3 class="white fw-100">@electricityBlock?.Heading</h3>
-                                <ul class="white">
+                                <h3>@electricityBlock?.Heading</h3>
+                                <ul>
                                     @if (electricityBlock?.TextList?.Count() > 0)
                                     {
                                         @foreach (var list in electricityBlock.TextList)

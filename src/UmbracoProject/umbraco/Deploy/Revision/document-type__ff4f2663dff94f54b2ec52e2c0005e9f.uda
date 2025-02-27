@@ -18,12 +18,6 @@
       "Alias": "content",
       "PropertyTypes": [
         {
-          "Key": "1a28a829-d685-4a4d-8322-4072e4ed2627",
-          "Alias": "theme",
-          "DataType": "umb://data-type/da8bb2e8c626413aba1505832672552a",
-          "Name": "Theme"
-        },
-        {
           "Key": "4f6101a1-8402-4e03-9ab6-d258d0f50a65",
           "Alias": "exchangeSpotBlocks",
           "DataType": "umb://data-type/98f5f24d5cdc4fd7a5fa054bf0ec3673",
@@ -49,10 +43,6 @@
     },
     {
       "Udi": "umb://data-type/98f5f24d5cdc4fd7a5fa054bf0ec3673",
-      "Ordering": true
-    },
-    {
-      "Udi": "umb://data-type/da8bb2e8c626413aba1505832672552a",
       "Ordering": true
     },
     {

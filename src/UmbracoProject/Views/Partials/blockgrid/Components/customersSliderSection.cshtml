@@ -3,12 +3,12 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<CustomersSliderSection>>
 @{
     var content = Model?.Content;
-    var setting = Model?.Settings as SettingModel;
+    var setting = Model?.Settings as SectionSettingModel;
 }
 
 <!-------------------------------------- owl carousal --------------------->
 
-<div class="owl-slider-section dot_slider @content?.Theme @setting?.CssClass">
+<div class="owl-slider-section dot_slider @setting?.Theme">
     <div class="container-fluid px-0">
         <div class="section-heading">
             <h2>@content?.HeadingText</h2>

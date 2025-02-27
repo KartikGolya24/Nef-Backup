@@ -1,0 +1,51 @@
+{
+  "Name": "Section Setting Model - Theme - Dropdown",
+  "Alias": "",
+  "EditorAlias": "Umbraco.DropDown.Flexible",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {
+    "multiple": false,
+    "items": [
+      {
+        "id": 1,
+        "value": "private-turquoise-fade"
+      },
+      {
+        "id": 2,
+        "value": "private-light-moss-green"
+      },
+      {
+        "id": 3,
+        "value": "private-white"
+      },
+      {
+        "id": 4,
+        "value": "private-tv-white"
+      },
+      {
+        "id": 5,
+        "value": "private-dark-blue"
+      },
+      {
+        "id": 6,
+        "value": "private-light-moss-green-fade"
+      },
+      {
+        "id": 7,
+        "value": "private-mulberry-purple-fade"
+      },
+      {
+        "id": 8,
+        "value": "private-mulberry-purple"
+      },
+      {
+        "id": 9,
+        "value": "private-turquoise"
+      }
+    ]
+  },
+  "Udi": "umb://data-type/f514154f0b2d4918b899c73d3d6e7e64",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.4.0"
+}

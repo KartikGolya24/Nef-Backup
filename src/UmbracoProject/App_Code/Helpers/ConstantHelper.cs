@@ -7,7 +7,7 @@
 
         public static string IconStyle(string dropValue)
         {
-            if (string.IsNullOrWhiteSpace(dropValue)) return "";
+            if (string.IsNullOrWhiteSpace(dropValue)) return "square_icon_list";
 
             string iconStyleTheme = string.Empty;
             switch (dropValue)

@@ -2,9 +2,10 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<HomeChargingSection>>
 @{
     var content = Model?.Content;
+    var setting = Model?.Settings as SectionSettingModel;
 }
 
-<div class="pacakge-section home-charging turquoise_bg py-64">
+<div class="pacakge-section home-charging @setting?.Theme">
     <div class="container">
         <div class="section-heading">
             <h2>Hjemmeopladning til el- og hybridbiler</h2>

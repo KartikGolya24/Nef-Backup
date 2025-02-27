@@ -27,6 +27,21 @@ body {
 
 //============================= headings ==========================
 
+h6,
+.h6,
+h5,
+.h5,
+h4,
+.h4,
+h3,
+.h3,
+h2,
+.h2,
+h1,
+.h1 {
+    font-weight: 600;
+}
+
 h1 {
     font-size: 48px;
     line-height: 56px;
@@ -1285,7 +1300,7 @@ li {
 
 //================================================ Section =================================
 .alt-section {
-    padding: 125px 0;
+    padding: 64px 0;
     position: relative;
 
     .section-detail {
@@ -1305,7 +1320,7 @@ li {
             h2 {
                 margin-bottom: 16px;
                 font-weight: 600;
-                color: $dark_blue;
+                color: $black-950;
             }
 
             p {
@@ -1341,6 +1356,12 @@ li {
                         display: inline-flex;
                         align-items: center;
                         justify-content: center;
+
+                        svg,
+                        img {
+                            width: 16px;
+                            height: 16px;
+                        }
                     }
 
                     .list-information-text {
@@ -1412,12 +1433,15 @@ li {
                 }
             }
 
-            .section_dot_list {
+            .section_bullet_list {
                 padding-left: 22px;
                 color: $white;
 
                 li {
                     list-style: inherit;
+                    &::marker {
+                        color: $black-700;
+                    }
                 }
             }
 
@@ -1459,21 +1483,28 @@ li {
     .wrapper {
         border-radius: 16px;
         padding: 24px;
+        background-color: $dark_blue;
 
         .section-detail {
             max-width: 600px;
             padding: 0px 38px;
 
             .section-content {
+                h2 {
+                    color: $white;
+                }
                 p {
                     margin-bottom: 24px;
+                    color: $black-100;
 
                     &:last-child {
                         margin-bottom: 0px;
                     }
                 }
+
                 .number-list {
                     margin-bottom: 24px;
+
                     p {
                         margin-bottom: 0;
                     }
@@ -1497,6 +1528,7 @@ li {
 
                     ol {
                         padding: 0 0 0 16px;
+
                         li {
                             list-style: inherit;
                             color: $black-100;
@@ -1663,6 +1695,7 @@ li {
                 max-width: 512px;
                 margin: 0;
                 gap: 16px;
+
                 h1 {
                     margin: 0;
                 }
@@ -1701,6 +1734,7 @@ li {
 
     .section-img {
         position: relative;
+        border-radius: 16px;
 
         .radius {
             border-radius: 16px;
@@ -1710,7 +1744,7 @@ li {
         img:not(.section-position-img img) {
             width: 100%;
             border-radius: 16px;
-            min-height: 450px;
+            min-height: 400px;
             max-height: 580px;
             object-fit: cover;
 
@@ -1875,7 +1909,7 @@ li {
     }
 
     // color themes
-    
+
     &.turquoise_bg {
         background-color: $turquoise;
 
@@ -2752,11 +2786,14 @@ li {
 .alt-contact {
     position: relative;
 
-    .row {
-        align-items: center;
-        &.flex-row-reverse {
-            .buy_charging-doodles {
-                text-align: left;
+    [class*=container] {
+        & > .row {
+            align-items: center;
+
+            &.flex-row-reverse {
+                .buy_charging-doodles {
+                    text-align: left;
+                }
             }
         }
     }
@@ -2765,6 +2802,7 @@ li {
         .section-content {
             display: flex;
             flex-direction: column;
+
             .doodle-image {
                 max-width: 250px;
                 margin-left: auto;
@@ -2775,6 +2813,7 @@ li {
 
     .buy_charging-doodles {
         text-align: right;
+
         img {
             // position: absolute;
             height: 350px;
@@ -2783,6 +2822,7 @@ li {
             object-fit: none;
         }
     }
+
     &.light_pink_bg {
         background-color: $light_pink;
 
@@ -3106,6 +3146,7 @@ li {
                     }
 
                     .video-img {
+                        border-radius: 16px;
                         img {
                             border-radius: 16px;
                             // width: 480px;
@@ -3177,6 +3218,7 @@ li {
 
 //=========================================== pacakge-section===========================================
 .pacakge-section {
+    padding: 64px 0;
 
     .section-heading {
         margin-bottom: 64px;
@@ -3304,6 +3346,7 @@ li {
                 justify-content: center;
                 align-items: end;
                 display: flex;
+                text-align: center;
 
                 .card-footer {
                     .company-logo {
@@ -3579,6 +3622,7 @@ li {
 
     .headings {
         margin-bottom: 40px;
+
         .title {
             text-align: center;
             color: $black-950;

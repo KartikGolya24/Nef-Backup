@@ -32,12 +32,6 @@
           "SortOrder": 4
         },
         {
-          "Key": "f3e7a2ed-1a2d-45f7-9146-f244c2d51a6d",
-          "Alias": "theme",
-          "DataType": "umb://data-type/153c423a60414a3fb3aeace4cb67697c",
-          "Name": "Theme"
-        },
-        {
           "Key": "fed56e5c-4a49-481f-9340-e678e2c22341",
           "Alias": "descriptionText",
           "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
@@ -52,10 +46,6 @@
   "Dependencies": [
     {
       "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-      "Ordering": true
-    },
-    {
-      "Udi": "umb://data-type/153c423a60414a3fb3aeace4cb67697c",
       "Ordering": true
     },
     {

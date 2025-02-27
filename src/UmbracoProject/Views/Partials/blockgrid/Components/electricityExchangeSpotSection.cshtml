@@ -3,11 +3,12 @@
 
 @{
     var content = Model?.Content;
+    var settings = Model?.Settings as SectionSettingModel;
 }
 
 <!-------------------------------------- earn price-minus --------------------->
 
-<div class="electricity-exchange @content?.Theme">
+<div class="electricity-exchange @settings?.Theme">
     <div class="container">
         <div class="section-heading">
             <h2>@content?.HeadingText</h2>

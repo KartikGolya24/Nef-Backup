@@ -220,6 +220,22 @@
 
 @media screen and (max-width: 991px) {
 
+    .alt-contact-section {
+        &.buy-charging-banner {
+            .page-title {
+                margin-bottom: 64px;
+            }
+        }
+        &.electricity-banner {
+            [class*=col-md] {
+                width: 100%;
+            }
+            .page-title {
+                margin-bottom: 64px;
+            }
+        }
+    }
+
 
     .alt-section .section-position-img.cap-doodle {
         display: block;
@@ -322,7 +338,6 @@
         padding: 0;
     }
 
-    .electricity-banner [class*=col-],
     .order-nef-power .row [class*=col-] {
         width: 100%;
         margin-bottom: 64px;

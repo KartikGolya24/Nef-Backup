@@ -4,14 +4,13 @@
 
 @{
     var content = Model?.Content;
-    var settings = Model?.Settings as GlobalSettingModel;
+    var settings = Model?.Settings as SectionSettingModel;
 }
 
 @if (content?.SectionColumn?.Count > 0)
 {
-    var padding = !string.IsNullOrWhiteSpace(settings?.PaddingTopBottom) ? $"padding:{settings?.PaddingTopBottom} 0px" : "";
     int index = 0;
-    <div class="alt-section @settings?.Theme @settings?.Class" style="@padding">
+    <div class="alt-section @settings?.Theme">
         <div class="container">
             <div class="row align-items-center">
                 @foreach (var item in content?.SectionColumn)
@@ -24,7 +23,7 @@
 
                         <div class="col-lg-6">
                             <div class="section-detail @(index == 1?"ms-auto":"")">
-                                <div class="section-content black-950">
+                                <div class="section-content">
                                     @if (!string.IsNullOrWhiteSpace(contentBlock?.Heading?.ToString()))
                                     {
                                         @Html.Raw(contentBlock?.Heading)
@@ -41,21 +40,11 @@
                                                 var richTextContent = block?.Content as DescriptionText;
                                                 @Html?.Raw(richTextContent?.RichTextContent)
                                             }
-                                            @* else if (aliasName == TextListWithIcon.ModelTypeAlias)
-                                            {
-                                                var textList = block?.Content as TextListWithIcon;
-                                                @if (textList?.TextList?.Count > 0)
-                                                {
-                                                    <ul class="@setting?.CssClass">
-                                                        @Html.GetBlockListHtml(textList?.TextList)
-                                                    </ul>
-                                                }
-                                            } *@
                                             else if (aliasName == TwoColumnIconTextList.ModelTypeAlias)
                                             {
 
                                                 var twoColumnIconTextListModel = block?.Content as TwoColumnIconTextList;
-                                                @if (twoColumnIconTextListModel != null && twoColumnIconTextListModel?.Blocks?.Count > 0)
+                                                @if (twoColumnIconTextListModel != null && twoColumnIconTextListModel.Blocks?.Count > 0)
                                                 {
                                                     var count = 1;
                                                     <ul class="@(ConstantHelper.IconStyle(twoColumnIconTextListModel.IconStyle))">
@@ -75,7 +64,7 @@
                                                                         <span>@(count++)</span>
                                                                     }
                                                                 </div>
-                                                                <div class="list-information-text @(twoColumnIconTextListModel?.IsTextItalic == true ? "italic" : "")">
+                                                                <div class="list-information-text @(twoColumnIconTextListModel.IsTextItalic == true ? "italic" : "")">
                                                                     @if (!string.IsNullOrWhiteSpace(listModel?.Title))
                                                                     {
                                                                         <h5 class="list-inner-title">@listModel?.Title</h5>

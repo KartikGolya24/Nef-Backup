@@ -23,12 +23,6 @@
           "DataType": "umb://data-type/8db3a420d9844533982db823184f25aa",
           "Name": "Blocks",
           "SortOrder": 1
-        },
-        {
-          "Key": "bdef4b73-295e-46c6-a5c9-201d75baa99f",
-          "Alias": "formSectionTheme",
-          "DataType": "umb://data-type/4f3394864924406daba4f94c76c80cc6",
-          "Name": "Form Section Theme"
         }
       ]
     }
@@ -36,10 +30,6 @@
   "PropertyTypes": [],
   "Udi": "umb://document-type/6274d9f92ce448c8a5a51b8d20ab06c9",
   "Dependencies": [
-    {
-      "Udi": "umb://data-type/4f3394864924406daba4f94c76c80cc6",
-      "Ordering": true
-    },
     {
       "Udi": "umb://data-type/8db3a420d9844533982db823184f25aa",
       "Ordering": true

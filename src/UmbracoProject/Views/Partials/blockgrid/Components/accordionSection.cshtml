@@ -4,13 +4,12 @@
 
 @{
     var content = Model?.Content;
-    var setting = Model?.Settings as SettingModel;
-    var padding = !string.IsNullOrWhiteSpace(setting?.PaddingTopBottom) ? $"padding:{setting?.PaddingTopBottom} 0px" : "";
+    var setting = Model?.Settings as SectionSettingModel;
 
 }
 
 <!------------------------------------- Accordion Section ----------------------------->
-<div class="faq-section @setting?.CssClass" style="@padding">
+<div class="faq-section @setting?.Theme">
     <div class="container">
         @if (!string.IsNullOrWhiteSpace(content?.HeadingText))
         {

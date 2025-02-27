@@ -3,15 +3,16 @@
 
 @{
     var content = Model?.Content;
+    var setting = Model?.Settings as SectionSettingModel;
 }
 
 <!---------------------------------- electricity bill ---------------------------->
-<div class="electricity-bill">
+<div class="electricity-bill @setting?.Theme">
     <div class="container">
         @if (!string.IsNullOrWhiteSpace(content?.VideoTopHeading))
         {
             <div class="section-heading">
-                <h2 class="black-950 fw-600">@content?.VideoTopHeading</h2>
+                <h2>@content?.VideoTopHeading</h2>
             </div>
         }
 

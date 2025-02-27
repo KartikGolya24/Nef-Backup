@@ -3,12 +3,12 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<PublicChargingSection>>
 @{
     var content = Model?.Content;
+    var setting = Model?.Settings as SectionSettingModel;
 }
 
 
 <!-------------------------------------- public chrging --------------------->
-<div class="charging-station alt-section turquoise_bg">
-    <div class="container">
+<div class="alt-section @setting?.Theme">
         @if (content?.Blocks?.Count > 0)
         {
             @foreach (var item in content?.Blocks)
@@ -16,35 +16,37 @@
                 @if (item?.Content?.ContentType?.Alias == "publicChargingLocationLinkBlock")
                 {
                     var itemModel = item?.Content as PublicChargingLocationLinkBlock;
-                    <div class="row align-items-center flex-row-reverse">
-                        <div class="col-lg-6">
-                            <div class="section-detail ms-auto">
-                                <div class="section-content">
-                                    <h2>@itemModel?.Heading </h2>
-                                    @itemModel?.Description
-                                    <ul class="location-list mt-40">
-                                        @foreach (var link in itemModel?.LocationLink)
-                                        {
+                    <div class="container">
+                        <div class="row align-items-center flex-row-reverse">
+                            <div class="col-lg-6">
+                                <div class="section-detail ms-auto">
+                                    <div class="section-content">
+                                        <h2>@itemModel?.Heading </h2>
+                                        @itemModel?.Description
+                                        <ul class="location-list mt-40">
+                                            @foreach (var link in itemModel?.LocationLink)
+                                            {
 
-                                            <li>
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M20.7636 10.4077C20.7636 16.0233 14.2643 21.0201 12.7277 22.123C12.5168 22.2744 12.2663 22.3487 12.0068 22.3487C11.7473 22.3487 11.4968 22.2744 11.2859 22.123C9.74924 21.0201 3.25 16.0233 3.25 10.4077C3.25 5.57142 7.17054 1.65088 12.0068 1.65088C16.8431 1.65088 20.7636 5.57142 20.7636 10.4077Z"
-                                                          stroke="#000000" stroke-width="1.71003" stroke-linecap="round" stroke-linejoin="round" />
-                                                    <path d="M8.82227 9.61062C8.82227 10.4552 9.15776 11.2651 9.75494 11.8623C10.3521 12.4595 11.1621 12.795 12.0066 12.795C12.8512 12.795 13.6611 12.4595 14.2583 11.8623C14.8555 11.2651 15.191 10.4552 15.191 9.61062C15.191 8.76608 14.8555 7.95612 14.2583 7.35894C13.6611 6.76176 12.8512 6.42627 12.0066 6.42627C11.1621 6.42627 10.3521 6.76176 9.75494 7.35894C9.15776 7.95612 8.82227 8.76608 8.82227 9.61062Z"
-                                                          stroke="#000000" stroke-width="1.71003" stroke-linecap="round" stroke-linejoin="round" />
-                                                </svg>
-                                                <p>
-                                                    <a href="@link?.Url" class="nav-link">@link?.Name</a>
+                                                <li>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M20.7636 10.4077C20.7636 16.0233 14.2643 21.0201 12.7277 22.123C12.5168 22.2744 12.2663 22.3487 12.0068 22.3487C11.7473 22.3487 11.4968 22.2744 11.2859 22.123C9.74924 21.0201 3.25 16.0233 3.25 10.4077C3.25 5.57142 7.17054 1.65088 12.0068 1.65088C16.8431 1.65088 20.7636 5.57142 20.7636 10.4077Z"
+                                                              stroke="#000000" stroke-width="1.71003" stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path d="M8.82227 9.61062C8.82227 10.4552 9.15776 11.2651 9.75494 11.8623C10.3521 12.4595 11.1621 12.795 12.0066 12.795C12.8512 12.795 13.6611 12.4595 14.2583 11.8623C14.8555 11.2651 15.191 10.4552 15.191 9.61062C15.191 8.76608 14.8555 7.95612 14.2583 7.35894C13.6611 6.76176 12.8512 6.42627 12.0066 6.42627C11.1621 6.42627 10.3521 6.76176 9.75494 7.35894C9.15776 7.95612 8.82227 8.76608 8.82227 9.61062Z"
+                                                              stroke="#000000" stroke-width="1.71003" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                    <p>
+                                                        <a href="@link?.Url" class="nav-link">@link?.Name</a>
                                                     </p>
-                                            </li>
-                                        }
-                                    </ul>
+                                                </li>
+                                            }
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="section-img">
-                                <img src="@itemModel?.Image?.GetWebp()" class="img-fluid" alt="img">
+                            <div class="col-lg-6">
+                                <div class="section-img">
+                                    <img src="@itemModel?.Image?.GetWebp()" class="img-fluid" alt="img">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -53,31 +55,33 @@
                 @if (item?.Content?.ContentType?.Alias == "publicChargingAppInfoBlock")
                 {
                     var itemModel = item?.Content as PublicChargingAppInfoBlock;
-                    <div class="dark_blue_bg py-24 px-24 wrapper mt-80">
+                    <div class="container">
+                        <div class="py-24 px-24 wrapper mt-80">
 
-                        <div class="row align-items-center ">
-                            <div class="col-lg-6">
-                                <div class="section-detail">
-                                    <div class="section-content black-100">
-                                        <h2 class="white fw-600">@itemModel?.Heading</h2>
-                                        @Html?.Raw(itemModel?.Description)
+                            <div class="row align-items-center ">
+                                <div class="col-lg-6">
+                                    <div class="section-detail">
+                                        <div class="section-content">
+                                            <h2>@itemModel?.Heading</h2>
+                                            @Html?.Raw(itemModel?.Description)
 
-                                    </div>
+                                        </div>
 
-                                    <div class="multiple-buttons">
-                                        @if (itemModel?.ButtonList?.Count > 0)
-                                        {
-                                            @Html.GetBlockListHtml(itemModel?.ButtonList)
-                                        }
+                                        <div class="multiple-buttons">
+                                            @if (itemModel?.ButtonList?.Count > 0)
+                                            {
+                                                @Html.GetBlockListHtml(itemModel?.ButtonList)
+                                            }
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="section-img">
-                                    <img src="@itemModel?.SectionImage?.GetWebp()" class="img-fluid" alt="img">
+                                <div class="col-lg-6">
+                                    <div class="section-img">
+                                        <img src="@itemModel?.SectionImage?.GetWebp()" class="img-fluid" alt="img">
+                                    </div>
                                 </div>
-                            </div>
 
+                            </div>
                         </div>
                     </div>
                 }
@@ -85,6 +89,5 @@
             }
         }
 
-    </div>
 </div>
 

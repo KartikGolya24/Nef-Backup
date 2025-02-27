@@ -6,28 +6,15 @@
 @using UmbracoProject.App_Code.Models
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<FormSection>>
 @inject IHttpContextAccessor _contextAccessor;
-@inject IUmbracoContextAccessor _UMBcontextAccessor;
 
 @{
     var content = Model?.Content;
-    var settings = Model?.Settings as SettingModel;
+    var settings = Model?.Settings as SectionSettingModel;
 
-}
-
-@{
-    // Get the current page from the Umbraco context
-    IPublishedContent? currentPage = null;
-    if (_UMBcontextAccessor.TryGetUmbracoContext(out var umbracoContext))
-    {
-        currentPage = umbracoContext.PublishedRequest?.PublishedContent;
-    }
-
-    // Get the current URL
-    var currentPageUrl = currentPage?.Url(mode: UrlMode.Absolute);
 }
 
 <!--------------------------------------section contact-form---------------------------->
-<div class="alt-contact @content?.FormSectionTheme">
+<div class="alt-contact @settings?.Theme">
     <div class="container">
         <div class="row">
             @if (content?.Blocks?.Count > 0)
@@ -39,7 +26,7 @@
                     {
                         var itemModel = item?.Content as FormSectionContentBlock;
                         <div class="col-lg-6">
-                            <div class="section-detail @(index == 1?"ms-auto":"")">
+                            <div class="section-detail @(index == 1?"ms-auto":"")" >
                                 <div class="section-content d-flex flex-column black-950">
                                     <h2>
                                         @itemModel?.HeadingText
@@ -48,7 +35,7 @@
                                 </div>
                                 @if (!string.IsNullOrWhiteSpace(itemModel?.Image?.MediaUrl()))
                                 {
-                                    <div class="buy_charging-doodles">
+                                    <div class="buy_charging-doodles" style="text-align:@(index == 1 ? "left":"right")">
                                         <img src="@itemModel?.Image?.MediaUrl()" class="img-fluid" alt="">
                                     </div>
                                 }

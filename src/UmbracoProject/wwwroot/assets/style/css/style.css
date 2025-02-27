@@ -11297,66 +11297,6 @@ textarea.form-control {
 .service-card .card-outer.dark_blue_bg .card-body p {
   color: #efefef;
 }
-.service-card .card-outer.light_purple_bg {
-  background-color: #F8F0F7;
-}
-.service-card .card-outer.light_purple_bg .card-icon {
-  background-color: #A45699;
-}
-.service-card .card-outer.light_purple_bg .card-icon svg path {
-  stroke: #ffffff;
-}
-.service-card .card-outer.light_purple_bg .card-body h3, .service-card .card-outer.light_purple_bg .card-body .h3 {
-  color: #292929;
-}
-.service-card .card-outer.light_purple_bg .card-body p {
-  color: #464646;
-}
-.service-card .card-outer.steel_blue_bg {
-  background-color: #4878A2;
-}
-.service-card .card-outer.steel_blue_bg .card-icon {
-  border: 2px solid #ffffff;
-}
-.service-card .card-outer.steel_blue_bg .card-icon svg path {
-  stroke: #ffffff;
-}
-.service-card .card-outer.steel_blue_bg .card-body h3, .service-card .card-outer.steel_blue_bg .card-body .h3 {
-  color: #ffffff;
-}
-.service-card .card-outer.steel_blue_bg .card-body p {
-  color: #ffffff;
-}
-.service-card .card-outer.turquoise_bg {
-  background-color: #EEF4F4;
-}
-.service-card .card-outer.turquoise_bg .card-icon {
-  background-color: #37B4B4;
-}
-.service-card .card-outer.turquoise_bg .card-icon svg path {
-  stroke: #ffffff;
-}
-.service-card .card-outer.turquoise_bg .card-body h3, .service-card .card-outer.turquoise_bg .card-body .h3 {
-  color: #292929;
-}
-.service-card .card-outer.turquoise_bg .card-body p {
-  color: #464646;
-}
-.service-card .card-outer.space_blue_bg {
-  background-color: #192A33;
-}
-.service-card .card-outer.space_blue_bg .card-icon {
-  border: 2px solid #37B4B4;
-}
-.service-card .card-outer.space_blue_bg .card-icon svg path {
-  stroke: #ffffff;
-}
-.service-card .card-outer.space_blue_bg .card-body h3, .service-card .card-outer.space_blue_bg .card-body .h3 {
-  color: #ffffff;
-}
-.service-card .card-outer.space_blue_bg .card-body p {
-  color: #efefef;
-}
 
 .available-section {
   padding: 64px 0px;
@@ -11381,6 +11321,7 @@ textarea.form-control {
   align-items: center;
   padding: 16px;
   border: 1px solid #dcdcdc;
+  background-color: #ffffff;
 }
 .available-section .position-list li a .position-content h4, .available-section .position-list li a .position-content .h4 {
   margin-bottom: 4px;
@@ -11608,6 +11549,7 @@ textarea.form-control {
   max-width: 600px;
   margin: auto;
   height: 100%;
+  background-color: #EEF4F4;
 }
 .alt-contact .contact-form .form-outer .form-headings {
   margin-bottom: 40px;
@@ -11934,6 +11876,7 @@ textarea.form-control {
   margin-bottom: 64px;
 }
 .electricity-bill .electricity-bill-detail .video-img {
+  background-color: #284655;
   max-width: 960px;
   margin: 0px auto 96px;
   width: 100%;
@@ -12135,6 +12078,21 @@ body {
   font-size: 16px;
   line-height: 27px;
   color: #292929;
+}
+
+h6,
+.h6,
+h5,
+.h5,
+h4,
+.h4,
+h3,
+.h3,
+h2,
+.h2,
+h1,
+.h1 {
+  font-weight: 600;
 }
 
 h1, .h1 {
@@ -13193,7 +13151,7 @@ li {
 }
 
 .alt-section {
-  padding: 125px 0;
+  padding: 64px 0;
   position: relative;
 }
 .alt-section .section-detail {
@@ -13211,7 +13169,7 @@ li {
 .alt-section .section-detail .section-content h2, .alt-section .section-detail .section-content .h2 {
   margin-bottom: 16px;
   font-weight: 600;
-  color: #284655;
+  color: #292929;
 }
 .alt-section .section-detail .section-content p {
   font-size: 16px;
@@ -13243,6 +13201,11 @@ li {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+.alt-section .section-detail .section-content .square_icon_list li .icon-box svg,
+.alt-section .section-detail .section-content .square_icon_list li .icon-box img {
+  width: 16px;
+  height: 16px;
 }
 .alt-section .section-detail .section-content .square_icon_list li .list-information-text .list-inner-title {
   color: #292929;
@@ -13290,12 +13253,15 @@ li {
 .alt-section .section-detail .section-content .circle_icon_list.text-dark-blue li p {
   color: #284655;
 }
-.alt-section .section-detail .section-content .section_dot_list {
+.alt-section .section-detail .section-content .section_bullet_list {
   padding-left: 22px;
   color: #ffffff;
 }
-.alt-section .section-detail .section-content .section_dot_list li {
+.alt-section .section-detail .section-content .section_bullet_list li {
   list-style: inherit;
+}
+.alt-section .section-detail .section-content .section_bullet_list li::marker {
+  color: #525252;
 }
 .alt-section .section-detail .section-content .location-list {
   display: flex;
@@ -13325,13 +13291,18 @@ li {
 .alt-section .wrapper {
   border-radius: 16px;
   padding: 24px;
+  background-color: #284655;
 }
 .alt-section .wrapper .section-detail {
   max-width: 600px;
   padding: 0px 38px;
 }
+.alt-section .wrapper .section-detail .section-content h2, .alt-section .wrapper .section-detail .section-content .h2 {
+  color: #ffffff;
+}
 .alt-section .wrapper .section-detail .section-content p {
   margin-bottom: 24px;
+  color: #efefef;
 }
 .alt-section .wrapper .section-detail .section-content p:last-child {
   margin-bottom: 0px;
@@ -13473,6 +13444,7 @@ li {
 }
 .alt-section .section-img {
   position: relative;
+  border-radius: 16px;
 }
 .alt-section .section-img .radius {
   border-radius: 16px;
@@ -13480,7 +13452,7 @@ li {
 .alt-section .section-img img:not(.section-position-img img) {
   width: 100%;
   border-radius: 16px;
-  min-height: 450px;
+  min-height: 400px;
   max-height: 580px;
   object-fit: cover;
 }
@@ -14174,10 +14146,10 @@ li {
 .alt-contact {
   position: relative;
 }
-.alt-contact .row {
+.alt-contact [class*=container] > .row {
   align-items: center;
 }
-.alt-contact .row.flex-row-reverse .buy_charging-doodles {
+.alt-contact [class*=container] > .row.flex-row-reverse .buy_charging-doodles {
   text-align: left;
 }
 .alt-contact .section-detail .section-content {
@@ -14429,6 +14401,9 @@ li {
   height: 400px;
   transform: scale(1);
 }
+.owl-slider-section .owl-carousel .owl-stage-outer .owl-stage .owl-item .video-img {
+  border-radius: 16px;
+}
 .owl-slider-section .owl-carousel .owl-stage-outer .owl-stage .owl-item .video-img img {
   border-radius: 16px;
   height: 320px;
@@ -14481,6 +14456,9 @@ li {
   display: none;
 }
 
+.pacakge-section {
+  padding: 64px 0;
+}
 .pacakge-section .section-heading {
   margin-bottom: 64px;
   display: flex;
@@ -14578,6 +14556,7 @@ li {
   justify-content: center;
   align-items: end;
   display: flex;
+  text-align: center;
 }
 .pacakge-section .package-list .package-card .package-footer .card-footer .company-logo {
   display: flex;
@@ -14989,6 +14968,956 @@ li {
   display: block;
 }
 
+.page-title {
+  background-color: #ffffff;
+  padding: 64px 0px;
+  text-align: center;
+}
+.page-title .contact-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 960px;
+  margin: auto;
+}
+.page-title .contact-section h1, .page-title .contact-section .h1 {
+  color: #292929;
+}
+.page-title .contact-section h2, .page-title .contact-section .h2 {
+  color: #292929;
+}
+.page-title .contact-section .contact-section-para {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.page-title .contact-section .contact-section-para p {
+  color: #292929;
+  font-size: 18px;
+  line-height: 32px;
+}
+.page-title.space_blue_bg, .page-title.dark_blue_bg {
+  background-color: #192A33;
+}
+.page-title.space_blue_bg h1, .page-title.space_blue_bg .h1, .page-title.dark_blue_bg h1, .page-title.dark_blue_bg .h1 {
+  color: #ffffff;
+}
+.page-title.space_blue_bg h2, .page-title.space_blue_bg .h2, .page-title.dark_blue_bg h2, .page-title.dark_blue_bg .h2 {
+  color: #ffffff;
+}
+.page-title.space_blue_bg .contact-section-para p, .page-title.dark_blue_bg .contact-section-para p {
+  color: #efefef;
+}
+
+.alt-contact-section {
+  padding: 64px 0;
+}
+.alt-contact-section .page-title {
+  text-align: left;
+  padding: 0;
+}
+.alt-contact-section.electricity-banner .page-title .contact-section {
+  max-width: 720px;
+  margin: 0;
+}
+.alt-contact-section.buy-charging-banner .page-title .contact-section {
+  max-width: 512px;
+  margin: 0;
+}
+
+.service-card .card-outer.light_purple_bg {
+  background-color: #F8F0F7;
+}
+.service-card .card-outer.light_purple_bg .card-icon {
+  background-color: #A45699;
+}
+.service-card .card-outer.light_purple_bg .card-icon svg path {
+  stroke: #ffffff;
+}
+.service-card .card-outer.light_purple_bg .card-body h3, .service-card .card-outer.light_purple_bg .card-body .h3 {
+  color: #292929;
+}
+.service-card .card-outer.light_purple_bg .card-body p {
+  color: #464646;
+}
+.service-card .card-outer.steel_blue_bg {
+  background-color: #4878A2;
+}
+.service-card .card-outer.steel_blue_bg .card-icon {
+  border: 2px solid #ffffff;
+}
+.service-card .card-outer.steel_blue_bg .card-icon svg path {
+  stroke: #ffffff;
+}
+.service-card .card-outer.steel_blue_bg .card-body h3, .service-card .card-outer.steel_blue_bg .card-body .h3 {
+  color: #ffffff;
+}
+.service-card .card-outer.steel_blue_bg .card-body p {
+  color: #ffffff;
+}
+.service-card .card-outer.turquoise_bg {
+  background-color: #EEF4F4;
+}
+.service-card .card-outer.turquoise_bg .card-icon {
+  background-color: #37B4B4;
+}
+.service-card .card-outer.turquoise_bg .card-icon svg path {
+  stroke: #ffffff;
+}
+.service-card .card-outer.turquoise_bg .card-body h3, .service-card .card-outer.turquoise_bg .card-body .h3 {
+  color: #292929;
+}
+.service-card .card-outer.turquoise_bg .card-body p {
+  color: #464646;
+}
+.service-card .card-outer.space_blue_bg {
+  background-color: #192A33;
+}
+.service-card .card-outer.space_blue_bg .card-icon {
+  border: 2px solid #37B4B4;
+}
+.service-card .card-outer.space_blue_bg .card-icon svg path {
+  stroke: #ffffff;
+}
+.service-card .card-outer.space_blue_bg .card-body h3, .service-card .card-outer.space_blue_bg .card-body .h3 {
+  color: #ffffff;
+}
+.service-card .card-outer.space_blue_bg .card-body p {
+  color: #efefef;
+}
+
+.private-turquoise-fade {
+  background-color: #EEF4F4;
+}
+.private-turquoise-fade .section-detail .section-content h2, .private-turquoise-fade .section-detail .section-content .h2, .private-turquoise-fade .section-detail .section-content h3, .private-turquoise-fade .section-detail .section-content .h3 {
+  color: #292929;
+}
+.private-turquoise-fade .section-detail .section-content p {
+  color: #525252;
+}
+.private-turquoise-fade .section-detail .section-content .circle_icon_list li .icon-box {
+  background-color: #37B4B4;
+}
+.private-turquoise-fade .section-detail .section-content .circle_icon_list li .icon-box span {
+  color: #ffffff;
+}
+.private-turquoise-fade .section-detail .section-content .circle_icon_list li .list-information-text .list-inner-title {
+  color: #292929;
+}
+.private-turquoise-fade .section-detail .section-content .circle_icon_list li .list-information-text p {
+  color: #525252;
+}
+.private-turquoise-fade .section-detail .section-content .square_icon_list li .icon-box {
+  background-color: #37B4B4;
+}
+.private-turquoise-fade .section-detail .section-content .square_icon_list li .icon-box span {
+  color: #ffffff;
+}
+.private-turquoise-fade .section-detail .section-content .square_icon_list li .list-information-text .list-inner-title {
+  color: #292929;
+}
+.private-turquoise-fade .section-detail .section-content .square_icon_list li .list-information-text p {
+  color: #525252;
+}
+.private-turquoise-fade .section-detail .section-content .section_bullet_list li::marker {
+  color: #525252;
+}
+.private-turquoise-fade .faq-contact h3, .private-turquoise-fade .faq-contact .h3 {
+  color: #292929;
+}
+.private-turquoise-fade .section-heading h2, .private-turquoise-fade .section-heading .h2 {
+  color: #292929;
+}
+.private-turquoise-fade .section-heading p {
+  color: #525252;
+}
+.private-turquoise-fade .contact-form {
+  background-color: #284655;
+}
+.private-turquoise-fade .contact-form .form-outer .form-headings .form-title {
+  color: #ffffff;
+}
+.private-turquoise-fade .contact-form .form-outer .form-headings p {
+  color: #efefef;
+}
+.private-turquoise-fade .contact-form .label {
+  color: #ffffff;
+}
+.private-turquoise-fade .electricity-card {
+  background-color: #284655;
+}
+.private-turquoise-fade .electricity-card .card-body .title {
+  color: #ffffff;
+}
+.private-turquoise-fade .electricity-card .card-body p {
+  color: #efefef;
+}
+.private-turquoise-fade .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title {
+  color: #292929;
+}
+.private-turquoise-fade .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title + p {
+  color: #525252;
+}
+.private-turquoise-fade .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li p {
+  color: #525252;
+}
+.private-turquoise-fade .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li::marker {
+  color: #525252;
+}
+.private-turquoise-fade.owl-slider-section .owl-carousel .owl-nav button {
+  background-color: #37B4B4;
+}
+.private-turquoise-fade.owl-slider-section .owl-carousel .owl-dots .owl-dot {
+  background-color: rgba(55, 180, 180, 0.25);
+}
+.private-turquoise-fade.owl-slider-section .owl-carousel .owl-dots .owl-dot.active {
+  background-color: #37B4B4;
+}
+
+.private-light-moss-green {
+  background-color: #AAD29B;
+}
+.private-light-moss-green .section-detail .section-content h2, .private-light-moss-green .section-detail .section-content .h2, .private-light-moss-green .section-detail .section-content h3, .private-light-moss-green .section-detail .section-content .h3 {
+  color: #292929;
+}
+.private-light-moss-green .section-detail .section-content p {
+  color: #525252;
+}
+.private-light-moss-green .section-detail .section-content .circle_icon_list li .icon-box {
+  background-color: #284655;
+}
+.private-light-moss-green .section-detail .section-content .circle_icon_list li .icon-box span {
+  color: #ffffff;
+}
+.private-light-moss-green .section-detail .section-content .circle_icon_list li .list-information-text .list-inner-title {
+  color: #292929;
+}
+.private-light-moss-green .section-detail .section-content .circle_icon_list li .list-information-text p {
+  color: #525252;
+}
+.private-light-moss-green .section-detail .section-content .square_icon_list li .icon-box {
+  background-color: #284655;
+}
+.private-light-moss-green .section-detail .section-content .square_icon_list li .icon-box span {
+  color: #ffffff;
+}
+.private-light-moss-green .section-detail .section-content .square_icon_list li .list-information-text .list-inner-title {
+  color: #292929;
+}
+.private-light-moss-green .section-detail .section-content .square_icon_list li .list-information-text p {
+  color: #525252;
+}
+.private-light-moss-green .section-detail .section-content .section_bullet_list li::marker {
+  color: #525252;
+}
+.private-light-moss-green .faq-contact h3, .private-light-moss-green .faq-contact .h3 {
+  color: #292929;
+}
+.private-light-moss-green .section-heading h2, .private-light-moss-green .section-heading .h2 {
+  color: #292929;
+}
+.private-light-moss-green .section-heading p {
+  color: #525252;
+}
+.private-light-moss-green .contact-form {
+  background-color: #EEF4F4;
+}
+.private-light-moss-green .contact-form .form-outer .form-headings .form-title {
+  color: #292929;
+}
+.private-light-moss-green .contact-form .form-outer .form-headings p {
+  color: #525252;
+}
+.private-light-moss-green .contact-form .label {
+  color: #292929;
+}
+.private-light-moss-green .electricity-card {
+  background-color: #284655;
+}
+.private-light-moss-green .electricity-card .card-body .title {
+  color: #ffffff;
+}
+.private-light-moss-green .electricity-card .card-body p {
+  color: #efefef;
+}
+.private-light-moss-green .electricity-bill-detail .video-img {
+  background-color: #284655;
+}
+.private-light-moss-green .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title {
+  color: #292929;
+}
+.private-light-moss-green .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title + p {
+  color: #525252;
+}
+.private-light-moss-green .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li p {
+  color: #525252;
+}
+.private-light-moss-green .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li::marker {
+  color: #525252;
+}
+.private-light-moss-green.owl-slider-section .owl-carousel .owl-nav button {
+  background-color: #284655;
+}
+.private-light-moss-green.owl-slider-section .owl-carousel .owl-dots .owl-dot {
+  background-color: rgba(40, 70, 85, 0.25);
+}
+.private-light-moss-green.owl-slider-section .owl-carousel .owl-dots .owl-dot.active {
+  background-color: #284655;
+}
+
+.private-white {
+  background-color: #ffffff;
+}
+.private-white .section-detail .section-content h2, .private-white .section-detail .section-content .h2, .private-white .section-detail .section-content h3, .private-white .section-detail .section-content .h3 {
+  color: #292929;
+}
+.private-white .section-detail .section-content p {
+  color: #525252;
+}
+.private-white .section-detail .section-content .circle_icon_list li .icon-box {
+  background-color: #37B4B4;
+}
+.private-white .section-detail .section-content .circle_icon_list li .list-information-text .list-inner-title {
+  color: #292929;
+}
+.private-white .section-detail .section-content .circle_icon_list li .list-information-text p {
+  color: #525252;
+}
+.private-white .section-detail .section-content .square_icon_list li .icon-box {
+  background-color: #37B4B4;
+}
+.private-white .section-detail .section-content .square_icon_list li .icon-box span {
+  color: #ffffff;
+}
+.private-white .section-detail .section-content .square_icon_list li .list-information-text .list-inner-title {
+  color: #292929;
+}
+.private-white .section-detail .section-content .square_icon_list li .list-information-text p {
+  color: #525252;
+}
+.private-white .section-detail .section-content .section_bullet_list li::marker {
+  color: #525252;
+}
+.private-white .section-detail .section-content .location-list li {
+  background-color: #EEF4F4;
+}
+.private-white .faq-contact h3, .private-white .faq-contact .h3 {
+  color: #292929;
+}
+.private-white .section-heading h2, .private-white .section-heading .h2 {
+  color: #292929;
+}
+.private-white .section-heading p {
+  color: #525252;
+}
+.private-white .contact-form {
+  background-color: #EEF4F4;
+}
+.private-white .contact-form .form-outer .form-headings .form-title {
+  color: #292929;
+}
+.private-white .contact-form .form-outer .form-headings p {
+  color: #525252;
+}
+.private-white .contact-form .label {
+  color: #292929;
+}
+.private-white .electricity-card {
+  background-color: #284655;
+}
+.private-white .electricity-card .card-body .title {
+  color: #ffffff;
+}
+.private-white .electricity-card .card-body p {
+  color: #efefef;
+}
+.private-white .electricity-bill-detail .video-img {
+  background-color: #284655;
+}
+.private-white .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title {
+  color: #292929;
+}
+.private-white .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title + p {
+  color: #525252;
+}
+.private-white .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li p {
+  color: #525252;
+}
+.private-white .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li::marker {
+  color: #525252;
+}
+.private-white.owl-slider-section .owl-carousel .owl-nav button {
+  background-color: #37B4B4;
+}
+.private-white.owl-slider-section .owl-carousel .owl-dots .owl-dot {
+  background-color: rgba(55, 180, 180, 0.25);
+}
+.private-white.owl-slider-section .owl-carousel .owl-dots .owl-dot.active {
+  background-color: #37B4B4;
+}
+
+.private-tv-white {
+  background-color: #ffffff;
+}
+.private-tv-white .section-detail .section-content h2, .private-tv-white .section-detail .section-content .h2, .private-tv-white .section-detail .section-content h3, .private-tv-white .section-detail .section-content .h3 {
+  color: #292929;
+}
+.private-tv-white .section-detail .section-content p {
+  color: #525252;
+}
+.private-tv-white .section-detail .section-content .circle_icon_list li .icon-box {
+  background-color: #37B4B4;
+}
+.private-tv-white .section-detail .section-content .circle_icon_list li .list-information-text .list-inner-title {
+  color: #292929;
+}
+.private-tv-white .section-detail .section-content .circle_icon_list li .list-information-text p {
+  color: #525252;
+}
+.private-tv-white .section-detail .section-content .square_icon_list li .icon-box {
+  background-color: #37B4B4;
+}
+.private-tv-white .section-detail .section-content .square_icon_list li .icon-box span {
+  color: #ffffff;
+}
+.private-tv-white .section-detail .section-content .square_icon_list li .list-information-text .list-inner-title {
+  color: #292929;
+}
+.private-tv-white .section-detail .section-content .square_icon_list li .list-information-text p {
+  color: #525252;
+}
+.private-tv-white .section-detail .section-content .section_bullet_list li::marker {
+  color: #525252;
+}
+.private-tv-white .faq-contact h3, .private-tv-white .faq-contact .h3 {
+  color: #292929;
+}
+.private-tv-white .section-heading h2, .private-tv-white .section-heading .h2 {
+  color: #292929;
+}
+.private-tv-white .section-heading p {
+  color: #525252;
+}
+.private-tv-white .contact-form {
+  background-color: #EEF4F4;
+}
+.private-tv-white .contact-form .form-outer .form-headings .form-title {
+  color: #292929;
+}
+.private-tv-white .contact-form .form-outer .form-headings p {
+  color: #525252;
+}
+.private-tv-white .contact-form .label {
+  color: #292929;
+}
+.private-tv-white .electricity-card {
+  background-color: #284655;
+}
+.private-tv-white .electricity-card .card-body .title {
+  color: #ffffff;
+}
+.private-tv-white .electricity-card .card-body p {
+  color: #efefef;
+}
+.private-tv-white .electricity-bill-detail .video-img {
+  background-color: #284655;
+}
+.private-tv-white .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title {
+  color: #292929;
+}
+.private-tv-white .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title + p {
+  color: #525252;
+}
+.private-tv-white .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li p {
+  color: #525252;
+}
+.private-tv-white .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li::marker {
+  color: #525252;
+}
+.private-tv-white .package-list .package-card {
+  border-color: #A45699;
+  height: 680px;
+}
+
+.private-dark-blue {
+  background-color: #284655;
+}
+.private-dark-blue .section-detail .section-content h2, .private-dark-blue .section-detail .section-content .h2, .private-dark-blue .section-detail .section-content h3, .private-dark-blue .section-detail .section-content .h3 {
+  color: #ffffff;
+}
+.private-dark-blue .section-detail .section-content p {
+  color: #efefef;
+}
+.private-dark-blue .section-detail .section-content .circle_icon_list li .icon-box {
+  background-color: #37B4B4;
+}
+.private-dark-blue .section-detail .section-content .circle_icon_list li .list-information-text .list-inner-title {
+  color: #ffffff;
+}
+.private-dark-blue .section-detail .section-content .circle_icon_list li .list-information-text p {
+  color: #efefef;
+}
+.private-dark-blue .section-detail .section-content .square_icon_list li .icon-box {
+  background-color: #37B4B4;
+}
+.private-dark-blue .section-detail .section-content .square_icon_list li .icon-box span {
+  color: #ffffff;
+}
+.private-dark-blue .section-detail .section-content .square_icon_list li .list-information-text .list-inner-title {
+  color: #ffffff;
+}
+.private-dark-blue .section-detail .section-content .square_icon_list li .list-information-text p {
+  color: #efefef;
+}
+.private-dark-blue .section-detail .section-content .section_bullet_list li::marker {
+  color: #efefef;
+}
+.private-dark-blue .faq-contact h3, .private-dark-blue .faq-contact .h3 {
+  color: #ffffff;
+}
+.private-dark-blue .section-heading h2, .private-dark-blue .section-heading .h2 {
+  color: #ffffff;
+}
+.private-dark-blue .section-heading p {
+  color: #efefef;
+}
+.private-dark-blue .electricity-card {
+  background-color: #EEF4F4;
+}
+.private-dark-blue .electricity-card .card-body .title {
+  color: #292929;
+}
+.private-dark-blue .electricity-card .card-body p {
+  color: #525252;
+}
+.private-dark-blue .contact-form {
+  background-color: #EEF4F4;
+}
+.private-dark-blue .contact-form .form-outer .form-headings .form-title {
+  color: #292929;
+}
+.private-dark-blue .contact-form .form-outer .form-headings p {
+  color: #525252;
+}
+.private-dark-blue .contact-form .label {
+  color: #292929;
+}
+.private-dark-blue .video-img {
+  background-color: #efefef;
+}
+.private-dark-blue .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title {
+  color: #ffffff;
+}
+.private-dark-blue .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title + p {
+  color: #efefef;
+}
+.private-dark-blue .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li p {
+  color: #efefef;
+}
+.private-dark-blue .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li::marker {
+  color: #efefef;
+}
+.private-dark-blue.owl-slider-section .owl-carousel .owl-nav button {
+  background-color: #37B4B4;
+}
+.private-dark-blue.owl-slider-section .owl-carousel .owl-dots .owl-dot {
+  background-color: rgba(55, 180, 180, 0.25);
+}
+.private-dark-blue.owl-slider-section .owl-carousel .owl-dots .owl-dot.active {
+  background-color: #37B4B4;
+}
+.private-dark-blue .wrapper {
+  background-color: #ffffff;
+}
+.private-dark-blue .wrapper .section-detail .section-content h2, .private-dark-blue .wrapper .section-detail .section-content .h2 {
+  color: #292929;
+}
+.private-dark-blue .wrapper .section-detail .section-content p {
+  color: #525252;
+}
+
+.private-light-moss-green-fade {
+  background-color: #E7F4E2;
+}
+.private-light-moss-green-fade .section-detail .section-content h2, .private-light-moss-green-fade .section-detail .section-content .h2, .private-light-moss-green-fade .section-detail .section-content h3, .private-light-moss-green-fade .section-detail .section-content .h3 {
+  color: #292929;
+}
+.private-light-moss-green-fade .section-detail .section-content p {
+  color: #525252;
+}
+.private-light-moss-green-fade .section-detail .section-content .circle_icon_list li .icon-box {
+  background-color: #37B4B4;
+}
+.private-light-moss-green-fade .section-detail .section-content .circle_icon_list li .list-information-text .list-inner-title {
+  color: #292929;
+}
+.private-light-moss-green-fade .section-detail .section-content .circle_icon_list li .list-information-text p {
+  color: #525252;
+}
+.private-light-moss-green-fade .section-detail .section-content .square_icon_list li .icon-box {
+  background-color: #37B4B4;
+}
+.private-light-moss-green-fade .section-detail .section-content .square_icon_list li .icon-box span {
+  color: #ffffff;
+}
+.private-light-moss-green-fade .section-detail .section-content .square_icon_list li .list-information-text .list-inner-title {
+  color: #292929;
+}
+.private-light-moss-green-fade .section-detail .section-content .square_icon_list li .list-information-text p {
+  color: #525252;
+}
+.private-light-moss-green-fade .section-detail .section-content .section_bullet_list li::marker {
+  color: #525252;
+}
+.private-light-moss-green-fade .faq-contact h3, .private-light-moss-green-fade .faq-contact .h3 {
+  color: #292929;
+}
+.private-light-moss-green-fade .section-heading h2, .private-light-moss-green-fade .section-heading .h2 {
+  color: #292929;
+}
+.private-light-moss-green-fade .section-heading p {
+  color: #525252;
+}
+.private-light-moss-green-fade .contact-form {
+  background-color: #284655;
+}
+.private-light-moss-green-fade .contact-form .form-outer .form-headings .form-title {
+  color: #ffffff;
+}
+.private-light-moss-green-fade .contact-form .form-outer .form-headings p {
+  color: #efefef;
+}
+.private-light-moss-green-fade .contact-form .label {
+  color: #ffffff;
+}
+.private-light-moss-green-fade .electricity-card {
+  background-color: #284655;
+}
+.private-light-moss-green-fade .electricity-card .card-body .title {
+  color: #ffffff;
+}
+.private-light-moss-green-fade .electricity-card .card-body p {
+  color: #efefef;
+}
+.private-light-moss-green-fade .electricity-bill-detail .video-img {
+  background-color: #284655;
+}
+.private-light-moss-green-fade .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title {
+  color: #292929;
+}
+.private-light-moss-green-fade .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title + p {
+  color: #525252;
+}
+.private-light-moss-green-fade .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li p {
+  color: #525252;
+}
+.private-light-moss-green-fade .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li::marker {
+  color: #efefef;
+}
+.private-light-moss-green-fade.owl-slider-section .owl-carousel .owl-nav button {
+  background-color: #284655;
+}
+.private-light-moss-green-fade.owl-slider-section .owl-carousel .owl-dots .owl-dot {
+  background-color: rgba(40, 70, 85, 0.25);
+}
+.private-light-moss-green-fade.owl-slider-section .owl-carousel .owl-dots .owl-dot.active {
+  background-color: #284655;
+}
+
+.private-mulberry-purple-fade {
+  background-color: #F8F0F7;
+}
+.private-mulberry-purple-fade .section-detail .section-content h2, .private-mulberry-purple-fade .section-detail .section-content .h2, .private-mulberry-purple-fade .section-detail .section-content h3, .private-mulberry-purple-fade .section-detail .section-content .h3 {
+  color: #292929;
+}
+.private-mulberry-purple-fade .section-detail .section-content p {
+  color: #525252;
+}
+.private-mulberry-purple-fade .section-detail .section-content .circle_icon_list li .icon-box {
+  background-color: #A45699;
+}
+.private-mulberry-purple-fade .section-detail .section-content .circle_icon_list li .icon-box span {
+  color: #ffffff;
+}
+.private-mulberry-purple-fade .section-detail .section-content .circle_icon_list li .list-information-text .list-inner-title {
+  color: #292929;
+}
+.private-mulberry-purple-fade .section-detail .section-content .circle_icon_list li .list-information-text p {
+  color: #525252;
+}
+.private-mulberry-purple-fade .section-detail .section-content .square_icon_list li .icon-box {
+  background-color: #A45699;
+}
+.private-mulberry-purple-fade .section-detail .section-content .square_icon_list li .icon-box span {
+  color: #ffffff;
+}
+.private-mulberry-purple-fade .section-detail .section-content .square_icon_list li .list-information-text .list-inner-title {
+  color: #292929;
+}
+.private-mulberry-purple-fade .section-detail .section-content .square_icon_list li .list-information-text p {
+  color: #525252;
+}
+.private-mulberry-purple-fade .section-detail .section-content .section_bullet_list li::marker {
+  color: #525252;
+}
+.private-mulberry-purple-fade .faq-contact h3, .private-mulberry-purple-fade .faq-contact .h3 {
+  color: #292929;
+}
+.private-mulberry-purple-fade .section-heading h2, .private-mulberry-purple-fade .section-heading .h2 {
+  color: #292929;
+}
+.private-mulberry-purple-fade .section-heading p {
+  color: #525252;
+}
+.private-mulberry-purple-fade .contact-form {
+  background-color: #A45699;
+}
+.private-mulberry-purple-fade .contact-form .form-outer .form-headings .form-title {
+  color: #ffffff;
+}
+.private-mulberry-purple-fade .contact-form .form-outer .form-headings p {
+  color: #efefef;
+}
+.private-mulberry-purple-fade .contact-form .label {
+  color: #ffffff;
+}
+.private-mulberry-purple-fade .electricity-card {
+  background-color: #284655;
+}
+.private-mulberry-purple-fade .electricity-card .card-body .title {
+  color: #ffffff;
+}
+.private-mulberry-purple-fade .electricity-card .card-body p {
+  color: #efefef;
+}
+.private-mulberry-purple-fade .electricity-bill-detail .video-img {
+  background-color: #284655;
+}
+.private-mulberry-purple-fade .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title {
+  color: #292929;
+}
+.private-mulberry-purple-fade .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title + p {
+  color: #525252;
+}
+.private-mulberry-purple-fade .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li p {
+  color: #525252;
+}
+.private-mulberry-purple-fade .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li::marker {
+  color: #525252;
+}
+.private-mulberry-purple-fade.owl-slider-section .owl-carousel .owl-nav button {
+  background-color: #A45699;
+}
+.private-mulberry-purple-fade.owl-slider-section .owl-carousel .owl-dots .owl-dot {
+  background-color: rgba(164, 86, 153, 0.25);
+}
+.private-mulberry-purple-fade.owl-slider-section .owl-carousel .owl-dots .owl-dot.active {
+  background-color: #A45699;
+}
+
+.private-mulberry-purple {
+  background-color: #A45699;
+}
+.private-mulberry-purple .section-detail .section-content h2, .private-mulberry-purple .section-detail .section-content .h2, .private-mulberry-purple .section-detail .section-content h3, .private-mulberry-purple .section-detail .section-content .h3 {
+  color: #ffffff;
+}
+.private-mulberry-purple .section-detail .section-content p {
+  color: #efefef;
+}
+.private-mulberry-purple .section-detail .section-content .circle_icon_list li .icon-box {
+  background-color: #F8F0F7;
+}
+.private-mulberry-purple .section-detail .section-content .circle_icon_list li .icon-box span {
+  color: #525252;
+}
+.private-mulberry-purple .section-detail .section-content .circle_icon_list li .list-information-text .list-inner-title {
+  color: #ffffff;
+}
+.private-mulberry-purple .section-detail .section-content .circle_icon_list li .list-information-text p {
+  color: #efefef;
+}
+.private-mulberry-purple .section-detail .section-content .square_icon_list li .icon-box {
+  background-color: #F8F0F7;
+}
+.private-mulberry-purple .section-detail .section-content .square_icon_list li .icon-box span {
+  color: #525252;
+}
+.private-mulberry-purple .section-detail .section-content .square_icon_list li .list-information-text .list-inner-title {
+  color: #ffffff;
+}
+.private-mulberry-purple .section-detail .section-content .square_icon_list li .list-information-text p {
+  color: #efefef;
+}
+.private-mulberry-purple .section-detail .section-content .section_bullet_list li::marker {
+  color: #efefef;
+}
+.private-mulberry-purple .faq-contact h3, .private-mulberry-purple .faq-contact .h3 {
+  color: #ffffff;
+}
+.private-mulberry-purple .section-heading h2, .private-mulberry-purple .section-heading .h2 {
+  color: #ffffff;
+}
+.private-mulberry-purple .section-heading p {
+  color: #efefef;
+}
+.private-mulberry-purple .contact-form {
+  background-color: #F8F0F7;
+}
+.private-mulberry-purple .contact-form .form-outer .form-headings .form-title {
+  color: #292929;
+}
+.private-mulberry-purple .contact-form .form-outer .form-headings p {
+  color: #525252;
+}
+.private-mulberry-purple .contact-form .label {
+  color: #292929;
+}
+.private-mulberry-purple .electricity-card {
+  background-color: #EEF4F4;
+}
+.private-mulberry-purple .electricity-card .card-body .title {
+  color: #292929;
+}
+.private-mulberry-purple .electricity-card .card-body p {
+  color: #525252;
+}
+.private-mulberry-purple .electricity-bill-detail .video-img {
+  background-color: #FFE6F3;
+}
+.private-mulberry-purple .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title {
+  color: #ffffff;
+}
+.private-mulberry-purple .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title + p {
+  color: #efefef;
+}
+.private-mulberry-purple .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li p {
+  color: #efefef;
+}
+.private-mulberry-purple .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li::marker {
+  color: #efefef;
+}
+.private-mulberry-purple.owl-slider-section .owl-carousel .owl-nav button {
+  background-color: #F8F0F7;
+}
+.private-mulberry-purple.owl-slider-section .owl-carousel .owl-nav button img {
+  filter: invert(1);
+}
+.private-mulberry-purple.owl-slider-section .owl-carousel .owl-dots .owl-dot {
+  background-color: rgba(248, 240, 247, 0.25);
+}
+.private-mulberry-purple.owl-slider-section .owl-carousel .owl-dots .owl-dot.active {
+  background-color: #F8F0F7;
+}
+.private-mulberry-purple .wrapper {
+  background-color: #ffffff;
+}
+.private-mulberry-purple .wrapper .section-detail .section-content h2, .private-mulberry-purple .wrapper .section-detail .section-content .h2 {
+  color: #292929;
+}
+.private-mulberry-purple .wrapper .section-detail .section-content p {
+  color: #525252;
+}
+
+.private-turquoise {
+  background-color: #37B4B4;
+}
+.private-turquoise .section-detail .section-content h2, .private-turquoise .section-detail .section-content .h2, .private-turquoise .section-detail .section-content h3, .private-turquoise .section-detail .section-content .h3 {
+  color: #ffffff;
+}
+.private-turquoise .section-detail .section-content p {
+  color: #efefef;
+}
+.private-turquoise .section-detail .section-content .circle_icon_list li .icon-box {
+  background-color: #F8F0F7;
+}
+.private-turquoise .section-detail .section-content .circle_icon_list li .icon-box span {
+  color: #525252;
+}
+.private-turquoise .section-detail .section-content .circle_icon_list li .list-information-text .list-inner-title {
+  color: #ffffff;
+}
+.private-turquoise .section-detail .section-content .circle_icon_list li .list-information-text p {
+  color: #efefef;
+}
+.private-turquoise .section-detail .section-content .square_icon_list li .icon-box {
+  background-color: #F8F0F7;
+}
+.private-turquoise .section-detail .section-content .square_icon_list li .icon-box span {
+  color: #525252;
+}
+.private-turquoise .section-detail .section-content .square_icon_list li .list-information-text .list-inner-title {
+  color: #ffffff;
+}
+.private-turquoise .section-detail .section-content .square_icon_list li .list-information-text p {
+  color: #efefef;
+}
+.private-turquoise .section-detail .section-content .section_bullet_list li::marker {
+  color: #efefef;
+}
+.private-turquoise .faq-contact h3, .private-turquoise .faq-contact .h3 {
+  color: #ffffff;
+}
+.private-turquoise .section-heading h2, .private-turquoise .section-heading .h2 {
+  color: #ffffff;
+}
+.private-turquoise .section-heading p {
+  color: #efefef;
+}
+.private-turquoise .contact-form {
+  background-color: #F8F0F7;
+}
+.private-turquoise .contact-form .form-outer .form-headings .form-title {
+  color: #292929;
+}
+.private-turquoise .contact-form .form-outer .form-headings p {
+  color: #525252;
+}
+.private-turquoise .contact-form .label {
+  color: #292929;
+}
+.private-turquoise .electricity-card {
+  background-color: #284655;
+}
+.private-turquoise .electricity-card .card-body .title {
+  color: #ffffff;
+}
+.private-turquoise .electricity-card .card-body p {
+  color: #efefef;
+}
+.private-turquoise .electricity-bill-detail .video-img {
+  background-color: #FFE6F3;
+}
+.private-turquoise .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title {
+  color: #ffffff;
+}
+.private-turquoise .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title + p {
+  color: #efefef;
+}
+.private-turquoise .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li p {
+  color: #efefef;
+}
+.private-turquoise .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li::marker {
+  color: #efefef;
+}
+.private-turquoise.owl-slider-section .owl-carousel .owl-nav button {
+  background-color: #284655;
+}
+.private-turquoise.owl-slider-section .owl-carousel .owl-dots .owl-dot {
+  background-color: rgba(40, 70, 85, 0.25);
+}
+.private-turquoise.owl-slider-section .owl-carousel .owl-dots .owl-dot.active {
+  background-color: #284655;
+}
+.private-turquoise .wrapper {
+  background-color: #ffffff;
+}
+.private-turquoise .wrapper .section-detail .section-content h2, .private-turquoise .wrapper .section-detail .section-content .h2 {
+  color: #292929;
+}
+.private-turquoise .wrapper .section-detail .section-content p {
+  color: #525252;
+}
+
 @media screen and (min-width: 576px) {
   .electricity-price-slider .owl-stage-outer {
     margin-left: calc((100% - 540px) / 2);
@@ -15105,6 +16034,15 @@ li {
   }
 }
 @media screen and (max-width: 991px) {
+  .alt-contact-section.buy-charging-banner .page-title {
+    margin-bottom: 64px;
+  }
+  .alt-contact-section.electricity-banner [class*=col-md] {
+    width: 100%;
+  }
+  .alt-contact-section.electricity-banner .page-title {
+    margin-bottom: 64px;
+  }
   .alt-section .section-position-img.cap-doodle {
     display: block;
     max-width: 100%;
@@ -15167,7 +16105,6 @@ li {
   .electricity-bill .electricity-bill-detail {
     padding: 0;
   }
-  .electricity-banner [class*=col-],
   .order-nef-power .row [class*=col-] {
     width: 100%;
     margin-bottom: 64px;

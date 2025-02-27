@@ -1,6 +1,6 @@
 {
-  "Name": "Two Column Content Blocks Setting Model",
-  "Alias": "twoColumnContentBlocksSettingModel",
+  "Name": "Section Setting Model",
+  "Alias": "sectionSettingModel",
   "AllowedTemplates": [],
   "HistoryCleanup": {},
   "Icon": "icon-science",
@@ -13,24 +13,24 @@
   "CompositionContentTypes": [],
   "PropertyGroups": [
     {
-      "Key": "732452e3-9a79-4e1b-ac92-eee45873015c",
+      "Key": "2685e21c-14fb-4419-967a-1c49be23302e",
       "Name": "Content",
       "Alias": "content",
       "PropertyTypes": [
         {
-          "Key": "d51edb9a-d1ac-42b2-baef-5c34e894c3c9",
-          "Alias": "cssClass",
-          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-          "Name": "Css Class"
+          "Key": "1007f2b9-f1d7-45f4-932d-7fdd9b0da8e3",
+          "Alias": "theme",
+          "DataType": "umb://data-type/f514154f0b2d4918b899c73d3d6e7e64",
+          "Name": "Theme"
         }
       ]
     }
   ],
   "PropertyTypes": [],
-  "Udi": "umb://document-type/1ca0cc80b27348b18fd541bef3af430b",
+  "Udi": "umb://document-type/d9a72dac69e6440b9a234b106c350cd4",
   "Dependencies": [
     {
-      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Udi": "umb://data-type/f514154f0b2d4918b899c73d3d6e7e64",
       "Ordering": true
     },
     {

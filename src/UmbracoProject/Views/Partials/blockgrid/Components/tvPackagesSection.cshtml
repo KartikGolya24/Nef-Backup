@@ -1,5 +1,12 @@
-﻿   <!-------------------------------------- pacakge --------------------->
-<div class="pacakge-section my-64 py-64">
+﻿  @using Umbraco.Cms.Core.Models.Blocks
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<TvPackagesSection>>
+@{
+    var content = Model?.Content;
+    var setting = Model?.Settings as SectionSettingModel;
+}
+ 
+<!-------------------------------------- pacakge --------------------->
+<div class="pacakge-section my-64 py-64 @setting?.Theme">
     <div class="container-xl">
         <h2 class="black-950 mb-64 text-center fw-600">Find den TV-pakke, der passer dig</h2>
         <div class="package-list tv_package">

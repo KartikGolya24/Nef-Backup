@@ -2,14 +2,17 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<FiberPackageSection>>
 @{
     var content = Model?.Content;
+    var setting = Model?.Settings as SectionSettingModel;
 }
 
 
 <!-------------------------------------- pacakge --------------------->
-<div class="pacakge-section pb-64">
+<div class="pacakge-section @setting?.Theme">
 
     <div class="container-xl">
-        <h2 class="black-950 mb-64 text-center fw-600">Find den rigtige fiberpakke</h2>
+        <div class="section-heading">
+            <h2>Find den rigtige fiberpakke</h2>
+        </div>
         <div class="package-list">
             <div class="row">
                 <div class="col-xl-3 col-md-6 mb-4 mb-xl-0">
@@ -17,20 +20,20 @@
                         <div class="card-detail">
                             <div class="card-header">
                                 <div class="card-heading">
-                                    <h4 class="black-950 fw-600">
+                                    <h4>
                                         nef Fritidshus
                                     </h4>
-                                    <p class="small black-600">En stabil og ideel forbindelse til fornødenhederne i fritidshuset. </p>
+                                    <p>En stabil og ideel forbindelse til fornødenhederne i fritidshuset. </p>
                                 </div>
                                 <div class="price">
-                                    <h3 class="black-950 fw-600">219 kr.</h3>
-                                    <p class="small">/ pr. md.</p>
+                                    <h3>219 kr.</h3>
+                                    <p>/ pr. md.</p>
                                 </div>
                             </div>
                             <div class="card-body">
                                 <ul>
                                     <li>
-                                        <p class="black-950">
+                                        <p>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                                 <g clip-path="url(#clip0_422_9720)">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M15.584 1.52637C16.0726 1.92613 16.1446 2.64631 15.7449 3.13491L6.77681 14.0958C5.95849 15.096 4.47449 15.2197 3.50196 14.3686L0.390374 11.646C-0.0847342 11.2303 -0.132878 10.5081 0.282842 10.033C0.698561 9.55792 1.42072 9.50977 1.89583 9.9255L5.00741 12.6482L13.9755 1.68722C14.3752 1.19861 15.0954 1.1266 15.584 1.52637Z" fill="#AAD29B" />
@@ -61,7 +64,7 @@
                                         </span>
                                     </li>
                                     <li>
-                                        <p class="black-950">
+                                        <p>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                                 <g clip-path="url(#clip0_422_9720)">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M15.584 1.52637C16.0726 1.92613 16.1446 2.64631 15.7449 3.13491L6.77681 14.0958C5.95849 15.096 4.47449 15.2197 3.50196 14.3686L0.390374 11.646C-0.0847342 11.2303 -0.132878 10.5081 0.282842 10.033C0.698561 9.55792 1.42072 9.50977 1.89583 9.9255L5.00741 12.6482L13.9755 1.68722C14.3752 1.19861 15.0954 1.1266 15.584 1.52637Z" fill="#AAD29B" />
@@ -94,7 +97,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="package-footer text-center">
+                        <div class="package-footer">
                             <div class="card-footer">
                                 <div class="footer-btn">
                                     <a href="#searchInternetPackages" data-bs-toggle="modal" type="button" class="btn dark_blue_btn m-auto">
@@ -104,8 +107,8 @@
                                         </svg>
                                         Tjek adresse
                                     </a>
-                                    <a href="#readMorePopup" data-bs-toggle="modal" class="package-link black-950 small">Læs mere</a>
-                                    <p class="small">
+                                    <a href="#readMorePopup" data-bs-toggle="modal" class="package-link">Læs mere</a>
+                                    <p>
                                         Pris i binding 6 mdr. 1.314 kr.<br>
                                         uden Waoo Smart WiFi
                                     </p>
@@ -121,20 +124,20 @@
                         <div class="card-detail">
                             <div class="card-header">
                                 <div class="card-heading">
-                                    <h4 class="black-950 fw-600">
+                                    <h4>
                                         nef Altid
                                     </h4>
-                                    <p class="small black-600">Er I flere i husstanden, som kun tjekker mails, går lidt på sociale medier, internettet og streamer fra et par devices, så er denne pakke til jer.  </p>
+                                    <p>Er I flere i husstanden, som kun tjekker mails, går lidt på sociale medier, internettet og streamer fra et par devices, så er denne pakke til jer.  </p>
                                 </div>
                                 <div class="price">
-                                    <h3 class="black-950 fw-600">299 kr.</h3>
+                                    <h3>299 kr.</h3>
                                     <p class="small">/ pr. md.</p>
                                 </div>
                             </div>
                             <div class="card-body">
                                 <ul>
                                     <li>
-                                        <p class="black-950">
+                                        <p>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                                 <g clip-path="url(#clip0_422_9720)">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M15.584 1.52637C16.0726 1.92613 16.1446 2.64631 15.7449 3.13491L6.77681 14.0958C5.95849 15.096 4.47449 15.2197 3.50196 14.3686L0.390374 11.646C-0.0847342 11.2303 -0.132878 10.5081 0.282842 10.033C0.698561 9.55792 1.42072 9.50977 1.89583 9.9255L5.00741 12.6482L13.9755 1.68722C14.3752 1.19861 15.0954 1.1266 15.584 1.52637Z" fill="#AAD29B" />
@@ -165,7 +168,7 @@
                                         </span>
                                     </li>
                                     <li>
-                                        <p class="black-950">
+                                        <p>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                                 <g clip-path="url(#clip0_422_9720)">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M15.584 1.52637C16.0726 1.92613 16.1446 2.64631 15.7449 3.13491L6.77681 14.0958C5.95849 15.096 4.47449 15.2197 3.50196 14.3686L0.390374 11.646C-0.0847342 11.2303 -0.132878 10.5081 0.282842 10.033C0.698561 9.55792 1.42072 9.50977 1.89583 9.9255L5.00741 12.6482L13.9755 1.68722C14.3752 1.19861 15.0954 1.1266 15.584 1.52637Z" fill="#AAD29B" />
@@ -198,7 +201,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="package-footer text-center">
+                        <div class="package-footer">
                             <div class="card-footer">
                                 <div class="footer-btn">
                                     <a href="#searchInternetPackages" data-bs-toggle="modal" type="button" class="btn dark_blue_btn m-auto">
@@ -208,8 +211,8 @@
                                         </svg>
                                         Tjek adresse
                                     </a>
-                                    <a href="#readMorePopup" data-bs-toggle="modal" class="package-link black-950 small">Læs mere</a>
-                                    <p class="small">
+                                    <a href="#readMorePopup" data-bs-toggle="modal" class="package-link">Læs mere</a>
+                                    <p>
                                         Pris i binding 6 mdr. 1.314 kr.<br>
                                         uden Waoo Smart WiFi
                                     </p>
@@ -225,20 +228,20 @@
                         <div class="card-detail">
                             <div class="card-header">
                                 <div class="card-heading">
-                                    <h4 class="black-950 fw-600">
+                                    <h4>
                                         Waoo Fiber Basic
                                     </h4>
-                                    <p class="small black-600">Er I et par stykker i husstanden, som streamer, holder online-møder, spiller lidt spil online og downloader data, har I brug for denne pakke.</p>
+                                    <p>Er I et par stykker i husstanden, som streamer, holder online-møder, spiller lidt spil online og downloader data, har I brug for denne pakke.</p>
                                 </div>
                                 <div class="price">
-                                    <h3 class="black-950 fw-600">339 kr.</h3>
-                                    <p class="small">/ pr. md.</p>
+                                    <h3>339 kr.</h3>
+                                    <p>/ pr. md.</p>
                                 </div>
                             </div>
                             <div class="card-body">
                                 <ul>
                                     <li>
-                                        <p class="black-950">
+                                        <p>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                                 <g clip-path="url(#clip0_422_9720)">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M15.584 1.52637C16.0726 1.92613 16.1446 2.64631 15.7449 3.13491L6.77681 14.0958C5.95849 15.096 4.47449 15.2197 3.50196 14.3686L0.390374 11.646C-0.0847342 11.2303 -0.132878 10.5081 0.282842 10.033C0.698561 9.55792 1.42072 9.50977 1.89583 9.9255L5.00741 12.6482L13.9755 1.68722C14.3752 1.19861 15.0954 1.1266 15.584 1.52637Z" fill="#AAD29B" />
@@ -269,7 +272,7 @@
                                         </span>
                                     </li>
                                     <li>
-                                        <p class="black-950">
+                                        <p>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                                 <g clip-path="url(#clip0_422_9720)">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M15.584 1.52637C16.0726 1.92613 16.1446 2.64631 15.7449 3.13491L6.77681 14.0958C5.95849 15.096 4.47449 15.2197 3.50196 14.3686L0.390374 11.646C-0.0847342 11.2303 -0.132878 10.5081 0.282842 10.033C0.698561 9.55792 1.42072 9.50977 1.89583 9.9255L5.00741 12.6482L13.9755 1.68722C14.3752 1.19861 15.0954 1.1266 15.584 1.52637Z" fill="#AAD29B" />
@@ -300,7 +303,7 @@
                                         </span>
                                     </li>
                                     <li>
-                                        <p class="black-950">
+                                        <p>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                                 <g clip-path="url(#clip0_422_9720)">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M15.584 1.52637C16.0726 1.92613 16.1446 2.64631 15.7449 3.13491L6.77681 14.0958C5.95849 15.096 4.47449 15.2197 3.50196 14.3686L0.390374 11.646C-0.0847342 11.2303 -0.132878 10.5081 0.282842 10.033C0.698561 9.55792 1.42072 9.50977 1.89583 9.9255L5.00741 12.6482L13.9755 1.68722C14.3752 1.19861 15.0954 1.1266 15.584 1.52637Z" fill="#AAD29B" />
@@ -333,7 +336,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="package-footer text-center">
+                        <div class="package-footer">
                             <div class="card-footer">
                                 <div class="footer-btn">
                                     <a href="#searchInternetPackages" data-bs-toggle="modal" type="button" class="btn dark_blue_btn m-auto">
@@ -343,8 +346,8 @@
                                         </svg>
                                         Tjek adresse
                                     </a>
-                                    <a href="#readMorePopup" data-bs-toggle="modal" class="package-link black-950 small">Læs mere</a>
-                                    <p class="small">
+                                    <a href="#readMorePopup" data-bs-toggle="modal" class="package-link">Læs mere</a>
+                                    <p>
                                         Pris i binding 6 mdr. 1.314 kr.<br>
                                         uden Waoo Smart WiFi
                                     </p>
@@ -360,20 +363,20 @@
                         <div class="card-detail">
                             <div class="card-header">
                                 <div class="card-heading">
-                                    <h4 class="black-950 fw-600">
+                                    <h4>
                                         Waoo Fiber Extra
                                     </h4>
-                                    <p class="small black-600">Er I flere i husstanden, som hele tiden er på internettet samtidigt, hvor I streamer, gamer og downloader masser af data, er denne pakke til jer.</p>
+                                    <p>Er I flere i husstanden, som hele tiden er på internettet samtidigt, hvor I streamer, gamer og downloader masser af data, er denne pakke til jer.</p>
                                 </div>
                                 <div class="price">
-                                    <h3 class="black-950 fw-600">419 kr.</h3>
-                                    <p class="small">/ pr. md.</p>
+                                    <h3>419 kr.</h3>
+                                    <p>/ pr. md.</p>
                                 </div>
                             </div>
                             <div class="card-body">
                                 <ul>
                                     <li>
-                                        <p class="black-950">
+                                        <p>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                                 <g clip-path="url(#clip0_422_9720)">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M15.584 1.52637C16.0726 1.92613 16.1446 2.64631 15.7449 3.13491L6.77681 14.0958C5.95849 15.096 4.47449 15.2197 3.50196 14.3686L0.390374 11.646C-0.0847342 11.2303 -0.132878 10.5081 0.282842 10.033C0.698561 9.55792 1.42072 9.50977 1.89583 9.9255L5.00741 12.6482L13.9755 1.68722C14.3752 1.19861 15.0954 1.1266 15.584 1.52637Z" fill="#AAD29B" />
@@ -404,7 +407,7 @@
                                         </span>
                                     </li>
                                     <li>
-                                        <p class="black-950">
+                                        <p>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                                 <g clip-path="url(#clip0_422_9720)">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M15.584 1.52637C16.0726 1.92613 16.1446 2.64631 15.7449 3.13491L6.77681 14.0958C5.95849 15.096 4.47449 15.2197 3.50196 14.3686L0.390374 11.646C-0.0847342 11.2303 -0.132878 10.5081 0.282842 10.033C0.698561 9.55792 1.42072 9.50977 1.89583 9.9255L5.00741 12.6482L13.9755 1.68722C14.3752 1.19861 15.0954 1.1266 15.584 1.52637Z" fill="#AAD29B" />
@@ -435,7 +438,7 @@
                                         </span>
                                     </li>
                                     <li>
-                                        <p class="black-950">
+                                        <p>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                                 <g clip-path="url(#clip0_422_9720)">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M15.584 1.52637C16.0726 1.92613 16.1446 2.64631 15.7449 3.13491L6.77681 14.0958C5.95849 15.096 4.47449 15.2197 3.50196 14.3686L0.390374 11.646C-0.0847342 11.2303 -0.132878 10.5081 0.282842 10.033C0.698561 9.55792 1.42072 9.50977 1.89583 9.9255L5.00741 12.6482L13.9755 1.68722C14.3752 1.19861 15.0954 1.1266 15.584 1.52637Z" fill="#AAD29B" />
@@ -466,7 +469,7 @@
                                         </span>
                                     </li>
                                     <li>
-                                        <p class="black-950">
+                                        <p>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                                 <g clip-path="url(#clip0_422_9720)">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M15.584 1.52637C16.0726 1.92613 16.1446 2.64631 15.7449 3.13491L6.77681 14.0958C5.95849 15.096 4.47449 15.2197 3.50196 14.3686L0.390374 11.646C-0.0847342 11.2303 -0.132878 10.5081 0.282842 10.033C0.698561 9.55792 1.42072 9.50977 1.89583 9.9255L5.00741 12.6482L13.9755 1.68722C14.3752 1.19861 15.0954 1.1266 15.584 1.52637Z" fill="#AAD29B" />
@@ -499,7 +502,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="package-footer text-center">
+                        <div class="package-footer">
                             <div class="card-footer">
                                 <div class="footer-btn">
                                     <a href="#searchInternetPackages" data-bs-toggle="modal" type="button" class="btn dark_blue_btn m-auto">
@@ -509,8 +512,8 @@
                                         </svg>
                                         Tjek adresse
                                     </a>
-                                    <a href="#readMorePopup" data-bs-toggle="modal" class="package-link black-950 small">Læs mere</a>
-                                    <p class="small">
+                                    <a href="#readMorePopup" data-bs-toggle="modal" class="package-link">Læs mere</a>
+                                    <p>
                                         Pris i binding 6 mdr. 1.314 kr.<br>
                                         uden Waoo Smart WiFi
                                     </p>

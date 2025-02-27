@@ -2,14 +2,12 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<ContactSection>>
 @{
     var ContactSection = Model?.Content;
-    var setting = Model?.Settings as SettingModel;
-
-    var padding = !string.IsNullOrWhiteSpace(setting?.PaddingTopBottom) ? $"padding:{setting?.PaddingTopBottom} 0px" : "";
+    var setting = Model?.Settings as SectionSettingModel;
 }
 
 <!---------------------------------- contact section ------------------------->
 
-<div class="contact-section-outer @setting?.CssClass text-center" style="@padding">
+<div class="page-title @setting?.Theme">
     <div class="container">
         <div class="contact-section">
             @if (!string.IsNullOrWhiteSpace(ContactSection?.Heading?.ToString()))
@@ -17,7 +15,7 @@
                 @Html?.Raw(ContactSection?.Heading)
             }
 
-            <div class="contact-section-para @ContactSection?.SectionClass">
+            <div class="contact-section-para">
                 @Html?.Raw(ContactSection?.SectionContent)
             </div>
 
