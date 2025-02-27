@@ -39,11 +39,10 @@
 
     }
     function callAjax($contactForm, requestModel) {
-        $('.form_submit_btn').prop('disabled', true); // Disable button during submission to avoid multiple entries
+        $contactForm.find('.form_submit_btn').prop('disabled', true); // Disable button during submission to avoid multiple entries
 
         let $formOuter = $contactForm.find('.form-outer');
         let $formSubmissionSection = $contactForm.find('.form-submitted');
-        $formOuter.hide();
         $.ajax({
             type: 'POST',
             url: `${window.location.origin}/umbraco/surface/CustomForm/SubmitForm`,
@@ -57,7 +56,7 @@
                 $formSubmissionSection.removeClass('d-none');
             },
             error: function (err) {
-                $('.form_submit_btn').prop('disabled', false);
+                $contactForm.find('.form_submit_btn').prop('disabled', false);
                 $formOuter.show();
                 console.warn(err);
             }
