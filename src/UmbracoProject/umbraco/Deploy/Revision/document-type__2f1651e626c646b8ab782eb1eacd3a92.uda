@@ -18,24 +18,24 @@
       "Alias": "content",
       "PropertyTypes": [
         {
-          "Key": "2d93e0ce-f866-4848-95b6-c084be13ebf2",
-          "Alias": "headingText",
-          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-          "Name": "Heading Text"
-        },
-        {
           "Key": "337251e2-229e-4f51-b8b8-2b198e9743a7",
           "Alias": "buttonList",
           "DataType": "umb://data-type/2f42fd89a2a44d95aece4e93b933793f",
           "Name": "Button List",
-          "SortOrder": 3
+          "SortOrder": 2
+        },
+        {
+          "Key": "dc25bd82-96ba-440f-b989-036f90318110",
+          "Alias": "heading",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Heading"
         },
         {
           "Key": "f0e01c7b-1454-489b-b4e8-55b2d4cf9ef9",
           "Alias": "contentBlocks",
           "DataType": "umb://data-type/7591b4d92acb4d82b153841747107d83",
           "Name": "Content Blocks",
-          "SortOrder": 2
+          "SortOrder": 1
         }
       ]
     }
@@ -44,7 +44,7 @@
   "Udi": "umb://document-type/2f1651e626c646b8ab782eb1eacd3a92",
   "Dependencies": [
     {
-      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
       "Ordering": true
     },
     {

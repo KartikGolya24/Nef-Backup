@@ -6,7 +6,7 @@
     "blocks": [
       {
         "contentElementTypeKey": "edcef343-ae2c-4a91-9ff9-04f2ed048480",
-        "label": "{{title}}",
+        "label": "{{description}}",
         "editorSize": "medium",
         "forceHideContentEditorInOverlay": false
       }

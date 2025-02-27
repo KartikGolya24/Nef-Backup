@@ -1,6 +1,6 @@
 {
-  "Name": "Two Column Dot List",
-  "Alias": "twoColumnDotList",
+  "Name": "Two Column Bullet List",
+  "Alias": "twoColumnBulletList",
   "AllowedTemplates": [],
   "HistoryCleanup": {},
   "Icon": "icon-science",
@@ -19,9 +19,9 @@
       "PropertyTypes": [
         {
           "Key": "ab57c51e-b20f-4862-a6ef-9843865d56b4",
-          "Alias": "dotList",
+          "Alias": "bulletList",
           "DataType": "umb://data-type/86da3672f5a640b3a5bce98af677671f",
-          "Name": "Dot List",
+          "Name": "Bullet List",
           "SortOrder": 1
         },
         {

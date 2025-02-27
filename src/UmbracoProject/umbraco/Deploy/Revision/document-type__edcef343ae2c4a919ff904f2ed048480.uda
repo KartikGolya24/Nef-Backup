@@ -1,6 +1,6 @@
 {
-  "Name": "Two Column Numbering Text List",
-  "Alias": "twoColumnNumberingTextList",
+  "Name": "Two Column Icon Text List Block",
+  "Alias": "twoColumnIconTextListBlock",
   "AllowedTemplates": [],
   "HistoryCleanup": {},
   "Icon": "icon-science",
@@ -21,14 +21,21 @@
           "Key": "1786d17e-c88c-46f2-826e-38e1e9bee590",
           "Alias": "title",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-          "Name": "Title"
+          "Name": "Title",
+          "SortOrder": 1
+        },
+        {
+          "Key": "6c662784-3c61-4f0f-bd1e-b8675f7f540a",
+          "Alias": "icon",
+          "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
+          "Name": "Icon"
         },
         {
           "Key": "803cc279-e325-4623-b978-b69b0031c431",
           "Alias": "description",
-          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
           "Name": "Description",
-          "SortOrder": 1
+          "SortOrder": 2
         }
       ]
     }
@@ -38,6 +45,14 @@
   "Dependencies": [
     {
       "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
       "Ordering": true
     },
     {

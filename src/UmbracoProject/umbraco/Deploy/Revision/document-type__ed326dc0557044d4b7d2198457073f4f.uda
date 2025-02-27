@@ -1,6 +1,6 @@
 {
-  "Name": "Numbring List Block",
-  "Alias": "numbringListBlock",
+  "Name": "Two Column Icon Text List",
+  "Alias": "twoColumnIconTextList",
   "AllowedTemplates": [],
   "HistoryCleanup": {},
   "Icon": "icon-science",
@@ -18,10 +18,31 @@
       "Alias": "content",
       "PropertyTypes": [
         {
+          "Key": "35acbd47-e33f-487f-8af7-f5ff63d3c329",
+          "Alias": "isTextItalic",
+          "DataType": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
+          "Name": "Is Text Italic",
+          "SortOrder": 2
+        },
+        {
+          "Key": "a03b2486-f3f4-41dc-818e-fce8c6776851",
+          "Alias": "iconStyle",
+          "DataType": "umb://data-type/58518d5b713a4ef7af0a8ec03f9adadd",
+          "Name": "Icon Style"
+        },
+        {
+          "Key": "a6c27ce4-cde7-4240-a12f-bfdc9a9cda28",
+          "Alias": "listStyle",
+          "DataType": "umb://data-type/1b0f7ca695e64da4be2e32067b6c7a1a",
+          "Name": "List Style",
+          "SortOrder": 1
+        },
+        {
           "Key": "dcad2317-ecf8-4196-92f1-3c71e38f62f6",
           "Alias": "blocks",
           "DataType": "umb://data-type/cf1423fb57754c97a7e1dadc40d4d701",
-          "Name": "Blocks"
+          "Name": "Blocks",
+          "SortOrder": 3
         }
       ]
     }
@@ -29,6 +50,18 @@
   "PropertyTypes": [],
   "Udi": "umb://document-type/ed326dc0557044d4b7d2198457073f4f",
   "Dependencies": [
+    {
+      "Udi": "umb://data-type/1b0f7ca695e64da4be2e32067b6c7a1a",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/58518d5b713a4ef7af0a8ec03f9adadd",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
+      "Ordering": true
+    },
     {
       "Udi": "umb://data-type/cf1423fb57754c97a7e1dadc40d4d701",
       "Ordering": true

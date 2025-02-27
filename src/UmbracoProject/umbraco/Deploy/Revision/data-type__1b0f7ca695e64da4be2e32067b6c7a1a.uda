@@ -1,0 +1,23 @@
+{
+  "Name": "Two Column Icon Text List - List Style - Dropdown",
+  "Alias": "",
+  "EditorAlias": "Umbraco.DropDown.Flexible",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {
+    "multiple": false,
+    "items": [
+      {
+        "id": 1,
+        "value": "Icon"
+      },
+      {
+        "id": 2,
+        "value": "Number"
+      }
+    ]
+  },
+  "Udi": "umb://data-type/1b0f7ca695e64da4be2e32067b6c7a1a",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.4.0"
+}

@@ -6,7 +6,7 @@
     "blocks": [
       {
         "contentElementTypeKey": "2f1651e6-26c6-46b8-ab78-2eb1eacd3a92",
-        "label": "{{headingText}}",
+        "label": "{{heading | ncRichText | truncate:true:50}}",
         "editorSize": "medium",
         "forceHideContentEditorInOverlay": false
       },

@@ -21,13 +21,13 @@
                     @if (alias == TwoColumnContentBlock.ModelTypeAlias)
                     {
                         var contentBlock = item?.Content as TwoColumnContentBlock;
-                        
+
                         <div class="col-lg-6">
                             <div class="section-detail @(index == 1?"ms-auto":"")">
                                 <div class="section-content black-950">
-                                    @if (!string.IsNullOrWhiteSpace(contentBlock?.HeadingText))
+                                    @if (!string.IsNullOrWhiteSpace(contentBlock?.Heading?.ToString()))
                                     {
-                                        <h2>@contentBlock?.HeadingText</h2>
+                                        @Html.Raw(contentBlock?.Heading)
                                     }
 
                                     @if (contentBlock?.ContentBlocks?.Count > 0)
@@ -41,7 +41,7 @@
                                                 var richTextContent = block?.Content as DescriptionText;
                                                 @Html?.Raw(richTextContent?.RichTextContent)
                                             }
-                                            else if (aliasName == TextListWithIcon.ModelTypeAlias)
+                                            @* else if (aliasName == TextListWithIcon.ModelTypeAlias)
                                             {
                                                 var textList = block?.Content as TextListWithIcon;
                                                 @if (textList?.TextList?.Count > 0)
@@ -50,25 +50,36 @@
                                                         @Html.GetBlockListHtml(textList?.TextList)
                                                     </ul>
                                                 }
-                                            }
-                                            else if (aliasName == NumbringListBlock.ModelTypeAlias)
+                                            } *@
+                                            else if (aliasName == TwoColumnIconTextList.ModelTypeAlias)
                                             {
 
-                                                var numberingList = block?.Content as NumbringListBlock;
-                                                @if (numberingList?.Blocks?.Count > 0)
+                                                var twoColumnIconTextListModel = block?.Content as TwoColumnIconTextList;
+                                                @if (twoColumnIconTextListModel != null && twoColumnIconTextListModel?.Blocks?.Count > 0)
                                                 {
                                                     var count = 1;
-                                                    <ul class="square_icon_list mb-0 @setting?.CssClass">
-                                                        @foreach (var listText in numberingList?.Blocks)
+                                                    <ul class="@(ConstantHelper.IconStyle(twoColumnIconTextListModel.IconStyle))">
+                                                        @foreach (var listText in twoColumnIconTextListModel.Blocks)
                                                         {
-                                                            var listModel = listText?.Content as TwoColumnNumberingTextList;
+                                                            var listModel = listText?.Content as TwoColumnIconTextListBlock;
 
                                                             <li class="align-items-start">
+
                                                                 <div class="icon-box">
-                                                                    <span>@(count++)</span>
+                                                                    @if (twoColumnIconTextListModel.ListStyle == ConstantHelper.IconList)
+                                                                    {
+                                                                        <img src="@listModel?.Icon?.MediaUrl()" class="img-fluid" alt="" />
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        <span>@(count++)</span>
+                                                                    }
                                                                 </div>
-                                                                <div class="list-information-text">
-                                                                    <h5 class="list-inner-title">@listModel?.Title</h5>
+                                                                <div class="list-information-text @(twoColumnIconTextListModel?.IsTextItalic == true ? "italic" : "")">
+                                                                    @if (!string.IsNullOrWhiteSpace(listModel?.Title))
+                                                                    {
+                                                                        <h5 class="list-inner-title">@listModel?.Title</h5>
+                                                                    }
                                                                     <p>@listModel?.Description</p>
                                                                 </div>
                                                             </li>
@@ -76,15 +87,15 @@
                                                     </ul>
                                                 }
                                             }
-                                            else if (aliasName == TwoColumnDotList.ModelTypeAlias)
+                                            else if (aliasName == TwoColumnBulletList.ModelTypeAlias)
                                             {
-                                                var dotListModel = block?.Content as TwoColumnDotList;
-                                                @if (dotListModel?.DotList?.Count() > 0)
+                                                var dotListModel = block?.Content as TwoColumnBulletList;
+                                                @if (dotListModel != null && dotListModel.BulletList?.Count() > 0)
                                                 {
                                                     <div class="dot-list-outer">
-                                                        <p>@dotListModel?.ListTitle</p>
+                                                        <p>@dotListModel.ListTitle</p>
                                                         <ul class="section_dot_list @setting?.CssClass">
-                                                            @foreach (var text in dotListModel?.DotList)
+                                                            @foreach (var text in dotListModel.BulletList)
                                                             {
                                                                 <li>
                                                                     <p>@text</p>
