@@ -40,32 +40,30 @@
         <picture>
             <!-- Mobile (393px x 324px) -->
             <source media="(max-width: 393px)"
-                    sizes="100vw"
+                    sizes="393px"
                     type="image/webp"
-                    srcset="@($"{content?.Image?.GetCropUrl(width: 196, height: 162, preferFocalPoint: true, furtherOptions: "&format=webp", quality:80)} 196w, {content?.Image?.GetCropUrl(width: 393, height: 324, preferFocalPoint: true, furtherOptions: "&format=webp", quality:80)} 393w")">
-        
+                    srcset="@content?.Image?.GetCropUrl(width: 393, height: 324, preferFocalPoint: true, furtherOptions: "&format=webp",quality:80)">
+
             <!-- Tablet (1024px x 424px) -->
             <source media="(max-width: 1024px)"
-                    sizes="100vw"
+                    sizes="1024px"
                     type="image/webp"
-                    srcset="@($"{content?.Image?.GetCropUrl(width: 512, height: 212, preferFocalPoint: true, furtherOptions: "&format=webp", quality:80)} 512w, {content?.Image?.GetCropUrl(width: 1024, height: 424, preferFocalPoint: true, furtherOptions: "&format=webp", quality:80)} 1024w")">
-        
+                    srcset="@content?.Image?.GetCropUrl(width: 1024, height: 424, preferFocalPoint: true, furtherOptions: "&format=webp",quality:80)">
+
             <!-- Laptop (1440px x 424px) -->
             <source media="(max-width: 1440px)"
-                    sizes="100vw"
+                    sizes="1440px"
                     type="image/webp"
-                    srcset="@($"{content?.Image?.GetCropUrl(width: 720, height: 212, preferFocalPoint: true, furtherOptions: "&format=webp", quality:80)} 720w, {content?.Image?.GetCropUrl(width: 1440, height: 424, preferFocalPoint: true, furtherOptions: "&format=webp", quality:80)} 1440w")">
-        
-            <!-- Default Fallback -->
+                    srcset="@content?.Image?.GetCropUrl(width: 1440, height: 424, preferFocalPoint: true, furtherOptions: "&format=webp",quality:80)">
+
+            <!-- Default (Desktop 1440px x 560px) -->
             <img class="img-fluid banner"
-                 width="1440"
-                 height="560"
-                 src="@content?.Image?.GetCropUrl(width: 1440, height: 560, preferFocalPoint: true, furtherOptions: "&format=webp", quality:80)"
+                 width="1200" 
+                 height="600"
+                 src="@content?.Image?.GetCropUrl(width: 1440, height: 560, preferFocalPoint: true, furtherOptions: "&format=webp",quality:80)"
                  alt="article">
         </picture>
-
-
-
+        
     }
 
     @if (content?.IsEnableScrollButton == true)
