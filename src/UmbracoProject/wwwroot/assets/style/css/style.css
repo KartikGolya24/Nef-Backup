@@ -10727,92 +10727,92 @@ textarea.form-control-lg {
   height: 24px;
 }
 .btn.light_blue_btn {
-  color: #ffffff;
-  background-color: #37B4B4;
+  color: #ffffff !important;
+  background-color: #37B4B4 !important;
 }
 .btn.light_blue_btn:hover {
-  background-color: #237373;
-  color: #ffffff;
+  background-color: #237373 !important;
+  color: #ffffff !important;
 }
 .btn.light_purple_btn {
-  color: #292929;
-  background-color: #F8F0F7;
+  color: #292929 !important;
+  background-color: #F8F0F7 !important;
 }
 .btn.light_purple_btn:hover {
-  background-color: #D7DCDC;
-  border-color: #A45699;
+  background-color: #D7DCDC !important;
+  border-color: #A45699 !important;
 }
 .btn.dark_blue_btn {
-  color: #ffffff;
-  background-color: #284655;
+  color: #ffffff !important;
+  background-color: #284655 !important;
 }
 .btn.dark_blue_btn:hover {
-  background-color: #3e6579;
-  color: #ffffff;
+  background-color: #3e6579 !important;
+  color: #ffffff !important;
 }
 .btn.steel_blue_btn {
-  background-color: #4878A2;
-  color: #ffffff;
+  background-color: #4878A2 !important;
+  color: #ffffff !important;
 }
 .btn.steel_blue_btn:hover {
-  background-color: #305f88;
-  color: #ffffff;
-  border-color: #ffffff;
+  background-color: #305f88 !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
 }
 .btn.dark_purple_btn {
-  background-color: #A45699;
-  color: #ffffff;
+  background-color: #A45699 !important;
+  color: #ffffff !important;
 }
 .btn.dark_purple_btn:hover {
-  background-color: #6C3965;
-  color: #ffffff;
+  background-color: #6C3965 !important;
+  color: #ffffff !important;
 }
 .btn.white_bg_btn {
-  color: #292929;
-  background-color: #ffffff;
+  color: #292929 !important;
+  background-color: #ffffff !important;
   border-color: #dcdcdc !important;
 }
 .btn.white_bg_btn:hover {
-  background-color: #F2F2F2;
-  color: #292929;
+  background-color: #F2F2F2 !important;
+  color: #292929 !important;
 }
 .btn.dark_green_btn {
-  color: #ffffff;
-  background-color: #2A4854;
+  color: #ffffff !important;
+  background-color: #2A4854 !important;
 }
 .btn.dark_green_btn:hover {
-  background-color: #1a2f38;
-  color: #ffffff;
+  background-color: #1a2f38 !important;
+  color: #ffffff !important;
 }
 .btn.black-bg-100:hover {
-  background-color: #dcdcdc;
-  color: #292929;
+  background-color: #dcdcdc !important;
+  color: #292929 !important;
 }
 .btn.turquoise_bg_btn {
-  background-color: #EEF4F4;
-  color: #292929;
+  background-color: #EEF4F4 !important;
+  color: #292929 !important;
 }
 .btn.turquoise_bg_btn:hover {
-  background-color: #ffffff;
-  border-color: #37B4B4;
+  background-color: #ffffff !important;
+  border-color: #37B4B4 !important;
 }
 .btn.space_blue_btn {
-  color: #ffffff;
-  background-color: #192A33;
+  color: #ffffff !important;
+  background-color: #192A33 !important;
 }
 .btn.space_blue_btn:hover {
-  background-color: #264352;
-  border-color: #37B4B4;
-  color: #fff;
+  background-color: #264352 !important;
+  border-color: #37B4B4 !important;
+  color: #fff !important;
 }
 .btn.dark_pink_btn {
-  background-color: #D1338A;
-  color: #ffffff;
+  background-color: #D1338A !important;
+  color: #ffffff !important;
 }
 .btn.dark_pink_btn:hover {
-  border: 1px solid #D1338A;
-  background-color: #d54e98;
-  color: #ffffff;
+  border: 1px solid #D1338A !important;
+  background-color: #d54e98 !important;
+  color: #ffffff !important;
 }
 
 .business-tab .header .form-control {
@@ -11341,7 +11341,7 @@ textarea.form-control {
 
 .faq-section {
   position: relative;
-  padding: 64px 0px;
+  padding: 125px 0px;
   overflow: hidden;
 }
 .faq-section .headings {
@@ -11674,8 +11674,8 @@ textarea.form-control {
 .order-nef-power .order-nef-card .position-img {
   width: max-content;
   position: absolute;
-  top: -60px;
-  right: 0px;
+  top: -50px;
+  right: 20px;
 }
 .order-nef-power .order-nef-card .position-img img {
   height: 300px;
@@ -11731,12 +11731,12 @@ textarea.form-control {
   color: #ffffff;
 }
 .order-nef-power .order-nef-card:hover .btn.light_blue_btn, .order-nef-power .order-nef-card:focus .btn.light_blue_btn, .order-nef-power .order-nef-card:active .btn.light_blue_btn, .order-nef-power .order-nef-card:focus-visible .btn.light_blue_btn {
-  background-color: #284655;
-  color: #ffffff;
+  background-color: #284655 !important;
+  color: #ffffff !important;
 }
 .order-nef-power .order-nef-card:hover .btn.white_bg_btn, .order-nef-power .order-nef-card:focus .btn.white_bg_btn, .order-nef-power .order-nef-card:active .btn.white_bg_btn, .order-nef-power .order-nef-card:focus-visible .btn.white_bg_btn {
-  background-color: #37B4B4;
-  color: #ffffff;
+  background-color: #37B4B4 !important;
+  color: #ffffff !important;
 }
 
 .electricity-price {
@@ -12393,11 +12393,11 @@ li {
 }
 
 .mb-64 {
-  margin-bottom: 64px !important;
+  margin-bottom: 64px;
 }
 
 .mt-64 {
-  margin-top: 64px !important;
+  margin-top: 64px;
 }
 
 .my-40 {
@@ -12807,6 +12807,21 @@ li {
   max-width: 272px;
 }
 
+.Privat-tab .btn {
+  background-color: #284655;
+  color: #ffffff;
+}
+
+.business-tab .btn {
+  background-color: #4878A2;
+  color: #ffffff;
+}
+
+.Repræsentantskabsvalg-tab .btn {
+  background-color: #D1338A;
+  color: #ffffff;
+}
+
 .space_blue_btn {
   border-radius: 100px;
   padding: 12px 24px;
@@ -13151,7 +13166,7 @@ li {
 }
 
 .alt-section {
-  padding: 64px 0;
+  padding: 96px 0;
   position: relative;
 }
 .alt-section .section-detail {
@@ -13292,6 +13307,7 @@ li {
   border-radius: 16px;
   padding: 24px;
   background-color: #284655;
+  margin-top: 80px;
 }
 .alt-section .wrapper .section-detail {
   max-width: 600px;
@@ -13442,6 +13458,11 @@ li {
 .alt-section.nef-part {
   padding: 150px 0px;
 }
+.alt-section .order-nef-card .section-img img:not(.section-position-img img) {
+  max-width: 221px;
+  min-height: auto;
+  width: auto;
+}
 .alt-section .section-img {
   position: relative;
   border-radius: 16px;
@@ -13506,6 +13527,9 @@ li {
 }
 .alt-section .section-position-img img {
   max-width: none;
+  width: 400px;
+  height: 400px;
+  object-fit: none;
 }
 .alt-section .section-position-img.cap-doodle {
   transform: translate(-60%, -70%);
@@ -14655,6 +14679,7 @@ li {
   border: 1px solid #efefef;
   border-radius: 16px;
   max-width: 400px;
+  background-color: #ffffff;
 }
 .contact-us .contact-us-detail .sidebar-list .title {
   margin-bottom: 20px;
@@ -14707,38 +14732,36 @@ li {
   margin-bottom: 40px;
 }
 
-.box-list {
-  padding: 137px 0;
-}
-.box-list .order-nef-card {
+.order-nef-card {
   padding: 32px 32px 61px;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: #37B4B4;
 }
-.box-list .order-nef-card .section-img {
+.order-nef-card .section-img {
   margin-bottom: 41px;
 }
-.box-list .order-nef-card .section-img img {
+.order-nef-card .section-img img {
   max-width: 221px;
 }
-.box-list .order-nef-card .section-img img.mx-184 {
+.order-nef-card .section-img img.mx-184 {
   max-width: 184px;
 }
-.box-list .order-nef-card .title {
+.order-nef-card .title {
   font-size: 32px;
   line-height: 45.15px;
-  color: #284655;
+  color: #ffffff;
   margin-bottom: 16px;
 }
-.box-list .order-nef-card p {
-  color: #525252;
+.order-nef-card p {
+  color: #efefef;
 }
-.box-list .order-nef-card.light_blue_bg .title {
+.order-nef-card.light_blue_bg .title {
   color: #ffffff;
 }
-.box-list .order-nef-card.light_blue_bg p {
+.order-nef-card.light_blue_bg p {
   color: #ffffff;
 }
 
@@ -15015,6 +15038,16 @@ li {
 .alt-contact-section .page-title {
   text-align: left;
   padding: 0;
+  background-color: transparent;
+}
+.alt-contact-section .section-img {
+  border-radius: 16px;
+}
+.alt-contact-section .section-img img {
+  border-radius: 16px;
+  min-height: 400px;
+  width: 100%;
+  max-height: 580px;
 }
 .alt-contact-section.electricity-banner .page-title .contact-section {
   max-width: 720px;
@@ -15086,6 +15119,15 @@ li {
   color: #efefef;
 }
 
+/*----ThemesThemes----Themes------Themes----ThemesThemes----ThemesThe--------mesThemes----ThemesThemes----------Themes--------------*/
+/*----ThemesThemes----Themes------Themes----ThemesThemes----ThemesThe--------mesThemes----ThemesThemes----ThemesThemesThemes--------*/
+/*----ThemesThemes----Themes------Themes----ThemesThemes----ThemesThemes--ThemesThemes----ThemesThemes----Themes------Themes--------*/
+/*-------Themes-------Themes------Themes----Themes----------Themes----Themes----Themes----Themes----------Themes--------------------*/
+/*-------Themes-------ThemesThemesThemes----ThemesThemes----Themes----Themes----Themes----ThemesThemes----------Themes--------------*/
+/*-------Themes-------ThemesThemesThemes----ThemesThemes----Themes--------------Themes----ThemesThemes----------------Themes--------*/
+/*-------Themes-------Themes------Themes----Themes----------Themes--------------Themes----Themes----------Themes------Themes--------*/
+/*-------Themes-------Themes------Themes----ThemesThemes----Themes--------------Themes----ThemesThemes----ThemesThemesThemes--------*/
+/*-------Themes-------Themes------Themes----ThemesThemes----Themes--------------Themes----ThemesThemes----------Themes--------------*/
 .private-turquoise-fade {
   background-color: #EEF4F4;
 }
@@ -15121,6 +15163,15 @@ li {
 }
 .private-turquoise-fade .section-detail .section-content .section_bullet_list li::marker {
   color: #525252;
+}
+.private-turquoise-fade .section-detail .multiple-buttons .btn:last-child {
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  color: #292929;
+}
+.private-turquoise-fade .section-detail .multiple-buttons .btn:first-child {
+  background-color: #284655;
+  color: #ffffff;
 }
 .private-turquoise-fade .faq-contact h3, .private-turquoise-fade .faq-contact .h3 {
   color: #292929;
@@ -15209,6 +15260,15 @@ li {
 }
 .private-light-moss-green .section-detail .section-content .section_bullet_list li::marker {
   color: #525252;
+}
+.private-light-moss-green .section-detail .multiple-buttons .btn:last-child {
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  color: #292929;
+}
+.private-light-moss-green .section-detail .multiple-buttons .btn:first-child {
+  background-color: #284655;
+  color: #ffffff;
 }
 .private-light-moss-green .faq-contact h3, .private-light-moss-green .faq-contact .h3 {
   color: #292929;
@@ -15301,6 +15361,15 @@ li {
 .private-white .section-detail .section-content .location-list li {
   background-color: #EEF4F4;
 }
+.private-white .section-detail .multiple-buttons .btn:last-child {
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  color: #292929;
+}
+.private-white .section-detail .multiple-buttons .btn:first-child {
+  background-color: #284655;
+  color: #ffffff;
+}
 .private-white .faq-contact h3, .private-white .faq-contact .h3 {
   color: #292929;
 }
@@ -15389,6 +15458,15 @@ li {
 .private-tv-white .section-detail .section-content .section_bullet_list li::marker {
   color: #525252;
 }
+.private-tv-white .section-detail .multiple-buttons .btn:last-child {
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  color: #292929;
+}
+.private-tv-white .section-detail .multiple-buttons .btn:first-child {
+  background-color: #A45699;
+  color: #ffffff;
+}
 .private-tv-white .faq-contact h3, .private-tv-white .faq-contact .h3 {
   color: #292929;
 }
@@ -15472,6 +15550,14 @@ li {
 .private-dark-blue .section-detail .section-content .section_bullet_list li::marker {
   color: #efefef;
 }
+.private-dark-blue .section-detail .multiple-buttons .btn:last-child {
+  background-color: #284655;
+  color: #ffffff;
+}
+.private-dark-blue .section-detail .multiple-buttons .btn:first-child {
+  background-color: #37B4B4;
+  color: #ffffff;
+}
 .private-dark-blue .faq-contact h3, .private-dark-blue .faq-contact .h3 {
   color: #ffffff;
 }
@@ -15502,8 +15588,8 @@ li {
 .private-dark-blue .contact-form .label {
   color: #292929;
 }
-.private-dark-blue .video-img {
-  background-color: #efefef;
+.private-dark-blue .electricity-bill-detail .video-img {
+  background-color: #37B4B4;
 }
 .private-dark-blue .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title {
   color: #ffffff;
@@ -15568,6 +15654,14 @@ li {
 }
 .private-light-moss-green-fade .section-detail .section-content .section_bullet_list li::marker {
   color: #525252;
+}
+.private-light-moss-green-fade .section-detail .multiple-buttons .btn:last-child {
+  background-color: #37B4B4;
+  color: #ffffff;
+}
+.private-light-moss-green-fade .section-detail .multiple-buttons .btn:first-child {
+  background-color: #284655;
+  color: #ffffff;
 }
 .private-light-moss-green-fade .faq-contact h3, .private-light-moss-green-fade .faq-contact .h3 {
   color: #292929;
@@ -15660,6 +15754,16 @@ li {
 .private-mulberry-purple-fade .section-detail .section-content .section_bullet_list li::marker {
   color: #525252;
 }
+.private-mulberry-purple-fade .section-detail .multiple-buttons .btn:last-child {
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  color: #292929;
+}
+.private-mulberry-purple-fade .section-detail .multiple-buttons .btn:first-child {
+  background-color: #F8F0F7;
+  border-color: #A45699;
+  color: #292929;
+}
 .private-mulberry-purple-fade .faq-contact h3, .private-mulberry-purple-fade .faq-contact .h3 {
   color: #292929;
 }
@@ -15670,16 +15774,16 @@ li {
   color: #525252;
 }
 .private-mulberry-purple-fade .contact-form {
-  background-color: #A45699;
+  background-color: #ffffff;
 }
 .private-mulberry-purple-fade .contact-form .form-outer .form-headings .form-title {
-  color: #ffffff;
+  color: #292929;
 }
 .private-mulberry-purple-fade .contact-form .form-outer .form-headings p {
-  color: #efefef;
+  color: #525252;
 }
 .private-mulberry-purple-fade .contact-form .label {
-  color: #ffffff;
+  color: #292929;
 }
 .private-mulberry-purple-fade .electricity-card {
   background-color: #284655;
@@ -15750,6 +15854,15 @@ li {
 }
 .private-mulberry-purple .section-detail .section-content .section_bullet_list li::marker {
   color: #efefef;
+}
+.private-mulberry-purple .section-detail .multiple-buttons .btn:last-child {
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  color: #292929;
+}
+.private-mulberry-purple .section-detail .multiple-buttons .btn:first-child {
+  background-color: #284655;
+  color: #ffffff;
 }
 .private-mulberry-purple .faq-contact h3, .private-mulberry-purple .faq-contact .h3 {
   color: #ffffff;
@@ -15854,6 +15967,15 @@ li {
 .private-turquoise .section-detail .section-content .section_bullet_list li::marker {
   color: #efefef;
 }
+.private-turquoise .section-detail .multiple-buttons .btn:last-child {
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  color: #292929;
+}
+.private-turquoise .section-detail .multiple-buttons .btn:first-child {
+  background-color: #284655;
+  color: #ffffff;
+}
 .private-turquoise .faq-contact h3, .private-turquoise .faq-contact .h3 {
   color: #ffffff;
 }
@@ -15918,6 +16040,814 @@ li {
   color: #525252;
 }
 
+.election-white {
+  background-color: #ffffff;
+}
+.election-white .section-detail .section-content h2, .election-white .section-detail .section-content .h2, .election-white .section-detail .section-content h3, .election-white .section-detail .section-content .h3 {
+  color: #292929;
+}
+.election-white .section-detail .section-content p {
+  color: #525252;
+}
+.election-white .section-detail .section-content .circle_icon_list li .icon-box {
+  background-color: #D1338A;
+}
+.election-white .section-detail .section-content .circle_icon_list li .list-information-text .list-inner-title {
+  color: #292929;
+}
+.election-white .section-detail .section-content .circle_icon_list li .list-information-text p {
+  color: #525252;
+}
+.election-white .section-detail .section-content .square_icon_list li .icon-box {
+  background-color: #D1338A;
+}
+.election-white .section-detail .section-content .square_icon_list li .icon-box span {
+  color: #ffffff;
+}
+.election-white .section-detail .section-content .square_icon_list li .list-information-text .list-inner-title {
+  color: #292929;
+}
+.election-white .section-detail .section-content .square_icon_list li .list-information-text p {
+  color: #525252;
+}
+.election-white .section-detail .section-content .section_bullet_list li::marker {
+  color: #525252;
+}
+.election-white .section-detail .section-content .location-list li {
+  background-color: #EEF4F4;
+}
+.election-white .section-detail .multiple-buttons .btn:last-child {
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  color: #292929;
+}
+.election-white .section-detail .multiple-buttons .btn:first-child {
+  background-color: #D1338A;
+  color: #ffffff;
+}
+.election-white .faq-contact h3, .election-white .faq-contact .h3 {
+  color: #292929;
+}
+.election-white .section-heading h2, .election-white .section-heading .h2 {
+  color: #292929;
+}
+.election-white .section-heading p {
+  color: #525252;
+}
+.election-white .contact-form {
+  background-color: #EEF4F4;
+}
+.election-white .contact-form .form-outer .form-headings .form-title {
+  color: #292929;
+}
+.election-white .contact-form .form-outer .form-headings p {
+  color: #525252;
+}
+.election-white .contact-form .label {
+  color: #292929;
+}
+.election-white .electricity-card {
+  background-color: #284655;
+}
+.election-white .electricity-card .card-body .title {
+  color: #ffffff;
+}
+.election-white .electricity-card .card-body p {
+  color: #efefef;
+}
+.election-white .electricity-bill-detail .video-img {
+  background-color: #284655;
+}
+.election-white .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title {
+  color: #292929;
+}
+.election-white .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title + p {
+  color: #525252;
+}
+.election-white .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li p {
+  color: #525252;
+}
+.election-white .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li::marker {
+  color: #525252;
+}
+.election-white.owl-slider-section .owl-carousel .owl-nav button {
+  background-color: #37B4B4;
+}
+.election-white.owl-slider-section .owl-carousel .owl-dots .owl-dot {
+  background-color: rgba(55, 180, 180, 0.25);
+}
+.election-white.owl-slider-section .owl-carousel .owl-dots .owl-dot.active {
+  background-color: #37B4B4;
+}
+
+.election-gray {
+  background-color: #efefef;
+}
+.election-gray .section-detail .section-content h2, .election-gray .section-detail .section-content .h2, .election-gray .section-detail .section-content h3, .election-gray .section-detail .section-content .h3 {
+  color: #292929;
+}
+.election-gray .section-detail .section-content p {
+  color: #525252;
+}
+.election-gray .section-detail .section-content .circle_icon_list li .icon-box {
+  background-color: #37B4B4;
+}
+.election-gray .section-detail .section-content .circle_icon_list li .list-information-text .list-inner-title {
+  color: #292929;
+}
+.election-gray .section-detail .section-content .circle_icon_list li .list-information-text p {
+  color: #525252;
+}
+.election-gray .section-detail .section-content .square_icon_list li .icon-box {
+  background-color: #37B4B4;
+}
+.election-gray .section-detail .section-content .square_icon_list li .icon-box span {
+  color: #ffffff;
+}
+.election-gray .section-detail .section-content .square_icon_list li .list-information-text .list-inner-title {
+  color: #292929;
+}
+.election-gray .section-detail .section-content .square_icon_list li .list-information-text p {
+  color: #525252;
+}
+.election-gray .section-detail .section-content .section_bullet_list li::marker {
+  color: #525252;
+}
+.election-gray .section-detail .section-content .location-list li {
+  background-color: #EEF4F4;
+}
+.election-gray .section-detail .multiple-buttons .btn:last-child {
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  color: #292929;
+}
+.election-gray .section-detail .multiple-buttons .btn:first-child {
+  background-color: #D1338A;
+  color: #ffffff;
+}
+.election-gray .faq-contact h3, .election-gray .faq-contact .h3 {
+  color: #292929;
+}
+.election-gray .section-heading h2, .election-gray .section-heading .h2 {
+  color: #292929;
+}
+.election-gray .section-heading p {
+  color: #525252;
+}
+.election-gray .contact-form {
+  background-color: #EEF4F4;
+}
+.election-gray .contact-form .form-outer .form-headings .form-title {
+  color: #292929;
+}
+.election-gray .contact-form .form-outer .form-headings p {
+  color: #525252;
+}
+.election-gray .contact-form .label {
+  color: #292929;
+}
+.election-gray .electricity-card {
+  background-color: #284655;
+}
+.election-gray .electricity-card .card-body .title {
+  color: #ffffff;
+}
+.election-gray .electricity-card .card-body p {
+  color: #efefef;
+}
+.election-gray .electricity-bill-detail .video-img {
+  background-color: #284655;
+}
+.election-gray .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title {
+  color: #292929;
+}
+.election-gray .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title + p {
+  color: #525252;
+}
+.election-gray .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li p {
+  color: #525252;
+}
+.election-gray .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li::marker {
+  color: #525252;
+}
+.election-gray.owl-slider-section .owl-carousel .owl-nav button {
+  background-color: #37B4B4;
+}
+.election-gray.owl-slider-section .owl-carousel .owl-dots .owl-dot {
+  background-color: rgba(55, 180, 180, 0.25);
+}
+.election-gray.owl-slider-section .owl-carousel .owl-dots .owl-dot.active {
+  background-color: #37B4B4;
+}
+
+.election-light-pink {
+  background-color: #FFE6F3;
+}
+.election-light-pink .section-detail .section-content h2, .election-light-pink .section-detail .section-content .h2, .election-light-pink .section-detail .section-content h3, .election-light-pink .section-detail .section-content .h3 {
+  color: #292929;
+}
+.election-light-pink .section-detail .section-content p {
+  color: #525252;
+}
+.election-light-pink .section-detail .section-content .circle_icon_list li .icon-box {
+  background-color: #D1338A;
+}
+.election-light-pink .section-detail .section-content .circle_icon_list li .list-information-text .list-inner-title {
+  color: #292929;
+}
+.election-light-pink .section-detail .section-content .circle_icon_list li .list-information-text p {
+  color: #525252;
+}
+.election-light-pink .section-detail .section-content .square_icon_list li .icon-box {
+  background-color: #D1338A;
+}
+.election-light-pink .section-detail .section-content .square_icon_list li .icon-box span {
+  color: #ffffff;
+}
+.election-light-pink .section-detail .section-content .square_icon_list li .list-information-text .list-inner-title {
+  color: #292929;
+}
+.election-light-pink .section-detail .section-content .square_icon_list li .list-information-text p {
+  color: #525252;
+}
+.election-light-pink .section-detail .section-content .section_bullet_list li::marker {
+  color: #525252;
+}
+.election-light-pink .section-detail .section-content .location-list li {
+  background-color: #EEF4F4;
+}
+.election-light-pink .section-detail .multiple-buttons .btn:last-child {
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  color: #292929;
+}
+.election-light-pink .section-detail .multiple-buttons .btn:first-child {
+  background-color: #D1338A;
+  color: #ffffff;
+}
+.election-light-pink .faq-contact h3, .election-light-pink .faq-contact .h3 {
+  color: #292929;
+}
+.election-light-pink .section-heading h2, .election-light-pink .section-heading .h2 {
+  color: #292929;
+}
+.election-light-pink .section-heading p {
+  color: #525252;
+}
+.election-light-pink .contact-form {
+  background-color: #ffffff;
+}
+.election-light-pink .contact-form .form-outer .form-headings .form-title {
+  color: #292929;
+}
+.election-light-pink .contact-form .form-outer .form-headings p {
+  color: #525252;
+}
+.election-light-pink .contact-form .label {
+  color: #292929;
+}
+.election-light-pink .electricity-card {
+  background-color: #284655;
+}
+.election-light-pink .electricity-card .card-body .title {
+  color: #ffffff;
+}
+.election-light-pink .electricity-card .card-body p {
+  color: #efefef;
+}
+.election-light-pink .electricity-bill-detail .video-img {
+  background-color: #284655;
+}
+.election-light-pink .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title {
+  color: #292929;
+}
+.election-light-pink .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title + p {
+  color: #525252;
+}
+.election-light-pink .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li p {
+  color: #525252;
+}
+.election-light-pink .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li::marker {
+  color: #525252;
+}
+.election-light-pink.owl-slider-section .owl-carousel .owl-nav button {
+  background-color: #37B4B4;
+}
+.election-light-pink.owl-slider-section .owl-carousel .owl-dots .owl-dot {
+  background-color: rgba(55, 180, 180, 0.25);
+}
+.election-light-pink.owl-slider-section .owl-carousel .owl-dots .owl-dot.active {
+  background-color: #37B4B4;
+}
+
+.business-turquoise-fade {
+  background-color: #EEF4F4;
+}
+.business-turquoise-fade .section-detail .section-content h2, .business-turquoise-fade .section-detail .section-content .h2, .business-turquoise-fade .section-detail .section-content h3, .business-turquoise-fade .section-detail .section-content .h3 {
+  color: #292929;
+}
+.business-turquoise-fade .section-detail .section-content p {
+  color: #525252;
+}
+.business-turquoise-fade .section-detail .section-content .circle_icon_list li .icon-box {
+  background-color: #37B4B4;
+}
+.business-turquoise-fade .section-detail .section-content .circle_icon_list li .list-information-text .list-inner-title {
+  color: #292929;
+}
+.business-turquoise-fade .section-detail .section-content .circle_icon_list li .list-information-text p {
+  color: #525252;
+}
+.business-turquoise-fade .section-detail .section-content .square_icon_list li .icon-box {
+  background-color: #37B4B4;
+}
+.business-turquoise-fade .section-detail .section-content .square_icon_list li .icon-box span {
+  color: #ffffff;
+}
+.business-turquoise-fade .section-detail .section-content .square_icon_list li .list-information-text .list-inner-title {
+  color: #292929;
+}
+.business-turquoise-fade .section-detail .section-content .square_icon_list li .list-information-text p {
+  color: #525252;
+}
+.business-turquoise-fade .section-detail .section-content .section_bullet_list li::marker {
+  color: #525252;
+}
+.business-turquoise-fade .section-detail .section-content .location-list li {
+  background-color: #ffffff;
+}
+.business-turquoise-fade .section-detail .multiple-buttons .btn:last-child {
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  color: #292929;
+}
+.business-turquoise-fade .section-detail .multiple-buttons .btn:first-child {
+  background-color: #192A33;
+  color: #ffffff;
+}
+.business-turquoise-fade .faq-contact h3, .business-turquoise-fade .faq-contact .h3 {
+  color: #292929;
+}
+.business-turquoise-fade .section-heading h2, .business-turquoise-fade .section-heading .h2 {
+  color: #292929;
+}
+.business-turquoise-fade .section-heading p {
+  color: #525252;
+}
+.business-turquoise-fade .contact-form {
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+}
+.business-turquoise-fade .contact-form .form-outer .form-headings .form-title {
+  color: #292929;
+}
+.business-turquoise-fade .contact-form .form-outer .form-headings p {
+  color: #525252;
+}
+.business-turquoise-fade .contact-form .label {
+  color: #292929;
+}
+.business-turquoise-fade .electricity-card {
+  background-color: #284655;
+}
+.business-turquoise-fade .electricity-card .card-body .title {
+  color: #ffffff;
+}
+.business-turquoise-fade .electricity-card .card-body p {
+  color: #efefef;
+}
+.business-turquoise-fade .electricity-bill-detail .video-img {
+  background-color: #284655;
+}
+.business-turquoise-fade .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title {
+  color: #292929;
+}
+.business-turquoise-fade .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title + p {
+  color: #525252;
+}
+.business-turquoise-fade .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li p {
+  color: #525252;
+}
+.business-turquoise-fade .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li::marker {
+  color: #525252;
+}
+.business-turquoise-fade.owl-slider-section .owl-carousel .owl-nav button {
+  background-color: #37B4B4;
+}
+.business-turquoise-fade.owl-slider-section .owl-carousel .owl-dots .owl-dot {
+  background-color: rgba(55, 180, 180, 0.25);
+}
+.business-turquoise-fade.owl-slider-section .owl-carousel .owl-dots .owl-dot.active {
+  background-color: #37B4B4;
+}
+
+.business-white {
+  background-color: #ffffff;
+}
+.business-white .section-detail .section-content h2, .business-white .section-detail .section-content .h2, .business-white .section-detail .section-content h3, .business-white .section-detail .section-content .h3 {
+  color: #292929;
+}
+.business-white .section-detail .section-content p {
+  color: #525252;
+}
+.business-white .section-detail .section-content .circle_icon_list li .icon-box {
+  background-color: #37B4B4;
+}
+.business-white .section-detail .section-content .circle_icon_list li .list-information-text .list-inner-title {
+  color: #292929;
+}
+.business-white .section-detail .section-content .circle_icon_list li .list-information-text p {
+  color: #525252;
+}
+.business-white .section-detail .section-content .square_icon_list li .icon-box {
+  background-color: #37B4B4;
+}
+.business-white .section-detail .section-content .square_icon_list li .icon-box span {
+  color: #ffffff;
+}
+.business-white .section-detail .section-content .square_icon_list li .list-information-text .list-inner-title {
+  color: #292929;
+}
+.business-white .section-detail .section-content .square_icon_list li .list-information-text p {
+  color: #525252;
+}
+.business-white .section-detail .section-content .section_bullet_list li::marker {
+  color: #525252;
+}
+.business-white .section-detail .section-content .location-list li {
+  background-color: #EEF4F4;
+}
+.business-white .section-detail .multiple-buttons .btn:last-child {
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  color: #292929;
+}
+.business-white .section-detail .multiple-buttons .btn:first-child {
+  background-color: #D1338A;
+  color: #ffffff;
+}
+.business-white .faq-contact h3, .business-white .faq-contact .h3 {
+  color: #292929;
+}
+.business-white .section-heading h2, .business-white .section-heading .h2 {
+  color: #292929;
+}
+.business-white .section-heading p {
+  color: #525252;
+}
+.business-white .contact-form {
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+}
+.business-white .contact-form .form-outer .form-headings .form-title {
+  color: #292929;
+}
+.business-white .contact-form .form-outer .form-headings p {
+  color: #525252;
+}
+.business-white .contact-form .label {
+  color: #292929;
+}
+.business-white .electricity-card {
+  background-color: #284655;
+}
+.business-white .electricity-card .card-body .title {
+  color: #ffffff;
+}
+.business-white .electricity-card .card-body p {
+  color: #efefef;
+}
+.business-white .electricity-bill-detail .video-img {
+  background-color: #284655;
+}
+.business-white .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title {
+  color: #292929;
+}
+.business-white .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title + p {
+  color: #525252;
+}
+.business-white .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li p {
+  color: #525252;
+}
+.business-white .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li::marker {
+  color: #525252;
+}
+.business-white.owl-slider-section .owl-carousel .owl-nav button {
+  background-color: #37B4B4;
+}
+.business-white.owl-slider-section .owl-carousel .owl-dots .owl-dot {
+  background-color: rgba(55, 180, 180, 0.25);
+}
+.business-white.owl-slider-section .owl-carousel .owl-dots .owl-dot.active {
+  background-color: #37B4B4;
+}
+
+.business-light-moss-green-fade {
+  background-color: #E7F4E2;
+}
+.business-light-moss-green-fade .section-detail .section-content h2, .business-light-moss-green-fade .section-detail .section-content .h2, .business-light-moss-green-fade .section-detail .section-content h3, .business-light-moss-green-fade .section-detail .section-content .h3 {
+  color: #292929;
+}
+.business-light-moss-green-fade .section-detail .section-content p {
+  color: #525252;
+}
+.business-light-moss-green-fade .section-detail .section-content .circle_icon_list li .icon-box {
+  background-color: #37B4B4;
+}
+.business-light-moss-green-fade .section-detail .section-content .circle_icon_list li .list-information-text .list-inner-title {
+  color: #292929;
+}
+.business-light-moss-green-fade .section-detail .section-content .circle_icon_list li .list-information-text p {
+  color: #525252;
+}
+.business-light-moss-green-fade .section-detail .section-content .square_icon_list li .icon-box {
+  background-color: #37B4B4;
+}
+.business-light-moss-green-fade .section-detail .section-content .square_icon_list li .icon-box span {
+  color: #ffffff;
+}
+.business-light-moss-green-fade .section-detail .section-content .square_icon_list li .list-information-text .list-inner-title {
+  color: #292929;
+}
+.business-light-moss-green-fade .section-detail .section-content .square_icon_list li .list-information-text p {
+  color: #525252;
+}
+.business-light-moss-green-fade .section-detail .section-content .section_bullet_list li::marker {
+  color: #525252;
+}
+.business-light-moss-green-fade .section-detail .multiple-buttons .btn:last-child {
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  color: #292929;
+}
+.business-light-moss-green-fade .section-detail .multiple-buttons .btn:first-child {
+  background-color: #192A33;
+  color: #ffffff;
+}
+.business-light-moss-green-fade .faq-contact h3, .business-light-moss-green-fade .faq-contact .h3 {
+  color: #292929;
+}
+.business-light-moss-green-fade .section-heading h2, .business-light-moss-green-fade .section-heading .h2 {
+  color: #292929;
+}
+.business-light-moss-green-fade .section-heading p {
+  color: #525252;
+}
+.business-light-moss-green-fade .contact-form {
+  background-color: #284655;
+}
+.business-light-moss-green-fade .contact-form .form-outer .form-headings .form-title {
+  color: #ffffff;
+}
+.business-light-moss-green-fade .contact-form .form-outer .form-headings p {
+  color: #efefef;
+}
+.business-light-moss-green-fade .contact-form .label {
+  color: #ffffff;
+}
+.business-light-moss-green-fade .electricity-card {
+  background-color: #284655;
+}
+.business-light-moss-green-fade .electricity-card .card-body .title {
+  color: #ffffff;
+}
+.business-light-moss-green-fade .electricity-card .card-body p {
+  color: #efefef;
+}
+.business-light-moss-green-fade .electricity-bill-detail .video-img {
+  background-color: #284655;
+}
+.business-light-moss-green-fade .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title {
+  color: #292929;
+}
+.business-light-moss-green-fade .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title + p {
+  color: #525252;
+}
+.business-light-moss-green-fade .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li p {
+  color: #525252;
+}
+.business-light-moss-green-fade .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li::marker {
+  color: #efefef;
+}
+.business-light-moss-green-fade.owl-slider-section .owl-carousel .owl-nav button {
+  background-color: #284655;
+}
+.business-light-moss-green-fade.owl-slider-section .owl-carousel .owl-dots .owl-dot {
+  background-color: rgba(40, 70, 85, 0.25);
+}
+.business-light-moss-green-fade.owl-slider-section .owl-carousel .owl-dots .owl-dot.active {
+  background-color: #284655;
+}
+
+.business-mulberry-purple-fade {
+  background-color: #F8F0F7;
+}
+.business-mulberry-purple-fade .section-detail .section-content h2, .business-mulberry-purple-fade .section-detail .section-content .h2, .business-mulberry-purple-fade .section-detail .section-content h3, .business-mulberry-purple-fade .section-detail .section-content .h3 {
+  color: #292929;
+}
+.business-mulberry-purple-fade .section-detail .section-content p {
+  color: #525252;
+}
+.business-mulberry-purple-fade .section-detail .section-content .circle_icon_list li .icon-box {
+  background-color: #A45699;
+}
+.business-mulberry-purple-fade .section-detail .section-content .circle_icon_list li .icon-box span {
+  color: #ffffff;
+}
+.business-mulberry-purple-fade .section-detail .section-content .circle_icon_list li .list-information-text .list-inner-title {
+  color: #292929;
+}
+.business-mulberry-purple-fade .section-detail .section-content .circle_icon_list li .list-information-text p {
+  color: #525252;
+}
+.business-mulberry-purple-fade .section-detail .section-content .square_icon_list li .icon-box {
+  background-color: #A45699;
+}
+.business-mulberry-purple-fade .section-detail .section-content .square_icon_list li .icon-box span {
+  color: #ffffff;
+}
+.business-mulberry-purple-fade .section-detail .section-content .square_icon_list li .list-information-text .list-inner-title {
+  color: #292929;
+}
+.business-mulberry-purple-fade .section-detail .section-content .square_icon_list li .list-information-text p {
+  color: #525252;
+}
+.business-mulberry-purple-fade .section-detail .section-content .section_bullet_list li::marker {
+  color: #525252;
+}
+.business-mulberry-purple-fade .section-detail .multiple-buttons .btn:last-child {
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  color: #292929;
+}
+.business-mulberry-purple-fade .section-detail .multiple-buttons .btn:first-child {
+  background-color: #A45699;
+  color: #ffffff;
+}
+.business-mulberry-purple-fade .faq-contact h3, .business-mulberry-purple-fade .faq-contact .h3 {
+  color: #292929;
+}
+.business-mulberry-purple-fade .section-heading h2, .business-mulberry-purple-fade .section-heading .h2 {
+  color: #292929;
+}
+.business-mulberry-purple-fade .section-heading p {
+  color: #525252;
+}
+.business-mulberry-purple-fade .contact-form {
+  background-color: #ffffff;
+}
+.business-mulberry-purple-fade .contact-form .form-outer .form-headings .form-title {
+  color: #292929;
+}
+.business-mulberry-purple-fade .contact-form .form-outer .form-headings p {
+  color: #525252;
+}
+.business-mulberry-purple-fade .contact-form .label {
+  color: #292929;
+}
+.business-mulberry-purple-fade .electricity-card {
+  background-color: #284655;
+}
+.business-mulberry-purple-fade .electricity-card .card-body .title {
+  color: #ffffff;
+}
+.business-mulberry-purple-fade .electricity-card .card-body p {
+  color: #efefef;
+}
+.business-mulberry-purple-fade .electricity-bill-detail .video-img {
+  background-color: #284655;
+}
+.business-mulberry-purple-fade .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title {
+  color: #292929;
+}
+.business-mulberry-purple-fade .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title + p {
+  color: #525252;
+}
+.business-mulberry-purple-fade .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li p {
+  color: #525252;
+}
+.business-mulberry-purple-fade .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li::marker {
+  color: #525252;
+}
+.business-mulberry-purple-fade.owl-slider-section .owl-carousel .owl-nav button {
+  background-color: #A45699;
+}
+.business-mulberry-purple-fade.owl-slider-section .owl-carousel .owl-dots .owl-dot {
+  background-color: rgba(164, 86, 153, 0.25);
+}
+.business-mulberry-purple-fade.owl-slider-section .owl-carousel .owl-dots .owl-dot.active {
+  background-color: #A45699;
+}
+
+.business-dark-blue {
+  background-color: #284655;
+}
+.business-dark-blue .section-detail .section-content h2, .business-dark-blue .section-detail .section-content .h2, .business-dark-blue .section-detail .section-content h3, .business-dark-blue .section-detail .section-content .h3 {
+  color: #ffffff;
+}
+.business-dark-blue .section-detail .section-content p {
+  color: #efefef;
+}
+.business-dark-blue .section-detail .section-content .circle_icon_list li .icon-box {
+  background-color: #37B4B4;
+}
+.business-dark-blue .section-detail .section-content .circle_icon_list li .list-information-text .list-inner-title {
+  color: #ffffff;
+}
+.business-dark-blue .section-detail .section-content .circle_icon_list li .list-information-text p {
+  color: #efefef;
+}
+.business-dark-blue .section-detail .section-content .square_icon_list li .icon-box {
+  background-color: #37B4B4;
+}
+.business-dark-blue .section-detail .section-content .square_icon_list li .icon-box span {
+  color: #ffffff;
+}
+.business-dark-blue .section-detail .section-content .square_icon_list li .list-information-text .list-inner-title {
+  color: #ffffff;
+}
+.business-dark-blue .section-detail .section-content .square_icon_list li .list-information-text p {
+  color: #efefef;
+}
+.business-dark-blue .section-detail .section-content .section_bullet_list li::marker {
+  color: #efefef;
+}
+.business-dark-blue .section-detail .multiple-buttons .btn:last-child {
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  color: #292929;
+}
+.business-dark-blue .section-detail .multiple-buttons .btn:first-child {
+  background-color: #37B4B4;
+  color: #ffffff;
+}
+.business-dark-blue .faq-contact h3, .business-dark-blue .faq-contact .h3 {
+  color: #ffffff;
+}
+.business-dark-blue.faq-section .headings .title {
+  color: #ffffff;
+}
+.business-dark-blue .section-heading h2, .business-dark-blue .section-heading .h2 {
+  color: #ffffff;
+}
+.business-dark-blue .section-heading p {
+  color: #efefef;
+}
+.business-dark-blue .electricity-card {
+  background-color: #EEF4F4;
+}
+.business-dark-blue .electricity-card .card-body .title {
+  color: #292929;
+}
+.business-dark-blue .electricity-card .card-body p {
+  color: #525252;
+}
+.business-dark-blue .contact-form {
+  background-color: #EEF4F4;
+}
+.business-dark-blue .contact-form .form-outer .form-headings .form-title {
+  color: #292929;
+}
+.business-dark-blue .contact-form .form-outer .form-headings p {
+  color: #525252;
+}
+.business-dark-blue .contact-form .label {
+  color: #292929;
+}
+.business-dark-blue .video-img {
+  background-color: #efefef;
+}
+.business-dark-blue .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title {
+  color: #ffffff;
+}
+.business-dark-blue .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body .card-title + p {
+  color: #efefef;
+}
+.business-dark-blue .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li p {
+  color: #efefef;
+}
+.business-dark-blue .electricity-bill-detail .electricity-bill-list .electricity-bill-card .card-body ul li::marker {
+  color: #efefef;
+}
+.business-dark-blue.owl-slider-section .owl-carousel .owl-nav button {
+  background-color: #37B4B4;
+}
+.business-dark-blue.owl-slider-section .owl-carousel .owl-dots .owl-dot {
+  background-color: rgba(55, 180, 180, 0.25);
+}
+.business-dark-blue.owl-slider-section .owl-carousel .owl-dots .owl-dot.active {
+  background-color: #37B4B4;
+}
+.business-dark-blue .wrapper {
+  background-color: #ffffff;
+}
+.business-dark-blue .wrapper .section-detail .section-content h2, .business-dark-blue .wrapper .section-detail .section-content .h2 {
+  color: #292929;
+}
+.business-dark-blue .wrapper .section-detail .section-content p {
+  color: #525252;
+}
+
 @media screen and (min-width: 576px) {
   .electricity-price-slider .owl-stage-outer {
     margin-left: calc((100% - 540px) / 2);
@@ -15966,6 +16896,9 @@ li {
   .h-proposition {
     height: 512px !important;
   }
+  .pacakge-section .package-list.tv_package .package-card {
+    height: 720px;
+  }
 }
 @media screen and (max-width: 1199px) and (min-width: 992px) {
   .container-lg,
@@ -15976,6 +16909,9 @@ li {
   }
 }
 @media screen and (max-width: 1199px) {
+  .pacakge-section .package-list.tv_package .package-card {
+    height: 680px;
+  }
   .alt-section .section-position-img.bottom-right-center {
     transform: translate(-40%, 65%);
     top: 0;

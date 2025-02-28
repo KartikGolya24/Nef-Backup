@@ -98,6 +98,15 @@
     .h-proposition {
         height: 512px !important;
     }
+    .pacakge-section {
+        .package-list {
+            &.tv_package {
+                .package-card {
+                    height: 720px;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 1199px) and (min-width: 992px) {
@@ -112,6 +121,15 @@
 
 @media screen and (max-width: 1199px) {
 
+    .pacakge-section {
+        .package-list {
+            &.tv_package {
+                .package-card {
+                    height: 680px;
+                }
+            }
+        }
+    }
     .alt-section .section-position-img.bottom-right-center {
         transform: translate(-40%, 65%);
         top: 0;

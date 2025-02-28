@@ -73,20 +73,20 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::System.Nullable<global::System.Guid> Form => this.Value<global::System.Nullable<global::System.Guid>>(_publishedValueFallback, "form");
 
 		///<summary>
-		/// Form Theme
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("formTheme")]
-		public virtual string FormTheme => this.Value<string>(_publishedValueFallback, "formTheme");
-
-		///<summary>
 		/// Heading Text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("headingText")]
 		public virtual string HeadingText => this.Value<string>(_publishedValueFallback, "headingText");
+
+		///<summary>
+		/// Submit Button Border Color
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("submitButtonBorderColor")]
+		public virtual string SubmitButtonBorderColor => this.Value<string>(_publishedValueFallback, "submitButtonBorderColor");
 
 		///<summary>
 		/// Submit Button Theme

@@ -41,6 +41,38 @@
       {
         "id": 9,
         "value": "private-turquoise"
+      },
+      {
+        "id": 10,
+        "value": "election-white"
+      },
+      {
+        "id": 11,
+        "value": "election-gray"
+      },
+      {
+        "id": 12,
+        "value": "election-light-pink"
+      },
+      {
+        "id": 13,
+        "value": "business-turquoise-fade"
+      },
+      {
+        "id": 14,
+        "value": "business-white"
+      },
+      {
+        "id": 15,
+        "value": "business-light-moss-green-fade"
+      },
+      {
+        "id": 16,
+        "value": "business-mulberry-purple-fade"
+      },
+      {
+        "id": 17,
+        "value": "business-dark-blue"
       }
     ]
   },

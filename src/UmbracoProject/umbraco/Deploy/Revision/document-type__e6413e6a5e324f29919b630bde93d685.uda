@@ -41,7 +41,6 @@
           "Key": "a8e8c931-acc1-4715-a946-354dd6ac20dc",
           "Alias": "buttonTheme",
           "DataType": "umb://data-type/36564b1fa93643ee88423df7234ea0bf",
-          "Mandatory": true,
           "Name": "Button Theme",
           "SortOrder": 2
         }

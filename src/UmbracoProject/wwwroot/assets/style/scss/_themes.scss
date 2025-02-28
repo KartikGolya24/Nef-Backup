@@ -53,6 +53,16 @@
     .page-title {
         text-align: left;
         padding: 0;
+        background-color: transparent;
+    }
+    .section-img {
+        border-radius: 16px;
+        img {
+            border-radius: 16px;
+            min-height: 400px;
+            width: 100%;
+            max-height: 580px;
+        }
     }
     &.electricity-banner {
         .page-title {
@@ -172,6 +182,16 @@
     }
 }
 
+/*----ThemesThemes----Themes------Themes----ThemesThemes----ThemesThe--------mesThemes----ThemesThemes----------Themes--------------*/
+/*----ThemesThemes----Themes------Themes----ThemesThemes----ThemesThe--------mesThemes----ThemesThemes----ThemesThemesThemes--------*/
+/*----ThemesThemes----Themes------Themes----ThemesThemes----ThemesThemes--ThemesThemes----ThemesThemes----Themes------Themes--------*/
+/*-------Themes-------Themes------Themes----Themes----------Themes----Themes----Themes----Themes----------Themes--------------------*/
+/*-------Themes-------ThemesThemesThemes----ThemesThemes----Themes----Themes----Themes----ThemesThemes----------Themes--------------*/
+/*-------Themes-------ThemesThemesThemes----ThemesThemes----Themes--------------Themes----ThemesThemes----------------Themes--------*/
+/*-------Themes-------Themes------Themes----Themes----------Themes--------------Themes----Themes----------Themes------Themes--------*/
+/*-------Themes-------Themes------Themes----ThemesThemes----Themes--------------Themes----ThemesThemes----ThemesThemesThemes--------*/
+/*-------Themes-------Themes------Themes----ThemesThemes----Themes--------------Themes----ThemesThemes----------Themes--------------*/
+
 // Theme 01
 .private-turquoise-fade {
     background-color: $turquoise;
@@ -224,6 +244,19 @@
                     &::marker {
                         color: $black-700;
                     }
+                }
+            }
+        }
+        .multiple-buttons {
+            .btn {
+                &:last-child {
+                    background-color: $white;
+                    border: 1px solid $black-200;
+                    color: $black-950;
+                }
+                &:first-child {
+                    background-color: $dark_blue;
+                    color: $white;
                 }
             }
         }
@@ -363,6 +396,19 @@
                     &::marker {
                         color: $black-700;
                     }
+                }
+            }
+        }
+        .multiple-buttons {
+            .btn {
+                &:last-child {
+                    background-color: $white;
+                    border: 1px solid $black-200;
+                    color: $black-950;
+                }
+                &:first-child {
+                    background-color: $dark_blue;
+                    color: $white;
                 }
             }
         }
@@ -510,6 +556,19 @@
                 }
             }
         }
+        .multiple-buttons {
+            .btn {
+                &:last-child {
+                    background-color: $white;
+                    border: 1px solid $black-200;
+                    color: $black-950;
+                }
+                &:first-child {
+                    background-color: $dark_blue;
+                    color: $white;
+                }
+            }
+        }
     }
     .faq-contact {
         h3 {
@@ -649,6 +708,19 @@
                 }
             }
         }
+        .multiple-buttons {
+            .btn {
+                &:last-child {
+                    background-color: $white;
+                    border: 1px solid $black-200;
+                    color: $black-950;
+                }
+                &:first-child {
+                    background-color: $dark_purple;
+                    color: $white;
+                }
+            }
+        }
     }
     .faq-contact {
         h3 {
@@ -778,6 +850,18 @@
                 }
             }
         }
+        .multiple-buttons {
+            .btn {
+                &:last-child {
+                    background-color: $dark_blue;
+                    color: $white;
+                }
+                &:first-child {
+                    background-color: $light_blue;
+                    color: $white;
+                }
+            }
+        }
     }
     .faq-contact {
         h3 {
@@ -819,10 +903,11 @@
             color: $black-950;
         }
     }
-    .video-img {
-        background-color: $black-100;
-    }
+
     .electricity-bill-detail {
+        .video-img {
+            background-color: $light_blue;
+        }
         .electricity-bill-list  {
             .electricity-bill-card {
                 .card-body {
@@ -927,6 +1012,18 @@
                     &::marker {
                         color: $black-700;
                     }
+                }
+            }
+        }
+        .multiple-buttons {
+            .btn {
+                &:last-child {
+                    background-color: $light_blue;
+                    color: $white;
+                }
+                &:first-child {
+                    background-color: $dark_blue;
+                    color: $white;
                 }
             }
         }
@@ -1072,6 +1169,20 @@
                 }
             }
         }
+        .multiple-buttons {
+            .btn {
+                &:last-child {
+                    background-color: $white;
+                    border: 1px solid $black-200;
+                    color: $black-950;
+                }
+                &:first-child {
+                    background-color: $light_purple;
+                    border-color: $dark_purple;
+                    color: $black-950;
+                }
+            }
+        }
     }
     .faq-contact {
         h3 {
@@ -1087,19 +1198,19 @@
         }
     }
     .contact-form {
-        background-color: $dark_purple;
+        background-color: $white;
         .form-outer {
             .form-headings {
                 .form-title {
-                    color: $white;
+                    color: $black-950;
                 }
                 p {
-                    color: $black-100;
+                    color: $black-700;
                 }
             }
         }
         .label {
-            color: $white;
+            color: $black-950;
         }
     }
     .electricity-card {
@@ -1211,6 +1322,19 @@
                     &::marker {
                         color: $black-100;
                     }
+                }
+            }
+        }
+        .multiple-buttons {
+            .btn {
+                &:last-child {
+                    background-color: $white;
+                    border: 1px solid $black-200;
+                    color: $black-950;
+                }
+                &:first-child {
+                    background-color: $dark_blue;
+                    color: $white;
                 }
             }
         }
@@ -1372,6 +1496,19 @@
                 }
             }
         }
+        .multiple-buttons {
+            .btn {
+                &:last-child {
+                    background-color: $white;
+                    border: 1px solid $black-200;
+                    color: $black-950;
+                }
+                &:first-child {
+                    background-color: $dark_blue;
+                    color: $white;
+                }
+            }
+        }
     }
     .faq-contact {
         h3 {
@@ -1470,4 +1607,1274 @@
             }
         }
     }
+}
+
+// Theme 10
+.election-white {
+    background-color: $white;
+    .section-detail {
+        .section-content {
+            h2, h3 {
+                color: $black-950;
+            }
+            p {
+                color: $black-700;
+            }
+            .circle_icon_list {
+                li {
+                    .icon-box {
+                        background-color: $dark_pink;
+                    }
+                    .list-information-text {
+                        .list-inner-title {
+                            color: $black-950;
+                        }
+                        p {
+                            color: $black-700;
+                        }
+                    }
+                }
+            }
+            .square_icon_list {
+                li {
+                    .icon-box {
+                        background-color: $dark_pink;
+                        span {
+                            color: $white;
+                        }
+                    }
+                    .list-information-text {
+                        .list-inner-title {
+                            color: $black-950;
+                        }
+                        p {
+                            color: $black-700;
+                        }
+                    }
+                }
+            }
+            .section_bullet_list {
+                li {
+                    &::marker {
+                        color: $black-700;
+                    }
+                }
+            }
+            .location-list {
+                li {
+                    background-color: $turquoise;
+                }
+            }
+        }
+        .multiple-buttons {
+            .btn {
+                &:last-child {
+                    background-color: $white;
+                    border: 1px solid $black-200;
+                    color: $black-950;
+                }
+                &:first-child {
+                    background-color: $dark_pink;
+                    color: $white;
+                }
+            }
+        }
+    }
+    .faq-contact {
+        h3 {
+            color: $black-950;
+        }
+    }
+    .section-heading {
+        h2 {
+            color: $black-950;
+        }
+        p {
+            color: $black-700;
+        }
+    }
+    .contact-form {
+        background-color: $turquoise;
+        .form-outer {
+            .form-headings {
+                .form-title {
+                    color: $black-950;
+                }
+                p {
+                    color: $black-700;
+                }
+            }
+        }
+        .label {
+            color: $black-950;
+        }
+    }
+    .electricity-card {
+        background-color: $dark_blue;
+        .card-body {
+            .title {
+                color: $white;
+            }
+            p {
+                color: $black-100;
+            }
+        }
+    }
+    .electricity-bill-detail {
+        .video-img {
+            background-color: $dark_blue;
+        }
+        .electricity-bill-list  {
+            .electricity-bill-card {
+                .card-body {
+                    .card-title {
+                        color: $black-950;
+                        & + p {
+                            color: $black-700;
+                        }
+                    }
+                    ul {
+                        li {
+                            p {
+                                color: $black-700;
+                            }
+                            &::marker {
+                                color: $black-700;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.owl-slider-section {
+        .owl-carousel {
+            .owl-nav {
+                button {
+                    background-color: $light_blue;
+                }
+            }
+            .owl-dots {
+                .owl-dot {
+                    background-color: rgba(55, 180, 180, 0.25);
+                    &.active {
+                        background-color: $light_blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Theme 11
+.election-gray {
+    background-color: $black-100;
+    .section-detail {
+        .section-content {
+            h2, h3 {
+                color: $black-950;
+            }
+            p {
+                color: $black-700;
+            }
+            .circle_icon_list {
+                li {
+                    .icon-box {
+                        background-color: $light_blue;
+                    }
+                    .list-information-text {
+                        .list-inner-title {
+                            color: $black-950;
+                        }
+                        p {
+                            color: $black-700;
+                        }
+                    }
+                }
+            }
+            .square_icon_list {
+                li {
+                    .icon-box {
+                        background-color: $light_blue;
+                        span {
+                            color: $white;
+                        }
+                    }
+                    .list-information-text {
+                        .list-inner-title {
+                            color: $black-950;
+                        }
+                        p {
+                            color: $black-700;
+                        }
+                    }
+                }
+            }
+            .section_bullet_list {
+                li {
+                    &::marker {
+                        color: $black-700;
+                    }
+                }
+            }
+            .location-list {
+                li {
+                    background-color: $turquoise;
+                }
+            }
+        }
+        .multiple-buttons {
+            .btn {
+                &:last-child {
+                    background-color: $white;
+                    border: 1px solid $black-200;
+                    color: $black-950;
+                }
+                &:first-child {
+                    background-color: $dark_pink;
+                    color: $white;
+                }
+            }
+        }
+    }
+    .faq-contact {
+        h3 {
+            color: $black-950;
+        }
+    }
+    .section-heading {
+        h2 {
+            color: $black-950;
+        }
+        p {
+            color: $black-700;
+        }
+    }
+    .contact-form {
+        background-color: $turquoise;
+        .form-outer {
+            .form-headings {
+                .form-title {
+                    color: $black-950;
+                }
+                p {
+                    color: $black-700;
+                }
+            }
+        }
+        .label {
+            color: $black-950;
+        }
+    }
+    .electricity-card {
+        background-color: $dark_blue;
+        .card-body {
+            .title {
+                color: $white;
+            }
+            p {
+                color: $black-100;
+            }
+        }
+    }
+    .electricity-bill-detail {
+        .video-img {
+            background-color: $dark_blue;
+        }
+        .electricity-bill-list  {
+            .electricity-bill-card {
+                .card-body {
+                    .card-title {
+                        color: $black-950;
+                        & + p {
+                            color: $black-700;
+                        }
+                    }
+                    ul {
+                        li {
+                            p {
+                                color: $black-700;
+                            }
+                            &::marker {
+                                color: $black-700;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.owl-slider-section {
+        .owl-carousel {
+            .owl-nav {
+                button {
+                    background-color: $light_blue;
+                }
+            }
+            .owl-dots {
+                .owl-dot {
+                    background-color: rgba(55, 180, 180, 0.25);
+                    &.active {
+                        background-color: $light_blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Theme 12
+.election-light-pink {
+    background-color: $light_pink;
+    .section-detail {
+        .section-content {
+            h2, h3 {
+                color: $black-950;
+            }
+            p {
+                color: $black-700;
+            }
+            .circle_icon_list {
+                li {
+                    .icon-box {
+                        background-color: $dark_pink;
+                    }
+                    .list-information-text {
+                        .list-inner-title {
+                            color: $black-950;
+                        }
+                        p {
+                            color: $black-700;
+                        }
+                    }
+                }
+            }
+            .square_icon_list {
+                li {
+                    .icon-box {
+                        background-color: $dark_pink;
+                        span {
+                            color: $white;
+                        }
+                    }
+                    .list-information-text {
+                        .list-inner-title {
+                            color: $black-950;
+                        }
+                        p {
+                            color: $black-700;
+                        }
+                    }
+                }
+            }
+            .section_bullet_list {
+                li {
+                    &::marker {
+                        color: $black-700;
+                    }
+                }
+            }
+            .location-list {
+                li {
+                    background-color: $turquoise;
+                }
+            }
+        }
+        .multiple-buttons {
+            .btn {
+                &:last-child {
+                    background-color: $white;
+                    border: 1px solid $black-200;
+                    color: $black-950;
+                }
+                &:first-child {
+                    background-color: $dark_pink;
+                    color: $white;
+                }
+            }
+        }
+    }
+    .faq-contact {
+        h3 {
+            color: $black-950;
+        }
+    }
+    .section-heading {
+        h2 {
+            color: $black-950;
+        }
+        p {
+            color: $black-700;
+        }
+    }
+    .contact-form {
+        background-color: $white;
+        .form-outer {
+            .form-headings {
+                .form-title {
+                    color: $black-950;
+                }
+                p {
+                    color: $black-700;
+                }
+            }
+        }
+        .label {
+            color: $black-950;
+        }
+    }
+    .electricity-card {
+        background-color: $dark_blue;
+        .card-body {
+            .title {
+                color: $white;
+            }
+            p {
+                color: $black-100;
+            }
+        }
+    }
+    .electricity-bill-detail {
+        .video-img {
+            background-color: $dark_blue;
+        }
+        .electricity-bill-list  {
+            .electricity-bill-card {
+                .card-body {
+                    .card-title {
+                        color: $black-950;
+                        & + p {
+                            color: $black-700;
+                        }
+                    }
+                    ul {
+                        li {
+                            p {
+                                color: $black-700;
+                            }
+                            &::marker {
+                                color: $black-700;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.owl-slider-section {
+        .owl-carousel {
+            .owl-nav {
+                button {
+                    background-color: $light_blue;
+                }
+            }
+            .owl-dots {
+                .owl-dot {
+                    background-color: rgba(55, 180, 180, 0.25);
+                    &.active {
+                        background-color: $light_blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Theme 13
+.business-turquoise-fade {
+    background-color: $turquoise;
+    .section-detail {
+        .section-content {
+            h2, h3 {
+                color: $black-950;
+            }
+            p {
+                color: $black-700;
+            }
+            .circle_icon_list {
+                li {
+                    .icon-box {
+                        background-color: $light_blue;
+                    }
+                    .list-information-text {
+                        .list-inner-title {
+                            color: $black-950;
+                        }
+                        p {
+                            color: $black-700;
+                        }
+                    }
+                }
+            }
+            .square_icon_list {
+                li {
+                    .icon-box {
+                        background-color: $light_blue;
+                        span {
+                            color: $white;
+                        }
+                    }
+                    .list-information-text {
+                        .list-inner-title {
+                            color: $black-950;
+                        }
+                        p {
+                            color: $black-700;
+                        }
+                    }
+                }
+            }
+            .section_bullet_list {
+                li {
+                    &::marker {
+                        color: $black-700;
+                    }
+                }
+            }
+            .location-list {
+                li {
+                    background-color: $white;
+                }
+            }
+        }
+        .multiple-buttons {
+            .btn {
+                &:last-child {
+                    background-color: $white;
+                    border: 1px solid $black-200;
+                    color: $black-950;
+                }
+                &:first-child {
+                    background-color: $space_blue;
+                    color: $white;
+                }
+            }
+        }
+    }
+    .faq-contact {
+        h3 {
+            color: $black-950;
+        }
+    }
+    .section-heading {
+        h2 {
+            color: $black-950;
+        }
+        p {
+            color: $black-700;
+        }
+    }
+    .contact-form {
+        background-color: $white;
+        border: 1px solid $black-200;
+        .form-outer {
+            .form-headings {
+                .form-title {
+                    color: $black-950;
+                }
+                p {
+                    color: $black-700;
+                }
+            }
+        }
+        .label {
+            color: $black-950;
+        }
+    }
+    .electricity-card {
+        background-color: $dark_blue;
+        .card-body {
+            .title {
+                color: $white;
+            }
+            p {
+                color: $black-100;
+            }
+        }
+    }
+    .electricity-bill-detail {
+        .video-img {
+            background-color: $dark_blue;
+        }
+        .electricity-bill-list  {
+            .electricity-bill-card {
+                .card-body {
+                    .card-title {
+                        color: $black-950;
+                        & + p {
+                            color: $black-700;
+                        }
+                    }
+                    ul {
+                        li {
+                            p {
+                                color: $black-700;
+                            }
+                            &::marker {
+                                color: $black-700;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.owl-slider-section {
+        .owl-carousel {
+            .owl-nav {
+                button {
+                    background-color: $light_blue;
+                }
+            }
+            .owl-dots {
+                .owl-dot {
+                    background-color: rgba(55, 180, 180, 0.25);
+                    &.active {
+                        background-color: $light_blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Theme 14
+.business-white {
+    background-color: $white;
+    .section-detail {
+        .section-content {
+            h2, h3 {
+                color: $black-950;
+            }
+            p {
+                color: $black-700;
+            }
+            .circle_icon_list {
+                li {
+                    .icon-box {
+                        background-color: $light_blue;
+                    }
+                    .list-information-text {
+                        .list-inner-title {
+                            color: $black-950;
+                        }
+                        p {
+                            color: $black-700;
+                        }
+                    }
+                }
+            }
+            .square_icon_list {
+                li {
+                    .icon-box {
+                        background-color: $light_blue;
+                        span {
+                            color: $white;
+                        }
+                    }
+                    .list-information-text {
+                        .list-inner-title {
+                            color: $black-950;
+                        }
+                        p {
+                            color: $black-700;
+                        }
+                    }
+                }
+            }
+            .section_bullet_list {
+                li {
+                    &::marker {
+                        color: $black-700;
+                    }
+                }
+            }
+            .location-list {
+                li {
+                    background-color: $turquoise;
+                }
+            }
+        }
+        .multiple-buttons {
+            .btn {
+                &:last-child {
+                    background-color: $white;
+                    border: 1px solid $black-200;
+                    color: $black-950;
+                }
+                &:first-child {
+                    background-color: $dark_pink;
+                    color: $white;
+                }
+            }
+        }
+    }
+    .faq-contact {
+        h3 {
+            color: $black-950;
+        }
+    }
+    .section-heading {
+        h2 {
+            color: $black-950;
+        }
+        p {
+            color: $black-700;
+        }
+    }
+    .contact-form {
+        background-color: $white;
+        border: 1px solid $black-200;
+        .form-outer {
+            .form-headings {
+                .form-title {
+                    color: $black-950;
+                }
+                p {
+                    color: $black-700;
+                }
+            }
+        }
+        .label {
+            color: $black-950;
+        }
+    }
+    .electricity-card {
+        background-color: $dark_blue;
+        .card-body {
+            .title {
+                color: $white;
+            }
+            p {
+                color: $black-100;
+            }
+        }
+    }
+    .electricity-bill-detail {
+        .video-img {
+            background-color: $dark_blue;
+        }
+        .electricity-bill-list  {
+            .electricity-bill-card {
+                .card-body {
+                    .card-title {
+                        color: $black-950;
+                        & + p {
+                            color: $black-700;
+                        }
+                    }
+                    ul {
+                        li {
+                            p {
+                                color: $black-700;
+                            }
+                            &::marker {
+                                color: $black-700;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.owl-slider-section {
+        .owl-carousel {
+            .owl-nav {
+                button {
+                    background-color: $light_blue;
+                }
+            }
+            .owl-dots {
+                .owl-dot {
+                    background-color: rgba(55, 180, 180, 0.25);
+                    &.active {
+                        background-color: $light_blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Theme 15
+.business-light-moss-green-fade {
+    background-color: $medium_green;
+    .section-detail {
+        .section-content {
+            h2, h3 {
+                color: $black-950;
+            }
+            p {
+                color: $black-700;
+            }
+            .circle_icon_list {
+                li {
+                    .icon-box {
+                        background-color: $light_blue;
+                    }
+                    .list-information-text {
+                        .list-inner-title {
+                            color: $black-950;
+                        }
+                        p {
+                            color: $black-700;
+                        }
+                    }
+                }
+            }
+            .square_icon_list {
+                li {
+                    .icon-box {
+                        background-color: $light_blue;
+                        span {
+                            color: $white;
+                        }
+                    }
+                    .list-information-text {
+                        .list-inner-title {
+                            color: $black-950;
+                        }
+                        p {
+                            color: $black-700;
+                        }
+                    }
+                }
+            }
+            .section_bullet_list {
+                li {
+                    &::marker {
+                        color: $black-700;
+                    }
+                }
+            }
+        }
+        .multiple-buttons {
+            .btn {
+                &:last-child {
+                    background-color: $white;
+                    border: 1px solid $black-200;
+                    color: $black-950;
+                }
+                &:first-child {
+                    background-color: $space_blue;
+                    color: $white;
+                }
+            }
+        }
+    }
+    .faq-contact {
+        h3 {
+            color: $black-950;
+        }
+    }
+    .section-heading {
+        h2 {
+            color: $black-950;
+        }
+        p {
+            color: $black-700;
+        }
+    }
+    .contact-form {
+        background-color: $dark_blue;
+        .form-outer {
+            .form-headings {
+                .form-title {
+                    color: $white;
+                }
+                p {
+                    color: $black-100;
+                }
+            }
+        }
+        .label {
+            color: $white;
+        }
+    }
+    .electricity-card {
+        background-color: $dark_blue;
+        .card-body {
+            .title {
+                color: $white;
+            }
+            p {
+                color: $black-100;
+            }
+        }
+    }
+    .electricity-bill-detail {
+        .video-img {
+            background-color: $dark_blue;
+        }
+        .electricity-bill-list  {
+            .electricity-bill-card {
+                .card-body {
+                    .card-title {
+                        color: $black-950;
+                        & + p {
+                            color: $black-700;
+                        }
+                    }
+                    ul {
+                        li {
+                            p {
+                                color: $black-700;
+                            }
+                            &::marker {
+                                color: $black-100;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.owl-slider-section {
+        .owl-carousel {
+            .owl-nav {
+                button {
+                    background-color: $dark_blue;
+                }
+            }
+            .owl-dots {
+                .owl-dot {
+                    background-color: rgba(40, 70, 85, 0.25);
+                    &.active {
+                        background-color: $dark_blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Theme 16
+.business-mulberry-purple-fade {
+    background-color: $light_purple;
+    .section-detail {
+        .section-content {
+            h2, h3 {
+                color: $black-950;
+            }
+            p {
+                color: $black-700;
+            }
+            .circle_icon_list {
+                li {
+                    .icon-box {
+                        background-color: $dark_purple;
+                        span {
+                            color: $white;
+                        }
+                    }
+                    .list-information-text {
+                        .list-inner-title {
+                            color: $black-950;
+                        }
+                        p {
+                            color: $black-700;
+                        }
+                    }
+                }
+            }
+            .square_icon_list {
+                li {
+                    .icon-box {
+                        background-color: $dark_purple;
+                        span {
+                            color: $white;
+                        }
+                    }
+                    .list-information-text {
+                        .list-inner-title {
+                            color: $black-950;
+                        }
+                        p {
+                            color: $black-700;
+                        }
+                    }
+                }
+            }
+            .section_bullet_list {
+                li {
+                    &::marker {
+                        color: $black-700;
+                    }
+                }
+            }
+        }
+        .multiple-buttons {
+            .btn {
+                &:last-child {
+                    background-color: $white;
+                    border: 1px solid $black-200;
+                    color: $black-950;
+                }
+                &:first-child {
+                    background-color: $dark_purple;
+                    color: $white;
+                }
+            }
+        }
+    }
+    .faq-contact {
+        h3 {
+            color: $black-950;
+        }
+    }
+    .section-heading {
+        h2 {
+            color: $black-950;
+        }
+        p {
+            color: $black-700;
+        }
+    }
+    .contact-form {
+        background-color: $white;
+        .form-outer {
+            .form-headings {
+                .form-title {
+                    color: $black-950;
+                }
+                p {
+                    color: $black-700;
+                }
+            }
+        }
+        .label {
+            color: $black-950;
+        }
+    }
+    .electricity-card {
+        background-color: $dark_blue;
+        .card-body {
+            .title {
+                color: $white;
+            }
+            p {
+                color: $black-100;
+            }
+        }
+    }
+    .electricity-bill-detail {
+        .video-img {
+            background-color: $dark_blue;
+        }
+        .electricity-bill-list  {
+            .electricity-bill-card {
+                .card-body {
+                    .card-title {
+                        color: $black-950;
+                        & + p {
+                            color: $black-700;
+                        }
+                    }
+                    ul {
+                        li {
+                            p {
+                                color: $black-700;
+                            }
+                            &::marker {
+                                color: $black-700;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.owl-slider-section {
+        .owl-carousel {
+            .owl-nav {
+                button {
+                    background-color: $dark_purple;
+                }
+            }
+            .owl-dots {
+                .owl-dot {
+                    background-color: rgba(164, 86, 153, 0.25);
+                    &.active {
+                        background-color: $dark_purple;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Theme 17
+.business-dark-blue {
+    background-color: $dark_blue;
+    .section-detail {
+        .section-content {
+            h2, h3 {
+                color: $white;
+            }
+            p {
+                color: $black-100;
+            }
+            
+            .circle_icon_list {
+                li {
+                    .icon-box {
+                        background-color: $light_blue;
+                    }
+                    .list-information-text {
+                        .list-inner-title {
+                            color: $white;
+                        }
+                        p {
+                            color: $black-100;
+                        }
+                    }
+                }
+            }
+            .square_icon_list {
+                li {
+                    .icon-box {
+                        background-color: $light_blue;
+                        span {
+                            color: $white;
+                        }
+                    }
+                    .list-information-text {
+                        .list-inner-title {
+                            color: $white;
+                        }
+                        p {
+                            color: $black-100;
+                        }
+                    }
+                }
+            }
+            .section_bullet_list {
+                li {
+                    &::marker {
+                        color: $black-100;
+                    }
+                }
+            }
+        }
+        .multiple-buttons {
+            .btn {
+                &:last-child {
+                    background-color: $white;
+                    border: 1px solid $black-200;
+                    color: $black-950;
+                }
+                &:first-child {
+                    background-color: $light_blue;
+                    color: $white;
+                }
+            }
+        }
+    }
+    .faq-contact {
+        h3 {
+            color: $white;
+        }
+    }
+
+    &.faq-section {
+        .headings {
+            .title {
+                color: $white;
+            }
+        }
+    }
+    
+    .section-heading {
+        h2 {
+            color: $white;
+        }
+        p {
+            color: $black-100;
+        }
+    }
+    .electricity-card {
+        background-color: $turquoise;
+        .card-body {
+            .title {
+                color: $black-950;
+            }
+            p {
+                color: $black-700;
+            }
+        }
+    }
+    .contact-form {
+        background-color: $turquoise;
+        .form-outer {
+            .form-headings {
+                .form-title {
+                    color: $black-950;
+                }
+                p {
+                    color: $black-700;
+                }
+            }
+        }
+        .label {
+            color: $black-950;
+        }
+    }
+    .video-img {
+        background-color: $black-100;
+    }
+    .electricity-bill-detail {
+        .electricity-bill-list  {
+            .electricity-bill-card {
+                .card-body {
+                    .card-title {
+                        color: $white;
+                        & + p {
+                            color: $black-100;
+                        }
+                    }
+                    ul {
+                        li {
+                            p {
+                                color: $black-100;
+                            }
+                            &::marker {
+                                color: $black-100;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.owl-slider-section {
+        .owl-carousel {
+            .owl-nav {
+                button {
+                    background-color: $light_blue;
+                }
+            }
+            .owl-dots {
+                .owl-dot {
+                    background-color: rgba(55, 180, 180, 0.25);
+                    &.active {
+                        background-color: $light_blue;
+                    }
+                }
+            }
+        }
+    }
+    .wrapper {
+        background-color: $white;
+        .section-detail {
+            .section-content {
+                h2 {
+                    color: $black-950;
+                }
+                p {
+                    color: $black-700;
+                }
+            }
+        }
+    }
+
 }

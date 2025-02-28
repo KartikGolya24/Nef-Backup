@@ -23,7 +23,7 @@
           "Alias": "afterSuccessRedirectionButton",
           "DataType": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
           "Name": "After Success Redirection Button",
-          "SortOrder": 2
+          "SortOrder": 4
         },
         {
           "Key": "61b5f820-4c02-4041-9b5e-bd74f51ddbfc",
@@ -36,7 +36,7 @@
           "Alias": "successMessage",
           "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
           "Name": "Success Message",
-          "SortOrder": 1
+          "SortOrder": 3
         }
       ]
     },
@@ -60,11 +60,11 @@
           "SortOrder": 4
         },
         {
-          "Key": "cb87f80c-fe57-4e58-bdd0-06ea80a3bb90",
-          "Alias": "formTheme",
-          "DataType": "umb://data-type/693473f8c62c42d2abf3b0228668ab4f",
-          "Name": "Form Theme",
-          "SortOrder": 3
+          "Key": "bd8427e1-18f5-420e-93f1-66bc2ace4a61",
+          "Alias": "submitButtonBorderColor",
+          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+          "Name": "Submit Button Border Color",
+          "SortOrder": 5
         },
         {
           "Key": "d809e585-9030-45c7-8983-a15c6d2c2534",
@@ -94,15 +94,15 @@
       "Ordering": true
     },
     {
+      "Udi": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+      "Ordering": true
+    },
+    {
       "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
       "Ordering": true
     },
     {
       "Udi": "umb://data-type/36564b1fa93643ee88423df7234ea0bf",
-      "Ordering": true
-    },
-    {
-      "Udi": "umb://data-type/693473f8c62c42d2abf3b0228668ab4f",
       "Ordering": true
     },
     {

@@ -360,11 +360,11 @@ li {
 }
 
 .mb-64 {
-    margin-bottom: 64px !important;
+    margin-bottom: 64px;
 }
 
 .mt-64 {
-    margin-top: 64px !important;
+    margin-top: 64px;
 }
 
 .my-40 {
@@ -795,6 +795,26 @@ li {
         &.mx272px {
             max-width: 272px;
         }
+    }
+}
+
+//======================= common buttons for tabs =====================//
+.Privat-tab {
+    .btn {
+        background-color: $dark_blue;
+        color: $white;
+    }
+}
+.business-tab {
+    .btn {
+        background-color: $steel_blue;
+        color: $white;
+    }
+}
+.Repræsentantskabsvalg-tab {
+    .btn {
+        background-color: $dark_pink;
+        color: $white;
     }
 }
 
@@ -1300,7 +1320,7 @@ li {
 
 //================================================ Section =================================
 .alt-section {
-    padding: 64px 0;
+    padding: 96px 0;
     position: relative;
 
     .section-detail {
@@ -1439,6 +1459,7 @@ li {
 
                 li {
                     list-style: inherit;
+
                     &::marker {
                         color: $black-700;
                     }
@@ -1484,6 +1505,7 @@ li {
         border-radius: 16px;
         padding: 24px;
         background-color: $dark_blue;
+        margin-top: 80px;
 
         .section-detail {
             max-width: 600px;
@@ -1493,6 +1515,7 @@ li {
                 h2 {
                     color: $white;
                 }
+
                 p {
                     margin-bottom: 24px;
                     color: $black-100;
@@ -1732,6 +1755,16 @@ li {
         padding: 150px 0px;
     }
 
+    .order-nef-card {
+        .section-img {
+            img:not(.section-position-img img) {
+                max-width: 221px;
+                min-height: auto;
+                width: auto;
+            }
+        }
+    }
+
     .section-img {
         position: relative;
         border-radius: 16px;
@@ -1810,6 +1843,9 @@ li {
 
         img {
             max-width: none;
+            width: 400px;
+            height: 400px;
+            object-fit: none;
         }
 
 
@@ -2787,7 +2823,7 @@ li {
     position: relative;
 
     [class*=container] {
-        & > .row {
+        &>.row {
             align-items: center;
 
             &.flex-row-reverse {
@@ -3147,6 +3183,7 @@ li {
 
                     .video-img {
                         border-radius: 16px;
+
                         img {
                             border-radius: 16px;
                             // width: 480px;
@@ -3469,6 +3506,7 @@ li {
             border: 1px solid $black-100;
             border-radius: 16px;
             max-width: 400px;
+            background-color: $white;
 
             .title {
                 margin-bottom: 20px;
@@ -3538,47 +3576,44 @@ li {
     }
 }
 
-.box-list {
-    padding: 137px 0;
+.order-nef-card {
+    padding: 32px 32px 61px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $light_blue;
 
-    .order-nef-card {
-        padding: 32px 32px 61px;
-        border-radius: 16px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    .section-img {
+        margin-bottom: 41px;
 
-        .section-img {
-            margin-bottom: 41px;
+        img {
+            max-width: 221px;
 
-            img {
-                max-width: 221px;
-
-                &.mx-184 {
-                    max-width: 184px;
-                }
+            &.mx-184 {
+                max-width: 184px;
             }
         }
+    }
 
+    .title {
+        font-size: 32px;
+        line-height: 45.15px;
+        color: $white;
+        margin-bottom: 16px;
+    }
+
+    p {
+        color: $black-100;
+    }
+
+    &.light_blue_bg {
         .title {
-            font-size: 32px;
-            line-height: 45.15px;
-            color: $dark_blue;
-            margin-bottom: 16px;
+            color: $white;
         }
 
         p {
-            color: $black-700;
-        }
-
-        &.light_blue_bg {
-            .title {
-                color: $white;
-            }
-
-            p {
-                color: $white;
-            }
+            color: $white;
         }
     }
 }

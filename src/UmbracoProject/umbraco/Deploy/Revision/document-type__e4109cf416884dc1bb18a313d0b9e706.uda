@@ -32,9 +32,9 @@
         },
         {
           "Key": "9aab0f3d-fad1-4920-927a-09c1432934f7",
-          "Alias": "isEnableScrollButton",
+          "Alias": "addScroll",
           "DataType": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
-          "Name": "IsEnableScrollButton",
+          "Name": "Add Scroll",
           "SortOrder": 1
         }
       ]

@@ -12,6 +12,7 @@
         "allowInAreas": true,
         "areas": [],
         "contentElementTypeKey": "36696209-d5c5-4488-907b-d611ef234e65",
+        "settingsElementTypeKey": "d9a72dac-69e6-440b-9a23-4b106c350cd4",
         "label": "{{sectionTitle}}",
         "editorSize": "medium",
         "inlineEditing": false,
@@ -25,6 +26,7 @@
         "allowInAreas": true,
         "areas": [],
         "contentElementTypeKey": "ad940964-e0ec-48f6-b045-ffe63b9d62d4",
+        "settingsElementTypeKey": "d9a72dac-69e6-440b-9a23-4b106c350cd4",
         "label": "{{sectionTitle}}",
         "editorSize": "medium",
         "inlineEditing": false,
@@ -51,6 +53,7 @@
         "allowInAreas": true,
         "areas": [],
         "contentElementTypeKey": "6274d9f9-2ce4-48c8-a5a5-1b8d20ab06c9",
+        "settingsElementTypeKey": "d9a72dac-69e6-440b-9a23-4b106c350cd4",
         "label": "",
         "editorSize": "medium",
         "inlineEditing": false,
@@ -64,6 +67,7 @@
         "allowInAreas": true,
         "areas": [],
         "contentElementTypeKey": "84d652e4-246e-42cb-a0d6-65dd910a8201",
+        "settingsElementTypeKey": "d9a72dac-69e6-440b-9a23-4b106c350cd4",
         "label": "",
         "editorSize": "medium",
         "inlineEditing": false,
@@ -77,6 +81,7 @@
         "allowInAreas": true,
         "areas": [],
         "contentElementTypeKey": "4b676a13-f354-4743-89c4-ac282c60277a",
+        "settingsElementTypeKey": "d9a72dac-69e6-440b-9a23-4b106c350cd4",
         "label": "{{heading | ncRichText | truncate:true:80}}",
         "editorSize": "medium",
         "inlineEditing": false,
@@ -90,7 +95,7 @@
         "allowInAreas": true,
         "areas": [],
         "contentElementTypeKey": "4527cc25-f8d8-43dc-85d0-7c220ffe955c",
-        "settingsElementTypeKey": "69e8ea9e-0a61-4a79-a509-76740b15a531",
+        "settingsElementTypeKey": "d9a72dac-69e6-440b-9a23-4b106c350cd4",
         "label": "",
         "editorSize": "medium",
         "inlineEditing": false,
@@ -116,13 +121,13 @@
       "Udi": "umb://document-type/6274d9f92ce448c8a5a51b8d20ab06c9"
     },
     {
-      "Udi": "umb://document-type/69e8ea9e0a614a79a50976740b15a531"
-    },
-    {
       "Udi": "umb://document-type/84d652e4246e42cba0d665dd910a8201"
     },
     {
       "Udi": "umb://document-type/ad940964e0ec48f6b045ffe63b9d62d4"
+    },
+    {
+      "Udi": "umb://document-type/d9a72dac69e6440b9a234b106c350cd4"
     },
     {
       "Udi": "umb://document-type/f32b42ee950743ba97c76bb723dfdb20"

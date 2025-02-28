@@ -291,8 +291,8 @@
         .position-img {
             width: max-content;
             position: absolute;
-            top: -60px;
-            right: 0px;
+            top: -50px;
+            right: 20px;
 
             img {
                 height: 300px;
@@ -370,13 +370,13 @@
 
             .btn {
                 &.light_blue_btn {
-                    background-color: $dark_blue;
-                    color: $white;
+                    background-color: $dark_blue !important;
+                    color: $white !important;
                 }
 
                 &.white_bg_btn {
-                    background-color: $light_blue;
-                    color: $white;
+                    background-color: $light_blue !important;
+                    color: $white !important;
                 }
             }
 

@@ -82,7 +82,7 @@
                                                 {
                                                     <div class="dot-list-outer">
                                                         <p>@dotListModel.ListTitle</p>
-                                                        <ul class="section_dot_list">
+                                                        <ul class="section_bullet_list">
                                                             @foreach (var text in dotListModel.BulletList)
                                                             {
                                                                 <li>
@@ -140,7 +140,7 @@
                             }
                             else
                             {
-                                <div class="section-img overflow-hidden overflow-md-visible">
+                                <div class="section-img">
 
                                     <img src="@mediaBlock?.Image?.GetWebp(534,0)" class="img-fluid" alt="img" />
 
@@ -149,7 +149,7 @@
                                         @foreach (var image in mediaBlock?.PositionImages)
                                         {
                                             var imageModel = image?.Content as PositionImagesBlock;
-                                            <div class="section-position-img @imageModel?.Position d-block">
+                                            <div class="section-position-img @imageModel?.Position">
                                                 <img src="@imageModel?.Image?.MediaUrl()" class="img-fluid" alt="" />
                                             </div>
                                         }

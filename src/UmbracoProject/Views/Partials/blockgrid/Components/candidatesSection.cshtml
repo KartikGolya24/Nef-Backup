@@ -3,6 +3,7 @@
 
 @{
     var content = Model?.Content;
+    var setting = Model?.Settings as SectionSettingModel;
     var root = Umbraco?.ContentAtRoot()?.FirstOrDefault(x => x.Key == new Guid("42b72081-fe62-4e99-9932-295959ae9abf"));
     var Candidates = root?.Children<Candidates>()?.FirstOrDefault();
     var CandidateList = Candidates?.Children<CandidatePage>()?.ToList();
@@ -11,7 +12,7 @@
 
 @if (CandidateList?.Count > 0)
 {
-    <section class="candidates-section">
+    <section class="candidates-section @setting?.Theme">
         @if (!string.IsNullOrWhiteSpace(content?.SectionTitle))
         {
             <div class="headings">

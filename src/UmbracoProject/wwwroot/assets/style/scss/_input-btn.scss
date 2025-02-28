@@ -37,103 +37,103 @@
     }
 
     &.light_blue_btn {
-        color: $white;
-        background-color: $light_blue;
+        color: $white !important;
+        background-color: $light_blue !important;;
         &:hover {
-            background-color: #237373;
-            color: $white;
+            background-color: #237373 !important;
+            color: $white !important;
         }
     }
 
     &.light_purple_btn {
-        color: $black-950;
-        background-color: $light_purple;
+        color: $black-950 !important;
+        background-color: $light_purple !important;
         &:hover {
-            background-color: #D7DCDC;
-            border-color: $dark_purple;
+            background-color: #D7DCDC !important;
+            border-color: $dark_purple !important;
         }
     }
 
     &.dark_blue_btn {
-        color: $white;
-        background-color: $dark_blue;
+        color: $white !important;
+        background-color: $dark_blue !important;
         &:hover {
-            background-color: #3e6579;
-            color: $white;
+            background-color: #3e6579 !important;
+            color: $white !important;
         }
     }
 
     &.steel_blue_btn {
-        background-color: $steel_blue;
-        color: $white;
+        background-color: $steel_blue !important;
+        color: $white !important;
         &:hover {
-            background-color: #305f88;
-            color: $white;
-            border-color: $white;
+            background-color: #305f88 !important;
+            color: $white !important;
+            border-color: $white !important;
         }
     }
 
     &.dark_purple_btn {
-        background-color: $dark_purple;
-        color: $white;
+        background-color: $dark_purple !important;
+        color: $white !important;
         &:hover {
-            background-color: #6C3965;
-            color: $white;
+            background-color: #6C3965 !important;
+            color: $white !important;
         }
     }
 
     &.white_bg_btn {
-        color: $black-950;
-        background-color: $white;
+        color: $black-950 !important;
+        background-color: $white !important;
         border-color: $black-200 !important;
         &:hover {
-            background-color: #F2F2F2;
-            color: $black-950;
+            background-color: #F2F2F2 !important;
+            color: $black-950 !important;
         }
     }
 
     &.dark_green_btn {
-        color: $white;
-        background-color: $dark_green;
+        color: $white !important;
+        background-color: $dark_green !important;
         &:hover {
-            background-color: #1a2f38;
-            color: $white;
+            background-color: #1a2f38 !important;
+            color: $white !important;
         }
     }
 
     &.black-bg-100 {
         &:hover {
-            background-color: $black-200;
-            color: $black-950;
+            background-color: $black-200 !important;
+            color: $black-950 !important;
         }
     }
 
     &.turquoise_bg_btn {
-        background-color: $turquoise;
-        color: $black-950;
+        background-color: $turquoise !important;
+        color: $black-950 !important;
         &:hover {
-            background-color: #ffffff;
-            border-color: #37B4B4;
+            background-color: #ffffff !important;
+            border-color: #37B4B4 !important;
         }
     }
 
     &.space_blue_btn {
-        color: $white;
-        background-color: $space_blue;
+        color: $white !important;
+        background-color: $space_blue !important;
         &:hover {
-            background-color: #264352;
-            border-color: #37B4B4;
-            color: #fff;
+            background-color: #264352 !important;
+            border-color: #37B4B4 !important;
+            color: #fff !important;
         }
     }
 
     &.dark_pink_btn {
-        background-color: $dark_pink;
-        color: $white;
+        background-color: $dark_pink !important;
+        color: $white !important;
         &:hover {
-            border: 1px solid $dark_pink;
-            background-color: #d54e98;
-            color: $white;
+            border: 1px solid $dark_pink !important;
+            background-color: #d54e98 !important;
+            color: $white !important;
         }
     }
 }

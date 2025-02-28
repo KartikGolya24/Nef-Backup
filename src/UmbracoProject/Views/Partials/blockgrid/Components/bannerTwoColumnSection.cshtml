@@ -22,16 +22,16 @@
                             <div class="page-title">
                                 <div class="contact-section">
                                     <h1>@contentModel?.Heading</h1>
-                                    <div class="contact-section-para ">
+                                    <div class="contact-section-para">
                                         @Html.Raw(contentModel?.Description)
                                     </div>
+                                    @if (contentModel?.ButtonList?.Count > 0)
+                                    {
+                                        <div class="multiple-buttons">
+                                            @Html.GetBlockListHtml(contentModel?.ButtonList)
+                                        </div>
+                                    }
                                 </div>
-                                @if (contentModel?.ButtonList?.Count > 0)
-                                {
-                                    <div class="multiple-buttons mt-32">
-                                        @Html.GetBlockListHtml(contentModel?.ButtonList)
-                                    </div>
-                                }
                             </div>
                         </div>
                     }

@@ -3,9 +3,10 @@
 
 @{
     var content = Model?.Content;
+    var setting = Model?.Settings as SectionSettingModel;
 }
 
-<section class="contact-us">
+<section class="contact-us @setting.Theme">
     <div class="container">
         @if (!string.IsNullOrWhiteSpace(content?.SectionTitle))
         {
