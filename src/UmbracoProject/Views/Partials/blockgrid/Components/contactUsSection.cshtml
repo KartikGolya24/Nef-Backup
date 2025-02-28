@@ -6,7 +6,7 @@
     var setting = Model?.Settings as SectionSettingModel;
 }
 
-<section class="contact-us @setting.Theme">
+<section class="contact-us @setting?.Theme">
     <div class="container">
         @if (!string.IsNullOrWhiteSpace(content?.SectionTitle))
         {
