@@ -3,7 +3,7 @@
   "Alias": "accordionSection",
   "AllowedTemplates": [],
   "HistoryCleanup": {},
-  "Icon": "icon-science",
+  "Icon": "icon-article color-blue",
   "Thumbnail": "folder.png",
   "Permissions": {
     "IsElementType": true,
