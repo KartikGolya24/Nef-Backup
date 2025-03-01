@@ -89,9 +89,12 @@
                                                             iframe.referrerPolicy = "no-referrer-when-downgrade";
                                                             iframe.loading = "lazy"; 
                                                 
+                                                            iframe.onload = function () {
+                                                                mapContainer.innerHTML = ""; // Remove "Loading map..." when loaded
+                                                                mapContainer.appendChild(iframe);
+                                                            };
                                                             
-                                                            mapContainer.innerHTML = "";
-                                                            mapContainer.appendChild(iframe);
+                                                            
                                                         }
                                                     }
                                                 
