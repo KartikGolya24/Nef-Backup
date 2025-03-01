@@ -41,8 +41,10 @@
                                         {
                                             <div class="map-section">
                                                 <h2 class="mb-0">@itemModel?.Heading</h2>
-                                                <iframe src="@itemModel?.MapIframeSrc" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+                                                <div id="map-container">
+                                                 <p>Loading map...</p>
+                                                </div>
+                                               
                                                 <div class="box-footer">
                                                     @Html?.Raw(itemModel?.OpratingMapDescription)
                                                     <a href="@itemModel?.ButtonLink?.Url" class="btn light_blue_btn">
@@ -61,6 +63,38 @@
                                                     </a>
                                                 </div>
                                             </div>
+                                             <script>
+                                                document.addEventListener("DOMContentLoaded", function () {
+                                                 const mapContainer = document.getElementById("map-container");
+
+                                                     function loadIframe() {
+                                                         if (!mapContainer.querySelector("iframe")) { // Prevent duplicate iframe
+                                                             const iframe = document.createElement("iframe");
+                                                                     iframe.src = "@itemModel?.MapIframeSrc";
+                                                                     iframe.width = "100%";
+                                                                     iframe.height = "400";
+                                                                     iframe.style.border = "0";
+                                                                     iframe.allowFullscreen = true;
+                                                                     iframe.referrerPolicy = "no-referrer-when-downgrade";
+                                                                     iframe.loading = "lazy"; // Extra lazy loading
+                                                    
+                                                                     mapContainer.innerHTML = ""; // Remove "Loading map..."
+                                                                     mapContainer.appendChild(iframe);
+                                                                 }
+                                                             }
+                                                    
+                                                             const observer = new IntersectionObserver((entries) => {
+                                                                 entries.forEach(entry => {
+                                                                     if (entry.isIntersecting) {
+                                                                         loadIframe();
+                                                                         observer.disconnect(); // Stop observing after loading
+                                                                     }
+                                                                 });
+                                                             }, { threshold: 0.2 }); // Load earlier
+                                                    
+                                                             observer.observe(mapContainer);
+                                                         });
+                                         </script>
                                         }
                                         else
                                         {
