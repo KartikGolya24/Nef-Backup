@@ -79,7 +79,7 @@
                                                     const mapContainer = document.getElementById("map-container");
                                                 
                                                     function loadIframe() {
-                                                        if (!mapContainer.querySelector("iframe")) { 
+                                                        if (!mapContainer.querySelector("iframe") && "@itemModel?.MapIframeSrc") { 
                                                             const iframe = document.createElement("iframe");
                                                             iframe.src = "@itemModel?.MapIframeSrc";
                                                             iframe.width = "100%";
@@ -89,8 +89,11 @@
                                                             iframe.referrerPolicy = "no-referrer-when-downgrade";
                                                             iframe.loading = "lazy"; 
                                                 
-                                                            
-                                                            mapContainer.innerHTML = "";
+                                                            iframe.onload = function () {
+                                                                mapContainer.innerHTML = ""; // Remove "Loading map..." when loaded
+                                                                mapContainer.appendChild(iframe);
+                                                            };
+                                                
                                                             mapContainer.appendChild(iframe);
                                                         }
                                                     }
