@@ -79,7 +79,7 @@
                                                     const mapContainer = document.getElementById("map-container");
                                                 
                                                     function loadIframe() {
-                                                        if (!mapContainer.querySelector("iframe") && "@itemModel?.MapIframeSrc") { 
+                                                        if (!mapContainer.querySelector("iframe")) { 
                                                             const iframe = document.createElement("iframe");
                                                             iframe.src = "@itemModel?.MapIframeSrc";
                                                             iframe.width = "100%";
