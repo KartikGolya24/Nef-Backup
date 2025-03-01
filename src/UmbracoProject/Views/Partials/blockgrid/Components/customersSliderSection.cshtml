@@ -29,7 +29,7 @@
                     var videoTargetId = $"staticBackdrop{count++}";
                     var itemModel = item?.Content as CustomerSliderBlocks;
                     <div class="video-img">
-                        <img src="@itemModel?.Thumbnail?.GetWebp()" class="img-fluid" alt="img">
+                        <img src="@itemModel?.Thumbnail?.GetWebp(475,0)" class="img-fluid" alt="img">
                         <button type="button" data-href="@itemModel?.Video?.MediaUrl()" class="videoBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
