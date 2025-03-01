@@ -1,0 +1,42 @@
+[
+  {
+    "outputFileName": "wwwroot/assets/js/jquery.output.min.js",
+    "inputFiles": [
+      "wwwroot/assets/js/jquery.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    }
+  },
+  {
+    "outputFileName": "wwwroot/assets/js/custom.output.min.js",
+    "inputFiles": [
+      "wwwroot/assets/js/custom.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    }
+  },
+  {
+    "outputFileName": "wwwroot/assets/js/global.output.min.js",
+    "inputFiles": [
+      "wwwroot/assets/js/global.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    }
+  },
+  {
+    "outputFileName": "wwwroot/assets/js/forms.output.min.js",
+    "inputFiles": [
+      "wwwroot/assets/js/forms.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    }
+  }
+]
