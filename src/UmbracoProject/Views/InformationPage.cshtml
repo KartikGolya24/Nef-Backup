@@ -2,6 +2,17 @@
 @{
     Layout = "Master.cshtml";
 }
+<style>
+    #map-container {
+    height: 545px;
+    background: #f3f3f3; /* Placeholder color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #666;
+}
+</style>
 <!---------------------------------- other-section-banner ------------------------->
 <div class="section-banner">
     <div class="container">
@@ -41,8 +52,8 @@
                                         {
                                             <div class="map-section">
                                                 <h2 class="mb-0">@itemModel?.Heading</h2>
-                                                <div id="map-container" style="height: 545px;">
-                                                 <p>Loading map...</p>
+                                                <div id="map-container">
+                                                    <p>Loading map...</p>
                                                 </div>
                                                
                                                 <div class="box-footer">
@@ -63,38 +74,42 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                             <script>
+                                            <script>
                                                 document.addEventListener("DOMContentLoaded", function () {
-                                                 const mapContainer = document.getElementById("map-container");
-
-                                                     function loadIframe() {
-                                                         if (!mapContainer.querySelector("iframe")) { // Prevent duplicate iframe
-                                                             const iframe = document.createElement("iframe");
-                                                                     iframe.src = "@itemModel?.MapIframeSrc";
-                                                                     iframe.width = "100%";
-                                                                     iframe.height = "400";
-                                                                     iframe.style.border = "0";
-                                                                     iframe.allowFullscreen = true;
-                                                                     iframe.referrerPolicy = "no-referrer-when-downgrade";
-                                                                     iframe.loading = "lazy"; // Extra lazy loading
-                                                    
-                                                                     mapContainer.innerHTML = ""; // Remove "Loading map..."
-                                                                     mapContainer.appendChild(iframe);
-                                                                 }
-                                                             }
-                                                    
-                                                             const observer = new IntersectionObserver((entries) => {
-                                                                 entries.forEach(entry => {
-                                                                     if (entry.isIntersecting) {
-                                                                         loadIframe();
-                                                                         observer.disconnect(); // Stop observing after loading
-                                                                     }
-                                                                 });
-                                                             }, { threshold: 0.2 }); // Load earlier
-                                                    
-                                                             observer.observe(mapContainer);
-                                                         });
-                                         </script>
+                                                    const mapContainer = document.getElementById("map-container");
+                                                
+                                                    function loadIframe() {
+                                                        if (!mapContainer.querySelector("iframe") && "@itemModel?.MapIframeSrc") { 
+                                                            const iframe = document.createElement("iframe");
+                                                            iframe.src = "@itemModel?.MapIframeSrc";
+                                                            iframe.width = "100%";
+                                                            iframe.height = "545"; 
+                                                            iframe.style.border = "0";
+                                                            iframe.allowFullscreen = true;
+                                                            iframe.referrerPolicy = "no-referrer-when-downgrade";
+                                                            iframe.loading = "lazy"; 
+                                                
+                                                            iframe.onload = function () {
+                                                                mapContainer.innerHTML = ""; // Remove "Loading map..." when loaded
+                                                                mapContainer.appendChild(iframe);
+                                                            };
+                                                
+                                                            mapContainer.appendChild(iframe);
+                                                        }
+                                                    }
+                                                
+                                                    const observer = new IntersectionObserver((entries) => {
+                                                        entries.forEach(entry => {
+                                                            if (entry.isIntersecting) {
+                                                                loadIframe();
+                                                                observer.disconnect();
+                                                            }
+                                                        });
+                                                    }, { threshold: 0.2 });
+                                                
+                                                    observer.observe(mapContainer);
+                                                });
+                                            </script>
                                         }
                                         else
                                         {
