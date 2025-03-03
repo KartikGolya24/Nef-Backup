@@ -1,3 +1,12 @@
+@media screen and (min-width: 394px) {
+    .banner {
+        .banner-image {
+            height: 424px;
+        }
+    }
+}
+
+
 @media screen and (min-width: 576px) {
     .electricity-price-slider {
         .owl-stage-outer {
@@ -43,18 +52,13 @@
     }
 }
 
-// @media screen and (min-width: 1440px) {
-//     .banner {
-//         height: 560px;
-
-//         img {
-//             height: 100%;
-//             width: 100%;
-//             object-fit: cover;
-//             object-position: center center;
-//         }
-//     }
-// }
+@media screen and (min-width: 1441px) {
+    .banner {
+        .banner-image {
+            height: 560px;
+        }
+    }
+}
 
 @media screen and (max-width: 1440px) {
     .electricity-price {
@@ -227,6 +231,7 @@
     }
 }
 
+
 @media screen and (min-width: 991px) {
     .footer {
         .collapse:not(.show) {
@@ -237,6 +242,24 @@
 
 
 @media screen and (max-width: 991px) {
+
+    .alt-contact {
+        .section-detail {
+            .section-content {
+                .doodle-image {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    .status-alt-sidebar {
+        .status-left-part {
+            .status-boxes-outer {
+                gap: 96px;
+            }
+        }
+    }
 
     .alt-contact-section {
         &.buy-charging-banner {
@@ -516,6 +539,8 @@
                     position: static;
                     img {
                         object-fit: inherit;
+                        height: auto;
+                        width: auto;
                     }
                 }
 
@@ -669,6 +694,7 @@
                                 color: $black-950;
                                 font-size: 24px;
                                 line-height: 37px;
+                                font-weight: 600;
                                 padding: 16px 16px;
                                 display: flex;
                                 width: 100%;
@@ -978,9 +1004,6 @@
         .section-banner-inner {
             gap: 12px;
 
-            h1 {
-                font-size: 36px;
-            }
 
             .multiple-buttons {
                 margin-top: 20px;
@@ -1092,7 +1115,13 @@
 }
 
 @media screen and (max-width: 576px) {
-
+    .status-alt-sidebar {
+        .status-left-part {
+            .status-boxes-outer {
+                gap: 48px;
+            }
+        }
+    }
     .electricity-price-slider {
         padding-left: 16px;
         padding-right: 16px;
@@ -1118,11 +1147,6 @@
 
     .candidates-section .candidate-card .image-wrap {
         max-width: 100%;
-    }
-
-    .alt-section .section-detail .section-content h2,
-    .charging-station-outer .charging-station .headings h1 {
-        word-wrap: break-word;
     }
 
     .alt-contact {
@@ -1250,15 +1274,6 @@
         height: 300px;
     }
 
-    .section-banner {
-        .section-banner-inner {
-            h1 {
-                font-size: 32px;
-                line-height: 48px;
-            }
-        }
-    }
-
     .status-alt-sidebar {
         .sidebar {
             .sidebar-item {
@@ -1278,17 +1293,4 @@
         padding-right: 0;
     }
 
-    .footer {
-        .bottom-footer {
-            .footer-detail {
-                .position-img {
-                    img {
-                        object-fit: none;
-                        height: auto;
-                        width: auto;
-                    }
-                }
-            }
-        }
-    }
 }

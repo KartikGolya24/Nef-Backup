@@ -13,7 +13,7 @@
         {
             @foreach (var item in content?.Blocks)
             {
-                @if (item?.Content?.ContentType?.Alias == "publicChargingLocationLinkBlock")
+            @if (item?.Content?.ContentType?.Alias == PublicChargingLocationLinkBlock.ModelTypeAlias)
                 {
                     var itemModel = item?.Content as PublicChargingLocationLinkBlock;
                     <div class="container">
@@ -35,7 +35,7 @@
                                                               stroke="#000000" stroke-width="1.71003" stroke-linecap="round" stroke-linejoin="round" />
                                                     </svg>
                                                     <p>
-                                                        <a href="@link?.Url" class="nav-link">@link?.Name</a>
+                                                        <a href="@link?.Url">@link?.Name</a>
                                                     </p>
                                                 </li>
                                             }
@@ -52,7 +52,7 @@
                     </div>
 
                 }
-                @if (item?.Content?.ContentType?.Alias == "publicChargingAppInfoBlock")
+            @if (item?.Content?.ContentType?.Alias == PublicChargingAppInfoBlock.ModelTypeAlias)
                 {
                     var itemModel = item?.Content as PublicChargingAppInfoBlock;
                     <div class="container">

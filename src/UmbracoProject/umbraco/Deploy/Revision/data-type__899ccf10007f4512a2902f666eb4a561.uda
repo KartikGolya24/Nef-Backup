@@ -8,11 +8,11 @@
     "items": [
       {
         "id": 1,
-        "value": "turquoise_bg"
+        "value": "dark-footer"
       },
       {
         "id": 2,
-        "value": "dark_blue_bg"
+        "value": "business-turquoise-fade"
       }
     ]
   },

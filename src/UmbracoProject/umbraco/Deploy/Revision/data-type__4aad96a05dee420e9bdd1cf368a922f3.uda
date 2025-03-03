@@ -14,6 +14,12 @@
         "contentElementTypeKey": "3eccc04b-6667-4f39-9173-a11ffdeb79f5",
         "editorSize": "medium",
         "forceHideContentEditorInOverlay": false
+      },
+      {
+        "contentElementTypeKey": "7b0dc8bc-9ade-4128-b81d-dba68a2774ed",
+        "label": "{{title}}",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
       }
     ],
     "validationLimit": {
@@ -35,6 +41,9 @@
     },
     {
       "Udi": "umb://document-type/3eccc04b66674f399173a11ffdeb79f5"
+    },
+    {
+      "Udi": "umb://document-type/7b0dc8bc9ade4128b81ddba68a2774ed"
     }
   ],
   "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",

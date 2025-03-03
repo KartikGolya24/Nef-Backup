@@ -29,6 +29,10 @@
     height: 48px;
     color: $black-950;
     border: 1px solid transparent;
+    text-align: left;
+    &:active {
+        border-color: transparent !important;
+    }
 
     img,
     svg {

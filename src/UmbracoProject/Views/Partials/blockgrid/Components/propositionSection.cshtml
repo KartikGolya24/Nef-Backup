@@ -3,39 +3,41 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<PropositionSection>>
 @{
     var content = Model?.Content;
+    var setting = Model?.Settings as SectionSettingModel;
 }
 
 
 <!---------------------------------- proposition section ------------------------->
-<div class="proposition-section-outer pb-0">
-    <div class="container">
-        <div class="proposition-section">
-            <div class="headings text-center">
-                <h1>@content?.Heading</h1>
-                <div class="proposition-section-para black-950">
-                    @Html.Raw(content?.Description)
+@if (content != null)
+{
+    <div class="proposition-section-outer @setting?.Theme">
+        <div class="container">
+            <div class="proposition-section">
+                <div class="headings text-center">
+                    <h1>@content.Heading</h1>
+                    @Html.Raw(content.Description)
                 </div>
-            </div>
-            @if (content?.PropositionBlocks?.Count > 0)
-            {
-                <div class="proposition-row-outer">
-                    <div class="row">
-                        @foreach (var item in content?.PropositionBlocks)
-                        {
-                            var propositionModel = item?.Content as PropositionsBlocks;
-                            <div class="col-md-6 col-lg-4 mb-64">
-                                <div class="proposition-box">
-                                    <div class="icon-wrap">
-                                        <img src="@propositionModel?.Icon?.MediaUrl()" alt="icon" />
+                @if (content.PropositionBlocks != null && content.PropositionBlocks.Count > 0)
+                {
+                    <div class="proposition-row-outer">
+                        <div class="row">
+                            @foreach (var item in content.PropositionBlocks)
+                            {
+                                var propositionModel = item?.Content as PropositionsBlocks;
+                                <div class="col-md-6 col-lg-4 mb-64 mb-lg-0">
+                                    <div class="proposition-box">
+                                        <div class="icon-wrap">
+                                            <img src="@propositionModel?.Icon?.MediaUrl()" alt="icon" />
+                                        </div>
+                                        <h4 class="box-title">@propositionModel?.Title</h4>
+                                        @Html?.Raw(propositionModel?.Description)
                                     </div>
-                                    <h4 class="box-title black-950 fw-600">@propositionModel?.Title</h4>
-                                    @Html?.Raw(propositionModel?.Description)
                                 </div>
-                            </div>
-                        }
+                            }
+                        </div>
                     </div>
-                </div>
-            }
+                }
+            </div>
         </div>
     </div>
-</div>
+}

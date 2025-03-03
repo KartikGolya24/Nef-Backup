@@ -58,6 +58,13 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual string BorderColor => this.Value<string>(_publishedValueFallback, "borderColor");
 
 		///<summary>
+		/// Button Text Italic
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
+		[ImplementPropertyType("buttonTextItalic")]
+		public virtual bool ButtonTextItalic => this.Value<bool>(_publishedValueFallback, "buttonTextItalic");
+
+		///<summary>
 		/// Button Theme
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]

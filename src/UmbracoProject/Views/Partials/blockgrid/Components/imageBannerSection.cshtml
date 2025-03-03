@@ -7,16 +7,35 @@
 
 <!-----------------------------banner----------------------------->
 <div class="banner">
-    @if (content?.Image?.MediaUrl() != null )
+    @if (content?.Image?.MediaUrl() != null)
     {
 
-        @* <img src="@content?.Image.GetWebp()" class="img-fluid banner" alt="banner"> *@
+        @* <img src="@content?.Image.GetWebp(1440,0)" class="img-fluid banner-image" alt="banner">  *@
 
-        @* <img src="@content?.Image?.GetCropUrl(width: 1440, height: 424, preferFocalPoint: true)" class="img-fluid banner" alt="banner">  *@
+        <img src="@(content?.Image?.GetCropUrl(preferFocalPoint: true,furtherOptions: "&format=webp",quality:80))" class="img-fluid banner-image" alt="banner">
+
+
+      @*   var image = content?.Image;
+
+        if (image != null)
+        {
+            // Get focal point
+            var focalPoint = image.LocalCrops?.FocalPoint;
+            if (focalPoint != null)
+            {
+                var imageUrl = image.Url() + $"?mode=crop&width=1440&height=560&anchor={focalPoint.Left},{focalPoint.Top}&format=webp&quality=80";
+                <img src="@imageUrl" alt="@image.Name" class="img-fluid banner-image" />
+            }
+            else
+            {
+                <img src="@image.Url()" alt="@image.Name" class="img-fluid banner-image" />
+            }
+        } *@
+
 
         @* <img src="@content?.Image?.GetCropUrl("laptop")" class="img-fluid banner" alt="banner">  *@
 
-        <picture>
+        @*  <picture>
             <!-- Mobile (393px x 324px) -->
             <source media="(max-width: 393px)"
                     sizes="393px"
@@ -36,22 +55,22 @@
                     srcset="@(content?.Image?.GetCropUrl(width: 1440, height: 424, preferFocalPoint: true, furtherOptions: "&format=webp",quality:80))">
 
             <!-- Default (Desktop 1440px x 560px) -->
-            <img class="img-fluid banner"
+            <img class="img-fluid banner-image"
                  width="1400" 
                  height="560"
                  src="@(content?.Image?.GetCropUrl(width: 1440, height: 560, preferFocalPoint: true, furtherOptions: "&format=webp",quality:80))"
                  alt="article">
-        </picture>
+        </picture> *@
 
-        
+
     }
 
     @if (content?.AddScroll == true)
-    {
+        {
 
-        <a class="scroll-down" id="scrollButton">
-            <p class="black-950 para">@content?.ScrollButtonText</p>
-            <img src="~/assets/img/icons/line-arrow-down.svg" class="img-fluid" alt="">
-        </a>
-    }
-</div>
+            <a class="scroll-down" id="scrollButton">
+                <p class="black-950 para">@content?.ScrollButtonText</p>
+                <img src="~/assets/img/icons/line-arrow-down.svg" class="img-fluid" alt="">
+            </a>
+        }
+    </div>

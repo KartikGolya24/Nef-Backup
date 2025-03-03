@@ -292,6 +292,20 @@
         "editorSize": "medium",
         "inlineEditing": false,
         "forceHideContentEditorInOverlay": false
+      },
+      {
+        "columnSpanOptions": [],
+        "rowMinSpan": 1,
+        "rowMaxSpan": 1,
+        "allowAtRoot": true,
+        "allowInAreas": true,
+        "areas": [],
+        "contentElementTypeKey": "655e676a-865e-4cef-9506-b874b595f035",
+        "settingsElementTypeKey": "d9a72dac-69e6-440b-9a23-4b106c350cd4",
+        "label": "{{heading}}",
+        "editorSize": "medium",
+        "inlineEditing": false,
+        "forceHideContentEditorInOverlay": false
       }
     ],
     "blockGroups": [],
@@ -320,6 +334,9 @@
     },
     {
       "Udi": "umb://document-type/6274d9f92ce448c8a5a51b8d20ab06c9"
+    },
+    {
+      "Udi": "umb://document-type/655e676a865e4cef9506b874b595f035"
     },
     {
       "Udi": "umb://document-type/6e701af81fc64449b08daa89a54c69ac"

@@ -4,8 +4,6 @@
 }
 
 <li>
-    <div class="icon-box">
-        <img src="@content?.Icon?.MediaUrl()" class="img-fluid" alt="" />
-    </div>
-    <p class="@(content?.IsItalic == true ? "italic" : "")">@content?.Text</p>
+    <img src="@content?.Icon?.MediaUrl()" class="img-fluid" alt="" />
+    <p>@content?.Text</p>
 </li>

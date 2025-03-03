@@ -40,6 +40,9 @@ h2,
 h1,
 .h1 {
     font-weight: 600;
+    word-break: break-word;
+    hyphens: auto;
+    overflow-wrap: break-word;
 }
 
 h1 {
@@ -219,13 +222,15 @@ li {
     .container-sm,
     .container {
         max-width: 1280px;
-        padding: 0 16px;
     }
 
     .container-xl {
         max-width: 1376px;
-        padding: 0 16px;
     }
+}
+
+[class*=container] {
+    padding: 0 16px;
 }
 
 .row {
@@ -805,12 +810,14 @@ li {
         color: $white;
     }
 }
+
 .business-tab {
     .btn {
         background-color: $steel_blue;
         color: $white;
     }
 }
+
 .Repræsentantskabsvalg-tab {
     .btn {
         background-color: $dark_pink;
@@ -1107,8 +1114,10 @@ li {
     position: relative;
     border-bottom: 1px solid $black-200;
 
-    img {
+    .banner-image {
+        height: 324px;
         width: 100%;
+        object-fit: cover;
     }
 
     .scroll-down {
@@ -1479,8 +1488,10 @@ li {
                     align-items: center;
                     gap: 16px;
 
-                    p {
+                    a {
                         color: $black;
+                        font-size: 16px;
+                        line-height: 27px;
                     }
 
                     svg {
@@ -1850,7 +1861,7 @@ li {
 
 
         &.cap-doodle {
-            transform: translate(-60%, -70%);
+            transform: translate(-54%, -60%);
             top: 50%;
             bottom: auto;
         }

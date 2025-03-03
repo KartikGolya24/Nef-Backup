@@ -29,13 +29,6 @@
           "Alias": "icon",
           "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
           "Name": "Icon"
-        },
-        {
-          "Key": "c966a5f3-b6c6-4f9f-9ab2-d83213155ced",
-          "Alias": "backgroundColor",
-          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
-          "Name": "Background Color",
-          "SortOrder": 2
         }
       ]
     }
@@ -45,10 +38,6 @@
   "Dependencies": [
     {
       "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-      "Ordering": true
-    },
-    {
-      "Udi": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
       "Ordering": true
     },
     {

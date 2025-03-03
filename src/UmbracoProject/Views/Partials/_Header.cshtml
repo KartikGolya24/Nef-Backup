@@ -1,8 +1,5 @@
 ﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<HomeNavigation>
-@* @{
-    var menuWithSubMenu = Model?.NavigationItem?.Where(x => x.Content.HasValue("subMenuList"))?.ToList();
-    var menuWithoutSubMenu = Model?.NavigationItem?.Where(x => !x.Content.HasValue("subMenuList"))?.ToList();
-} *@
+
 <!---------------------------header--------------------------->
 
 <header class="header">
@@ -24,11 +21,11 @@
                                     <li class="nav-list has-submenu">
                                         @if (menu?.SubMenuList?.Count == 0)
                                         {
-                                            <a href="@menu?.Menu?.Url" class="nav-link black-950 fw-500">@menu?.Menu?.Name</a>
+                                            <a href="@menu?.Menu?.Url" class="nav-link">@menu?.Menu?.Name</a>
                                         }
                                         @if (menu?.SubMenuList?.Count > 0)
                                         {
-                                            <a href="javascript:void(0)" class="nav-link black-950 fw-500">@menu?.Menu?.Name <img src="@Model?.SubmenuMenuArrow?.MediaUrl()" alt="Arrow down" class="arrow-icon" width="15"></a>
+                                            <a href="javascript:void(0)" class="nav-link">@menu?.Menu?.Name <img src="@Model?.SubmenuMenuArrow?.MediaUrl()" alt="Arrow down" class="arrow-icon" width="15"></a>
                                             <ul class="submenu">
                                                 @foreach (var item1 in menu?.SubMenuList)
                                                 {

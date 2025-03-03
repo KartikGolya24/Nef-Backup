@@ -31,16 +31,19 @@
                 </div>
 
                 <div class="form-outer">
-                    <div class="form-headings">
-                        @if (!string.IsNullOrWhiteSpace(Model.FormContent.HeadingText))
-                        {
-                            <h4 class="form-title">@Model.FormContent.HeadingText</h4>
-                        }
-                        @if (!string.IsNullOrWhiteSpace(Model.FormContent.DescriptionText?.ToString()))
-                        {
-                            @Html?.Raw(Model.FormContent?.DescriptionText)
-                        }
-                    </div>
+                    @if (!string.IsNullOrWhiteSpace(Model.FormContent.HeadingText) || !string.IsNullOrWhiteSpace(Model.FormContent.DescriptionText?.ToString()))
+                    {
+                        <div class="form-headings">
+                            @if (!string.IsNullOrWhiteSpace(Model.FormContent.HeadingText))
+                            {
+                                <h4 class="form-title">@Model.FormContent.HeadingText</h4>
+                            }
+                            @if (!string.IsNullOrWhiteSpace(Model.FormContent.DescriptionText?.ToString()))
+                            {
+                                @Html?.Raw(Model.FormContent?.DescriptionText)
+                            }
+                        </div>
+                    }
                     <form>
                         @Html.AntiForgeryToken()
                         @Html.Hidden("formId", @form.Id)
@@ -55,7 +58,7 @@
                                     case "text":
                                     case "email":
                                     case "number":
-                                        var isFullLengthField = item?.Alias == "gSRNNummer" || item?.Alias == "cPRNummer";
+                                        var isFullLengthField = item?.Alias == "gSRNNummer" || item?.Alias == "cPRNummer" || item?.Alias == "cVRNummer";
                                         var maximumLength = item?.Settings?.FirstOrDefault(x => x.Key == "MaximumLength").Value;
                                         <div class="col-md-@(fieldType == "number" && isFullLengthField ? 12 : 6)">
                                             <div class="form-group">
@@ -118,6 +121,10 @@
 
                                 case "95f4292c-3068-4376-bd2e-8f264263e201": // Board of Representatives Form
                                     <button type="button" class="btn form_submit_btn @Model?.FormContent?.SubmitButtonTheme representatives_form_submit" style="border:1px solid #@Model?.FormContent?.SubmitButtonBorderColor"> @form.SubmitLabel</button>
+                                    break;
+
+                                case "0c79da13-dc56-4ac1-bc8e-4c35c5a41dd8": // No Obligation Advice On Electricity Form
+                                    <button type="button" class="btn form_submit_btn @Model?.FormContent?.SubmitButtonTheme business_electricity_form_submit" style="border:1px solid #@Model?.FormContent?.SubmitButtonBorderColor"> @form.SubmitLabel</button>
                                     break;
                             }
                         }

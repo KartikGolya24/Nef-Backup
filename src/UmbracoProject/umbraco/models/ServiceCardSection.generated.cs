@@ -56,5 +56,12 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("cards")]
 		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel Cards => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "cards");
+
+		///<summary>
+		/// Enable Two Cards In One Raw
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.5.3+2161edb")]
+		[ImplementPropertyType("enableTwoCardsInOneRaw")]
+		public virtual bool EnableTwoCardsInOneRaw => this.Value<bool>(_publishedValueFallback, "enableTwoCardsInOneRaw");
 	}
 }

@@ -17,7 +17,7 @@
                 {
 
                     var alias = item?.Content?.ContentType?.Alias;
-                    @if (alias == TwoColumnContentBlock.ModelTypeAlias)
+                    if (alias == TwoColumnContentBlock.ModelTypeAlias)
                     {
                         var contentBlock = item?.Content as TwoColumnContentBlock;
 
@@ -107,7 +107,7 @@
                         </div>
 
                     }
-                    else if (alias == TwoColumnMediaBlock.ModelTypeAlias)
+                    if (alias == TwoColumnMediaBlock.ModelTypeAlias)
                     {
                         var mediaBlock = item?.Content as TwoColumnMediaBlock;
 
@@ -156,6 +156,24 @@
                                     }
                                 </div>
                             }
+                        </div>
+                    }
+                    if (alias == TwoColumnContentWithMediaBlock.ModelTypeAlias)
+                    {
+                        var twoColumnContentWithMediaBlockModel = item?.Content as TwoColumnContentWithMediaBlock;
+                        <div class="col-lg-6">
+                            <div class="order-nef-card">
+                                <div class="card-body">
+                                    <div class="section-img">
+                                        <img src=@(twoColumnContentWithMediaBlockModel?.Image?.MediaUrl() != null ? twoColumnContentWithMediaBlockModel?.Image?.MediaUrl() : "~/assets/img/bg-img/nef-sol-vind.svg") class="img-fluid" alt="">
+                                    </div>
+                                    @if (!string.IsNullOrWhiteSpace(twoColumnContentWithMediaBlockModel?.Title))
+                                    {
+                                        <h3 class="title">@twoColumnContentWithMediaBlockModel?.Title</h3>
+                                    }
+                                    <p>@twoColumnContentWithMediaBlockModel?.Description</p>
+                                </div>
+                            </div>
                         </div>
                     }
                     index++;

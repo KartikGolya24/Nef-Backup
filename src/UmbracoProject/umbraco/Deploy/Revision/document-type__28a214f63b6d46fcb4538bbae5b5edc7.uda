@@ -18,13 +18,6 @@
       "Alias": "content",
       "PropertyTypes": [
         {
-          "Key": "6136db67-b34a-490b-9ee6-8074ed2b2ae1",
-          "Alias": "color",
-          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
-          "Name": "Text Color",
-          "SortOrder": 2
-        },
-        {
           "Key": "de3a5d84-24c7-4985-ae0b-58c6b9f35ae6",
           "Alias": "menuItems",
           "DataType": "umb://data-type/dc5256dbe96c49e0a0503b511c2408b5",
@@ -45,10 +38,6 @@
   "Dependencies": [
     {
       "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-      "Ordering": true
-    },
-    {
-      "Udi": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
       "Ordering": true
     },
     {

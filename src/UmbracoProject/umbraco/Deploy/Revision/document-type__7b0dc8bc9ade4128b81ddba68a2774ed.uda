@@ -1,0 +1,65 @@
+{
+  "Name": "Two Column Content With Media Block",
+  "Alias": "twoColumnContentWithMediaBlock",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/feea291571a64a6b94c564791f3bfd7c",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "d65a9ff9-5265-4899-9f1e-abf7d50a0f3a",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "576107fa-b559-4c17-bdd4-5dad23eeb030",
+          "Alias": "title",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Title",
+          "SortOrder": 1
+        },
+        {
+          "Key": "80eadde3-cd5f-4801-bbd1-28516a4d105a",
+          "Alias": "image",
+          "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
+          "Name": "Image"
+        },
+        {
+          "Key": "ae761277-6a46-4dc5-9e97-63a632d0a0f8",
+          "Alias": "description",
+          "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+          "Name": "Description",
+          "SortOrder": 2
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/7b0dc8bc9ade4128b81ddba68a2774ed",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/feea291571a64a6b94c564791f3bfd7c",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.4.0"
+}

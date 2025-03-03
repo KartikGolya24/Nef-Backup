@@ -18,10 +18,17 @@
       "Alias": "content",
       "PropertyTypes": [
         {
+          "Key": "6d9993ba-0073-4b99-95e8-09466d587c01",
+          "Alias": "enableTwoCardsInOneRaw",
+          "DataType": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
+          "Name": "Enable Two Cards In One Raw"
+        },
+        {
           "Key": "a034de0d-3a8a-4cc5-8a0b-5495c9f3bea0",
           "Alias": "cards",
           "DataType": "umb://data-type/3035a101ad5e4d5cb0dc525e398a0b75",
-          "Name": "Cards"
+          "Name": "Cards",
+          "SortOrder": 1
         }
       ]
     }
@@ -31,6 +38,10 @@
   "Dependencies": [
     {
       "Udi": "umb://data-type/3035a101ad5e4d5cb0dc525e398a0b75",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
       "Ordering": true
     },
     {

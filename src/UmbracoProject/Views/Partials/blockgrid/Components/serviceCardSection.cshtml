@@ -5,7 +5,7 @@
     var setting = Model?.Settings as SectionSettingModel;
 }
 
-<div class="service-card @setting?.Theme">
+<div class="service-card @setting?.Theme @(Model?.Content?.EnableTwoCardsInOneRaw == true ? "pt-0" : "")">
     <div class="container">
         @if (content?.Count > 0)
         {
@@ -13,8 +13,8 @@
                 @foreach (var item in content)
                 {
                     var serviceBlock = item.Content as ServiceCardBlock;
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card-outer @serviceBlock?.ServiceCardTheme">
+                    <div class="col-lg-@(Model?.Content.EnableTwoCardsInOneRaw == true ? "6" : "4") col-md-6 mb-32">
+                        <div class="card-outer h-proposition @serviceBlock?.ServiceCardTheme">
                             <div class="card-detail">
                                 <div class="card-icon">
                                     <img src="@serviceBlock?.CardIcon?.MediaUrl()" class="img-fluid" alt="">
@@ -30,15 +30,7 @@
                                 <div class="card-button">
                                     @if (serviceBlock?.CardFooter?.Count > 0)
                                     {
-                                        @foreach (var buttons in serviceBlock?.CardFooter)
-                                        {
-                                            var button = buttons.Content as IconLinkList;
-
-                                            <a href="@button?.Link?.Url" class="btn @button?.ButtonTheme" style="border:1px solid #@(button?.BorderColor);">
-                                                <img src="@button?.Icon?.MediaUrl()" class="img-fluid" alt="">
-                                                @button?.Link?.Name
-                                            </a>
-                                        }
+                                        @Html.GetBlockListHtml(serviceBlock?.CardFooter)
                                     }
                                 </div>
 

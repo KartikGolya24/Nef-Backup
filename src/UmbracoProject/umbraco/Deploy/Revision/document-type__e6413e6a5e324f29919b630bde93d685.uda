@@ -28,7 +28,7 @@
           "Alias": "borderColor",
           "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
           "Name": "Border Color",
-          "SortOrder": 3
+          "SortOrder": 4
         },
         {
           "Key": "864f0a97-0655-47a7-bcd6-5467b51f14f2",
@@ -42,6 +42,13 @@
           "Alias": "buttonTheme",
           "DataType": "umb://data-type/36564b1fa93643ee88423df7234ea0bf",
           "Name": "Button Theme",
+          "SortOrder": 3
+        },
+        {
+          "Key": "addda184-257a-417f-9671-b815813dcb5e",
+          "Alias": "buttonTextItalic",
+          "DataType": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
+          "Name": "Button Text Italic",
           "SortOrder": 2
         }
       ]
@@ -60,6 +67,10 @@
     },
     {
       "Udi": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
       "Ordering": true
     },
     {

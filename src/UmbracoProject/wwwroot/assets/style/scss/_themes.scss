@@ -275,19 +275,20 @@
         }
     }
     .contact-form {
-        background-color: $dark_blue;
+        background-color: $white;
+        border: 1px solid $black-200;
         .form-outer {
             .form-headings {
                 .form-title {
-                    color: $white;
+                    color: $black-950;
                 }
                 p {
-                    color: $black-100;
+                    color: $black-700;
                 }
             }
         }
         .label {
-            color: $white;
+            color: $black-950;
         }
     }
     .electricity-card {
@@ -2231,6 +2232,57 @@
                     background-color: rgba(55, 180, 180, 0.25);
                     &.active {
                         background-color: $light_blue;
+                    }
+                }
+            }
+        }
+    }
+
+    &.footer {
+        .bottom-footer {
+            background-color: $turquoise;
+            .footer-detail {
+                .footer-address {
+                    color: $black-950;
+                }
+                .footer-menu {
+                    .footer-menu-list {
+                        color: $black-950;
+                        ul {
+                            li {
+                                a {
+                                    color: $black-950;
+                                }
+                            }
+                        }
+                    }
+                    &.accordion {
+                        @media screen and (max-width: 991px) {
+                            border-bottom: 1px solid $black-200;
+                        }
+                        .footer-menu-list {
+                            &.accordion-item {
+                                @media screen and (max-width: 991px) {
+                                    border-top: 1px solid $black-200;
+                                }
+                                .accordion-button {
+                                    color: $black-950;
+                                    @media screen and (max-width: 991px) {
+                                        &::after {
+                                            filter: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .copyright {
+                span {
+                    color: $black-950;
+                    a {
+                        color: $black-950;
                     }
                 }
             }

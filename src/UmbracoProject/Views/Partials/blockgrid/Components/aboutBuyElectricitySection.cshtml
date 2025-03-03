@@ -13,7 +13,7 @@
                 @foreach (var item in content?.ContentBlocks)
                 {
                     var alias = item?.Content?.ContentType?.Alias;
-                    if (alias == "contentBlock")
+                    if (alias == ContentBlock.ModelTypeAlias)
                     {
                         var contentModel = item?.Content as ContentBlock;
                         <div class="col-md-9">
@@ -27,7 +27,7 @@
                             </div>
                         </div>
                     }
-                    else if (alias == "textListWithIcon")
+                    else if (alias == TextListWithIcon.ModelTypeAlias)
                     {
                         var contentModel = item?.Content as TextListWithIcon;
                         <div class="col-md-3">
@@ -35,14 +35,7 @@
 
                                 @if (contentModel?.TextList?.Count > 0)
                                 {
-                                    @foreach (var text in contentModel?.TextList)
-                                    {
-                                        var list = text?.Content as TextWithIcon;
-                                        <li>
-                                            <img src="@list?.Icon?.MediaUrl()" class="img-fluid" alt="img" />
-                                            <p class="para black-950">@list?.Text</p>
-                                        </li>
-                                    }
+                                    @Html.GetBlockListHtml(contentModel?.TextList)
                                 }
                             </ul>
                         </div>

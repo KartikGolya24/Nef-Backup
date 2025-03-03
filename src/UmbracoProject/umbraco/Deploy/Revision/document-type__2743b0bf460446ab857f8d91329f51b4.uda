@@ -9,7 +9,7 @@
     "IsElementType": true,
     "AllowedChildContentTypes": []
   },
-  "Parent": "umb://document-type-container/feea291571a64a6b94c564791f3bfd7c",
+  "Parent": "umb://document-type-container/8048648a322c4669a2f43ab083f3d243",
   "CompositionContentTypes": [],
   "PropertyGroups": [
     {
@@ -56,7 +56,7 @@
       "Ordering": true
     },
     {
-      "Udi": "umb://document-type-container/feea291571a64a6b94c564791f3bfd7c",
+      "Udi": "umb://document-type-container/8048648a322c4669a2f43ab083f3d243",
       "Ordering": true
     }
   ],

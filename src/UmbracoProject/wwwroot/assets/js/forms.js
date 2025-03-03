@@ -148,6 +148,27 @@
         }
     });
 
+    // No Obligation Advice On Electricity Form
+    $(document).on('click', '.business_electricity_form_submit', function () {
+        var $form = $(this).closest("form");
+
+        if (validateForm($form)) {
+
+            var requestModel = new Array();
+            requestModel[0] = { key: "formId", value: $form.find('#formId').val() };
+            requestModel[1] = { key: "virksomhedsnavn", value: $form.find('#virksomhedsnavn').val() };
+            requestModel[2] = { key: "kontaktperson", value: $form.find('#kontaktperson').val() };
+            requestModel[3] = { key: "telefon", value: $form.find('#telefon').val() };
+            requestModel[4] = { key: "email", value: $form.find('#email').val() };
+            requestModel[5] = { key: "cVRNummer", value: $form.find('#cVRNummer').val() };
+            requestModel[6] = { key: "evtKommentar", value: $form.find('#evtKommentar').val() };
+
+            let $contactForm = $form.closest('.contact-form');
+
+            callAjax($contactForm, requestModel);
+        }
+    });
+
     // Ensure the field to enter only 18 digits
     $(document).on("input", " .gsrn-field", function () {
         var val = $(this).val();

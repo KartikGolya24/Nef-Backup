@@ -17,6 +17,14 @@
       {
         "id": 3,
         "value": "steel_blue_bg"
+      },
+      {
+        "id": 4,
+        "value": "turquoise_bg"
+      },
+      {
+        "id": 5,
+        "value": "space_blue_bg"
       }
     ]
   },
