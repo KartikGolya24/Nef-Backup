@@ -16,11 +16,11 @@
 
 
         <img 
-            src="@Url.GetCropUrl(content?.Image, width: 600, quality: 80, format: "webp")" 
+            src="@Url.GetCropUrl(content?.Image, width: 600, quality: 80, furtherOptions: "&format=webp")" 
             srcset="
-                @Url.GetCropUrl(content?.Image, width: 320, quality: 80, format: "webp") 320w,
-                @Url.GetCropUrl(content?.Image, width: 480, quality: 80, format: "webp") 480w,
-                @Url.GetCropUrl(content?.Image, width: 768, quality: 80, format: "webp") 768w
+                @Url.GetCropUrl(content?.Image, width: 320, quality: 80, furtherOptions: "&format=webp") 320w,
+                @Url.GetCropUrl(content?.Image, width: 480, quality: 80, furtherOptions: "&format=webp") 480w,
+                @Url.GetCropUrl(content?.Image, width: 768, quality: 80, furtherOptions: "&format=webp") 768w
             " 
             sizes="(max-width: 768px) 100vw, 768px"
             alt="banner"
