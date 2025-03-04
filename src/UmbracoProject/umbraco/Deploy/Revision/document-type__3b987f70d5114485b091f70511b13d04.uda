@@ -23,7 +23,7 @@
           "Alias": "afterSuccessRedirectionButton",
           "DataType": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
           "Name": "After Success Redirection Button",
-          "SortOrder": 4
+          "SortOrder": 2
         },
         {
           "Key": "61b5f820-4c02-4041-9b5e-bd74f51ddbfc",
@@ -36,7 +36,7 @@
           "Alias": "successMessage",
           "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
           "Name": "Success Message",
-          "SortOrder": 3
+          "SortOrder": 1
         }
       ]
     },
@@ -45,6 +45,13 @@
       "Name": "Content",
       "Alias": "content",
       "PropertyTypes": [
+        {
+          "Key": "5a6057af-2314-4d32-8076-c4aed1a57ca2",
+          "Alias": "buttonTextItalic",
+          "DataType": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
+          "Name": "Button Text Italic",
+          "SortOrder": 4
+        },
         {
           "Key": "7b5374f1-567f-4b31-a6cb-dd71c6fd659d",
           "Alias": "form",
@@ -57,7 +64,7 @@
           "Alias": "submitButtonTheme",
           "DataType": "umb://data-type/36564b1fa93643ee88423df7234ea0bf",
           "Name": "Submit Button Theme",
-          "SortOrder": 4
+          "SortOrder": 3
         },
         {
           "Key": "bd8427e1-18f5-420e-93f1-66bc2ace4a61",
@@ -103,6 +110,10 @@
     },
     {
       "Udi": "umb://data-type/36564b1fa93643ee88423df7234ea0bf",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
       "Ordering": true
     },
     {

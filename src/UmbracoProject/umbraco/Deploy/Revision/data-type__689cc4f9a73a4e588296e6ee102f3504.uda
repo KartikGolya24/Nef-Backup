@@ -52,7 +52,6 @@
         "allowInAreas": true,
         "areas": [],
         "contentElementTypeKey": "4b676a13-f354-4743-89c4-ac282c60277a",
-        "settingsElementTypeKey": "d9a72dac-69e6-440b-9a23-4b106c350cd4",
         "label": "{{heading | ncRichText | truncate:true:80}}",
         "editorSize": "medium",
         "inlineEditing": false,

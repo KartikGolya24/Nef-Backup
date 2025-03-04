@@ -148,8 +148,8 @@
         }
     });
 
-    // No Obligation Advice On Electricity Form
-    $(document).on('click', '.business_electricity_form_submit', function () {
+    // Business Pages form Form
+    $(document).on('click', '.business_form_submit', function () {
         var $form = $(this).closest("form");
 
         if (validateForm($form)) {

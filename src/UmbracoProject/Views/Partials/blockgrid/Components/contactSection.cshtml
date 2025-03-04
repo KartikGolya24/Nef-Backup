@@ -2,12 +2,11 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<ContactSection>>
 @{
     var ContactSection = Model?.Content;
-    var setting = Model?.Settings as SectionSettingModel;
 }
 
 <!---------------------------------- contact section ------------------------->
 
-<div class="page-title @setting?.Theme">
+<div class="page-title">
     <div class="container">
         <div class="contact-section">
             @if (!string.IsNullOrWhiteSpace(ContactSection?.Heading?.ToString()))

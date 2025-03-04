@@ -15,7 +15,7 @@
                 @foreach (var item in content?.Blocks)
                 {
                     var alias = item?.Content?.ContentType?.Alias;
-                    @if (alias == "bannerContentSection")
+                    @if (alias == BannerContentSection.ModelTypeAlias)
                     {
                         var contentModel = item?.Content as BannerContentSection;
                         <div class="col-lg-6">
@@ -35,7 +35,7 @@
                             </div>
                         </div>
                     }
-                    @if (alias == "bannerImageSection")
+                    @if (alias == BannerImageSection.ModelTypeAlias)
                     {
                         var imageModel = item?.Content as BannerImageSection;
                         <div class="col-lg-6">

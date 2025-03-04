@@ -30,12 +30,18 @@
                         var accordionModel = item?.Content as AccordionBlock;
                         <div class="accordion-item">
                             <h2 class="accordion-header " id="@flushHeading">
-                                <button class="accordion-button collapsed  black-950" type="button" data-bs-toggle="collapse" data-bs-target="#@flushCollapse" aria-expanded="false" aria-controls="@flushCollapse">
+                                <button 
+                                    class="accordion-button collapsed" 
+                                    type="button" 
+                                    data-bs-toggle="collapse" 
+                                    data-bs-target="#@flushCollapse" 
+                                    aria-expanded="false" 
+                                    aria-controls="@flushCollapse">
                                     @accordionModel?.Heading
                                 </button>
                             </h2>
                             <div id="@flushCollapse" class="accordion-collapse collapse" aria-labelledby="@flushHeading" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body black-700 p-0">
+                                <div class="accordion-body">
                                     @accordionModel?.DescriptionText
                                 </div>
                             </div>
@@ -43,20 +49,24 @@
                     }
                 }
             </div>
-            <div class="faq-contact space_blue">
-                @if (!string.IsNullOrWhiteSpace(content?.ContactTitle?.ToString()))
-                {
-                    @Html?.Raw(content?.ContactTitle)
-                }
 
-                @if (content?.ContactButtons?.Count > 0)
-                {
-                    <div class="multiple-buttons m-auto justify-content-center">
-                        @Html.GetBlockListHtml(content?.ContactButtons)
-                    </div>
-                }
+            @if (!string.IsNullOrWhiteSpace(content?.ContactTitle?.ToString()) || content?.ContactButtons?.Count > 0)
+            {
+                <div class="faq-contact">
+                    @if (!string.IsNullOrWhiteSpace(content?.ContactTitle?.ToString()))
+                    {
+                        @Html?.Raw(content?.ContactTitle)
+                    }
 
-            </div>
+                    @if (content?.ContactButtons?.Count > 0)
+                    {
+                        <div class="multiple-buttons m-auto justify-content-center">
+                            @Html.GetBlockListHtml(content?.ContactButtons)
+                        </div>
+                    }
+
+                </div>
+            }
 
         </div>
         @if (content?.PositionImages?.Count() > 0)
