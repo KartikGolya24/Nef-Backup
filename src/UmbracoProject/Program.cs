@@ -34,4 +34,12 @@ app.MapGet("/", context =>
     return Task.CompletedTask;
 });
 
+app.UseStaticFiles(new StaticFileOptions
+{
+    OnPrepareResponse = ctx =>
+    {
+        ctx.Context.Response.Headers.Append("Cache-Control", "public, max-age=604800, immutable");
+    }
+});
+
 await app.RunAsync();
