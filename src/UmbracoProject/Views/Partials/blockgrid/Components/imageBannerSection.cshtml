@@ -14,12 +14,11 @@
 
         @* <img src="@(content?.Image?.GetCropUrl(preferFocalPoint: true,furtherOptions: "&format=webp",quality:80))" class="img-fluid banner-image" alt="banner"> *@
 
-        <img src="@content?.Image?.GetCropUrl(width: 1400)&format=webp"
-     srcset="@content?.Image?.GetCropUrl(width: 600)&format=webp 600w,
-             @content?.Image?.GetCropUrl(width: 1200)&format=webp 1200w"
-     sizes="(max-width: 600px) 600px, 1200px"
-     alt="Banner Image">
-
+        <img src="@(content?.Image?.GetCropUrl(width: 1200, preferFocalPoint: true))"
+             srcset="@(content?.Image?.GetCropUrl(width: 600, format: "webp") 600w,
+             content?.Image?.GetCropUrl(width: 1200, format: "webp") 1200w)"
+             sizes="(max-width: 600px) 600px, 1200px"
+             alt="Banner Image">
 
 
       @*   var image = content?.Image;
