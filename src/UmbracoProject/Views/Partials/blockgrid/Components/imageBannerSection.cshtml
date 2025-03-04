@@ -23,7 +23,7 @@
      sizes="(max-width: 600px) 600px, 1200px"
      alt="Banner Image">*@
      
-     <img class="img-fluid banner-image" 
+     @*<img class="img-fluid banner-image" 
      width="600" height="300"
      src="@(content?.Image?.GetCropUrl(width: 1200, preferFocalPoint: true, furtherOptions: "&format=webp"))"
      srcset="@(content?.Image?.GetCropUrl(width: 600, furtherOptions: "&format=webp") + " 600w, " + 
@@ -31,7 +31,19 @@
      sizes="(max-width: 600px) 600px, 1200px"
      alt="Banner Image"
      fetchpriority="high"
-     decoding="async">
+     decoding="async">*@
+     
+    <picture>
+        <source srcset="/media/fy5fik11/buy_electricity_banner.webp" type="image/webp">
+        <img 
+        class="img-fluid banner-image" 
+        src="/media/fy5fik11/buy_electricity_banner.jpg" 
+        alt="Banner Image" 
+        width="600" 
+        height="300"
+        fetchpriority="high"
+        decoding="async">
+    </picture>
 
 
       @*   var image = content?.Image;
