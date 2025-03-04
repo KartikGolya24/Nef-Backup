@@ -12,7 +12,7 @@
 
         @* <img src="@content?.Image.GetWebp(1440,0)" class="img-fluid banner-image" alt="banner">  *@
 
-        <img src="@(content?.Image?.GetCropUrl(preferFocalPoint: true,furtherOptions: "&format=webp",quality:80))" class="img-fluid banner-image" alt="banner">
+        <img width=393 height=324 class="img-fluid banner-image" alt="banner" src="@(content?.Image?.GetCropUrl(preferFocalPoint: true,furtherOptions: "&format=webp",quality:80))">
 
 
       @*   var image = content?.Image;
