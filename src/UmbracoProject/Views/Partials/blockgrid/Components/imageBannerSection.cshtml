@@ -15,6 +15,16 @@
         <img class="img-fluid banner-image" alt="banner" src="@(content?.Image?.GetCropUrl(preferFocalPoint: true,furtherOptions: "&format=webp",quality:80))">
 
 
+        <img 
+            src="@Url.GetCropUrl(content?.Image, width: 600, quality: 80, format: "webp")" 
+            srcset="
+                @Url.GetCropUrl(content?.Image, width: 320, quality: 80, format: "webp") 320w,
+                @Url.GetCropUrl(content?.Image, width: 480, quality: 80, format: "webp") 480w,
+                @Url.GetCropUrl(content?.Image, width: 768, quality: 80, format: "webp") 768w
+            " 
+            sizes="(max-width: 768px) 100vw, 768px"
+            alt="banner"
+            loading="lazy">
       @*   var image = content?.Image;
 
         if (image != null)
