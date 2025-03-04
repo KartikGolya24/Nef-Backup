@@ -34,10 +34,10 @@
      decoding="async">*@
      
     <picture>
-        <source srcset="/media/fy5fik11/buy_electricity_banner.webp" type="image/webp">
+        <source srcset="@(content?.Image?.GetCropUrl(preferFocalPoint: true,quality:80))" type="image/webp">
         <img 
         class="img-fluid banner-image" 
-        src="/media/fy5fik11/buy_electricity_banner.jpg" 
+        src="@(content?.Image?.GetCropUrl(preferFocalPoint: true,quality:80))" 
         alt="Banner Image" 
         width="600" 
         height="300"
