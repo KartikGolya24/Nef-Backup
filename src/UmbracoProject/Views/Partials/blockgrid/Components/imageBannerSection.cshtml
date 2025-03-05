@@ -12,7 +12,7 @@
 
         @* <img src="@content?.Image.GetWebp(1440,0)" class="img-fluid banner-image" alt="banner">  *@
 
-        <img class="img-fluid banner-image" alt="banner" src="@(content?.Image?.GetCropUrl(width: 393, height: 324, preferFocalPoint: true,furtherOptions: "&format=webp",quality:80))">
+        @*<img class="img-fluid banner-image" alt="banner" src="@(content?.Image?.GetCropUrl(width: 393, height: 324, preferFocalPoint: true,furtherOptions: "&format=webp",quality:80))">*@
 
 @*<img 
             class="img-fluid banner-image"
@@ -44,7 +44,7 @@
 
         @* <img src="@content?.Image?.GetCropUrl("laptop")" class="img-fluid banner" alt="banner">  *@
 
-        @*  <picture>
+        <picture>
             <!-- Mobile (393px x 324px) -->
             <source media="(max-width: 393px)"
                     sizes="393px"
@@ -69,7 +69,7 @@
                  height="560"
                  src="@(content?.Image?.GetCropUrl(width: 1440, height: 560, preferFocalPoint: true, furtherOptions: "&format=webp",quality:80))"
                  alt="article">
-        </picture> *@
+        </picture>
 
 
     }
