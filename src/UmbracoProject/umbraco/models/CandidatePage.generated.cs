@@ -20,7 +20,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Candidate Page</summary>
 	[PublishedModel("candidatePage")]
-	public partial class CandidatePage : PublishedContentModel
+	public partial class CandidatePage : PublishedContentModel, ISEocontrols
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -104,5 +104,21 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("videoButtonText")]
 		public virtual string VideoButtonText => this.Value<string>(_publishedValueFallback, "videoButtonText");
+
+		///<summary>
+		/// Meta Description
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.0+eaea7a6")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("metaDescription")]
+		public virtual string MetaDescription => global::Umbraco.Cms.Web.Common.PublishedModels.SEocontrols.GetMetaDescription(this, _publishedValueFallback);
+
+		///<summary>
+		/// Meta Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.0+eaea7a6")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("metaTitle")]
+		public virtual string MetaTitle => global::Umbraco.Cms.Web.Common.PublishedModels.SEocontrols.GetMetaTitle(this, _publishedValueFallback);
 	}
 }

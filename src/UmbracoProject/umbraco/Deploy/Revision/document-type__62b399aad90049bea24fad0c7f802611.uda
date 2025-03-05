@@ -17,6 +17,7 @@
     {
       "Key": "7be6efe9-0029-4c44-b34a-dd329b7b71ad",
       "Name": "Content",
+      "SortOrder": 2,
       "Alias": "content",
       "PropertyTypes": [
         {

@@ -43,6 +43,7 @@ h1,
     word-break: break-word;
     hyphens: auto;
     overflow-wrap: break-word;
+    color: $black-950;
 }
 
 h1 {
@@ -900,6 +901,7 @@ li {
             display: flex;
             flex-direction: column;
             transition: border-radius 0.3s ease;
+            color: $black-950;
 
             .accordion-header {
                 padding: 12px 0;
@@ -1892,7 +1894,7 @@ li {
         }
 
         &.left-bottom-center {
-            transform: translate(-60%, -60%);
+            transform: translate(-60%, -50%);
             left: 0;
             top: 50%;
         }
@@ -1920,36 +1922,39 @@ li {
 
         &.center {
             top: 0;
-            transform: translate(-25%, 5%);
+            transform: translate(-40%, -13%);
+            bottom: auto;
         }
 
         &.center-right {
-            transform: translate(0%, 10%);
+            transform: translate(-15%, -30%);
             top: 50%;
+            bottom: auto;
         }
 
         &.right-bottom {
-            transform: translate(20%, -5%);
+            transform: translate(17%, -8%);
             left: auto;
             top: 50%;
             right: 0;
+            bottom: auto;
         }
 
         &.top-center {
-            transform: translate(-80%, -25%);
+            transform: translate(-62%, -29%);
             left: 50%;
             top: 0;
             bottom: auto;
         }
 
         &.top-left-center {
-            transform: translate(-61%, -23%);
+            transform: translate(-60%, -35%);
             top: 0;
             bottom: auto;
         }
 
         &.bottom-right-center {
-            transform: translate(-10%, 65%);
+            transform: translate(-15%, 35%);
             top: 0;
             bottom: 0;
         }
@@ -3266,7 +3271,7 @@ li {
 
 //=========================================== pacakge-section===========================================
 .pacakge-section {
-    padding: 64px 0;
+    padding: 64px 0 32px;
 
     .section-heading {
         margin-bottom: 64px;
@@ -3284,10 +3289,6 @@ li {
         p {
             color: $black-950;
         }
-    }
-
-    [class*=col-md-5] {
-        width: 34.375%;
     }
 
     .package-list {

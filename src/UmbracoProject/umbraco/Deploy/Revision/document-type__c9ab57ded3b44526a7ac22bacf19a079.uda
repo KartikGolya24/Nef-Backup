@@ -14,8 +14,8 @@
   "PropertyGroups": [
     {
       "Key": "6356edae-fa79-48c6-8bce-b0c1492db32a",
-      "Name": "Content",
-      "Alias": "content",
+      "Name": "SEO",
+      "Alias": "seO",
       "PropertyTypes": [
         {
           "Key": "654fbe5a-ccc0-4613-9ab8-4a75d913b57f",
@@ -23,13 +23,6 @@
           "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
           "Name": "Meta Description",
           "SortOrder": 1
-        },
-        {
-          "Key": "a9e63f2b-a4fa-4a07-8b53-31cf0d2a1e87",
-          "Alias": "metaKeywords",
-          "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
-          "Name": "Meta Keywords",
-          "SortOrder": 2
         },
         {
           "Key": "aba543fa-9415-4673-b072-8293c0225e67",

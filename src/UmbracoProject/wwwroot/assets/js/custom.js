@@ -86,41 +86,56 @@ $(document).ready(function () {
         $(this).hide(); // Hide the button after clicking
     });
 
-    // document.querySelectorAll('.accordian-section .accordion-item').forEach(item => {
-    //     const collapse = item.querySelector('.accordion-collapse');
-    //     collapse.addEventListener('show.bs.collapse', () => {
-    //         item.classList.add('expanded');
-    //     });
-    //     collapse.addEventListener('hide.bs.collapse', () => {
-    //         item.classList.remove('expanded');
-    //     });
-    // });
-});
-// document.addEventListener('DOMContentLoaded', () => {
-//     const cards = document.querySelectorAll('.ordering-card');
-//     const radios = document.querySelectorAll('.ordering-card .form-check-input');
+    $(".search-btn").click(function (event) {
+        event.stopPropagation(); // Prevent immediate closing
+        $(".search-input").toggleClass("active");
+    });
 
-//     radios.forEach(radio => {
-//       radio.addEventListener('change', () => {
-//         // Remove classes from all cards
-//         cards.forEach(card => {
-//           card.classList.remove('light_purple_bg', 'border_dark_purple');
-//           card.classList.add('white-bg', 'border_black-100');
-//         });
+    $(document).on("click", function (event) {
+        if (!$(event.target).closest(".search-btn, .search-input").length) {
+            $(".search-input").removeClass("active");
+        }
+    });
 
-//         // Add classes to the parent card of the checked radio
-//         if (radio.checked) {
-//           const card = radio.closest('.ordering-card');
-//           card.classList.add('light_purple_bg', 'border_dark_purple');
-//           card.classList.remove('white-bg', 'border_black-100');
-//         }
-//       });
-//     });
-//   });
+    // Initialize popovers manually
+    $('[data-bs-toggle="popover"]').each(function () {
+        $(this).popover({ trigger: "manual" });
+    });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
-    popoverTriggerList.forEach((popoverTriggerEl) => {
-        new bootstrap.Popover(popoverTriggerEl);
+    // Toggle popover on button click
+    $(document).on("click", '[data-bs-toggle="popover"]', function (event) {
+        event.stopPropagation(); // Prevent document click from closing it immediately
+        let $this = $(this);
+
+        // Get popover instance
+        if ($this.attr("aria-describedby")) {
+            $this.popover("hide");
+        } else {
+            // Hide all other popovers first
+            $('[data-bs-toggle="popover"]').popover("hide");
+            $this.popover("show");
+        }
+    });
+
+    // Close popover when clicking outside
+    $(document).on("click", function (event) {
+        if (!$(event.target).closest('[data-bs-toggle="popover"], .popover').length) {
+            $('[data-bs-toggle="popover"]').popover("hide");
+        }
     });
 });
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+//   popoverTriggerList.forEach((popoverTriggerEl) => {
+//     new bootstrap.Popover(popoverTriggerEl);
+//   });
+// });
+
+// $(document).on("click", function (event) {
+//   if (!$(event.target).closest('[data-bs-toggle="popover"]').length) {
+//     $(".popover ").hide();
+//   }
+// });
+
+

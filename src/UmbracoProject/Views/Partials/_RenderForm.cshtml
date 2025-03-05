@@ -112,27 +112,31 @@
                                     break;
 
                                 case "2e853598-a701-40d5-b6b8-51113492b7b2": // Change existing charging box form
-                                    <button type="button" class="btn form_submit_btn @Model?.FormContent?.SubmitButtonTheme change_existing_box_form_submit" style="border:1px solid #@Model?.FormContent?.SubmitButtonBorderColor"> @form.SubmitLabel</button>
+                                    <button type="button" class="btn form_submit_btn @Model?.FormContent?.SubmitButtonTheme change_existing_box_form_submit @(Model?.FormContent?.ButtonTextItalic ==true ? "italic":"")" style="border:1px solid #@Model?.FormContent?.SubmitButtonBorderColor"> @form.SubmitLabel</button>
                                     break;
 
                                 case "48a10517-c09f-429b-afeb-6764082245d3": // Tailor Charging Solution Form
-                                    <button type="button" class="btn form_submit_btn @Model?.FormContent?.SubmitButtonTheme tailor_charging_solution_submit" style="border:1px solid #@Model?.FormContent?.SubmitButtonBorderColor"> @form.SubmitLabel</button>
+                                    <button type="button" class="btn form_submit_btn @Model?.FormContent?.SubmitButtonTheme tailor_charging_solution_submit @(Model?.FormContent?.ButtonTextItalic ==true ? "italic":"")" style="border:1px solid #@Model?.FormContent?.SubmitButtonBorderColor"> @form.SubmitLabel</button>
                                     break;
 
                                 case "95f4292c-3068-4376-bd2e-8f264263e201": // Board of Representatives Form
-                                    <button type="button" class="btn form_submit_btn @Model?.FormContent?.SubmitButtonTheme representatives_form_submit" style="border:1px solid #@Model?.FormContent?.SubmitButtonBorderColor"> @form.SubmitLabel</button>
+                                    <button type="button" class="btn form_submit_btn @Model?.FormContent?.SubmitButtonTheme representatives_form_submit @(Model?.FormContent?.ButtonTextItalic ==true ? "italic":"")" style="border:1px solid #@Model?.FormContent?.SubmitButtonBorderColor"> @form.SubmitLabel</button>
                                     break;
 
                                 case "0c79da13-dc56-4ac1-bc8e-4c35c5a41dd8": // No Obligation Advice On Electricity Form
-                                    <button type="button" class="btn form_submit_btn @Model?.FormContent?.SubmitButtonTheme business_form_submit" style="border:1px solid #@Model?.FormContent?.SubmitButtonBorderColor"> @form.SubmitLabel</button>
+                                    <button type="button" class="btn form_submit_btn @Model?.FormContent?.SubmitButtonTheme business_form_submit @(Model?.FormContent?.ButtonTextItalic ==true ? "italic":"")" style="border:1px solid #@Model?.FormContent?.SubmitButtonBorderColor"> @form.SubmitLabel</button>
                                     break;
 
                                 case "0d8c447e-4855-4e8f-ba11-c25e2a820a4a": // Non-binding Advice On Charging Solution Form
-                                    <button type="button" class="btn form_submit_btn @Model?.FormContent?.SubmitButtonTheme business_form_submit" style="border:1px solid #@Model?.FormContent?.SubmitButtonBorderColor"> @form.SubmitLabel</button>
+                                    <button type="button" class="btn form_submit_btn @Model?.FormContent?.SubmitButtonTheme business_form_submit @(Model?.FormContent?.ButtonTextItalic ==true ? "italic":"")" style="border:1px solid #@Model?.FormContent?.SubmitButtonBorderColor"> @form.SubmitLabel</button>
                                     break;
 
                                 case "a4195bb9-fef3-4d4a-b4ae-58984795ce72": // Non-binding Advice About Fiber Networks Form
-                                    <button type="button" class="btn form_submit_btn @Model?.FormContent?.SubmitButtonTheme business_form_submit" style="border:1px solid #@Model?.FormContent?.SubmitButtonBorderColor"> @form.SubmitLabel</button>
+                                    <button type="button" class="btn form_submit_btn @Model?.FormContent?.SubmitButtonTheme business_form_submit @(Model?.FormContent?.ButtonTextItalic ==true ? "italic":"")" style="border:1px solid #@Model?.FormContent?.SubmitButtonBorderColor"> @form.SubmitLabel</button>
+                                    break;
+
+                                case "d26dc384-114f-4491-9ae2-1346f0fbb6ab": // Non-binding Advice On TV Packages Form
+                                    <button type="button" class="btn form_submit_btn @Model?.FormContent?.SubmitButtonTheme business_form_submit @(Model?.FormContent?.ButtonTextItalic ==true ? "italic":"")" style="border:1px solid #@Model?.FormContent?.SubmitButtonBorderColor"> @form.SubmitLabel</button>
                                     break;
                             }
                         }

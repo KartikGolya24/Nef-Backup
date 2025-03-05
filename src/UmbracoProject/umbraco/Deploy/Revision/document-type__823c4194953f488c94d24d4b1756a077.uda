@@ -12,12 +12,14 @@
     "AllowedChildContentTypes": []
   },
   "Parent": "umb://document-type-container/3e5c1ac20a48406c917e220b4bada863",
-  "CompositionContentTypes": [],
+  "CompositionContentTypes": [
+    "umb://document-type/c9ab57ded3b44526a7ac22bacf19a079"
+  ],
   "PropertyGroups": [
     {
       "Key": "a183e85d-1090-45ba-a61e-6dce54ff7e22",
       "Name": "Grid Content",
-      "SortOrder": 1,
+      "SortOrder": 3,
       "Alias": "gridContent",
       "PropertyTypes": [
         {
@@ -31,6 +33,7 @@
     {
       "Key": "d1234e02-a3d5-4ca9-9d9c-ac5d2e27f142",
       "Name": "Banner Content",
+      "SortOrder": 1,
       "Alias": "bannerContent",
       "PropertyTypes": [
         {
@@ -38,7 +41,7 @@
           "Alias": "buttonTheme",
           "DataType": "umb://data-type/36564b1fa93643ee88423df7234ea0bf",
           "Name": "Button Theme",
-          "SortOrder": 6
+          "SortOrder": 5
         },
         {
           "Key": "29b94ec8-1cff-442b-89e4-6c00fbf31bdd",
@@ -58,14 +61,14 @@
           "Alias": "readyToVoteLink",
           "DataType": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
           "Name": "Ready to Vote Link",
-          "SortOrder": 5
+          "SortOrder": 4
         },
         {
           "Key": "dba35461-9322-4ea9-a4b5-0d8b1a7b9e3a",
           "Alias": "description",
           "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
           "Name": "Description",
-          "SortOrder": 4
+          "SortOrder": 3
         },
         {
           "Key": "f4cc63f7-79fd-43cb-af48-a6c3142013fd",
@@ -110,6 +113,10 @@
     },
     {
       "Udi": "umb://document-type-container/3e5c1ac20a48406c917e220b4bada863",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/c9ab57ded3b44526a7ac22bacf19a079",
       "Ordering": true
     },
     {

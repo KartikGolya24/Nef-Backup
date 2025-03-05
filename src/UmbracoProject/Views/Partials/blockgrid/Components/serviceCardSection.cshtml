@@ -14,7 +14,7 @@
                 {
                     var serviceBlock = item.Content as ServiceCardBlock;
                     <div class="col-lg-@(Model?.Content.EnableTwoCardsInOneRaw == true ? "6" : "4") col-md-6 mb-32">
-                        <div class="card-outer h-proposition @serviceBlock?.ServiceCardTheme">
+                        <div class="card-outer @serviceBlock?.ServiceCardTheme">
                             <div class="card-detail">
                                 <div class="card-icon">
                                     <img src="@serviceBlock?.CardIcon?.MediaUrl()" class="img-fluid" alt="">

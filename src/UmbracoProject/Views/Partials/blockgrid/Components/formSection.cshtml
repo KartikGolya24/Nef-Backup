@@ -26,19 +26,19 @@
                     {
                         var itemModel = item?.Content as FormSectionContentBlock;
                         <div class="col-lg-6">
-                            <div class="section-detail @(index == 1?"ms-auto":"")" >
+                            <div class="section-detail @(index == 1?"ms-auto":"")">
                                 <div class="section-content">
                                     <h2>
                                         @itemModel?.HeadingText
                                     </h2>
                                     @Html?.Raw(itemModel?.DescriptionText)
+                                    @if (!string.IsNullOrWhiteSpace(itemModel?.Image?.MediaUrl()))
+                                    {
+                                        <div class="buy_charging-doodles" style="text-align:@(index == 1 ? "left":"right")">
+                                            <img src="@itemModel?.Image?.MediaUrl()" class="img-fluid" alt="">
+                                        </div>
+                                    }
                                 </div>
-                                @if (!string.IsNullOrWhiteSpace(itemModel?.Image?.MediaUrl()))
-                                {
-                                    <div class="buy_charging-doodles" style="text-align:@(index == 1 ? "left":"right")">
-                                        <img src="@itemModel?.Image?.MediaUrl()" class="img-fluid" alt="">
-                                    </div>
-                                }
                             </div>
                         </div>
                     }
@@ -54,7 +54,7 @@
 
                         <div class="col-lg-6">
                             <div class="contact-form">
-                                    @await Html.PartialAsync("~/Views/Partials/_RenderForm.cshtml", model)
+                                @await Html.PartialAsync("~/Views/Partials/_RenderForm.cshtml", model)
                             </div>
                         </div>
                     }

@@ -27,11 +27,6 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		string MetaDescription { get; }
 
-		/// <summary>Meta Keywords</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.0+eaea7a6")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string MetaKeywords { get; }
-
 		/// <summary>Meta Title</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.0+eaea7a6")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
@@ -81,19 +76,6 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.0+eaea7a6")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		public static string GetMetaDescription(ISEocontrols that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "metaDescription");
-
-		///<summary>
-		/// Meta Keywords
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.0+eaea7a6")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("metaKeywords")]
-		public virtual string MetaKeywords => GetMetaKeywords(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Meta Keywords</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.0+eaea7a6")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetMetaKeywords(ISEocontrols that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "metaKeywords");
 
 		///<summary>
 		/// Meta Title
