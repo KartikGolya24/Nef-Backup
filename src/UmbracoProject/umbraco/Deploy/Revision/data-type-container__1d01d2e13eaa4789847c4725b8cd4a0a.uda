@@ -1,0 +1,9 @@
+{
+  "Name": "Custom Dropdowns",
+  "Alias": "",
+  "ContainedObjectType": "30a2a501-1978-4ddb-a57b-f7efed43ba3c",
+  "Udi": "umb://data-type-container/1d01d2e13eaa4789847c4725b8cd4a0a",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContainerArtifact",
+  "__version": "13.4.0"
+}

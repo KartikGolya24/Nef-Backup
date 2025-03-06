@@ -29,13 +29,6 @@
           "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
           "Name": "Description Text",
           "SortOrder": 1
-        },
-        {
-          "Key": "9514bb05-bad6-4584-a4b3-c02a44ce6a53",
-          "Alias": "textColor",
-          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
-          "Name": "Text Color",
-          "SortOrder": 2
         }
       ]
     }
@@ -45,10 +38,6 @@
   "Dependencies": [
     {
       "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-      "Ordering": true
-    },
-    {
-      "Udi": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
       "Ordering": true
     },
     {

@@ -64,13 +64,5 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("headingText")]
 		public virtual string HeadingText => this.Value<string>(_publishedValueFallback, "headingText");
-
-		///<summary>
-		/// Text Color
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.0+eaea7a6")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("textColor")]
-		public virtual string TextColor => this.Value<string>(_publishedValueFallback, "textColor");
 	}
 }

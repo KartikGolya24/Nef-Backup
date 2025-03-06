@@ -1,5 +1,5 @@
 {
-  "Name": "Two Column Icon Text List - List Style - Dropdown",
+  "Name": "Home Global Setting - Tab - Dropdown",
   "Alias": "",
   "EditorAlias": "Umbraco.DropDown.Flexible",
   "DatabaseType": "Nvarchar",
@@ -8,16 +8,20 @@
     "items": [
       {
         "id": 1,
-        "value": "Icon"
+        "value": "Privat"
       },
       {
         "id": 2,
-        "value": "Number"
+        "value": "Erhverv"
+      },
+      {
+        "id": 3,
+        "value": "Repræsentantskabsvalg"
       }
     ]
   },
   "Parent": "umb://data-type-container/1d01d2e13eaa4789847c4725b8cd4a0a",
-  "Udi": "umb://data-type/1b0f7ca695e64da4be2e32067b6c7a1a",
+  "Udi": "umb://data-type/420448c648a64f909ce79a0ef40d9451",
   "Dependencies": [
     {
       "Udi": "umb://data-type-container/1d01d2e13eaa4789847c4725b8cd4a0a",

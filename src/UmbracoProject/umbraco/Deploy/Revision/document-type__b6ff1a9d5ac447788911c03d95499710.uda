@@ -19,10 +19,10 @@
       "Alias": "settings",
       "PropertyTypes": [
         {
-          "Key": "aea49e3d-8ee9-4481-91e1-790f22199768",
-          "Alias": "tabName",
-          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-          "Name": "Tab Name"
+          "Key": "a98c3a0b-c4ac-47d4-b7a2-cfd8bd9bdebb",
+          "Alias": "tab",
+          "DataType": "umb://data-type/420448c648a64f909ce79a0ef40d9451",
+          "Name": "Tab"
         },
         {
           "Key": "c920e7b5-97ab-43e6-8c21-f5cd93436175",
@@ -38,7 +38,7 @@
   "Udi": "umb://document-type/b6ff1a9d5ac447788911c03d95499710",
   "Dependencies": [
     {
-      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Udi": "umb://data-type/420448c648a64f909ce79a0ef40d9451",
       "Ordering": true
     },
     {

@@ -31,8 +31,14 @@
     "hideLabel": false,
     "ignoreUserStartNodes": false
   },
+  "Parent": "umb://data-type-container/6f1da41074e94cd4a5eb7e7b206ab9e6",
   "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
-  "Dependencies": [],
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/6f1da41074e94cd4a5eb7e7b206ab9e6",
+      "Ordering": true
+    }
+  ],
   "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
   "__version": "13.4.0"
 }

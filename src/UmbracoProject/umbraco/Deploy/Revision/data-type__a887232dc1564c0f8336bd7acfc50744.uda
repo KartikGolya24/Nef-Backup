@@ -37,8 +37,13 @@
     },
     "useLiveEditing": false
   },
+  "Parent": "umb://data-type-container/388109200d2343119601cb2b6023642b",
   "Udi": "umb://data-type/a887232dc1564c0f8336bd7acfc50744",
   "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/388109200d2343119601cb2b6023642b",
+      "Ordering": true
+    },
     {
       "Udi": "umb://document-type/1e90c26b8ffe426dbbe9a80a69192d47"
     },

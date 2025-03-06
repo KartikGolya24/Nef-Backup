@@ -50,19 +50,19 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
+		/// Tab
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.0+eaea7a6")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("tab")]
+		public virtual string Tab => this.Value<string>(_publishedValueFallback, "tab");
+
+		///<summary>
 		/// Tab Background Theme
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.0+eaea7a6")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("tabBackgroundTheme")]
 		public virtual string TabBackgroundTheme => this.Value<string>(_publishedValueFallback, "tabBackgroundTheme");
-
-		///<summary>
-		/// Tab Name
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.0+eaea7a6")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("tabName")]
-		public virtual string TabName => this.Value<string>(_publishedValueFallback, "tabName");
 	}
 }

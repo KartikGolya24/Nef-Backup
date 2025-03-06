@@ -7,8 +7,14 @@
     "format": "DD.MM.YYYY HH.mm",
     "offsetTime": false
   },
+  "Parent": "umb://data-type-container/6f1da41074e94cd4a5eb7e7b206ab9e6",
   "Udi": "umb://data-type/e4d66c0fb935420081f0025f7256b89a",
-  "Dependencies": [],
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/6f1da41074e94cd4a5eb7e7b206ab9e6",
+      "Ordering": true
+    }
+  ],
   "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
   "__version": "13.4.0"
 }

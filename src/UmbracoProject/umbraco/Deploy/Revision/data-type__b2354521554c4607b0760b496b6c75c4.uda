@@ -35,8 +35,13 @@
     "validationLimit": {},
     "useLiveEditing": false
   },
+  "Parent": "umb://data-type-container/388109200d2343119601cb2b6023642b",
   "Udi": "umb://data-type/b2354521554c4607b0760b496b6c75c4",
   "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/388109200d2343119601cb2b6023642b",
+      "Ordering": true
+    },
     {
       "Udi": "umb://document-type/4d41b70fba514cd599ac0bfd0fdcce06"
     },

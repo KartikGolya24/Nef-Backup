@@ -12,8 +12,14 @@
     "crops": [],
     "ignoreUserStartNodes": false
   },
+  "Parent": "umb://data-type-container/6f1da41074e94cd4a5eb7e7b206ab9e6",
   "Udi": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
-  "Dependencies": [],
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/6f1da41074e94cd4a5eb7e7b206ab9e6",
+      "Ordering": true
+    }
+  ],
   "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
   "__version": "13.4.0"
 }

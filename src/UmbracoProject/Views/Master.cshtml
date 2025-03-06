@@ -29,17 +29,14 @@
 
     <link rel="stylesheet" href="~/assets/style/css/style.css" async>
     @*<link rel="stylesheet" href="~/assets/style/css/style.css" media="print" onload="this.media='all'" async>*@
-    
+
     <script src="~/assets/js/jquery.output.min.js"></script>
     @*<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>*@
-    
+
     @*<link rel='canonical' href='https://dev-nef-dk.euwest01.umbraco.io/privat'/>*@
 </head>
 
 <body>
-    @{
-        var tab = "";
-    }
     <!--------------------------- top-header------------------------->
     <div class="top-header-outer @(globalSetting?.TabBackgroundTheme)">
         <div class="container-xl">
@@ -48,9 +45,8 @@
                     <ul class="tabs-item" id="pills-tab" role="tablist">
                         @foreach (var item in homeRoots)
                         {
-                            tab = item?.Url()?.Contains("/erhverv/") == true ? "erhverv-tab" : item?.Url()?.Contains("/repraesentantskabsvalg/") == true ? "Repræsentantskabsvalg-tab" : "privat-tab";
                             <li class="tabs-list">
-                                <a href="@item?.Url()" id="@tab" class="tabs-link @(Model?.Url()?.Contains(item?.Url())== true ?"active":"") ">@item?.Name</a>
+                                <a href="@item?.Url()" id="@($"{item?.Url().Replace("/", "")}-tab" )" class="tabs-link @(Model?.Url()?.Contains(item?.Url())== true ?"active":"") ">@item?.Name</a>
                             </li>
                         }
                     </ul>
@@ -63,7 +59,7 @@
                             @foreach (var item in globalNavigation.NavigationItem)
                             {
                                 <li class="navigation-list">
-                                    <a href="@item?.Url" class="navigation-link black-800 fw-400">@item?.Name</a>
+                                    <a href="@item?.Url" class="navigation-link">@item?.Name</a>
                                 </li>
                             }
                         </ul>
@@ -73,7 +69,7 @@
         </div>
     </div>
     <div class="tab-outer" id="pills-tabContent">
-        <div class="@(globalSetting?.TabName?.Trim() == "Erhverv" ? "business-tab" :"") fade show active">
+        <div class="@(globalSetting?.Tab?.Trim() == "Erhverv" ? "business-tab" :"") fade show active">
 
             @Html.Partial("_Header", navigation)
 
@@ -100,7 +96,6 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">

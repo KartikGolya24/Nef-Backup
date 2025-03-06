@@ -48,7 +48,6 @@
           "Key": "de3f04bf-0d00-4a72-b1b7-556a43b58231",
           "Alias": "positionImages",
           "DataType": "umb://data-type/4d5ef22553b746cb8adf329536e76445",
-          "Mandatory": true,
           "Name": "Position Images",
           "SortOrder": 4
         }

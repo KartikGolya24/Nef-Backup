@@ -6,8 +6,14 @@
     "Minimum": 0,
     "Maximum": 0
   },
+  "Parent": "umb://data-type-container/6f1da41074e94cd4a5eb7e7b206ab9e6",
   "Udi": "umb://data-type/67fb6a02c52f440e9e2fb7499cd2c4f2",
-  "Dependencies": [],
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/6f1da41074e94cd4a5eb7e7b206ab9e6",
+      "Ordering": true
+    }
+  ],
   "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
   "__version": "13.4.0"
 }

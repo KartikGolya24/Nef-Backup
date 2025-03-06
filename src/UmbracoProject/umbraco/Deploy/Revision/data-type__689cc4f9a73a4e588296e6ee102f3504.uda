@@ -311,8 +311,13 @@
     "validationLimit": {},
     "useLiveEditing": false
   },
+  "Parent": "umb://data-type-container/388109200d2343119601cb2b6023642b",
   "Udi": "umb://data-type/689cc4f9a73a4e588296e6ee102f3504",
   "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/388109200d2343119601cb2b6023642b",
+      "Ordering": true
+    },
     {
       "Udi": "umb://document-type/107ddf30d663400da98805a78b8c2c8b"
     },

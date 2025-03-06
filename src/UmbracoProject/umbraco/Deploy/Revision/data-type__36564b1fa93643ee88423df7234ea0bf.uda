@@ -64,8 +64,14 @@
       }
     ]
   },
+  "Parent": "umb://data-type-container/1d01d2e13eaa4789847c4725b8cd4a0a",
   "Udi": "umb://data-type/36564b1fa93643ee88423df7234ea0bf",
-  "Dependencies": [],
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/1d01d2e13eaa4789847c4725b8cd4a0a",
+      "Ordering": true
+    }
+  ],
   "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
   "__version": "13.4.0"
 }

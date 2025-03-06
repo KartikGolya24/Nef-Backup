@@ -14,8 +14,8 @@
   "PropertyGroups": [
     {
       "Key": "7c0227bd-864f-4ef3-ad11-3a83185b1c78",
-      "Name": "Content",
-      "Alias": "content",
+      "Name": "Footer Menu Content",
+      "Alias": "footerMenuContent",
       "PropertyTypes": [
         {
           "Key": "de3a5d84-24c7-4985-ae0b-58c6b9f35ae6",
