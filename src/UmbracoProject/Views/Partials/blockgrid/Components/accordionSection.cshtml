@@ -20,7 +20,7 @@
 
         <div class="faq-container">
             @{
-                var accordionId = $"accordionFlushExample +{Guid.NewGuid()}";
+                var accordionId = $"accordionFlushExample-{Guid.NewGuid()}";
             }
             <div class="accordion accordion-flush accordian-section" id="@accordionId">
                 @if (content?.AccordionList?.Count > 0)
