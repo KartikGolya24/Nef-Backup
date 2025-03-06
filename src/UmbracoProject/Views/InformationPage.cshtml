@@ -32,7 +32,7 @@
                             @foreach (var item in Model?.Blocks)
                             {
                                 var alias = item?.Content?.ContentType?.Alias;
-                                @if (alias == "latestUpdateSectionBlock")
+                                @if (alias == LatestUpdateSectionBlock.ModelTypeAlias)
                                 {
                                     var itemModel = item?.Content as LatestUpdateSectionBlock;
 
@@ -42,9 +42,9 @@
                                             <div class="map-section">
                                                 <h2 class="mb-0">@itemModel?.Heading</h2>
                                                 <div id="map-container" style="height: 545px;">
-                                                 <p>Loading map...</p>
+                                                    <p>Loading map...</p>
                                                 </div>
-                                               
+
                                                 <div class="box-footer">
                                                     @Html?.Raw(itemModel?.OpratingMapDescription)
                                                     <a href="@itemModel?.ButtonLink?.Url" class="btn light_blue_btn">
@@ -63,38 +63,38 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                             <script>
+                                            <script>
                                                 document.addEventListener("DOMContentLoaded", function () {
-                                                 const mapContainer = document.getElementById("map-container");
+                                                const mapContainer = document.getElementById("map-container");
 
-                                                     function loadIframe() {
-                                                         if (!mapContainer.querySelector("iframe")) { // Prevent duplicate iframe
-                                                             const iframe = document.createElement("iframe");
-                                                                     iframe.src = "@itemModel?.MapIframeSrc";
-                                                                     iframe.width = "100%";
-                                                                     iframe.height = "400";
-                                                                     iframe.style.border = "0";
-                                                                     iframe.allowFullscreen = true;
-                                                                     iframe.referrerPolicy = "no-referrer-when-downgrade";
-                                                                     iframe.loading = "lazy"; // Extra lazy loading
-                                                    
-                                                                     mapContainer.innerHTML = ""; // Remove "Loading map..."
-                                                                     mapContainer.appendChild(iframe);
-                                                                 }
-                                                             }
-                                                    
-                                                             const observer = new IntersectionObserver((entries) => {
-                                                                 entries.forEach(entry => {
-                                                                     if (entry.isIntersecting) {
-                                                                         loadIframe();
-                                                                         observer.disconnect(); // Stop observing after loading
-                                                                     }
-                                                                 });
-                                                             }, { threshold: 0.2 }); // Load earlier
-                                                    
-                                                             observer.observe(mapContainer);
-                                                         });
-                                         </script>
+                                                function loadIframe() {
+                                                if (!mapContainer.querySelector("iframe")) { // Prevent duplicate iframe
+                                                const iframe = document.createElement("iframe");
+                                                iframe.src = "@itemModel?.MapIframeSrc";
+                                                iframe.width = "100%";
+                                                iframe.height = "400";
+                                                iframe.style.border = "0";
+                                                iframe.allowFullscreen = true;
+                                                iframe.referrerPolicy = "no-referrer-when-downgrade";
+                                                iframe.loading = "lazy"; // Extra lazy loading
+
+                                                mapContainer.innerHTML = ""; // Remove "Loading map..."
+                                                mapContainer.appendChild(iframe);
+                                                }
+                                                }
+
+                                                const observer = new IntersectionObserver((entries) => {
+                                                entries.forEach(entry => {
+                                                if (entry.isIntersecting) {
+                                                loadIframe();
+                                                observer.disconnect(); // Stop observing after loading
+                                                }
+                                                });
+                                                }, { threshold: 0.2 }); // Load earlier
+
+                                                observer.observe(mapContainer);
+                                                });
+                                            </script>
                                         }
                                         else
                                         {
@@ -156,7 +156,7 @@
                                     </div>
 
                                 }
-                                @if (alias == "commonInfoSectionBlock")
+                                @if (alias == CommonInfoSectionBlock.ModelTypeAlias)
                                 {
                                     var itemModel = item?.Content as CommonInfoSectionBlock;
                                     <div class="status-box">
@@ -166,25 +166,26 @@
                                             @Html?.Raw(itemModel?.Description)
                                         </div>
 
-                                        @if (itemModel?.AccordionList?.Count > 0)
+                                        @if (itemModel?.AccordionList != null && itemModel?.AccordionList?.Count > 0)
                                         {
-                                            var headingCount = 0;
-                                            var collapseCount = 0;
+
+                                            var accordionId = $"accordionFlushExample-{Guid.NewGuid()}";
                                             <div class="data-faq">
-                                                <div class="accordion accordion-flush accordian-section " id="accordionFlushExample">
-                                                    @foreach (var accordion in itemModel?.AccordionList)
+                                                <div class="accordion accordion-flush accordian-section " id="@accordionId">
+                                                    @foreach (var accordion in itemModel.AccordionList)
                                                     {
-                                                        var flushHeading = $"flush-heading{headingCount++}";
-                                                        var flushCollapse = $"flush-collapse{collapseCount++}";
+                                                        var uniqueId = Guid.NewGuid();
+                                                        var flushHeading = $"flush-heading-{uniqueId}";
+                                                        var flushCollapse = $"flush-collapse-{uniqueId}";
                                                         var accordionModel = accordion?.Content as AccordionBlock;
                                                         <div class="accordion-item">
                                                             <h2 class="accordion-header " id="@flushHeading">
-                                                                <button class="accordion-button collapsed  black-950" type="button" data-bs-toggle="collapse" data-bs-target="#@flushCollapse" aria-expanded="false" aria-controls="@flushCollapse">
+                                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#@flushCollapse" aria-expanded="false" aria-controls="@flushCollapse">
                                                                     @accordionModel?.Heading
                                                                 </button>
                                                             </h2>
-                                                            <div id="@flushCollapse" class="accordion-collapse collapse" aria-labelledby="@flushHeading" data-bs-parent="#accordionFlushExample">
-                                                                <div class="accordion-body black-700 p-0">
+                                                            <div id="@flushCollapse" class="accordion-collapse collapse" aria-labelledby="@flushHeading" data-bs-parent="#@accordionId">
+                                                                <div class="accordion-body">
                                                                     @accordionModel?.DescriptionText
                                                                 </div>
                                                             </div>

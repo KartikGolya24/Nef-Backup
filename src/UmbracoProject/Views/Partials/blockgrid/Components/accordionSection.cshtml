@@ -17,16 +17,19 @@
                 <h3 class="title">@content?.HeadingText</h3>
             </div>
         }
+
         <div class="faq-container">
-            <div class="accordion accordion-flush accordian-section" id="accordionFlushExample">
+            @{
+                var accordionId = $"accordionFlushExample +{Guid.NewGuid()}";
+            }
+            <div class="accordion accordion-flush accordian-section" id="@accordionId">
                 @if (content?.AccordionList?.Count > 0)
                 {
-                    var headingCount = 0;
-                    var collapseCount = 0;
                     @foreach (var item in content?.AccordionList)
                     {
-                        var flushHeading = $"flush-heading{headingCount++}";
-                        var flushCollapse = $"flush-collapse{collapseCount++}";
+                        var uniqueId = Guid.NewGuid();
+                        var flushHeading = $"flush-heading-{uniqueId}";
+                        var flushCollapse = $"flush-collapse-{uniqueId}";
                         var accordionModel = item?.Content as AccordionBlock;
                         <div class="accordion-item">
                             <h2 class="accordion-header " id="@flushHeading">
@@ -40,7 +43,7 @@
                                     @accordionModel?.Heading
                                 </button>
                             </h2>
-                            <div id="@flushCollapse" class="accordion-collapse collapse" aria-labelledby="@flushHeading" data-bs-parent="#accordionFlushExample">
+                            <div id="@flushCollapse" class="accordion-collapse collapse" aria-labelledby="@flushHeading" data-bs-parent="#@accordionId">
                                 <div class="accordion-body">
                                     @accordionModel?.DescriptionText
                                 </div>
