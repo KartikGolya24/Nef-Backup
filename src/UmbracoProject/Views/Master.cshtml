@@ -46,7 +46,10 @@
                         @foreach (var item in homeRoots)
                         {
                             <li class="tabs-list">
-                                <a href="@item?.Url()" id="@($"{item?.Url().Replace("/", "")}-tab" )" class="tabs-link @(Model?.Url()?.Contains(item?.Url())== true ?"active":"") ">@item?.Name</a>
+                                @{
+                                    var tab = item?.Url()?.Contains("/repraesentantskabsvalg/") == true ? "Repræsentantskabsvalg-tab" : $"{item?.Url().Replace("/", "")}-tab";
+                                }
+                                <a href="@item?.Url()" id="@tab" class="tabs-link @(Model?.Url()?.Contains(item?.Url())== true ?"active":"") ">@item?.Name</a>
                             </li>
                         }
                     </ul>
