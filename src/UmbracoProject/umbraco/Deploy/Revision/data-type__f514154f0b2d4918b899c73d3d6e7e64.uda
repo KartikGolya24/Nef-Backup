@@ -73,6 +73,10 @@
       {
         "id": 17,
         "value": "business-dark-blue"
+      },
+      {
+        "id": 18,
+        "value": "private-internet-white"
       }
     ]
   },
