@@ -1,4 +1,6 @@
 
+using UmbracoProject.App_Code.Services;
+
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 builder.CreateUmbracoBuilder()
@@ -7,7 +9,11 @@ builder.CreateUmbracoBuilder()
     .AddDeliveryApi()
     .AddComposers()
     .Build();
+
+//Service Registeration
 builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<ISearchService, SearchService>();
+
 WebApplication app = builder.Build();
 
 await app.BootUmbracoAsync();

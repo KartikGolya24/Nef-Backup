@@ -10,7 +10,7 @@ using Umbraco.Forms.Core.Models;
 using Umbraco.Forms.Core.Persistence.Dtos;
 using Umbraco.Forms.Core.Services;
 
-namespace UmbracoProject.App_Code;
+namespace UmbracoProject.App_Code.Controllers;
 
 public class CustomFormController(
     IRecordService recordService,
@@ -34,7 +34,7 @@ public class CustomFormController(
     {
         if (requestModel is not null && requestModel.Count > 0)
         {
-            var submittedValues = requestModel.ToDictionary(kvp => kvp.Key, kvp => (string)kvp.Value);
+            var submittedValues = requestModel.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
 
             _ = Guid.TryParse(submittedValues["formId"], out Guid formId);
 

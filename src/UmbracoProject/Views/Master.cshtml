@@ -45,11 +45,18 @@
                     <ul class="tabs-item" id="pills-tab" role="tablist">
                         @foreach (var item in homeRoots)
                         {
+                            var tabClass = string.Empty;
+                            var globalSettings = item?.Children<WebSiteSetting>()?.FirstOrDefault()?.Children<HomeGlobalSetting>()?.FirstOrDefault();
+                            if (!string.IsNullOrWhiteSpace(globalSettings?.Tab))
+                            {
+                                tabClass = globalSettings?.Tab == "Erhverv" ? "erhverv-tab" : globalSettings?.Tab == "Repræsentantskabsvalg" == true ? "Repræsentantskabsvalg-tab" : "privat-tab";
+                            }
+                            else
+                            {
+                                tabClass = "privat-tab";
+                            }
                             <li class="tabs-list">
-                                @{
-                                    var tab = item?.Url()?.Contains("/repraesentantskabsvalg/") == true ? "Repræsentantskabsvalg-tab" : $"{item?.Url().Replace("/", "")}-tab";
-                                }
-                                <a href="@item?.Url()" id="@tab" class="tabs-link @(Model?.Url()?.Contains(item?.Url())== true ?"active":"") ">@item?.Name</a>
+                                <a href="@item?.Url()" id="@tabClass" class="tabs-link @(Model?.Url()?.Contains(item?.Url()??"")== true ?"active":"") ">@item?.Name</a>
                             </li>
                         }
                     </ul>
@@ -72,7 +79,7 @@
         </div>
     </div>
     <div class="tab-outer" id="pills-tabContent">
-        <div class="@(globalSetting?.Tab?.Trim() == "Erhverv" ? "business-tab" :"") fade show active">
+        <div class="@(globalSetting?.Tab?.Trim() == "Erhverv" ? "business-tab" : globalSetting?.Tab?.Trim() == "Repræsentantskabsvalg" ? "Repræsentantskabsvalg-tab" :"Privat-tab") fade show active">
 
             @Html.Partial("_Header", navigation)
 

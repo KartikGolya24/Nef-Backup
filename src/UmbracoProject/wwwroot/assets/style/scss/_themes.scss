@@ -257,6 +257,7 @@
                 &:first-child {
                     background-color: $dark_blue;
                     color: $white;
+                    border-color: transparent;
                 }
             }
         }
@@ -343,6 +344,28 @@
             }
         }
     }
+    .package-list {
+        .package-card {
+            .package-footer {
+                .card-footer {
+                    .footer-btn {
+                        .btn {
+                            background-color: $light_blue;
+                            color: $white;
+                            svg {
+                                path {
+                                    stroke: $white;
+                                }
+                            }
+                            &:hover {
+                                background-color: #237373;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 // Theme 02
@@ -410,6 +433,7 @@
                 &:first-child {
                     background-color: $dark_blue;
                     color: $white;
+                    border-color: transparent;
                 }
             }
         }
@@ -567,6 +591,7 @@
                 &:first-child {
                     background-color: $dark_blue;
                     color: $white;
+                    border-color: transparent;
                 }
             }
         }
@@ -653,147 +678,6 @@
                     }
                 }
             }
-        }
-    }
-}
-
-// Theme 04
-.private-tv-white {
-    background-color: $white;
-    .section-detail {
-        .section-content {
-            h2, h3 {
-                color: $black-950;
-            }
-            p {
-                color: $black-700;
-            }
-            .circle_icon_list {
-                li {
-                    .icon-box {
-                        background-color: $light_blue;
-                    }
-                    .list-information-text {
-                        .list-inner-title {
-                            color: $black-950;
-                        }
-                        p {
-                            color: $black-700;
-                        }
-                    }
-                }
-            }
-            .square_icon_list {
-                li {
-                    .icon-box {
-                        background-color: $light_blue;
-                        span {
-                            color: $white;
-                        }
-                    }
-                    .list-information-text {
-                        .list-inner-title {
-                            color: $black-950;
-                        }
-                        p {
-                            color: $black-700;
-                        }
-                    }
-                }
-            }
-            .section_bullet_list {
-                li {
-                    &::marker {
-                        color: $black-700;
-                    }
-                }
-            }
-        }
-        .multiple-buttons {
-            .btn {
-                &:last-child {
-                    background-color: $white;
-                    border: 1px solid $black-200;
-                    color: $black-950;
-                }
-                &:first-child {
-                    background-color: $dark_purple;
-                    color: $white;
-                }
-            }
-        }
-    }
-    .faq-contact {
-        h3 {
-            color: $black-950;
-        }
-    }
-    .section-heading {
-        h2 {
-            color: $black-950;
-        }
-        p {
-            color: $black-700;
-        }
-    }
-    .contact-form {
-        background-color: $turquoise;
-        .form-outer {
-            .form-headings {
-                .form-title {
-                    color: $black-950;
-                }
-                p {
-                    color: $black-700;
-                }
-            }
-        }
-        .label {
-            color: $black-950;
-        }
-    }
-    .electricity-card {
-        background-color: $dark_blue;
-        .card-body {
-            .title {
-                color: $white;
-            }
-            p {
-                color: $black-100;
-            }
-        }
-    }
-    .electricity-bill-detail {
-        .video-img {
-            background-color: $dark_blue;
-        }
-        .electricity-bill-list  {
-            .electricity-bill-card {
-                .card-body {
-                    .card-title {
-                        color: $black-950;
-                        & + p {
-                            color: $black-700;
-                        }
-                    }
-                    ul {
-                        li {
-                            p {
-                                color: $black-700;
-                            }
-                            &::marker {
-                                color: $black-700;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .package-list {
-        .package-card {
-            border-color: $dark_purple;
-            height: 680px;
         }
     }
 }
@@ -1269,6 +1153,28 @@
             }
         }
     }
+    .package-list {
+        .package-card {
+            .package-footer {
+                .card-footer {
+                    .footer-btn {
+                        .btn {
+                            background-color: $dark_purple;
+                            color: $white;
+                            svg {
+                                path {
+                                    stroke: $white;
+                                }
+                            }
+                            &:hover {
+                                background-color: #6C3965;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 // Theme 08
@@ -1336,6 +1242,7 @@
                 &:first-child {
                     background-color: $dark_blue;
                     color: $white;
+                    border-color: transparent;
                 }
             }
         }
@@ -1507,6 +1414,7 @@
                 &:first-child {
                     background-color: $dark_blue;
                     color: $white;
+                    border-color: transparent;
                 }
             }
         }
@@ -1677,6 +1585,7 @@
                 &:first-child {
                     background-color: $dark_pink;
                     color: $white;
+                    border-color: transparent;
                 }
             }
         }
@@ -1834,6 +1743,7 @@
                 &:first-child {
                     background-color: $dark_pink;
                     color: $white;
+                    border-color: transparent;
                 }
             }
         }
@@ -1991,6 +1901,7 @@
                 &:first-child {
                     background-color: $dark_pink;
                     color: $white;
+                    border-color: transparent;
                 }
             }
         }
@@ -2148,6 +2059,7 @@
                 &:first-child {
                     background-color: $space_blue;
                     color: $white;
+                    border-color: transparent;
                 }
             }
         }
@@ -2357,6 +2269,7 @@
                 &:first-child {
                     background-color: $dark_pink;
                     color: $white;
+                    border-color: transparent;
                 }
             }
         }
@@ -2510,6 +2423,7 @@
                 &:first-child {
                     background-color: $space_blue;
                     color: $white;
+                    border-color: transparent;
                 }
             }
         }
@@ -2598,6 +2512,28 @@
             }
         }
     }
+    .package-list {
+        .package-card {
+            .package-footer {
+                .card-footer {
+                    .footer-btn {
+                        .btn {
+                            background-color: $dark_blue;
+                            color: $white;
+                            svg {
+                                path {
+                                    stroke: $white;
+                                }
+                            }
+                            &:hover {
+                                background-color: #3e6579;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 // Theme 16
@@ -2665,6 +2601,7 @@
                 &:first-child {
                     background-color: $dark_purple;
                     color: $white;
+                    border-color: transparent;
                 }
             }
         }
@@ -2753,6 +2690,30 @@
             }
         }
     }
+    .package-list {
+        .package-card {
+            border-color: $dark_purple;
+            height: 680px;
+            .package-footer {
+                .card-footer {
+                    .footer-btn {
+                        .btn {
+                            background-color: $dark_purple;
+                            color: $white;
+                            svg {
+                                path {
+                                    stroke: $white;
+                                }
+                            }
+                            &:hover {
+                                background-color: #6C3965;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 // Theme 17
@@ -2818,6 +2779,7 @@
                 &:first-child {
                     background-color: $light_blue;
                     color: $white;
+                    border-color: transparent;
                 }
             }
         }
@@ -2929,4 +2891,371 @@
         }
     }
 
+}
+
+// packages Extra themes
+.private-internet-white {
+    background-color: $white;
+    .section-detail {
+        .section-content {
+            h2, h3 {
+                color: $black-950;
+            }
+            p {
+                color: $black-700;
+            }
+            .circle_icon_list {
+                li {
+                    .icon-box {
+                        background-color: $light_blue;
+                    }
+                    .list-information-text {
+                        .list-inner-title {
+                            color: $black-950;
+                        }
+                        p {
+                            color: $black-700;
+                        }
+                    }
+                }
+            }
+            .square_icon_list {
+                li {
+                    .icon-box {
+                        background-color: $light_blue;
+                        span {
+                            color: $white;
+                        }
+                    }
+                    .list-information-text {
+                        .list-inner-title {
+                            color: $black-950;
+                        }
+                        p {
+                            color: $black-700;
+                        }
+                    }
+                }
+            }
+            .section_bullet_list {
+                li {
+                    &::marker {
+                        color: $black-700;
+                    }
+                }
+            }
+            .location-list {
+                li {
+                    background-color: $turquoise;
+                }
+            }
+        }
+        .multiple-buttons {
+            .btn {
+                &:last-child {
+                    background-color: $white;
+                    border: 1px solid $black-200;
+                    color: $black-950;
+                }
+                &:first-child {
+                    background-color: $dark_blue;
+                    color: $white;
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+    .faq-contact {
+        h3 {
+            color: $black-950;
+        }
+    }
+    .section-heading {
+        h2 {
+            color: $black-950;
+        }
+        p {
+            color: $black-700;
+        }
+    }
+    .contact-form {
+        background-color: $turquoise;
+        .form-outer {
+            .form-headings {
+                .form-title {
+                    color: $black-950;
+                }
+                p {
+                    color: $black-700;
+                }
+            }
+        }
+        .label {
+            color: $black-950;
+        }
+    }
+    .electricity-card {
+        background-color: $dark_blue;
+        .card-body {
+            .title {
+                color: $white;
+            }
+            p {
+                color: $black-100;
+            }
+        }
+    }
+    .electricity-bill-detail {
+        .video-img {
+            background-color: $dark_blue;
+        }
+        .electricity-bill-list  {
+            .electricity-bill-card {
+                .card-body {
+                    .card-title {
+                        color: $black-950;
+                        & + p {
+                            color: $black-700;
+                        }
+                    }
+                    ul {
+                        li {
+                            p {
+                                color: $black-700;
+                            }
+                            &::marker {
+                                color: $black-700;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.owl-slider-section {
+        .owl-carousel {
+            .owl-nav {
+                button {
+                    background-color: $light_blue;
+                }
+            }
+            .owl-dots {
+                .owl-dot {
+                    background-color: rgba(55, 180, 180, 0.25);
+                    &.active {
+                        background-color: $light_blue;
+                    }
+                }
+            }
+        }
+    }
+    .package-list {
+        .package-card {
+            .package-footer {
+                .card-footer {
+                    .footer-btn {
+                        .btn {
+                            background-color: $white;
+                            color: $black-950;
+                            border-color: $black-200;
+                            svg {
+                                path {
+                                    stroke: $black-950;
+                                }
+                            }
+                            &:hover {
+                                background-color: $black-100;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.private-tv-white {
+    background-color: $white;
+    .section-detail {
+        .section-content {
+            h2, h3 {
+                color: $black-950;
+            }
+            p {
+                color: $black-700;
+            }
+            .circle_icon_list {
+                li {
+                    .icon-box {
+                        background-color: $light_blue;
+                    }
+                    .list-information-text {
+                        .list-inner-title {
+                            color: $black-950;
+                        }
+                        p {
+                            color: $black-700;
+                        }
+                    }
+                }
+            }
+            .square_icon_list {
+                li {
+                    .icon-box {
+                        background-color: $light_blue;
+                        span {
+                            color: $white;
+                        }
+                    }
+                    .list-information-text {
+                        .list-inner-title {
+                            color: $black-950;
+                        }
+                        p {
+                            color: $black-700;
+                        }
+                    }
+                }
+            }
+            .section_bullet_list {
+                li {
+                    &::marker {
+                        color: $black-700;
+                    }
+                }
+            }
+            .location-list {
+                li {
+                    background-color: $turquoise;
+                }
+            }
+        }
+        .multiple-buttons {
+            .btn {
+                &:last-child {
+                    background-color: $white;
+                    border: 1px solid $black-200;
+                    color: $black-950;
+                }
+                &:first-child {
+                    background-color: $dark_blue;
+                    color: $white;
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+    .faq-contact {
+        h3 {
+            color: $black-950;
+        }
+    }
+    .section-heading {
+        h2 {
+            color: $black-950;
+        }
+        p {
+            color: $black-700;
+        }
+    }
+    .contact-form {
+        background-color: $turquoise;
+        .form-outer {
+            .form-headings {
+                .form-title {
+                    color: $black-950;
+                }
+                p {
+                    color: $black-700;
+                }
+            }
+        }
+        .label {
+            color: $black-950;
+        }
+    }
+    .electricity-card {
+        background-color: $dark_blue;
+        .card-body {
+            .title {
+                color: $white;
+            }
+            p {
+                color: $black-100;
+            }
+        }
+    }
+    .electricity-bill-detail {
+        .video-img {
+            background-color: $dark_blue;
+        }
+        .electricity-bill-list  {
+            .electricity-bill-card {
+                .card-body {
+                    .card-title {
+                        color: $black-950;
+                        & + p {
+                            color: $black-700;
+                        }
+                    }
+                    ul {
+                        li {
+                            p {
+                                color: $black-700;
+                            }
+                            &::marker {
+                                color: $black-700;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.owl-slider-section {
+        .owl-carousel {
+            .owl-nav {
+                button {
+                    background-color: $light_blue;
+                }
+            }
+            .owl-dots {
+                .owl-dot {
+                    background-color: rgba(55, 180, 180, 0.25);
+                    &.active {
+                        background-color: $light_blue;
+                    }
+                }
+            }
+        }
+    }
+    .package-list {
+        .package-card {
+            border-color: $dark_purple;
+            height: 680px;
+            .package-footer {
+                .card-footer {
+                    .footer-btn {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        .btn {
+                            background-color: $white;
+                            color: $black-950;
+                            border-color: $black-200;
+                            svg {
+                                path {
+                                    stroke: $black-950;
+                                }
+                            }
+                            &:hover {
+                                background-color: $black-100;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

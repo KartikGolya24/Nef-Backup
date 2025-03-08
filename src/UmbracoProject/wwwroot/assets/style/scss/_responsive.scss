@@ -266,6 +266,14 @@
 
 @media screen and (max-width: 991px) {
 
+    .alt-section {
+        .wrapper {
+            .section-detail {
+                padding: 0;
+            }
+        }
+    }
+
     .alt-contact {
         .section-detail {
             .section-content {
@@ -1273,7 +1281,7 @@
     .header {
 
         .navbar {
-            gap: 32px;
+            gap: 25px;
         }
     }
 

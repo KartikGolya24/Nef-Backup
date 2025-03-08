@@ -30,6 +30,7 @@
     color: $black-950;
     border: 1px solid transparent;
     text-align: left;
+
     &:active {
         border-color: transparent !important;
     }
@@ -42,7 +43,8 @@
 
     &.light_blue_btn {
         color: $white !important;
-        background-color: $light_blue !important;;
+        background-color: $light_blue !important;
+
         &:hover {
             background-color: #237373 !important;
             color: $white !important;
@@ -52,6 +54,7 @@
     &.light_purple_btn {
         color: $black-950 !important;
         background-color: $light_purple !important;
+
         &:hover {
             background-color: #D7DCDC !important;
             border-color: $dark_purple !important;
@@ -61,6 +64,7 @@
     &.dark_blue_btn {
         color: $white !important;
         background-color: $dark_blue !important;
+
         &:hover {
             background-color: #3e6579 !important;
             color: $white !important;
@@ -70,6 +74,7 @@
     &.steel_blue_btn {
         background-color: $steel_blue !important;
         color: $white !important;
+
         &:hover {
             background-color: #305f88 !important;
             color: $white !important;
@@ -80,6 +85,7 @@
     &.dark_purple_btn {
         background-color: $dark_purple !important;
         color: $white !important;
+
         &:hover {
             background-color: #6C3965 !important;
             color: $white !important;
@@ -90,6 +96,7 @@
         color: $black-950 !important;
         background-color: $white !important;
         border-color: $black-200 !important;
+
         &:hover {
             background-color: #F2F2F2 !important;
             color: $black-950 !important;
@@ -99,6 +106,7 @@
     &.dark_green_btn {
         color: $white !important;
         background-color: $dark_green !important;
+
         &:hover {
             background-color: #1a2f38 !important;
             color: $white !important;
@@ -115,6 +123,7 @@
     &.turquoise_bg_btn {
         background-color: $turquoise !important;
         color: $black-950 !important;
+
         &:hover {
             background-color: #ffffff !important;
             border-color: #37B4B4 !important;
@@ -124,6 +133,7 @@
     &.space_blue_btn {
         color: $white !important;
         background-color: $space_blue !important;
+
         &:hover {
             background-color: #264352 !important;
             border-color: #37B4B4 !important;
@@ -134,6 +144,7 @@
     &.dark_pink_btn {
         background-color: $dark_pink !important;
         color: $white !important;
+
         &:hover {
             border: 1px solid $dark_pink !important;
             background-color: #d54e98 !important;
@@ -146,7 +157,7 @@
     .header {
         .form-control {
             color: $white;
-    
+
             &:focus {
                 color: $white;
             }
@@ -167,6 +178,11 @@
     // font-size: 14px;
     // line-height: 17.36px;
 
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+
     &:focus {
         border: 1px solid $black-200;
         outline: 0;
@@ -183,6 +199,7 @@
     }
 
 }
+
 .error-text {
     color: $input-error;
     font-size: 12px;
@@ -193,6 +210,7 @@
     padding: 4px;
     margin-top: 4px;
 }
+
 textarea {
     &.form-control {
         border-radius: 24px;
@@ -206,6 +224,7 @@ textarea {
     line-height: 19.75px;
     padding-bottom: 4px;
     color: $black_950;
+
     .required {
         color: $light_blue;
     }
@@ -240,7 +259,7 @@ textarea {
             --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23292929'/%3e%3c/svg%3e");
         }
     }
-    
+
     &.radio-black {
         .form-check-input {
             &:checked {
@@ -249,6 +268,7 @@ textarea {
             }
         }
     }
+
     &.radio-purple {
         .form-check-input {
             &:checked {
@@ -257,6 +277,7 @@ textarea {
             }
         }
     }
+
     &.radio-turquoise {
         .form-check-input {
             &:checked {
@@ -265,6 +286,7 @@ textarea {
             }
         }
     }
+
     &.radio-light-blue {
         .form-check-input {
             &:checked {
@@ -322,28 +344,33 @@ textarea {
     line-height: 16px;
     border-radius: 8px;
     max-width: 256px;
+
     &.bs-popover-auto {
         &[data-popper-placement^=right] {
             .popover-arrow::after {
                 border-right-color: $black-950;
             }
         }
+
         &[data-popper-placement^=bottom] {
             .popover-arrow::after {
                 border-bottom-color: $black-950;
             }
         }
+
         &[data-popper-placement^=left] {
             .popover-arrow::after {
                 border-left-color: $black-950;
             }
         }
+
         &[data-popper-placement^=top] {
             .popover-arrow::after {
                 border-top-color: $black-950;
             }
         }
     }
+
     .popover-body {
         color: $white;
         padding: 8px;
