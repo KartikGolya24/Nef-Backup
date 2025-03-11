@@ -152,14 +152,12 @@
                                     {
                                         var category = item?.Content as CategorySectionBlock;
 
-                                        <div class="flex-item">
-                                            <a href="@category?.CategoryLink?.Url">
+                                        <a href="@category?.CategoryLink?.Url" class="flex-item">
                                                 <div class="icon-wrap border_light_blue border-2">
                                                     <img src="@category?.CategoryIcon?.MediaUrl()" alt="icon" />
                                                 </div>
                                                 <span>@category?.CategoryLink?.Name</span>
-                                            </a>
-                                        </div>
+                                        </a>
                                     }
                                 </div>
                             </div>
