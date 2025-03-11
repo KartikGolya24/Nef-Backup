@@ -1,44 +1,6 @@
 ﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<HomeNavigation>
 
 <!---------------------------header--------------------------->
-@* <style>
-
-    .search-results {
-        display: none;
-        position: absolute;
-        width: 300px;
-        background: #fff;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        z-index: 10;
-        max-height: 250px;
-        overflow-y: auto;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .list-group-item {
-        padding: 10px;
-        cursor: pointer;
-        border-bottom: 1px solid #eee;
-    }
-
-        .list-group-item:last-child {
-            border-bottom: none;
-        }
-
-    .search-result-item {
-        text-decoration: none;
-        color: #333;
-        display: block;
-        width: 100%;
-    }
-
-        .search-result-item:hover {
-            background-color: #f8f9fa;
-            color: #007bff;
-        }
-
-</style> *@
 <header class="header">
     <div class="container-xl">
         <nav class="navbar">
@@ -81,13 +43,16 @@
                     </div>
                 </div>
                 <form action="" class="navbar-form">
-                    @* <div class="search-container"> *@
-                        <div class="search-input">
-                            <input type="text" name="" class="form-control search" id="" placeholder="@Model?.SearchPlaceholder" />
+
+                    <div class="search-wrapper">
+                        <div class="search-input search-trigger">
+                            <input type="text" name="" class="form-control search search_desktop_input" id="" placeholder="@Model?.SearchPlaceholder" />
                             <img src="@Model?.SearchIcon?.MediaUrl()" class="img-fluid search-icon" alt="search-icon" />
                         </div>
-                        @* <div class="search-results"></div> *@
-                   @*  </div> *@
+                        <div class="search-dropdown">
+                            <ul class="searched-content"></ul>
+                        </div>
+                    </div>
                     <a href="@Model?.MitNefLink?.Url" class="mit-nef-btn btn @Model?.MitButtonTheme" style="border:1px solid #@Model?.MitButtonBorderColor">
                         <img src="@Model?.MitNefIcon?.MediaUrl()" class="img-fluid" alt="electricity-icon" />
                         <p class="fw-400">@Model?.MitNefLink?.Name</p>
@@ -101,21 +66,35 @@
                         <img src="@Model?.MitNefIcon?.MediaUrl()" class="img-fluid" alt="electricity-icon" />
                         <p class="fw-400">@Model?.MitNefLink?.Name</p>
                     </a>
-                    <div class="search-btn">
-                        <img src="@Model?.SearchIcon?.MediaUrl()" class="img-fluid search-icon" alt="search-icon" />
+
+                    <div class="search-wrapper">
+                        <div class="search-btn search-trigger">
+                            <img src="@Model?.SearchIcon?.MediaUrl()" class="img-fluid search-icon" alt="search-icon" />
+                        </div>
+                        <div class="search-dropdown">
                             <div class="search-input">
-                                <input type="text" name="" class="form-control search" id="" placeholder="@Model?.SearchPlaceholder" />
-                                <img src="@Model?.SearchIcon?.MediaUrl()" class="img-fluid search-icon" alt="search-icon" />
+                                <input type="text" name="" class="form-control search search_mobile_input" id="" placeholder="@Model?.SearchPlaceholder" />
+                                <img src="~/assets/img/icons/search-dark.svg" class="img-fluid search-icon" alt="search-icon" />
                             </div>
+                            <ul class="searched-content"></ul>
+                        </div>
                     </div>
+
                     <div class="menu-toggle-icon" id="menu-toggle-icon">
                         <span></span>
                     </div>
                     <div class="mobile-menu">
-                        <div class="search">
-                                <input type="text" name="search" placeholder="@Model?.SearchPlaceholder" class="form-control search" />
+
+                        <div class="search-wrapper">
+                            <div class="search-input search-trigger">
+                                <input type="text" name="" class="form-control search search_desktop_input" id="" placeholder="@Model?.SearchPlaceholder" />
                                 <img src="@Model?.SearchIcon?.MediaUrl()" class="img-fluid search-icon" alt="search-icon" />
                             </div>
+                            <div class="search-dropdown">
+                                <ul class="searched-content"></ul>
+                            </div>
+                        </div>
+
                         <nav class="navigation">
                             <ul class="mobile-menu-list">
                                 @if (Model?.NavigationItem?.Count > 0)
@@ -166,7 +145,6 @@
                         </nav>
                         @if (Model?.Category?.Count > 0)
                         {
-                            var count = 1;
                             <div class="mobile-menu-footer">
                                 <div class="flex-Bx">
 
@@ -175,16 +153,13 @@
                                         var category = item?.Content as CategorySectionBlock;
 
                                         <div class="flex-item">
-                                            <div class="icon-wrap border_light_blue border-2">
-                                                <img src="@category?.CategoryIcon?.MediaUrl()" alt="icon" />
-                                            </div>
-                                            <span>@category?.CategoryLink?.Name</span>
+                                            <a href="@category?.CategoryLink?.Url">
+                                                <div class="icon-wrap border_light_blue border-2">
+                                                    <img src="@category?.CategoryIcon?.MediaUrl()" alt="icon" />
+                                                </div>
+                                                <span>@category?.CategoryLink?.Name</span>
+                                            </a>
                                         </div>
-                                        @if (count % 2 != 0)
-                                        {
-                                            <div class="seperator"></div>
-                                        }
-                                        count++;
                                     }
                                 </div>
                             </div>
@@ -195,37 +170,3 @@
         </nav>
     </div>
 </header>
-<div id="loader_html" style="display:none"><div style="text-align:center"><svg xmlns="http://www.w3.org/2000/svg" height="100" viewBox="0 0 200 200"><circle fill="#FF156D" stroke="#FF156D" stroke-width="15" r="15" cx="40" cy="100"><animate attributeName="opacity" calcMode="spline" dur="2" values="1;0;1;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.4"></animate></circle><circle fill="#FF156D" stroke="#FF156D" stroke-width="15" r="15" cx="100" cy="100"><animate attributeName="opacity" calcMode="spline" dur="2" values="1;0;1;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.2"></animate></circle><circle fill="#FF156D" stroke="#FF156D" stroke-width="15" r="15" cx="160" cy="100"><animate attributeName="opacity" calcMode="spline" dur="2" values="1;0;1;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="0"></animate></circle></svg></div></div>
-
-@* <script>
-        $(document).ready(function () {
-        let timer;
-
-        $(".search").on("input", function () {
-          
-            let query = $(this).val().trim();
-            let resultsContainer = $(this).closest(".search-input").next(".search-results");
-            resultsContainer.html($("#loader_html").html()).show();
-            clearTimeout(timer);
-
-            if (query.length >= 3) {
-                timer = setTimeout(function () {
-                    $.ajax({
-                        url: "/GlobalSearch/GetSearchResult",
-                        type: "GET",
-                        data: { searchTerm: query },
-                        success: function (data) {
-                            resultsContainer.html(data).show(); // Show results in the corresponding container
-                        },
-                        error: function () {
-                            resultsContainer.html("<p>Error loading results.</p>").show();
-                        }
-                    });
-                }, 1500);
-            } else {
-                resultsContainer.empty().hide();
-            }
-        });
-    });
-
-</script> *@

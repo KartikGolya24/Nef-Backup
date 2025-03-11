@@ -1,25 +1,63 @@
 ﻿$(document).ready(function () {
 
-    //var currentUrl = window.location.pathname;
-    //var activePath = GetActiveTab(currentUrl);
-    //$(".tabs-link").removeClass("active");
-    //$(".tabs-link[href='" + activePath + "']").addClass("active");
+    let timer;
 
-    //$(".tabs-link").on("click", function (e) {
-    //    $(".tabs-link").removeClass("active");
-    //    $(this).addClass("active");
-    //});
+    //mobile serch
+    $(".search_mobile_input").on("input", function () {
 
-    //function GetActiveTab(path) {
-    //    if (path.includes("/erhverv/")) {
-    //        return "/erhverv/";
-    //    } else if (path.includes("/repraesentantskabsvalg/")) {
-    //        return "/repraesentantskabsvalg/";
-    //    }
-    //    else {
-    //        return "/privat/"
-    //    }
-    //};
+        let query = $(this).val().trim();
+        let resultsContainer = $(this).closest(".search-input").next(".searched-content");
+        clearTimeout(timer);
+
+        if (query.length >= 3) {
+            timer = setTimeout(function () {
+                $.ajax({
+                    url: "/GlobalSearch/GetSearchResult",
+                    type: "GET",
+                    data: { searchTerm: query },
+                    success: function (data) {
+                        resultsContainer.html(data).show();
+                    },
+                    error: function () {
+                        resultsContainer.html("<li class='searched-item'>Fejl ved indlæsning af resultater.</li>").show();
+                    }
+                });
+            }, 1500);
+        } else {
+            resultsContainer.empty().hide();
+        }
+    });
+
+
+    //desktop search
+    $(".search_desktop_input").on("input", function () {
+
+        let query = $(this).val().trim();
+        let resultParentContainer = $(this).closest(".search-input").next(".search-dropdown");
+        let resultsContainer = resultParentContainer.find(".searched-content");
+        clearTimeout(timer);
+
+        if (query.length >= 3) {
+            timer = setTimeout(function () {
+                $.ajax({
+                    url: "/GlobalSearch/GetSearchResult",
+                    type: "GET",
+                    data: { searchTerm: query },
+                    success: function (data) {
+                        resultsContainer.html(data);
+                        resultParentContainer.slideDown();
+                    },
+                    error: function () {
+                        resultsContainer.html("<li class='searched-item'>Fejl ved indlæsning af resultater.</li>");
+                        resultParentContainer.slideDown();
+                    }
+                });
+            }, 1500);
+        } else {
+            resultsContainer.empty();
+            resultParentContainer.hide();
+        }
+    });
 
 
     $(document).on('click', '.videoBtn', function () {

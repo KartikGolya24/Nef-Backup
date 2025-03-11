@@ -3,17 +3,12 @@
 
 @if (Model?.Count > 0)
 {
-
-    <ul class="list-group">
-        @foreach (var item in Model)
-        {
-            <li class="list-group-item"><a href="@item?.Url">@item?.NodeName</a></li>
-        }
-    </ul>
+    @foreach (var item in Model)
+    {
+        <li class="searched-item"><a href="@item?.Url" class="data">@item?.NodeName</a></li>
+    }
 }
 else
 {
-    <ul class="list-group">
-        <li class="list-group-item">No Record Found!!</li>
-    </ul>
+    <li class="searched-item">Ingen registrering fundet!!</li>
 }
