@@ -33,7 +33,7 @@ namespace UmbracoProject.App_Code.Services
             List<GlobalSearchModel> result = new();
             try
             {
-                var searchResult = _publishedContentQuery.Search(searchTerm).Where(x => x?.Content?.TemplateId > 0);
+                var searchResult = _publishedContentQuery.Search($"{searchTerm}*").Where(x => x?.Content?.TemplateId > 0).ToList();
 
                 foreach (var item in searchResult)
                 {
