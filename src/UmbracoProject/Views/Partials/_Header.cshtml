@@ -99,10 +99,9 @@
                             <ul class="mobile-menu-list">
                                 @if (Model?.NavigationItem?.Count > 0)
                                 {
-                                    var count = 1;
                                     @foreach (var item in Model?.NavigationItem)
                                     {
-                                        var id = $"collapse{count}";
+                                        var id = $"collapse-{Guid.NewGuid()}";
                                         var menu = item?.Content as NavMenuWithSubMenu;
                                         @if (menu?.SubMenuList?.Count > 0)
                                         {
@@ -130,7 +129,6 @@
 
                                                 </ul>
                                             </li>
-                                            count++;
                                         }
                                         else
                                         {

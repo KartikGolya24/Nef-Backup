@@ -11,10 +11,39 @@
   },
   "Parent": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
   "CompositionContentTypes": [],
-  "PropertyGroups": [],
+  "PropertyGroups": [
+    {
+      "Key": "b3694358-803b-4d52-a008-ce19a444fc65",
+      "Name": "Section Content",
+      "Alias": "sectionContent",
+      "PropertyTypes": [
+        {
+          "Key": "20f397df-c998-452e-9bb7-5857669d79e6",
+          "Alias": "description",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Description",
+          "SortOrder": 1
+        },
+        {
+          "Key": "d7fef041-512c-4d4e-bb26-a71e76131ee3",
+          "Alias": "heading",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Heading"
+        }
+      ]
+    }
+  ],
   "PropertyTypes": [],
   "Udi": "umb://document-type/e8864d08640a4133ae5c45085d0dfa4d",
   "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+      "Ordering": true
+    },
     {
       "Udi": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
       "Ordering": true

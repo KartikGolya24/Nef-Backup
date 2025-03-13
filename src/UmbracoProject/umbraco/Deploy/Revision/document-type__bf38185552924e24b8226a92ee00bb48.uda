@@ -1,6 +1,6 @@
 {
-  "Name": "Home Charging Section",
-  "Alias": "homeChargingSection",
+  "Name": "Charging Packages Section",
+  "Alias": "chargingPackagesSection",
   "AllowedTemplates": [],
   "HistoryCleanup": {},
   "Icon": "icon-science",
@@ -11,10 +11,39 @@
   },
   "Parent": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
   "CompositionContentTypes": [],
-  "PropertyGroups": [],
+  "PropertyGroups": [
+    {
+      "Key": "11ce176c-8de8-4b85-9cba-bb11d426babc",
+      "Name": "Section Content",
+      "Alias": "sectionContent",
+      "PropertyTypes": [
+        {
+          "Key": "6d690725-5186-446f-8ebf-7010f9d86a53",
+          "Alias": "heading",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Heading"
+        },
+        {
+          "Key": "aa49072b-2f8d-480b-8fb6-451f2aa532b1",
+          "Alias": "description",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Description",
+          "SortOrder": 1
+        }
+      ]
+    }
+  ],
   "PropertyTypes": [],
   "Udi": "umb://document-type/bf38185552924e24b8226a92ee00bb48",
   "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+      "Ordering": true
+    },
     {
       "Udi": "umb://document-type-container/b1d74057cb3345808ebcc2f360e0051a",
       "Ordering": true

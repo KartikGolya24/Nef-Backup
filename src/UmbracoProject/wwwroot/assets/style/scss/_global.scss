@@ -804,6 +804,63 @@ li {
     }
 }
 
+//================= login popup css =================
+#loginPopup {
+    .modal-dialog {
+        max-width: 720px;
+        .modal-content {
+            .modal-header {
+                flex-direction: column;
+                padding: 48px 32px 0;
+                gap: 16px;
+                max-width: 664px;
+                .modal-title {
+                    font-size: 32px;
+                    line-height: initial;
+                    color: $black-950;
+                }
+                p {
+                    color: $black-700;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+            .modal-body {
+                padding: 40px 32px 48px;
+                .form-block {
+                    .row {
+                        margin: 0 -8px;
+                        & > * {
+                            padding: 0 8px;
+                            &:not([class*="col-12"]) {
+                                margin-bottom: 32px;
+                            }
+                        }
+                    }
+                    .form-group {
+                        .label {
+                            font-size: 18px;
+                            line-height: 32px;
+                            color: $black-950;
+                            padding-bottom: 4px;
+                        }
+                    }
+                }
+                .button {
+                    .btn {
+                        width: 100%;
+                        text-align: center;
+                        justify-content: center;
+                    }
+                }
+                .form-checkbox {
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+}
+
 //======================= common buttons for tabs =====================//
 .Privat-tab {
     .btn {
@@ -3317,7 +3374,8 @@ li {
             border: 1px solid $black-200;
             border-radius: 16px;
             padding: 24px;
-            height: 600px;
+            min-height: 600px;
+            height: 100%;
             display: flex;
             flex-direction: column;
             background-color: $white;
@@ -3382,7 +3440,7 @@ li {
                                 line-height: 27px;
                             }
 
-                            svg {
+                            svg, img {
                                 width: 16px;
                                 height: 16px;
                             }
@@ -3397,6 +3455,8 @@ li {
                 align-items: end;
                 display: flex;
                 text-align: center;
+                margin-top: 48px;
+                flex: 1;
 
                 .card-footer {
 
@@ -3407,6 +3467,12 @@ li {
                         flex-wrap: wrap;
                         justify-content: center;
                         margin-bottom: 48px;
+                        li {
+                            img {
+                                height: 24px;
+                                object-fit: contain;
+                            }
+                        }
                     }
 
                     .footer-btn {
@@ -3430,6 +3496,16 @@ li {
                             font-size: 12px;
                             line-height: 16px;
                             color: $black-950;
+                            &.text-two-line {
+                                position: relative;
+                                transition: all 0.3s ease-in-out;
+                                .read-toggle {
+                                    cursor: pointer;
+                                    text-decoration: underline;
+                                    margin-left: 2px;
+                                }
+                            }
+                            
                         }
                     }
                 }

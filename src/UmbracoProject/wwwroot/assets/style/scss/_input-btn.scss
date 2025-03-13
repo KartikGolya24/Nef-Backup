@@ -243,7 +243,7 @@ textarea {
         line-height: 32px;
     }
 
-    .form-check-input {
+    .form-check-input[type="radio"] {
         width: 24px;
         height: 24px;
         margin-left: -2rem;
@@ -294,6 +294,29 @@ textarea {
                 --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%2337B4B4'/%3e%3c/svg%3e");
             }
         }
+    }
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    .form-check-input {
+        border: 1px solid $black-300;
+        width: 24px;
+        height: 24px;
+        &:focus {
+            box-shadow: none;
+        }
+        &:checked[type=checkbox] {
+            --bs-form-check-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='%23525252' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m6 10 3 3 6-6'/></svg>");
+            background-color: $white;
+        }
+    }
+    .form-check-label {
+        font-size: 14px;
+        line-height: initial;
+        color: $black-950;
     }
 }
 

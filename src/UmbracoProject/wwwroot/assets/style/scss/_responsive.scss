@@ -92,6 +92,22 @@
 //     }
 // }
 
+@media screen and (max-width: 1399px) and (min-width: 1200px) {
+    .pacakge-section {
+        .package-list {
+            .package-card {
+                .card-detail {
+                    .card-header {
+                        .card-heading {
+                            height: 122px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1399px) {
     .footer .position-img {
         right: -100px;
@@ -142,6 +158,20 @@
 }
 
 @media screen and (max-width: 1199px) {
+
+    .pacakge-section {
+        .package-list {
+            .package-card {
+                .card-detail {
+                    .card-header {
+                        .card-heading {
+                            height: 86px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     .pacakge-section {
         .package-list {
@@ -461,7 +491,7 @@
     }
 
     .service-card {
-        padding: 32px 0;
+        padding: 32px 0 64px;
     }
 
     .contact-section {
@@ -645,7 +675,7 @@
                 margin-top: 10px;
                 background-color: $white;
                 border: 1px solid $black-200;
-                border-radius: 26px;
+                border-radius: 16px;
                 padding: 10px;
                 display: none;
                 .search-input {
@@ -654,7 +684,7 @@
                 }
                 .searched-content {
                     border-top: 1px solid $black-100;
-                    padding-bottom: 10px;
+                    padding-bottom: 4px;
                     max-height: 172px;
                     overflow-y: auto;
                     li {

@@ -1,0 +1,151 @@
+﻿@using UmbracoProject.App_Code.Services
+@inject IPackagesService _packagesService;
+
+@{
+    var packages = await _packagesService.TvPackages();
+}
+
+@if (packages != null && packages.Count > 0)
+{
+    @foreach (var package in packages)
+    {
+        var channelPopupId = $"seeAllPackages-{Guid.NewGuid()}";
+        <div class="col-xl-@(packages.Count == 1 || packages.Count == 2 ?"5":packages.Count == 3 ? "4" : "3") col-md-6 mb-32">
+            <div class="package-card">
+                <div class="card-detail">
+                    <div class="card-header">
+                        <div class="card-heading">
+                            @if (!string.IsNullOrWhiteSpace(package.Name))
+                            {
+                                <h4> @package.Name </h4>
+                            }
+
+                            @if (!string.IsNullOrWhiteSpace(package.Description))
+                            {
+                                <p> @package.Description </p>
+                            }
+                        </div>
+                        <div class="price">
+
+                            <h3>@package.Priceprefix @package.PriceMonthlyDKK Kr.</h3>
+
+                            @if (!string.IsNullOrWhiteSpace(package.Unit))
+                            {
+                                <p>@package.Unit</p>
+                            }
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            @if (package.Usps != null && package.Usps.Count > 0)
+                            {
+                                @foreach (var usp in package.Usps)
+                                {
+                                    @if (!string.IsNullOrWhiteSpace(usp.Name))
+                                    {
+                                        <li>
+
+                                            <p>
+                                                <img src="@(!string.IsNullOrWhiteSpace(usp.Icon) ? usp.Icon : "/assets/img/icons/checkmark-purple.svg")" class="img-fluid" alt="icon svg" />
+                                                @usp.Name
+                                            </p>
+                                            @if (!string.IsNullOrWhiteSpace(usp.Infotext))
+                                            {
+                                                <span data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="@usp.Infotext">
+                                                    <img src="~/assets/img/icons/info-popup.svg" class="img-fluid" alt="info-svg" />
+                                                </span>
+                                            }
+                                        </li>
+                                    }
+                                }
+
+                            }
+                        </ul>
+                    </div>
+                </div>
+                <div class="package-footer">
+                    <div class="card-footer">
+                        @if (package.Prioritizedchannels != null && package.Prioritizedchannels.Count > 0)
+                        {
+                            <ul class="company-logo">
+                                @foreach (var prioritizedChannel in package.Prioritizedchannels)
+                                {
+                                    <li><img src="@(!string.IsNullOrWhiteSpace(prioritizedChannel.Logourl) ? prioritizedChannel.Logourl :"/assets/img/bg-img/company1.svg")" class="img-fluid" /></li>
+                                }
+                            </ul>
+
+                        }
+                        <div class="footer-btn">
+                            <a href="#searchTvPackages"
+                               data-bs-toggle="modal"
+                               type="button"
+                               class="btn">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.7636 10.4077C20.7636 16.0233 14.2643 21.0201 12.7277 22.123C12.5168 22.2744 12.2663 22.3487 12.0068 22.3487C11.7473 22.3487 11.4968 22.2744 11.2859 22.123C9.74924 21.0201 3.25 16.0233 3.25 10.4077C3.25 5.57142 7.17054 1.65088 12.0068 1.65088C16.8431 1.65088 20.7636 5.57142 20.7636 10.4077Z" stroke="white" stroke-width="1.71003" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M8.82227 9.61062C8.82227 10.4552 9.15776 11.2651 9.75494 11.8623C10.3521 12.4595 11.1621 12.795 12.0066 12.795C12.8512 12.795 13.6611 12.4595 14.2583 11.8623C14.8555 11.2651 15.191 10.4552 15.191 9.61062C15.191 8.76608 14.8555 7.95612 14.2583 7.35894C13.6611 6.76176 12.8512 6.42627 12.0066 6.42627C11.1621 6.42627 10.3521 6.76176 9.75494 7.35894C9.15776 7.95612 8.82227 8.76608 8.82227 9.61062Z" stroke="white" stroke-width="1.71003" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                Tjek adresse
+                            </a>
+                            <a href="#@channelPopupId" data-bs-toggle="modal" class="package-link">Se hele pakkens indhold</a>
+                            <p class="text-two-line">
+                                @package.Disclaimer
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-------------------------------------------Modal ------------------------------->
+        <div class="modal fade"
+             id="@channelPopupId"
+             data-bs-keyboard="false"
+             tabindex="-1"
+             aria-labelledby="staticBackdropLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header flex-column align-items-start pb-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h4 class="modal-title" id="staticBackdropLabel">@package.Name</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="overflow-box">
+                            <p class="fw-600 black-950 price mb-32">@package.PriceMonthlyDKK,- <span class="small">@package.Unit.</span></p>
+                            @if (package.Channels != null && package.Channels.Count > 0)
+                            {
+                                <h5 class="box-inner-title mb-24">Kanaler</h5>
+                                <div class="flex-bx brands-wrap">
+                                    @foreach (var channel in package.Channels)
+                                    {
+                                        <div class="item">
+                                            <img src="@channel.Logourl" class="img-fluid" />
+                                            <h6 class="item-title">@channel.Name</h6>
+                                        </div>
+                                    }
+                                </div>
+                            }
+
+                            @if (package.StreamingServies != null && package.StreamingServies.Count > 0)
+                            {
+                                <hr class="line-splitter" />
+                                <h5 class="box-inner-title mb-24">Streamingtjenester</h5>
+
+                                <div class="flex-bx brands-wrap mx272px">
+                                    @foreach (var service in package.StreamingServies)
+                                    {
+                                        <div class="item">
+                                            <img src="@service.Logourl" class="img-fluid" />
+                                            <h6 class="item-title">@service.Name</h6>
+                                        </div>
+                                    }
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}

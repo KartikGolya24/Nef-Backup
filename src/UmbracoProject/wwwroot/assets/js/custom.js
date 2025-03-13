@@ -143,4 +143,80 @@ $(document).ready(function () {
     $(document).on("click", function () {
         $(".search-dropdown").slideUp();
     });
+
+    // Auto height update for cards
+    function equalizeHeights(selector) {
+        var maxHeight = -1;
+        var $elements = $(selector);
+
+        // Reset heights before recalculating
+        $elements.css("height", "auto");
+
+        // Find max height
+        $elements.each(function () {
+            maxHeight = Math.max(maxHeight, $(this).outerHeight());
+        });
+
+        // Apply max height
+        $elements.css("height", maxHeight + "px");
+    }
+
+    function updateAllEqualHeights() {
+        equalizeHeights(".service-card .card-outer");
+        equalizeHeights(".package-list .package-card");
+    }
+
+    // Two-line package data truncation
+    function truncateText(selector, maxLength) {
+        $(selector).each(function () {
+            let $textContainer = $(this);
+            let fullText = $textContainer.html().trim();
+
+            if (fullText.length > maxLength) {
+                let truncatedText = fullText.substring(0, maxLength) + "...";
+                let $toggleSpan = $("<span>")
+                    .text("Read more")
+                    .addClass("read-toggle")
+
+                // Store full and truncated text in attributes
+                $textContainer.data({
+                    "full-text": fullText,
+                    "truncated-text": truncatedText,
+                    expanded: false,
+                });
+
+                // Initially set truncated text
+                $textContainer.html(truncatedText).append($toggleSpan);
+
+                // Click event to toggle full/truncated text
+                $textContainer.on("click", ".read-toggle", function () {
+                    let isExpanded = $textContainer.data("expanded");
+
+                    if (isExpanded) {
+                        $textContainer.html($textContainer.data("truncated-text")).append($toggleSpan);
+                        $textContainer.data("expanded", false);
+                        $toggleSpan.text("Read more");
+                    } else {
+                        $textContainer.html($textContainer.data("full-text")).append($toggleSpan);
+                        $textContainer.data("expanded", true);
+                        $toggleSpan.text("Read less");
+                    }
+
+                    // Recalculate heights after toggling
+                    updateAllEqualHeights();
+                });
+            }
+        });
+    }
+
+    // Run functions on page load
+    truncateText(".text-two-line", 100);
+    updateAllEqualHeights();
+
+    // Run on window resize (with debounce)
+    var resizeTimeout;
+    $(window).on("resize", function () {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(updateAllEqualHeights, 100);
+    });
 });

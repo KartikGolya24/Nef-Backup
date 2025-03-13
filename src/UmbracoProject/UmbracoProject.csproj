@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="BuildBundlerMinifier" Version="3.2.449" />
+    <PackageReference Include="RestSharp" Version="112.1.0" />
     <PackageReference Include="Umbraco.Cloud.Cms" Version="13.0.0" />
     <PackageReference Include="Umbraco.Cloud.Cms.PublicAccess" Version="13.0.0" />
     <PackageReference Include="Umbraco.Cloud.Identity.Cms" Version="13.2.1" />

@@ -3232,7 +3232,7 @@
     .package-list {
         .package-card {
             border-color: $dark_purple;
-            height: 680px;
+            min-height: 680px;
             .package-footer {
                 .card-footer {
                     .footer-btn {

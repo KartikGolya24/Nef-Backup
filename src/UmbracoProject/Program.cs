@@ -13,6 +13,7 @@ builder.CreateUmbracoBuilder()
 //Service Registeration
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<ISearchService, SearchService>();
+builder.Services.AddScoped<IPackagesService, PackagesService>();
 
 WebApplication app = builder.Build();
 

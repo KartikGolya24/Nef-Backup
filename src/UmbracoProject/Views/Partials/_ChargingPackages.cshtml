@@ -1,0 +1,86 @@
+﻿@using UmbracoProject.App_Code.Services
+@inject IPackagesService _packagesService;
+
+@{
+    var packages = await _packagesService.ChargingPackages();
+}
+
+@if (packages != null && packages.Count > 0)
+{
+    @foreach (var package in packages)
+    {
+        <div class="col-xl-@(packages.Count == 1 || packages.Count == 2 ?"5":packages.Count == 3 ? "4" : "3") col-md-6 mb-32">
+            <div class="package-card">
+                <div class="card-detail">
+                    <div class="card-header">
+                        <div class="card-heading">
+                            @if (!string.IsNullOrWhiteSpace(package.Name))
+                            {
+                                <h4> @package.Name </h4>
+                            }
+
+                            @if (!string.IsNullOrWhiteSpace(package.Description))
+                            {
+                                <p> @package.Description </p>
+                            }
+
+                        </div>
+                        <div class="price">
+                            <h3>@package.InitialPrice @package.InitialPriecUnit</h3>
+
+                            @if (!string.IsNullOrWhiteSpace(package.InitialPricePostfix))
+                            {
+                                <p>@package.InitialPricePostfix</p>
+                            }
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+
+                            @if (package.usps != null && package.usps.Count > 0)
+                            {
+
+                                @foreach (var usp in package.usps)
+                                {
+                                    @if (!string.IsNullOrWhiteSpace(usp.Name))
+                                    {
+                                        <li>
+                                            <p>
+                                                <img src="@(!string.IsNullOrWhiteSpace(usp.Icon) ? usp.Icon : " /assets/img/icons/checkmark-green.svg")" class="img-fluid" alt="check-icon"/>
+
+                                                @usp.Name
+                                            </p>
+
+                                            @if (!string.IsNullOrWhiteSpace(usp.Infotext))
+                                            {
+                                                <span data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="@usp.Infotext">
+                                                    <img src="~/assets/img/icons/info-popup.svg" class="img-fluid" alt="info-svg" />
+
+                                                </span>
+                                            }
+
+                                        </li>
+                                    }
+                                }
+                            }
+                        </ul>
+                    </div>
+                </div>
+                <div class="package-footer text-center">
+                    <div class="card-footer">
+                        <div class="footer-btn">
+                            <a href="@package.orderlink" class="btn" target="_blank">
+                                @package.buttonOrderText
+                            </a>
+
+                            <p class="mt-32 text-two-line">
+                                @package.Disclaimer
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}
