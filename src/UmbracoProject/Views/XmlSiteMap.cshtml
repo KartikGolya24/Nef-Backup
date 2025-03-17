@@ -19,10 +19,6 @@
     void RenderSiteMapUrlEntry(IPublishedContent node)
     {
         // The change frequency is recursive and should 'fallback to ancestor' when no value is given.
-        var changeFreq = node.Value("searchEngineChangeFrequency", 
-                                    fallback: Fallback.To(Fallback.Ancestors, Fallback.DefaultValue), 
-                                    defaultValue: "monthly");
 
- 
     }
 }
