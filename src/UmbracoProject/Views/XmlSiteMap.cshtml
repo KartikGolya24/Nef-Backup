@@ -33,3 +33,14 @@
         </url>
     }
 }
+
+void RenderSiteMapUrlEntriesForChildren(IPublishedContent parentPage)
+{
+    foreach (var page in parentPage.Children())
+    {
+        RenderSiteMapUrlEntry(page);
+        if (page.Children().Any()){
+            RenderSiteMapUrlEntriesForChildren(page);
+        }
+    }
+}
