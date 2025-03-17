@@ -1,6 +1,6 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
-//@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<IXmlSiteMapSettings>
+//@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<XmlSiteMap>
 
 @{
     Layout = null;
@@ -18,8 +18,21 @@
 
 
 @{
-    void RenderSiteMapUrlEntry(IXmlSiteMapSettings node)
+    void RenderSiteMapUrlEntry(IPublishedContent node)
     {
+        // The change frequency is recursive and should 'fallback to ancestor' when no value is given.
+        var changeFreq = node.Value("searchEngineChangeFrequency", 
+                                    fallback: Fallback.To(Fallback.Ancestors, Fallback.DefaultValue), 
+                                    defaultValue: "monthly");
 
+        // The relative priority is a per-page setting only. We will not set Fallback.ToAncestors and instead default to 0.5 if no value is set.
+        var priority = node.HasValue("searchEngineRelativePriority") ? node.Value<string>("searchEngineRelativePriority") : "0.5";
+
+        <url>
+            <loc>@node.Url(mode: UrlMode.Absolute)</loc>
+            <lastmod>@(string.Format("{0:s}+00:00", node.UpdateDate))</lastmod>
+            <changefreq>@changeFreq</changefreq>
+            <priority>@priority</priority>
+        </url>
     }
 }
