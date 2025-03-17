@@ -21,7 +21,8 @@
   },
   "Parent": "umb://document-type-container/3e5c1ac20a48406c917e220b4bada863",
   "CompositionContentTypes": [
-    "umb://document-type/c9ab57ded3b44526a7ac22bacf19a079"
+    "umb://document-type/c9ab57ded3b44526a7ac22bacf19a079",
+    "umb://document-type/f7afb926ca644923b66e81e69796b753"
   ],
   "PropertyGroups": [
     {
@@ -73,6 +74,10 @@
     {
       "Udi": "umb://document-type/e6745a5d031d47a9937f3c11dca002c6",
       "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://document-type/f7afb926ca644923b66e81e69796b753",
+      "Ordering": true
     },
     {
       "Udi": "umb://document-type/faedfb0b916947939b56587df06cdc04",
