@@ -1,0 +1,14 @@
+{
+  "Name": "XmlSiteMapSettings - Hide From Xml Sitemap - Toggle",
+  "Alias": "",
+  "EditorAlias": "Umbraco.TrueFalse",
+  "DatabaseType": "Integer",
+  "Configuration": {
+    "default": false,
+    "showLabels": false
+  },
+  "Udi": "umb://data-type/fda9fd3d74e348159386271bb3bb0ca8",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.4.0"
+}
