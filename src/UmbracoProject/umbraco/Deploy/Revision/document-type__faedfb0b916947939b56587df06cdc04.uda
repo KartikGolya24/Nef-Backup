@@ -21,6 +21,7 @@
   },
   "Parent": "umb://document-type-container/3e5c1ac20a48406c917e220b4bada863",
   "CompositionContentTypes": [
+    "umb://document-type/0667cf81379a44deaf7878ed6a4c6dd5",
     "umb://document-type/c9ab57ded3b44526a7ac22bacf19a079"
   ],
   "PropertyGroups": [
@@ -48,6 +49,10 @@
     },
     {
       "Udi": "umb://document-type-container/3e5c1ac20a48406c917e220b4bada863",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/0667cf81379a44deaf7878ed6a4c6dd5",
       "Ordering": true
     },
     {
