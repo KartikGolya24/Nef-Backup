@@ -1,10 +1,7 @@
 {
   "Name": "XmlSiteMap",
   "Alias": "xmlSiteMap",
-  "DefaultTemplate": "umb://template/403967b164eb4c40b2b83b46897f3afa",
-  "AllowedTemplates": [
-    "umb://template/403967b164eb4c40b2b83b46897f3afa"
-  ],
+  "AllowedTemplates": [],
   "HistoryCleanup": {},
   "Icon": "icon-document",
   "Thumbnail": "folder.png",
@@ -33,11 +30,6 @@
     {
       "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
       "Ordering": true
-    },
-    {
-      "Udi": "umb://template/403967b164eb4c40b2b83b46897f3afa",
-      "Ordering": true,
-      "Mode": "Exist"
     }
   ],
   "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
