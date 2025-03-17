@@ -1,0 +1,46 @@
+{
+  "Name": "XmlSiteMap",
+  "Alias": "xmlSiteMap",
+  "DefaultTemplate": "umb://template/2508f1a7b6f846ab972e44553e8508fc",
+  "AllowedTemplates": [
+    "umb://template/2508f1a7b6f846ab972e44553e8508fc"
+  ],
+  "HistoryCleanup": {},
+  "Icon": "icon-document",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "AllowedChildContentTypes": []
+  },
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "c5761507-aec2-4002-8b0f-5db9a9d99963",
+      "Name": "SitemapConfiguration",
+      "Type": 1,
+      "Alias": "sitemapConfiguration",
+      "PropertyTypes": [
+        {
+          "Key": "7a85e9c0-83e3-449f-8bab-7a220c0c2582",
+          "Alias": "excludedDocumentTypes",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Excluded Document Types"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/71ff47c017784a92bbd74a6b21b97fa9",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://template/2508f1a7b6f846ab972e44553e8508fc",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.4.0"
+}
