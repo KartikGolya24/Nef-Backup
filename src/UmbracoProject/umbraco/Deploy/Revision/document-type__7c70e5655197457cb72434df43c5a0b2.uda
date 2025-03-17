@@ -8,8 +8,7 @@
   "Permissions": {
     "AllowedChildContentTypes": [
       "umb://document-type/72821b3e050040448b98d7b0ac5d6c11",
-      "umb://document-type/b6ff1a9d5ac447788911c03d95499710",
-      "umb://document-type/e6745a5d031d47a9937f3c11dca002c6"
+      "umb://document-type/b6ff1a9d5ac447788911c03d95499710"
     ]
   },
   "CompositionContentTypes": [],
@@ -23,10 +22,6 @@
     },
     {
       "Udi": "umb://document-type/b6ff1a9d5ac447788911c03d95499710",
-      "Mode": "Exist"
-    },
-    {
-      "Udi": "umb://document-type/e6745a5d031d47a9937f3c11dca002c6",
       "Mode": "Exist"
     }
   ],
