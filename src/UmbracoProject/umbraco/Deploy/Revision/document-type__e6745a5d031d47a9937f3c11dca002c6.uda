@@ -11,7 +11,9 @@
   "Permissions": {
     "AllowedChildContentTypes": []
   },
-  "CompositionContentTypes": [],
+  "CompositionContentTypes": [
+    "umb://document-type/f7afb926ca644923b66e81e69796b753"
+  ],
   "PropertyGroups": [
     {
       "Key": "ed73d97e-a348-4154-9298-9ccb8336cb9b",
@@ -32,6 +34,10 @@
   "Dependencies": [
     {
       "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/f7afb926ca644923b66e81e69796b753",
       "Ordering": true
     },
     {
