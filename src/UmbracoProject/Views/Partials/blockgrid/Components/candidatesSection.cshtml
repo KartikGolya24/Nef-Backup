@@ -27,9 +27,32 @@
                         <div class="candidate-card">
                             <div class="image-wrap">
                                 <img src="@candidate?.Image?.MediaUrl()" alt="candidate" class="img-fluid">
-                                @if (!string.IsNullOrWhiteSpace(candidate?.Video?.MediaUrl()))
+
+                                @if (!string.IsNullOrWhiteSpace(candidate?.Video?.MediaUrl()) || !string.IsNullOrWhiteSpace(candidate?.VimeoNumber?.Trim()))
                                 {
-                                    <button type="button" data-href="@candidate?.Video?.MediaUrl()" class="videoBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                    <div class="video_html d-none">
+                                        @if (!string.IsNullOrWhiteSpace(candidate?.Video?.MediaUrl()) && !string.IsNullOrWhiteSpace(candidate?.VimeoNumber?.Trim()))
+                                        {
+                                            <video width="100%" height="240" controls>
+                                                <source src="@candidate?.Video?.MediaUrl()" type="video/mp4" />
+                                                <source src="" type="video/ogg" />
+                                            </video>
+                                        }
+                                        else if (!string.IsNullOrWhiteSpace(candidate?.Video?.MediaUrl()))
+                                        {
+                                            <video width="100%" height="240" controls>
+                                                <source src="@candidate?.Video?.MediaUrl()" type="video/mp4" />
+                                                <source src="" type="video/ogg" />
+                                            </video>
+                                        }
+                                        else if (!string.IsNullOrWhiteSpace(candidate?.VimeoNumber?.Trim()))
+                                        {
+                                            var url = "https://player.vimeo.com/video/" + @candidate?.VimeoNumber;
+                                            <iframe width="100%" height="300" src="@url?autopause=0&autoplay=0&muted=1&controls=1&loop=1" allow="autoplay; fullscreen; picture-in-picture; clipboard-write;" frameborder="0">
+                                            </iframe>
+                                        }
+                                    </div>
+                                    <button type="button" class="videoBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd"
                                                   d="M5.14854 0.856903C4.66921 0.856903 4.1979 0.978984 3.779 1.21147C3.35204 1.42935 2.99164 1.75848 2.73601 2.16427C2.47646 2.57623 2.33481 3.05143 2.32641 3.53826L2.32629 20.4466L2.32641 20.4613C2.33481 20.9482 2.47646 21.4234 2.73601 21.8353C2.99164 22.2411 3.35204 22.5703 3.779 22.7881C4.1979 23.0206 4.66921 23.1427 5.14854 23.1427C5.63506 23.1427 6.11331 23.0168 6.53689 22.7775C6.54675 22.772 6.55649 22.7662 6.56611 22.7602L20.2397 14.3032C20.664 14.0888 21.0221 13.7628 21.2752 13.3598C21.5371 12.9429 21.6761 12.4605 21.6761 11.9681C21.6761 11.4757 21.5371 10.9933 21.2752 10.5763C21.0218 10.1729 20.6632 9.84664 20.2384 9.6323L6.56365 1.23778C6.55484 1.23236 6.54591 1.22711 6.53689 1.22201C6.11331 0.982675 5.63506 0.856903 5.14854 0.856903Z"

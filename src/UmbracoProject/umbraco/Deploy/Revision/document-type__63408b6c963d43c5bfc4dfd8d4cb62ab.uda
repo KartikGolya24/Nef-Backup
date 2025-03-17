@@ -18,6 +18,13 @@
       "Alias": "content",
       "PropertyTypes": [
         {
+          "Key": "3be4f61c-1b2e-484d-a0db-f9c0e824b637",
+          "Alias": "vimeoNumber",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Vimeo Number",
+          "SortOrder": 2
+        },
+        {
           "Key": "483854d6-6e0c-408f-b785-767cbf6e3321",
           "Alias": "thumbnail",
           "DataType": "umb://data-type/ad9f0cf2bda245d59ea1a63cfc873fd3",
@@ -28,7 +35,7 @@
           "Alias": "buttonText",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
           "Name": "Button Text",
-          "SortOrder": 2
+          "SortOrder": 3
         },
         {
           "Key": "96a05705-95b5-4467-b4cc-e9574d565e25",

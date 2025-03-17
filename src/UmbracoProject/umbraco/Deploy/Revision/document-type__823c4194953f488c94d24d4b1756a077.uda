@@ -41,7 +41,7 @@
           "Alias": "buttonTheme",
           "DataType": "umb://data-type/36564b1fa93643ee88423df7234ea0bf",
           "Name": "Button Theme",
-          "SortOrder": 5
+          "SortOrder": 6
         },
         {
           "Key": "29b94ec8-1cff-442b-89e4-6c00fbf31bdd",
@@ -50,25 +50,32 @@
           "Name": "Image"
         },
         {
+          "Key": "31fb3d1d-9dcb-4be9-8c07-b57acaf4af6c",
+          "Alias": "vimeoNumber",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Vimeo Number",
+          "SortOrder": 2
+        },
+        {
           "Key": "ba42b609-df85-4af5-b3e2-7c6e4ad84804",
           "Alias": "videoButtonText",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
           "Name": "Video Button Text",
-          "SortOrder": 2
+          "SortOrder": 3
         },
         {
           "Key": "c80a07a1-12d4-4582-83c2-be5cc9ae6b5e",
           "Alias": "readyToVoteLink",
           "DataType": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
           "Name": "Ready to Vote Link",
-          "SortOrder": 4
+          "SortOrder": 5
         },
         {
           "Key": "dba35461-9322-4ea9-a4b5-0d8b1a7b9e3a",
           "Alias": "description",
           "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
           "Name": "Description",
-          "SortOrder": 3
+          "SortOrder": 4
         },
         {
           "Key": "f4cc63f7-79fd-43cb-af48-a6c3142013fd",

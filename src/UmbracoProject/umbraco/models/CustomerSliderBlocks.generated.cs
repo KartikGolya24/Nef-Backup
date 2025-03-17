@@ -72,5 +72,13 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("video")]
 		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops Video => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "video");
+
+		///<summary>
+		/// Vimeo Number
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.1+5b54bed")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("vimeoNumber")]
+		public virtual string VimeoNumber => this.Value<string>(_publishedValueFallback, "vimeoNumber");
 	}
 }

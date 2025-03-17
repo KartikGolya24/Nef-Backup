@@ -80,5 +80,13 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("videoButtonText")]
 		public virtual string VideoButtonText => this.Value<string>(_publishedValueFallback, "videoButtonText");
+
+		///<summary>
+		/// Vimeo Number
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.1+5b54bed")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("vimeoNumber")]
+		public virtual string VimeoNumber => this.Value<string>(_publishedValueFallback, "vimeoNumber");
 	}
 }

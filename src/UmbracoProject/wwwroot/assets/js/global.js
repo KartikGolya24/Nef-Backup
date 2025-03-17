@@ -62,7 +62,7 @@
 
     $(document).on('click', '.videoBtn', function () {
         // Grab the URL from the button's data-href attribute
-        var videoURL = $(this).data('href');
+        var videoHtml = $(this).prev('.video_html').html();
         // console.log(videoURL)
         // Get the target modal's id (e.g., "#modalId")
         var targetModal = $(this).data('bs-target');
@@ -70,7 +70,8 @@
         var modal = $(targetModal);
 
         // Update the <source> element for the mp4 video
-        modal.find('video source[type="video/mp4"]').attr('src', videoURL);
+        // modal.find('video source[type="video/mp4"]').attr('src', videoURL);
+        modal.find('.modal-body').html(videoHtml);
 
         // Reload the video element so it picks up the new source
         modal.find('video').get(0).load();

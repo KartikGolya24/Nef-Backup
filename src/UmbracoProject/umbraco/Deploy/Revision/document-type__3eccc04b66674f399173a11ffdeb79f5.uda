@@ -28,7 +28,7 @@
           "Alias": "videoButtonText",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
           "Name": "Video Button Text",
-          "SortOrder": 2
+          "SortOrder": 3
         },
         {
           "Key": "cfc7d36f-047b-4738-85a0-c031c5a27e8f",
@@ -38,11 +38,18 @@
           "SortOrder": 1
         },
         {
+          "Key": "d94c23a1-2730-4ffd-be11-49fb8e268d43",
+          "Alias": "vimeoNumber",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Vimeo Number",
+          "SortOrder": 2
+        },
+        {
           "Key": "df0a870e-7496-403c-98ba-b9a86c4cf0db",
           "Alias": "positionImages",
           "DataType": "umb://data-type/d8a26c36dc9143c3a0917a3a69610a3f",
           "Name": "Position Images",
-          "SortOrder": 3
+          "SortOrder": 4
         }
       ]
     }

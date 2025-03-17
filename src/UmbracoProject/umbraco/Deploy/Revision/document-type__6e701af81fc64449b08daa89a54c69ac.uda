@@ -22,7 +22,7 @@
           "Alias": "billCards",
           "DataType": "umb://data-type/94fc95a56fef46cba4e3a253fda74793",
           "Name": "Bill Cards",
-          "SortOrder": 5
+          "SortOrder": 6
         },
         {
           "Key": "259d69e7-c5fe-44d5-b365-f5a7e683d0b1",
@@ -32,18 +32,25 @@
           "SortOrder": 1
         },
         {
+          "Key": "3fded25f-f239-4efd-8e7d-24378779a82f",
+          "Alias": "vimeoNumber",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Vimeo Number",
+          "SortOrder": 2
+        },
+        {
           "Key": "472b7568-7d0a-4e65-8f59-2bd5f7a72e95",
           "Alias": "videoButtonText",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
           "Name": "Video Button Text",
-          "SortOrder": 2
+          "SortOrder": 3
         },
         {
           "Key": "4e11da43-ac3d-477e-8571-f8e92f5b5bee",
           "Alias": "positionImages",
           "DataType": "umb://data-type/d8a26c36dc9143c3a0917a3a69610a3f",
           "Name": "Position Images",
-          "SortOrder": 3
+          "SortOrder": 4
         },
         {
           "Key": "607da8a3-2d08-4e6d-b287-8c10409359df",
@@ -56,7 +63,7 @@
           "Alias": "videoBottomHeading",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
           "Name": "Video Bottom Heading",
-          "SortOrder": 4
+          "SortOrder": 5
         }
       ]
     }
