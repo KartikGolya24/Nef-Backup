@@ -79,7 +79,7 @@
         </div>
     </div>
     <div class="tab-outer" id="pills-tabContent">
-        <div class="@(globalSetting?.Tab?.Trim() == "Erhverv" ? "business-tab" : globalSetting?.Tab?.Trim() == "Repræsentantskabsvalg" ? "Repræsentantskabsvalg-tab" :"Privat-tab") fade show active">
+        <div id="tab_id" class="@(globalSetting?.Tab?.Trim() == "Erhverv" ? "business-tab" : globalSetting?.Tab?.Trim() == "Repræsentantskabsvalg" ? "Repræsentantskabsvalg-tab" :"Privat-tab") fade show active">
 
             @Html.Partial("_Header", navigation)
 

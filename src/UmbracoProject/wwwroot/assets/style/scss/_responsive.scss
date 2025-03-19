@@ -296,6 +296,14 @@
 
 @media screen and (max-width: 991px) {
 
+    .video-img {
+        .section-position-image {
+            img {
+                max-height: 150px;
+            }
+        }
+    }
+
     .alt-contact-section {
         &.buy-charging-banner {
             .page-title {
@@ -1136,6 +1144,19 @@
 
 @media screen and (max-width: 767px) {
 
+    .header {
+        .navbar {
+            gap: 25px;
+        }
+    }
+
+    .alt-section {
+        .section-position-img {
+            img {
+                display: none;
+            }
+        }
+    }
     .pacakge-section {
         [class*=col-md-5] {
             margin-bottom: 32px;
@@ -1267,6 +1288,7 @@
 
                     .checkmark {
                         margin-left: auto;
+                        margin-top: -100px;
                     }
                 }
             }
@@ -1306,6 +1328,7 @@
 }
 
 @media screen and (max-width: 576px) {
+    
     .status-alt-sidebar {
         .status-left-part {
             .status-boxes-outer {
@@ -1418,14 +1441,6 @@
         padding-right: 16px !important;
     }
 
-
-    .header {
-
-        .navbar {
-            gap: 25px;
-        }
-    }
-
     // .banner {
     //     height: 324px;
     // }
@@ -1461,9 +1476,17 @@
 }
 
 @media screen and (max-width: 480px) {
+    .order-nef-power {
+        .order-nef-card  {
+            .position-img {
+                max-height: 150px;
+            }
+        }
+    }
     .alt-section .section-img img.h-432 {
         height: 300px;
     }
+    .order-nef-power .order-nef-card .card-body
 
     .status-alt-sidebar {
         .sidebar {
@@ -1485,8 +1508,18 @@
     }
 
 }
+@media screen and (max-width: 470px) {
+    .order-nef-power {
+        .order-nef-card  {
+            .position-img {
+                display: none;
+            }
+        }
+    }
+}
 
 @media screen and (max-width: 360px) {
+    
     .header .navbar {
         gap: 20px;
     }

@@ -3,8 +3,8 @@
 @{
     var content = Model?.Content;
     var setting = Model?.Settings as SectionSettingModel;
+    var addressLookupPageUrl = Umbraco?.Content(new Guid("b8ecfce9-f1a7-4485-8d36-e08ec5166e26"))?.Url()?.TrimEnd("/");
 }
-
 @if (content != null)
 {
     <!-------------------------------------- pacakge --------------------->
@@ -39,8 +39,7 @@
          id="searchInternetPackages"
          data-bs-keyboard="false"
          tabindex="-1"
-         aria-labelledby="staticBackdropLabel"
-         aria-hidden="true">
+         aria-labelledby="staticBackdropLabel">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header flex-column align-items-start pb-0 pt-64">
@@ -49,16 +48,11 @@
                 <div class="modal-body pb-64">
                     <div class="search-section py-0">
                         <div class="container">
-                            <h2 class="title black-950 mb-40 text-center fw-600">Kan jeg få nef Fiber?</h2>
-                            <div class="form-group mb-32">
-                                <input type="text" class="form-control" placeholder="Søg" aria-label="Søg" />
-                                <button type="button" class="btn dark_blue_btn">Søg</button>
-                                <ul class="searched-list border_black-200 mt-32">
-                                    <li><a class="black-950" href="order-internet03.html">Jensensvej 44, 5300 Kerteminde</a></li>
-                                    <li><a class="black-950" href="order-internet03.html">Jensensvej 44, 5300 Kerteminde</a></li>
-                                    <li><a class="black-950" href="order-internet03.html">Jensensvej 44, 5300 Kerteminde</a></li>
-                                    <li><a class="black-950" href="order-internet03.html">Jensensvej 44, 5300 Kerteminde</a></li>
-                                </ul>
+                            <h2 class="title black-950 mb-40 text-center fw-600">@(!string.IsNullOrWhiteSpace(content.PopupHeading) ? content.PopupHeading : "Kan jeg få nef Fiber?")</h2>
+                            <div class="form-group mb-32 autocomplete-container">
+                                <input type="text" id="adresse" class="form-control" placeholder="@(!string.IsNullOrWhiteSpace(content.SearchPlaceholder) ? content.SearchPlaceholder : "Søg")" aria-label="Søg" />
+                                <button type="button" disabled data-package="fiber" data-redirecturl="@addressLookupPageUrl" class="btn location-search-button @(!string.IsNullOrWhiteSpace(content.ButtonTheme) ? content.ButtonTheme : "dark_blue_btn")">@(!string.IsNullOrWhiteSpace(content.SearchButtonText) ? content.SearchButtonText : "Søg")</button>
+                               
                             </div>
                         </div>
                     </div>
@@ -67,3 +61,5 @@
         </div>
     </div>
 }
+<script src="https://cdn.dataforsyningen.dk/dawa/assets/dawa-autocomplete2/1.0.2/unfilled/dawa-autocomplete2.min.js"></script>
+<script asp-append-version="true" src="~/assets/js/packagescommon.output.min.js"></script>

@@ -38,5 +38,15 @@
       "enabled": true,
       "renameLocals": true
     }
+  },
+  {
+    "outputFileName": "wwwroot/assets/js/packagesCommon.output.min.js",
+    "inputFiles": [
+      "wwwroot/assets/js/packagesCommon.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    }
   }
 ]

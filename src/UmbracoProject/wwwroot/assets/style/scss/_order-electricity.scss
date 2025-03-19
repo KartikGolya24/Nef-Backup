@@ -1,6 +1,10 @@
 .account-action {
+    padding: 64px 0;
+
     .action-title {
+        color: $black;
         margin-bottom: 96px;
+        font-weight: 600;
     }
 
     .steps-action {
@@ -11,6 +15,7 @@
         .step {
             padding: 16px;
             border-radius: 16px;
+            border: 1px solid $black-100;
 
             .step-head {
                 display: flex;
@@ -32,6 +37,11 @@
                     justify-content: center;
                     font-size: 24px;
                     line-height: 37px;
+                    font-weight: 600;
+                }
+
+                .step-name {
+                    font-weight: 600;
                 }
 
                 .para {
@@ -45,11 +55,24 @@
             }
 
             .step-inside {
-                padding: 64px 32px;
+                padding: 64px 32px 0;
+
+                .form-block {
+                    margin-bottom: 32px;
+                }
+
+                .multiple-buttons {
+                    margin-bottom: 48px;
+                }
 
                 form {
                     max-width: 1056px;
+
+                    .multiple-buttons {
+                        margin-top: 0;
+                    }
                 }
+
                 .form-group {
                     margin-bottom: 32px;
 
@@ -77,16 +100,43 @@
                         /* Safari-specific */
                     }
 
-                    & > label {
+                    &>label {
                         font-size: 18px;
                         line-height: 32px;
                     }
 
+                    &.radio-group {
+                        margin: 32px 0;
+                        display: flex;
+                        align-items: center;
+                    }
                 }
 
                 .radio-group {
                     &>label {
                         margin-right: 24px;
+                        padding-bottom: 0;
+                    }
+                }
+
+                .order-summery-text {
+                    padding-bottom: 24px;
+                }
+
+                .settlement-block {
+                    padding-top: 80px;
+
+                    .headings {
+                        margin-bottom: 32px;
+
+                        .title {
+                            margin-bottom: 16px;
+
+                            &+p {
+                                font-size: 18px;
+                                line-height: 32px;
+                            }
+                        }
                     }
                 }
             }
@@ -106,6 +156,11 @@
                     opacity: 0.3;
                 }
             }
+
+            .multiple-buttons {
+                margin-top: 64px;
+                margin-bottom: 48px;
+            }
         }
     }
 
@@ -113,51 +168,372 @@
         .info-box {
             padding: 24px 32px;
             border-radius: 16px;
+            border: 1px solid $black-100;
+            margin-bottom: 32px;
+
+            .info-header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .info-box-title {
+                    margin-bottom: 0;
+                }
+            }
+
+            .info-box-title {
+                font-weight: 600;
+                margin-bottom: 16px;
+
+                &+.para {
+                    font-size: 18px;
+                    line-height: 32px;
+                    margin-bottom: 16px;
+                }
+            }
+
+
             .list {
                 padding-left: 20px;
                 display: flex;
                 flex-direction: column;
                 gap: 8px;
+
                 li {
                     color: $black-950;
                     list-style: inherit;
+
                     &::marker {
                         color: $black-950;
                     }
                 }
             }
+
             .info-list {
                 display: flex;
                 flex-direction: column;
                 gap: 8px;
+
                 li {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
                     flex-wrap: wrap;
                 }
+
                 &.gap-24 {
                     gap: 24px;
                 }
             }
         }
+
+        .billing-box {
+            padding: 24px 32px;
+            border-radius: 16px;
+            border: 1px solid #efefef;
+            margin-bottom: 32px;
+
+            .info-box-title {
+                font-weight: 600;
+                margin-bottom: 16px;
+            }
+
+            .info-list {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                &>li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+
+                    &:not(:last-child) {
+                        margin-bottom: 24px;
+                    }
+
+                    &:nth-child(2) {
+                        margin-bottom: 8px;
+                    }
+
+                    .inner-list {
+                        width: 100%;
+                        margin-top: 8px;
+
+                        li {
+                            display: flex;
+                            align-items: center;
+                            justify-content: start;
+                        }
+                    }
+
+
+                    .price {
+                        font-size: 18px;
+                        line-height: 32px;
+                        text-align: right;
+                    }
+
+                    .total-price {
+                        text-align: right;
+                    }
+                }
+
+            }
+        }
+
         .multiple-buttons {
-            margin-top: 96px;
+            margin-top: 64px;
         }
     }
-    
+
     &.h-920 {
         height: 920px;
     }
+
     .position-image {
         position: absolute;
+
         &.top-right {
             top: 0;
             right: 50px;
         }
+
         &.bottom-center {
             bottom: 0;
             left: 50%;
+        }
+    }
+
+    .search-section {
+        .title {
+            margin-bottom: 24px;
+            text-align: center;
+            font-weight: 600;
+        }
+    }
+
+    &.full-height-section {
+        height: 920px;
+        position: relative;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .multiple-buttons {
+            margin-top: auto;
+        }
+    }
+
+    &.order-nef-internet {
+        .pacakge-section {
+            padding: 0;
+        }
+
+        .search-section {
+            padding-bottom: 64px;
+        }
+    }
+
+}
+
+
+// Ordering flow pages css
+
+.order-pending-Bx {
+    padding: 24px;
+    border-radius: 16px;
+    max-width: 400px;
+}
+
+.order-complete-Bx {
+    padding: 24px;
+    border-radius: 16px;
+    max-width: 400px;
+    text-align: center;
+
+    .title {
+        margin: 16px 0;
+        color: $black-950;
+    }
+}
+
+.ordering-card-box-outer {
+    max-width: 1144px;
+    margin: 0 auto;
+}
+
+.ordering-card {
+    padding: 20px;
+    border-radius: 16px;
+    height: 100%;
+    cursor: pointer;
+
+    .card-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 32px;
+
+        input[type="radio"] {
+            width: 32px;
+            height: 32px;
+        }
+
+        .tag {
+            background-color: $black-950;
+            color: $white;
+            font-size: 16px;
+            line-height: 22.58px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-style: italic;
+        }
+    }
+
+    .card-content {
+        .card-title {
+            color: $black-950;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .list {
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            li {
+                color: $black-950;
+                list-style: inherit;
+                font-size: 18px;
+                line-height: 32px;
+
+                &::marker {
+                    color: $black-950;
+                }
+            }
+        }
+
+        .tv-box-cost {
+            padding: 12px 16px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+
+    &.light_purple_bg.border_dark_purple {
+        .tv-box-cost {
+            background-color: #A4569933;
+        }
+    }
+}
+
+.search-section {
+    padding: 16px 0;
+
+    .form-group {
+        display: flex;
+        gap: 8px;
+        max-width: 403px;
+        margin: 0 auto;
+        position: relative;
+
+        .form-control {
+            height: 48px;
+        }
+    }
+
+    .searched-list {
+        display: none;
+        border-radius: 16px;
+        max-width: 403px;
+        margin: 8px auto 0;
+        position: absolute;
+        width: 100%;
+        background-color: $white;
+        top: 100%;
+
+        li {
+            padding: 12px 18px 10px 18px;
+
+            &:last-child {
+                padding-bottom: 12px;
+            }
+        }
+
+        &.active {
+            display: block;
+        }
+    }
+}
+
+.order-nef-electricity {
+    &.account-action {
+        .steps-action {
+            .step {
+                .step-head {
+                    .step-number {
+                        background-color: $dark_blue;
+                        color: $white;
+                    }
+                }
+
+                &.disabled {
+                    .step-head {
+                        .step-number {
+                            background-color: $black-200;
+                        }
+                    }
+                }
+            }
+        }
+
+        .order-complete-Bx {
+            background-color: $turquoise;
+            text-align: center;
+        }
+    }
+}
+
+.order-nef-internet {
+    &.account-action {
+        .steps-action {
+            .step {
+                .step-head {
+                    .step-number {
+                        background-color: $dark_blue;
+                        color: $white;
+                    }
+                }
+
+                &.disabled {
+                    .step-head {
+                        .step-number {
+                            background-color: $black-200;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .search-section {
+            .order-complete-Bx {
+                margin: 64px auto 0;
+                text-align: center;
+                background-color: $turquoise;
+            }
+        }
+
+        .order-complete-Bx {
+            background-color: $light_green;
         }
     }
 }
