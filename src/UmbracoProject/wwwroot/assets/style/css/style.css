@@ -10882,6 +10882,7 @@ textarea.form-control {
   align-items: center;
   gap: 12px;
   margin-bottom: 0;
+  margin-right: 0;
 }
 .form-check .form-check-label {
   font-size: 18px;
@@ -11200,6 +11201,9 @@ textarea.form-control {
 .header.order-header .navbar .header-nav .navbar-nav .navbar-nav-list .nav-item .nav-list .nav-link {
   font-size: 16px;
   color: #292929;
+}
+.header.order-header .navbar .header-nav .navbar-nav .navbar-nav-list .mobile-header-nav {
+  display: none;
 }
 .header.order-header .navbar .header-nav .navbar-nav .navbar-nav-list .mobile-header-nav .mobile-menu .mobile-menu-list .mobile-item .mobile-link {
   color: #292929;
@@ -12223,9 +12227,9 @@ textarea.form-control {
   margin: 32px 0;
   display: flex;
   align-items: center;
+  gap: 24px;
 }
 .account-action .steps-action .step .step-inside .radio-group > label {
-  margin-right: 24px;
   padding-bottom: 0;
 }
 .account-action .steps-action .step .step-inside .order-summery-text {
@@ -12244,6 +12248,15 @@ textarea.form-control {
   font-size: 18px;
   line-height: 32px;
 }
+.account-action .steps-action .step .step-inside.order-description .boxed-data {
+  max-width: 512px;
+}
+.account-action .steps-action .step .step-inside.order-description .boxed-data .ordering-card {
+  margin: 64px 0 48px;
+  padding: 32px;
+  border: 1px solid #efefef;
+  cursor: auto;
+}
 .account-action .steps-action .step.opened {
   padding-bottom: 0;
 }
@@ -12256,6 +12269,9 @@ textarea.form-control {
 .account-action .steps-action .step .multiple-buttons {
   margin-top: 64px;
   margin-bottom: 48px;
+}
+.account-action .steps-action + .multiple-buttons {
+  margin-top: 96px;
 }
 .account-action .info-correct .info-box {
   padding: 24px 32px;
@@ -12368,7 +12384,7 @@ textarea.form-control {
   bottom: 0;
   left: 50%;
 }
-.account-action .search-section .title {
+.account-action .search-section .title:not(.order-complete-Bx .title, .order-pending-Bx .title) {
   margin-bottom: 24px;
   text-align: center;
   font-weight: 600;
@@ -12391,11 +12407,32 @@ textarea.form-control {
 .account-action.order-nef-internet .search-section {
   padding-bottom: 64px;
 }
+.account-action.order-nef-tv .pacakge-section {
+  padding: 0;
+}
+.account-action.order-nef-tv .search-section {
+  padding-bottom: 64px;
+}
+
+.tv-watching-options .section-title {
+  color: #292929;
+  text-align: center;
+  margin-bottom: 64px;
+}
+.tv-watching-options .multiple-buttons {
+  justify-content: center;
+  margin-top: 32px;
+}
 
 .order-pending-Bx {
   padding: 24px;
   border-radius: 16px;
   max-width: 400px;
+  text-align: center;
+}
+.order-pending-Bx .title {
+  margin: 16px 0;
+  color: #292929;
 }
 
 .order-complete-Bx {
@@ -12412,6 +12449,9 @@ textarea.form-control {
 .ordering-card-box-outer {
   max-width: 1144px;
   margin: 0 auto;
+}
+.ordering-card-box-outer > .row {
+  justify-content: center;
 }
 
 .ordering-card {
@@ -12529,6 +12569,27 @@ textarea.form-control {
 }
 .order-nef-internet.account-action .order-complete-Bx {
   background-color: #AAD29B;
+}
+
+.order-nef-tv.account-action .steps-action .step .step-head .step-number {
+  background-color: #A45699;
+  color: #ffffff;
+}
+.order-nef-tv.account-action .steps-action .step.disabled .step-head .step-number {
+  background-color: #dcdcdc;
+}
+.order-nef-tv.account-action .search-section .order-complete-Bx {
+  margin: 64px auto 0;
+  text-align: center;
+  background-color: #EEF4F4;
+}
+.order-nef-tv.account-action .search-section .order-pending-Bx {
+  margin: 64px auto 0;
+  text-align: center;
+  background-color: #efefef;
+}
+.order-nef-tv.account-action .order-complete-Bx {
+  background-color: #F8F0F7;
 }
 
 * {
@@ -18331,7 +18392,6 @@ li {
   }
   .account-action .steps-action .step .step-head .checkmark {
     margin-left: auto;
-    margin-top: -100px;
   }
   .faq-section [class*=img] {
     display: none;
@@ -18349,6 +18409,21 @@ li {
   }
 }
 @media screen and (max-width: 576px) {
+  .account-action .steps-action .step .step-inside .form-group.radio-group {
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    margin-top: 0;
+  }
+  .account-action .steps-action .step .step-inside .form-group.radio-group > .label {
+    width: 100%;
+  }
+  .header.order-header .navbar .header-nav .navbar-nav .navbar-nav-list .nav-item {
+    display: none;
+  }
+  .header.order-header .navbar .header-nav .navbar-nav .navbar-nav-list .mobile-header-nav {
+    display: flex;
+    align-items: center;
+  }
   .status-alt-sidebar .status-left-part .status-boxes-outer {
     gap: 48px;
   }

@@ -2,7 +2,7 @@
   "Name": "Purchase Details",
   "Alias": "PurchaseDetails",
   "File": "umb://template-file/PurchaseDetails.cshtml",
-  "Master": "umb://template/2aa50de1008b4efb8fc84d3fcf929c3a",
+  "Master": "umb://template/9e3e47122c814198b17c487ee47999da",
   "Udi": "umb://template/2ac86151c8db49f581c14a5ec060e9ef",
   "Dependencies": [
     {
@@ -11,7 +11,7 @@
       "Mode": "Exist"
     },
     {
-      "Udi": "umb://template/2aa50de1008b4efb8fc84d3fcf929c3a",
+      "Udi": "umb://template/9e3e47122c814198b17c487ee47999da",
       "Ordering": true,
       "Mode": "Exist"
     }

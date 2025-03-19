@@ -14,11 +14,18 @@ namespace UmbracoProject.App_Code.Controllers
             _packagesService = packagesService;
         }
 
-        [HttpGet("getChargingPackages")]
-        public async Task<IActionResult> GetChargingPackages()
+        [HttpGet("get-tv-packages")]
+        public async Task<IActionResult> GetTvPackages()
         {
-            List<ChargingPackagesModel> chargingPackages = await _packagesService.ChargingPackages();
-            return Ok(chargingPackages);
+            List<TvPackagesModel> tvPackages = await _packagesService.TvPackages();
+            return PartialView("~/Views/Partials/_TvPackagesForPurchaseFlow.cshtml", tvPackages);
+        }
+        
+        [HttpGet("get-fiber-packages")]
+        public async Task<IActionResult> GetFiberPackages()
+        {
+            List<FiberPackagesModel> fiberPackages = await _packagesService.FiberPackages();
+            return PartialView("~/Views/Partials/_FiberPackagesForPurchaseFlow.cshtml", fiberPackages);
         }
     }
 }

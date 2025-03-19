@@ -3,7 +3,7 @@
 @{
     var content = Model?.Content;
     var setting = Model?.Settings as SectionSettingModel;
-    //var addressLookupPageUrl = Umbraco?.Content(new Guid("b8ecfce9-f1a7-4485-8d36-e08ec5166e26"))?.Url()?.TrimEnd("/");
+    var addressLookupPageUrl = Umbraco?.Content(new Guid("b8ecfce9-f1a7-4485-8d36-e08ec5166e26"))?.Url()?.TrimEnd("/");
 }
 @if (content != null)
 {
@@ -51,7 +51,7 @@
                             <h2 class="title black-950 mb-40 text-center fw-600">@(!string.IsNullOrWhiteSpace(content.PopupHeading) ? content.PopupHeading : "Kan jeg få nef Fiber?")</h2>
                             <div class="form-group mb-32 autocomplete-container">
                                 <input type="text" id="adresse" class="form-control" placeholder="@(!string.IsNullOrWhiteSpace(content.SearchPlaceholder) ? content.SearchPlaceholder : "Søg")" aria-label="Søg" />
-                                <button type="button" disabled data-package="fiber" data-redirecturl="" class="btn location-search-button @(!string.IsNullOrWhiteSpace(content.ButtonTheme) ? content.ButtonTheme : "dark_blue_btn")">@(!string.IsNullOrWhiteSpace(content.SearchButtonText) ? content.SearchButtonText : "Søg")</button>
+                                <button type="button" disabled data-package="fiber" data-redirecturl="@addressLookupPageUrl" class="btn location-search-button @(!string.IsNullOrWhiteSpace(content.ButtonTheme) ? content.ButtonTheme : "dark_blue_btn")">@(!string.IsNullOrWhiteSpace(content.SearchButtonText) ? content.SearchButtonText : "Søg")</button>
                                
                             </div>
                         </div>

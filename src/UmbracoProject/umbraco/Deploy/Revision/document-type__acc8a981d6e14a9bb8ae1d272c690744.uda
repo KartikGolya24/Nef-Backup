@@ -42,19 +42,6 @@
       "PropertyTypes": []
     },
     {
-      "Key": "7cfabd7e-a094-4598-90b6-677cb0c1d4b1",
-      "Name": "Theme",
-      "Alias": "footer/theme",
-      "PropertyTypes": [
-        {
-          "Key": "efab5f28-dc5b-41d8-84ab-a69e9e1edef6",
-          "Alias": "footerTheme",
-          "DataType": "umb://data-type/899ccf10007f4512a2902f666eb4a561",
-          "Name": "Footer Theme"
-        }
-      ]
-    },
-    {
       "Key": "939abb27-2829-4876-a360-818b9823e858",
       "Name": "Left Content",
       "Alias": "header/leftContent",
@@ -189,10 +176,6 @@
     },
     {
       "Udi": "umb://data-type/86da3672f5a640b3a5bce98af677671f",
-      "Ordering": true
-    },
-    {
-      "Udi": "umb://data-type/899ccf10007f4512a2902f666eb4a561",
       "Ordering": true
     },
     {

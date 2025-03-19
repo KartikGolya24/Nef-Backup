@@ -1,0 +1,15 @@
+{
+  "Name": "Purchase Flow Master",
+  "Alias": "PurchaseFlowMaster",
+  "File": "umb://template-file/PurchaseFlowMaster.cshtml",
+  "Udi": "umb://template/9e3e47122c814198b17c487ee47999da",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/PurchaseFlowMaster.cshtml",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.TemplateArtifact",
+  "__version": "13.4.0"
+}

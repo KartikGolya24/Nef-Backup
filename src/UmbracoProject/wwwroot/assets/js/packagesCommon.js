@@ -18,7 +18,7 @@ $(document).ready(function () {
         var flowName = "Privat";
         var packageType = $(this).data("package");
         var origin = window.location.origin;
-        //var redirectUrl = $(this).data("redirecturl");
+        var redirectUrl = $(this).data("redirecturl");
         if ($("#tab_id").hasClass("business-tab")) {
             flowName = "Business";
         }
@@ -38,9 +38,10 @@ $(document).ready(function () {
                         TvPackageStatus = null;
                     }
 
-                    //var url = `${origin}${redirectUrl}?flowName=${flowName}&packageType=${packageType}&tvPackageStatus=${TvPackageStatus}&fiberPackageStatus=${FiberPackageStatus}`;
+                    var url = `${origin}${redirectUrl}?flowName=${flowName}&packageType=${packageType}&tvPackageStatus=${TvPackageStatus}&fiberPackageStatus=${FiberPackageStatus}`;
                     console.log(res)
-                    //console.log(url)
+                    console.log(url)
+                    window.location.href = url
                 },
                 error: function () {
                     alert("error")

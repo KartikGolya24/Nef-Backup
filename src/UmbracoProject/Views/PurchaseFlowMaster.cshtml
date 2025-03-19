@@ -1,0 +1,184 @@
+﻿@using Umbraco.Cms.Core.Models.Blocks
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@using UmbracoProject.App_Code.Models
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    var roots = Umbraco?.ContentAtRoot();
+    var homeRoots = roots?.Where(x => x.IsDocumentType("purchaseFlow"))?.FirstOrDefault();
+    var navigation = homeRoots?.Children<PurchaseNavigation>()?.FirstOrDefault();
+}
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-------------------style css--------------->
+    <link rel="stylesheet" href="~/assets/style/css/style.css" async />
+    <script src="~/assets/js/jquery.output.min.js"></script>
+    <title>Nef Fonden - Order Internet</title>
+</head>
+
+<body>
+    <!---------------------------header--------------------------->
+    <header class="header order-header">
+        <div class="container-xl">
+            <nav class="navbar">
+                <a href="" class="header-logo">
+                    <img src="@navigation?.HeaderLogo?.MediaUrl()" class="img-fluid" alt="header-logo" />
+                </a>
+                @if (navigation?.Menus != null && navigation?.Menus.Count() > 0)
+                {
+
+                    <div class="header-nav">
+                        <div class="navbar-nav">
+                            <div class="navbar-nav-list">
+
+                                <ul class="nav-item">
+
+                                    @foreach (var menu in navigation.Menus)
+                                    {
+                                        <li class="nav-list">
+                                            <a href="@menu?.Url" class="nav-link">@menu?.Name</a>
+                                        </li>
+                                    }
+                                </ul>
+                                @* <ul class="nav-item d-none d-md-flex">
+                                <li class="nav-list">
+                                    <span class="nav-link">+45 63 32 11 00</span>
+                                </li>
+                                <li class="nav-list">
+                                    <span class="nav-link">nef@nef.dk</span>
+                                </li>
+                            </ul> *@
+                            </div>
+                        </div>
+                    </div>
+                }
+            </nav>
+        </div>
+    </header>
+
+    @RenderBody()
+
+
+    <!----------------------------------------- Footer --------------------->
+    <footer class="footer">
+        <div class="top-footer">
+            <div class="container-xl">
+                @if (!string.IsNullOrWhiteSpace(navigation?.TopFooterHeading))
+                {
+                    <h3>@navigation?.TopFooterHeading</h3>
+                }
+                @if (navigation?.TopFooterButtonList != null && navigation?.TopFooterButtonList.Count > 0)
+                {
+                    <div class="multiple-buttons">
+                        @foreach (var item in navigation.TopFooterButtonList)
+                        {
+                            @Html.GetBlockListHtml(navigation.TopFooterButtonList)
+                        }
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="bottom-footer">
+            <div class="container-xl">
+                <div class="footer-detail">
+                    <div class="footer-address">
+                        <div class="footer-logo">
+                            <img src="@navigation.FooterLogo?.MediaUrl()" class="img-fluid" alt="footer-logo">
+                        </div>
+                        <div class="address">
+                            @Html?.Raw(navigation.FooterAddress)
+                        </div>
+                        @if (navigation.SocialLinkList?.Count > 0)
+                        {
+                            <div class="social-icon">
+                                <ul class="social-item">
+
+                                    @foreach (var item in navigation.SocialLinkList)
+                                    {
+                                        var socialLink = item?.Content as FooterSocialLink;
+
+                                        <li class="social-list">
+                                            <a href="@socialLink?.SocialLink" class="social-link">
+                                                <img src="@socialLink?.Icon?.MediaUrl()" class="img-fluid" alt="social-icon">
+                                            </a>
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        }
+                    </div>
+
+                    <div class="footer-menu accordion">
+
+                        @if (navigation.OpeningTimes?.Count() > 0)
+                        {
+                            var id = $"collapse-{Guid.NewGuid()}";
+                            <div class="footer-menu-list accordion-item">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#@id" aria-expanded="true" aria-controls="@id">
+                                    @navigation.OpeningTimeHeading
+                                </button>
+                                <ul class="accordion-collapse collapse" id="@id" aria-labelledby="@id">
+                                    @foreach (var item in navigation.OpeningTimes)
+                                    {
+                                        <li>@item</li>
+                                    }
+                                </ul>
+                            </div>
+
+                        }
+
+                        @if (navigation.AccordionMenuList?.Count > 0)
+                        {
+                            @foreach (var item in navigation.AccordionMenuList)
+                            {
+                                var id = $"collapse-{Guid.NewGuid()}";
+                                var accordion = item?.Content as FooterMenuAccordion;
+
+                                <div class="footer-menu-list accordion-item">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#@id" aria-expanded="true" aria-controls="@id">
+                                        @accordion?.HeadText
+                                    </button>
+                                    <ul class="accordion-collapse collapse" id="@id" aria-labelledby="@id">
+                                        @foreach (var link in accordion?.MenuItems)
+                                        {
+                                            <li><a href="@link?.Url">@link?.Name</a></li>
+                                        }
+                                    </ul>
+                                </div>
+                            }
+                        }
+
+                    </div>
+                    @if (!string.IsNullOrWhiteSpace(navigation.TagImage?.MediaUrl()))
+                    {
+                        <div class="position-img">
+                            <img src="@navigation.TagImage?.MediaUrl()" class="img-fluid" alt="img">
+                        </div>
+                    }
+                </div>
+                <div class="copyright">
+                    <span class="small">@navigation.CopyRightText</span>
+                    @if (navigation.FooterLinks?.Count() > 0)
+                    {
+                        @foreach (var item in navigation.FooterLinks)
+                        {
+                            <span class="small"><a href="@item?.Url">@item?.Name</a></span>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/assets/libs/bs5/js/bootstrap.bundle.min.js"></script>
+    <!--------------------------jquery------------------>
+    <script src="~/assets/js/custom.output.min.js"></script>
+    <script src="~/assets/js/global.output.min.js"></script>
+
+    <!------------------------bootstrap 5--------------->
+</body>
+</html>

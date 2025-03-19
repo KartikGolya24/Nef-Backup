@@ -1,0 +1,147 @@
+﻿@using UmbracoProject.App_Code.Models.ApiModels
+@model List<TvPackagesModel>
+
+
+@if (Model != null && Model.Count > 0)
+{
+    <div class="section-heading">
+        <h2>Du kan vælge mellem disse TV-pakker</h2>
+    </div>
+    <div class="package-list">
+        <div class="row">
+            @foreach (var package in Model)
+            {
+                var channelPopupId = $"seeAllPackages-{Guid.NewGuid()}";
+                <div class="col-xl-@(Model.Count == 1 || Model.Count == 2 ?"5":Model.Count == 3 ? "4" : "3") col-md-6 mb-32">
+                    <div class="package-card">
+                        <div class="card-detail">
+                            <div class="card-header">
+                                <div class="card-heading">
+                                    @if (!string.IsNullOrWhiteSpace(package.Name))
+                                    {
+                                        <h4> @package.Name </h4>
+                                    }
+
+                                    @if (!string.IsNullOrWhiteSpace(package.Description))
+                                    {
+                                        <p> @package.Description </p>
+                                    }
+                                </div>
+                                <div class="price">
+
+                                    <h3>@package.Priceprefix @package.PriceMonthlyDKK Kr.</h3>
+
+                                    @if (!string.IsNullOrWhiteSpace(package.Unit))
+                                    {
+                                        <p>@package.Unit</p>
+                                    }
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <ul>
+                                    @if (package.Usps != null && package.Usps.Count > 0)
+                                    {
+                                        @foreach (var usp in package.Usps)
+                                        {
+                                            @if (!string.IsNullOrWhiteSpace(usp.Name))
+                                            {
+                                                <li>
+
+                                                    <p>
+                                                        <img src="@(!string.IsNullOrWhiteSpace(usp.Icon) ? usp.Icon : "/assets/img/icons/checkmark-purple.svg")" class="img-fluid" alt="icon svg" />
+                                                        @usp.Name
+                                                    </p>
+                                                    @if (!string.IsNullOrWhiteSpace(usp.Infotext))
+                                                    {
+                                                        <span data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="@usp.Infotext">
+                                                            <img src="~/assets/img/icons/info-popup.svg" class="img-fluid" alt="info-svg" />
+                                                        </span>
+                                                    }
+                                                </li>
+                                            }
+                                        }
+
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="package-footer">
+                            <div class="card-footer">
+                                @if (package.Prioritizedchannels != null && package.Prioritizedchannels.Count > 0)
+                                {
+                                    <ul class="company-logo">
+                                        @foreach (var prioritizedChannel in package.Prioritizedchannels)
+                                        {
+                                            <li><img src="@(!string.IsNullOrWhiteSpace(prioritizedChannel.Logourl) ? prioritizedChannel.Logourl :"/assets/img/bg-img/company1.svg")" class="img-fluid" /></li>
+                                        }
+                                    </ul>
+
+                                }
+                                <div class="footer-btn">
+                                    <a href="#0"
+                                       class="btn dark_purple_btn">
+                                        Bestil pakke
+                                    </a>
+                                    <a href="#@channelPopupId" data-bs-toggle="modal" class="package-link">Se hele pakkens indhold</a>
+                                    <p class="text-two-line">
+                                        @package.Disclaimer
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade"
+                     id="@channelPopupId"
+                     data-bs-keyboard="false"
+                     tabindex="-1"
+                     aria-labelledby="staticBackdropLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header flex-column align-items-start pb-0">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <h4 class="modal-title" id="staticBackdropLabel">@package.Name</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="overflow-box">
+                                    <p class="fw-600 black-950 price mb-32">@package.PriceMonthlyDKK,- <span class="small">@package.Unit.</span></p>
+                                    @if (package.Channels != null && package.Channels.Count > 0)
+                                    {
+                                        <h5 class="box-inner-title mb-24">Kanaler</h5>
+                                        <div class="flex-bx brands-wrap">
+                                            @foreach (var channel in package.Channels)
+                                            {
+                                                <div class="item">
+                                                    <img src="@channel.Logourl" class="img-fluid" />
+                                                    <h6 class="item-title">@channel.Name</h6>
+                                                </div>
+                                            }
+                                        </div>
+                                    }
+
+                                    @if (package.StreamingServies != null && package.StreamingServies.Count > 0)
+                                    {
+                                        <hr class="line-splitter" />
+                                        <h5 class="box-inner-title mb-24">Streamingtjenester</h5>
+
+                                        <div class="flex-bx brands-wrap mx272px">
+                                            @foreach (var service in package.StreamingServies)
+                                            {
+                                                <div class="item">
+                                                    <img src="@service.Logourl" class="img-fluid" />
+                                                    <h6 class="item-title">@service.Name</h6>
+                                                </div>
+                                            }
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}

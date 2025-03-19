@@ -48,5 +48,15 @@
       "enabled": true,
       "renameLocals": true
     }
+  },
+  {
+    "outputFileName": "wwwroot/assets/js/PurchaseAddressLookup.output.min.js",
+    "inputFiles": [
+      "wwwroot/assets/js/PurchaseAddressLookup.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    }
   }
 ]
