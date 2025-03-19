@@ -1,0 +1,65 @@
+{
+  "Name": "Purchase Address Lookup",
+  "Alias": "purchaseAddressLookup",
+  "DefaultTemplate": "umb://template/8b1762c4c0274227bf867f90fa59d34a",
+  "AllowedTemplates": [
+    "umb://template/8b1762c4c0274227bf867f90fa59d34a"
+  ],
+  "HistoryCleanup": {},
+  "Icon": "icon-document",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type/168519c29f0d40be8e321bd3ce914bdf",
+  "CompositionContentTypes": [
+    "umb://document-type/168519c29f0d40be8e321bd3ce914bdf",
+    "umb://document-type/ec2dc7dcd2c440a69d65eb0b93dbdb61"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "d9c2d581-9fb2-4082-bf75-ce9883e44e03",
+      "Name": "Packages Content",
+      "SortOrder": 1,
+      "Alias": "packagesContent",
+      "PropertyTypes": [
+        {
+          "Key": "17d0b9b3-435a-42ed-b154-4f77da76c74e",
+          "Alias": "tvPackagesHeading",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Tv Packages Heading"
+        },
+        {
+          "Key": "414a6dbd-87fd-4977-9057-81aa169f3bb3",
+          "Alias": "fiberPackagesHeading",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Fiber Packages Heading",
+          "SortOrder": 1
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/0c1825242b924d20807fdda5caa3e541",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/168519c29f0d40be8e321bd3ce914bdf",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/ec2dc7dcd2c440a69d65eb0b93dbdb61",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://template/8b1762c4c0274227bf867f90fa59d34a",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.4.0"
+}

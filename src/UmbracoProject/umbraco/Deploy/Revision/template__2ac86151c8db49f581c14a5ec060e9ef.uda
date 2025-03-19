@@ -1,0 +1,21 @@
+{
+  "Name": "Purchase Details",
+  "Alias": "PurchaseDetails",
+  "File": "umb://template-file/PurchaseDetails.cshtml",
+  "Master": "umb://template/2aa50de1008b4efb8fc84d3fcf929c3a",
+  "Udi": "umb://template/2ac86151c8db49f581c14a5ec060e9ef",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/PurchaseDetails.cshtml",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://template/2aa50de1008b4efb8fc84d3fcf929c3a",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.TemplateArtifact",
+  "__version": "13.4.0"
+}

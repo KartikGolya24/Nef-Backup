@@ -1,0 +1,179 @@
+﻿@using Umbraco.Cms.Core.Models.Blocks
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@using UmbracoProject.App_Code.Models
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    var roots = Umbraco?.ContentAtRoot();
+    //var homeRoots = roots?.Where(x => x.IsDocumentType("purchaseFlow"))?.FirstOrDefault();
+    //var navigation = homeRoots?.Children<PurchaseNavigation>()?.FirstOrDefault();
+}
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!----------------------slick slider ------------------------->
+    <link rel="stylesheet" href="~/assets/libs/slick/slick-theme.css" />
+    <link rel="stylesheet" href="~/assets/libs/slick/slick.css" />
+
+    <!-------------------style css--------------->
+    <link rel="stylesheet" href="~/assets/style/css/style.css" />
+    <title>Nef Fonden - Order Internet</title>
+</head>
+
+<body>
+    <!---------------------------header--------------------------->
+    <header class="header order-header">
+        <div class="container-xl">
+            <nav class="navbar">
+                <a href="" class="header-logo">
+                    <img src="~/assets/img/logo/Logo-dark.svg" class="img-fluid" alt="header-logo" />
+                </a>
+                <div class="header-nav">
+                    <div class="navbar-nav">
+                        <div class="navbar-nav-list">
+                            <ul class="nav-item">
+                                <li class="nav-list">
+                                    <a href="" class="nav-link">Har du brug for hjælp?</a>
+                                </li>
+                            </ul>
+                            <ul class="nav-item d-none d-md-flex">
+                                <li class="nav-list">
+                                    <span class="nav-link">+45 63 32 11 00</span>
+                                </li>
+                                <li class="nav-list">
+                                    <span class="nav-link">nef@nef.dk</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    @RenderBody()
+
+
+    <!----------------------------------------- Footer --------------------->
+    <footer class="footer">
+        <div class="top-footer">
+            <div class="container-xl">
+                <h3>Flere muligheder. Tættere på.</h3>
+                <div class="multiple-buttons">
+                    <button type="button" class="btn light_blue_btn">
+                        <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.2591 1.65112V9.61184H18.4237L8.0748 22.349V14.3883H0.910156L11.2591 1.65112Z"
+                                  stroke="white" stroke-width="1.71" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                        +45 63 32 11 00
+                    </button>
+                    <button type="button" class="btn dark_blue_btn">
+                        <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.2591 1.65112V9.61184H18.4237L8.0748 22.349V14.3883H0.910156L11.2591 1.65112Z"
+                                  stroke="white" stroke-width="1.71" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                        nef@nef.dk
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-footer">
+            <div class="container-xl">
+                <div class="footer-detail">
+                    <div class="footer-address">
+                        <div class="footer-logo">
+                            <img src="~/assets/img/logo/Logo-white.svg" class="img-fluid" alt="footer-logo" />
+                        </div>
+                        <div class="address">
+                            <span>Tårupstrandvej 15</span>
+                            <span>5300 Kerteminde</span>
+                            <span>CVR: 19 99 62 12</span>
+                        </div>
+                        <div class="social-icon">
+                            <ul class="social-item">
+                                <li class="social-list">
+                                    <a href="" class="social-link">
+                                        <img src="~/assets/img/icons/facebook.svg" class="img-fluid" alt="social-icon" />
+                                    </a>
+                                </li>
+                                <li class="social-list">
+                                    <a href="" class="social-link">
+                                        <img src="~/assets/img/icons/linkedin.svg" class="img-fluid" alt="social-icon" />
+                                    </a>
+                                </li>
+                                <li class="social-list">
+                                    <a href="" class="social-link">
+                                        <img src="~/assets/img/icons/insta.svg" class="img-fluid" alt="social-icon" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer-menu accordion">
+                        <div class="footer-menu-list accordion-item">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Åbningstider
+                            </button>
+                            <ul class="accordion-collapse collapse" id="collapseOne" aria-labelledby="collapseOne">
+                                <li>Mandag - torsdag: 8-16</li>
+                                <li>Fredag: 8-15</li>
+                                <li>Lørdag - søndag: Lukket</li>
+                                <li>Helligdage: Lukket</li>
+                            </ul>
+                        </div>
+                        <div class="footer-menu-list accordion-item">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                Produkter
+                            </button>
+                            <ul class="accordion-collapse collapse" id="collapseTwo" aria-labelledby="collapseTwo">
+                                <li><a href="#0">Køb el</a></li>
+                                <li><a href="#0">Ladebokse</a></li>
+                                <li><a href="#0">TV-pakker</a></li>
+                                <li><a href="#0">Bestil internet</a></li>
+                                <li><a href="#0">Sælg el</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-menu-list accordion-item">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                Hjælp
+                            </button>
+                            <ul class="accordion-collapse collapse" id="collapseThree" aria-labelledby="collapseThree">
+                                <li><a href="#0">Driftsstatus</a></li>
+                                <li><a href="#0">Kundeservice</a></li>
+                                <li><a href="#0">Kontakt</a></li>
+                                <li><a href="#0">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="position-img">
+                        <img src="~/assets/img/bg-img/doodle03.svg" class="img-fluid" alt="img" />
+                    </div>
+                </div>
+
+                <div class="copyright">
+                    <span class="small">© 2024</span>
+                    <span class="small"><a href="#0">GDPR og persondata</a></span>
+                    <span class="small"><a href="#0">Kunderettigheder på elmarkedet</a></span>
+                    <span class="small"><a href="#0">Klagemuligheder på elmarkedet</a></span>
+                    <span class="small"><a href="#0">Handelsbetingelser</a></span>
+                    <span class="small"><a href="#0">Sitemap</a></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--------------------------jquery------------------>
+    <script src="~/assets/js/jquery.js"></script>
+
+    <!------------------------bootstrap 5--------------->
+    <script src="~/assets/libs/bs5/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/js/custom.js"></script>
+</body>
+</html>

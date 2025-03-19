@@ -1,0 +1,11 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.PurchaseAddressLookup>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	var flowName = Context?.Request?.Query["flowName"].ToString();
+	var packageType = Context?.Request?.Query["packageType"].ToString();
+}
+
+
+<h3>@flowName</h3>
+<h3>@packageType</h3>
