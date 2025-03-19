@@ -1,0 +1,18 @@
+{
+  "Name": "XmlSiteMapSettings - Search Engine Relative Priority - Slider (1)",
+  "Alias": "",
+  "EditorAlias": "Umbraco.Slider",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {
+    "enableRange": false,
+    "initVal1": 0.5,
+    "initVal2": 0.0,
+    "minVal": 0.1,
+    "maxVal": 1.0,
+    "step": 0.1
+  },
+  "Udi": "umb://data-type/3a1fad20afba4465b2dce049230c750e",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.4.0"
+}

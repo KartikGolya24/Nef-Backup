@@ -1,0 +1,65 @@
+{
+  "Name": "XmlSiteMapSettings",
+  "Alias": "xmlSiteMapSettings",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-defrag",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/3a191b3dafc04e468ef53b9ee92592a7",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "077d4801-6667-4659-bb94-3fd9842322d0",
+      "Name": "XML Sitemap Settings",
+      "Alias": "xmlSitemapSettings",
+      "PropertyTypes": [
+        {
+          "Key": "00d39313-bdc1-4661-bd60-3a54bf96330a",
+          "Alias": "searchEngineChangeFrequency",
+          "DataType": "umb://data-type/9ff309c031d74ce6939f41255ab0b878",
+          "Name": "Search Engine Change Frequency",
+          "SortOrder": 1
+        },
+        {
+          "Key": "2be45a2e-f254-4018-8195-c79486f45009",
+          "Alias": "searchEngineRelativePriority",
+          "DataType": "umb://data-type/3a1fad20afba4465b2dce049230c750e",
+          "Name": "Search Engine Relative Priority"
+        },
+        {
+          "Key": "a33745e2-8f9c-4b5d-8ced-d6e2aae460cb",
+          "Alias": "hideFromXmlSitemap",
+          "DataType": "umb://data-type/fda9fd3d74e348159386271bb3bb0ca8",
+          "Name": "Hide From Xml Sitemap",
+          "SortOrder": 2
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/0667cf81379a44deaf7878ed6a4c6dd5",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/3a1fad20afba4465b2dce049230c750e",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/9ff309c031d74ce6939f41255ab0b878",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/fda9fd3d74e348159386271bb3bb0ca8",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/3a191b3dafc04e468ef53b9ee92592a7",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.4.0"
+}
