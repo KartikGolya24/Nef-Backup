@@ -5,13 +5,12 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.PurchaseAddressLookup>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
-    var flowName = Context?.Request?.Form["flowName"].ToString();
-    var packageType = Context?.Request?.Form["packageType"].ToString();
-    var tvPackageStatus = Context?.Request?.Form["tvPackageStatus"].ToString();
-    var fiberPackageStatus = Context?.Request?.Form["fiberPackageStatus"].ToString();
-    var address = Context?.Request?.Form["address"].ToString();
+    var flowName = Context?.Request?.Form["flowName"].FirstOrDefault() ?? "Privat";
+    var packageType = Context?.Request?.Form["packageType"].FirstOrDefault() ?? "fiber";
+    var tvPackageStatus = Context?.Request?.Form["tvPackageStatus"].FirstOrDefault() ?? "";
+    var fiberPackageStatus = Context?.Request?.Form["fiberPackageStatus"].FirstOrDefault() ?? "1";
+    var address = Context?.Request?.Form["address"].FirstOrDefault() ?? "Søg";
 }
-
 <input type="hidden" id="flowName" value="@flowName" />
 <input type="hidden" id="packageType" value="@packageType" />
 <input type="hidden" id="tvPackageStatus" value="@tvPackageStatus" />
