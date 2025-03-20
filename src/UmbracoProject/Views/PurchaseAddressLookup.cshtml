@@ -5,10 +5,11 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.PurchaseAddressLookup>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
-    var flowName = Context?.Request?.Query["flowName"].ToString();
-    var packageType = Context?.Request?.Query["packageType"].ToString();
-    var tvPackageStatus = Context?.Request?.Query["tvPackageStatus"].ToString();
-    var fiberPackageStatus = Context?.Request?.Query["fiberPackageStatus"].ToString();
+    var flowName = Context?.Request?.Form["flowName"].ToString();
+    var packageType = Context?.Request?.Form["packageType"].ToString();
+    var tvPackageStatus = Context?.Request?.Form["tvPackageStatus"].ToString();
+    var fiberPackageStatus = Context?.Request?.Form["fiberPackageStatus"].ToString();
+    var address = Context?.Request?.Form["address"].ToString();
 }
 
 <input type="hidden" id="flowName" value="@flowName" />
@@ -21,8 +22,8 @@
         <div class="container">
             <h2 class="title"> @(packageType == "tv" ? "Kan jeg få nef TV?" : "Kan jeg få nef Fiber?")</h2>
             <div class="form-group autocomplete-container">
-                <input type="text" id="adresse" class="form-control " placeholder="Søg" aria-label="Søg" />
-                <button type="button" disabled class="btn @(packageType == "tv" ? "dark_purple_btn" : "dark_blue_btn") location-search-button">Søg</button>
+                <input type="text" id="adresse" class="form-control " placeholder="Søg" aria-label="Søg" value="@address" />
+                <button type="button" class="btn @(packageType == "tv" ? "dark_purple_btn" : "dark_blue_btn") location-search-button">Søg</button>
             </div>
             <div class="row justify-content-center">
                 <div class="col-xl-4">

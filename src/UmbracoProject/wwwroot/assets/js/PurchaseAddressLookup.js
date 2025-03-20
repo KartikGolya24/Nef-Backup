@@ -10,6 +10,8 @@ dawaAutocomplete.dawaAutocomplete(document.getElementById("adresse"), {
 });
 
 $(document).ready(function () {
+
+
     var packageType = $("#packageType").val();
     var packageContainer = $("#packagesList");
     var UrlForPackages = "";
@@ -57,5 +59,6 @@ $(document).ready(function () {
             }
         })
     }
+
 
 })
