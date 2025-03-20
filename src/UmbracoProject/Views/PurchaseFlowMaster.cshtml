@@ -24,9 +24,13 @@
     <header class="header order-header">
         <div class="container-xl">
             <nav class="navbar">
-                <a href="" class="header-logo">
-                    <img src="@navigation?.HeaderLogo?.MediaUrl()" class="img-fluid" alt="header-logo" />
-                </a>
+                @if (!string.IsNullOrWhiteSpace(navigation?.HeaderLogo?.MediaUrl()))
+                {
+                    <a href="@(!string.IsNullOrWhiteSpace(navigation?.HeaderLogoUrl?.Url) ? navigation?.HeaderLogoUrl?.Url :"")" class="header-logo">
+
+                        <img src="@navigation?.HeaderLogo?.MediaUrl()" class="img-fluid" alt="header-logo" />
+                    </a>
+                }
                 @if (navigation?.Menus != null && navigation?.Menus.Count() > 0)
                 {
 
@@ -73,7 +77,7 @@
                 @if (navigation?.TopFooterButtonList != null && navigation?.TopFooterButtonList.Count > 0)
                 {
                     <div class="multiple-buttons">
-                            @Html.GetBlockListHtml(navigation.TopFooterButtonList)
+                        @Html.GetBlockListHtml(navigation.TopFooterButtonList)
                     </div>
                 }
             </div>

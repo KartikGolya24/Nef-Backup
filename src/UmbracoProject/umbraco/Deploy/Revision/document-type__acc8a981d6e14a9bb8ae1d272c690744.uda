@@ -51,6 +51,13 @@
           "Alias": "headerLogo",
           "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
           "Name": "Header Logo"
+        },
+        {
+          "Key": "d86f701d-838c-4390-bcd3-900d07f19971",
+          "Alias": "headerLogoUrl",
+          "DataType": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
+          "Name": "Header Logo Url",
+          "SortOrder": 1
         }
       ]
     },
@@ -176,6 +183,10 @@
     },
     {
       "Udi": "umb://data-type/86da3672f5a640b3a5bce98af677671f",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
       "Ordering": true
     },
     {
