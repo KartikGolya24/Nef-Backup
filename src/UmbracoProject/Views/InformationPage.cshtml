@@ -12,9 +12,12 @@
                 @Html?.GetBlockListHtml(Model?.ButtonList)
             </div>
         </div>
+        @if(!string.IsNullOrWhiteSpace(Model?.IconImage?.MediaUrl())){
+        
         <div class="doodles-img">
             <img src="@Model?.IconImage?.MediaUrl()" class="img-fluid" alt="img">
         </div>
+        }
     </div>
 </div>
 
