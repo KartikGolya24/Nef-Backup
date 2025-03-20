@@ -41,9 +41,15 @@ $(document).ready(function () {
                         TvPackageStatus = null;
                     }
 
-                    console.log(res)
                     var pageUrl = `${origin}${redirectUrl}`;
-                    postData(flowName, packageType, pageUrl, TvPackageStatus, FiberPackageStatus, addressName)
+                    var expires = 86400;//24 hours
+                    document.cookie = "flowName=" + flowName + "; path=/;max-age=" + expires;
+                    document.cookie = "packageType=" + packageType + "; path=/;max-age=" + expires;
+                    document.cookie = "tvPackageStatus=" + TvPackageStatus + "; path=/;max-age=" + expires;
+                    document.cookie = "fiberPackageStatus=" + FiberPackageStatus + "; path=/;max-age=" + expires;
+                    document.cookie = "addressValue=" + encodeURIComponent(addressName) + "; path=/;max-age=" + expires;
+                    window.location.href = pageUrl;
+                    
                 },
                 error: function () {
                     alert("error")
@@ -53,44 +59,4 @@ $(document).ready(function () {
             $(".location-search-button").prop("disabled", false);
         }
     })
-
-    function postData(flowName, packageType, redirectUrl, TvPackageStatus, FiberPackageStatus,address) {
-        var form = document.createElement("form");
-        form.method = "POST";
-        form.action = redirectUrl;
-
-        var flowInput = document.createElement("input");
-        flowInput.type = "hidden";
-        flowInput.name = "flowName";
-        flowInput.value = flowName;
-
-        var packageInput = document.createElement("input");
-        packageInput.type = "hidden";
-        packageInput.name = "packageType";
-        packageInput.value = packageType;
-
-        var tvPackageInput = document.createElement("input");
-        tvPackageInput.type = "hidden";
-        tvPackageInput.name = "tvPackageStatus";
-        tvPackageInput.value = TvPackageStatus;
-
-        var fiberPackageInput = document.createElement("input");
-        fiberPackageInput.type = "hidden";
-        fiberPackageInput.name = "fiberPackageStatus";
-        fiberPackageInput.value = FiberPackageStatus;
-
-        var addressInput = document.createElement("input");
-        addressInput.type = "hidden";
-        addressInput.name = "address";
-        addressInput.value = address;
-
-        form.appendChild(flowInput);
-        form.appendChild(packageInput);
-        form.appendChild(tvPackageInput);
-        form.appendChild(fiberPackageInput);
-        form.appendChild(addressInput);
-
-        document.body.appendChild(form);
-        form.submit();
-    }
 })

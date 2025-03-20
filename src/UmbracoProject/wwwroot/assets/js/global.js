@@ -22,7 +22,7 @@
                         resultsContainer.html("<li class='searched-item'>Fejl ved indlæsning af resultater.</li>").show();
                     }
                 });
-            }, 1500);
+            }, 1000);
         } else {
             resultsContainer.empty().hide();
         }
@@ -52,7 +52,7 @@
                         resultParentContainer.slideDown();
                     }
                 });
-            }, 1500);
+            }, 1000);
         } else {
             resultsContainer.empty();
             resultParentContainer.hide();
