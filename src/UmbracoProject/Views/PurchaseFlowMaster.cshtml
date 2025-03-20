@@ -73,10 +73,7 @@
                 @if (navigation?.TopFooterButtonList != null && navigation?.TopFooterButtonList.Count > 0)
                 {
                     <div class="multiple-buttons">
-                        @foreach (var item in navigation.TopFooterButtonList)
-                        {
                             @Html.GetBlockListHtml(navigation.TopFooterButtonList)
-                        }
                     </div>
                 }
             </div>
