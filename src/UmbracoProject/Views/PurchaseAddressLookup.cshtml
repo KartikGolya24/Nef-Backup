@@ -7,15 +7,13 @@
 @{
     var flowName = Context.Request.Cookies["flowName"];
     var packageType = Context.Request.Cookies["packageType"];
-    var tvPackageStatus = Context.Request.Cookies["tvPackageStatus"];
-    var fiberPackageStatus = Context.Request.Cookies["fiberPackageStatus"];
+    var packageStatus = Context.Request.Cookies["PackageStatus"];
     var address = Context.Request.Cookies["addressValue"];
 }
 
 <input type="hidden" id="flowName" value="@flowName" />
 <input type="hidden" id="packageType" value="@packageType" />
-<input type="hidden" id="tvPackageStatus" value="@tvPackageStatus" />
-<input type="hidden" id="fiberPackageStatus" value="@fiberPackageStatus" />
+<input type="hidden" id="packageStatus" value="@packageStatus" />
 
 <div class="account-action order-nef-internet">
     <div class="search-section">

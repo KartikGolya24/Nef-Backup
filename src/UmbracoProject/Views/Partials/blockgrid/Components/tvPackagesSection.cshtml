@@ -8,6 +8,8 @@
 @if (content != null)
 {
     <!-------------------------------------- pacakge --------------------->
+    <input type="hidden" id="package" value="tv" />
+    <input type="hidden" id="redirecturl" value="@addressLookupPageUrl" />
     <div class="pacakge-section @setting?.Theme">
         <div class="container-xl">
             <div class="section-heading">
@@ -28,34 +30,7 @@
             </div>
         </div>
     </div>
-    <!-------------------------------------------Modal ------------------------------->
-    <div class="modal fade"
-         id="searchTvPackages"
-         data-bs-keyboard="false"
-         tabindex="-1"
-         aria-labelledby="staticBackdropLabel">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header flex-column align-items-start pb-0 pt-64">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body pb-64">
-                    <div class="search-section py-0">
-                        <div class="container">
-                            <h2 class="title black-950 mb-40 text-center fw-600">@(!string.IsNullOrWhiteSpace(content.PopupHeading) ? content.PopupHeading : "Kan jeg få nef TV?")</h2>
-                            <div class="form-group mb-32 autocomplete-container">
-                                <input type="text" id="adresse" class="form-control" placeholder="@(!string.IsNullOrWhiteSpace(content.SearchPlaceholder) ? content.SearchPlaceholder : "Søg")" aria-label="Søg" />
-                                <button type="button" disabled data-package="tv" data-redirecturl="@addressLookupPageUrl" class="btn location-search-button @(!string.IsNullOrWhiteSpace(content.ButtonTheme) ? content.ButtonTheme : "dark_purple_btn")">@(!string.IsNullOrWhiteSpace(content.SearchButtonText) ? content.SearchButtonText : "Søg")</button>
-                                
-                            </div>
-                            <a href="#" class="btn border_dark_purple white_bg_btn mx-auto">Allerede kunde?</a>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    @await Html.PartialAsync("~/Views/Partials/_PurchaseAddressSearchLocation.cshtml")
 }
 <script src="https://cdn.dataforsyningen.dk/dawa/assets/dawa-autocomplete2/1.0.2/unfilled/dawa-autocomplete2.min.js"></script>
 <script asp-append-version="true" src="~/assets/js/packagescommon.output.min.js"></script>

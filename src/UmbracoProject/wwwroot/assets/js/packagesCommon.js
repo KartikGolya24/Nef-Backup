@@ -18,9 +18,9 @@ $(document).ready(function () {
 
     $(".location-search-button").on('click', function () {
         var flowName = "Privat";
-        var packageType = $(this).data("package");
+        var packageType = $("#package").val();
         var origin = window.location.origin;
-        var redirectUrl = $(this).data("redirecturl");
+        var redirectUrl = $("#redirecturl").val();
         if ($("#tab_id").hasClass("business-tab")) {
             flowName = "Business";
         }
@@ -31,22 +31,23 @@ $(document).ready(function () {
                 type: "Get",
                 success: function (res) {
                     debugger
+                    var PackageStatus = 1;
                     var TvPackageStatus = 1;
                     var FiberPackageStatus = 1;
+
                     if (packageType == "tv") {
-                        TvPackageStatus = res.tvPackageResult;
-                        FiberPackageStatus = null;
+                        PackageStatus = res.tvPackageResult;
                     } else {
-                        FiberPackageStatus = res.fiberConnectionResult;
-                        TvPackageStatus = null;
+                        PackageStatus = res.fiberConnectionResult;
                     }
 
                     var pageUrl = `${origin}${redirectUrl}`;
                     var expires = 86400;//24 hours
                     document.cookie = "flowName=" + flowName + "; path=/;max-age=" + expires;
                     document.cookie = "packageType=" + packageType + "; path=/;max-age=" + expires;
-                    document.cookie = "tvPackageStatus=" + TvPackageStatus + "; path=/;max-age=" + expires;
-                    document.cookie = "fiberPackageStatus=" + FiberPackageStatus + "; path=/;max-age=" + expires;
+                    document.cookie = "PackageStatus=" + PackageStatus + "; path=/;max-age=" + expires;
+                    //document.cookie = "tvPackageStatus=" + TvPackageStatus + "; path=/;max-age=" + expires;
+                    //document.cookie = "fiberPackageStatus=" + FiberPackageStatus + "; path=/;max-age=" + expires;
                     document.cookie = "addressValue=" + encodeURIComponent(addressName) + "; path=/;max-age=" + expires;
                     window.location.href = pageUrl;
                     
