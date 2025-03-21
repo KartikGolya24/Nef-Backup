@@ -1,0 +1,68 @@
+{
+  "Name": "Location Search",
+  "Alias": "locationSearch",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-item-arrangement",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/3a191b3dafc04e468ef53b9ee92592a7",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "5cd8b030-2feb-4b6a-add3-c278baf7c6f9",
+      "Name": "Location Popup Content",
+      "Alias": "locationPopupContent",
+      "PropertyTypes": [
+        {
+          "Key": "00db65eb-b41b-4295-b0c3-e8be736eafcc",
+          "Alias": "searchButtonText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Search Button Text",
+          "SortOrder": 2
+        },
+        {
+          "Key": "4ca51360-4a8d-432d-b5b5-f5f0d71e9fe5",
+          "Alias": "buttonTheme",
+          "DataType": "umb://data-type/36564b1fa93643ee88423df7234ea0bf",
+          "Name": "Button Theme",
+          "SortOrder": 3
+        },
+        {
+          "Key": "9b89111e-03e6-48da-9d6d-36e64f0057e9",
+          "Alias": "searchPlaceholder",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Search Placeholder",
+          "SortOrder": 1
+        },
+        {
+          "Key": "fc27e1e2-b255-4f04-93c1-42764d991fef",
+          "Alias": "popupHeading",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Popup Heading"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/ec2dc7dcd2c440a69d65eb0b93dbdb61",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/36564b1fa93643ee88423df7234ea0bf",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/3a191b3dafc04e468ef53b9ee92592a7",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.4.0"
+}
