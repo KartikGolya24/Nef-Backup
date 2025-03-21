@@ -1,0 +1,29 @@
+{
+  "Name": "Purchase Address Lookup - Categories - Block List",
+  "Alias": "",
+  "EditorAlias": "Umbraco.BlockList",
+  "Configuration": {
+    "blocks": [
+      {
+        "contentElementTypeKey": "df7cf757-464a-4d0d-ad42-e1749aadcb9b",
+        "label": "{{categoryName}}",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      }
+    ],
+    "validationLimit": {
+      "max": 3
+    },
+    "useSingleBlockMode": false,
+    "useLiveEditing": false,
+    "useInlineEditingAsDefault": false
+  },
+  "Udi": "umb://data-type/3ea15d23aff745fc9db124cbcd31bf12",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/df7cf757464a4d0dad42e1749aadcb9b"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.4.0"
+}

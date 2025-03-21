@@ -162,8 +162,9 @@ $(document).ready(function () {
     }
 
     function updateAllEqualHeights() {
-        equalizeHeights(".service-card .card-outer");
+        equalizeHeights(".package-card .card-heading");
         equalizeHeights(".package-list .package-card");
+        equalizeHeights(".service-card .card-outer");
     }
 
     // Two-line package data truncation

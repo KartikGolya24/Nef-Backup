@@ -1,0 +1,72 @@
+{
+  "Name": "Tv Categories Block",
+  "Alias": "tvCategoriesBlock",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/a08501f3b69d418b9399a129da897480",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "ad6bd2ec-8cb0-48e7-b529-69f25e7deb0a",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "51e1e182-8e80-4856-be85-b9eb17194440",
+          "Alias": "description",
+          "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+          "Name": "Description",
+          "SortOrder": 2
+        },
+        {
+          "Key": "5c9a7ced-5bd7-402e-8e42-c9e45f9d9d62",
+          "Alias": "icon",
+          "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
+          "Name": "Icon"
+        },
+        {
+          "Key": "81dfddd6-11e5-4632-b5f2-baa3ee149e0c",
+          "Alias": "categoryName",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Category Name",
+          "SortOrder": 1
+        },
+        {
+          "Key": "e497ae1d-4536-42b0-b985-9fc142f0d113",
+          "Alias": "tvCostText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Tv Cost Text",
+          "SortOrder": 3
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/df7cf757464a4d0dad42e1749aadcb9b",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/a08501f3b69d418b9399a129da897480",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.4.0"
+}

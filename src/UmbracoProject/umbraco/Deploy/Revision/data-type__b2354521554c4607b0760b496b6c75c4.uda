@@ -29,6 +29,19 @@
         "editorSize": "medium",
         "inlineEditing": false,
         "forceHideContentEditorInOverlay": false
+      },
+      {
+        "columnSpanOptions": [],
+        "rowMinSpan": 1,
+        "rowMaxSpan": 1,
+        "allowAtRoot": true,
+        "allowInAreas": true,
+        "areas": [],
+        "contentElementTypeKey": "3b987f70-d511-4485-b091-f70511b13d04",
+        "label": "{{headingText}}",
+        "editorSize": "medium",
+        "inlineEditing": false,
+        "forceHideContentEditorInOverlay": false
       }
     ],
     "blockGroups": [],
@@ -41,6 +54,9 @@
     {
       "Udi": "umb://data-type-container/388109200d2343119601cb2b6023642b",
       "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/3b987f70d5114485b091f70511b13d04"
     },
     {
       "Udi": "umb://document-type/4d41b70fba514cd599ac0bfd0fdcce06"

@@ -786,8 +786,10 @@ li {
                 flex: 0 0 80px;
                 text-align: center;
 
+
                 img {
                     height: 28px;
+                    object-fit: contain;
                 }
 
                 .item-title {
@@ -3443,7 +3445,9 @@ li {
                             svg, img {
                                 width: 16px;
                                 height: 16px;
+                                flex-shrink: 0;
                             }
+
                         }
                     }
                 }

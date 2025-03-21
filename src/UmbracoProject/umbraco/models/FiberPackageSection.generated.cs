@@ -20,7 +20,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Fiber Package Section</summary>
 	[PublishedModel("fiberPackageSection")]
-	public partial class FiberPackageSection : PublishedElementModel, ILocationSearch
+	public partial class FiberPackageSection : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -64,37 +64,5 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("heading")]
 		public virtual string Heading => this.Value<string>(_publishedValueFallback, "heading");
-
-		///<summary>
-		/// Button Theme
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("buttonTheme")]
-		public virtual string ButtonTheme => global::Umbraco.Cms.Web.Common.PublishedModels.LocationSearch.GetButtonTheme(this, _publishedValueFallback);
-
-		///<summary>
-		/// Popup Heading
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("popupHeading")]
-		public virtual string PopupHeading => global::Umbraco.Cms.Web.Common.PublishedModels.LocationSearch.GetPopupHeading(this, _publishedValueFallback);
-
-		///<summary>
-		/// Search Button Text
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("searchButtonText")]
-		public virtual string SearchButtonText => global::Umbraco.Cms.Web.Common.PublishedModels.LocationSearch.GetSearchButtonText(this, _publishedValueFallback);
-
-		///<summary>
-		/// Search Placeholder
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("searchPlaceholder")]
-		public virtual string SearchPlaceholder => global::Umbraco.Cms.Web.Common.PublishedModels.LocationSearch.GetSearchPlaceholder(this, _publishedValueFallback);
 	}
 }

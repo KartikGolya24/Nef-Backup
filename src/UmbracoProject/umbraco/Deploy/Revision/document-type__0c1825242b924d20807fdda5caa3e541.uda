@@ -14,28 +14,27 @@
   "Parent": "umb://document-type/168519c29f0d40be8e321bd3ce914bdf",
   "CompositionContentTypes": [
     "umb://document-type/168519c29f0d40be8e321bd3ce914bdf",
-    "umb://document-type/c9ab57ded3b44526a7ac22bacf19a079",
-    "umb://document-type/ec2dc7dcd2c440a69d65eb0b93dbdb61"
+    "umb://document-type/c9ab57ded3b44526a7ac22bacf19a079"
   ],
   "PropertyGroups": [
     {
-      "Key": "d9c2d581-9fb2-4082-bf75-ce9883e44e03",
-      "Name": "Packages Content",
+      "Key": "0d6e2b05-87d3-446a-9b4a-bda257cd1fbc",
+      "Name": "Tv Categories Section",
       "SortOrder": 1,
-      "Alias": "packagesContent",
+      "Alias": "tvCategoriesSection",
       "PropertyTypes": [
         {
-          "Key": "17d0b9b3-435a-42ed-b154-4f77da76c74e",
-          "Alias": "tvPackagesHeading",
-          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-          "Name": "Tv Packages Heading"
+          "Key": "20d459c1-5e0e-434c-be78-1c8046d1508a",
+          "Alias": "categories",
+          "DataType": "umb://data-type/3ea15d23aff745fc9db124cbcd31bf12",
+          "Name": "Categories",
+          "SortOrder": 1
         },
         {
-          "Key": "414a6dbd-87fd-4977-9057-81aa169f3bb3",
-          "Alias": "fiberPackagesHeading",
+          "Key": "816e2200-ad93-4888-9420-876c3e1cbd71",
+          "Alias": "categoySectionHeading",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-          "Name": "Fiber Packages Heading",
-          "SortOrder": 1
+          "Name": "Categoy Section Heading"
         }
       ]
     }
@@ -48,15 +47,15 @@
       "Ordering": true
     },
     {
+      "Udi": "umb://data-type/3ea15d23aff745fc9db124cbcd31bf12",
+      "Ordering": true
+    },
+    {
       "Udi": "umb://document-type/168519c29f0d40be8e321bd3ce914bdf",
       "Ordering": true
     },
     {
       "Udi": "umb://document-type/c9ab57ded3b44526a7ac22bacf19a079",
-      "Ordering": true
-    },
-    {
-      "Udi": "umb://document-type/ec2dc7dcd2c440a69d65eb0b93dbdb61",
       "Ordering": true
     },
     {

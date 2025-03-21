@@ -99,7 +99,7 @@
                 .card-detail {
                     .card-header {
                         .card-heading {
-                            height: 122px;
+                            height: 162px;
                         }
                     }
                 }
@@ -118,6 +118,7 @@
     .h-proposition {
         height: 512px !important;
     }
+
     .pacakge-section {
         .package-list {
             &.tv_package {
@@ -127,6 +128,7 @@
             }
         }
     }
+
     .pacakge-section {
         .package-list {
             .package-card {
@@ -135,6 +137,7 @@
                         margin-bottom: 12px;
                     }
                 }
+
                 .package-footer {
                     .card-footer {
                         .company-logo {
@@ -182,6 +185,7 @@
             }
         }
     }
+
     .alt-section .section-position-img.bottom-right-center {
         transform: translate(-40%, 65%);
         top: 0;
@@ -286,6 +290,7 @@
             display: block;
         }
     }
+
     .pacakge-section {
         [class*=col-lg-5] {
             width: 34.375%;
@@ -346,10 +351,12 @@
                 margin-bottom: 64px;
             }
         }
+
         &.electricity-banner {
             [class*=col-md] {
                 width: 100%;
             }
+
             .page-title {
                 margin-bottom: 64px;
             }
@@ -554,12 +561,14 @@
         .section-detail {
             max-width: 100%;
             padding: 0;
+
             .section-content {
                 p {
                     max-width: 100%;
                 }
             }
         }
+
         .buy_charging-doodles {
             img {
                 height: 300px;
@@ -620,6 +629,7 @@
 
                 .position-img {
                     position: static;
+
                     img {
                         object-fit: inherit;
                         height: auto;
@@ -673,6 +683,7 @@
 
         .search-wrapper {
             position: relative;
+
             .search-dropdown {
                 position: absolute;
                 top: 150%;
@@ -686,17 +697,21 @@
                 border-radius: 16px;
                 padding: 10px;
                 display: none;
+
                 .search-input {
                     width: auto;
                     margin-bottom: 10px;
                 }
+
                 .searched-content {
                     border-top: 1px solid $black-100;
                     padding-bottom: 4px;
                     max-height: 172px;
                     overflow-y: auto;
+
                     li {
                         border-bottom: 1px solid $black-100;
+
                         a {
                             display: flex;
                             align-items: center;
@@ -704,19 +719,25 @@
                             color: $black-950;
                             padding: 6px;
                             font-size: 14px;
+
                             .icon {
                                 width: 20px;
                                 height: 20px;
+
                                 &.colored {
                                     display: none;
                                 }
                             }
-                            &:hover, &:focus {
+
+                            &:hover,
+                            &:focus {
                                 color: $light_blue;
+
                                 .icon {
                                     &.black {
                                         display: none;
                                     }
+
                                     &.colored {
                                         display: inline-block;
                                     }
@@ -922,23 +943,28 @@
 
                 .mobile-menu {
                     display: block;
-                    
+
                     .search-wrapper {
                         display: block;
                         padding: 0 16px;
+
                         .search-input {
                             width: 100%;
+
                             .form-control {
                                 background-color: transparent;
                                 padding-left: 46px;
                                 color: $black-950;
+
                                 &::placeholder {
                                     color: $black-700;
                                 }
                             }
                         }
+
                         .search-dropdown {
                             position: static;
+
                             .searched-content {
                                 border-top: none;
                             }
@@ -976,19 +1002,24 @@
                     .search-wrapper {
                         display: block;
                         padding: 0 16px;
+
                         .search-input {
                             width: 100%;
+
                             .form-control {
                                 background-color: transparent;
                                 padding-left: 46px;
                                 color: $white;
+
                                 &::placeholder {
                                     color: $black-100;
                                 }
                             }
                         }
+
                         .search-dropdown {
                             position: static;
+
                             .searched-content {
                                 border-top: none;
                             }
@@ -1157,11 +1188,13 @@
             }
         }
     }
+
     .pacakge-section {
         [class*=col-md-5] {
             margin-bottom: 32px;
         }
     }
+
     .contact-us .contact-us-detail .sidebar-list {
         margin: 0 auto;
     }
@@ -1293,11 +1326,13 @@
             }
         }
     }
+
     .faq-section {
         [class*=img] {
             display: none;
         }
     }
+
     .pacakge-section {
         .package-list {
             .package-card {
@@ -1336,7 +1371,8 @@
                             flex-wrap: wrap;
                             gap: 16px 24px;
                             margin-top: 0;
-                            & > .label {
+
+                            &>.label {
                                 width: 100%;
                             }
                         }
@@ -1344,9 +1380,13 @@
                 }
             }
         }
+
+        .info-correct .billing-box {
+            padding: 12px 16px;
+        }
     }
 
-    .header  {
+    .header {
         &.order-header {
             .navbar {
                 .header-nav {
@@ -1355,6 +1395,7 @@
                             .nav-item {
                                 display: none;
                             }
+
                             .mobile-header-nav {
                                 display: flex;
                                 align-items: center;
@@ -1365,7 +1406,7 @@
             }
         }
     }
-    
+
     .status-alt-sidebar {
         .status-left-part {
             .status-boxes-outer {
@@ -1373,6 +1414,7 @@
             }
         }
     }
+
     .electricity-price-slider {
         padding-left: 16px;
         padding-right: 16px;
@@ -1513,20 +1555,20 @@
 }
 
 @media screen and (max-width: 480px) {
-    
+
     .order-nef-power {
-        .order-nef-card  {
+        .order-nef-card {
             .position-img {
                 max-height: 150px;
             }
         }
     }
+
     .alt-section .section-img img.h-432 {
         height: 300px;
     }
-    .order-nef-power .order-nef-card .card-body
 
-    .status-alt-sidebar {
+    .order-nef-power .order-nef-card .card-body .status-alt-sidebar {
         .sidebar {
             .sidebar-item {
                 .sidebar-list {
@@ -1546,9 +1588,10 @@
     }
 
 }
+
 @media screen and (max-width: 470px) {
     .order-nef-power {
-        .order-nef-card  {
+        .order-nef-card {
             .position-img {
                 display: none;
             }
@@ -1556,11 +1599,25 @@
     }
 }
 
+@media screen and (max-width: 399px) {
+    .account-action {
+        .info-correct {
+            .info-box {
+                .info-header {
+                    align-items: flex-start;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 360px) {
-    
+
     .header .navbar {
         gap: 20px;
     }
+
     .page-title .contact-section .multiple-buttons {
         justify-content: center;
     }

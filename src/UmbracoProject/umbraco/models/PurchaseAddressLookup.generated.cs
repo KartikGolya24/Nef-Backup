@@ -20,7 +20,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Purchase Address Lookup</summary>
 	[PublishedModel("purchaseAddressLookup")]
-	public partial class PurchaseAddressLookup : PurchaseFlow, ILocationSearch, ISEocontrols
+	public partial class PurchaseAddressLookup : PurchaseFlow, ISEocontrols
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -50,52 +50,20 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Fiber Packages Heading
+		/// Categories
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("fiberPackagesHeading")]
-		public virtual string FiberPackagesHeading => this.Value<string>(_publishedValueFallback, "fiberPackagesHeading");
+		[ImplementPropertyType("categories")]
+		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel Categories => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "categories");
 
 		///<summary>
-		/// Tv Packages Heading
+		/// Categoy Section Heading
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("tvPackagesHeading")]
-		public virtual string TvPackagesHeading => this.Value<string>(_publishedValueFallback, "tvPackagesHeading");
-
-		///<summary>
-		/// Button Theme
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("buttonTheme")]
-		public virtual string ButtonTheme => global::Umbraco.Cms.Web.Common.PublishedModels.LocationSearch.GetButtonTheme(this, _publishedValueFallback);
-
-		///<summary>
-		/// Popup Heading
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("popupHeading")]
-		public virtual string PopupHeading => global::Umbraco.Cms.Web.Common.PublishedModels.LocationSearch.GetPopupHeading(this, _publishedValueFallback);
-
-		///<summary>
-		/// Search Button Text
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("searchButtonText")]
-		public virtual string SearchButtonText => global::Umbraco.Cms.Web.Common.PublishedModels.LocationSearch.GetSearchButtonText(this, _publishedValueFallback);
-
-		///<summary>
-		/// Search Placeholder
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("searchPlaceholder")]
-		public virtual string SearchPlaceholder => global::Umbraco.Cms.Web.Common.PublishedModels.LocationSearch.GetSearchPlaceholder(this, _publishedValueFallback);
+		[ImplementPropertyType("categoySectionHeading")]
+		public virtual string CategoySectionHeading => this.Value<string>(_publishedValueFallback, "categoySectionHeading");
 
 		///<summary>
 		/// Meta Description
