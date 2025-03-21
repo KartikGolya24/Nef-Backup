@@ -19,9 +19,9 @@
   "PropertyGroups": [
     {
       "Key": "0d6e2b05-87d3-446a-9b4a-bda257cd1fbc",
-      "Name": "Tv Categories Section",
+      "Name": "Content",
       "SortOrder": 1,
-      "Alias": "tvCategoriesSection",
+      "Alias": "content",
       "PropertyTypes": [
         {
           "Key": "20d459c1-5e0e-434c-be78-1c8046d1508a",
@@ -35,6 +35,20 @@
           "Alias": "categoySectionHeading",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
           "Name": "Categoy Section Heading"
+        },
+        {
+          "Key": "d1dce427-4a01-48d7-a987-b55cd6325ada",
+          "Alias": "notSuccessIcon",
+          "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
+          "Name": "Not Success Icon",
+          "SortOrder": 3
+        },
+        {
+          "Key": "e2b81518-a0e2-40f3-aa41-8746175bc280",
+          "Alias": "successIcon",
+          "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
+          "Name": "Success Icon",
+          "SortOrder": 2
         }
       ]
     }
@@ -44,6 +58,10 @@
   "Dependencies": [
     {
       "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
       "Ordering": true
     },
     {
