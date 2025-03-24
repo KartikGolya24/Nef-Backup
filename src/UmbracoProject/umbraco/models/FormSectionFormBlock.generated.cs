@@ -50,14 +50,6 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// After Success Redirection Button
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("afterSuccessRedirectionButton")]
-		public virtual global::Umbraco.Cms.Core.Models.Link AfterSuccessRedirectionButton => this.Value<global::Umbraco.Cms.Core.Models.Link>(_publishedValueFallback, "afterSuccessRedirectionButton");
-
-		///<summary>
 		/// Button Text Italic
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
@@ -102,21 +94,5 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("submitButtonTheme")]
 		public virtual string SubmitButtonTheme => this.Value<string>(_publishedValueFallback, "submitButtonTheme");
-
-		///<summary>
-		/// Success Message
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("successMessage")]
-		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString SuccessMessage => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "successMessage");
-
-		///<summary>
-		/// Success Message Icon
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("successMessageIcon")]
-		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops SuccessMessageIcon => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "successMessageIcon");
 	}
 }

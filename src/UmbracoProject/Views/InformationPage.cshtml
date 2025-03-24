@@ -12,11 +12,11 @@
                 @Html?.GetBlockListHtml(Model?.ButtonList)
             </div>
         </div>
-        @if(!string.IsNullOrWhiteSpace(Model?.IconImage?.MediaUrl()))
+        @if (!string.IsNullOrWhiteSpace(Model?.IconImage?.MediaUrl()))
         {
-         <div class="doodles-img">
-             <img src="@Model?.IconImage?.MediaUrl()" class="img-fluid" alt="img">
-         </div>
+            <div class="doodles-img">
+                <img src="@Model?.IconImage?.MediaUrl()" class="img-fluid" alt="img">
+            </div>
         }
     </div>
 </div>
@@ -220,6 +220,16 @@
                                         </div>
                                     </div>
                                 }
+                                @if (alias == FormSectionFormBlock.ModelTypeAlias)
+                                {
+                                    var formContentModel = item?.Content as FormSectionFormBlock;
+                                    var model = new UmbracoProject.App_Code.Models.FormViewModel()
+                                    {
+                            FormId = formContentModel?.Form ?? Guid.Empty,
+                            FormContent = formContentModel
+                                    };
+                                    @await Html.PartialAsync("~/Views/Partials/_RenderForm.cshtml", model)
+                                }
                             }
                         }
 
@@ -275,7 +285,7 @@
         </div>
     </div>
 </div>
-
+<script src="~/assets/js/forms.output.min.js"></script>
 @* 
 <div class="container">
     <label for="options" class="form-label">Vælg en mulighed</label>

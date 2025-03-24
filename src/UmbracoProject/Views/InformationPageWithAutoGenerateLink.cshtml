@@ -29,54 +29,71 @@
                         {
                             @foreach (var block in Model?.Blocks)
                             {
-                                var blockModel = block?.Content as InformationContentBlock;
-                                var id = blockModel?.Heading?.Replace(" ", "_");
-                                <div class="status-box" id="@id">
+                                var alias = block.Content.ContentType.Alias;
+                                @if (alias == InformationContentBlock.ModelTypeAlias)
+                                {
+                                    var blockModel = block?.Content as InformationContentBlock;
+                                    var id = blockModel?.Heading?.Replace(" ", "_");
+                                    <div class="status-box" id="@id">
 
-                                    <div class="box-header">
-                                        <h3 class="black-950 fw-600">@blockModel?.Heading</h3>
-                                        @Html?.Raw(blockModel?.DescriptionText)
-                                    </div>
-
-                                    @if (blockModel?.DotList?.Count() > 0)
-                                    {
-                                        <ul class="dot-list">
-
-                                            @foreach (var text in blockModel?.DotList)
-                                            {
-                                                <li>
-                                                    <p class="para">
-                                                        @text
-                                                    </p>
-                                                </li>
-                                            }
-                                        </ul>
-                                    }
-
-                                    @if (!string.IsNullOrWhiteSpace(blockModel?.HelpDescriptionText?.ToString()) || !string.IsNullOrWhiteSpace(blockModel?.ButtonLink?.Name))
-                                    {
-                                        <div class="box-footer">
-                                            @Html?.Raw(blockModel?.HelpDescriptionText)
-                                            @if (!string.IsNullOrWhiteSpace(blockModel?.ButtonLink?.Name))
-                                            {
-                                                <a href="@blockModel?.ButtonLink?.Url" class="btn light_blue_btn">
-                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <g clip-path="url(#clip0_25_3041)">
-                                                            <path d="M2.0714 7.11625C1.51266 7.01905 1.51266 6.21694 2.0714 6.11974C4.09562 5.76758 5.70561 4.22579 6.14497 2.21868L6.17866 2.06483C6.29954 1.51261 7.08582 1.50917 7.21153 2.06031L7.25242 2.23961C7.70805 4.23723 9.31848 5.76602 11.3371 6.11719C11.8987 6.21491 11.8987 7.02109 11.3371 7.11878C9.31848 7.46997 7.70805 8.99876 7.25242 10.9964L7.21153 11.1757C7.08582 11.7268 6.29954 11.7234 6.17866 11.1712L6.14497 11.0173C5.70561 9.01022 4.09562 7.46841 2.0714 7.11625Z" stroke="#ffffff" stroke-width="1.71003" stroke-linecap="round" stroke-linejoin="round"></path>
-                                                            <path d="M11.2527 21.6614C10.4273 22.1928 9.44491 22.4258 8.4688 22.3215C7.49267 22.2172 6.58165 21.7821 5.88717 21.0882L5.28216 20.4832C5.0138 20.2119 4.86328 19.8457 4.86328 19.4642C4.86328 19.0826 5.0138 18.7166 5.28216 18.4453L7.82959 15.9137C8.09813 15.6464 8.46165 15.4963 8.8406 15.4963C9.21954 15.4963 9.58306 15.6464 9.85161 15.9137C10.1229 16.1821 10.489 16.3326 10.8706 16.3326C11.2521 16.3326 11.6183 16.1821 11.8895 15.9137L15.9495 11.8538C16.2179 11.5825 16.3684 11.2164 16.3684 10.8348C16.3684 10.4532 16.2179 10.0871 15.9495 9.81583C15.6821 9.54729 15.532 9.18376 15.532 8.80482C15.532 8.42587 15.6821 8.06235 15.9495 7.7938L18.4014 5.24638C18.6727 4.97804 19.0389 4.82751 19.4203 4.82751C19.802 4.82751 20.1682 4.97804 20.4393 5.24638L21.0443 5.85139C21.7506 6.53607 22.2007 7.44226 22.3195 8.41872C22.4382 9.3952 22.2187 10.3829 21.6971 11.2169C18.9209 15.3386 15.3744 18.8852 11.2527 21.6614Z" stroke="#ffffff" stroke-width="1.71003" stroke-linecap="round" stroke-linejoin="round"></path>
-                                                        </g>
-                                                        <defs>
-                                                            <clipPath id="clip0_25_3041">
-                                                                <rect width="24" height="24" fill="white"></rect>
-                                                            </clipPath>
-                                                        </defs>
-                                                    </svg>
-                                                    @blockModel?.ButtonLink?.Name
-                                                </a>
-                                            }
+                                        <div class="box-header">
+                                            <h3 class="black-950 fw-600">@blockModel?.Heading</h3>
+                                            @Html?.Raw(blockModel?.DescriptionText)
                                         </div>
-                                    }
-                                </div>
+
+                                        @if (blockModel?.DotList?.Count() > 0)
+                                        {
+                                            <ul class="dot-list">
+
+                                                @foreach (var text in blockModel?.DotList)
+                                                {
+                                                    <li>
+                                                        <p class="para">
+                                                            @text
+                                                        </p>
+                                                    </li>
+                                                }
+                                            </ul>
+                                        }
+
+                                        @if (!string.IsNullOrWhiteSpace(blockModel?.HelpDescriptionText?.ToString()) || !string.IsNullOrWhiteSpace(blockModel?.ButtonLink?.Name))
+                                        {
+                                            <div class="box-footer">
+                                                @Html?.Raw(blockModel?.HelpDescriptionText)
+                                                @if (!string.IsNullOrWhiteSpace(blockModel?.ButtonLink?.Name))
+                                                {
+                                                    <a href="@blockModel?.ButtonLink?.Url" class="btn light_blue_btn">
+                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g clip-path="url(#clip0_25_3041)">
+                                                                <path d="M2.0714 7.11625C1.51266 7.01905 1.51266 6.21694 2.0714 6.11974C4.09562 5.76758 5.70561 4.22579 6.14497 2.21868L6.17866 2.06483C6.29954 1.51261 7.08582 1.50917 7.21153 2.06031L7.25242 2.23961C7.70805 4.23723 9.31848 5.76602 11.3371 6.11719C11.8987 6.21491 11.8987 7.02109 11.3371 7.11878C9.31848 7.46997 7.70805 8.99876 7.25242 10.9964L7.21153 11.1757C7.08582 11.7268 6.29954 11.7234 6.17866 11.1712L6.14497 11.0173C5.70561 9.01022 4.09562 7.46841 2.0714 7.11625Z" stroke="#ffffff" stroke-width="1.71003" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                <path d="M11.2527 21.6614C10.4273 22.1928 9.44491 22.4258 8.4688 22.3215C7.49267 22.2172 6.58165 21.7821 5.88717 21.0882L5.28216 20.4832C5.0138 20.2119 4.86328 19.8457 4.86328 19.4642C4.86328 19.0826 5.0138 18.7166 5.28216 18.4453L7.82959 15.9137C8.09813 15.6464 8.46165 15.4963 8.8406 15.4963C9.21954 15.4963 9.58306 15.6464 9.85161 15.9137C10.1229 16.1821 10.489 16.3326 10.8706 16.3326C11.2521 16.3326 11.6183 16.1821 11.8895 15.9137L15.9495 11.8538C16.2179 11.5825 16.3684 11.2164 16.3684 10.8348C16.3684 10.4532 16.2179 10.0871 15.9495 9.81583C15.6821 9.54729 15.532 9.18376 15.532 8.80482C15.532 8.42587 15.6821 8.06235 15.9495 7.7938L18.4014 5.24638C18.6727 4.97804 19.0389 4.82751 19.4203 4.82751C19.802 4.82751 20.1682 4.97804 20.4393 5.24638L21.0443 5.85139C21.7506 6.53607 22.2007 7.44226 22.3195 8.41872C22.4382 9.3952 22.2187 10.3829 21.6971 11.2169C18.9209 15.3386 15.3744 18.8852 11.2527 21.6614Z" stroke="#ffffff" stroke-width="1.71003" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath id="clip0_25_3041">
+                                                                    <rect width="24" height="24" fill="white"></rect>
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+                                                        @blockModel?.ButtonLink?.Name
+                                                    </a>
+                                                }
+                                            </div>
+                                        }
+                                    </div>
+                                }
+
+                                if (alias == FormSectionFormBlock.ModelTypeAlias)
+                                {
+                                    var formContentModel = block?.Content as FormSectionFormBlock;
+                                    var model = new UmbracoProject.App_Code.Models.FormViewModel()
+                                    {
+                                        FormId = formContentModel?.Form ?? Guid.Empty,
+                                        FormContent = formContentModel
+                                    };
+                                    var id = formContentModel?.HeadingText?.Replace(" ", "_");
+
+                                    @await Html.PartialAsync("~/Views/Partials/_RenderForm.cshtml", model)
+                                }
 
                             }
                         }

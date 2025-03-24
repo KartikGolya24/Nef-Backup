@@ -15,134 +15,145 @@
         }
         else
         {
-            if (Model.FormContent is not null)
-            {
-                <div class="form-submitted d-none">
-                    <div class="icon">
-                        <img src="@(!string.IsNullOrWhiteSpace(Model.FormContent.SuccessMessageIcon?.Url())?Model.FormContent.SuccessMessageIcon?.Url():"~/assets/img/icons/thumbs-up-black.svg")" alt="" class="img-fluid">
-                    </div>
-                    <div class="content">
-                        @Html.Raw(Model.FormContent.SuccessMessage)
-                        @if (!string.IsNullOrWhiteSpace(Model.FormContent.AfterSuccessRedirectionButton?.Url))
+            <div class="contact-form">
+                @if (Model.FormContent is not null)
+                {
+                    <div class="form-submitted d-none">
+                        @if (!string.IsNullOrWhiteSpace(form.MessageOnSubmit?.ToString()))
                         {
-                            <a href="@Model.FormContent.AfterSuccessRedirectionButton.Url" class="btn @(Model.FormContent.SubmitButtonTheme)" style="border:1px solid #@Model.FormContent.SubmitButtonBorderColor">@Model.FormContent.AfterSuccessRedirectionButton.Name</a>
+                            @Html.Raw(form.MessageOnSubmit)
                         }
                     </div>
-                </div>
 
-                <div class="form-outer">
-                    @if (!string.IsNullOrWhiteSpace(Model.FormContent.HeadingText) || !string.IsNullOrWhiteSpace(Model.FormContent.DescriptionText?.ToString()))
-                    {
-                        <div class="form-headings">
-                            @if (!string.IsNullOrWhiteSpace(Model.FormContent.HeadingText))
-                            {
-                                <h4 class="form-title">@Model.FormContent.HeadingText</h4>
-                            }
-                            @if (!string.IsNullOrWhiteSpace(Model.FormContent.DescriptionText?.ToString()))
-                            {
-                                @Html?.Raw(Model.FormContent?.DescriptionText)
-                            }
-                        </div>
-                    }
-                    <form>
-                        @Html.AntiForgeryToken()
-                        @Html.Hidden("formId", @form.Id)
-                        <div class="row">
-                            @foreach (var item in form.AllFields)
-                            {
-                                var fieldType = item?.Settings?.FirstOrDefault(x => x.Key == "FieldType").Value;
-                                var placeholder = item?.Settings?.FirstOrDefault(x => x.Key == "Placeholder").Value;
-                                var numberOfRows = item?.Settings?.FirstOrDefault(x => x.Key == "NumberOfRows").Value;
-                                @switch (fieldType)
+                    <div class="form-outer">
+                        @if (!string.IsNullOrWhiteSpace(Model.FormContent.HeadingText) || !string.IsNullOrWhiteSpace(Model.FormContent.DescriptionText?.ToString()))
+                        {
+                            <div class="form-headings">
+                                @if (!string.IsNullOrWhiteSpace(Model.FormContent.HeadingText))
                                 {
-                                    case "text":
-                                    case "email":
-                                    case "number":
-                                        var isFullLengthField = item?.Alias == "gSRNNummer" || item?.Alias == "cPRNummer" || item?.Alias == "cVRNummer";
-                                        var maximumLength = item?.Settings?.FirstOrDefault(x => x.Key == "MaximumLength").Value;
-                                        <div class="col-md-@(fieldType == "number" && isFullLengthField ? 12 : 6)">
-                                            <div class="form-group">
-                                                <label for="@item?.Alias" class="label">@item?.Caption</label>
-                                                <input type="@fieldType"
-                                                       name="@item?.Alias"
-                                                       id="@item?.Alias"
-                                                       maxlength="@maximumLength"
-                                                       placeholder="@placeholder"
-                                                       class="form-control @(item?.Mandatory == true ? "required" : "") @(!string.IsNullOrWhiteSpace(item?.RegEx)? "regex-reuired":"")"
-                                                       data-regex="@item?.RegEx" />
-                                                @if (item?.Mandatory == true)
-                                                {
-                                                    <p class="error-text required-error d-none">
-                                                        <img src="~/assets/img/icons/error-icon.svg" alt=""> @item?.RequiredErrorMessage
-                                                    </p>
-                                                }
-                                                @if (!string.IsNullOrWhiteSpace(item?.RegEx))
-                                                {
-                                                    <p class="error-text regex-error d-none">
-                                                        <img src="~/assets/img/icons/error-icon.svg" alt=""> @item?.InvalidErrorMessage
-                                                    </p>
-                                                }
-                                            </div>
-                                        </div>
-                                        break;
+                                    <h4 class="form-title">@Model.FormContent.HeadingText</h4>
                                 }
-
-                                @if (!string.IsNullOrWhiteSpace(numberOfRows))
+                                @if (!string.IsNullOrWhiteSpace(Model.FormContent.DescriptionText?.ToString()))
                                 {
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label for="@item?.Alias" class="label">@item?.Caption</label>
-                                            <textarea name="@item?.Alias" id="@item?.Alias" class="form-control @(item?.Mandatory == true ? "required" : "")" placeholder="@placeholder"></textarea>
-                                            @if (item?.Mandatory == true)
-                                            {
-                                                <p class="error-text d-none">
-                                                    <img src="~/assets/img/icons/error-icon.svg" alt=""> @item?.RequiredErrorMessage
-                                                </p>
-                                            }
-                                        </div>
-                                    </div>
+                                    @Html?.Raw(Model.FormContent?.DescriptionText)
                                 }
-                            }
-                        </div>
-                        @{
-                            switch (form.Id.ToString())
-                            {
-                                case "1642f23d-5f9f-4d2e-87b4-e6f55be9843a": // Sunbeam form
-                                    <button type="button" class="btn form_submit_btn @Model?.FormContent?.SubmitButtonTheme sunbeam_story_form_submit @(Model?.FormContent?.ButtonTextItalic ==true ? "italic":"")" style="border:1px solid #@Model?.FormContent?.SubmitButtonBorderColor"> @form.SubmitLabel</button>
-                                    break;
-
-                                case "2e853598-a701-40d5-b6b8-51113492b7b2": // Change existing charging box form
-                                    <button type="button" class="btn form_submit_btn @Model?.FormContent?.SubmitButtonTheme change_existing_box_form_submit @(Model?.FormContent?.ButtonTextItalic ==true ? "italic":"")" style="border:1px solid #@Model?.FormContent?.SubmitButtonBorderColor"> @form.SubmitLabel</button>
-                                    break;
-
-                                case "48a10517-c09f-429b-afeb-6764082245d3": // Tailor Charging Solution Form
-                                    <button type="button" class="btn form_submit_btn @Model?.FormContent?.SubmitButtonTheme tailor_charging_solution_submit @(Model?.FormContent?.ButtonTextItalic ==true ? "italic":"")" style="border:1px solid #@Model?.FormContent?.SubmitButtonBorderColor"> @form.SubmitLabel</button>
-                                    break;
-
-                                case "95f4292c-3068-4376-bd2e-8f264263e201": // Board of Representatives Form
-                                    <button type="button" class="btn form_submit_btn @Model?.FormContent?.SubmitButtonTheme representatives_form_submit @(Model?.FormContent?.ButtonTextItalic ==true ? "italic":"")" style="border:1px solid #@Model?.FormContent?.SubmitButtonBorderColor"> @form.SubmitLabel</button>
-                                    break;
-
-                                case "0c79da13-dc56-4ac1-bc8e-4c35c5a41dd8": // No Obligation Advice On Electricity Form
-                                    <button type="button" class="btn form_submit_btn @Model?.FormContent?.SubmitButtonTheme business_form_submit @(Model?.FormContent?.ButtonTextItalic ==true ? "italic":"")" style="border:1px solid #@Model?.FormContent?.SubmitButtonBorderColor"> @form.SubmitLabel</button>
-                                    break;
-
-                                case "0d8c447e-4855-4e8f-ba11-c25e2a820a4a": // Non-binding Advice On Charging Solution Form
-                                    <button type="button" class="btn form_submit_btn @Model?.FormContent?.SubmitButtonTheme business_form_submit @(Model?.FormContent?.ButtonTextItalic ==true ? "italic":"")" style="border:1px solid #@Model?.FormContent?.SubmitButtonBorderColor"> @form.SubmitLabel</button>
-                                    break;
-
-                                case "a4195bb9-fef3-4d4a-b4ae-58984795ce72": // Non-binding Advice About Fiber Networks Form
-                                    <button type="button" class="btn form_submit_btn @Model?.FormContent?.SubmitButtonTheme business_form_submit @(Model?.FormContent?.ButtonTextItalic ==true ? "italic":"")" style="border:1px solid #@Model?.FormContent?.SubmitButtonBorderColor"> @form.SubmitLabel</button>
-                                    break;
-
-                                case "d26dc384-114f-4491-9ae2-1346f0fbb6ab": // Non-binding Advice On TV Packages Form
-                                    <button type="button" class="btn form_submit_btn @Model?.FormContent?.SubmitButtonTheme business_form_submit @(Model?.FormContent?.ButtonTextItalic ==true ? "italic":"")" style="border:1px solid #@Model?.FormContent?.SubmitButtonBorderColor"> @form.SubmitLabel</button>
-                                    break;
-                            }
+                            </div>
                         }
-                    </form>
-                </div>
-            }
+
+                        @if (form.Id == new Guid("1642f23d-5f9f-4d2e-87b4-e6f55be9843a") ||    // Sunbeam form
+                       form.Id == new Guid("2e853598-a701-40d5-b6b8-51113492b7b2") ||          // Change existing charging box form
+                       form.Id == new Guid("48a10517-c09f-429b-afeb-6764082245d3") ||          // Tailor Charging Solution Form
+                       form.Id == new Guid("95f4292c-3068-4376-bd2e-8f264263e201") ||          // Board of Representatives Form
+                       form.Id == new Guid("0c79da13-dc56-4ac1-bc8e-4c35c5a41dd8") ||          // No Obligation Advice On Electricity Form
+                       form.Id == new Guid("0d8c447e-4855-4e8f-ba11-c25e2a820a4a") ||          // Non-binding Advice On Charging Solution Form
+                       form.Id == new Guid("a4195bb9-fef3-4d4a-b4ae-58984795ce72") ||          // Non-binding Advice About Fiber Networks Form
+                       form.Id == new Guid("d26dc384-114f-4491-9ae2-1346f0fbb6ab"))            // Non-binding Advice On TV Packages Form
+                        {
+                            <form>
+                                @Html.AntiForgeryToken()
+                                @Html.Hidden("formId", @form.Id)
+                                <div class="row">
+                                    @foreach (var item in form.AllFields)
+                                    {
+                                        var fieldType = item?.Settings?.FirstOrDefault(x => x.Key == "FieldType").Value;
+                                        var placeholder = item?.Settings?.FirstOrDefault(x => x.Key == "Placeholder").Value;
+                                        var numberOfRows = item?.Settings?.FirstOrDefault(x => x.Key == "NumberOfRows").Value;
+                                        @switch (fieldType)
+                                        {
+                                            case "text":
+                                            case "email":
+                                            case "number":
+                                                var isFullLengthField = item?.Alias == "gSRNNummer" || item?.Alias == "cPRNummer" || item?.Alias == "cVRNummer";
+                                                var maximumLength = item?.Settings?.FirstOrDefault(x => x.Key == "MaximumLength").Value;
+                                                <div class="col-md-@(fieldType == "number" && isFullLengthField ? 12 : 6)">
+                                                    <div class="form-group">
+                                                        <label for="@item?.Alias" class="label">@item?.Caption</label>
+                                                        <input type="@fieldType"
+                                                               name="@item?.Alias"
+                                                               id="@item?.Alias"
+                                                               maxlength="@maximumLength"
+                                                               placeholder="@placeholder"
+                                                               class="form-control @(item?.Mandatory == true ? "required" : "") @(!string.IsNullOrWhiteSpace(item?.RegEx)? "regex-reuired":"")"
+                                                               data-regex="@item?.RegEx" />
+                                                        @if (item?.Mandatory == true)
+                                                        {
+                                                            <p class="error-text required-error d-none">
+                                                                <img src="~/assets/img/icons/error-icon.svg" alt=""> @item?.RequiredErrorMessage
+                                                            </p>
+                                                        }
+                                                        @if (!string.IsNullOrWhiteSpace(item?.RegEx))
+                                                        {
+                                                            <p class="error-text regex-error d-none">
+                                                                <img src="~/assets/img/icons/error-icon.svg" alt=""> @item?.InvalidErrorMessage
+                                                            </p>
+                                                        }
+                                                    </div>
+                                                </div>
+                                                break;
+                                        }
+
+                                        @if (!string.IsNullOrWhiteSpace(numberOfRows))
+                                        {
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="@item?.Alias" class="label">@item?.Caption</label>
+                                                    <textarea name="@item?.Alias" id="@item?.Alias" class="form-control @(item?.Mandatory == true ? "required" : "")" placeholder="@placeholder"></textarea>
+                                                    @if (item?.Mandatory == true)
+                                                    {
+                                                        <p class="error-text d-none">
+                                                            <img src="~/assets/img/icons/error-icon.svg" alt=""> @item?.RequiredErrorMessage
+                                                        </p>
+                                                    }
+                                                </div>
+                                            </div>
+                                        }
+                                    }
+                                </div>
+                                @{
+                                    switch (form.Id.ToString())
+                                    {
+                                        case "1642f23d-5f9f-4d2e-87b4-e6f55be9843a": // Sunbeam form
+                                            <button type="button" class="btn form_submit_btn @Model?.FormContent?.SubmitButtonTheme sunbeam_story_form_submit @(Model?.FormContent?.ButtonTextItalic ==true ? "italic":"")" style="border:1px solid #@Model?.FormContent?.SubmitButtonBorderColor"> @form.SubmitLabel</button>
+                                            break;
+
+                                        case "2e853598-a701-40d5-b6b8-51113492b7b2": // Change existing charging box form
+                                            <button type="button" class="btn form_submit_btn @Model?.FormContent?.SubmitButtonTheme change_existing_box_form_submit @(Model?.FormContent?.ButtonTextItalic ==true ? "italic":"")" style="border:1px solid #@Model?.FormContent?.SubmitButtonBorderColor"> @form.SubmitLabel</button>
+                                            break;
+
+                                        case "48a10517-c09f-429b-afeb-6764082245d3": // Tailor Charging Solution Form
+                                            <button type="button" class="btn form_submit_btn @Model?.FormContent?.SubmitButtonTheme tailor_charging_solution_submit @(Model?.FormContent?.ButtonTextItalic ==true ? "italic":"")" style="border:1px solid #@Model?.FormContent?.SubmitButtonBorderColor"> @form.SubmitLabel</button>
+                                            break;
+
+                                        case "95f4292c-3068-4376-bd2e-8f264263e201": // Board of Representatives Form
+                                            <button type="button" class="btn form_submit_btn @Model?.FormContent?.SubmitButtonTheme representatives_form_submit @(Model?.FormContent?.ButtonTextItalic ==true ? "italic":"")" style="border:1px solid #@Model?.FormContent?.SubmitButtonBorderColor"> @form.SubmitLabel</button>
+                                            break;
+
+                                        case "0c79da13-dc56-4ac1-bc8e-4c35c5a41dd8": // No Obligation Advice On Electricity Form
+                                            <button type="button" class="btn form_submit_btn @Model?.FormContent?.SubmitButtonTheme business_form_submit @(Model?.FormContent?.ButtonTextItalic ==true ? "italic":"")" style="border:1px solid #@Model?.FormContent?.SubmitButtonBorderColor"> @form.SubmitLabel</button>
+                                            break;
+
+                                        case "0d8c447e-4855-4e8f-ba11-c25e2a820a4a": // Non-binding Advice On Charging Solution Form
+                                            <button type="button" class="btn form_submit_btn @Model?.FormContent?.SubmitButtonTheme business_form_submit @(Model?.FormContent?.ButtonTextItalic ==true ? "italic":"")" style="border:1px solid #@Model?.FormContent?.SubmitButtonBorderColor"> @form.SubmitLabel</button>
+                                            break;
+
+                                        case "a4195bb9-fef3-4d4a-b4ae-58984795ce72": // Non-binding Advice About Fiber Networks Form
+                                            <button type="button" class="btn form_submit_btn @Model?.FormContent?.SubmitButtonTheme business_form_submit @(Model?.FormContent?.ButtonTextItalic ==true ? "italic":"")" style="border:1px solid #@Model?.FormContent?.SubmitButtonBorderColor"> @form.SubmitLabel</button>
+                                            break;
+
+                                        case "d26dc384-114f-4491-9ae2-1346f0fbb6ab": // Non-binding Advice On TV Packages Form
+                                            <button type="button" class="btn form_submit_btn @Model?.FormContent?.SubmitButtonTheme business_form_submit @(Model?.FormContent?.ButtonTextItalic ==true ? "italic":"")" style="border:1px solid #@Model?.FormContent?.SubmitButtonBorderColor"> @form.SubmitLabel</button>
+                                            break;
+                                    }
+                                }
+                            </form>
+                        }
+                        else
+                        {
+                            @await Component.InvokeAsync("RenderForm", new { formId = form.Id })
+                        }
+                    </div>
+                }
+            </div>
         }
     }
 }

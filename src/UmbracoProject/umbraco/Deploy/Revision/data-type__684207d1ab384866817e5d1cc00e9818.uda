@@ -9,6 +9,12 @@
         "label": "{{heading}}",
         "editorSize": "medium",
         "forceHideContentEditorInOverlay": false
+      },
+      {
+        "contentElementTypeKey": "3b987f70-d511-4485-b091-f70511b13d04",
+        "label": "{{headingText}}",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
       }
     ],
     "validationLimit": {},
@@ -22,6 +28,9 @@
     {
       "Udi": "umb://data-type-container/921fd3ccdb1949549a00ec35730aafe5",
       "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/3b987f70d5114485b091f70511b13d04"
     },
     {
       "Udi": "umb://document-type/9e34c0c88e494c33985fb130badd1e34"

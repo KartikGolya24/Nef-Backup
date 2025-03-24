@@ -13,34 +13,6 @@
   "CompositionContentTypes": [],
   "PropertyGroups": [
     {
-      "Key": "240e869d-e309-45ff-b111-9c328d3e8f97",
-      "Name": "Form After Submit",
-      "SortOrder": 1,
-      "Alias": "formAfterSubmit",
-      "PropertyTypes": [
-        {
-          "Key": "5c554fce-19e4-46d3-bde2-4e6fb1e22903",
-          "Alias": "afterSuccessRedirectionButton",
-          "DataType": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
-          "Name": "After Success Redirection Button",
-          "SortOrder": 2
-        },
-        {
-          "Key": "61b5f820-4c02-4041-9b5e-bd74f51ddbfc",
-          "Alias": "successMessageIcon",
-          "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
-          "Name": "Success Message Icon"
-        },
-        {
-          "Key": "f81b3cd3-4b1c-485b-a019-9a86cd9f8f51",
-          "Alias": "successMessage",
-          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
-          "Name": "Success Message",
-          "SortOrder": 1
-        }
-      ]
-    },
-    {
       "Key": "814c0398-5474-4db1-8bf0-ca7fa6410e7e",
       "Name": "Content",
       "Alias": "content",
@@ -97,10 +69,6 @@
       "Ordering": true
     },
     {
-      "Udi": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
-      "Ordering": true
-    },
-    {
       "Udi": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
       "Ordering": true
     },
@@ -114,10 +82,6 @@
     },
     {
       "Udi": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
-      "Ordering": true
-    },
-    {
-      "Udi": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
       "Ordering": true
     },
     {
