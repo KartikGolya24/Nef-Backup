@@ -15,7 +15,7 @@
         }
         else
         {
-            <div class="contact-form">
+            <div class="contact-form" id="@(!string.IsNullOrWhiteSpace(Model.SectionId) ? Model.SectionId :"")">
                 @if (Model.FormContent is not null)
                 {
                     <div class="form-submitted d-none">

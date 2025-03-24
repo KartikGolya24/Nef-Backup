@@ -85,12 +85,13 @@
                                 if (alias == FormSectionFormBlock.ModelTypeAlias)
                                 {
                                     var formContentModel = block?.Content as FormSectionFormBlock;
+                                    var id = !string.IsNullOrWhiteSpace(formContentModel?.HeadingText) ? formContentModel?.HeadingText?.Replace(" ", "_") : string.Empty;
                                     var model = new UmbracoProject.App_Code.Models.FormViewModel()
-                                    {
-                                        FormId = formContentModel?.Form ?? Guid.Empty,
-                                        FormContent = formContentModel
-                                    };
-                                    var id = formContentModel?.HeadingText?.Replace(" ", "_");
+                        {
+                            FormId = formContentModel?.Form ?? Guid.Empty,
+                            FormContent = formContentModel,
+                            SectionId = id
+                        };
 
                                     @await Html.PartialAsync("~/Views/Partials/_RenderForm.cshtml", model)
                                 }
@@ -111,9 +112,27 @@
                             {
                                 @foreach (var item in Model?.Blocks)
                                 {
-                                    var blockModel = item?.Content as InformationContentBlock;
-                                    var id = blockModel?.Heading?.Replace(" ", "_");
-                                    <a href="#@id" class="nav-link black-700"><p class="para">@blockModel?.Heading</p></a>
+
+                                    switch (item?.Content?.ContentType?.Alias)
+                                    {
+                                        case InformationContentBlock.ModelTypeAlias:
+                                            var informationContentBlockModel = item?.Content as InformationContentBlock;
+                                            @if (!string.IsNullOrWhiteSpace(informationContentBlockModel?.Heading))
+                                            {
+                                                var id = informationContentBlockModel?.Heading?.Replace(" ", "_");
+                                                <a href="#@id" class="nav-link black-700"><p class="para">@informationContentBlockModel?.Heading</p></a>
+                                            }
+                                            break;
+
+                                        case FormSectionFormBlock.ModelTypeAlias:
+                                            var formSectionFormBlockModel = item?.Content as FormSectionFormBlock;
+                                            @if (!string.IsNullOrWhiteSpace(formSectionFormBlockModel?.HeadingText))
+                                            {
+                                                var formSectionFormBlockId = formSectionFormBlockModel?.HeadingText?.Replace(" ", "_");
+                                                <a href="#@formSectionFormBlockId" class="nav-link black-700"><p class="para">@formSectionFormBlockModel?.HeadingText</p></a>
+                                            }
+                                            break;
+                                    }
                                 }
                             }
 

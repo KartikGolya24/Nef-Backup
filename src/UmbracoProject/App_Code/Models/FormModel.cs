@@ -6,5 +6,6 @@ namespace UmbracoProject.App_Code.Models
     {
         public Guid FormId { get; set; }
         public FormSectionFormBlock? FormContent { get; set; }
+        public string? SectionId { get; set; }
     }
 }
