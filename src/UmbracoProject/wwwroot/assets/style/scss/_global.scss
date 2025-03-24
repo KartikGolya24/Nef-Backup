@@ -730,24 +730,20 @@ li {
             overflow-y: auto;
             margin-right: -5px;
             padding-right: 5px;
-
             /* width */
             &::-webkit-scrollbar {
                 width: 4px;
             }
-
             /* Track */
             &::-webkit-scrollbar-track {
                 background-color: $black-100;
                 border-radius: 100px;
             }
-
             /* Handle */
             &::-webkit-scrollbar-thumb {
                 background: $black-200;
                 border-radius: 100px;
             }
-
             /* Handle on hover */
             &::-webkit-scrollbar-thumb:hover {
                 background-color: $black-300;
@@ -810,35 +806,43 @@ li {
 #loginPopup {
     .modal-dialog {
         max-width: 720px;
+
         .modal-content {
             .modal-header {
                 flex-direction: column;
                 padding: 48px 32px 0;
                 gap: 16px;
                 max-width: 664px;
+
                 .modal-title {
                     font-size: 32px;
                     line-height: initial;
                     color: $black-950;
                 }
+
                 p {
                     color: $black-700;
                     font-size: 16px;
                     line-height: 24px;
                 }
             }
+
             .modal-body {
                 padding: 40px 32px 48px;
+
                 .form-block {
                     .row {
                         margin: 0 -8px;
+
                         & > * {
                             padding: 0 8px;
+
                             &:not([class*="col-12"]) {
                                 margin-bottom: 32px;
                             }
                         }
                     }
+
                     .form-group {
                         .label {
                             font-size: 18px;
@@ -848,6 +852,7 @@ li {
                         }
                     }
                 }
+
                 .button {
                     .btn {
                         width: 100%;
@@ -855,6 +860,7 @@ li {
                         justify-content: center;
                     }
                 }
+
                 .form-checkbox {
                     margin-top: 40px;
                 }
@@ -914,8 +920,6 @@ li {
         line-height: 27px;
         font-size: 16px;
     }
-
-
 }
 
 
@@ -967,7 +971,8 @@ li {
 
                 .accordion-button {
 
-                    &.collapsed {}
+                    &.collapsed {
+                    }
 
                     &:not(.collapsed) {
                         box-shadow: none;
@@ -989,7 +994,6 @@ li {
                         background-image: url("../../img/icons/arrow-down-dark.svg") !important;
                         transition: transform 0.3s ease;
                     }
-
                 }
             }
 
@@ -1078,7 +1082,6 @@ li {
                             }
                         }
                     }
-
                 }
             }
         }
@@ -1111,7 +1114,6 @@ li {
                 }
             }
         }
-
     }
 
     &.space_blue_bg {
@@ -1126,7 +1128,6 @@ li {
                             color: $white;
                         }
                     }
-
                 }
             }
         }
@@ -1153,7 +1154,6 @@ li {
                             color: $dark_pink;
                         }
                     }
-
                 }
             }
         }
@@ -1464,12 +1464,10 @@ li {
                         }
 
                         p {
-
                             font-size: 16px;
                             line-height: 27px;
                         }
                     }
-
                 }
             }
 
@@ -1503,7 +1501,6 @@ li {
                             height: 16px;
                         }
                     }
-
                 }
 
                 &.text-dark-green {
@@ -1563,13 +1560,12 @@ li {
             }
 
             .dot-list-outer {
-                &>p {
+                & > p {
                     font-size: 18px;
                     line-height: 32px;
                     margin-bottom: 16px;
                 }
             }
-
         }
     }
 
@@ -1804,7 +1800,7 @@ li {
         .row {
             margin: 0 -32px;
 
-            &>* {
+            & > * {
                 padding: 0 32px;
             }
         }
@@ -1904,7 +1900,6 @@ li {
             top: -8%;
             width: auto;
         }
-
     }
 
     .section-position-img {
@@ -2018,7 +2013,6 @@ li {
             bottom: 0;
         }
     }
-
     // color themes
 
     &.turquoise_bg {
@@ -2565,7 +2559,6 @@ li {
                 }
             }
         }
-
     }
 
     &.light_purple_bg {
@@ -2763,8 +2756,7 @@ li {
             }
         }
     }
-
-    // color themes 
+    // color themes
 }
 
 .video-img {
@@ -2814,6 +2806,7 @@ li {
         transform: translate(-50%, -50%);
         border: 0px;
         font-weight: 500;
+        z-index: 111;
 
         svg {
             width: 24px;
@@ -2827,7 +2820,7 @@ li {
         .row {
             margin: 0 -24px;
 
-            &>* {
+            & > * {
                 padding: 0 24px;
             }
         }
@@ -2838,12 +2831,13 @@ li {
 //============================================== category item ======================================
 .category-item {
     border-top: 1px solid $black-100;
+
     .row {
         margin: auto;
         justify-content: center;
     }
 
-    .row>* {
+    .row > * {
         padding: 0px;
     }
 
@@ -2891,15 +2885,13 @@ li {
             }
         }
     }
-
-
 }
 
 .alt-contact {
     position: relative;
 
     [class*=container] {
-        &>.row {
+        & > .row {
             align-items: center;
 
             &.flex-row-reverse {
@@ -3044,16 +3036,13 @@ li {
                                 max-width: 512px;
                                 color: $space_blue;
                             }
-
                         }
-
                     }
                 }
 
                 .data-faq {
                     padding: 44px 0px;
                 }
-
             }
 
             &.delivery-detail-section {
@@ -3087,9 +3076,174 @@ li {
                     margin-top: 32px;
                 }
             }
+
+            .contact-form {
+                background-color: $turquoise;
+                padding: 24px;
+                border-radius: 16px;
+
+                .form-headings {
+                    margin-bottom: 40px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+
+                    .form-title {
+                        font-weight: 600;
+                        color: $space_blue;
+                    }
+
+                    p {
+                        color: $space_blue;
+                        font-size: 18px;
+                        line-height: 32px;
+                    }
+                }
+
+                .form-group {
+                    margin-bottom: 24px;
+
+                    .error-text {
+                        color: $input-error;
+                        font-size: 12px;
+                        line-height: 16px;
+                    }
+                }
+
+                .form-submitted {
+                    padding: 137px 44px;
+                    text-align: center;
+
+                    a {
+                        padding: 10px 24px;
+                        border-radius: 100px;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        width: max-content;
+                        height: 48px;
+                        color: #292929;
+                        border: 1px solid transparent;
+                        text-align: left;
+                        background-color: $dark_blue;
+                        color: $white;
+                        margin: 30px auto 0;
+                    }
+                }
+
+                .form-outer {
+                    &:has(.umbraco-forms-submitmessage-html) {
+                        .form-headings {
+                            display: none;
+                        }
+                    }
+                }
+
+                .umbraco-forms-form {
+                    padding: 0;
+
+                    .umbraco-forms-page {
+                        .umbraco-forms-fieldset {
+                            padding: 0;
+                            margin: 0;
+
+                            .umbraco-forms-container {
+                                padding: 0;
+                            }
+
+                            .umbraco-forms-field {
+                                margin-bottom: 24px;
+
+                                label {
+                                    font-weight: 400;
+                                    display: inline-block;
+                                    font-size: 14px;
+                                    line-height: 19.75px;
+                                    padding-bottom: 4px;
+                                    color: $black-950;
+
+                                    .umbraco-forms-indicator {
+                                        color: $light_blue;
+                                    }
+                                }
+
+                                input {
+                                    margin: 0;
+                                    max-width: 100% !important;
+                                    display: block;
+                                    width: 100%;
+                                    font-weight: 400;
+                                    color: $black-950;
+                                    appearance: none;
+                                    background-color: var(--bs-body-bg);
+                                    background-clip: padding-box;
+                                    border: 1px solid #dcdcdc;
+                                    border-radius: 100px;
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                    height: 44px;
+                                    padding: 12px 16px;
+                                    font-family: "Houschka Rounded Alt";
+                                    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+                                    outline: none !important;
+
+                                    &:focus-visible {
+                                        outline: none;
+                                    }
+                                }
+
+                                .field-validation-error {
+                                    color: $input-error !important;
+                                    font-size: 12px;
+                                    line-height: 16px;
+                                    position: relative;
+                                    padding-left: 0;
+
+                                    &::before {
+                                        content: '';
+                                        display: inline-block;
+                                        background-image: url(../../img/icons/error-icon.svg);
+                                        width: 16px;
+                                        height: 16px;
+                                        vertical-align: sub;
+                                        margin-right: 4px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .umbraco-forms-navigation {
+                        padding: 0;
+
+                        [class*=col] {
+                            padding: 0;
+                        }
+                    }
+                }
+
+                .umbraco-forms-submitmessage-html {
+                    text-align: center;
+                    padding: 137px 44px;
+
+                    a {
+                        padding: 10px 24px;
+                        border-radius: 100px;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        width: max-content;
+                        height: 48px;
+                        color: #292929;
+                        border: 1px solid transparent;
+                        text-align: left;
+                        background-color: $dark_blue;
+                        color: $white;
+                        margin: 30px auto 0;
+                    }
+                }
+            }
         }
-
-
     }
 
     .sidebar {
@@ -3156,7 +3310,6 @@ li {
         }
     }
 }
-
 // =========================================== owl carousal ===============================================
 .owl-slider-section {
     padding: 64px 0px;
@@ -3272,7 +3425,6 @@ li {
                     }
                 }
             }
-
         }
 
         .owl-nav {
@@ -3298,7 +3450,8 @@ li {
                 right: 149px !important;
             }
 
-            .owl-next {}
+            .owl-next {
+            }
         }
 
         .owl-dots {
@@ -3328,7 +3481,6 @@ li {
         }
     }
 }
-
 //=========================================== pacakge-section===========================================
 .pacakge-section {
     padding: 64px 0 32px;
@@ -3447,7 +3599,6 @@ li {
                                 height: 16px;
                                 flex-shrink: 0;
                             }
-
                         }
                     }
                 }
@@ -3471,6 +3622,7 @@ li {
                         flex-wrap: wrap;
                         justify-content: center;
                         margin-bottom: 48px;
+
                         li {
                             img {
                                 height: 24px;
@@ -3500,23 +3652,23 @@ li {
                             font-size: 12px;
                             line-height: 16px;
                             color: $black-950;
+
                             &.text-two-line {
                                 position: relative;
                                 transition: all 0.3s ease-in-out;
+
                                 .read-toggle {
                                     cursor: pointer;
                                     text-decoration: underline;
                                     margin-left: 2px;
                                 }
                             }
-                            
                         }
                     }
                 }
             }
         }
     }
-
 }
 
 
@@ -3527,7 +3679,7 @@ li {
         margin-bottom: 8px;
         color: $black-950;
 
-        &+p {
+        & + p {
             font-size: 18px;
             line-height: 32px;
             color: $black-700;
@@ -3646,7 +3798,7 @@ li {
         .row {
             margin: 0;
 
-            &>[class*="col-"] {
+            & > [class*="col-"] {
                 padding: 0;
             }
         }

@@ -32,7 +32,7 @@
                 margin-bottom: 8px;
                 color: $white;
 
-                &+p {
+                & + p {
                     font-size: 14px;
                     line-height: 32px;
                     font-weight: 600;
@@ -147,6 +147,116 @@
                     line-height: 32px;
                 }
             }
+
+            &:has(.umbraco-forms-submitmessage-html) {
+                .form-headings {
+                    display: none;
+                }
+            }
+        }
+
+        .umbraco-forms-form {
+            padding: 0;
+
+            .umbraco-forms-page {
+                .umbraco-forms-fieldset {
+                    padding: 0;
+                    margin: 0;
+
+                    .umbraco-forms-container {
+                        padding: 0;
+                    }
+
+                    .umbraco-forms-field {
+                        margin-bottom: 24px;
+
+                        label {
+                            font-weight: 400;
+                            display: inline-block;
+                            font-size: 14px;
+                            line-height: 19.75px;
+                            padding-bottom: 4px;
+                            color: $black-950;
+
+                            .umbraco-forms-indicator {
+                                color: $light_blue;
+                            }
+                        }
+
+                        input {
+                            margin: 0;
+                            max-width: 100% !important;
+                            display: block;
+                            width: 100%;
+                            font-weight: 400;
+                            color: $black-950;
+                            appearance: none;
+                            background-color: var(--bs-body-bg);
+                            background-clip: padding-box;
+                            border: 1px solid #dcdcdc;
+                            border-radius: 100px;
+                            font-size: 16px;
+                            line-height: 24px;
+                            height: 44px;
+                            padding: 12px 16px;
+                            font-family: "Houschka Rounded Alt";
+                            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+                            outline: none !important;
+
+                            &:focus-visible {
+                                outline: none;
+                            }
+                        }
+
+                        .field-validation-error {
+                            color: $input-error !important;
+                            font-size: 12px;
+                            line-height: 16px;
+                            position: relative;
+                            padding-left: 0;
+
+                            &::before {
+                                content: '';
+                                display: inline-block;
+                                background-image: url(../../img/icons/error-icon.svg);
+                                width: 16px;
+                                height: 16px;
+                                vertical-align: sub;
+                                margin-right: 4px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .umbraco-forms-navigation {
+                padding: 0;
+
+                [class*=col] {
+                    padding: 0;
+                }
+            }
+        }
+
+        .umbraco-forms-submitmessage-html {
+            text-align: center;
+            padding: 137px 44px;
+
+            a {
+                padding: 10px 24px;
+                border-radius: 100px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                width: max-content;
+                height: 48px;
+                color: #292929;
+                border: 1px solid transparent;
+                text-align: left;
+                background-color: $dark_blue;
+                color: $white;
+                margin: 30px auto 0;
+            }
         }
 
 
@@ -154,7 +264,7 @@
             margin: 0px -8px;
         }
 
-        .row>* {
+        .row > * {
             padding-right: 8px;
             padding-left: 8px;
             gap: 24px;
@@ -171,6 +281,22 @@
         .form-submitted {
             padding: 137px 44px;
             text-align: center;
+
+            a {
+                padding: 10px 24px;
+                border-radius: 100px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                width: max-content;
+                height: 48px;
+                color: #292929;
+                border: 1px solid transparent;
+                text-align: left;
+                background-color: $dark_blue;
+                color: $white;
+                margin: 30px auto 0;
+            }
 
             .icon {
                 img {
@@ -208,7 +334,6 @@
             }
         }
     }
-
 }
 
 .electricity-banner {
@@ -379,7 +504,6 @@
                     color: $white !important;
                 }
             }
-
         }
     }
 }
@@ -569,7 +693,6 @@
     }
 
     .electricity-bill-detail {
-
         // padding: 0px 151px;
         .video-img {
             background-color: $dark_blue;
@@ -611,7 +734,7 @@
                         font-weight: 600;
                         color: $black-950;
 
-                        &+p {
+                        & + p {
                             color: $black-700;
                             font-size: 18px;
                             line-height: 32px;
@@ -645,4 +768,5 @@
     }
 }
 
-.home-charging-section {}
+.home-charging-section {
+}

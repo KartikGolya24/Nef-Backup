@@ -11765,6 +11765,97 @@ textarea.form-control {
   font-size: 18px;
   line-height: 32px;
 }
+.alt-contact .contact-form .form-outer:has(.umbraco-forms-submitmessage-html) .form-headings {
+  display: none;
+}
+.alt-contact .contact-form .umbraco-forms-form {
+  padding: 0;
+}
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset {
+  padding: 0;
+  margin: 0;
+}
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-container {
+  padding: 0;
+}
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field {
+  margin-bottom: 24px;
+}
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field label {
+  font-weight: 400;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 19.75px;
+  padding-bottom: 4px;
+  color: #292929;
+}
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field label .umbraco-forms-indicator {
+  color: #37B4B4;
+}
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input {
+  margin: 0;
+  max-width: 100% !important;
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  color: #292929;
+  appearance: none;
+  background-color: var(--bs-body-bg);
+  background-clip: padding-box;
+  border: 1px solid #dcdcdc;
+  border-radius: 100px;
+  font-size: 16px;
+  line-height: 24px;
+  height: 44px;
+  padding: 12px 16px;
+  font-family: "Houschka Rounded Alt";
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  outline: none !important;
+}
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input:focus-visible {
+  outline: none;
+}
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .field-validation-error {
+  color: #D22A2A !important;
+  font-size: 12px;
+  line-height: 16px;
+  position: relative;
+  padding-left: 0;
+}
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .field-validation-error::before {
+  content: "";
+  display: inline-block;
+  background-image: url(../../img/icons/error-icon.svg);
+  width: 16px;
+  height: 16px;
+  vertical-align: sub;
+  margin-right: 4px;
+}
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-navigation {
+  padding: 0;
+}
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-navigation [class*=col] {
+  padding: 0;
+}
+.alt-contact .contact-form .umbraco-forms-submitmessage-html {
+  text-align: center;
+  padding: 137px 44px;
+}
+.alt-contact .contact-form .umbraco-forms-submitmessage-html a {
+  padding: 10px 24px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+  height: 48px;
+  color: #292929;
+  border: 1px solid transparent;
+  text-align: left;
+  background-color: #284655;
+  color: #ffffff;
+  margin: 30px auto 0;
+}
 .alt-contact .contact-form .row {
   margin: 0px -8px;
 }
@@ -11782,6 +11873,21 @@ textarea.form-control {
 .alt-contact .contact-form .form-submitted {
   padding: 137px 44px;
   text-align: center;
+}
+.alt-contact .contact-form .form-submitted a {
+  padding: 10px 24px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+  height: 48px;
+  color: #292929;
+  border: 1px solid transparent;
+  text-align: left;
+  background-color: #284655;
+  color: #ffffff;
+  margin: 30px auto 0;
 }
 .alt-contact .contact-form .form-submitted .icon img {
   height: 168px;
@@ -14702,6 +14808,7 @@ li {
   transform: translate(-50%, -50%);
   border: 0px;
   font-weight: 500;
+  z-index: 111;
 }
 .video-img .videoBtn svg {
   width: 24px;
@@ -14898,6 +15005,144 @@ li {
 }
 .status-alt-sidebar .status-left-part .status-boxes-outer.delivery-detail-section .box-footer {
   margin-top: 32px;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form {
+  background-color: #EEF4F4;
+  padding: 24px;
+  border-radius: 16px;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .form-headings {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .form-headings .form-title {
+  font-weight: 600;
+  color: #192A33;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .form-headings p {
+  color: #192A33;
+  font-size: 18px;
+  line-height: 32px;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .form-group {
+  margin-bottom: 24px;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .form-group .error-text {
+  color: #D22A2A;
+  font-size: 12px;
+  line-height: 16px;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .form-submitted {
+  padding: 137px 44px;
+  text-align: center;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .form-submitted a {
+  padding: 10px 24px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+  height: 48px;
+  color: #292929;
+  border: 1px solid transparent;
+  text-align: left;
+  background-color: #284655;
+  color: #ffffff;
+  margin: 30px auto 0;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .form-outer:has(.umbraco-forms-submitmessage-html) .form-headings {
+  display: none;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form {
+  padding: 0;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset {
+  padding: 0;
+  margin: 0;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-container {
+  padding: 0;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field {
+  margin-bottom: 24px;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field label {
+  font-weight: 400;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 19.75px;
+  padding-bottom: 4px;
+  color: #292929;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field label .umbraco-forms-indicator {
+  color: #37B4B4;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input {
+  margin: 0;
+  max-width: 100% !important;
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  color: #292929;
+  appearance: none;
+  background-color: var(--bs-body-bg);
+  background-clip: padding-box;
+  border: 1px solid #dcdcdc;
+  border-radius: 100px;
+  font-size: 16px;
+  line-height: 24px;
+  height: 44px;
+  padding: 12px 16px;
+  font-family: "Houschka Rounded Alt";
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  outline: none !important;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input:focus-visible {
+  outline: none;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .field-validation-error {
+  color: #D22A2A !important;
+  font-size: 12px;
+  line-height: 16px;
+  position: relative;
+  padding-left: 0;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .field-validation-error::before {
+  content: "";
+  display: inline-block;
+  background-image: url(../../img/icons/error-icon.svg);
+  width: 16px;
+  height: 16px;
+  vertical-align: sub;
+  margin-right: 4px;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-navigation {
+  padding: 0;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-navigation [class*=col] {
+  padding: 0;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-submitmessage-html {
+  text-align: center;
+  padding: 137px 44px;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-submitmessage-html a {
+  padding: 10px 24px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+  height: 48px;
+  color: #292929;
+  border: 1px solid transparent;
+  text-align: left;
+  background-color: #284655;
+  color: #ffffff;
+  margin: 30px auto 0;
 }
 .status-alt-sidebar .sidebar {
   position: sticky;
