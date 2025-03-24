@@ -11765,7 +11765,7 @@ textarea.form-control {
   font-size: 18px;
   line-height: 32px;
 }
-.alt-contact .contact-form .form-outer:has(.umbraco-forms-submitmessage-html) .form-headings {
+.alt-contact .contact-form .form-outer:has(.umbraco-forms-submitmessage-html, .umbraco-forms-submitmessage) .form-headings {
   display: none;
 }
 .alt-contact .contact-form .umbraco-forms-form {
@@ -11837,11 +11837,11 @@ textarea.form-control {
 .alt-contact .contact-form .umbraco-forms-form .umbraco-forms-navigation [class*=col] {
   padding: 0;
 }
-.alt-contact .contact-form .umbraco-forms-submitmessage-html {
+.alt-contact .contact-form .umbraco-forms-submitmessage-html, .alt-contact .contact-form .umbraco-forms-submitmessage {
   text-align: center;
   padding: 137px 44px;
 }
-.alt-contact .contact-form .umbraco-forms-submitmessage-html a {
+.alt-contact .contact-form .umbraco-forms-submitmessage-html a, .alt-contact .contact-form .umbraco-forms-submitmessage a {
   padding: 10px 24px;
   border-radius: 100px;
   display: flex;
@@ -15053,7 +15053,7 @@ li {
   color: #ffffff;
   margin: 30px auto 0;
 }
-.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .form-outer:has(.umbraco-forms-submitmessage-html) .form-headings {
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .form-outer:has(.umbraco-forms-submitmessage-html, .umbraco-forms-submitmessage) .form-headings {
   display: none;
 }
 .status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form {
@@ -15125,11 +15125,12 @@ li {
 .status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-navigation [class*=col] {
   padding: 0;
 }
-.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-submitmessage-html {
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-submitmessage-html, .status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-submitmessage {
+  display: block;
   text-align: center;
   padding: 137px 44px;
 }
-.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-submitmessage-html a {
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-submitmessage-html a, .status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-submitmessage a {
   padding: 10px 24px;
   border-radius: 100px;
   display: flex;

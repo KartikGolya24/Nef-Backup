@@ -3132,7 +3132,7 @@ li {
                 }
 
                 .form-outer {
-                    &:has(.umbraco-forms-submitmessage-html) {
+                    &:has(.umbraco-forms-submitmessage-html, .umbraco-forms-submitmessage) {
                         .form-headings {
                             display: none;
                         }
@@ -3222,7 +3222,8 @@ li {
                     }
                 }
 
-                .umbraco-forms-submitmessage-html {
+                .umbraco-forms-submitmessage-html, .umbraco-forms-submitmessage {
+                    display: block;
                     text-align: center;
                     padding: 137px 44px;
 

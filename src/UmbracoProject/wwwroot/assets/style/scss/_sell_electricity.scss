@@ -148,7 +148,7 @@
                 }
             }
 
-            &:has(.umbraco-forms-submitmessage-html) {
+            &:has(.umbraco-forms-submitmessage-html, .umbraco-forms-submitmessage) {
                 .form-headings {
                     display: none;
                 }
@@ -238,7 +238,7 @@
             }
         }
 
-        .umbraco-forms-submitmessage-html {
+        .umbraco-forms-submitmessage-html, .umbraco-forms-submitmessage {
             text-align: center;
             padding: 137px 44px;
 
