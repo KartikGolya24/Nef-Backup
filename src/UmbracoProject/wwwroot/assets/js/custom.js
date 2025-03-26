@@ -174,9 +174,11 @@ $(document).ready(function () {
             let fullText = $textContainer.html().trim();
 
             if (fullText.length > maxLength) {
+                let learnMoreText = "L\u00E6s mere";  // Læs mere
+                let learnLessText = "L\u00E6s mindre"; // Læs mindre
                 let truncatedText = fullText.substring(0, maxLength) + "...";
                 let $toggleSpan = $("<span>")
-                    .text("Read more")
+                    .text(learnMoreText)
                     .addClass("read-toggle")
 
                 // Store full and truncated text in attributes
@@ -196,11 +198,11 @@ $(document).ready(function () {
                     if (isExpanded) {
                         $textContainer.html($textContainer.data("truncated-text")).append($toggleSpan);
                         $textContainer.data("expanded", false);
-                        $toggleSpan.text("Read more");
+                        $toggleSpan.text(learnMoreText);
                     } else {
                         $textContainer.html($textContainer.data("full-text")).append($toggleSpan);
                         $textContainer.data("expanded", true);
-                        $toggleSpan.text("Read less");
+                        $toggleSpan.text(learnLessText);
                     }
 
                     // Recalculate heights after toggling

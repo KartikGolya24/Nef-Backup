@@ -1,8 +1,9 @@
 ﻿@using UmbracoProject.App_Code.Services
-@inject IPackagesService _packagesService;
+@inject IPurchaseFlowService _purchaseFlowService;
 
 @{
-    var packages = await _packagesService.TvPackages();
+    var packages = await _purchaseFlowService.GetTvPackagesAsync();
+
 }
 
 @if (packages != null && packages.Count > 0)

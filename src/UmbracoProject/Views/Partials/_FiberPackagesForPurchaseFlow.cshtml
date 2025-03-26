@@ -106,15 +106,40 @@
 
 <script>
 
-      function truncateText(selector, maxLength) {
+    function equalizeHeights(selector) {
+        var maxHeight = -1;
+        var $elements = $(selector);
+
+        // Reset heights before recalculating
+        $elements.css("height", "auto");
+
+        // Find max height
+        $elements.each(function () {
+            maxHeight = Math.max(maxHeight, $(this).outerHeight());
+        });
+
+        // Apply max height
+        $elements.css("height", maxHeight + "px");
+    }
+
+    function updateAllEqualHeights() {
+        equalizeHeights(".package-card .card-heading");
+        equalizeHeights(".package-list .package-card");
+        equalizeHeights(".service-card .card-outer");
+    }
+
+    // Two-line package data truncation
+    function truncateText(selector, maxLength) {
         $(selector).each(function () {
             let $textContainer = $(this);
             let fullText = $textContainer.html().trim();
 
             if (fullText.length > maxLength) {
+                let learnMoreText = "L\u00E6s mere";  // Læs mere
+                let learnLessText = "L\u00E6s mindre"; // Læs mindre
                 let truncatedText = fullText.substring(0, maxLength) + "...";
                 let $toggleSpan = $("<span>")
-                    .text("Read more")
+                    .text(learnMoreText)
                     .addClass("read-toggle")
 
                 // Store full and truncated text in attributes
@@ -134,11 +159,11 @@
                     if (isExpanded) {
                         $textContainer.html($textContainer.data("truncated-text")).append($toggleSpan);
                         $textContainer.data("expanded", false);
-                        $toggleSpan.text("Read more");
+                        $toggleSpan.text(learnMoreText);
                     } else {
                         $textContainer.html($textContainer.data("full-text")).append($toggleSpan);
                         $textContainer.data("expanded", true);
-                        $toggleSpan.text("Read less");
+                        $toggleSpan.text(learnLessText);
                     }
 
                     // Recalculate heights after toggling

@@ -10,10 +10,10 @@ builder.CreateUmbracoBuilder()
     .AddComposers()
     .Build();
 
-//Service Registeration
+//Service Registration
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<ISearchService, SearchService>();
-builder.Services.AddScoped<IPackagesService, PackagesService>();
+builder.Services.AddScoped<IPurchaseFlowService, PurchaseFlowService>();
 
 WebApplication app = builder.Build();
 

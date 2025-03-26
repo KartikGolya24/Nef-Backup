@@ -27,33 +27,33 @@ $(document).ready(function () {
 
         if (addressId && addressId != "") {
             $.ajax({
-                url: "https://productsapi.nef.dk/api/CheckAddress" + "?adresseGUID=" + addressId,
+                url: "/purchase-flow/check-address?adresseGUID=" + addressId,
                 type: "Get",
                 success: function (res) {
-                    debugger
-                    var PackageStatus = 1;
-                    var TvPackageStatus = 1;
-                    var FiberPackageStatus = 1;
+                    if (res != null && res.isSucceeded == true && res.data != null) {
 
-                    if (packageType == "tv") {
-                        PackageStatus = res.tvPackageResult;
+                        var PackageStatus = 1;
+
+                        if (packageType == "tv") {
+                            PackageStatus = res.data.tvPackageResult;
+                        } else {
+                            PackageStatus = res.data.fiberConnectionResult;
+                        }
+
+                        var pageUrl = `${origin}${redirectUrl}`;
+                        var expires = 86400;//24 hours
+                        document.cookie = "flowName=" + flowName + "; path=/;max-age=" + expires;
+                        document.cookie = "packageType=" + packageType + "; path=/;max-age=" + expires;
+                        document.cookie = "PackageStatus=" + PackageStatus + "; path=/;max-age=" + expires;
+                        document.cookie = "addressValue=" + encodeURIComponent(addressName) + "; path=/;max-age=" + expires;
+                        window.location.href = pageUrl;
                     } else {
-                        PackageStatus = res.fiberConnectionResult;
+                        console.log(res.error);
                     }
 
-                    var pageUrl = `${origin}${redirectUrl}`;
-                    var expires = 86400;//24 hours
-                    document.cookie = "flowName=" + flowName + "; path=/;max-age=" + expires;
-                    document.cookie = "packageType=" + packageType + "; path=/;max-age=" + expires;
-                    document.cookie = "PackageStatus=" + PackageStatus + "; path=/;max-age=" + expires;
-                    //document.cookie = "tvPackageStatus=" + TvPackageStatus + "; path=/;max-age=" + expires;
-                    //document.cookie = "fiberPackageStatus=" + FiberPackageStatus + "; path=/;max-age=" + expires;
-                    document.cookie = "addressValue=" + encodeURIComponent(addressName) + "; path=/;max-age=" + expires;
-                    window.location.href = pageUrl;
-                    
                 },
-                error: function () {
-                    alert("error")
+                error: function (error) {
+                    console.log("error : " + error);
                 }
             })
         } else {
