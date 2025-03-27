@@ -3,11 +3,32 @@
   "Alias": "",
   "ItemKey": "PurchaseFlow.Fiber.AddressStatus",
   "ParentId": "9db5a323-ebf2-4650-96bf-f9cf8c8c459d",
-  "Translations": [],
+  "Translations": [
+    {
+      "Key": "e79a931c-40d8-409e-9966-b23530492b3f",
+      "Value": "",
+      "LanguageIsoCode": "da-DK"
+    },
+    {
+      "Key": "e79a931c-40d8-409e-9966-b23530492b3f",
+      "Value": "",
+      "LanguageIsoCode": "en-US"
+    }
+  ],
   "Udi": "umb://dictionary-item/e79a931c40d8409e9966b23530492b3f",
   "Dependencies": [
     {
       "Udi": "umb://dictionary-item/9db5a323ebf2465096bff9cf8c8c459d",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/da-DK",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/en-US",
       "Ordering": true,
       "Mode": "Exist"
     }

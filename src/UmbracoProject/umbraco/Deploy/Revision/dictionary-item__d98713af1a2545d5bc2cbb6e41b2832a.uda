@@ -3,11 +3,32 @@
   "Alias": "",
   "ItemKey": "PurchaseFlow.TV",
   "ParentId": "7ca58f71-4345-4b5e-9bad-61b1067290c7",
-  "Translations": [],
+  "Translations": [
+    {
+      "Key": "d98713af-1a25-45d5-bc2c-bb6e41b2832a",
+      "Value": "",
+      "LanguageIsoCode": "da-DK"
+    },
+    {
+      "Key": "d98713af-1a25-45d5-bc2c-bb6e41b2832a",
+      "Value": "",
+      "LanguageIsoCode": "en-US"
+    }
+  ],
   "Udi": "umb://dictionary-item/d98713af1a2545d5bc2cbb6e41b2832a",
   "Dependencies": [
     {
       "Udi": "umb://dictionary-item/7ca58f7143454b5e9bad61b1067290c7",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/da-DK",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/en-US",
       "Ordering": true,
       "Mode": "Exist"
     }
