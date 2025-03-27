@@ -22,7 +22,7 @@
           "Alias": "positionImages",
           "DataType": "umb://data-type/d8a26c36dc9143c3a0917a3a69610a3f",
           "Name": "Position Images",
-          "SortOrder": 4
+          "SortOrder": 7
         },
         {
           "Key": "463f9da4-343a-4139-bce9-b62ce0a07afa",
@@ -35,42 +35,42 @@
           "Alias": "successDescription",
           "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
           "Name": "Success Description",
-          "SortOrder": 7
+          "SortOrder": 3
         },
         {
           "Key": "53756099-d2e7-4da2-9ccc-b89fda8dffe0",
           "Alias": "buttonTheme",
           "DataType": "umb://data-type/36564b1fa93643ee88423df7234ea0bf",
           "Name": "Button Theme",
-          "SortOrder": 2
+          "SortOrder": 5
         },
         {
           "Key": "5f2436bb-6871-40f7-ae32-7a8b3c7723fb",
           "Alias": "successTitle",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
           "Name": "Success Title",
-          "SortOrder": 6
+          "SortOrder": 2
         },
         {
           "Key": "c1023651-7746-487c-9f73-8838f8755f3d",
           "Alias": "buttonBorderColor",
           "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
           "Name": "Button Border color",
-          "SortOrder": 3
+          "SortOrder": 6
         },
         {
           "Key": "c463f400-c6eb-472f-aaa6-52baac38efe6",
           "Alias": "successIcon",
           "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
           "Name": "Success Icon",
-          "SortOrder": 5
+          "SortOrder": 1
         },
         {
           "Key": "ed4618e0-8c71-4212-981d-cddda2982007",
           "Alias": "button",
           "DataType": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
           "Name": "Button",
-          "SortOrder": 1
+          "SortOrder": 4
         }
       ]
     }
