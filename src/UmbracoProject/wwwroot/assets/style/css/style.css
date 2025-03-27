@@ -16241,7 +16241,7 @@ li {
 .status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field label .umbraco-forms-indicator {
   color: #37B4B4;
 }
-.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input {
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input[type=text], .status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input[type=tel], .status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input[type=email], .status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input[type=password], .status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input[type=number] {
   margin: 0;
   max-width: 100% !important;
   display: block;
@@ -16261,7 +16261,7 @@ li {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   outline: none !important;
 }
-.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input:focus-visible {
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input[type=text]:focus-visible, .status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input[type=tel]:focus-visible, .status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input[type=email]:focus-visible, .status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input[type=password]:focus-visible, .status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input[type=number]:focus-visible {
   outline: none;
 }
 .status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .field-validation-error {

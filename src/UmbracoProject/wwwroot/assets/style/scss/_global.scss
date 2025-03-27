@@ -3168,27 +3168,29 @@ li {
                                 }
 
                                 input {
-                                    margin: 0;
-                                    max-width: 100% !important;
-                                    display: block;
-                                    width: 100%;
-                                    font-weight: 400;
-                                    color: $black-950;
-                                    appearance: none;
-                                    background-color: var(--bs-body-bg);
-                                    background-clip: padding-box;
-                                    border: 1px solid #dcdcdc;
-                                    border-radius: 100px;
-                                    font-size: 16px;
-                                    line-height: 24px;
-                                    height: 44px;
-                                    padding: 12px 16px;
-                                    font-family: "Houschka Rounded Alt";
-                                    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-                                    outline: none !important;
+                                    &[type="text"], &[type="tel"], &[type="email"], &[type="password"], &[type="number"] {
+                                        margin: 0;
+                                        max-width: 100% !important;
+                                        display: block;
+                                        width: 100%;
+                                        font-weight: 400;
+                                        color: $black-950;
+                                        appearance: none;
+                                        background-color: var(--bs-body-bg);
+                                        background-clip: padding-box;
+                                        border: 1px solid #dcdcdc;
+                                        border-radius: 100px;
+                                        font-size: 16px;
+                                        line-height: 24px;
+                                        height: 44px;
+                                        padding: 12px 16px;
+                                        font-family: "Houschka Rounded Alt";
+                                        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+                                        outline: none !important;
 
-                                    &:focus-visible {
-                                        outline: none;
+                                        &:focus-visible {
+                                            outline: none;
+                                        }
                                     }
                                 }
 
