@@ -1,21 +1,27 @@
 {
-  "Name": "umb://dictionary-item/9d46d83c6dfb42039392035e400f49b8",
+  "Name": "umb://dictionary-item/f61f6761ac914318bdf624486a2b96d2",
   "Alias": "",
-  "ItemKey": "Tv Search Loaction Heading",
+  "ItemKey": "PurchaseFlow.FirstStep",
+  "ParentId": "7ca58f71-4345-4b5e-9bad-61b1067290c7",
   "Translations": [
     {
-      "Key": "9d46d83c-6dfb-4203-9392-035e400f49b8",
-      "Value": "Kan jeg få nef TV?",
+      "Key": "f61f6761-ac91-4318-bdf6-24486a2b96d2",
+      "Value": "Vælg produkt",
       "LanguageIsoCode": "da-DK"
     },
     {
-      "Key": "9d46d83c-6dfb-4203-9392-035e400f49b8",
+      "Key": "f61f6761-ac91-4318-bdf6-24486a2b96d2",
       "Value": "",
       "LanguageIsoCode": "en-US"
     }
   ],
-  "Udi": "umb://dictionary-item/9d46d83c6dfb42039392035e400f49b8",
+  "Udi": "umb://dictionary-item/f61f6761ac914318bdf624486a2b96d2",
   "Dependencies": [
+    {
+      "Udi": "umb://dictionary-item/7ca58f7143454b5e9bad61b1067290c7",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
     {
       "Udi": "umb://language/da-DK",
       "Ordering": true,

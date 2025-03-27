@@ -1,0 +1,55 @@
+{
+  "Name": "Tv Purchase",
+  "Alias": "tvPurchase",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-tv color-black",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type/168519c29f0d40be8e321bd3ce914bdf",
+  "CompositionContentTypes": [
+    "umb://document-type/168519c29f0d40be8e321bd3ce914bdf"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "b86f9907-580d-41fa-a40e-6f3224a07826",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "61d522d1-b50a-465c-a9a0-36325b7e27ce",
+          "Alias": "categories",
+          "DataType": "umb://data-type/3ea15d23aff745fc9db124cbcd31bf12",
+          "Name": "Categories",
+          "SortOrder": 1
+        },
+        {
+          "Key": "7e05cdc1-b7ce-490a-9a4b-fc21cc3333c2",
+          "Alias": "categorySectionHeading",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Category Section Heading"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/0242d4b41274437cb1c2d9112d942b13",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/3ea15d23aff745fc9db124cbcd31bf12",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/168519c29f0d40be8e321bd3ce914bdf",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.4.0"
+}

@@ -1,0 +1,38 @@
+{
+  "Name": "umb://dictionary-item/b233a87ee242459582afd4be3add9675",
+  "Alias": "",
+  "ItemKey": "PurchaseFlow.Fiber.AddressNotConnectedDescription",
+  "ParentId": "9db5a323-ebf2-4650-96bf-f9cf8c8c459d",
+  "Translations": [
+    {
+      "Key": "b233a87e-e242-4595-82af-d4be3add9675",
+      "Value": "Der er klargjort til fiber ude ved vejen. Ring til\u2028kundeservice og hør mere om en eventuel\u2028installation af fiber i din bolig. Tlf. 63 32 11 00",
+      "LanguageIsoCode": "da-DK"
+    },
+    {
+      "Key": "b233a87e-e242-4595-82af-d4be3add9675",
+      "Value": "",
+      "LanguageIsoCode": "en-US"
+    }
+  ],
+  "Udi": "umb://dictionary-item/b233a87ee242459582afd4be3add9675",
+  "Dependencies": [
+    {
+      "Udi": "umb://dictionary-item/9db5a323ebf2465096bff9cf8c8c459d",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/da-DK",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/en-US",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DictionaryItemArtifact",
+  "__version": "13.4.0"
+}

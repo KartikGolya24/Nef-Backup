@@ -1,0 +1,38 @@
+{
+  "Name": "umb://dictionary-item/27da38bd39184b9a8a624eb4134ed997",
+  "Alias": "",
+  "ItemKey": "PurchaseFlow.SecondStep",
+  "ParentId": "7ca58f71-4345-4b5e-9bad-61b1067290c7",
+  "Translations": [
+    {
+      "Key": "27da38bd-3918-4b9a-8a62-4eb4134ed997",
+      "Value": "Oplysninger",
+      "LanguageIsoCode": "da-DK"
+    },
+    {
+      "Key": "27da38bd-3918-4b9a-8a62-4eb4134ed997",
+      "Value": "",
+      "LanguageIsoCode": "en-US"
+    }
+  ],
+  "Udi": "umb://dictionary-item/27da38bd39184b9a8a624eb4134ed997",
+  "Dependencies": [
+    {
+      "Udi": "umb://dictionary-item/7ca58f7143454b5e9bad61b1067290c7",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/da-DK",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/en-US",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DictionaryItemArtifact",
+  "__version": "13.4.0"
+}

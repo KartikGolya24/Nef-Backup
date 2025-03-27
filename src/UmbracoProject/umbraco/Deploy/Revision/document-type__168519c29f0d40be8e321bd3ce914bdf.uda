@@ -9,7 +9,6 @@
     "AllowedAtRoot": true,
     "AllowedChildContentTypes": [
       "umb://document-type/acc8a981d6e14a9bb8ae1d272c690744",
-      "umb://document-type/29f730f3836047b9874e39759c70e71d",
       "umb://document-type/0c1825242b924d20807fdda5caa3e541"
     ]
   },
@@ -25,10 +24,6 @@
     },
     {
       "Udi": "umb://document-type/0c1825242b924d20807fdda5caa3e541",
-      "Mode": "Exist"
-    },
-    {
-      "Udi": "umb://document-type/29f730f3836047b9874e39759c70e71d",
       "Mode": "Exist"
     },
     {

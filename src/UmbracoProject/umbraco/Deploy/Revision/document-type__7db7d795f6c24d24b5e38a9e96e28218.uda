@@ -1,0 +1,62 @@
+{
+  "Name": "Electricity Purchase",
+  "Alias": "electricityPurchase",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-connection color-black",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type/168519c29f0d40be8e321bd3ce914bdf",
+  "CompositionContentTypes": [
+    "umb://document-type/168519c29f0d40be8e321bd3ce914bdf"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "c1047db3-0131-408b-8618-e7a3532c3520",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "238acf2b-92b3-4257-88b5-567fb2a923b1",
+          "Alias": "prepaidPaymentDescription",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Prepaid Payment Description",
+          "SortOrder": 1
+        },
+        {
+          "Key": "b35b2b59-2687-4728-9029-5e48d521f0e4",
+          "Alias": "billingTypes",
+          "DataType": "umb://data-type/60ce7f5fa122434fadabfabf1aaeed2c",
+          "Name": "Billing Types"
+        },
+        {
+          "Key": "fcba2a9b-4da3-48e5-9e6c-17dc2053eddf",
+          "Alias": "postpaidPaymentDescription",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Postpaid Payment Description",
+          "SortOrder": 2
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/7db7d795f6c24d24b5e38a9e96e28218",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/60ce7f5fa122434fadabfabf1aaeed2c",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/168519c29f0d40be8e321bd3ce914bdf",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.4.0"
+}

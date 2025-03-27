@@ -1,0 +1,10 @@
+{
+  "Name": "umb://dictionary-item/66e6b2848500417e98c4ba1ef5859739",
+  "Alias": "",
+  "ItemKey": "FormFileds",
+  "Translations": [],
+  "Udi": "umb://dictionary-item/66e6b2848500417e98c4ba1ef5859739",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DictionaryItemArtifact",
+  "__version": "13.4.0"
+}

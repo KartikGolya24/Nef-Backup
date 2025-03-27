@@ -1,0 +1,38 @@
+{
+  "Name": "umb://dictionary-item/d0d13e4dbc80478fa08ea51247e534c7",
+  "Alias": "",
+  "ItemKey": "PurchaseFlow.ThirdStep.WirelessInternetText",
+  "ParentId": "fce6ebc7-c1d1-4b01-aef8-4c24d1486ef0",
+  "Translations": [
+    {
+      "Key": "d0d13e4d-bc80-478f-a08e-a51247e534c7",
+      "Value": "Giver mulighed for trådløst internet.",
+      "LanguageIsoCode": "da-DK"
+    },
+    {
+      "Key": "d0d13e4d-bc80-478f-a08e-a51247e534c7",
+      "Value": "",
+      "LanguageIsoCode": "en-US"
+    }
+  ],
+  "Udi": "umb://dictionary-item/d0d13e4dbc80478fa08ea51247e534c7",
+  "Dependencies": [
+    {
+      "Udi": "umb://dictionary-item/fce6ebc7c1d14b01aef84c24d1486ef0",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/da-DK",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/en-US",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DictionaryItemArtifact",
+  "__version": "13.4.0"
+}

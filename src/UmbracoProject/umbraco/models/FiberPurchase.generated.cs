@@ -18,14 +18,14 @@ using Umbraco.Extensions;
 
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
-	/// <summary>Purchase Address Lookup</summary>
-	[PublishedModel("purchaseAddressLookup")]
-	public partial class PurchaseAddressLookup : PurchaseFlow, ISEocontrols
+	/// <summary>Fiber Purchase</summary>
+	[PublishedModel("fiberPurchase")]
+	public partial class FiberPurchase : PurchaseFlow
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
-		public new const string ModelTypeAlias = "purchaseAddressLookup";
+		public new const string ModelTypeAlias = "fiberPurchase";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
@@ -34,14 +34,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 			=> PublishedModelUtility.GetModelContentType(publishedSnapshotAccessor, ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<PurchaseAddressLookup, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<FiberPurchase, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(publishedSnapshotAccessor), selector);
 #pragma warning restore 0109
 
 		private IPublishedValueFallback _publishedValueFallback;
 
 		// ctor
-		public PurchaseAddressLookup(IPublishedContent content, IPublishedValueFallback publishedValueFallback)
+		public FiberPurchase(IPublishedContent content, IPublishedValueFallback publishedValueFallback)
 			: base(content, publishedValueFallback)
 		{
 			_publishedValueFallback = publishedValueFallback;
@@ -50,51 +50,42 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Categories
+		/// Billing Types
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("categories")]
-		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel Categories => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "categories");
+		[ImplementPropertyType("billingTypes")]
+		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel BillingTypes => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "billingTypes");
 
 		///<summary>
-		/// Categoy Section Heading
+		/// Wireless Internet Cost
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("categoySectionHeading")]
-		public virtual string CategoySectionHeading => this.Value<string>(_publishedValueFallback, "categoySectionHeading");
+		[ImplementPropertyType("wirelessInternetCost")]
+		public virtual int WirelessInternetCost => this.Value<int>(_publishedValueFallback, "wirelessInternetCost");
 
 		///<summary>
-		/// Not Success Icon
+		/// Wireless Internet Headline
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("notSuccessIcon")]
-		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops NotSuccessIcon => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "notSuccessIcon");
+		[ImplementPropertyType("wirelessInternetHeadline")]
+		public virtual string WirelessInternetHeadline => this.Value<string>(_publishedValueFallback, "wirelessInternetHeadline");
 
 		///<summary>
-		/// Success Icon
+		/// Wireless Internet Note
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("successIcon")]
-		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops SuccessIcon => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "successIcon");
+		[ImplementPropertyType("wirelessInternetNote")]
+		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString WirelessInternetNote => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "wirelessInternetNote");
 
 		///<summary>
-		/// Meta Description
+		/// Wireless Internet Unit
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("metaDescription")]
-		public virtual string MetaDescription => global::Umbraco.Cms.Web.Common.PublishedModels.SEocontrols.GetMetaDescription(this, _publishedValueFallback);
-
-		///<summary>
-		/// Meta Title
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("metaTitle")]
-		public virtual string MetaTitle => global::Umbraco.Cms.Web.Common.PublishedModels.SEocontrols.GetMetaTitle(this, _publishedValueFallback);
+		[ImplementPropertyType("wirelessInternetUnit")]
+		public virtual string WirelessInternetUnit => this.Value<string>(_publishedValueFallback, "wirelessInternetUnit");
 	}
 }

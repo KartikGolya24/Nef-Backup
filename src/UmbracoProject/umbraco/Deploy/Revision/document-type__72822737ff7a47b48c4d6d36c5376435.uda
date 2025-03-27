@@ -1,0 +1,84 @@
+{
+  "Name": "Fiber Purchase",
+  "Alias": "fiberPurchase",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-radio-alt color-black",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type/168519c29f0d40be8e321bd3ce914bdf",
+  "CompositionContentTypes": [
+    "umb://document-type/168519c29f0d40be8e321bd3ce914bdf"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "21b787b8-a5a6-4151-8391-c1b6288540a7",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "023a7864-d82b-43ed-b166-6cd92a61062e",
+          "Alias": "wirelessInternetCost",
+          "DataType": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+          "Name": "Wireless Internet Cost",
+          "SortOrder": 2
+        },
+        {
+          "Key": "0e881230-2c32-40f4-a057-7f2059a8d5b5",
+          "Alias": "wirelessInternetUnit",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Wireless Internet Unit",
+          "SortOrder": 3
+        },
+        {
+          "Key": "586ed2e2-dfd4-47c1-921c-c19cf2319e75",
+          "Alias": "wirelessInternetNote",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Wireless Internet Note",
+          "SortOrder": 4
+        },
+        {
+          "Key": "5c39c901-bbb8-4295-aca7-c35ef34a8a93",
+          "Alias": "wirelessInternetHeadline",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Wireless Internet Headline",
+          "SortOrder": 1
+        },
+        {
+          "Key": "fe2bb867-390c-40ec-ab75-ea4db1a0650c",
+          "Alias": "billingTypes",
+          "DataType": "umb://data-type/0d0e113d17d64399825a57886fd2da95",
+          "Name": "Billing Types"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/72822737ff7a47b48c4d6d36c5376435",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/0d0e113d17d64399825a57886fd2da95",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/168519c29f0d40be8e321bd3ce914bdf",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.4.0"
+}

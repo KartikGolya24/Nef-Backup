@@ -1,0 +1,38 @@
+{
+  "Name": "umb://dictionary-item/9f1257f62db44514840a3089db0a9ad9",
+  "Alias": "",
+  "ItemKey": "PurchaseFlow.TV.FormTitle",
+  "ParentId": "d98713af-1a25-45d5-bc2c-bb6e41b2832a",
+  "Translations": [
+    {
+      "Key": "9f1257f6-2db4-4514-840a-3089db0a9ad9",
+      "Value": "Bestilling af TV-pakke",
+      "LanguageIsoCode": "da-DK"
+    },
+    {
+      "Key": "9f1257f6-2db4-4514-840a-3089db0a9ad9",
+      "Value": "",
+      "LanguageIsoCode": "en-US"
+    }
+  ],
+  "Udi": "umb://dictionary-item/9f1257f62db44514840a3089db0a9ad9",
+  "Dependencies": [
+    {
+      "Udi": "umb://dictionary-item/d98713af1a2545d5bc2cbb6e41b2832a",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/da-DK",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/en-US",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DictionaryItemArtifact",
+  "__version": "13.4.0"
+}

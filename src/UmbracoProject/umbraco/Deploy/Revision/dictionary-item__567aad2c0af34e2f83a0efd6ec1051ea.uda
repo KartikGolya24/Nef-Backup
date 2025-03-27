@@ -1,0 +1,38 @@
+{
+  "Name": "umb://dictionary-item/567aad2c0af34e2f83a0efd6ec1051ea",
+  "Alias": "",
+  "ItemKey": "PurchaseFlow.Fiber.OtherBillingAddressHeading",
+  "ParentId": "9db5a323-ebf2-4650-96bf-f9cf8c8c459d",
+  "Translations": [
+    {
+      "Key": "567aad2c-0af3-4e2f-83a0-efd6ec1051ea",
+      "Value": "Anden faktureringadresse",
+      "LanguageIsoCode": "da-DK"
+    },
+    {
+      "Key": "567aad2c-0af3-4e2f-83a0-efd6ec1051ea",
+      "Value": "",
+      "LanguageIsoCode": "en-US"
+    }
+  ],
+  "Udi": "umb://dictionary-item/567aad2c0af34e2f83a0efd6ec1051ea",
+  "Dependencies": [
+    {
+      "Udi": "umb://dictionary-item/9db5a323ebf2465096bff9cf8c8c459d",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/da-DK",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/en-US",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DictionaryItemArtifact",
+  "__version": "13.4.0"
+}

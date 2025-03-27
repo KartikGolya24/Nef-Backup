@@ -1,0 +1,38 @@
+{
+  "Name": "umb://dictionary-item/ea564240b7f745c2b5e57091547c4b15",
+  "Alias": "",
+  "ItemKey": "PurchaseFlow.TV.AddressNotConnected",
+  "ParentId": "d98713af-1a25-45d5-bc2c-bb6e41b2832a",
+  "Translations": [
+    {
+      "Key": "ea564240-b7f7-45c2-b5e5-7091547c4b15",
+      "Value": "Nej, desværre",
+      "LanguageIsoCode": "da-DK"
+    },
+    {
+      "Key": "ea564240-b7f7-45c2-b5e5-7091547c4b15",
+      "Value": "",
+      "LanguageIsoCode": "en-US"
+    }
+  ],
+  "Udi": "umb://dictionary-item/ea564240b7f745c2b5e57091547c4b15",
+  "Dependencies": [
+    {
+      "Udi": "umb://dictionary-item/d98713af1a2545d5bc2cbb6e41b2832a",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/da-DK",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/en-US",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DictionaryItemArtifact",
+  "__version": "13.4.0"
+}

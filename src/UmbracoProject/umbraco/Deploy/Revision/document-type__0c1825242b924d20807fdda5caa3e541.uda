@@ -1,15 +1,19 @@
 {
-  "Name": "Purchase Address Lookup",
-  "Alias": "purchaseAddressLookup",
-  "DefaultTemplate": "umb://template/8b1762c4c0274227bf867f90fa59d34a",
+  "Name": "Purchase Details",
+  "Alias": "purchaseDetails",
+  "DefaultTemplate": "umb://template/2ac86151c8db49f581c14a5ec060e9ef",
   "AllowedTemplates": [
-    "umb://template/8b1762c4c0274227bf867f90fa59d34a"
+    "umb://template/2ac86151c8db49f581c14a5ec060e9ef"
   ],
   "HistoryCleanup": {},
   "Icon": "icon-document",
   "Thumbnail": "folder.png",
   "Permissions": {
-    "AllowedChildContentTypes": []
+    "AllowedChildContentTypes": [
+      "umb://document-type/0242d4b41274437cb1c2d9112d942b13",
+      "umb://document-type/72822737ff7a47b48c4d6d36c5376435",
+      "umb://document-type/7db7d795f6c24d24b5e38a9e96e28218"
+    ]
   },
   "Parent": "umb://document-type/168519c29f0d40be8e321bd3ce914bdf",
   "CompositionContentTypes": [
@@ -23,19 +27,6 @@
       "SortOrder": 1,
       "Alias": "content",
       "PropertyTypes": [
-        {
-          "Key": "20d459c1-5e0e-434c-be78-1c8046d1508a",
-          "Alias": "categories",
-          "DataType": "umb://data-type/3ea15d23aff745fc9db124cbcd31bf12",
-          "Name": "Categories",
-          "SortOrder": 1
-        },
-        {
-          "Key": "816e2200-ad93-4888-9420-876c3e1cbd71",
-          "Alias": "categoySectionHeading",
-          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-          "Name": "Categoy Section Heading"
-        },
         {
           "Key": "d1dce427-4a01-48d7-a987-b55cd6325ada",
           "Alias": "notSuccessIcon",
@@ -57,27 +48,31 @@
   "Udi": "umb://document-type/0c1825242b924d20807fdda5caa3e541",
   "Dependencies": [
     {
-      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-      "Ordering": true
-    },
-    {
       "Udi": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
       "Ordering": true
     },
     {
-      "Udi": "umb://data-type/3ea15d23aff745fc9db124cbcd31bf12",
-      "Ordering": true
+      "Udi": "umb://document-type/0242d4b41274437cb1c2d9112d942b13",
+      "Mode": "Exist"
     },
     {
       "Udi": "umb://document-type/168519c29f0d40be8e321bd3ce914bdf",
       "Ordering": true
     },
     {
+      "Udi": "umb://document-type/72822737ff7a47b48c4d6d36c5376435",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://document-type/7db7d795f6c24d24b5e38a9e96e28218",
+      "Mode": "Exist"
+    },
+    {
       "Udi": "umb://document-type/c9ab57ded3b44526a7ac22bacf19a079",
       "Ordering": true
     },
     {
-      "Udi": "umb://template/8b1762c4c0274227bf867f90fa59d34a",
+      "Udi": "umb://template/2ac86151c8db49f581c14a5ec060e9ef",
       "Ordering": true,
       "Mode": "Exist"
     }

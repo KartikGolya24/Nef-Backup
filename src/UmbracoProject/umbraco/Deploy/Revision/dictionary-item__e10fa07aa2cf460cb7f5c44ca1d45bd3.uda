@@ -1,0 +1,38 @@
+{
+  "Name": "umb://dictionary-item/e10fa07aa2cf460cb7f5c44ca1d45bd3",
+  "Alias": "",
+  "ItemKey": "FormFileds.AlternateAddress",
+  "ParentId": "66e6b284-8500-417e-98c4-ba1ef5859739",
+  "Translations": [
+    {
+      "Key": "e10fa07a-a2cf-460c-b7f5-c44ca1d45bd3",
+      "Value": "Adresse",
+      "LanguageIsoCode": "da-DK"
+    },
+    {
+      "Key": "e10fa07a-a2cf-460c-b7f5-c44ca1d45bd3",
+      "Value": "",
+      "LanguageIsoCode": "en-US"
+    }
+  ],
+  "Udi": "umb://dictionary-item/e10fa07aa2cf460cb7f5c44ca1d45bd3",
+  "Dependencies": [
+    {
+      "Udi": "umb://dictionary-item/66e6b2848500417e98c4ba1ef5859739",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/da-DK",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/en-US",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DictionaryItemArtifact",
+  "__version": "13.4.0"
+}

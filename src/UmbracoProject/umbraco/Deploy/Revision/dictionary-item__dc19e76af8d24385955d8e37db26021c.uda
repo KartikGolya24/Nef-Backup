@@ -1,0 +1,38 @@
+{
+  "Name": "umb://dictionary-item/dc19e76af8d24385955d8e37db26021c",
+  "Alias": "",
+  "ItemKey": "FormFileds.Email",
+  "ParentId": "66e6b284-8500-417e-98c4-ba1ef5859739",
+  "Translations": [
+    {
+      "Key": "dc19e76a-f8d2-4385-955d-8e37db26021c",
+      "Value": "Email",
+      "LanguageIsoCode": "da-DK"
+    },
+    {
+      "Key": "dc19e76a-f8d2-4385-955d-8e37db26021c",
+      "Value": "",
+      "LanguageIsoCode": "en-US"
+    }
+  ],
+  "Udi": "umb://dictionary-item/dc19e76af8d24385955d8e37db26021c",
+  "Dependencies": [
+    {
+      "Udi": "umb://dictionary-item/66e6b2848500417e98c4ba1ef5859739",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/da-DK",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/en-US",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DictionaryItemArtifact",
+  "__version": "13.4.0"
+}

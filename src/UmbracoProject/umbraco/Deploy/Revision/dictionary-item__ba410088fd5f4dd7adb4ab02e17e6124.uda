@@ -1,0 +1,38 @@
+{
+  "Name": "umb://dictionary-item/ba410088fd5f4dd7adb4ab02e17e6124",
+  "Alias": "",
+  "ItemKey": "PurchaseFlow.TV.AddressNotConnectedDescription",
+  "ParentId": "d98713af-1a25-45d5-bc2c-bb6e41b2832a",
+  "Translations": [
+    {
+      "Key": "ba410088-fd5f-4dd7-adb4-ab02e17e6124",
+      "Value": "Ring til kundeservice, for at få mere at vide. Tlf. 63 32 11 00",
+      "LanguageIsoCode": "da-DK"
+    },
+    {
+      "Key": "ba410088-fd5f-4dd7-adb4-ab02e17e6124",
+      "Value": "",
+      "LanguageIsoCode": "en-US"
+    }
+  ],
+  "Udi": "umb://dictionary-item/ba410088fd5f4dd7adb4ab02e17e6124",
+  "Dependencies": [
+    {
+      "Udi": "umb://dictionary-item/d98713af1a2545d5bc2cbb6e41b2832a",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/da-DK",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/en-US",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DictionaryItemArtifact",
+  "__version": "13.4.0"
+}

@@ -1,0 +1,27 @@
+{
+  "Name": "Fiber Purchase - Billing Types - Block List",
+  "Alias": "",
+  "EditorAlias": "Umbraco.BlockList",
+  "Configuration": {
+    "blocks": [
+      {
+        "contentElementTypeKey": "ef6423d2-5c01-4efa-a59c-53b2889016b0",
+        "label": "{{title}}",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      }
+    ],
+    "validationLimit": {},
+    "useSingleBlockMode": false,
+    "useLiveEditing": false,
+    "useInlineEditingAsDefault": true
+  },
+  "Udi": "umb://data-type/0d0e113d17d64399825a57886fd2da95",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/ef6423d25c014efaa59c53b2889016b0"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.4.0"
+}

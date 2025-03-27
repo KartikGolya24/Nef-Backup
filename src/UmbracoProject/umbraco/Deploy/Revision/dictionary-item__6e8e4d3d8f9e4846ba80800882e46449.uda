@@ -1,0 +1,38 @@
+{
+  "Name": "umb://dictionary-item/6e8e4d3d8f9e4846ba80800882e46449",
+  "Alias": "",
+  "ItemKey": "PurchaseFlow.TV.AddressConnectedDescription",
+  "ParentId": "d98713af-1a25-45d5-bc2c-bb6e41b2832a",
+  "Translations": [
+    {
+      "Key": "6e8e4d3d-8f9e-4846-ba80-800882e46449",
+      "Value": "Vi har tjekket din adresse og kan se, at du har en fiberledning, som vi kan levere nef TV til. Nu skal du bare vælge din pakke og bestille.",
+      "LanguageIsoCode": "da-DK"
+    },
+    {
+      "Key": "6e8e4d3d-8f9e-4846-ba80-800882e46449",
+      "Value": "",
+      "LanguageIsoCode": "en-US"
+    }
+  ],
+  "Udi": "umb://dictionary-item/6e8e4d3d8f9e4846ba80800882e46449",
+  "Dependencies": [
+    {
+      "Udi": "umb://dictionary-item/d98713af1a2545d5bc2cbb6e41b2832a",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/da-DK",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/en-US",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DictionaryItemArtifact",
+  "__version": "13.4.0"
+}

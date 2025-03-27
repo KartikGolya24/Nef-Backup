@@ -1,0 +1,38 @@
+{
+  "Name": "umb://dictionary-item/ba5f1ad5c6224ac090716b4faa0ae9db",
+  "Alias": "",
+  "ItemKey": "PurchaseFlow.TV.AddressConnected",
+  "ParentId": "d98713af-1a25-45d5-bc2c-bb6e41b2832a",
+  "Translations": [
+    {
+      "Key": "ba5f1ad5-c622-4ac0-9071-6b4faa0ae9db",
+      "Value": "Ja, du kan godt få nef TV",
+      "LanguageIsoCode": "da-DK"
+    },
+    {
+      "Key": "ba5f1ad5-c622-4ac0-9071-6b4faa0ae9db",
+      "Value": "",
+      "LanguageIsoCode": "en-US"
+    }
+  ],
+  "Udi": "umb://dictionary-item/ba5f1ad5c6224ac090716b4faa0ae9db",
+  "Dependencies": [
+    {
+      "Udi": "umb://dictionary-item/d98713af1a2545d5bc2cbb6e41b2832a",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/da-DK",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/en-US",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DictionaryItemArtifact",
+  "__version": "13.4.0"
+}

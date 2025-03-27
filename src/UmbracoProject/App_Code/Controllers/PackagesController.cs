@@ -27,5 +27,17 @@ namespace UmbracoProject.App_Code.Controllers
             List<FiberPackagesModel> fiberPackages = await _purchaseFlowService.GetFiberPackagesAsync();
             return PartialView("~/Views/Partials/_FiberPackagesForPurchaseFlow.cshtml", fiberPackages);
         }
+
+        [HttpGet("get-tv-package-list")]
+        public async Task<IActionResult> GetTvPackageList()
+        {
+            return Ok(await _purchaseFlowService.GetFiberPackagesAsync());
+        }
+
+        [HttpGet("get-fiber-package-list")]
+        public async Task<IActionResult> GetFiberPackageList()
+        {
+            return Ok(await _purchaseFlowService.GetFiberPackagesAsync());
+        }
     }
 }

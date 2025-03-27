@@ -18,6 +18,13 @@
       "Alias": "content",
       "PropertyTypes": [
         {
+          "Key": "48b4680f-a965-4cbc-914e-e3245e6ab4b2",
+          "Alias": "practicalInformation",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Practical Information",
+          "SortOrder": 5
+        },
+        {
           "Key": "51e1e182-8e80-4856-be85-b9eb17194440",
           "Alias": "description",
           "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
@@ -38,10 +45,17 @@
           "SortOrder": 1
         },
         {
+          "Key": "adf207e7-f938-4e2e-b850-1756ca467a9f",
+          "Alias": "addonCost",
+          "DataType": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+          "Name": "Addon Cost",
+          "SortOrder": 4
+        },
+        {
           "Key": "e497ae1d-4536-42b0-b985-9fc142f0d113",
           "Alias": "tvCostText",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-          "Name": "Tv Cost Text",
+          "Name": "Addon Text",
           "SortOrder": 3
         }
       ]
@@ -56,6 +70,14 @@
     },
     {
       "Udi": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
       "Ordering": true
     },
     {

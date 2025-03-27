@@ -46,6 +46,7 @@ $(document).ready(function () {
                         document.cookie = "packageType=" + packageType + "; path=/;max-age=" + expires;
                         document.cookie = "PackageStatus=" + PackageStatus + "; path=/;max-age=" + expires;
                         document.cookie = "addressValue=" + encodeURIComponent(addressName) + "; path=/;max-age=" + expires;
+                        document.cookie = "addressId=" + addressId + "; path=/;max-age=" + expires;
                         window.location.href = pageUrl;
                     } else {
                         console.log(res.error);

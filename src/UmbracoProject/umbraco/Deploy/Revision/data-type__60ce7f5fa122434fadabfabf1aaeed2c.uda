@@ -1,0 +1,27 @@
+{
+  "Name": "Electricity Purchase - Billing Types - Block List",
+  "Alias": "",
+  "EditorAlias": "Umbraco.BlockList",
+  "Configuration": {
+    "blocks": [
+      {
+        "contentElementTypeKey": "a5434170-df65-4925-bed0-8ca7aad60f91",
+        "label": "{{title}}",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      }
+    ],
+    "validationLimit": {},
+    "useSingleBlockMode": false,
+    "useLiveEditing": false,
+    "useInlineEditingAsDefault": false
+  },
+  "Udi": "umb://data-type/60ce7f5fa122434fadabfabf1aaeed2c",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/a5434170df654925bed08ca7aad60f91"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.4.0"
+}

@@ -1,0 +1,38 @@
+{
+  "Name": "umb://dictionary-item/d98e5898eca74727ad68ae934041e041",
+  "Alias": "",
+  "ItemKey": "PurchaseFlow.Fiber.AddressConnected",
+  "ParentId": "9db5a323-ebf2-4650-96bf-f9cf8c8c459d",
+  "Translations": [
+    {
+      "Key": "d98e5898-eca7-4727-ad68-ae934041e041",
+      "Value": "Ja, du kan godt få nef Fiber",
+      "LanguageIsoCode": "da-DK"
+    },
+    {
+      "Key": "d98e5898-eca7-4727-ad68-ae934041e041",
+      "Value": "",
+      "LanguageIsoCode": "en-US"
+    }
+  ],
+  "Udi": "umb://dictionary-item/d98e5898eca74727ad68ae934041e041",
+  "Dependencies": [
+    {
+      "Udi": "umb://dictionary-item/9db5a323ebf2465096bff9cf8c8c459d",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/da-DK",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/en-US",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DictionaryItemArtifact",
+  "__version": "13.4.0"
+}
