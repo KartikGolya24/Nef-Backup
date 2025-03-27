@@ -1,15 +1,9 @@
 {
   "Name": "Purchase Details",
   "Alias": "PurchaseDetails1",
-  "File": "umb://template-file/PurchaseDetails1.cshtml",
   "Master": "umb://template/9e3e47122c814198b17c487ee47999da",
   "Udi": "umb://template/8b1762c4c0274227bf867f90fa59d34a",
   "Dependencies": [
-    {
-      "Udi": "umb://template-file/PurchaseDetails1.cshtml",
-      "Ordering": true,
-      "Mode": "Exist"
-    },
     {
       "Udi": "umb://template/9e3e47122c814198b17c487ee47999da",
       "Ordering": true,
