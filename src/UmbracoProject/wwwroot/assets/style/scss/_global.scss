@@ -3429,7 +3429,7 @@ li {
         }
 
         .owl-nav {
-            display: flex;
+            display: flex !important;
             margin-top: 40px;
             justify-content: end;
             padding: 0px 96px;

@@ -4,6 +4,7 @@
 @{
     var content = Model?.Content;
     var setting = Model?.Settings as SectionSettingModel;
+    
 }
 <head>
 
@@ -23,6 +24,7 @@
         <div class="owl-carousel owl-theme">
             @if (content?.SliderBlocks != null && content?.SliderBlocks?.Count > 0)
             {
+
                 @foreach (var item in content?.SliderBlocks)
                 {
                     var itemModel = item?.Content as CustomerSliderBlocks;
@@ -72,16 +74,14 @@
     </div>
 </div>
 <script>
-    $(".owl-carousel").owlCarousel({
-      loop: true,
+      $(".owl-carousel").owlCarousel({
+      loop: @(Model?.Content?.SliderBlocks?.Count == 1 ? "false" : "true"), 
       responsiveClass: true,
       nav: true,
       margin: 24,
       autoplayTimeout: 4000,
       smartSpeed: 400,
       center: true,
-      items: 2.8,
-      nav: true,
       navText: [
         "<img src='/assets/img/icons/arrow-left.svg' alt=''>",
         "<img src='/assets/img/icons/arrow-right.svg' alt=''>",
@@ -100,5 +100,56 @@
           nav: true,
         },
       },
+      onInitialized: function (event) {
+        // let totalItems = event.item.count;
+        // let visibleItems = event.page.size;
+
+        // if (totalItems > visibleItems) {
+        //   $(".owl-dots, .owl-nav").show();
+        // } else {
+        //   $(".owl-dots, .owl-nav").hide();
+        // }
+      },
     });
+
+
+
+    //     $(".owl-carousel").owlCarousel({
+    //   loop: true,
+    //   responsiveClass: true,
+    //   nav: true,
+    //   margin: 24,
+    //   autoplayTimeout: 4000,
+    //   smartSpeed: 400,
+    //   center: true,
+    //   navText: [
+    //     "<img src='/assets/img/icons/arrow-left.svg' alt=''>",
+    //     "<img src='/assets/img/icons/arrow-right.svg' alt=''>",
+    //   ],
+    //   responsive: {
+    //     0: {
+    //       items: 1,
+    //       nav: false,
+    //     },
+    //     600: {
+    //       items: 2,
+    //       nav: true,
+    //     },
+    //     1000: {
+    //       items: 2.75,
+    //       nav: true,
+    //     },
+    //   },
+    //   onInitialized: function (event) {
+    //     let totalItems = event.item.count;
+    //     let visibleItems = event.page.size;
+
+    //     if (totalItems > visibleItems) {
+    //       $(".owl-dots").show();
+    //     } else {
+    //       $(".owl-dots").hide();
+    //     }
+    //   },
+    // });
+
 </script>
