@@ -415,3 +415,9 @@ healthchecksdb
 **/Views/Partials/Forms/Themes/bootstrap3-horizontal/
 **/Views/Partials/Forms/Themes/default/
 /src/UmbracoProject/wwwroot/assets/js/bundle.min.js
+/src/UmbracoProject/wwwroot/assets/js/custom.output.min.js
+/src/UmbracoProject/wwwroot/assets/js/forms.output.min.js
+/src/UmbracoProject/wwwroot/assets/js/global.output.min.js
+/src/UmbracoProject/wwwroot/assets/js/jquery.output.min.js
+/src/UmbracoProject/wwwroot/assets/js/packagesCommon.output.min.js
+/src/UmbracoProject/wwwroot/assets/js/PurchaseAddressLookup.output.min.js
