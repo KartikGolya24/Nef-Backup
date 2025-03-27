@@ -3,9 +3,9 @@
     public class CalendarDatesApiResponseModel
     {
         public bool ShowCalendar { get; set; }
-        public List<DateTime>? Dates { get; set; }
-        public DateTime? StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
+        public List<DateOnly>? Dates { get; set; }
+        public DateOnly? StartDate { get; set; }
+        public DateOnly? EndDate { get; set; }
         public string? CalendarHelperText { get; set; }
         public string? CalendarTitle { get; set; }
     }
