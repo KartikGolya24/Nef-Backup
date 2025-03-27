@@ -19,7 +19,7 @@ using Umbraco.Extensions;
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	// Mixin Content Type with alias "purchaseFlowThankYouSection"
-	/// <summary>Purchase Flow Thank you Section</summary>
+	/// <summary>Purchase Flow Thank you Group</summary>
 	public partial interface IPurchaseFlowThankYouSection : IPublishedElement
 	{
 		/// <summary>Button</summary>
@@ -63,7 +63,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		string SuccessTitle { get; }
 	}
 
-	/// <summary>Purchase Flow Thank you Section</summary>
+	/// <summary>Purchase Flow Thank you Group</summary>
 	[PublishedModel("purchaseFlowThankYouSection")]
 	public partial class PurchaseFlowThankYouSection : PublishedElementModel, IPurchaseFlowThankYouSection
 	{
