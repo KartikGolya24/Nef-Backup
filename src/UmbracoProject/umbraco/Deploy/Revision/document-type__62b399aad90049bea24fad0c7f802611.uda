@@ -3,7 +3,7 @@
   "Alias": "candidates",
   "AllowedTemplates": [],
   "HistoryCleanup": {},
-  "Icon": "icon-item-arrangement",
+  "Icon": "icon-users color-black",
   "Thumbnail": "folder.png",
   "IsContainer": true,
   "Permissions": {

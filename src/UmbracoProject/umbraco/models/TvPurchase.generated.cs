@@ -20,7 +20,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Tv Purchase</summary>
 	[PublishedModel("tvPurchase")]
-	public partial class TvPurchase : PurchaseFlow
+	public partial class TvPurchase : PurchaseFlow, IPurchaseFlowThankYouSection
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -64,5 +64,69 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("categorySectionHeading")]
 		public virtual string CategorySectionHeading => this.Value<string>(_publishedValueFallback, "categorySectionHeading");
+
+		///<summary>
+		/// Button
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("button")]
+		public virtual global::Umbraco.Cms.Core.Models.Link Button => global::Umbraco.Cms.Web.Common.PublishedModels.PurchaseFlowThankYouSection.GetButton(this, _publishedValueFallback);
+
+		///<summary>
+		/// Button Border color
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("buttonBorderColor")]
+		public virtual string ButtonBorderColor => global::Umbraco.Cms.Web.Common.PublishedModels.PurchaseFlowThankYouSection.GetButtonBorderColor(this, _publishedValueFallback);
+
+		///<summary>
+		/// Button Theme
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("buttonTheme")]
+		public virtual string ButtonTheme => global::Umbraco.Cms.Web.Common.PublishedModels.PurchaseFlowThankYouSection.GetButtonTheme(this, _publishedValueFallback);
+
+		///<summary>
+		/// Heading
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("heading")]
+		public virtual string Heading => global::Umbraco.Cms.Web.Common.PublishedModels.PurchaseFlowThankYouSection.GetHeading(this, _publishedValueFallback);
+
+		///<summary>
+		/// Position Images
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("positionImages")]
+		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel PositionImages => global::Umbraco.Cms.Web.Common.PublishedModels.PurchaseFlowThankYouSection.GetPositionImages(this, _publishedValueFallback);
+
+		///<summary>
+		/// Success Description
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("successDescription")]
+		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString SuccessDescription => global::Umbraco.Cms.Web.Common.PublishedModels.PurchaseFlowThankYouSection.GetSuccessDescription(this, _publishedValueFallback);
+
+		///<summary>
+		/// Success Icon
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("successIcon")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops SuccessIcon => global::Umbraco.Cms.Web.Common.PublishedModels.PurchaseFlowThankYouSection.GetSuccessIcon(this, _publishedValueFallback);
+
+		///<summary>
+		/// Success Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("successTitle")]
+		public virtual string SuccessTitle => global::Umbraco.Cms.Web.Common.PublishedModels.PurchaseFlowThankYouSection.GetSuccessTitle(this, _publishedValueFallback);
 	}
 }

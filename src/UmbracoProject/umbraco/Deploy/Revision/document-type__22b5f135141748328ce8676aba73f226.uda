@@ -1,0 +1,116 @@
+{
+  "Name": "Purchase Flow Thank you Section",
+  "Alias": "purchaseFlowThankYouSection",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-thumb-up color-black",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/3a191b3dafc04e468ef53b9ee92592a7",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "4cae1cd6-c648-469d-89f9-5ec5a35f610f",
+      "Name": "Thanku Content",
+      "Alias": "thankuContent",
+      "PropertyTypes": [
+        {
+          "Key": "1b1efac3-aa0c-4220-9dd5-995deaaddbae",
+          "Alias": "positionImages",
+          "DataType": "umb://data-type/d8a26c36dc9143c3a0917a3a69610a3f",
+          "Name": "Position Images",
+          "SortOrder": 4
+        },
+        {
+          "Key": "463f9da4-343a-4139-bce9-b62ce0a07afa",
+          "Alias": "heading",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Heading"
+        },
+        {
+          "Key": "48b8c1ec-ea9e-4b69-b4d8-1f7621f4a9d9",
+          "Alias": "successDescription",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Success Description",
+          "SortOrder": 7
+        },
+        {
+          "Key": "53756099-d2e7-4da2-9ccc-b89fda8dffe0",
+          "Alias": "buttonTheme",
+          "DataType": "umb://data-type/36564b1fa93643ee88423df7234ea0bf",
+          "Name": "Button Theme",
+          "SortOrder": 2
+        },
+        {
+          "Key": "5f2436bb-6871-40f7-ae32-7a8b3c7723fb",
+          "Alias": "successTitle",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Success Title",
+          "SortOrder": 6
+        },
+        {
+          "Key": "c1023651-7746-487c-9f73-8838f8755f3d",
+          "Alias": "buttonBorderColor",
+          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+          "Name": "Button Border color",
+          "SortOrder": 3
+        },
+        {
+          "Key": "c463f400-c6eb-472f-aaa6-52baac38efe6",
+          "Alias": "successIcon",
+          "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
+          "Name": "Success Icon",
+          "SortOrder": 5
+        },
+        {
+          "Key": "ed4618e0-8c71-4212-981d-cddda2982007",
+          "Alias": "button",
+          "DataType": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
+          "Name": "Button",
+          "SortOrder": 1
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/22b5f135141748328ce8676aba73f226",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/36564b1fa93643ee88423df7234ea0bf",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/d8a26c36dc9143c3a0917a3a69610a3f",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/3a191b3dafc04e468ef53b9ee92592a7",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.4.0"
+}
