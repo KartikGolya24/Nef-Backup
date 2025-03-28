@@ -58,6 +58,36 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString Description => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "description");
 
 		///<summary>
+		/// Price
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
+		[ImplementPropertyType("price")]
+		public virtual decimal Price => this.Value<decimal>(_publishedValueFallback, "price");
+
+		///<summary>
+		/// Price Unit
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("priceUnit")]
+		public virtual string PriceUnit => this.Value<string>(_publishedValueFallback, "priceUnit");
+
+		///<summary>
+		/// Supplement Price
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
+		[ImplementPropertyType("supplementPrice")]
+		public virtual decimal SupplementPrice => this.Value<decimal>(_publishedValueFallback, "supplementPrice");
+
+		///<summary>
+		/// Supplement Price Unit
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("supplementPriceUnit")]
+		public virtual string SupplementPriceUnit => this.Value<string>(_publishedValueFallback, "supplementPriceUnit");
+
+		///<summary>
 		/// Tag
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]

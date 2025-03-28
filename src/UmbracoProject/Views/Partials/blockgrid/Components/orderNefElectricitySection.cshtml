@@ -13,13 +13,12 @@
             @Html?.Raw(content?.DescriptionText)
         </div>
         <div class="row">
-            @if (content?.OrderElectricityBlocks?.Count > 0)
+            @if (content?.ElectricityPackaseList?.Count() > 0)
             {
                 var count = 1;
-                @foreach (var item in content?.OrderElectricityBlocks)
+                @foreach (var item in content?.ElectricityPackaseList)
                 {
-                    var electricityBlock = item?.Content as OrderNefElectricityBlock;
-
+                    var electricityBlock = item as ElectricityPackages;
                     <div class="col-md-6">
                         <div class="order-nef-card">
                             <div class="card-body">

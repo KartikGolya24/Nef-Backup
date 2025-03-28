@@ -18,14 +18,14 @@ using Umbraco.Extensions;
 
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
-	/// <summary>Order Nef Electricity Block</summary>
-	[PublishedModel("orderNefElectricityBlock")]
-	public partial class OrderNefElectricityBlock : PublishedElementModel
+	/// <summary>Electricity Packages</summary>
+	[PublishedModel("electricityPackages")]
+	public partial class ElectricityPackages : PurchaseFlow
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
-		public new const string ModelTypeAlias = "orderNefElectricityBlock";
+		public new const string ModelTypeAlias = "electricityPackages";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
@@ -34,14 +34,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 			=> PublishedModelUtility.GetModelContentType(publishedSnapshotAccessor, ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<OrderNefElectricityBlock, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<ElectricityPackages, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(publishedSnapshotAccessor), selector);
 #pragma warning restore 0109
 
 		private IPublishedValueFallback _publishedValueFallback;
 
 		// ctor
-		public OrderNefElectricityBlock(IPublishedElement content, IPublishedValueFallback publishedValueFallback)
+		public ElectricityPackages(IPublishedContent content, IPublishedValueFallback publishedValueFallback)
 			: base(content, publishedValueFallback)
 		{
 			_publishedValueFallback = publishedValueFallback;
@@ -50,12 +50,27 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Button Border color: pick a color for see more button border
+		/// Button Border color
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("buttonBorderColor")]
 		public virtual string ButtonBorderColor => this.Value<string>(_publishedValueFallback, "buttonBorderColor");
+
+		///<summary>
+		/// Certificate Price
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
+		[ImplementPropertyType("certificatePrice")]
+		public virtual decimal CertificatePrice => this.Value<decimal>(_publishedValueFallback, "certificatePrice");
+
+		///<summary>
+		/// Certificate Price Unit
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("certificatePriceUnit")]
+		public virtual string CertificatePriceUnit => this.Value<string>(_publishedValueFallback, "certificatePriceUnit");
 
 		///<summary>
 		/// Default Tag Image
@@ -112,6 +127,21 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("modelLink")]
 		public virtual global::Umbraco.Cms.Core.Models.Link ModelLink => this.Value<global::Umbraco.Cms.Core.Models.Link>(_publishedValueFallback, "modelLink");
+
+		///<summary>
+		/// Price
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
+		[ImplementPropertyType("price")]
+		public virtual decimal Price => this.Value<decimal>(_publishedValueFallback, "price");
+
+		///<summary>
+		/// Price Unit
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("priceUnit")]
+		public virtual string PriceUnit => this.Value<string>(_publishedValueFallback, "priceUnit");
 
 		///<summary>
 		/// See more Button Text

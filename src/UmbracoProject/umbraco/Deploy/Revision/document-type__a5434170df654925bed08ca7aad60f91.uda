@@ -32,6 +32,13 @@
           "Name": "Title"
         },
         {
+          "Key": "4a5d662b-43b3-45e8-82cf-cb04825c26c8",
+          "Alias": "supplementPrice",
+          "DataType": "umb://data-type/2005d107e51b497684ea667ece986d66",
+          "Name": "Supplement Price",
+          "SortOrder": 6
+        },
+        {
           "Key": "4d10f315-cb26-48b2-bd54-43509ac842bb",
           "Alias": "tag",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
@@ -39,11 +46,32 @@
           "SortOrder": 2
         },
         {
+          "Key": "57e1033d-bf32-4c6f-ba5f-6edbaccc84f9",
+          "Alias": "price",
+          "DataType": "umb://data-type/05d2f3db94c24180a86d0a2b52cb2187",
+          "Name": "Price",
+          "SortOrder": 4
+        },
+        {
+          "Key": "8fc8b2e2-6b0d-4ab1-9de5-eff2d844be3e",
+          "Alias": "priceUnit",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Price Unit",
+          "SortOrder": 5
+        },
+        {
           "Key": "bef29b14-3883-4d12-97ab-2dd78567788f",
           "Alias": "toggleTag",
           "DataType": "umb://data-type/416900b627f74e90ac140ca914512427",
           "Name": "Toggle Tag",
           "SortOrder": 3
+        },
+        {
+          "Key": "f0b936d0-30ee-4692-aa8d-5e6ddf3382a3",
+          "Alias": "supplementPriceUnit",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Supplement Price Unit",
+          "SortOrder": 7
         }
       ]
     }
@@ -52,7 +80,15 @@
   "Udi": "umb://document-type/a5434170df654925bed08ca7aad60f91",
   "Dependencies": [
     {
+      "Udi": "umb://data-type/05d2f3db94c24180a86d0a2b52cb2187",
+      "Ordering": true
+    },
+    {
       "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2005d107e51b497684ea667ece986d66",
       "Ordering": true
     },
     {

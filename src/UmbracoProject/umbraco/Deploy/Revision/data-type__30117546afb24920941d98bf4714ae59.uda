@@ -1,0 +1,11 @@
+{
+  "Name": "Electricity Packages - Price - Decimal",
+  "Alias": "",
+  "EditorAlias": "Umbraco.Decimal",
+  "DatabaseType": "Decimal",
+  "Configuration": {},
+  "Udi": "umb://data-type/30117546afb24920941d98bf4714ae59",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.4.0"
+}

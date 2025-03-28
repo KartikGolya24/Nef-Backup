@@ -1,0 +1,174 @@
+{
+  "Name": "Electricity Packages",
+  "Alias": "electricityPackages",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-umb-content color-black",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type/168519c29f0d40be8e321bd3ce914bdf",
+  "CompositionContentTypes": [
+    "umb://document-type/168519c29f0d40be8e321bd3ce914bdf"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "0bc8d2b2-5c4e-40e4-8d24-4f362916c6c3",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "50ea892f-28d4-46ab-8f9e-8777ff1f94eb",
+          "Alias": "buttonBorderColor",
+          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+          "Name": "Button Border color",
+          "SortOrder": 8
+        },
+        {
+          "Key": "64422606-b58b-40e4-8602-838afcf2df56",
+          "Alias": "certificatePriceUnit",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Certificate Price Unit",
+          "SortOrder": 5
+        },
+        {
+          "Key": "72cf1991-1d9c-4a26-9851-b0bf73f778c3",
+          "Alias": "textList",
+          "DataType": "umb://data-type/86da3672f5a640b3a5bce98af677671f",
+          "Name": "Text List",
+          "SortOrder": 1
+        },
+        {
+          "Key": "7537eff8-4b20-433a-b79c-3788053c6b1b",
+          "Alias": "defaultTagImage",
+          "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
+          "Name": "Default Tag Image",
+          "SortOrder": 9
+        },
+        {
+          "Key": "77b20d1d-b0b7-4305-a26b-706672a80b67",
+          "Alias": "priceUnit",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Price Unit",
+          "SortOrder": 3
+        },
+        {
+          "Key": "87955673-0bd2-4a26-a1c9-79a10ff55229",
+          "Alias": "linkList",
+          "DataType": "umb://data-type/2f42fd89a2a44d95aece4e93b933793f",
+          "Name": "Link List",
+          "SortOrder": 6
+        },
+        {
+          "Key": "8d938ebe-e13c-450b-b139-f3e3930d385d",
+          "Alias": "price",
+          "DataType": "umb://data-type/30117546afb24920941d98bf4714ae59",
+          "Name": "Price",
+          "SortOrder": 2
+        },
+        {
+          "Key": "96069a11-a5ad-42dc-9f45-f3675dea4e02",
+          "Alias": "hoverTagImage",
+          "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
+          "Name": "Hover Tag Image",
+          "SortOrder": 10
+        },
+        {
+          "Key": "96136fd0-4edb-4f99-9bd1-18240ece360d",
+          "Alias": "heading",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Heading"
+        },
+        {
+          "Key": "9637cd8c-fd6e-49ef-bd43-6997d8a825e7",
+          "Alias": "seeMoreButtonText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "See more Button Text",
+          "SortOrder": 7
+        },
+        {
+          "Key": "a30984da-f730-4532-86ff-88a7a60cb2c3",
+          "Alias": "certificatePrice",
+          "DataType": "umb://data-type/abe3ef3cd92446e2a05f7fe80c1703db",
+          "Name": "Certificate Price",
+          "SortOrder": 4
+        }
+      ]
+    },
+    {
+      "Key": "e95e59a2-ca26-4ed4-a225-45cdb229f49a",
+      "Name": "Model Content",
+      "SortOrder": 1,
+      "Alias": "modelContent",
+      "PropertyTypes": [
+        {
+          "Key": "84ead4f2-704c-46f5-ba4f-87c198c11475",
+          "Alias": "modelLink",
+          "DataType": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
+          "Name": "Model Link",
+          "SortOrder": 2
+        },
+        {
+          "Key": "870d3c9a-a58f-41ce-87b0-fb7691d8d87c",
+          "Alias": "modelDescriptionText",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Model Description Text",
+          "SortOrder": 1
+        },
+        {
+          "Key": "a1ceb9ef-9fbf-47c7-9526-10b1929d8df2",
+          "Alias": "modelHeadingText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Model Heading Text"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/7240fc80e81d4bc39b7a63d1c5836953",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2f42fd89a2a44d95aece4e93b933793f",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/30117546afb24920941d98bf4714ae59",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/86da3672f5a640b3a5bce98af677671f",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/abe3ef3cd92446e2a05f7fe80c1703db",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/168519c29f0d40be8e321bd3ce914bdf",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.4.0"
+}

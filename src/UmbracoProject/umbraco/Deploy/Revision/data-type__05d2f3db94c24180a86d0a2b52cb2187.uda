@@ -1,0 +1,11 @@
+{
+  "Name": "Electricity Billing Type - Price - Decimal",
+  "Alias": "",
+  "EditorAlias": "Umbraco.Decimal",
+  "DatabaseType": "Decimal",
+  "Configuration": {},
+  "Udi": "umb://data-type/05d2f3db94c24180a86d0a2b52cb2187",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.4.0"
+}

@@ -18,6 +18,13 @@
       "Alias": "headContent1",
       "PropertyTypes": [
         {
+          "Key": "180928d1-76c7-4788-99fc-956c3b328a6e",
+          "Alias": "electricityPackaseList",
+          "DataType": "umb://data-type/afe2a71400a94093ad7bde51416257f3",
+          "Name": "Electricity Packase List",
+          "SortOrder": 3
+        },
+        {
           "Key": "565be5c7-0fb2-48de-b9cf-487c0d4dbfc9",
           "Alias": "headingText",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
@@ -29,13 +36,6 @@
           "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
           "Name": "Description Text",
           "SortOrder": 1
-        },
-        {
-          "Key": "f354b1ed-0e1c-4c3a-8776-595e38e83b96",
-          "Alias": "orderElectricityBlocks",
-          "DataType": "umb://data-type/27971d095b2b4c16b657c0c9a5efcf0e",
-          "Name": "Order Electricity Blocks",
-          "SortOrder": 2
         }
       ]
     }
@@ -52,7 +52,7 @@
       "Ordering": true
     },
     {
-      "Udi": "umb://data-type/27971d095b2b4c16b657c0c9a5efcf0e",
+      "Udi": "umb://data-type/afe2a71400a94093ad7bde51416257f3",
       "Ordering": true
     },
     {
