@@ -128,4 +128,52 @@
         window.scrollBy({ top: 660, behavior: "smooth" });
     })
 
+    $(".owl-carousel").each(function () {
+        var owl = $(this);
+        var itemCount = owl.children().length;
+
+        owl.owlCarousel({
+            loop: false,
+            responsiveClass: true,
+            nav: itemCount > 3,
+            dots: itemCount > 3,
+            margin: 24,
+            autoplayTimeout: 4000,
+            smartSpeed: 400,
+            center: true,
+            startPosition: itemCount <= 2 ? 0 : Math.floor(itemCount / 2),
+            items: itemCount === 1 ? 1 : itemCount === 2 ? 1.2 : itemCount === 3 ? 1.5 : 2.2,
+            stagePadding: itemCount === 1 ? 0 : itemCount === 2 ? 350 : itemCount === 3 ? 300 : 160,
+            navText: [
+                "<img src='/assets/img/icons/arrow-left.svg' alt=''>",
+                "<img src='/assets/img/icons/arrow-right.svg' alt=''>",
+            ],
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true,
+                    dots: true,
+                    loop: false,
+                    stagePadding: 0
+                },
+                800: {
+                    items: itemCount === 1 ? 1 : itemCount === 2 ? 1.2 : 2,
+                    stagePadding: itemCount === 1 ? 0 : itemCount === 2 ? 200 : 50
+                },
+                1000: {
+                    items: itemCount === 1 ? 1 : itemCount === 2 ? 1.2 : 2.2,
+                    stagePadding: itemCount === 1 ? 0 : itemCount === 2 ? 300 : 100
+                },
+                1200: {
+                    items: itemCount === 1 ? 1 : itemCount === 2 ? 1.2 : 2.2,
+                    stagePadding: itemCount === 1 ? 0 : itemCount === 2 ? 350 : 150
+                },
+                1450: {
+                    items: itemCount === 1 ? 1 : itemCount === 2 ? 1.2 : 2.2,
+                    stagePadding: itemCount === 1 ? 0 : itemCount === 2 ? 400 : 200
+                }
+            }
+        });
+    });
+
 })

@@ -13,6 +13,7 @@
         public static string TvPackagesEndPoint = "/api/TVProducts";
         public static string CheckAddressEndPoint = "/api/CheckAddress";
         public static string CalendarOptionsEndPoint = "/api/CalendarOptions";
+        public static string PruductDetailsSendApiEndPoint = "https://prod-49.northeurope.logic.azure.com/workflows/cadab5f01ced41f7a4505321b6800adc/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=P-XsGeEsVpBTbTv4Q7klG26LXnLI-JHnmkhXXe_Sl-U";
         #endregion Api EndPoints End
     }
 }

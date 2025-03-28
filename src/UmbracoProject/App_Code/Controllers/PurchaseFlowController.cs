@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using UmbracoProject.App_Code.Models;
+using UmbracoProject.App_Code.Models.ApiModels;
 using UmbracoProject.App_Code.Services;
 
 namespace UmbracoProject.App_Code.Controllers
@@ -16,7 +17,7 @@ namespace UmbracoProject.App_Code.Controllers
             _logger = logger;
         }
 
-        //{domain/purchase-flow/check-address?adresseGUID=""}
+        //{domain}/purchase-flow/check-address?adresseGUID=""
         [HttpGet("check-address")]
         public async Task<IActionResult> CheckAddress(string adresseGUID)
         {
@@ -38,7 +39,7 @@ namespace UmbracoProject.App_Code.Controllers
 
         }
 
-        //{domain/purchase-flow/get-calendar-dates?orderType=""&adresseguid=""}
+        //{domain}/purchase-flow/get-calendar-dates?orderType=""&adresseguid=""
         [HttpGet("get-calendar-dates")]
         public async Task<IActionResult> GetCalendarDatesAsync(int orderType, string? adresseguid)
         {
@@ -56,6 +57,25 @@ namespace UmbracoProject.App_Code.Controllers
                 response.IsSucceeded = false;
                 response.Error = ex.Message;
                 return StatusCode(StatusCodes.Status500InternalServerError, response);
+            }
+
+        }
+
+        //{domain}/purchase-flow/send-product-data-to-client-api
+        [HttpPost("send-product-data-to-client-api")]
+        public async Task<IActionResult> SendProductDataToClientApi([FromBody]ProductOrderRequestModel requestModel)
+        {
+            try
+            {
+                bool isSentDataSuccessfully = await _purchaseFlowService.SendProductDataToClientApiAsync(requestModel);
+                if (isSentDataSuccessfully)
+                    return Ok();
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error while sending data to client api controller 'PurchaseFlowController' action 'SendProductDataToClientApi(ProductOrderRequestModel requestModel)' Error '{ex.Message}' StackTrace '{ex.StackTrace}' ");
+                return StatusCode(StatusCodes.Status500InternalServerError);
             }
 
         }

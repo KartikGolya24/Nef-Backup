@@ -1,7 +1,6 @@
 ﻿using Newtonsoft.Json;
 using RestSharp;
 using UmbracoProject.App_Code.Helpers;
-using UmbracoProject.App_Code.Models;
 using UmbracoProject.App_Code.Models.ApiModels;
 
 namespace UmbracoProject.App_Code.Services
@@ -47,7 +46,7 @@ namespace UmbracoProject.App_Code.Services
                 return new();
             }
         }
-           
+
         public async Task<List<TvPackagesModel>> GetTvPackagesAsync()
         {
             try
@@ -78,13 +77,29 @@ namespace UmbracoProject.App_Code.Services
         }
         #endregion get calendar dates end
 
+        #region Post ordered product data to client api
+
+        public async Task<bool> SendProductDataToClientApiAsync(ProductOrderRequestModel productOrder)
+        {
+            var body = JsonConvert.SerializeObject(productOrder);
+            RestResponse restResponse = await GetResponse($"{PackageHelper.PruductDetailsSendApiEndPoint}", body);
+            if (restResponse.StatusCode == System.Net.HttpStatusCode.OK)
+                return true;
+            return false;
+        }
+
+        #endregion Post ordered product data to client api end
+
         #region Call Api
-        public async Task<RestResponse> GetResponse(string url)
+        private async Task<RestResponse> GetResponse(string url, string? body = null)
         {
             IRestClient client = new RestClient(_apiBaseUrl);
-            var request = new RestRequest(url, Method.Get);
+            var method = !string.IsNullOrWhiteSpace(body) ? Method.Post : Method.Get;
+            var request = new RestRequest(url, method);
             request.AddHeader(PackageHelper.ClientIdKey, _clientId);
             request.AddHeader(PackageHelper.ClientSecretKey, _clientSecret);
+            if (!string.IsNullOrWhiteSpace(body))
+                request.AddBody(body, contentType: ContentType.Json);
 
             return await client.ExecuteAsync(request);
         }

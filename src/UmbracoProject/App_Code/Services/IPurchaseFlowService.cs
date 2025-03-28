@@ -47,5 +47,12 @@ namespace UmbracoProject.App_Code.Services
         /// <returns></returns>
         Task<CalendarDatesApiResponseModel> GetCalendarDatesAsync(int orderType,string? adresseguid);
 
+        /// <summary>
+        /// Send Order Product details To Client's Api
+        /// </summary>
+        /// <param name="productOrder"></param>
+        /// <returns></returns>
+        Task<bool> SendProductDataToClientApiAsync(ProductOrderRequestModel productOrder);
+
     }
 }
