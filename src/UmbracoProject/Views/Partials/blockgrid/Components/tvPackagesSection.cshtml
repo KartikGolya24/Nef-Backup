@@ -1,9 +1,17 @@
 ﻿  @using Umbraco.Cms.Core.Models.Blocks
+@using UmbracoProject.App_Code.Models
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BlockGridItem<TvPackagesSection>>
 @{
     var content = Model?.Content;
     var setting = Model?.Settings as SectionSettingModel;
     var addressLookupPageUrl = Umbraco?.Content(new Guid("b8ecfce9-f1a7-4485-8d36-e08ec5166e26"))?.Url()?.TrimEnd("/");
+    var addressPopupModel = new AddressSearchPopupModel
+            {
+                Heading = !string.IsNullOrWhiteSpace(Umbraco?.GetDictionaryValue("PurchaseFlow.TV.AddressForm") ?? string.Empty) ? Umbraco?.GetDictionaryValue("PurchaseFlow.TV.AddressForm") : "Kan jeg få nef TV?",
+                SearchButtonText = !string.IsNullOrWhiteSpace(Umbraco?.GetDictionaryValue("PurchaseFlow.TV.AddressForm.ButtonText") ?? string.Empty) ? Umbraco?.GetDictionaryValue("PurchaseFlow.TV.AddressForm.ButtonText") : "Søg",
+                SearchPlaceHolder = !string.IsNullOrWhiteSpace(Umbraco?.GetDictionaryValue("PurchaseFlow.TV.AddressForm.InputPlaceholder") ?? string.Empty) ? Umbraco?.GetDictionaryValue("PurchaseFlow.TV.AddressForm.InputPlaceholder") : "Søg",    
+                SearchButtonTheme = !string.IsNullOrWhiteSpace(content?.AddressModelButtonTheme) ? content?.AddressModelButtonTheme : "dark_purple_btn"
+            };
 }
 @if (content != null)
 {
@@ -30,7 +38,7 @@
             </div>
         </div>
     </div>
-    @await Html.PartialAsync("~/Views/Partials/_PurchaseAddressSearchLocation.cshtml")
+    @await Html.PartialAsync("~/Views/Partials/_PurchaseAddressSearchLocation.cshtml", addressPopupModel)
 }
 <script src="https://cdn.dataforsyningen.dk/dawa/assets/dawa-autocomplete2/1.0.2/unfilled/dawa-autocomplete2.min.js"></script>
 <script asp-append-version="true" src="~/assets/js/packagescommon.output.min.js"></script>

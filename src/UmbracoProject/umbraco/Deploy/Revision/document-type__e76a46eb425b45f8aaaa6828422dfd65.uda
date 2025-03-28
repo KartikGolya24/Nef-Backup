@@ -24,6 +24,13 @@
           "Name": "Heading"
         },
         {
+          "Key": "444da75c-dbbd-4671-a968-ee6b7a9a7166",
+          "Alias": "addressModelButtonTheme",
+          "DataType": "umb://data-type/36564b1fa93643ee88423df7234ea0bf",
+          "Name": "Address Model Button Theme",
+          "SortOrder": 2
+        },
+        {
           "Key": "947a8698-756e-4157-af97-15801770ba01",
           "Alias": "description",
           "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
@@ -42,6 +49,10 @@
     },
     {
       "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/36564b1fa93643ee88423df7234ea0bf",
       "Ordering": true
     },
     {
