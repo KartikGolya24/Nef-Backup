@@ -11,7 +11,6 @@
     img {
         width: 16px;
         height: 16px;
-
     }
 }
 
@@ -167,7 +166,7 @@
 
 
 
-.form-control {
+.form-control, .form-select {
     border: 1px solid $black-200;
     border-radius: 100px;
     font-size: 16px;
@@ -191,13 +190,16 @@
 
     &::placeholder {
         color: $black-600;
-
     }
 
     &.error {
         border: 1px solid $input-error;
     }
+}
 
+.form-select {
+    padding: 9px 16px;
+    padding-right: 34px;
 }
 
 .error-text {
@@ -411,7 +413,7 @@ textarea {
     margin-top: 100px;
     padding: 0 !important;
 
-    &>div {
+    & > div {
         padding: 16px 12px 16px 0;
         margin: 12px 0 0;
         position: absolute;

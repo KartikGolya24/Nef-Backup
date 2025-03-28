@@ -3542,164 +3542,91 @@ li {
     }
 }
     // =========================================== owl carousal ===============================================
-    .owl-slider-section {
-        padding: 64px 0px;
+.owl-slider-section {
+    padding: 64px 0px;
 
+    @media screen and (min-width: 992px) {
+        .limited-width {
+            max-width: 920px;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        .limited-width {
+            max-width: 1100px;
+        }
+    }
+
+    @media screen and (min-width: 1440px) {
+        .limited-width {
+            max-width: 1240px;
+            margin: 0 auto;
+        }
+    }
+
+
+    h2 {
+        color: $black-950;
+    }
+
+    p {
+        color: $black-700;
+        font-size: 18px;
+        line-height: 32px;
+    }
+
+    &.dark_blue_bg,
+    &.dark_green_bg {
         h2 {
-            color: $black-950;
+            color: $white;
         }
 
         p {
-            color: $black-700;
+            color: $white;
             font-size: 18px;
             line-height: 32px;
         }
+    }
 
-        &.dark_blue_bg,
-        &.dark_green_bg {
+    &.dot_slider {
+        .section-heading {
+            margin-bottom: 80px;
+
             h2 {
-                color: $white;
+                margin-bottom: 24px;
             }
 
             p {
-                color: $white;
-                font-size: 18px;
-                line-height: 32px;
-            }
-        }
-
-        &.dot_slider {
-            .section-heading {
-                margin-bottom: 80px;
-
-                h2 {
-                    margin-bottom: 24px;
-                }
-
-                p {
-                    max-width: 720px;
-                }
-            }
-
-            .owl-carousel {
-                .owl-nav {
-                    justify-content: space-between;
-
-                    button {
-                        background-color: $dark_blue
-                    }
-                }
-
-                .owl-dots {
-                    display: flex;
-                    gap: 8px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: auto;
-                    height: auto;
-                    background: transparent;
-                    margin-left: 0px;
-                    bottom: 14px;
-
-                    .owl-dot {
-                        width: 12px;
-                        height: 12px;
-                        margin: 0px;
-                        border-radius: 100px;
-                        background: rgba(40, 70, 85, 0.25);
-
-                        &.active {
-                            background: $dark_blue;
-                        }
-
-                        span {
-                            display: none;
-                        }
-                    }
-                }
+                max-width: 720px;
             }
         }
 
         .owl-carousel {
-            .owl-stage-outer {
-                .owl-stage {
-                    display: flex;
-                    align-items: center;
-                    height: 400px;
-
-                    .owl-item {
-                        &.active {
-                            &.center {
-                                .video-img {
-                                    img {
-                                        border-radius: 16px;
-                                        width: 560px;
-                                        height: 400px;
-                                        transform: scale(1);
-                                    }
-                                }
-                            }
-                        }
-
-                        .video-img {
-                            border-radius: 16px;
-
-                            img {
-                                border-radius: 16px;
-                                // width: 480px;
-                                height: 320px;
-                                margin: auto;
-                                -webkit-transition: 0.3s;
-                                -o-transition: 0.3s;
-                                transition: 0.3s;
-                            }
-                        }
-                    }
-                }
-            }
-
             .owl-nav {
-                display: flex !important;
-                margin-top: 40px;
-                justify-content: end;
-                padding: 0px 96px;
-                gap: 12px;
+                justify-content: space-between;
 
                 button {
-                    background-color: $dark_blue;
-                    border-radius: 100px;
-                    width: 41px;
-                    height: 41px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    margin: 0;
-                }
-
-                .owl-prev {
-                    left: inherit;
-                    right: 149px !important;
-                }
-
-                .owl-next {
+                    background-color: $dark_blue
                 }
             }
 
             .owl-dots {
-                width: calc(100% - 344px);
-                margin-left: 96px;
-                height: 3px;
-                background-color: $black_100;
                 display: flex;
-                border-radius: 100px;
-                position: absolute;
-                bottom: 19px;
+                gap: 8px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: auto;
+                height: auto;
+                background: transparent;
+                margin-left: 0px;
+                bottom: 14px;
 
                 .owl-dot {
-                    width: 389.62px;
-                    height: 3px;
+                    width: 12px;
+                    height: 12px;
                     margin: 0px;
                     border-radius: 100px;
+                    background: rgba(40, 70, 85, 0.25);
 
                     &.active {
                         background: $dark_blue;
@@ -3712,6 +3639,107 @@ li {
             }
         }
     }
+
+    .owl-carousel {
+        .owl-stage-outer {
+            .owl-stage {
+                display: flex;
+                align-items: center;
+                height: 400px;
+
+                .owl-item {
+                    &.center {
+                        .video-img {
+                            img {
+                                border-radius: 16px;
+                                width: 560px;
+                                height: 400px;
+                                transform: scale(1);
+                            }
+                        }
+                    }
+
+                    .video-img {
+                        border-radius: 16px;
+                        // max-width: 600px;
+                        // margin: 0 auto;
+
+                        img {
+                            border-radius: 16px;
+                            // width: 480px;
+                            height: 320px;
+                            margin: auto;
+                            -webkit-transition: 0.3s;
+                            -o-transition: 0.3s;
+                            transition: 0.3s;
+                        }
+                    }
+                }
+            }
+        }
+
+        .owl-nav {
+            display: flex;
+            margin-top: 40px;
+            justify-content: end;
+            padding: 0px 96px;
+            gap: 12px;
+
+            button {
+                background-color: $dark_blue;
+                border-radius: 100px;
+                width: 41px;
+                height: 41px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+            }
+
+            .owl-prev {
+                left: inherit;
+                right: 149px !important;
+            }
+
+            .owl-next {
+            }
+
+            &.disabled {
+                display: none;
+            }
+        }
+
+        .owl-dots {
+            width: calc(100% - 344px);
+            margin-left: 96px;
+            height: 3px;
+            background-color: $black_100;
+            display: flex;
+            border-radius: 100px;
+            position: absolute;
+            bottom: 19px;
+
+            .owl-dot {
+                width: 389.62px;
+                height: 3px;
+                margin: 0px;
+                border-radius: 100px;
+
+                &.active {
+                    background: $dark_blue;
+                }
+
+                span {
+                    display: none;
+                }
+            }
+
+            &.disabled {
+                display: none;
+            }
+        }
+    }
+}
     //=========================================== pacakge-section===========================================
     .pacakge-section {
         padding: 64px 0 32px;

@@ -58,6 +58,35 @@
             height: 560px;
         }
     }
+
+    .owl-slider-section {
+        .owl-carousel {
+            .owl-stage-outer {
+                .owl-stage {
+                    height: 490px;
+
+                    .owl-item {
+                        .video-img {
+                            img {
+                                height: 400px;
+                            }
+                        }
+
+                        &.active {
+                            &.center {
+                                .video-img {
+                                    img {
+                                        width: 650px;
+                                        height: 490px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 1440px) {
@@ -110,7 +139,7 @@
 
 @media screen and (max-width: 1399px) {
     .footer .position-img {
-        right: -160px;
+        right: -100px;
         max-width: none;
         top: 60%;
     }
@@ -249,12 +278,10 @@
                             }
                         }
 
-                        &.active {
-                            &.center {
-                                .video-img {
-                                    img {
-                                        height: 320px;
-                                    }
+                        &.center {
+                            .video-img {
+                                img {
+                                    height: 320px;
                                 }
                             }
                         }
@@ -375,13 +402,12 @@
         &:focus {
             color: $black-950;
         }
-
     }
 
     .alt-section.charging-station .row {
         margin: 0 -16px;
 
-        &>* {
+        & > * {
             padding: 0 16px;
         }
     }
@@ -863,7 +889,6 @@
 
                                 &.accordion-button {
                                     background-color: $turquoise;
-
                                     // padding: 12px 16px;
                                     &.collapsed {
                                         padding: 16px 16px;
@@ -972,7 +997,6 @@
                     }
                 }
             }
-
         }
     }
 
@@ -1068,7 +1092,6 @@
                 }
             }
         }
-
     }
 
     .category-item {
@@ -1241,7 +1264,6 @@
                 margin-top: 20px;
             }
         }
-
     }
 
     .alt-section {
@@ -1259,7 +1281,7 @@
                     .owl-item {
                         .video-img {
                             img {
-                                height: 200px;
+                                height: 260px;
                             }
                         }
 
@@ -1267,7 +1289,7 @@
                             &.center {
                                 .video-img {
                                     img {
-                                        height: 250px;
+                                        height: 320px;
                                     }
                                 }
                             }
@@ -1285,7 +1307,6 @@
     .proposition-section-outer {
         .proposition-row-outer {
             padding: 0 50px;
-
         }
     }
 
@@ -1348,17 +1369,51 @@
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     .owl-slider-section {
+
         .section-heading {
             padding: 0;
-
         }
 
         [class*=container] {
             padding: 0 16px !important;
         }
+
+        .owl-carousel {
+            .owl-stage-outer {
+                .owl-stage {
+                    height: 350px;
+
+                    .owl-item {
+                        &.active {
+                            &.center {
+                                .video-img {
+                                    img {
+                                        height: 350px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .owl-dots {
+                width: calc(100% - 120px);
+                margin-left: 0;
+            }
+
+            .owl-nav {
+                padding: 0;
+                max-width: 560px;
+                margin: 40px auto 0;
+            }
+        }
     }
+}
+
+@media screen and (max-width: 600px) {
 }
 
 @media screen and (max-width: 576px) {
@@ -1372,7 +1427,7 @@
                             gap: 16px 24px;
                             margin-top: 0;
 
-                            &>.label {
+                            & > .label {
                                 width: 100%;
                             }
                         }
@@ -1457,7 +1512,7 @@
             .row {
                 margin: 0 16px;
 
-                &>* {
+                & > * {
                     padding: 0 16px;
                 }
             }
@@ -1478,36 +1533,7 @@
         }
     }
 
-    .owl-slider-section {
-        .owl-carousel {
-            .owl-stage-outer {
-                .owl-stage {
-                    height: 300px;
 
-                    .owl-item {
-                        &.active {
-                            &.center {
-                                .video-img {
-                                    img {
-                                        height: 300px;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            .owl-dots {
-                width: calc(100% - 120px);
-                margin-left: 0;
-            }
-
-            .owl-nav {
-                padding: 0;
-            }
-        }
-    }
 
     .buy_charging-slider {
         [class*=container] {
@@ -1555,6 +1581,25 @@
 }
 
 @media screen and (max-width: 480px) {
+    .owl-slider-section {
+        .owl-carousel {
+            .owl-stage-outer {
+                .owl-stage {
+                    .owl-item {
+                        &.active {
+                            &.center {
+                                .video-img {
+                                    img {
+                                        height: 320px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     .order-nef-power {
         .order-nef-card {
@@ -1586,7 +1631,6 @@
         padding-left: 0;
         padding-right: 0;
     }
-
 }
 
 @media screen and (max-width: 470px) {
