@@ -14,15 +14,15 @@
   "PropertyGroups": [
     {
       "Key": "4cae1cd6-c648-469d-89f9-5ec5a35f610f",
-      "Name": "Thanku Content",
-      "Alias": "thankuContent",
+      "Name": "Thank You Section",
+      "Alias": "thankYouSection",
       "PropertyTypes": [
         {
           "Key": "1b1efac3-aa0c-4220-9dd5-995deaaddbae",
           "Alias": "positionImages",
           "DataType": "umb://data-type/d8a26c36dc9143c3a0917a3a69610a3f",
           "Name": "Position Images",
-          "SortOrder": 7
+          "SortOrder": 6
         },
         {
           "Key": "463f9da4-343a-4139-bce9-b62ce0a07afa",
@@ -56,7 +56,7 @@
           "Alias": "buttonBorderColor",
           "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
           "Name": "Button Border color",
-          "SortOrder": 6
+          "SortOrder": 7
         },
         {
           "Key": "c463f400-c6eb-472f-aaa6-52baac38efe6",
