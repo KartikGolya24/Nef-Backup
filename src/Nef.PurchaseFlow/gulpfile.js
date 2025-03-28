@@ -1,4 +1,4 @@
-/// <binding AfterBuild='compile-scripts' />
+/// <binding />
 //const gulp = require('gulp');
 //const webpackStream = require('webpack-stream');
 import gulp from 'gulp'
