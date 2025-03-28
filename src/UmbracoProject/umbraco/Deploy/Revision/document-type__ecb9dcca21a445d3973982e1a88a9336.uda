@@ -1,0 +1,138 @@
+{
+  "Name": "Order Nef Electricity Block",
+  "Alias": "orderNefElectricityBlock",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-science",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/8048648a322c4669a2f43ab083f3d243",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "27474311-6977-44de-90fd-f834fc8f3f2f",
+      "Name": "Model Content",
+      "SortOrder": 1,
+      "Alias": "modelContent",
+      "PropertyTypes": [
+        {
+          "Key": "1acef1e8-2c29-4ccf-9838-aaab2aee3958",
+          "Alias": "modelLink",
+          "DataType": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
+          "Name": "Model Link",
+          "SortOrder": 2
+        },
+        {
+          "Key": "41ee84f7-2174-40d2-aae1-aa6d0e4442ee",
+          "Alias": "modelHeadingText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Model Heading Text"
+        },
+        {
+          "Key": "eea8b7b8-065e-43aa-b155-3c56169a616b",
+          "Alias": "modelDescriptionText",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+          "Name": "Model Description Text",
+          "SortOrder": 1
+        }
+      ]
+    },
+    {
+      "Key": "f5731c38-ffcf-44d2-8c98-3636d210ca0e",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "2b60e5c3-6bfe-4a12-b883-155ae1d665a6",
+          "Alias": "defaultTagImage",
+          "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
+          "Name": "Default Tag Image",
+          "SortOrder": 5
+        },
+        {
+          "Key": "50d9978d-3631-4448-8ad5-191d853ebe0c",
+          "Alias": "heading",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Heading"
+        },
+        {
+          "Key": "5b83f572-719c-4775-bbc5-264e87b262ac",
+          "Alias": "textList",
+          "DataType": "umb://data-type/86da3672f5a640b3a5bce98af677671f",
+          "Name": "Text List",
+          "SortOrder": 1
+        },
+        {
+          "Key": "9a4ea3a7-a221-42ce-95b8-48d43328c208",
+          "Alias": "seeMoreButtonText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "See more Button Text",
+          "SortOrder": 3
+        },
+        {
+          "Key": "c33150bb-f8e2-45fa-a3f9-c225aa88f2b6",
+          "Alias": "linkList",
+          "DataType": "umb://data-type/2f42fd89a2a44d95aece4e93b933793f",
+          "Name": "Link List",
+          "SortOrder": 2
+        },
+        {
+          "Key": "c97e7e90-c8bd-4ea0-8705-5e0a15ca8c03",
+          "Alias": "buttonBorderColor",
+          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+          "Description": "pick a color for see more button border",
+          "Name": "Button Border color",
+          "SortOrder": 4
+        },
+        {
+          "Key": "cae1f2bf-2f93-4605-9254-b1ee6ac2bdc9",
+          "Alias": "hoverTagImage",
+          "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
+          "Name": "Hover Tag Image",
+          "SortOrder": 6
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/ecb9dcca21a445d3973982e1a88a9336",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2f42fd89a2a44d95aece4e93b933793f",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/86da3672f5a640b3a5bce98af677671f",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/8048648a322c4669a2f43ab083f3d243",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.4.0"
+}
