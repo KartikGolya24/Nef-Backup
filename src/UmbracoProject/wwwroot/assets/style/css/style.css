@@ -11792,7 +11792,7 @@ textarea.form-control {
 .alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field label .umbraco-forms-indicator {
   color: #37B4B4;
 }
-.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input {
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input[type=text], .alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input[type=tel], .alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input[type=email], .alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input[type=password], .alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input[type=number] {
   margin: 0;
   max-width: 100% !important;
   display: block;
@@ -11811,8 +11811,89 @@ textarea.form-control {
   font-family: "Houschka Rounded Alt";
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   outline: none !important;
+  appearance: none;
 }
-.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input:focus-visible {
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input[type=text]:focus-visible, .alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input[type=tel]:focus-visible, .alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input[type=email]:focus-visible, .alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input[type=password]:focus-visible, .alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input[type=number]:focus-visible {
+  outline: none;
+}
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input[type=file] {
+  margin: 0;
+  max-width: 100% !important;
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  color: #292929;
+  appearance: none;
+  background-color: var(--bs-body-bg);
+  background-clip: padding-box;
+  border: 1px solid #dcdcdc;
+  border-radius: 100px;
+  font-size: 14px;
+  line-height: 16px;
+  height: 44px;
+  padding: 11px 16px;
+  font-family: "Houschka Rounded Alt";
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  outline: none !important;
+  appearance: none;
+}
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input[type=file]:focus-visible {
+  outline: none;
+}
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input.datepickerfield {
+  margin: 0;
+  max-width: 100% !important;
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  color: #292929;
+  appearance: none;
+  background-color: var(--bs-body-bg);
+  background-clip: padding-box;
+  border: 1px solid #dcdcdc;
+  border-radius: 100px;
+  font-size: 14px;
+  line-height: 16px;
+  height: 44px;
+  padding: 11px 16px;
+  font-family: "Houschka Rounded Alt";
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  outline: none !important;
+  background-image: url(../../img/icons/Calendar-black.svg);
+  background-repeat: no-repeat;
+  background-position-x: 98%;
+  background-position-y: 12px;
+  background-size: 20px;
+}
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input.datepickerfield:focus-visible {
+  outline: none;
+}
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field select {
+  margin: 0;
+  max-width: 100% !important;
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  color: #292929;
+  background-color: var(--bs-body-bg);
+  background-clip: padding-box;
+  border: 1px solid #dcdcdc;
+  border-radius: 100px;
+  font-size: 16px;
+  appearance: none;
+  line-height: 24px;
+  height: 44px;
+  padding: 12px 16px;
+  font-family: "Houschka Rounded Alt";
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  outline: none !important;
+  background-image: url(../../img/icons/arrow-down-dark.svg);
+  background-repeat: no-repeat;
+  background-position-x: 98%;
+  background-position-y: 11px;
+  background-size: 20px;
+}
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field select:focus-visible {
   outline: none;
 }
 .alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .field-validation-error {
@@ -11831,6 +11912,126 @@ textarea.form-control {
   vertical-align: sub;
   margin-right: 4px;
 }
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .umbraco-forms-field-wrapper input[type=checkbox] {
+  display: inline-block !important;
+  border-radius: 0.25em;
+  --bs-form-check-bg: var(--bs-body-bg);
+  flex-shrink: 0;
+  vertical-align: top;
+  appearance: none;
+  background-color: var(--bs-form-check-bg);
+  background-image: var(--bs-form-check-bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 1px solid #bdbdbd !important;
+  width: 24px !important;
+  height: 24px !important;
+}
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .umbraco-forms-field-wrapper input[type=checkbox]:focus {
+  box-shadow: none;
+}
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .umbraco-forms-field-wrapper input[type=checkbox]:checked {
+  --bs-form-check-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='%23525252' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m6 10 3 3 6-6'/></svg>");
+  background-color: #ffffff;
+  border-color: #292929 !important;
+}
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .umbraco-forms-field-wrapper input[type=checkbox] ~ label {
+  margin-left: 8px;
+  display: inline-block;
+  font-size: 14px;
+  line-height: initial;
+  color: #292929;
+  padding-bottom: 0;
+  vertical-align: text-top;
+}
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .checkboxlist {
+  float: inherit;
+  padding: 5px 0;
+}
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .checkboxlist > div {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .checkboxlist > div input[type=checkbox] {
+  display: inline-block !important;
+  border-radius: 0.25em;
+  --bs-form-check-bg: var(--bs-body-bg);
+  flex-shrink: 0;
+  vertical-align: top;
+  appearance: none;
+  background-color: var(--bs-form-check-bg);
+  background-image: var(--bs-form-check-bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 1px solid #bdbdbd !important;
+  width: 24px !important;
+  height: 24px !important;
+}
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .checkboxlist > div input[type=checkbox]:focus {
+  box-shadow: none;
+}
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .checkboxlist > div input[type=checkbox]:checked {
+  --bs-form-check-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='%23525252' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m6 10 3 3 6-6'/></svg>");
+  background-color: #ffffff;
+  border-color: #292929 !important;
+}
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .checkboxlist > div input[type=checkbox] + label {
+  display: inline-block;
+  font-size: 14px;
+  line-height: initial;
+  color: #292929;
+  padding-bottom: 0;
+}
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .radiobuttonlist {
+  float: inherit;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 5px 0;
+}
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .radiobuttonlist > div {
+  min-height: 1.5rem;
+  padding-left: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 0;
+  margin-right: 0;
+}
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .radiobuttonlist > div input[type=radio] {
+  display: inline-block !important;
+  --bs-form-check-bg: var(--bs-body-bg);
+  flex-shrink: 0;
+  vertical-align: top;
+  appearance: none;
+  background-image: var(--bs-form-check-bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: var(--bs-border-width) solid var(--bs-border-color) !important;
+  float: left;
+  border-radius: 50%;
+  width: 24px !important;
+  height: 24px !important;
+  margin-left: -2rem;
+  margin-top: 0;
+  background-color: #ffffff;
+}
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .radiobuttonlist > div input[type=radio]:checked {
+  background-color: #ffffff;
+  border-color: #292929 !important;
+  --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23292929'/%3e%3c/svg%3e");
+}
+.alt-contact .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .radiobuttonlist > div input[type=radio] + label {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 18px;
+  color: #292929;
+  padding-bottom: 0;
+}
 .alt-contact .contact-form .umbraco-forms-form .umbraco-forms-navigation {
   padding: 0;
 }
@@ -11838,6 +12039,7 @@ textarea.form-control {
   padding: 0;
 }
 .alt-contact .contact-form .umbraco-forms-submitmessage-html, .alt-contact .contact-form .umbraco-forms-submitmessage {
+  display: block;
   text-align: center;
   padding: 137px 44px;
 }
@@ -15127,8 +15329,89 @@ li {
   font-family: "Houschka Rounded Alt";
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   outline: none !important;
+  appearance: none;
 }
 .status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input[type=text]:focus-visible, .status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input[type=tel]:focus-visible, .status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input[type=email]:focus-visible, .status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input[type=password]:focus-visible, .status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input[type=number]:focus-visible {
+  outline: none;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input[type=file] {
+  margin: 0;
+  max-width: 100% !important;
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  color: #292929;
+  appearance: none;
+  background-color: var(--bs-body-bg);
+  background-clip: padding-box;
+  border: 1px solid #dcdcdc;
+  border-radius: 100px;
+  font-size: 14px;
+  line-height: 16px;
+  height: 44px;
+  padding: 11px 16px;
+  font-family: "Houschka Rounded Alt";
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  outline: none !important;
+  appearance: none;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input[type=file]:focus-visible {
+  outline: none;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input.datepickerfield {
+  margin: 0;
+  max-width: 100% !important;
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  color: #292929;
+  appearance: none;
+  background-color: var(--bs-body-bg);
+  background-clip: padding-box;
+  border: 1px solid #dcdcdc;
+  border-radius: 100px;
+  font-size: 14px;
+  line-height: 16px;
+  height: 44px;
+  padding: 11px 16px;
+  font-family: "Houschka Rounded Alt";
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  outline: none !important;
+  background-image: url(../../img/icons/Calendar-black.svg);
+  background-repeat: no-repeat;
+  background-position-x: 98%;
+  background-position-y: 12px;
+  background-size: 20px;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field input.datepickerfield:focus-visible {
+  outline: none;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field select {
+  margin: 0;
+  max-width: 100% !important;
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  color: #292929;
+  background-color: var(--bs-body-bg);
+  background-clip: padding-box;
+  border: 1px solid #dcdcdc;
+  border-radius: 100px;
+  font-size: 16px;
+  appearance: none;
+  line-height: 24px;
+  height: 44px;
+  padding: 12px 16px;
+  font-family: "Houschka Rounded Alt";
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  outline: none !important;
+  background-image: url(../../img/icons/arrow-down-dark.svg);
+  background-repeat: no-repeat;
+  background-position-x: 98%;
+  background-position-y: 11px;
+  background-size: 20px;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field select:focus-visible {
   outline: none;
 }
 .status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .field-validation-error {
@@ -15146,6 +15429,126 @@ li {
   height: 16px;
   vertical-align: sub;
   margin-right: 4px;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .umbraco-forms-field-wrapper input[type=checkbox] {
+  display: inline-block !important;
+  border-radius: 0.25em;
+  --bs-form-check-bg: var(--bs-body-bg);
+  flex-shrink: 0;
+  vertical-align: top;
+  appearance: none;
+  background-color: var(--bs-form-check-bg);
+  background-image: var(--bs-form-check-bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 1px solid #bdbdbd !important;
+  width: 24px !important;
+  height: 24px !important;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .umbraco-forms-field-wrapper input[type=checkbox]:focus {
+  box-shadow: none;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .umbraco-forms-field-wrapper input[type=checkbox]:checked {
+  --bs-form-check-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='%23525252' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m6 10 3 3 6-6'/></svg>");
+  background-color: #ffffff;
+  border-color: #292929 !important;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .umbraco-forms-field-wrapper input[type=checkbox] ~ label {
+  margin-left: 8px;
+  display: inline-block;
+  font-size: 14px;
+  line-height: initial;
+  color: #292929;
+  padding-bottom: 0;
+  vertical-align: text-top;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .checkboxlist {
+  float: inherit;
+  padding: 5px 0;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .checkboxlist > div {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .checkboxlist > div input[type=checkbox] {
+  display: inline-block !important;
+  border-radius: 0.25em;
+  --bs-form-check-bg: var(--bs-body-bg);
+  flex-shrink: 0;
+  vertical-align: top;
+  appearance: none;
+  background-color: var(--bs-form-check-bg);
+  background-image: var(--bs-form-check-bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 1px solid #bdbdbd !important;
+  width: 24px !important;
+  height: 24px !important;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .checkboxlist > div input[type=checkbox]:focus {
+  box-shadow: none;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .checkboxlist > div input[type=checkbox]:checked {
+  --bs-form-check-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='%23525252' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m6 10 3 3 6-6'/></svg>");
+  background-color: #ffffff;
+  border-color: #292929 !important;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .checkboxlist > div input[type=checkbox] + label {
+  display: inline-block;
+  font-size: 14px;
+  line-height: initial;
+  color: #292929;
+  padding-bottom: 0;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .radiobuttonlist {
+  float: inherit;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 5px 0;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .radiobuttonlist > div {
+  min-height: 1.5rem;
+  padding-left: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 0;
+  margin-right: 0;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .radiobuttonlist > div input[type=radio] {
+  display: inline-block !important;
+  --bs-form-check-bg: var(--bs-body-bg);
+  flex-shrink: 0;
+  vertical-align: top;
+  appearance: none;
+  background-image: var(--bs-form-check-bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: var(--bs-border-width) solid var(--bs-border-color) !important;
+  float: left;
+  border-radius: 50%;
+  width: 24px !important;
+  height: 24px !important;
+  margin-left: -2rem;
+  margin-top: 0;
+  background-color: #ffffff;
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .radiobuttonlist > div input[type=radio]:checked {
+  background-color: #ffffff;
+  border-color: #292929 !important;
+  --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23292929'/%3e%3c/svg%3e");
+}
+.status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-page .umbraco-forms-fieldset .umbraco-forms-field .radiobuttonlist > div input[type=radio] + label {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 18px;
+  color: #292929;
+  padding-bottom: 0;
 }
 .status-alt-sidebar .status-left-part .status-boxes-outer .contact-form .umbraco-forms-form .umbraco-forms-navigation {
   padding: 0;
@@ -17927,7 +18330,7 @@ li {
 }
 @media screen and (max-width: 1399px) {
   .footer .position-img {
-    right: -100px;
+    right: -160px;
     max-width: none;
     top: 60%;
   }
