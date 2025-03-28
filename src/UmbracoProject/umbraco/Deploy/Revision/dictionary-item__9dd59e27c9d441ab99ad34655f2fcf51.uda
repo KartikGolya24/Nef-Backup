@@ -1,0 +1,38 @@
+{
+  "Name": "umb://dictionary-item/9dd59e27c9d441ab99ad34655f2fcf51",
+  "Alias": "",
+  "ItemKey": "PurchaseFlow.Fiber.PackagesTitle",
+  "ParentId": "9db5a323-ebf2-4650-96bf-f9cf8c8c459d",
+  "Translations": [
+    {
+      "Key": "9dd59e27-c9d4-41ab-99ad-34655f2fcf51",
+      "Value": "Find den rigtige fiberpakke",
+      "LanguageIsoCode": "da-DK"
+    },
+    {
+      "Key": "9dd59e27-c9d4-41ab-99ad-34655f2fcf51",
+      "Value": "",
+      "LanguageIsoCode": "en-US"
+    }
+  ],
+  "Udi": "umb://dictionary-item/9dd59e27c9d441ab99ad34655f2fcf51",
+  "Dependencies": [
+    {
+      "Udi": "umb://dictionary-item/9db5a323ebf2465096bff9cf8c8c459d",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/da-DK",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/en-US",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DictionaryItemArtifact",
+  "__version": "13.4.0"
+}

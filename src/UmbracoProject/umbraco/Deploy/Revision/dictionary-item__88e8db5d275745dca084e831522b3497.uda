@@ -1,0 +1,17 @@
+{
+  "Name": "umb://dictionary-item/88e8db5d275745dca084e831522b3497",
+  "Alias": "",
+  "ItemKey": "PurchaseFlow.ReviewStep",
+  "ParentId": "7ca58f71-4345-4b5e-9bad-61b1067290c7",
+  "Translations": [],
+  "Udi": "umb://dictionary-item/88e8db5d275745dca084e831522b3497",
+  "Dependencies": [
+    {
+      "Udi": "umb://dictionary-item/7ca58f7143454b5e9bad61b1067290c7",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DictionaryItemArtifact",
+  "__version": "13.4.0"
+}

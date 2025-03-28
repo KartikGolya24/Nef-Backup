@@ -21,6 +21,7 @@
     wirelessInternetUnit: String,
     wirelessInternetCost: Number,
     wirelessInternetNote: String,
+    successPage: Object
   })
 
   //Data
@@ -49,6 +50,7 @@
   }
 
   onMounted(() => {
+    
   })
 </script>
 
@@ -57,7 +59,8 @@
           :selectedCategory="selectedCategory"
           :addressFormModel="addressFormModel"
           @change-tab="changeTab"
-          :selectedPackage="selectedPackage" />
+          :selectedPackage="selectedPackage"
+          :successPage="successPage" />
   <FiberForm v-else-if="props.addressFormModel.packageType==='fiber'"
              :addressFormModel="addressFormModel"
              @change-tab="changeTab"
@@ -66,12 +69,13 @@
              :wireless-internet-heading="wirelessInternetHeading"
              :wirelessInternetUnit="wirelessInternetUnit"
              :wirelessInternetCost="wirelessInternetCost"
-             :wirelessInternetNote="wirelessInternetNote" />
+             :wirelessInternetNote="wirelessInternetNote"
+             :successPage="successPage" />
   <ElectricityForm v-else
-          :addressFormModel="addressFormModel"
-          @change-tab="changeTab"
-          :selectedPackage="selectedPackage"
-          />
+                   :addressFormModel="addressFormModel"
+                   @change-tab="changeTab"
+                   :selectedPackage="selectedPackage"
+                   :successPage="successPage" />
 
 
 </template>

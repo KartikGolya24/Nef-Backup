@@ -1,21 +1,21 @@
 {
-  "Name": "umb://dictionary-item/7663e5fcd9e94c8687bbcc9eeef6e159",
+  "Name": "umb://dictionary-item/a9c7b459b90e4cd3b37241051e656a0d",
   "Alias": "",
-  "ItemKey": "PurchaseFlow.TV.AddressPassedDescription",
+  "ItemKey": "PurchaseFlow.Tv.PackagesTitle",
   "ParentId": "d98713af-1a25-45d5-bc2c-bb6e41b2832a",
   "Translations": [
     {
-      "Key": "7663e5fc-d9e9-4c86-87bb-cc9eeef6e159",
-      "Value": "Det kræver nef Fiber at få nef TV. Den gode nyhed\u2028er, at du kan få fiber. Ring til kundeservice og hør\u2028mere om en eventuel installation af fiber. Tlf. 63 32 11 00",
+      "Key": "a9c7b459-b90e-4cd3-b372-41051e656a0d",
+      "Value": "Du kan vælge mellem disse TV-pakker",
       "LanguageIsoCode": "da-DK"
     },
     {
-      "Key": "7663e5fc-d9e9-4c86-87bb-cc9eeef6e159",
+      "Key": "a9c7b459-b90e-4cd3-b372-41051e656a0d",
       "Value": "",
       "LanguageIsoCode": "en-US"
     }
   ],
-  "Udi": "umb://dictionary-item/7663e5fcd9e94c8687bbcc9eeef6e159",
+  "Udi": "umb://dictionary-item/a9c7b459b90e4cd3b37241051e656a0d",
   "Dependencies": [
     {
       "Udi": "umb://dictionary-item/d98713af1a2545d5bc2cbb6e41b2832a",

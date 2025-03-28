@@ -38,7 +38,7 @@
     wirelessInternetUnit: String,
     wirelessInternetCost: Number,
     wirelessInternetNote: String,
-
+    successPage:Object
   })
   props.addressFormModel.packageStatus = ref(props.addressFormModel.packageStatus)
 
@@ -80,6 +80,7 @@
         'wirelessInternetUnit': props.wirelessInternetUnit,
         'wirelessInternetCost': props.wirelessInternetCost,
         'wirelessInternetNote': props.wirelessInternetNote,
+        'successPage': props.successPage
       }
   })
 

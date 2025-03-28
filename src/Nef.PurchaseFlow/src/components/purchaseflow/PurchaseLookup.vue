@@ -46,7 +46,7 @@
       case 2:
         return lang('addressPassedDesc');
       case 3:
-        return lang('addressConnectedDesc');
+        return props.addressFormModel.flowName === 'Privat' ? lang('addressConnectedDesc') : lang('businessAddressConnectedDesc');
       default:
         return ''
     }
@@ -157,7 +157,7 @@
       <div class="container">
         <h2 class="title"> {{lang('addressFormTitle')}}</h2>
         <div class="form-group autocomplete-container">
-          <input type="text" id="adresse" class="form-control " :placeholder="lang('formPlaceholder')" :aria-label="lang('formPlaceholder')" :value="addressFormModel.address" />
+          <input type="text" id="adresse" class="form-control " :placeholder="lang('formPlaceholder')" :aria-label="lang('formPlaceholder')" v-model="addressFormModel.address" />
           <button type="button" :class="['btn','location-search-button', addressFormModel.packageType == 'tv' ? 'dark_purple_btn' : 'dark_blue_btn']" @click="checkAddress">{{lang('formButton')}}</button>
         </div>
         <div class="row justify-content-center">
@@ -175,7 +175,7 @@
     <div :class="['pacakge-section', addressFormModel.packageType == 'tv' ? 'private-tv-white' : 'private-internet-white']">
       <div class="container-xl" id="packagesList">
         <div class="section-heading">
-          <h2>Du kan vælge mellem disse TV-pakker</h2>
+          <h2>{{lang('packagesTitle')}}</h2>
         </div>
         <div class="package-list">
           <div class="row">

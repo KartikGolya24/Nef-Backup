@@ -1,0 +1,38 @@
+{
+  "Name": "umb://dictionary-item/1732f8d044404281aed9ca3aa3e64962",
+  "Alias": "",
+  "ItemKey": "PurchaseFlow.Fiber.BusinessAddressConnectedDescription",
+  "ParentId": "9db5a323-ebf2-4650-96bf-f9cf8c8c459d",
+  "Translations": [
+    {
+      "Key": "1732f8d0-4440-4281-aed9-ca3aa3e64962",
+      "Value": "Ring til tlf. 63 32 11 00 og få en aftale, der passer til din virksomhed.",
+      "LanguageIsoCode": "da-DK"
+    },
+    {
+      "Key": "1732f8d0-4440-4281-aed9-ca3aa3e64962",
+      "Value": "",
+      "LanguageIsoCode": "en-US"
+    }
+  ],
+  "Udi": "umb://dictionary-item/1732f8d044404281aed9ca3aa3e64962",
+  "Dependencies": [
+    {
+      "Udi": "umb://dictionary-item/9db5a323ebf2465096bff9cf8c8c459d",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/da-DK",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/en-US",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DictionaryItemArtifact",
+  "__version": "13.4.0"
+}

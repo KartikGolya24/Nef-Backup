@@ -100,7 +100,7 @@
                         /* Safari-specific */
                     }
 
-                    &>label {
+                    & > label {
                         font-size: 18px;
                         line-height: 32px;
                     }
@@ -114,13 +114,40 @@
                 }
 
                 .radio-group {
-                    &>label {
+                    & > label {
                         padding-bottom: 0;
                     }
                 }
 
                 .order-summery-text {
                     padding-bottom: 24px;
+                }
+
+                .add-wifi-col {
+                    .notice-wrapper {
+                        [class*=col] {
+                            width: 432px;
+                        }
+                    }
+                } 
+                
+                .notice-box {
+                    background: $turquoise;
+                    padding: 16px;
+                    border-radius: 8px;
+                    color: $black-950;
+
+                    .box-title {
+                        font-size: 16px;
+                        line-height: 24px;
+                        font-style: italic;
+                        margin-bottom: 8px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
                 }
 
                 .settlement-block {
@@ -132,7 +159,7 @@
                         .title {
                             margin-bottom: 16px;
 
-                            &+p {
+                            & + p {
                                 font-size: 18px;
                                 line-height: 32px;
                             }
@@ -176,7 +203,7 @@
             }
         }
 
-        &+.multiple-buttons {
+        & + .multiple-buttons {
             margin-top: 96px;
         }
     }
@@ -207,7 +234,7 @@
                 font-weight: 600;
                 margin-bottom: 16px;
 
-                &+.para {
+                & + .para {
                     font-size: 18px;
                     line-height: 32px;
                     margin-bottom: 16px;
@@ -265,7 +292,7 @@
                 flex-direction: column;
                 gap: 8px;
 
-                &>li {
+                & > li {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
@@ -287,6 +314,17 @@
                             display: flex;
                             align-items: center;
                             justify-content: start;
+
+                            p {
+                                display: flex;
+                                align-items: center;
+                                gap: 12px;
+                            }
+
+                            img {
+                                width: 16px;
+                                height: 16px;
+                            }
                         }
                     }
 
@@ -301,7 +339,6 @@
                         text-align: right;
                     }
                 }
-
             }
         }
 
@@ -370,7 +407,6 @@
             padding-bottom: 64px;
         }
     }
-
 }
 
 .tv-watching-options {

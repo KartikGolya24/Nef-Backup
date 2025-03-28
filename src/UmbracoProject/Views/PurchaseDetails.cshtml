@@ -19,46 +19,17 @@
     var addressPassedDesc = "";
     var addressConnected = "";
     var addressConnectedDesc = "";
+    var businessAddressConnectedDesc = "";
     var addressNotConnected = "";
     var addressNotConnectedDesc = "";
     var otherBillingAddressHeading = "";
     var SettlementTitle = "";
     var SettlementHeading = "";
     var WirelessInternetText = "";
+    var packagesTitle = "";
+    var reviewStepProductSectionTitle = Umbraco.GetDictionaryValue("PurchaseFlow.ReviewStep.ProductSectionTitle");
+    var reviewStepPracticalSectionTitle = Umbraco.GetDictionaryValue("PurchaseFlow.ReviewStep.PracticalSectionTitle");
     var D_FormTitle = "";
-    if (packageType == "tv")
-    {
-        formButton = Umbraco.GetDictionaryValue("PurchaseFlow.TV.AddressForm.ButtonText");
-        addressFormTitle = Umbraco.GetDictionaryValue("PurchaseFlow.TV.AddressForm");
-        formPlaceholder = Umbraco.GetDictionaryValue("PurchaseFlow.TV.AddressForm.InputPlaceholder");
-        addressConnected = Umbraco.GetDictionaryValue("PurchaseFlow.TV.AddressConnected");
-        addressConnectedDesc = Umbraco.GetDictionaryValue("PurchaseFlow.TV.AddressConnectedDescription");
-        addressPassed = Umbraco.GetDictionaryValue("PurchaseFlow.TV.AddressPassed");
-        addressPassedDesc = Umbraco.GetDictionaryValue("PurchaseFlow.TV.AddressPassedDecription");
-        addressNotConnected = Umbraco.GetDictionaryValue("PurchaseFlow.TV.AddressNotConnected");
-        addressNotConnectedDesc = Umbraco.GetDictionaryValue("PurchaseFlow.TV.AddressNotConnectedDescription");
-        D_FormTitle = Umbraco.GetDictionaryValue("PurchaseFlow.TV.FormTitle");
-    }
-    else if (packageType == "fiber")
-    {
-        formButton = Umbraco.GetDictionaryValue("PurchaseFlow.Fiber.AddressForm.ButtonText");
-        addressFormTitle = Umbraco.GetDictionaryValue("PurchaseFlow.Fiber.AddressForm");
-        formPlaceholder = Umbraco.GetDictionaryValue("PurchaseFlow.Fiber.AddressForm.InputPlaceholder");
-        addressConnected = Umbraco.GetDictionaryValue("PurchaseFlow.Fiber.AddressConnected");
-        addressConnectedDesc = Umbraco.GetDictionaryValue("PurchaseFlow.Fiber.AddressConnectedDescription");
-        addressPassed = Umbraco.GetDictionaryValue("PurchaseFlow.Fiber.AddressPassed");
-        addressPassedDesc = Umbraco.GetDictionaryValue("PurchaseFlow.Fiber.AddressPassedDecription");
-        addressNotConnected = Umbraco.GetDictionaryValue("PurchaseFlow.Fiber.AddressNotConnected");
-        addressNotConnectedDesc = Umbraco.GetDictionaryValue("PurchaseFlow.Fiber.AddressNotConnectedDescription");
-        D_FormTitle = Umbraco.GetDictionaryValue("PurchaseFlow.Fiber.FormTitle");
-        otherBillingAddressHeading = Umbraco.GetDictionaryValue("PurchaseFlow.Fiber.OtherBillingAddressHeading");
-        SettlementTitle = Umbraco.GetDictionaryValue("PurchaseFlow.Fiber.SettlementTitle");
-        SettlementHeading = Umbraco.GetDictionaryValue("PurchaseFlow.Fiber.SettlementHeading");
-        WirelessInternetText = Umbraco.GetDictionaryValue("PurchaseFlow.ThirdStep.WirelessInternetText");
-    }
-    else{
-        D_FormTitle = Umbraco.GetDictionaryValue("PurchaseFlow.Electricity.FormTitle");
-    }
 
     //D for dictionary item and P for placeholder
     var D_FullName = Umbraco.GetDictionaryValue("FormFileds.Name");
@@ -91,8 +62,9 @@
         packageType = packageType,
         packageStatus = int.Parse(packageStatus ?? ""),
         address = address,
-        addressId=addressId
+        addressId = addressId
     });
+    ThankYouModel successPage = new ThankYouModel();
 
     var categories = new List<TvCategory>();
     var fiberBillingTypes = new List<FiberBillingTypeModel>();
@@ -105,6 +77,19 @@
     string wirelessInternetNote = "";
     if (packageType == "tv")
     {
+        formButton = Umbraco.GetDictionaryValue("PurchaseFlow.TV.AddressForm.ButtonText");
+        addressFormTitle = Umbraco.GetDictionaryValue("PurchaseFlow.TV.AddressForm");
+        formPlaceholder = Umbraco.GetDictionaryValue("PurchaseFlow.TV.AddressForm.InputPlaceholder");
+        addressConnected = Umbraco.GetDictionaryValue("PurchaseFlow.TV.AddressConnected");
+        addressConnectedDesc = Umbraco.GetDictionaryValue("PurchaseFlow.TV.AddressConnectedDescription");
+        addressPassed = Umbraco.GetDictionaryValue("PurchaseFlow.TV.AddressPassed");
+        addressPassedDesc = Umbraco.GetDictionaryValue("PurchaseFlow.TV.AddressPassedDescription");
+        addressNotConnected = Umbraco.GetDictionaryValue("PurchaseFlow.TV.AddressNotConnected");
+        addressNotConnectedDesc = Umbraco.GetDictionaryValue("PurchaseFlow.TV.AddressNotConnectedDescription");
+        packagesTitle = Umbraco.GetDictionaryValue("PurchaseFlow.Tv.PackagesTitle");
+        D_FormTitle = Umbraco.GetDictionaryValue("PurchaseFlow.TV.FormTitle");
+        businessAddressConnectedDesc= Umbraco.GetDictionaryValue("PurchaseFlow.TV.BusinessAddressConnectedDescription");
+
         var tvPurchase = Model.Children<TvPurchase>()?.FirstOrDefault();
         categoryHeading = tvPurchase.CategorySectionHeading;
         foreach (var item in tvPurchase.Categories)
@@ -116,13 +101,47 @@
                         CategoryName = content.CategoryName ?? "",
                         TvCostText = content.TvCostText ?? "",
                         IconUrl = content.Icon?.Url() ?? "",
-                        PracticalInformation=content.PracticalInformation.ToString()??"",
-                        AddonCost=content.AddonCost
+                        PracticalInformation = content.PracticalInformation.ToString() ?? "",
+                        AddonCost = content.AddonCost
+                    });
+        }
+        successPage.Heading = tvPurchase.Heading??"";
+        successPage.SuccessIcon = tvPurchase.SuccessIcon?.Url().ToString()??"";
+        successPage.SuccessTitle = tvPurchase.SuccessTitle??"";
+        successPage.SuccessDescription = tvPurchase.SuccessDescription?.ToString() ?? "";
+        successPage.ButtonText = tvPurchase?.Button?.Name??"";
+        successPage.ButtonUrl = tvPurchase?.Button?.Url??"";
+        successPage.ButtonTheme = tvPurchase?.ButtonTheme??"";
+        successPage.ButtonBorderColor = tvPurchase?.ButtonBorderColor??"";
+        foreach(var item in tvPurchase.PositionImages)
+        {
+            var content = item.Content as PositionImagesBlock;
+            successPage.PositionImages.Add(new PositionImage
+                    {
+                        ImageUrl = content?.Image?.Url() ?? "",
+                        Position = content?.Position ?? ""
                     });
         }
     }
     else if (packageType == "fiber")
     {
+        formButton = Umbraco.GetDictionaryValue("PurchaseFlow.Fiber.AddressForm.ButtonText");
+        addressFormTitle = Umbraco.GetDictionaryValue("PurchaseFlow.Fiber.AddressForm");
+        formPlaceholder = Umbraco.GetDictionaryValue("PurchaseFlow.Fiber.AddressForm.InputPlaceholder");
+        addressConnected = Umbraco.GetDictionaryValue("PurchaseFlow.Fiber.AddressConnected");
+        addressConnectedDesc = Umbraco.GetDictionaryValue("PurchaseFlow.Fiber.AddressConnectedDescription");
+        addressPassed = Umbraco.GetDictionaryValue("PurchaseFlow.Fiber.AddressPassed");
+        addressPassedDesc = Umbraco.GetDictionaryValue("PurchaseFlow.Fiber.AddressPassedDescription");
+        addressNotConnected = Umbraco.GetDictionaryValue("PurchaseFlow.Fiber.AddressNotConnected");
+        addressNotConnectedDesc = Umbraco.GetDictionaryValue("PurchaseFlow.Fiber.AddressNotConnectedDescription");
+        D_FormTitle = Umbraco.GetDictionaryValue("PurchaseFlow.Fiber.FormTitle");
+        otherBillingAddressHeading = Umbraco.GetDictionaryValue("PurchaseFlow.Fiber.OtherBillingAddressHeading");
+        SettlementTitle = Umbraco.GetDictionaryValue("PurchaseFlow.Fiber.SettlementTitle");
+        SettlementHeading = Umbraco.GetDictionaryValue("PurchaseFlow.Fiber.SettlementHeading");
+        WirelessInternetText = Umbraco.GetDictionaryValue("PurchaseFlow.ThirdStep.WirelessInternetText");
+        packagesTitle = Umbraco.GetDictionaryValue("PurchaseFlow.Fiber.PackagesTitle");
+        businessAddressConnectedDesc = Umbraco.GetDictionaryValue("PurchaseFlow.Fiber.BusinessAddressConnectedDescription");
+
         var fiberPurchase = Model.Children<FiberPurchase>()?.FirstOrDefault();
         foreach (var item in fiberPurchase.BillingTypes)
         {
@@ -133,13 +152,32 @@
                         Description = content?.Description?.ToString() ?? ""
                     });
         }
-        wirelessInternetHeading =fiberPurchase.WirelessInternetHeadline??"";
-        wirelessInternetUnit =fiberPurchase.WirelessInternetUnit??"";
-        wirelessInternetCost =fiberPurchase.WirelessInternetCost;
-        wirelessInternetNote=fiberPurchase.WirelessInternetNote?.ToString()??"";
+        wirelessInternetHeading = fiberPurchase.WirelessInternetHeadline ?? "";
+        wirelessInternetUnit = fiberPurchase.WirelessInternetUnit ?? "";
+        wirelessInternetCost = fiberPurchase.WirelessInternetCost;
+        wirelessInternetNote = fiberPurchase.WirelessInternetNote?.ToString() ?? "";
+        successPage.Heading = fiberPurchase.Heading ?? "";
+        successPage.SuccessIcon = fiberPurchase.SuccessIcon?.Url().ToString() ?? "";
+        successPage.SuccessTitle = fiberPurchase.SuccessTitle ?? "";
+        successPage.SuccessDescription = fiberPurchase.SuccessDescription?.ToString() ?? "";
+        successPage.ButtonText = fiberPurchase?.Button?.Name ?? "";
+        successPage.ButtonUrl = fiberPurchase?.Button?.Url ?? "";
+        successPage.ButtonTheme = fiberPurchase.ButtonTheme ?? "";
+        successPage.ButtonBorderColor = fiberPurchase.ButtonBorderColor ?? "";
+        foreach (var item in fiberPurchase.PositionImages)
+        {
+            var content = item.Content as PositionImagesBlock;
+            successPage.PositionImages.Add(new PositionImage
+                    {
+                        ImageUrl = content?.Image?.Url() ?? "",
+                        Position = content?.Position ?? ""
+                    });
+        }
     }
     else
     {
+        D_FormTitle = Umbraco.GetDictionaryValue("PurchaseFlow.Electricity.FormTitle");
+
         var electricityPurchase = Model.Children<ElectricityPurchase>()?.FirstOrDefault();
         foreach (var item in electricityPurchase.BillingTypes)
         {
@@ -150,6 +188,23 @@
                         Description = content?.Description?.ToString() ?? "",
                         tag = content?.Tag ?? "",
                         isTagVisible = content?.ToggleTag ?? false
+                    });
+        }
+        successPage.Heading = electricityPurchase.Heading ?? "";
+        successPage.SuccessIcon = electricityPurchase.SuccessIcon?.Url().ToString() ?? "";
+        successPage.SuccessTitle = electricityPurchase.SuccessTitle ?? "";
+        successPage.SuccessDescription = electricityPurchase.SuccessDescription?.ToString() ?? "";
+        successPage.ButtonText = electricityPurchase?.Button?.Name ?? "";
+        successPage.ButtonUrl = electricityPurchase?.Button?.Url ?? "";
+        successPage.ButtonTheme = electricityPurchase.ButtonTheme ?? "";
+        successPage.ButtonBorderColor = electricityPurchase.ButtonBorderColor ?? "";
+        foreach (var item in electricityPurchase.PositionImages)
+        {
+            var content = item.Content as PositionImagesBlock;
+            successPage.PositionImages.Add(new PositionImage
+                    {
+                        ImageUrl = content?.Image?.Url() ?? "",
+                        Position = content?.Position ?? ""
                     });
         }
     }
@@ -170,6 +225,8 @@
         SettlementTitle:'@Html.Raw(SettlementTitle)',
         SettlementHeading:'@Html.Raw(SettlementHeading)',
         WirelessInternetText:'@Html.Raw(WirelessInternetText)',
+        packagesTitle:'@Html.Raw(packagesTitle)',
+        businessAddressConnectedDesc:'@Html.Raw(businessAddressConnectedDesc)',
 
         D_FullName: '@Html.Raw(D_FullName)',
         D_CPRNumber: '@Html.Raw(D_CPRNumber)',
@@ -195,7 +252,8 @@
         D_ReviewPageHeading:'@Html.Raw(D_ReviewPageHeading)',
         D_OtherBillingAddress:'@Html.Raw(D_OtherBillingAddress)',
         D_OtherBillingAddress_P:'@Html.Raw(D_OtherBillingAddress_P)',
-
+        reviewStepPracticalSectionTitle:'@Html.Raw(reviewStepPracticalSectionTitle)',
+        reviewStepProductSectionTitle:'@Html.Raw(reviewStepProductSectionTitle)'
     }
 </script>
 <purchase-flow :address-form-model="@addressFormModel"
@@ -203,13 +261,14 @@
                :categories="@JsonConvert.SerializeObject(categories)"
                :billing-types="@(packageType=="fiber"?JsonConvert.SerializeObject(fiberBillingTypes):JsonConvert.SerializeObject(electricityBillingTypes))"
                success-icon="@Model.SuccessIcon?.Url().ToString()"
-               not-Success-icon="@Model.NotSuccessIcon?.Url().ToString()" 
+               not-Success-icon="@Model.NotSuccessIcon?.Url().ToString()"
                wireless-internet-heading="@wirelessInternetHeading"
                wireless-internet-unit="@wirelessInternetUnit"
-               wireless-internet-note ="@wirelessInternetNote"
-               :wireless-internet-cost="@wirelessInternetCost" />
+               wireless-internet-note="@wirelessInternetNote"
+               :wireless-internet-cost="@wirelessInternetCost"
+               :success-page="@JsonConvert.SerializeObject(successPage)" />
 
 <script>
 
-      
+
 </script>

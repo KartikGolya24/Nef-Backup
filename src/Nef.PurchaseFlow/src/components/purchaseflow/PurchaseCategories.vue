@@ -17,7 +17,7 @@
   })
 
   //Data
-  var selectedCategory = ref(undefined)
+  var selectedCategory = ref(props.categories[0])
 
   //Methods
   function backToPrevious() {
@@ -41,7 +41,7 @@
         <div class="ordering-card-box-outer">
           <div class="row">
             <div class="col-lg-4 col-md-6 mb-32" v-for="category in categories">
-              <div class="ordering-card border_black-100" @click="selectedCategory=category">
+              <div :class="['ordering-card', selectedCategory.CategoryName===category.CategoryName?'light_purple_bg border_dark_purple':'border_black-100']" @click="selectedCategory=category">
                 <div class="card-head">
                   <div class="form-check radio-purple">
                     <input class="form-check-input" type="radio" name="orderTVOption" id="orderTVOption" :value="category" v-model="selectedCategory">

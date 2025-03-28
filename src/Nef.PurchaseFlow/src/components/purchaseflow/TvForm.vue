@@ -11,7 +11,8 @@
     addressFormModel: {
       type: Object
     },
-    selectedPackage: Object
+    selectedPackage: Object,
+    successPage: Object
   })
 
   //Data
@@ -24,16 +25,30 @@
     dateFormat: 'Y-m-d',
     minDate: '',
     maxDate: '',
-    enable :[]
+    enable: []
   });
+
   const form = reactive({
-    address: props.addressFormModel.address ?? "",
-    fullName: "",
-    cprNumber: "",
-    email: "",
-    phoneNumber: "",
-    deliveryDate: ""
-  })
+    "orderType": "tv",
+    "packageId": "99df6721-e6b6-45ff-bc79-f7838f6f2ece",
+    "packageName": "",
+    "tvCategory": "",
+    "deliveryAddress": props.addressFormModel.address ?? "",
+    "fullName": "",
+    "cprNumber": "",
+    "email": "",
+    "telephoneNumber": "",
+    "deliveryDate": "",
+    "totalPrice": 1230.00,
+    "isExtraPerson": false,
+    "extraPersonFullName": "",
+    "extraPersonCPRNumber": "",
+    "addressType": "",
+    "billingType": "",
+    "hasOtherBillingAddress": false,
+    "otherBillingAddress": "",
+    "isWirelessInternetAccess": false,
+  });
 
   //Computed properties
   const validateEmail = computed(() => {
@@ -55,8 +70,8 @@
       return false;
     }
 
-    // Check phoneNumber
-    if (!form.phoneNumber) {
+    // Check telephoneNumber
+    if (!form.telephoneNumber) {
       return false;
     }
 
@@ -95,11 +110,7 @@
   function getAvailableDates() {
     PurchaseFlowService.availableDates(3, props.addressFormModel.addressId).then((res) => {
       dateModel.value = res.data;
-      const enabledDates = res.data.dates.map(date => {
-        return date.split('T')[0]; // If the dates are in ISO format, convert to 'yyyy-mm-dd'
-      });
-      console.log(enabledDates)
-      config.value.enable = enabledDates;
+      config.value.enable = dateModel.dates;
       config.value.minDate = dateModel.value.startDate;
       config.value.maxDate = dateModel.value.endDate;
     }).catch(error => console.error(error))
@@ -149,7 +160,7 @@
             </div>
             <div class="right" v-if="currentStep !=='information'">
               <p class="para">Du har udfyldt:</p>
-              <p class="para"><strong>{{form.address}}</strong></p>
+              <p class="para"><strong>{{form.deliveryAddress}}</strong></p>
               <div class="checkmark">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <g clip-path="url(#clip0_518_17461)">
@@ -194,7 +205,7 @@
                   <div class="col-lg-4 col-md-6">
                     <div class="form-group">
                       <label for="" class="label">{{lang('D_Phone')}}<span class="required">*</span></label>
-                      <input type="text" maxlength="11" class="form-control" :placeholder="lang('D_Phone_P')" v-model="form.phoneNumber">
+                      <input type="text" maxlength="11" class="form-control" :placeholder="lang('D_Phone_P')" v-model="form.telephoneNumber">
                     </div>
                   </div>
                   <div class="col-lg-4 col-md-6" v-if="dateModel.showCalendar">
@@ -212,10 +223,7 @@
                 <a href="javascript:void(0)" type="button" class="btn white_bg_btn" @click="back">
                   Tilbage
                 </a>
-                <!--<a href="javascript:void(0)" type="button" :class="['btn', 'dark_purple_btn',!validateSecondStep?'disabled':'']" @click="currentStep='order'">
-                  Fortsæt til bestilling
-                </a>-->
-                <a href="javascript:void(0)" type="button" class="btn dark_purple_btn" @click="currentStep='order'">
+                <a href="javascript:void(0)" type="button" :class="['btn', 'dark_purple_btn',!validateSecondStep?'disabled':'']" @click="currentStep='order'">
                   Fortsæt til bestilling
                 </a>
               </div>
@@ -264,7 +272,7 @@
         <div class="row">
           <div class="col-lg-6">
             <div class="billing-box">
-              <h4 class="info-box-title">Produkt</h4>
+              <h4 class="info-box-title">{{lang('reviewStepProductSectionTitle')}}</h4>
               <ul class="info-list">
                 <li>
                   <p class="para">{{selectedPackage.name}}</p>
@@ -294,8 +302,8 @@
               <h4 class="info-box-title">{{lang('D_SecondStep')}}</h4>
               <ul class="info-list">
                 <li>
-                  <p class="para">Gratis oprettelse:</p>
-                  <span>{{form.address}}</span>
+                  <p class="para">{{lang('D_DeliveryAddress')}}:</p>
+                  <span>{{form.deliveryAddress}}</span>
                 </li>
                 <li>
                   <p class="para">{{lang('D_FullName')}}:</p>
@@ -307,13 +315,13 @@
                 </li>
                 <li>
                   <p class="para">{{lang('D_Phone')}}:</p>
-                  <span>{{form.phoneNumber}}</span>
+                  <span>{{form.telephoneNumber}}</span>
                 </li>
                 <li>
                   <p class="para">{{lang('D_CPRNumber')}}:</p>
                   <span>{{form.cprNumber}}</span>
                 </li>
-                <li>
+                <li v-if="dateModel.showCalendar">
                   <p class="para">{{lang('D_DeliveryDate')}}:</p>
                   <span>{{form.deliveryDate}}</span>
                 </li>
@@ -322,7 +330,7 @@
           </div>
           <div class="col-lg-6">
             <div class="info-box">
-              <h4 class="card-title">Praktisk</h4>
+              <h4 class="card-title">{{lang('reviewStepPracticalSectionTitle')}}</h4>
               <div v-html="selectedCategory.value.PracticalInformation">
               </div>
             </div>
@@ -355,29 +363,33 @@
 
   <section class="account-action order-nef-tv full-height-section" v-if="currentStep==='success'">
     <div class="container">
-      <h2 class="action-title">Bestillingen er gennemført.</h2>
+      <h2 class="action-title">{{successPage.Heading}}</h2>
       <div class="row">
         <div class="col-lg-4">
           <div class="order-complete-Bx">
-            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M40 80C62.0914 80 80 62.0914 80 40C80 17.9086 62.0914 0 40 0C17.9086 0 0 17.9086 0 40C0 62.0914 17.9086 80 40 80ZM60.016 29.8201C61.4943 27.9718 61.1949 25.2749 59.3463 23.7963C57.4983 22.3177 54.8013 22.6173 53.3226 24.4656L33.0604 49.7934L24.9549 43.7143C23.0614 42.2941 20.3751 42.6779 18.9549 44.5714C17.5348 46.465 17.9185 49.1513 19.8121 50.5714L31.2406 59.1429C33.0925 60.532 35.7126 60.1989 37.1587 58.3914L60.016 29.8201Z" fill="#37B4B4" />
-            </svg>
-            <h4 class="title">Tak for din bestilling.</h4>
-            <p>Vi har modtaget din bestilling og sendt dig en bekræftelsesmail. God dag.</p>
+            <img :src="successPage.SuccessIcon" />
+            <h4 class="title">{{successPage.SuccessTitle}}</h4>
+            <p v-html="successPage.SuccessDescription"></p>
           </div>
         </div>
       </div>
       <div class="multiple-buttons">
-        <a href="index.html" type="button" class="btn dark_purple_btn">
-          Gå til forsiden
+        <a :href="successPage.ButtonUrl" type="button" class="btn dark_purple_btn">
+          {{successPage.ButtonText}}
         </a>
       </div>
-      <div class="position-image top-right d-none d-lg-block">
+
+      <template v-for="positionImage in successPage.PositionImages">
+        <div :class="['position-image',positionImage.Position]">
+          <img :src="positionImage.ImageUrl" alt="positionImage">
+        </div>
+      </template>
+      <!--<div class="position-image top-right d-none d-lg-block">
         <img src="assets/img/icons/order-complete-doodle-purple.svg" alt="">
       </div>
       <div class="position-image bottom-center">
         <img src="assets/img/icons/order-complete-doodle02.svg" alt="">
-      </div>
+      </div>-->
     </div>
   </section>
 </template>
