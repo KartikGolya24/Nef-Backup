@@ -31,7 +31,7 @@ namespace UmbracoProject.App_Code.Controllers
         [HttpGet("get-tv-package-list")]
         public async Task<IActionResult> GetTvPackageList()
         {
-            return Ok(await _purchaseFlowService.GetFiberPackagesAsync());
+            return Ok(await _purchaseFlowService.GetTvPackagesAsync());
         }
 
         [HttpGet("get-fiber-package-list")]
