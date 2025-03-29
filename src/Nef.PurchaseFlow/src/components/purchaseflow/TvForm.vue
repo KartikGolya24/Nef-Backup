@@ -5,6 +5,8 @@
   import 'flatpickr/dist/flatpickr.css';
   import PurchaseFlowService from "./purchase-flow.service";
   import { Danish } from "flatpickr/dist/l10n/da.js"
+  import moment from 'moment'
+  import 'moment/locale/da';
   const emit = defineEmits(['change-tab'])
 
   const props = defineProps({
@@ -97,7 +99,7 @@
     else if (currentStep.value === 'reviewOrder')
       currentStep.value = 'order';
     else {
-      emit('change-tab', 'categories')
+      emit('change-tab', 'categories', props.selectedCategory)
     }
   }
   //function continueOrder() {
@@ -125,6 +127,12 @@
       config.value.minDate = dateModel.value.startDate;
       config.value.maxDate = dateModel.value.endDate;
     }).catch(error => console.error(error))
+  }
+
+  function formatDate(date) {
+    // Set the locale to Danish (da)
+    moment.locale('da');
+    return moment(date).format('DD MMMM, YYYY'); // Format as "16 February, 2025"
   }
 
   onMounted(() => {
@@ -334,7 +342,7 @@
                 </li>
                 <li v-if="dateModel.showCalendar">
                   <p class="para">{{lang('D_DeliveryDate')}}:</p>
-                  <span>{{form.deliveryDate}}</span>
+                  <span>{{ formatDate(form.deliveryDate) }}</span>
                 </li>
               </ul>
             </div>

@@ -5,8 +5,10 @@
   import 'flatpickr/dist/flatpickr.css';
   import { Danish } from "flatpickr/dist/l10n/da.js"
   import PurchaseFlowService from "./purchase-flow.service";
+  import moment from 'moment'
+  import 'moment/locale/da';
   const emit = defineEmits(['change-tab'])
-
+   
   const props = defineProps({
     addressFormModel: {
       type: Object
@@ -29,11 +31,11 @@
     wrap: true, // set wrap to true only when using 'input-group'
     altFormat: 'j F, Y',
     altInput: true,
-    dateFormat: 'j F, Y',
+    dateFormat: 'Y-m-d',
     minDate: '',
     maxDate: '',
     enable: [],
-    locale:Danish
+    locale: Danish
   });
   const form = reactive({
     "orderType": "",
@@ -110,7 +112,7 @@
   }
 
   function submit() {
-    form.billingType = selectedBillingType.Title;
+    form.billingType = selectedBillingType.value.Title;
     form.totalPrice= (parseFloat(props.electricityType.Price) || 0) + (parseFloat(props.electricityType.CertificatePrice) || 0) + (parseFloat(selectedBillingType.Price) || 0)
     PurchaseFlowService.submitForm(form).then(res => {
       console.log(res);
@@ -126,6 +128,11 @@
       config.value.minDate = dateModel.value.startDate;
       config.value.maxDate = dateModel.value.endDate;
     }).catch(error => console.error(error))
+  }
+  function formatDate(date) {
+    // Set the locale to Danish (da)
+    moment.locale('da');
+    return moment(date).format('DD MMMM, YYYY'); // Format as "16 February, 2025"
   }
 
   onMounted(() => {
@@ -327,7 +334,7 @@
                     <div class="form-check radio-light-blue">
                       <input class="form-check-input" type="radio" name="orderElectricityOption" id="orderElectricityOption" :value="billingType" v-model="selectedBillingType">
                     </div>
-                    <div class="tag" v-if="billingType.Visible">{{billingType.Tag}}</div>
+                    <div class="tag" v-if="billingType.IsTagVisible">{{billingType.Tag}}</div>
                   </div>
                   <div class="card-content">
                     <h4 class="card-title">{{billingType.Title}}</h4>
@@ -437,8 +444,9 @@
                 </li>
                 <li v-if="dateModel.showCalendar">
                   <p class="para">{{lang('D_DeliveryDate')}}:</p>
-                  <span>{{form.deliveryDate}}</span>
+                  <span>{{ formatDate(form.deliveryDate) }}</span>
                 </li>
+                
               </ul>
             </div>
           </div>
