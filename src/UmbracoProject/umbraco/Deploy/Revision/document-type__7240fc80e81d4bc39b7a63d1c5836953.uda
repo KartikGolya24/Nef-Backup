@@ -19,11 +19,25 @@
       "Alias": "content",
       "PropertyTypes": [
         {
+          "Key": "1ae3be46-4bfb-468e-a239-76c3228d691c",
+          "Alias": "orderButtonText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Order Button Text",
+          "SortOrder": 6
+        },
+        {
+          "Key": "22c8d81a-aa96-4c55-bfab-0a97babddd1d",
+          "Alias": "orderButtonTheme",
+          "DataType": "umb://data-type/36564b1fa93643ee88423df7234ea0bf",
+          "Name": "Order Button Theme",
+          "SortOrder": 7
+        },
+        {
           "Key": "50ea892f-28d4-46ab-8f9e-8777ff1f94eb",
           "Alias": "buttonBorderColor",
           "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
           "Name": "Button Border color",
-          "SortOrder": 8
+          "SortOrder": 12
         },
         {
           "Key": "64422606-b58b-40e4-8602-838afcf2df56",
@@ -44,7 +58,7 @@
           "Alias": "defaultTagImage",
           "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
           "Name": "Default Tag Image",
-          "SortOrder": 9
+          "SortOrder": 13
         },
         {
           "Key": "77b20d1d-b0b7-4305-a26b-706672a80b67",
@@ -52,13 +66,6 @@
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
           "Name": "Price Unit",
           "SortOrder": 3
-        },
-        {
-          "Key": "87955673-0bd2-4a26-a1c9-79a10ff55229",
-          "Alias": "linkList",
-          "DataType": "umb://data-type/2f42fd89a2a44d95aece4e93b933793f",
-          "Name": "Link List",
-          "SortOrder": 6
         },
         {
           "Key": "8d938ebe-e13c-450b-b139-f3e3930d385d",
@@ -72,7 +79,7 @@
           "Alias": "hoverTagImage",
           "DataType": "umb://data-type/118e8104b0a24ffdbd9b95d53d7b419d",
           "Name": "Hover Tag Image",
-          "SortOrder": 10
+          "SortOrder": 14
         },
         {
           "Key": "96136fd0-4edb-4f99-9bd1-18240ece360d",
@@ -85,7 +92,7 @@
           "Alias": "seeMoreButtonText",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
           "Name": "See more Button Text",
-          "SortOrder": 7
+          "SortOrder": 11
         },
         {
           "Key": "a30984da-f730-4532-86ff-88a7a60cb2c3",
@@ -93,6 +100,20 @@
           "DataType": "umb://data-type/abe3ef3cd92446e2a05f7fe80c1703db",
           "Name": "Certificate Price",
           "SortOrder": 4
+        },
+        {
+          "Key": "adcbd570-5f42-42be-9b6c-3f15b09a1e27",
+          "Alias": "seeMoreButtonTheme",
+          "DataType": "umb://data-type/36564b1fa93643ee88423df7234ea0bf",
+          "Name": "See more Button Theme",
+          "SortOrder": 9
+        },
+        {
+          "Key": "b1aca7be-0816-4e6a-bc0b-43ecf32cff8a",
+          "Alias": "orderButtonBorder",
+          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+          "Name": "Order Button Border",
+          "SortOrder": 8
         }
       ]
     },
@@ -103,10 +124,17 @@
       "Alias": "modelContent",
       "PropertyTypes": [
         {
-          "Key": "84ead4f2-704c-46f5-ba4f-87c198c11475",
-          "Alias": "modelLink",
-          "DataType": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
-          "Name": "Model Link",
+          "Key": "13454b5d-77a2-4ece-9a91-2924a831877b",
+          "Alias": "modelButtonBorderColor",
+          "DataType": "umb://data-type/131389b3e7714c159ee8e801e57355c1",
+          "Name": "Model Button Border Color",
+          "SortOrder": 4
+        },
+        {
+          "Key": "863786d5-2ad4-4586-83fe-0bbf072d7de3",
+          "Alias": "modelButtonText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Model Button Text",
           "SortOrder": 2
         },
         {
@@ -121,6 +149,13 @@
           "Alias": "modelHeadingText",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
           "Name": "Model Heading Text"
+        },
+        {
+          "Key": "bc29d7cf-e7b9-40f1-9ad9-1eb0e12d8125",
+          "Alias": "modelButtonTheme",
+          "DataType": "umb://data-type/36564b1fa93643ee88423df7234ea0bf",
+          "Name": "Model Button Theme",
+          "SortOrder": 3
         }
       ]
     }
@@ -145,11 +180,11 @@
       "Ordering": true
     },
     {
-      "Udi": "umb://data-type/2f42fd89a2a44d95aece4e93b933793f",
+      "Udi": "umb://data-type/30117546afb24920941d98bf4714ae59",
       "Ordering": true
     },
     {
-      "Udi": "umb://data-type/30117546afb24920941d98bf4714ae59",
+      "Udi": "umb://data-type/36564b1fa93643ee88423df7234ea0bf",
       "Ordering": true
     },
     {
@@ -158,10 +193,6 @@
     },
     {
       "Udi": "umb://data-type/abe3ef3cd92446e2a05f7fe80c1703db",
-      "Ordering": true
-    },
-    {
-      "Udi": "umb://data-type/b4e3535a175347e28568602cf8cfee6f",
       "Ordering": true
     },
     {

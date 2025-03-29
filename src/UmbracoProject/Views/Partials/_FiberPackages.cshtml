@@ -47,15 +47,15 @@
                                         <li>
 
                                             <p>
-                                                <img src="@(!string.IsNullOrWhiteSpace(usp.Icon) ? usp.Icon : "/assets/img/icons/checkmark-green.svg")" class="img-fluid" alt="icon svg"/>
+                                                <img src="@(!string.IsNullOrWhiteSpace(usp.Icon) ? usp.Icon : "/assets/img/icons/checkmark-green.svg")" class="img-fluid" alt="icon svg" />
                                                 @usp.Name
+                                                @if (!string.IsNullOrWhiteSpace(usp.Infotext))
+                                                {
+                                                    <span data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="@usp.Infotext">
+                                                        <img src="~/assets/img/icons/info-popup.svg" class="img-fluid" alt="info-svg" />
+                                                    </span>
+                                                }
                                             </p>
-                                            @if (!string.IsNullOrWhiteSpace(usp.Infotext))
-                                            {
-                                                <span data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="@usp.Infotext">
-                                                    <img src="~/assets/img/icons/info-popup.svg" class="img-fluid" alt="info-svg" />
-                                                </span>
-                                            }
                                         </li>
                                     }
                                 }

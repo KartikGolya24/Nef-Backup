@@ -97,12 +97,28 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops HoverTagImage => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "hoverTagImage");
 
 		///<summary>
-		/// Link List
+		/// Model Button Border Color
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("linkList")]
-		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel LinkList => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "linkList");
+		[ImplementPropertyType("modelButtonBorderColor")]
+		public virtual string ModelButtonBorderColor => this.Value<string>(_publishedValueFallback, "modelButtonBorderColor");
+
+		///<summary>
+		/// Model Button Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("modelButtonText")]
+		public virtual string ModelButtonText => this.Value<string>(_publishedValueFallback, "modelButtonText");
+
+		///<summary>
+		/// Model Button Theme
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("modelButtonTheme")]
+		public virtual string ModelButtonTheme => this.Value<string>(_publishedValueFallback, "modelButtonTheme");
 
 		///<summary>
 		/// Model Description Text
@@ -121,12 +137,28 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual string ModelHeadingText => this.Value<string>(_publishedValueFallback, "modelHeadingText");
 
 		///<summary>
-		/// Model Link
+		/// Order Button Border
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("modelLink")]
-		public virtual global::Umbraco.Cms.Core.Models.Link ModelLink => this.Value<global::Umbraco.Cms.Core.Models.Link>(_publishedValueFallback, "modelLink");
+		[ImplementPropertyType("orderButtonBorder")]
+		public virtual string OrderButtonBorder => this.Value<string>(_publishedValueFallback, "orderButtonBorder");
+
+		///<summary>
+		/// Order Button Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("orderButtonText")]
+		public virtual string OrderButtonText => this.Value<string>(_publishedValueFallback, "orderButtonText");
+
+		///<summary>
+		/// Order Button Theme
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("orderButtonTheme")]
+		public virtual string OrderButtonTheme => this.Value<string>(_publishedValueFallback, "orderButtonTheme");
 
 		///<summary>
 		/// Price
@@ -150,6 +182,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("seeMoreButtonText")]
 		public virtual string SeeMoreButtonText => this.Value<string>(_publishedValueFallback, "seeMoreButtonText");
+
+		///<summary>
+		/// See more Button Theme
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("seeMoreButtonTheme")]
+		public virtual string SeeMoreButtonTheme => this.Value<string>(_publishedValueFallback, "seeMoreButtonTheme");
 
 		///<summary>
 		/// Text List

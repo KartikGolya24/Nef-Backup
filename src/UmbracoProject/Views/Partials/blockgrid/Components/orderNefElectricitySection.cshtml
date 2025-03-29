@@ -18,7 +18,7 @@
         <div class="row">
             @if (content?.ElectricityPackaseList?.Count() > 0)
             {
-                var count = 1;
+                var popupGuid = Guid.NewGuid();
                 @foreach (var item in content?.ElectricityPackaseList)
                 {
                     var electricityBlock = item as ElectricityPackages;
@@ -40,23 +40,17 @@
                             </div>
                             <div class="card-footer">
                                 <div class="multiple-buttons m-auto">
-                                    @* @Html.GetBlockListHtml(electricityBlock?.LinkList) *@
-                                    @foreach(var linkItem in electricityBlock.LinkList){
-                                        var iconLinkList = linkItem.Content as IconLinkList;
-                                        <a href="@iconLinkList?.Link?.Url" class="btn electric-flow @iconLinkList?.ButtonTheme @(iconLinkList?.ButtonTextItalic == true ? "italic" : "")" style="border:1px solid #@iconLinkList?.BorderColor" electricity-type-id="@electricityBlock.Id">
-                                            @if (iconLinkList?.Icon?.Content != null)
-                                            {
-                                                <img src="@iconLinkList?.Icon?.MediaUrl()" class="img-fluid" alt="">
-                                            }
-                                            @iconLinkList?.Link?.Name
-                                        </a>
-                                    }
+
+                                    <a href="javascript:void(0)" class="btn electric-flow @(!string.IsNullOrWhiteSpace(electricityBlock?.OrderButtonTheme) ? electricityBlock?.OrderButtonTheme : "light_blue_btn")" style="border:1px solid #@electricityBlock?.OrderButtonBorder" electricity-type-id="@electricityBlock.Id">
+                                        @(!string.IsNullOrWhiteSpace(electricityBlock?.OrderButtonText) ? electricityBlock?.OrderButtonText : "koeb-stroem")
+                                    </a>
+
                                     @if (!string.IsNullOrWhiteSpace(electricityBlock?.SeeMoreButtonText))
                                     {
                                         <button type="button"
-                                                class="btn border_black-200 white_bg_btn"
+                                                class="btn border_black-200 @(!string.IsNullOrWhiteSpace(electricityBlock?.SeeMoreButtonTheme) ? electricityBlock?.SeeMoreButtonTheme : "white_bg_btn")" white_bg_btn"
                                                 data-bs-toggle="modal"
-                                                data-bs-target="#readMorePopup@(count)" style="border:1px solid #@electricityBlock?.ButtonBorderColor">
+                                                data-bs-target="#readMorePopup-@(popupGuid)" style="border:1px solid #@electricityBlock?.ButtonBorderColor" style="border:1px solid #@electricityBlock?.ButtonBorderColor">
                                             @electricityBlock?.SeeMoreButtonText
                                         </button>
                                     }
@@ -66,7 +60,7 @@
                             <div class="position-img">
                                 @if (electricityBlock?.DefaultTagImage?.Content != null)
                                 {
-                                    <img src="@electricityBlock?.DefaultTagImage.MediaUrl()" class="img-fluid defaultImage" alt="" />
+                                    <img src="@electricityBlock?.DefaultTagImage.MediaUrl()" class="img-fluid defaultImage li" alt="" />
                                 }
                                 @if (electricityBlock?.HoverTagImage?.Content != null)
                                 {
@@ -78,7 +72,7 @@
                         </div>
                         <!-------------------------------------------Modal ------------------------------->
                         <div class="modal fade"
-                             id="readMorePopup@(count)"
+                             id="readMorePopup-@(popupGuid)"
                              data-bs-keyboard="false"
                              tabindex="-1"
                              aria-labelledby="staticBackdropLabel">
@@ -91,14 +85,13 @@
                                     <div class="modal-body">
                                         @Html?.Raw(electricityBlock?.ModelDescriptionText)
                                         <br />
-                                        <a href="@electricityBlock?.ModelLink?.Url" class="btn dark_blue_btn electric-flow" electricity-type-id="@electricityBlock.Id">@electricityBlock?.ModelLink?.Name</a>
+                                        <a href="javascript:void(0)" class="btn @(!string.IsNullOrWhiteSpace(electricityBlock?.ModelButtonTheme) ? electricityBlock?.ModelButtonTheme : "dark_blue_btn") electric-flow" style="border:1px solid #@electricityBlock?.ModelButtonBorderColor" electricity-type-id="@electricityBlock?.Id">@(!string.IsNullOrWhiteSpace(electricityBlock?.ModelButtonText) ? electricityBlock?.ModelButtonText : "koeb-stroem")</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    count++;
                 }
             }
         </div>
