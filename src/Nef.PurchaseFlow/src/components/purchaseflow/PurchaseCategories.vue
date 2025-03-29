@@ -13,7 +13,8 @@
     },
     categories: {
       type: Object
-    }
+    },
+    selectedTvCategory:Object
   })
 
   //Data
@@ -28,7 +29,10 @@
   }
 
   onMounted(() => {
-    window.scrollTo(0,0)
+    window.scrollTo(0, 0)
+    if (props.selectedTvCategory) {
+    selectedCategory.value = props.selectedTvCategory.value;
+    }
   })
 </script>
 

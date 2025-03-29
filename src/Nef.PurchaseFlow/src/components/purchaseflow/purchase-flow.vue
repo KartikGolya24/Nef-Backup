@@ -72,7 +72,8 @@
     if (activeTab.value === 'categories')
       return {
         'categories-heading': props.categoriesHeading,
-        'categories': props.categories
+        'categories': props.categories,
+        'selectedTvCategory': selectedCategory
       }
     if (activeTab.value === 'form')
       return {

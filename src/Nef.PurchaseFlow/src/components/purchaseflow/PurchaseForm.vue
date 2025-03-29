@@ -36,8 +36,8 @@
     return oxy.oxylang(props.langArea, key);
   }
 
-  function changeTab(key) {
-    emit('change-tab', key);
+  function changeTab(key, selectedCategory) {
+    emit('change-tab', key, selectedCategory);
   }
 
   function continueOrder() {
