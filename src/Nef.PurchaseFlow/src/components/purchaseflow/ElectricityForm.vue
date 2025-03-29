@@ -3,6 +3,7 @@
   import oxy from "../../helpers/oxylang";
   import flatPickr from 'vue-flatpickr-component';
   import 'flatpickr/dist/flatpickr.css';
+  import { Danish } from "flatpickr/dist/l10n/da.js"
   import PurchaseFlowService from "./purchase-flow.service";
   const emit = defineEmits(['change-tab'])
 
@@ -28,10 +29,11 @@
     wrap: true, // set wrap to true only when using 'input-group'
     altFormat: 'j F, Y',
     altInput: true,
-    dateFormat: 'Y-m-d',
+    dateFormat: 'j F, Y',
     minDate: '',
     maxDate: '',
-    enable: []
+    enable: [],
+    locale:Danish
   });
   const form = reactive({
     "orderType": "",
@@ -108,6 +110,8 @@
   }
 
   function submit() {
+    form.billingType = selectedBillingType.Title;
+    form.totalPrice= (parseFloat(props.electricityType.Price) || 0) + (parseFloat(props.electricityType.CertificatePrice) || 0) + (parseFloat(selectedBillingType.Price) || 0)
     PurchaseFlowService.submitForm(form).then(res => {
       console.log(res);
       currentStep.value = 'success';
@@ -116,7 +120,7 @@
 
   function getAvailableDates(typeValue) {
     let index = props.addressTypes.findIndex(type => type === typeValue);
-    PurchaseFlowService.availableDates(index+1, props.addressFormModel.addressId).then((res) => {
+    PurchaseFlowService.availableDates(index + 1, props.addressFormModel.addressId).then((res) => {
       dateModel.value = res.data;
       config.value.enable = dateModel.value.dates;
       config.value.minDate = dateModel.value.startDate;
@@ -283,12 +287,14 @@
               <div class="form-block" v-if="form.addressType!=='' && dateModel.showCalendar">
                 <div class="row">
                   <div class="col-lg-4 col-md-6">
-                    <div class="form-group date">
-                      <label for="" class="label">{{dateModel.calendarTitle}}</label>
-                      <flat-pickr :config="config" class="form-control" :placeholder="lang('D_DeliveryDate_P')" v-model="form.deliveryDate" />
-                      <img src="assets/img/icons/Calendar-black.svg" alt="" class="position-icon">
+                    <div class="form-group">
+                      <div class="date form-group mb-0">
+                        <label for="" class="label">{{dateModel.calendarTitle}}</label>
+                        <flat-pickr :config="config" class="form-control" :placeholder="lang('D_DeliveryDate_P')" v-model="form.deliveryDate" />
+                        <img src="assets/img/icons/Calendar-black.svg" alt="" class="position-icon">
+                      </div>
+                      <p class="mt-2" v-if="dateModel.calendarHelperText">{{dateModel.calendarHelperText}}</p>
                     </div>
-                    <p v-if="dateModel.calendarHelperText">{{dateModel.calendarHelperText}}</p>
                   </div>
                 </div>
               </div>
@@ -363,14 +369,18 @@
       <div class="info-correct">
         <div class="row">
           <div class="col-lg-6">
-            <div class="info-box">
+            <div class="billing-box">
               <h4 class="info-box-title">{{lang('reviewStepProductSectionTitle')}}</h4>
-
-              <p class="para">{{electricityType.Heading}}</p>
               <ul class="info-list">
-                <li v-for="(textLine, index) in electricityType.TextList" :key="index">
-                  {{textLine}}
+                <li>
+                  <p class="para">{{electricityType.Heading}}</p>
+                  <ul>
+                    <li v-for="(textLine, index) in electricityType.TextList" :key="index">
+                      {{textLine}}
+                    </li>
+                  </ul>
                 </li>
+
                 <li v-if="electricityType.Price">
                   <p class="para">Abonnement</p>
                   <p class="price">{{electricityType.Price}},-{{electricityType.PriceUnit}}</p>
@@ -383,8 +393,13 @@
                   <p class="para">Afregningsmetode</p>
                   <p class="price">{{selectedBillingType.Price}},-{{selectedBillingType.PriceUnit}}</p>
                   <!--{{form.billingType}}-->
+                  <ul>
+                    <li>
+                      {{selectedBillingType.Title}}
+                    </li>
+                  </ul>
                 </li>
-                
+
                 <li>
                   <p class="para">Total</p>
                   <h4 class="total-price">{{ (parseFloat(electricityType.Price) || 0) + ( parseFloat(electricityType.CertificatePrice)||0) + (parseFloat(selectedBillingType.Price)||0)}},-</h4>
@@ -394,6 +409,7 @@
                   <p class="price">{{selectedBillingType.SupplementPrice}},-{{selectedBillingType.SupplementPriceUnit}}</p>
                 </li>
               </ul>
+
 
             </div>
             <div class="info-box">
@@ -460,7 +476,7 @@
           </div>
           <div class="col-md-12">
             <div class="multiple-buttons">
-              <a href="javascript:void(0)" type="button" class="btn white_bg_btn" @click="back" >
+              <a href="javascript:void(0)" type="button" class="btn white_bg_btn" @click="back">
                 Tilbage
               </a>
               <a href="javascript:void(0)" type="button" class="btn dark_blue_btn" @click="submit">

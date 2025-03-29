@@ -4,6 +4,7 @@
   import flatPickr from 'vue-flatpickr-component';
   import 'flatpickr/dist/flatpickr.css';
   import PurchaseFlowService from "./purchase-flow.service";
+  import { Danish } from "flatpickr/dist/l10n/da.js"
   const emit = defineEmits(['change-tab'])
 
   const props = defineProps({
@@ -31,7 +32,8 @@
     dateFormat: 'Y-m-d',
     minDate: '',
     maxDate: '',
-    enable: []
+    enable: [],
+    locale: Danish
   });
   var hasOtherBillingAddress = ref(false);
   const form = reactive({
@@ -139,6 +141,7 @@
   }
 
   onMounted(() => {
+    window.scrollTo(0, 0)
     getAvailableDates()
   })
 </script>
