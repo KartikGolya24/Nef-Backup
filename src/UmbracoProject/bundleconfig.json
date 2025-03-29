@@ -58,5 +58,15 @@
       "enabled": true,
       "renameLocals": true
     }
+  },
+  {
+    "outputFileName": "wwwroot/assets/js/electricityFlow.output.min.js",
+    "inputFiles": [
+      "wwwroot/assets/js/electricityFlow.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    }
   }
 ]

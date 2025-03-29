@@ -1,24 +1,24 @@
 {
-  "Name": "umb://dictionary-item/35102c172c0a4620b966ae9e5a7192af",
+  "Name": "umb://dictionary-item/32c845680f764c4cac39bdb22fa18cc4",
   "Alias": "",
-  "ItemKey": "PurchaseFlow.ReviwPageHeading",
-  "ParentId": "88e8db5d-2757-45dc-a084-e831522b3497",
+  "ItemKey": "PurchaseFlow.ThirdStep.ExtraPersonText",
+  "ParentId": "fce6ebc7-c1d1-4b01-aef8-4c24d1486ef0",
   "Translations": [
     {
-      "Key": "35102c17-2c0a-4620-b966-ae9e5a7192af",
-      "Value": "Er alle oplysninger korrekt?",
+      "Key": "32c84568-0f76-4c4c-ac39-bdb22fa18cc4",
+      "Value": "Tilføj ekstra person på adressen",
       "LanguageIsoCode": "da-DK"
     },
     {
-      "Key": "35102c17-2c0a-4620-b966-ae9e5a7192af",
+      "Key": "32c84568-0f76-4c4c-ac39-bdb22fa18cc4",
       "Value": "",
       "LanguageIsoCode": "en-US"
     }
   ],
-  "Udi": "umb://dictionary-item/35102c172c0a4620b966ae9e5a7192af",
+  "Udi": "umb://dictionary-item/32c845680f764c4cac39bdb22fa18cc4",
   "Dependencies": [
     {
-      "Udi": "umb://dictionary-item/88e8db5d275745dca084e831522b3497",
+      "Udi": "umb://dictionary-item/fce6ebc7c1d14b01aef84c24d1486ef0",
       "Ordering": true,
       "Mode": "Exist"
     },

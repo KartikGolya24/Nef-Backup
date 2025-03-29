@@ -3,10 +3,13 @@
 @{
     var content = Model?.Content;
     var setting = Model?.Settings as SectionSettingModel;
+    var formUrl = Umbraco?.Content(new Guid("b8ecfce9-f1a7-4485-8d36-e08ec5166e26"))?.Url()?.TrimEnd("/");
 }
 
 <!-------------------------------------- order nef power --------------------->
 <div class="order-nef-power @setting?.Theme">
+    <input type="hidden" id="package" value="electricity" />
+    <input type="hidden" id="redirecturl" value="@formUrl" />
     <div class="container">
         <div class="section-heading">
             <h2>@content?.HeadingText</h2>
@@ -37,7 +40,17 @@
                             </div>
                             <div class="card-footer">
                                 <div class="multiple-buttons m-auto">
-                                    @Html.GetBlockListHtml(electricityBlock?.LinkList)
+                                    @* @Html.GetBlockListHtml(electricityBlock?.LinkList) *@
+                                    @foreach(var linkItem in electricityBlock.LinkList){
+                                        var iconLinkList = linkItem.Content as IconLinkList;
+                                        <a href="@iconLinkList?.Link?.Url" class="btn electric-flow @iconLinkList?.ButtonTheme @(iconLinkList?.ButtonTextItalic == true ? "italic" : "")" style="border:1px solid #@iconLinkList?.BorderColor" electricity-type-id="@electricityBlock.Id">
+                                            @if (iconLinkList?.Icon?.Content != null)
+                                            {
+                                                <img src="@iconLinkList?.Icon?.MediaUrl()" class="img-fluid" alt="">
+                                            }
+                                            @iconLinkList?.Link?.Name
+                                        </a>
+                                    }
                                     @if (!string.IsNullOrWhiteSpace(electricityBlock?.SeeMoreButtonText))
                                     {
                                         <button type="button"
@@ -68,8 +81,7 @@
                              id="readMorePopup@(count)"
                              data-bs-keyboard="false"
                              tabindex="-1"
-                             aria-labelledby="staticBackdropLabel"
-                             >
+                             aria-labelledby="staticBackdropLabel">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -79,7 +91,7 @@
                                     <div class="modal-body">
                                         @Html?.Raw(electricityBlock?.ModelDescriptionText)
                                         <br />
-                                        <a href="@electricityBlock?.ModelLink?.Url" class="btn dark_blue_btn">@electricityBlock?.ModelLink?.Name</a>
+                                        <a href="@electricityBlock?.ModelLink?.Url" class="btn dark_blue_btn electric-flow" electricity-type-id="@electricityBlock.Id">@electricityBlock?.ModelLink?.Name</a>
                                     </div>
                                 </div>
                             </div>
@@ -92,3 +104,4 @@
         </div>
     </div>
 </div>
+<script asp-append-version="true" src="~/assets/js/electricityFlow.output.min.js"></script>

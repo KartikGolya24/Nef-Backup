@@ -21,7 +21,11 @@
     wirelessInternetUnit: String,
     wirelessInternetCost: Number,
     wirelessInternetNote: String,
-    successPage: Object
+    successPage: Object,
+    electricityType: Object,
+    postpaidPaymentDesc: String,
+    prepaidPaymentDesc: String,
+    addressTypes:Array
   })
 
   //Data
@@ -74,8 +78,13 @@
   <ElectricityForm v-else
                    :addressFormModel="addressFormModel"
                    @change-tab="changeTab"
-                   :selectedPackage="selectedPackage"
-                   :successPage="successPage" />
+                   :billingTypes="billingTypes"
+                   :successPage="successPage"
+                   :electricityType="electricityType"
+                   :prepaidPaymentDesc="prepaidPaymentDesc"
+                   :postpaidPaymentDesc="postpaidPaymentDesc"
+                   :addressTypes="addressTypes"
+                   />
 
 
 </template>

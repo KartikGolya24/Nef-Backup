@@ -11,6 +11,7 @@
     var packageStatus = Context.Request.Cookies["PackageStatus"];
     var address = Context.Request.Cookies["addressValue"];
     var addressId = Context.Request.Cookies["addressId"];
+    var electricityTypeId = Context.Request.Cookies["electricityTypeId"];
 
     var formButton = "";
     var addressFormTitle = "";
@@ -29,6 +30,7 @@
     var packagesTitle = "";
     var reviewStepProductSectionTitle = Umbraco.GetDictionaryValue("PurchaseFlow.ReviewStep.ProductSectionTitle");
     var reviewStepPracticalSectionTitle = Umbraco.GetDictionaryValue("PurchaseFlow.ReviewStep.PracticalSectionTitle");
+    var extraPersonText = "";
     var D_FormTitle = "";
 
     //D for dictionary item and P for placeholder
@@ -69,12 +71,16 @@
     var categories = new List<TvCategory>();
     var fiberBillingTypes = new List<FiberBillingTypeModel>();
     var electricityBillingTypes = new List<ElectricityBillingTypeModel>();
+    var electricityType = new ElectricityPackage();
 
     string categoryHeading = "";
     string wirelessInternetHeading = "";
     string wirelessInternetUnit = "";
     int wirelessInternetCost = 0;
     string wirelessInternetNote = "";
+    string prepaidPaymentDesc = "";
+    string postpaidPaymentDesc = "";
+    IEnumerable<string> addressTypes = [];
     if (packageType == "tv")
     {
         formButton = Umbraco.GetDictionaryValue("PurchaseFlow.TV.AddressForm.ButtonText");
@@ -88,7 +94,7 @@
         addressNotConnectedDesc = Umbraco.GetDictionaryValue("PurchaseFlow.TV.AddressNotConnectedDescription");
         packagesTitle = Umbraco.GetDictionaryValue("PurchaseFlow.Tv.PackagesTitle");
         D_FormTitle = Umbraco.GetDictionaryValue("PurchaseFlow.TV.FormTitle");
-        businessAddressConnectedDesc= Umbraco.GetDictionaryValue("PurchaseFlow.TV.BusinessAddressConnectedDescription");
+        businessAddressConnectedDesc = Umbraco.GetDictionaryValue("PurchaseFlow.TV.BusinessAddressConnectedDescription");
 
         var tvPurchase = Model.Children<TvPurchase>()?.FirstOrDefault();
         categoryHeading = tvPurchase.CategorySectionHeading;
@@ -105,15 +111,15 @@
                         AddonCost = content.AddonCost
                     });
         }
-        successPage.Heading = tvPurchase.Heading??"";
-        successPage.SuccessIcon = tvPurchase.SuccessIcon?.Url().ToString()??"";
-        successPage.SuccessTitle = tvPurchase.SuccessTitle??"";
+        successPage.Heading = tvPurchase.Heading ?? "";
+        successPage.SuccessIcon = tvPurchase.SuccessIcon?.Url().ToString() ?? "";
+        successPage.SuccessTitle = tvPurchase.SuccessTitle ?? "";
         successPage.SuccessDescription = tvPurchase.SuccessDescription?.ToString() ?? "";
-        successPage.ButtonText = tvPurchase?.Button?.Name??"";
-        successPage.ButtonUrl = tvPurchase?.Button?.Url??"";
-        successPage.ButtonTheme = tvPurchase?.ButtonTheme??"";
-        successPage.ButtonBorderColor = tvPurchase?.ButtonBorderColor??"";
-        foreach(var item in tvPurchase.PositionImages)
+        successPage.ButtonText = tvPurchase?.Button?.Name ?? "";
+        successPage.ButtonUrl = tvPurchase?.Button?.Url ?? "";
+        successPage.ButtonTheme = tvPurchase?.ButtonTheme ?? "";
+        successPage.ButtonBorderColor = tvPurchase?.ButtonBorderColor ?? "";
+        foreach (var item in tvPurchase.PositionImages)
         {
             var content = item.Content as PositionImagesBlock;
             successPage.PositionImages.Add(new PositionImage
@@ -177,6 +183,7 @@
     else
     {
         D_FormTitle = Umbraco.GetDictionaryValue("PurchaseFlow.Electricity.FormTitle");
+        extraPersonText = Umbraco.GetDictionaryValue("PurchaseFlow.ThirdStep.ExtraPersonText");
 
         var electricityPurchase = Model.Children<ElectricityPurchase>()?.FirstOrDefault();
         foreach (var item in electricityPurchase.BillingTypes)
@@ -186,8 +193,12 @@
                     {
                         Title = content?.Title ?? "",
                         Description = content?.Description?.ToString() ?? "",
-                        tag = content?.Tag ?? "",
-                        isTagVisible = content?.ToggleTag ?? false
+                        Tag = content?.Tag ?? "",
+                        IsTagVisible = content?.ToggleTag ?? false,
+                        Price = content.Price,
+                        PriceUnit = content.PriceUnit,
+                        SupplementPrice = content.SupplementPrice,
+                        SupplementPriceUnit = content.SupplementPriceUnit
                     });
         }
         successPage.Heading = electricityPurchase.Heading ?? "";
@@ -207,6 +218,22 @@
                         Position = content?.Position ?? ""
                     });
         }
+
+        var electricityTypeModel = Umbraco.Content(electricityTypeId) as ElectricityPackages;
+        if (electricityTypeModel != null)
+        {
+
+            electricityType.Heading = electricityTypeModel.Heading;
+            electricityType.CertificatePrice = electricityTypeModel.CertificatePrice;
+            electricityType.CertificatePriceUnit = electricityTypeModel.CertificatePriceUnit;
+            electricityType.Price = electricityTypeModel.Price;
+            electricityType.PriceUnit = electricityTypeModel.PriceUnit;
+            electricityType.TextList = electricityTypeModel.TextList;
+        }
+
+        prepaidPaymentDesc = electricityPurchase.PrepaidPaymentDescription?.ToString() ?? "";
+        postpaidPaymentDesc = electricityPurchase.PostpaidPaymentDescription?.ToString() ?? "";
+        addressTypes = electricityPurchase.AddressTypes;
     }
 
 }
@@ -227,6 +254,7 @@
         WirelessInternetText:'@Html.Raw(WirelessInternetText)',
         packagesTitle:'@Html.Raw(packagesTitle)',
         businessAddressConnectedDesc:'@Html.Raw(businessAddressConnectedDesc)',
+        extraPersonText:'@Html.Raw(extraPersonText)',
 
         D_FullName: '@Html.Raw(D_FullName)',
         D_CPRNumber: '@Html.Raw(D_CPRNumber)',
@@ -266,7 +294,11 @@
                wireless-internet-unit="@wirelessInternetUnit"
                wireless-internet-note="@wirelessInternetNote"
                :wireless-internet-cost="@wirelessInternetCost"
-               :success-page="@JsonConvert.SerializeObject(successPage)" />
+               :success-page="@JsonConvert.SerializeObject(successPage)"
+               :electricity-type="@JsonConvert.SerializeObject(electricityType)"
+               prepaid-payment-desc="@prepaidPaymentDesc"
+               postpaid-payment-desc="@postpaidPaymentDesc"
+               :address-types="@JsonConvert.SerializeObject(addressTypes)" />
 
 <script>
 

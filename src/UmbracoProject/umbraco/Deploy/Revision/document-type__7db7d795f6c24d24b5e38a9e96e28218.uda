@@ -29,6 +29,13 @@
           "SortOrder": 1
         },
         {
+          "Key": "41e3a34c-67b3-47f3-8ea3-c96d8fd0f12c",
+          "Alias": "addressTypes",
+          "DataType": "umb://data-type/86da3672f5a640b3a5bce98af677671f",
+          "Name": "Address Types",
+          "SortOrder": 3
+        },
+        {
           "Key": "b35b2b59-2687-4728-9029-5e48d521f0e4",
           "Alias": "billingTypes",
           "DataType": "umb://data-type/60ce7f5fa122434fadabfabf1aaeed2c",
@@ -53,6 +60,10 @@
     },
     {
       "Udi": "umb://data-type/60ce7f5fa122434fadabfabf1aaeed2c",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/86da3672f5a640b3a5bce98af677671f",
       "Ordering": true
     },
     {

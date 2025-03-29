@@ -1,5 +1,5 @@
 <script setup>
-  import { ref, onMounted, computed, reactive } from 'vue'
+  import { ref, onMounted, computed, reactive,onBeforeMount } from 'vue'
   import oxy from '../../helpers/oxylang.js';
   import PurchaseLookup from './PurchaseLookup.vue'
   import PurchaseCategories from './PurchaseCategories.vue'
@@ -38,7 +38,11 @@
     wirelessInternetUnit: String,
     wirelessInternetCost: Number,
     wirelessInternetNote: String,
-    successPage:Object
+    successPage: Object,
+    electricityType: Object,
+    postpaidPaymentDesc: String,
+    prepaidPaymentDesc: String,
+    addressTypes:Array
   })
   props.addressFormModel.packageStatus = ref(props.addressFormModel.packageStatus)
 
@@ -80,7 +84,11 @@
         'wirelessInternetUnit': props.wirelessInternetUnit,
         'wirelessInternetCost': props.wirelessInternetCost,
         'wirelessInternetNote': props.wirelessInternetNote,
-        'successPage': props.successPage
+        'successPage': props.successPage,
+        'electricityType': props.electricityType,
+        'prepaidPaymentDesc': props.prepaidPaymentDesc,
+        'postpaidPaymentDesc': props.postpaidPaymentDesc,
+        'addressTypes': props.addressTypes
       }
   })
 
@@ -96,6 +104,9 @@
   }
 
   onMounted(() => {
+  })
+  onBeforeMount(() => {
+    activeTab.value = props.addressFormModel.packageType === 'electricity' ? navigationList[2] : activeTab.value;
   })
 
 </script>

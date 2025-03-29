@@ -26,7 +26,27 @@ const PurchaseFlowService = {
         resolve(data.json());
       }).catch(error => reject(error))
     })
-  }
+  },
+  submitForm(model) {
+    return new Promise((resolve, reject) => {
+      fetch("/purchase-flow/send-product-data-to-client-api", {
+        method: "POST",
+        headers: {
+          'content-type': "application/json",
+        },
+        body:JSON.stringify(model)
+      }).then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        resolve(response.json);
+      }).catch((error) => {
+        console.error('Error:', error); 
+        reject(error)
+      });
+    })
+  },
+
 }
 
 export default PurchaseFlowService;

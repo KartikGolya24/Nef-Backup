@@ -1,8 +1,9 @@
 <script setup>
-  import { ref, onMounted, reactive, computed } from "vue"
+  import { ref, onMounted, reactive, computed, watch } from "vue"
   import oxy from "../../helpers/oxylang";
   import flatPickr from 'vue-flatpickr-component';
   import 'flatpickr/dist/flatpickr.css';
+  import PurchaseFlowService from "./purchase-flow.service";
   const emit = defineEmits(['change-tab'])
 
   const props = defineProps({
@@ -13,11 +14,11 @@
     billingTypes: {
       type: Array
     },
-    wirelessInternetHeading: String,
-    wirelessInternetUnit: String,
-    wirelessInternetCost: Number,
-    wirelessInternetNote: String,
-    successPage:Object
+    successPage: Object,
+    electricityType: Object,
+    postpaidPaymentDesc: String,
+    prepaidPaymentDesc: String,
+    addressTypes: Array
   })
 
   //Data
@@ -32,9 +33,8 @@
     maxDate: '',
     enable: []
   });
-  var otherBillingAddress = ref(false);
   const form = reactive({
-    "orderType": "electricity",
+    "orderType": "Electricity",
     "packageId": "",
     "packageName": "",
     "tvCategory": "",
@@ -44,16 +44,17 @@
     "email": "",
     "telephoneNumber": "",
     "deliveryDate": "",
-    "totalPrice": 1230.00,
+    "totalPrice": 0.00,
     "isExtraPerson": false,
     "extraPersonFullName": "",
     "extraPersonCPRNumber": "",
     "addressType": "",
-    "billingType": "",
+    "billingType": props.billingTypes[0].Title ?? "",
     "hasOtherBillingAddress": false,
     "otherBillingAddress": "",
     "isWirelessInternetAccess": false,
   });
+  const selectedBillingType = ref(billingTypes[0])
 
   //Computed properties
   const validateEmail = computed(() => {
@@ -66,32 +67,28 @@
     if (!form.fullName) {
       return false;
     }
-
     if (!form.cprNumber) {
       return false;
     }
-    // Check email
     if (!form.email || !validateEmail.value) {
       return false;
     }
-
-    // Check telephoneNumber
     if (!form.telephoneNumber) {
       return false;
     }
-
-    // Check deliveryDate
     if (dateModel.value.showCalendar) {
       if (!form.deliveryDate) {
         return false;
       }
     }
-
-    if (otherBillingAddress.value) {
-      if (!form.otherBillingAddress) {
-        return false;
-      }
+    if (form.isExtraPerson) {
+      if (!form.extraPersonFullName) return false;
+      if (!form.extraPersonCPRNumber) return false;
     }
+    if (!form.addressType) {
+      return false;
+    }
+
     return true;
   })
 
@@ -109,17 +106,17 @@
       emit('change-tab', 'categories')
     }
   }
-  //function continueOrder() {
-  //  if (currentStep.value !== 3)
-  //    currentStep.value++;
-  //}
 
   function submit() {
-
+    
+    PurchaseFlowService.submitForm(form).then(res => {
+      console.log(res);
+      currentStep.value = 'success';
+    })
   }
 
-  function getAvailableDates() {
-    PurchaseFlowService.availableDates(2, props.addressFormModel.addressId).then((res) => {
+  function getAvailableDates(type) {
+    PurchaseFlowService.availableDates(type, props.addressFormModel.addressId).then((res) => {
       dateModel.value = res.data;
       config.value.enable = dateModel.value.dates;
       config.value.minDate = dateModel.value.startDate;
@@ -128,8 +125,19 @@
   }
 
   onMounted(() => {
-    getAvailableDates()
   })
+
+  watch(
+    () => form.addressType,
+    (newAddressType, oldAddressType) => {
+
+      if (newAddressType) {
+        getAvailableDates(newAddressType);
+      }
+
+    }
+  );
+
 </script>
 
 <template>
@@ -145,7 +153,7 @@
             </div>
             <div class="right">
               <p class="para">Du har valgt:</p>
-              <p class="para"><strong>Fiber - ({{selectedPackage.name}})</strong></p>
+              <p class="para"><strong>{{electricityType.Heading}}</strong></p>
               <div class="checkmark">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <g clip-path="url(#clip0_518_17461)">
@@ -194,14 +202,20 @@
                 <div class="row">
                   <div class="col-lg-4 col-md-6">
                     <div class="form-group">
+                      <label for="" class="label">{{lang('D_DeliveryAddress')}}<span class="required">*</span></label>
+                      <input type="text" class="form-control" placeholder="Leveringsadresse">
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="form-group">
                       <label for="" class="label">{{lang('D_FullName')}}<span class="required">*</span></label>
                       <input type="text" class="form-control" :placeholder="lang('D_FullName_P')" v-model="form.fullName">
                     </div>
                   </div>
                   <div class="col-lg-4 col-md-6">
                     <div class="form-group">
-                      <label for="" class="label">{{lang('D_CPRNumber_P')}}<span class="required">*</span></label>
-                      <input type="text" class="form-control" :placeholder="lang('D_CPRNumber')" v-model="form.cprNumber">
+                      <label for="" class="label">{{lang('D_CPRNumber')}}<span class="required">*</span></label>
+                      <input type="text" class="form-control" :placeholder="lang('D_CPRNumber_P')" v-model="form.cprNumber">
                     </div>
                   </div>
                   <div class="col-lg-4 col-md-6">
@@ -219,35 +233,66 @@
                       <input type="text" maxlength="11" class="form-control" :placeholder="lang('D_Phone_P')" v-model="form.telephoneNumber">
                     </div>
                   </div>
+                </div>
+              </div>
+              <div class="form-block">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="form-group radio-group">
+                      <label for="" class="label">{{lang('extraPersonText')}}<span class="required">*</span></label>
+                      <div class="form-check form-check-inline radio-black">
+                        <input class="form-check-input" type="radio" name="extra_person" id="extra_person1" :value="true" v-model="form.isExtraPerson">
+                        <label class="form-check-label" for="inlineRadio1">Ja</label>
+                      </div>
+                      <div class="form-check form-check-inline radio-black">
+                        <input class="form-check-input" type="radio" name="extra_person" id="extra_person2" :value="false" v-model="form.isExtraPerson">
+                        <label class="form-check-label" for="inlineRadio2">Nej</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6" v-if="form.isExtraPerson">
+                    <div class="form-group">
+                      <label for="" class="label">{{lang('D_FullName')}}<span class="required">*</span></label>
+                      <input type="text" class="form-control" :placeholder="lang('D_FullName')" v-model="form.extraPersonFullName">
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6" v-if="form.isExtraPerson">
+                    <div class="form-group">
+                      <label for="" class="label">{{lang('D_CPRNumber_P')}}<span class="required">*</span></label>
+                      <input type="text" class="form-control" :placeholder="lang('D_CPRNumber_P')" v-model="form.extraPersonCPRNumber">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-block">
+                <div class="row">
+                  <div class="col-lg-4 col-md-6">
+                    <div class="form-group">
+                      <label for="" class="label">Jeg ønsker at…<span class="required">*</span></label>
+                      <select class="form-select" aria-label="Default select example" v-model="form.addressType">
+                        <option value="" selected>Vælg venligst…</option>
+                        <option v-for="(option, index) in addressTypes" :key="index" :value="index+1">
+                          {{ option }}
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-block" v-if="form.addressType!=='' && dateModel.showCalendar">
+                <div class="row">
                   <div class="col-lg-4 col-md-6">
                     <div class="form-group date">
-                      <label for="" class="label">{{lang('D_DeliveryDate')}}<span class="required">*</span></label>
+                      <label for="" class="label">{{dateModel.calendarTitle}}</label>
                       <flat-pickr :config="config" class="form-control" :placeholder="lang('D_DeliveryDate_P')" v-model="form.deliveryDate" />
                       <img src="assets/img/icons/Calendar-black.svg" alt="" class="position-icon">
                     </div>
                     <p v-if="dateModel.calendarHelperText">{{dateModel.calendarHelperText}}</p>
                   </div>
-                  <div class="col-lg-12">
-                    <div class="form-group radio-group">
-                      <label for="" class="label pb-0">{{lang('otherBillingAddressHeading')}}</label>
-                      <div class="form-check form-check-inline radio-black">
-                        <input class="form-check-input" type="radio" name="other_billing-address" id="other_billing-address1" :value="true" v-model="otherBillingAddress">
-                        <label class="form-check-label" for="inlineRadio1">Ja</label>
-                      </div>
-                      <div class="form-check form-check-inline radio-black">
-                        <input class="form-check-input" type="radio" name="other_billing-address" id="other_billing-address2" :value="false" v-model="otherBillingAddress">
-                        <label class="form-check-label" for="inlineRadio2">Nej</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6" v-if="otherBillingAddress">
-                    <div class="form-group">
-                      <label for="" class="label">{{lang('D_OtherBillingAddress')}}<span class="required">*</span></label>
-                      <input type="text" class="form-control" :placeholder="lang('D_OtherBillingAddress_P')" v-model="form.otherBillingAddress">
-                    </div>
-                  </div>
                 </div>
               </div>
+
               <div class="multiple-buttons">
                 <a href="javascript:void(0)" type="button" class="btn white_bg_btn" @click="back">
                   Tilbage
@@ -255,9 +300,6 @@
                 <a href="javascript:void(0)" type="button" :class="['btn', 'dark_blue_btn',!validateSecondStep?'disabled':'']" @click="currentStep='order'">
                   Fortsæt til bestilling
                 </a>
-                <!--<a href="javascript:void(0)" type="button" class="btn dark_blue_btn" @click="currentStep='order'">
-                  Fortsæt til bestilling
-                </a>-->
               </div>
             </form>
           </div>
@@ -271,50 +313,36 @@
             </div>
           </div>
           <div class="step-inside order-description" v-if="currentStep === 'order'">
-            <div class="add-wifi-col">
-              <h4>{{wirelessInternetHeading}} {{wirelessInternetCost}} {{wirelessInternetUnit}}</h4>
-              <div class="form-group radio-group">
-                <label for="" class="label">{{lang('WirelessInternetText')}}</label>
-                <div class="form-check form-check-inline radio-black">
-                  <input class="form-check-input" type="radio" name="other_billing-address" id="other_billing-address1" :value="true" v-model="form.isWirelessInternetAccess">
-                  <label class="form-check-label" for="inlineRadio1">Ja</label>
-                </div>
-                <div class="form-check form-check-inline radio-black">
-                  <input class="form-check-input" type="radio" name="other_billing-address" id="other_billing-address2" :value="false" v-model="form.isWirelessInternetAccess">
-                  <label class="form-check-label" for="inlineRadio2">Nej</label>
-                </div>
-              </div>
-            </div>
-            <div v-if="form.isWirelessInternetAccess">
-              <div>
-                <h4>re halo</h4>
-              </div>
-            </div>
-            <div class="settlement-block">
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="headings">
-                    <h4 class="title">{{lang('SettlementTitle')}}</h4>
-                    <p class="para">{{lang('SettlementHeading')}}.</p>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-32 mb-lg-0" v-for="billingType in billingTypes">
-                  <div :class="['ordering-card',form.billingType===billingType.Title ? 'turquoise_bg border_dark_blue':'border_black-100', 'h-auto']" @click="form.billingType=billingType.Title">
-                    <div class="card-head mb-32">
-                      <div class="form-check radio-light-blue">
-                        <input class="form-check-input" type="radio" name="orderInternetOption" id="orderInternetOption" :value="billingType.Title" v-model="form.billingType">
-                      </div>
-                    </div>
-                    <div class="card-content">
-                      <h4 class="card-title">{{billingType.Title}}</h4>
-                      <div v-html="billingType.Description">
 
-                      </div>
+            <div class="row">
+              <div class="col-lg-4 col-md-6 mb-32 mb-md-0" v-for="billingType in billingTypes">
+                <div :class="['ordering-card',selectedBillingType.Title===billingType.Title ? 'turquoise_bg border_dark_blue':'border_black-100']" @click="form.billingType=billingType.Title">
+                  <div class="card-head">
+                    <div class="form-check radio-light-blue">
+                      <input class="form-check-input" type="radio" name="orderElectricityOption" id="orderElectricityOption" :value="billingType.Title" v-model="form.billingType">
+                    </div>
+                    <div class="tag" v-if="billingType.IsToggleVisible">{{billingType.Tag}}</div>
+                  </div>
+                  <div class="card-content">
+                    <h4 class="card-title">{{billingType.Title}}</h4>
+                    <div v-html="billingType.Description">
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <div class="row justify-content-between mt-32">
+              <div class="col-lg-4 col-md-6">
+                <div class="order-summery-text" v-html="prepaidPaymentDesc">
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="order-summery-text" v-html="postpaidPaymentDesc">
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -335,35 +363,41 @@
       <div class="info-correct">
         <div class="row">
           <div class="col-lg-6">
-            <div class="billing-box">
+            <div class="info-box">
               <h4 class="info-box-title">{{lang('reviewStepProductSectionTitle')}}</h4>
+
+              <p class="para">{{electricityType.Heading}}</p>
               <ul class="info-list">
+                <li v-for="(textLine, index) in electricityType.TextList" :key="index">
+                  {{textLine}}
+                </li>
+                <li v-if="electricityType.Price">
+                  <p class="para">Abonnement</p>
+                  <p class="price">{{electricityType.Price}},-{{electricityType.PriceUnit}}</p>
+                </li>
+                <li v-if="electricityType.CertificatePrice">
+                  <p class="para">{{electricityType.Heading}} - tillæg</p>
+                  <p class="price">{{electricityType.CertificatePrice}},-{{electricityType.CertificatePriceUnit}}</p>
+                </li>
                 <li>
-                  <p class="para">{{selectedPackage.name}}</p>
-                  <p class="para">{{selectedPackage.priceprefix}} {{selectedPackage.priceMonthlyDKK}},-</p>
-                  <ul class="inner-list">
-                    <li v-for="(usp, index) in selectedPackage.usps" :key="index">
-                      <template v-if="usp.name && usp.name.trim()">
-                        <p>
-                          <img :src="usp.icon ? usp.icon : '/assets/img/icons/checkmark-purple.svg'" class="img-fluid" alt="icon svg" />
-                          {{usp.name}}
-                        </p>
-                      </template>
-                    </li>
-                  </ul>
+                  <p class="para">Afregningsmetode</p>
+                  <p class="price">{{electricityType.CertificatePrice}},-{{electricityType.CertificatePriceUnit}}</p>
+                  {{form.billingType}}
                 </li>
-                <li v-if="form.isWirelessInternetAccess">
-                  <p class="para">Tilvalgt</p>
-                </li>
-                <li v-if="form.isWirelessInternetAccess">
-                  <p class="para">WiFi-enhed</p>
-                  <p class="price">{{wirelessInternetCost}},-</p>
+                <!--<li>
+                  Afregningsmetode
+                  <p class="price">{{}},-</p>
                 </li>
                 <li>
                   <p class="para">Total</p>
                   <h4 class="total-price">{{ (parseFloat(selectedPackage.priceMonthlyDKK) || 0) + (form.isWirelessInternetAccess? parseFloat(wirelessInternetCost):0)  }},-</h4>
+                </li>-->
+                <li>
+                  <p class="para">Tillæg til timeprisen</p>
+                  <p class="price">{{electricityType.CertificatePrice}},-{{electricityType.CertificatePriceUnit}}</p>
                 </li>
               </ul>
+
             </div>
             <div class="info-box">
               <h4 class="info-box-title">{{lang('D_SecondStep')}}</h4>
@@ -396,16 +430,36 @@
             </div>
           </div>
           <div class="col-lg-6">
+            <div class="info-box" v-if="form.isExtraPerson">
+              <h4 class="info-box-title">Ekstra person</h4>
+              <ul class="info-list">
+                <li>
+                  <p class="para">{{lang('D_FullName')}}:</p>
+                  <span>{{form.extraPersonFullName}}</span>
+                </li>
+                <li>
+                  <p class="para">{{lang('D_CPRNumber')}}:</p>
+                  <span>{{form.extraPersonCPRNumber}}</span>
+                </li>
+              </ul>
+            </div>
+            <div class="info-box">
+              <h4 class="info-box-title">Andet</h4>
+              <ul class="info-list">
+                <li>
+                  <p class="para">{{addressTypes[form.addressType-1]}}</p>
+                </li>
+              </ul>
+            </div>
             <div class="info-box">
               <h4 class="info-box-title">{{lang('D_ThirdStep')}}</h4>
               <ul class="info-list">
                 <li>
-                  <p>Afregningsmetode</p>
-                  <span>Betal hver {{form.billingType}}</span>
+                  <p class="para">Afregningsmetode</p>
+                  <span>{{form.billingType}}</span>
                 </li>
               </ul>
             </div>
-
           </div>
           <div class="col-md-12">
             <div class="multiple-buttons">
@@ -428,7 +482,7 @@
     </div>
   </section>
 
-  <section class="account-action order-nef-electricity full-height-section"  v-if="currentStep==='success'">
+  <section class="account-action order-nef-electricity full-height-section" v-if="currentStep==='success'">
     <div class="container">
       <h2 class="action-title">{{successPage.Heading}}</h2>
       <div class="row">

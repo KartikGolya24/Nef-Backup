@@ -29,17 +29,17 @@
   });
 
   const form = reactive({
-    "orderType": "tv",
-    "packageId": "99df6721-e6b6-45ff-bc79-f7838f6f2ece",
-    "packageName": "",
-    "tvCategory": "",
+    "orderType": "Tv",
+    "packageId": props.selectedPackage.id,
+    "packageName": props.selectedPackage.name,
+    "tvCategory": props.selectedCategory.CategoryName,
     "deliveryAddress": props.addressFormModel.address ?? "",
     "fullName": "",
     "cprNumber": "",
     "email": "",
     "telephoneNumber": "",
     "deliveryDate": "",
-    "totalPrice": 1230.00,
+    "totalPrice": 0.00,
     "isExtraPerson": false,
     "extraPersonFullName": "",
     "extraPersonCPRNumber": "",
@@ -104,7 +104,16 @@
   //}
 
   function submit() {
-
+    if (props.selectedCategory.value.AddonCost) {
+      form.totalPrice = parseFloat(props.selectedCategory.value.AddonCost) + props.selectedPackage.priceMonthlyDKK;
+    }
+    else {
+      form.totalPrice = props.selectedPackage.priceMonthlyDKK;
+    }
+    PurchaseFlowService.submitForm(form).then(res => {
+      console.log(res);
+      currentStep.value = 'success';
+    })
   }
 
   function getAvailableDates() {
@@ -189,8 +198,8 @@
                   </div>
                   <div class="col-lg-4 col-md-6">
                     <div class="form-group">
-                      <label for="" class="label">{{lang('D_CPRNumber_P')}}<span class="required">*</span></label>
-                      <input type="text" class="form-control" :placeholder="lang('D_CPRNumber')" v-model="form.cprNumber">
+                      <label for="" class="label">{{lang('D_CPRNumber')}}<span class="required">*</span></label>
+                      <input type="text" class="form-control" :placeholder="lang('D_CPRNumber_P')" v-model="form.cprNumber">
                     </div>
                   </div>
                   <div class="col-lg-4 col-md-6">
@@ -345,7 +354,7 @@
               <a href="javascript:void(0)" type="button" class="btn white_bg_btn" @click="back">
                 Tilbage
               </a>
-              <a href="javascript:void(0)" type="button" class="btn dark_purple_btn" @click="currentStep='success'">
+              <a href="javascript:void(0)" type="button" class="btn dark_purple_btn"  @click="submit">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                   <path d="M22.0503 3.24316H2.94451C2.50485 3.24316 2.14844 3.59958 2.14844 4.03924V15.9804C2.14844 16.42 2.50485 16.7764 2.94451 16.7764H22.0503C22.4899 16.7764 22.8464 16.42 22.8464 15.9804V4.03924C22.8464 3.59958 22.4899 3.24316 22.0503 3.24316Z" stroke="white" stroke-width="1.71001" stroke-linecap="round" stroke-linejoin="round"></path>
                   <path d="M10.9066 16.7769L9.31445 20.7572" stroke="white" stroke-width="1.71001" stroke-linecap="round" stroke-linejoin="round"></path>
