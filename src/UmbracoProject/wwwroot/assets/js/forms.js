@@ -178,7 +178,7 @@
     // Remove error messages when typing on input fields
     $(document).on("input", ".required, .regex-reuired", function () {
         let $form = $(this).closest("form");
-        $(this).removeClass('error')
+        $form.find('input').removeClass('error');
         $form.find('.error-text').addClass('d-none');
     });
 });

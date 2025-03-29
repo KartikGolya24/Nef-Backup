@@ -129,8 +129,8 @@
                             width: 432px;
                         }
                     }
-                } 
-                
+                }
+
                 .notice-box {
                     background: $turquoise;
                     padding: 16px;
@@ -339,6 +339,15 @@
                         text-align: right;
                     }
                 }
+
+                ul {
+                    padding-left: 20px;
+                    width: 100%;
+                    margin-top: 8px;
+                    li {
+                        list-style: disc;
+                    }
+                }
             }
         }
 
@@ -453,7 +462,7 @@
     max-width: 1144px;
     margin: 0 auto;
 
-    &>.row {
+    & > .row {
         justify-content: center;
     }
 }

@@ -12712,6 +12712,14 @@ textarea.form-control {
 .account-action .info-correct .billing-box .info-list > li .total-price {
   text-align: right;
 }
+.account-action .info-correct .billing-box .info-list ul {
+  padding-left: 20px;
+  width: 100%;
+  margin-top: 8px;
+}
+.account-action .info-correct .billing-box .info-list ul li {
+  list-style: disc;
+}
 .account-action .info-correct .multiple-buttons {
   margin-top: 64px;
 }
@@ -14482,7 +14490,7 @@ li {
 .alt-section .section-position-img.left-center {
   transform: translate(0%, 20%);
   bottom: auto;
-  top: 60%;
+  top: 37%;
   left: 30%;
 }
 .alt-section .section-position-img.left-bottom-center {

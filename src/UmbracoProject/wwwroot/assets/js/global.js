@@ -126,7 +126,10 @@
     //scroll button on home banner
     $("#scrollButton").click(function () {
         window.scrollBy({ top: 660, behavior: "smooth" });
-    })
+    });
+
+
+
 
     $(".owl-carousel").each(function () {
         var owl = $(this);
@@ -142,38 +145,94 @@
             smartSpeed: 400,
             center: true,
             startPosition: itemCount <= 2 ? 0 : Math.floor(itemCount / 2),
-            items: itemCount === 1 ? 1 : itemCount === 2 ? 1.2 : itemCount === 3 ? 1.5 : 2.2,
-            stagePadding: itemCount === 1 ? 0 : itemCount === 2 ? 350 : itemCount === 3 ? 300 : 160,
+            items: itemCount === 1 ? 1 : itemCount === 2 ? 1.8 : itemCount === 3 ? 1.5 : 2.2,
+            stagePadding: itemCount === 1 ? 0 : itemCount === 2 ? 220 : itemCount === 3 ? 300 : 160,
             navText: [
                 "<img src='/assets/img/icons/arrow-left.svg' alt=''>",
                 "<img src='/assets/img/icons/arrow-right.svg' alt=''>",
             ],
+            mouseDrag: itemCount > 3,
+            touchDrag: itemCount > 3,
             responsive: {
                 0: {
                     items: 1,
                     nav: true,
                     dots: true,
                     loop: false,
+                    mouseDrag: true,
+                    touchDrag: true,
                     stagePadding: 0
                 },
                 800: {
-                    items: itemCount === 1 ? 1 : itemCount === 2 ? 1.2 : 2,
-                    stagePadding: itemCount === 1 ? 0 : itemCount === 2 ? 200 : 50
+                    items: itemCount === 1 ? 1 : itemCount === 2 ? 1.5 : 2,
+                    stagePadding: itemCount === 1 ? 0 : itemCount === 2 ? 120 : 50
                 },
                 1000: {
-                    items: itemCount === 1 ? 1 : itemCount === 2 ? 1.2 : 2.2,
-                    stagePadding: itemCount === 1 ? 0 : itemCount === 2 ? 300 : 100
+                    items: itemCount === 1 ? 1 : itemCount === 2 ? 1.7 : 2.2,
+                    stagePadding: itemCount === 1 ? 0 : itemCount === 2 ? 180 : 100
                 },
                 1200: {
-                    items: itemCount === 1 ? 1 : itemCount === 2 ? 1.2 : 2.2,
-                    stagePadding: itemCount === 1 ? 0 : itemCount === 2 ? 350 : 150
+                    items: itemCount === 1 ? 1 : itemCount === 2 ? 1.8 : 2.2,
+                    stagePadding: itemCount === 1 ? 0 : itemCount === 2 ? 200 : 150
                 },
                 1450: {
-                    items: itemCount === 1 ? 1 : itemCount === 2 ? 1.2 : 2.2,
-                    stagePadding: itemCount === 1 ? 0 : itemCount === 2 ? 400 : 200
+                    items: itemCount === 1 ? 1 : itemCount === 2 ? 1.9 : 2.2,
+                    stagePadding: itemCount === 1 ? 0 : itemCount === 2 ? 240 : 200
                 }
             }
         });
+
+
+
+/*        var owl = $(this);
+        var itemCount = owl.children().length;
+
+        owl.owlCarousel({
+            loop: false,
+            responsiveClass: true,
+            nav: itemCount > 3,
+            dots: itemCount > 3,
+            margin: 24,
+            autoplayTimeout: 4000,
+            smartSpeed: 400,
+            center: true,
+            startPosition: itemCount <= 2 ? 0 : Math.floor(itemCount / 2),
+            items: itemCount === 1 ? 1 : itemCount === 2 ? 1.8 : itemCount === 3 ? 1.5 : 2.2,
+            stagePadding: itemCount === 1 ? 0 : itemCount === 2 ? 220 : itemCount === 3 ? 300 : 160,
+            navText: [
+                "<img src='/assets/img/icons/arrow-left.svg' alt=''>",
+                "<img src='/assets/img/icons/arrow-right.svg' alt=''>",
+            ],
+            mouseDrag: itemCount > 3,
+            touchDrag: itemCount > 3,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true,
+                    dots: true,
+                    loop: false,
+                    mouseDrag: true,
+                    touchDrag: true,
+                    stagePadding: 0
+                },
+                800: {
+                    items: itemCount === 1 ? 1 : itemCount === 2 ? 1.5 : 2,
+                    stagePadding: itemCount === 1 ? 0 : itemCount === 2 ? 120 : 50
+                },
+                1000: {
+                    items: itemCount === 1 ? 1 : itemCount === 2 ? 1.7 : 2.2,
+                    stagePadding: itemCount === 1 ? 0 : itemCount === 2 ? 180 : 100
+                },
+                1200: {
+                    items: itemCount === 1 ? 1 : itemCount === 2 ? 1.8 : 2.2,
+                    stagePadding: itemCount === 1 ? 0 : itemCount === 2 ? 200 : 150
+                },
+                1450: {
+                    items: itemCount === 1 ? 1 : itemCount === 2 ? 1.9 : 2.2,
+                    stagePadding: itemCount === 1 ? 0 : itemCount === 2 ? 240 : 200
+                }
+            }
+        });*/
     });
 
 })
