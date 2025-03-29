@@ -25,7 +25,7 @@
   })
 
   //Data
-  var currentStep = ref('order');
+  var currentStep = ref('information');
   var dateModel = ref({});
   const config = ref({
     wrap: true, // set wrap to true only when using 'input-group'
