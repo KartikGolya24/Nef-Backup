@@ -18,9 +18,9 @@
         <div class="row">
             @if (content?.ElectricityPackaseList?.Count() > 0)
             {
-                var popupGuid = Guid.NewGuid();
                 @foreach (var item in content?.ElectricityPackaseList)
                 {
+                    var popupGuid = Guid.NewGuid();
                     var electricityBlock = item as ElectricityPackages;
                     <div class="col-md-6">
                         <div class="order-nef-card">
