@@ -129,10 +129,10 @@
     })
   }
 
-  function getAvailableDates() {
+  function getAvailableDates() { 
     PurchaseFlowService.availableDates(3, props.addressFormModel.addressId).then((res) => {
       dateModel.value = res.data;
-      config.value.enable = dateModel.dates;
+      config.value.enable = dateModel.value.dates;
       config.value.minDate = dateModel.value.startDate;
       config.value.maxDate = dateModel.value.endDate;
     }).catch(error => console.error(error))

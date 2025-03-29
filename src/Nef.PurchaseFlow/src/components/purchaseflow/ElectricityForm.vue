@@ -34,9 +34,9 @@
     enable: []
   });
   const form = reactive({
-    "orderType": "Electricity",
+    "orderType": "",
     "packageId": "",
-    "packageName": "",
+    "packageName": props.electricityType.Heading,
     "tvCategory": "",
     "deliveryAddress": props.addressFormModel.address ?? "",
     "fullName": "",
@@ -49,12 +49,12 @@
     "extraPersonFullName": "",
     "extraPersonCPRNumber": "",
     "addressType": "",
-    "billingType": props.billingTypes[0].Title ?? "",
+    "billingType": "",
     "hasOtherBillingAddress": false,
     "otherBillingAddress": "",
     "isWirelessInternetAccess": false,
   });
-  const selectedBillingType = ref(billingTypes[0])
+  var selectedBillingType = ref(props.billingTypes[0])
 
   //Computed properties
   const validateEmail = computed(() => {
@@ -108,15 +108,15 @@
   }
 
   function submit() {
-    
     PurchaseFlowService.submitForm(form).then(res => {
       console.log(res);
       currentStep.value = 'success';
     })
   }
 
-  function getAvailableDates(type) {
-    PurchaseFlowService.availableDates(type, props.addressFormModel.addressId).then((res) => {
+  function getAvailableDates(typeValue) {
+    let index = props.addressTypes.findIndex(type => type === typeValue);
+    PurchaseFlowService.availableDates(index+1, props.addressFormModel.addressId).then((res) => {
       dateModel.value = res.data;
       config.value.enable = dateModel.value.dates;
       config.value.minDate = dateModel.value.startDate;
@@ -130,7 +130,7 @@
   watch(
     () => form.addressType,
     (newAddressType, oldAddressType) => {
-
+      form.orderType = `Electricity(${newAddressType})`;
       if (newAddressType) {
         getAvailableDates(newAddressType);
       }
@@ -272,7 +272,7 @@
                       <label for="" class="label">Jeg ønsker at…<span class="required">*</span></label>
                       <select class="form-select" aria-label="Default select example" v-model="form.addressType">
                         <option value="" selected>Vælg venligst…</option>
-                        <option v-for="(option, index) in addressTypes" :key="index" :value="index+1">
+                        <option v-for="(option, index) in addressTypes" :key="index" :value="option">
                           {{ option }}
                         </option>
                       </select>
@@ -313,15 +313,15 @@
             </div>
           </div>
           <div class="step-inside order-description" v-if="currentStep === 'order'">
-
+            <!--@click="form.billingType=billingType.Title"-->
             <div class="row">
               <div class="col-lg-4 col-md-6 mb-32 mb-md-0" v-for="billingType in billingTypes">
-                <div :class="['ordering-card',selectedBillingType.Title===billingType.Title ? 'turquoise_bg border_dark_blue':'border_black-100']" @click="form.billingType=billingType.Title">
+                <div :class="['ordering-card',selectedBillingType.Title===billingType.Title ? 'turquoise_bg border_dark_blue':'border_black-100']" @click="selectedBillingType=billingType">
                   <div class="card-head">
                     <div class="form-check radio-light-blue">
-                      <input class="form-check-input" type="radio" name="orderElectricityOption" id="orderElectricityOption" :value="billingType.Title" v-model="form.billingType">
+                      <input class="form-check-input" type="radio" name="orderElectricityOption" id="orderElectricityOption" :value="billingType" v-model="selectedBillingType">
                     </div>
-                    <div class="tag" v-if="billingType.IsToggleVisible">{{billingType.Tag}}</div>
+                    <div class="tag" v-if="billingType.Visible">{{billingType.Tag}}</div>
                   </div>
                   <div class="card-content">
                     <h4 class="card-title">{{billingType.Title}}</h4>
@@ -381,20 +381,17 @@
                 </li>
                 <li>
                   <p class="para">Afregningsmetode</p>
-                  <p class="price">{{electricityType.CertificatePrice}},-{{electricityType.CertificatePriceUnit}}</p>
-                  {{form.billingType}}
+                  <p class="price">{{selectedBillingType.Price}},-{{selectedBillingType.PriceUnit}}</p>
+                  <!--{{form.billingType}}-->
                 </li>
-                <!--<li>
-                  Afregningsmetode
-                  <p class="price">{{}},-</p>
-                </li>
+                
                 <li>
                   <p class="para">Total</p>
-                  <h4 class="total-price">{{ (parseFloat(selectedPackage.priceMonthlyDKK) || 0) + (form.isWirelessInternetAccess? parseFloat(wirelessInternetCost):0)  }},-</h4>
-                </li>-->
+                  <h4 class="total-price">{{ (parseFloat(electricityType.Price) || 0) + ( parseFloat(electricityType.CertificatePrice)||0) + (parseFloat(selectedBillingType.Price)||0)}},-</h4>
+                </li>
                 <li>
                   <p class="para">Tillæg til timeprisen</p>
-                  <p class="price">{{electricityType.CertificatePrice}},-{{electricityType.CertificatePriceUnit}}</p>
+                  <p class="price">{{selectedBillingType.SupplementPrice}},-{{selectedBillingType.SupplementPriceUnit}}</p>
                 </li>
               </ul>
 
@@ -447,7 +444,7 @@
               <h4 class="info-box-title">Andet</h4>
               <ul class="info-list">
                 <li>
-                  <p class="para">{{addressTypes[form.addressType-1]}}</p>
+                  <p class="para">{{form.addressType}}</p>
                 </li>
               </ul>
             </div>
@@ -456,17 +453,17 @@
               <ul class="info-list">
                 <li>
                   <p class="para">Afregningsmetode</p>
-                  <span>{{form.billingType}}</span>
+                  <span>{{selectedBillingType.Title}}</span>
                 </li>
               </ul>
             </div>
           </div>
           <div class="col-md-12">
             <div class="multiple-buttons">
-              <a href="javascript:void(0)" type="button" class="btn white_bg_btn" @click="back">
+              <a href="javascript:void(0)" type="button" class="btn white_bg_btn" @click="back" >
                 Tilbage
               </a>
-              <a href="javascript:void(0)" type="button" class="btn dark_blue_btn" @click="currentStep='success'">
+              <a href="javascript:void(0)" type="button" class="btn dark_blue_btn" @click="submit">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                   <path d="M22.0503 3.24316H2.94451C2.50485 3.24316 2.14844 3.59958 2.14844 4.03924V15.9804C2.14844 16.42 2.50485 16.7764 2.94451 16.7764H22.0503C22.4899 16.7764 22.8464 16.42 22.8464 15.9804V4.03924C22.8464 3.59958 22.4899 3.24316 22.0503 3.24316Z" stroke="white" stroke-width="1.71001" stroke-linecap="round" stroke-linejoin="round"></path>
                   <path d="M10.9066 16.7769L9.31445 20.7572" stroke="white" stroke-width="1.71001" stroke-linecap="round" stroke-linejoin="round"></path>
