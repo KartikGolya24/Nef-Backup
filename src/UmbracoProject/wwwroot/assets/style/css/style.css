@@ -15031,8 +15031,9 @@ li {
   display: flex;
   align-items: center;
   gap: 10px;
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
-  background: rgba(255, 255, 255, 0.1607843137);
+  background: rgba(255, 255, 255, 0.16);
   width: max-content;
   padding: 14px 20px;
   border-radius: 100px;
@@ -15041,9 +15042,8 @@ li {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 0px;
+  border: none;
   font-weight: 500;
-  z-index: 111;
 }
 .video-img .videoBtn svg {
   width: 24px;
@@ -15853,23 +15853,21 @@ li {
 }
 .pacakge-section .package-list .package-card .card-detail .card-body ul li {
   position: relative;
-  display: flex;
-  align-items: center;
-  gap: 6px;
 }
 .pacakge-section .package-list .package-card .card-detail .card-body ul li p {
   position: relative;
-  display: flex;
-  align-items: center;
-  gap: 12px;
   color: #292929;
   font-size: 16px;
   line-height: 27px;
 }
-.pacakge-section .package-list .package-card .card-detail .card-body ul li svg, .pacakge-section .package-list .package-card .card-detail .card-body ul li img {
+.pacakge-section .package-list .package-card .card-detail .card-body ul li p svg, .pacakge-section .package-list .package-card .card-detail .card-body ul li p img {
   width: 16px;
   height: 16px;
-  flex-shrink: 0;
+  margin-right: 12px;
+}
+.pacakge-section .package-list .package-card .card-detail .card-body ul li p span[data-bs-toggle] {
+  display: inline-block;
+  margin-left: 6px;
 }
 .pacakge-section .package-list .package-card .package-footer {
   height: 100%;
@@ -18393,6 +18391,19 @@ li {
   }
 }
 @media screen and (max-width: 1199px) {
+  /*.account-action {
+      &.full-height-section {
+          .position-image {
+              &.bottom-center {
+                  right: 0;
+
+                  img {
+                      max-width: 400px;
+                  }
+              }
+          }
+      }
+  }*/
   .pacakge-section .package-list .package-card .card-detail .card-header .card-heading {
     height: 86px;
   }
@@ -18460,6 +18471,9 @@ li {
   }
 }
 @media screen and (max-width: 991px) {
+  .account-action.full-height-section .position-image.top-right {
+    display: none;
+  }
   .video-img .section-position-image img {
     max-height: 150px;
   }

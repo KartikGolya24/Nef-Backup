@@ -191,6 +191,20 @@
 
 @media screen and (max-width: 1199px) {
 
+    /*.account-action {
+        &.full-height-section {
+            .position-image {
+                &.bottom-center {
+                    right: 0;
+
+                    img {
+                        max-width: 400px;
+                    }
+                }
+            }
+        }
+    }*/
+
     .pacakge-section {
         .package-list {
             .package-card {
@@ -327,6 +341,16 @@
 
 
 @media screen and (max-width: 991px) {
+
+    .account-action {
+        &.full-height-section {
+            .position-image {
+                &.top-right {
+                    display: none;
+                }
+            }
+        }
+    }
 
     .video-img {
         .section-position-image {
