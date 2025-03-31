@@ -57,6 +57,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual int AddonCost => this.Value<int>(_publishedValueFallback, "addonCost");
 
 		///<summary>
+		/// Addon Cost Unit
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("addonCostUnit")]
+		public virtual string AddonCostUnit => this.Value<string>(_publishedValueFallback, "addonCostUnit");
+
+		///<summary>
 		/// Category Name
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]

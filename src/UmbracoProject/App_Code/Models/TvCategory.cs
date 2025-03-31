@@ -8,5 +8,6 @@
         public string IconUrl {  get; set; } 
         public string PracticalInformation { get; set; }
         public int AddonCost { get; set; }
+        public string AddonCostUnit { get; set; }
     }
 }

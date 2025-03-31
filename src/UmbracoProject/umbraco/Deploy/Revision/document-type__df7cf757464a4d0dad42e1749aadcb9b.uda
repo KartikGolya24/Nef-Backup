@@ -22,7 +22,7 @@
           "Alias": "practicalInformation",
           "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
           "Name": "Practical Information",
-          "SortOrder": 5
+          "SortOrder": 6
         },
         {
           "Key": "51e1e182-8e80-4856-be85-b9eb17194440",
@@ -43,6 +43,13 @@
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
           "Name": "Category Name",
           "SortOrder": 1
+        },
+        {
+          "Key": "a830b593-49c8-4715-bfae-fe2295e14758",
+          "Alias": "addonCostUnit",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Addon Cost Unit",
+          "SortOrder": 5
         },
         {
           "Key": "adf207e7-f938-4e2e-b850-1756ca467a9f",

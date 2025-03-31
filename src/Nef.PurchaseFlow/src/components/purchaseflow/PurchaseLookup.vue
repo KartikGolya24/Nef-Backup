@@ -172,7 +172,7 @@
         </div>
       </div>
     </div>
-    <div :class="['pacakge-section', addressFormModel.packageType == 'tv' ? 'private-tv-white' : 'private-internet-white']">
+    <div v-if="props.addressFormModel.packageStatus.value !== 1" :class="['pacakge-section', addressFormModel.packageType == 'tv' ? 'private-tv-white' : 'private-internet-white']">
       <div class="container-xl" id="packagesList">
         <div class="section-heading">
           <h2>{{lang('packagesTitle')}}</h2>

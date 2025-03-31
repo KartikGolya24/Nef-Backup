@@ -104,12 +104,13 @@
   }
 
   function back() {
+    window.scrollTo(0, 0);
     if (currentStep.value === 'order')
       currentStep.value = 'information';
     else if (currentStep.value === 'reviewOrder')
       currentStep.value = 'order';
     else {
-      emit('change-tab', 'categories')
+      history.back();
     }
   }
 
@@ -119,6 +120,10 @@
     PurchaseFlowService.submitForm(form).then(res => {
       console.log(res);
       currentStep.value = 'success';
+      window.scrollTo(0, 0);
+    }).catch(err => {
+      currentStep.value = 'success';
+      window.scrollTo(0, 0);
     })
   }
 
@@ -131,13 +136,20 @@
       config.value.maxDate = dateModel.value.endDate;
     }).catch(error => console.error(error))
   }
+
   function formatDate(date) {
     // Set the locale to Danish (da)
     moment.locale('da');
     return moment(date).format('DD MMMM, YYYY'); // Format as "16 February, 2025"
   }
 
+  function changeOrderStep(stepName) {
+    currentStep.value = stepName;
+    window.scrollTo(0, 0);
+  }
+
   onMounted(() => {
+    window.scrollTo(0, 0)
   })
 
   watch(
@@ -312,7 +324,7 @@
                 <a href="javascript:void(0)" type="button" class="btn white_bg_btn" @click="back">
                   Tilbage
                 </a>
-                <a href="javascript:void(0)" type="button" :class="['btn', 'dark_blue_btn',!validateSecondStep?'disabled':'']" @click="currentStep='order'">
+                <a href="javascript:void(0)" type="button" :class="['btn', 'dark_blue_btn',!validateSecondStep?'disabled':'']" @click="changeOrderStep('order')">
                   Fortsæt til bestilling
                 </a>
               </div>
@@ -364,7 +376,7 @@
 
       <div class="multiple-buttons" v-if="currentStep !=='information'">
         <a href="javascript:void(0)" type="button" class="btn white_bg_btn" @click="back"> Tilbage </a>
-        <a href="javascript:void(0)" type="button" class="btn dark_blue_btn" @click="currentStep='reviewOrder'" v-if="currentStep === 'order'">
+        <a href="javascript:void(0)" type="button" class="btn dark_blue_btn" @click="changeOrderStep('reviewOrder')" v-if="currentStep === 'order'">
           Gennemgå bestilling
         </a>
 
