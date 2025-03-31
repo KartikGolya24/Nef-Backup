@@ -20,7 +20,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Tv Purchase</summary>
 	[PublishedModel("tvPurchase")]
-	public partial class TvPurchase : PurchaseFlow, IPurchaseFlowThankYouSection
+	public partial class TvPurchase : PurchaseFlow, IPurchaseButton, IPurchaseFlowThankYouSection
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -64,6 +64,22 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("categorySectionHeading")]
 		public virtual string CategorySectionHeading => this.Value<string>(_publishedValueFallback, "categorySectionHeading");
+
+		///<summary>
+		/// Button Icon
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("buttonIcon")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops ButtonIcon => global::Umbraco.Cms.Web.Common.PublishedModels.PurchaseButton.GetButtonIcon(this, _publishedValueFallback);
+
+		///<summary>
+		/// Button Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("buttonText")]
+		public virtual string ButtonText => global::Umbraco.Cms.Web.Common.PublishedModels.PurchaseButton.GetButtonText(this, _publishedValueFallback);
 
 		///<summary>
 		/// Button

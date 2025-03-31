@@ -8,7 +8,7 @@
   import moment from 'moment'
   import 'moment/locale/da';
   const emit = defineEmits(['change-tab'])
-   
+
   const props = defineProps({
     addressFormModel: {
       type: Object
@@ -21,11 +21,13 @@
     electricityType: Object,
     postpaidPaymentDesc: String,
     prepaidPaymentDesc: String,
-    addressTypes: Array
+    addressTypes: Array,
+    purchaseButtonText: String,
+    purchaseButtonIconUrl: String
   })
 
   //Data
-  var currentStep = ref('information'); 
+  var currentStep = ref('information');
   var dateModel = ref({});
   const config = ref({
     wrap: true, // set wrap to true only when using 'input-group'
@@ -113,7 +115,7 @@
 
   function submit() {
     form.billingType = selectedBillingType.value.Title;
-    form.totalPrice= (parseFloat(props.electricityType.Price) || 0) + (parseFloat(props.electricityType.CertificatePrice) || 0) + (parseFloat(selectedBillingType.Price) || 0)
+    form.totalPrice = (parseFloat(props.electricityType.Price) || 0) + (parseFloat(props.electricityType.CertificatePrice) || 0) + (parseFloat(selectedBillingType.Price) || 0)
     PurchaseFlowService.submitForm(form).then(res => {
       console.log(res);
       currentStep.value = 'success';
@@ -446,7 +448,7 @@
                   <p class="para">{{lang('D_DeliveryDate')}}:</p>
                   <span>{{ formatDate(form.deliveryDate) }}</span>
                 </li>
-                
+
               </ul>
             </div>
           </div>
@@ -488,13 +490,14 @@
                 Tilbage
               </a>
               <a href="javascript:void(0)" type="button" class="btn dark_blue_btn" @click="submit">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                <!--<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                   <path d="M22.0503 3.24316H2.94451C2.50485 3.24316 2.14844 3.59958 2.14844 4.03924V15.9804C2.14844 16.42 2.50485 16.7764 2.94451 16.7764H22.0503C22.4899 16.7764 22.8464 16.42 22.8464 15.9804V4.03924C22.8464 3.59958 22.4899 3.24316 22.0503 3.24316Z" stroke="white" stroke-width="1.71001" stroke-linecap="round" stroke-linejoin="round"></path>
                   <path d="M10.9066 16.7769L9.31445 20.7572" stroke="white" stroke-width="1.71001" stroke-linecap="round" stroke-linejoin="round"></path>
                   <path d="M14.0898 16.7769L15.682 20.7572" stroke="white" stroke-width="1.71001" stroke-linecap="round" stroke-linejoin="round"></path>
                   <path d="M7.7207 20.7568H17.2736" stroke="white" stroke-width="1.71001" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
-                Bestil nu
+                </svg>-->
+                <img :src="purchaseButtonIconUrl" height="24" width="25" />
+                {{purchaseButtonText}}
               </a>
             </div>
           </div>

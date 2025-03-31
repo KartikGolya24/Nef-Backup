@@ -32,6 +32,8 @@
     var reviewStepPracticalSectionTitle = Umbraco.GetDictionaryValue("PurchaseFlow.ReviewStep.PracticalSectionTitle");
     var extraPersonText = "";
     var D_FormTitle = "";
+    var purchaseButtonText = string.Empty;
+    var purchaseButtonIconUrl = string.Empty;
 
     //D for dictionary item and P for placeholder
     var D_FullName = Umbraco.GetDictionaryValue("FormFileds.Name");
@@ -98,6 +100,8 @@
 
         var tvPurchase = Model.Children<TvPurchase>()?.FirstOrDefault();
         categoryHeading = tvPurchase.CategorySectionHeading;
+        purchaseButtonText = !string.IsNullOrWhiteSpace(tvPurchase?.ButtonText) ? tvPurchase.ButtonText : "Bestil nu";
+        purchaseButtonIconUrl = tvPurchase?.ButtonIcon?.Url().ToString() ?? string.Empty;
         foreach (var item in tvPurchase.Categories)
         {
             var content = item.Content as TvCategoriesBlock;
@@ -149,6 +153,8 @@
         businessAddressConnectedDesc = Umbraco.GetDictionaryValue("PurchaseFlow.Fiber.BusinessAddressConnectedDescription");
 
         var fiberPurchase = Model.Children<FiberPurchase>()?.FirstOrDefault();
+        purchaseButtonText = !string.IsNullOrWhiteSpace(fiberPurchase?.ButtonText) ? fiberPurchase.ButtonText : "Bestil nu";
+        purchaseButtonIconUrl = fiberPurchase?.ButtonIcon?.Url().ToString() ?? string.Empty;
         foreach (var item in fiberPurchase.BillingTypes)
         {
             var content = item.Content as ContentModels.FiberBillingType;
@@ -186,6 +192,8 @@
         extraPersonText = Umbraco.GetDictionaryValue("PurchaseFlow.ThirdStep.ExtraPersonText");
 
         var electricityPurchase = Model.Children<ElectricityPurchase>()?.FirstOrDefault();
+        purchaseButtonText = !string.IsNullOrWhiteSpace(electricityPurchase?.ButtonText) ? electricityPurchase.ButtonText : "Bestil nu";
+        purchaseButtonIconUrl = electricityPurchase?.ButtonIcon?.Url().ToString() ?? string.Empty;
         foreach (var item in electricityPurchase.BillingTypes)
         {
             var content = item.Content as ContentModels.ElectricityBillingType;
@@ -298,7 +306,9 @@
                :electricity-type="@JsonConvert.SerializeObject(electricityType)"
                prepaid-payment-desc="@prepaidPaymentDesc"
                postpaid-payment-desc="@postpaidPaymentDesc"
-               :address-types="@JsonConvert.SerializeObject(addressTypes)" />
+               :address-types="@JsonConvert.SerializeObject(addressTypes)"
+               purchase-button-text="@purchaseButtonText"
+               purchase-button-icon-url="@purchaseButtonIconUrl" />
 
 <script>
 

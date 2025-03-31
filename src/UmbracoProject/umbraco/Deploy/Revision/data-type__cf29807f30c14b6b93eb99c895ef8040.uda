@@ -1,0 +1,16 @@
+{
+  "Name": "Purchase Button - Button Icon - Media Picker",
+  "Alias": "",
+  "EditorAlias": "Umbraco.MediaPicker3",
+  "Configuration": {
+    "multiple": false,
+    "validationLimit": {},
+    "enableLocalFocalPoint": false,
+    "crops": [],
+    "ignoreUserStartNodes": false
+  },
+  "Udi": "umb://data-type/cf29807f30c14b6b93eb99c895ef8040",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "13.4.0"
+}

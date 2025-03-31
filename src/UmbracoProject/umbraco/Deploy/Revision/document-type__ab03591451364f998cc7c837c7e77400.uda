@@ -1,0 +1,54 @@
+{
+  "Name": "Purchase Button",
+  "Alias": "purchaseButton",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-defrag",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/3a191b3dafc04e468ef53b9ee92592a7",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "56eca016-ef68-4402-8e0c-f8526ede1abb",
+      "Name": "Purchase Button Section",
+      "Alias": "purchaseButtonSection",
+      "PropertyTypes": [
+        {
+          "Key": "18d082b8-6d28-450d-827a-d936f00439ed",
+          "Alias": "buttonText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Button Text"
+        },
+        {
+          "Key": "b80ea852-a505-45ef-869f-31b9120ff706",
+          "Alias": "buttonIcon",
+          "DataType": "umb://data-type/d65b18ec83974586b7df9a8d374cfae8",
+          "Name": "Button Icon",
+          "SortOrder": 1
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/ab03591451364f998cc7c837c7e77400",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/d65b18ec83974586b7df9a8d374cfae8",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/3a191b3dafc04e468ef53b9ee92592a7",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "13.4.0"
+}

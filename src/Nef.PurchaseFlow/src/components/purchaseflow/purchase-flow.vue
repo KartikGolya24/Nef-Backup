@@ -42,7 +42,9 @@
     electricityType: Object,
     postpaidPaymentDesc: String,
     prepaidPaymentDesc: String,
-    addressTypes:Array
+    addressTypes: Array,
+    purchaseButtonText: String,
+    purchaseButtonIconUrl: String,
   })
   props.addressFormModel.packageStatus = ref(props.addressFormModel.packageStatus)
 
@@ -89,7 +91,9 @@
         'electricityType': props.electricityType,
         'prepaidPaymentDesc': props.prepaidPaymentDesc,
         'postpaidPaymentDesc': props.postpaidPaymentDesc,
-        'addressTypes': props.addressTypes
+        'addressTypes': props.addressTypes,
+        'purchaseButtonText': props.purchaseButtonText,
+        'purchaseButtonIconUrl': props.purchaseButtonIconUrl
       }
   })
 
@@ -119,7 +123,6 @@
     <input type="hidden" id="flowName" :value="addressFormModel.flowName" />
     <input type="hidden" id="packageType" :value="addressFormModel.packageType" />
     <input type="hidden" id="packageStatus" :value="addressFormModel.tvPackageStatus" />
-
     <component :is="components['purchase-'+activeTab]" @change-tab="changeTab" v-bind="componentProps"></component>
   </div>
 </template>
