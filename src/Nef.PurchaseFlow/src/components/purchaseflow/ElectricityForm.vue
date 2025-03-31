@@ -423,7 +423,7 @@
 
                 <li>
                   <p class="para">Total</p>
-                  <h4 class="total-price">{{ (parseFloat(electricityType.Price) || 0) + ( parseFloat(electricityType.CertificatePrice)||0) + (parseFloat(selectedBillingType.Price)||0)}},-</h4>
+                  <h4 class="total-price">{{ (parseFloat(electricityType.Price) || 0) + ( parseFloat(electricityType.CertificatePrice)||0) + (parseFloat(selectedBillingType.Price)||0)}},-{{electricityType.PriceUnit}}</h4>
                 </li>
                 <li>
                   <p class="para">Tillæg til timeprisen</p>
