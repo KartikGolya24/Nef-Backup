@@ -44,7 +44,7 @@
     "packageId": "",
     "packageName": props.electricityType.Heading,
     "tvCategory": "",
-    "deliveryAddress": props.addressFormModel.address ?? "",
+    "deliveryAddress": "",
     "fullName": "",
     "cprNumber": "",
     "email": "",
@@ -228,7 +228,7 @@
                   <div class="col-lg-4 col-md-6">
                     <div class="form-group">
                       <label for="" class="label">{{lang('D_DeliveryAddress')}}<span class="required">*</span></label>
-                      <input type="text" class="form-control" placeholder="Leveringsadresse">
+                      <input type="text" class="form-control" placeholder="Leveringsadresse" v-model="form.deliveryAddress">
                     </div>
                   </div>
                   <div class="col-lg-4 col-md-6">
