@@ -74,7 +74,7 @@
               Bestil pakke
             </a>
             <a :href="'#seeAllPackages-'+pkg.id" data-bs-toggle="modal" class="package-link">Se hele pakkens indhold</a>
-            <p class="text-two-line">
+            <p v-if="pkg.disclaimer && pkg.disclaimer.trim()" class="text-two-line">
               {{pkg.disclaimer}}
             </p>
           </div>

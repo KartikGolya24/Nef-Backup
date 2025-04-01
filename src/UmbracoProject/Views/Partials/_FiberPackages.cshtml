@@ -76,10 +76,16 @@
                                 Tjek adresse
                             </a>
 
-                            <a href="#@learnMorePopupId" data-bs-toggle="modal" class="package-link">Læs mere</a>
-                            <p class="text-two-line">
-                                @package.Disclaimer
-                            </p>
+                            @if (!string.IsNullOrWhiteSpace(package.LearnMore))
+                            {
+                                <a href="#@learnMorePopupId" data-bs-toggle="modal" class="package-link">Læs mere</a>
+                            }
+                            @if (!string.IsNullOrWhiteSpace(package.Disclaimer))
+                            {
+                                <p class="text-two-line">
+                                    @package.Disclaimer
+                                </p>
+                            }
                         </div>
                     </div>
 
@@ -88,22 +94,25 @@
             </div>
         </div>
 
-        <!-------------------------------------------Modal ------------------------------->
-        <div class="modal fade" id="@learnMorePopupId" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header flex-column align-items-start pb-0">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        <h4 class="modal-title" id="staticBackdropLabel">@package.Name</h4>
+        @if (!string.IsNullOrWhiteSpace(package.LearnMore))
+        {
+            <!-------------------------------------------Modal ------------------------------->
+            <div class="modal fade" id="@learnMorePopupId" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header flex-column align-items-start pb-0">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <h4 class="modal-title" id="staticBackdropLabel">@package.Name</h4>
 
-                        <p class="fw-600 black-950 price mb-32">@package.PriceMonthlyDKK,- <span class="small">@package.Unit</span></p>
-                    </div>
-                    <div class="modal-body">
-                        @* <h5 class="box-inner-title mb-8">Hvad er smart WiFi?</h5> *@
-                        <p>@package.LearnMore</p>
+                            <p class="fw-600 black-950 price mb-32">@package.PriceMonthlyDKK,- <span class="small">@package.Unit</span></p>
+                        </div>
+                        <div class="modal-body">
+                            @* <h5 class="box-inner-title mb-8">Hvad er smart WiFi?</h5> *@
+                            <p>@package.LearnMore</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        }
     }
 }

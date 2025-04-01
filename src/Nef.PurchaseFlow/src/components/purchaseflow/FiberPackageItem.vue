@@ -65,7 +65,7 @@
                class="btn dark_blue_btn" @click="emit('change-tab',pkg)">
               Bestil Fiber
             </a>
-            <a :href="'#readMorePopup-'+pkg.id" data-bs-toggle="modal" class="package-link">Læs mere</a>
+            <a v-if="pkg.learnMore && pkg.learnMore.trim()" :href="'#readMorePopup-'+pkg.id" data-bs-toggle="modal" class="package-link">Læs mere</a>
             <p class="text-two-line">
               {{pkg.disclaimer}}
             </p>
@@ -75,7 +75,7 @@
     </div>
   </div>
 
-  <div class="modal fade"
+  <div v-if="pkg.learnMore && pkg.learnMore.trim()" class="modal fade"
        :id="'readMorePopup-'+pkg.id"
        data-bs-keyboard="false"
        tabindex="-1"

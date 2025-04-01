@@ -14,20 +14,6 @@ namespace UmbracoProject.App_Code.Controllers
             _purchaseFlowService = purchaseFlowService;
         }
 
-        [HttpGet("get-tv-packages")]
-        public async Task<IActionResult> GetTvPackages()
-        {
-            List<TvPackagesModel> tvPackages = await _purchaseFlowService.GetTvPackagesAsync();
-            return PartialView("~/Views/Partials/_TvPackagesForPurchaseFlow.cshtml", tvPackages);
-        }
-        
-        [HttpGet("get-fiber-packages")]
-        public async Task<IActionResult> GetFiberPackages()
-        {
-            List<FiberPackagesModel> fiberPackages = await _purchaseFlowService.GetFiberPackagesAsync();
-            return PartialView("~/Views/Partials/_FiberPackagesForPurchaseFlow.cshtml", fiberPackages);
-        }
-
         [HttpGet("get-tv-package-list")]
         public async Task<IActionResult> GetTvPackageList()
         {

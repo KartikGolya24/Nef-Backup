@@ -88,9 +88,12 @@
                                 Tjek adresse
                             </a>
                             <a href="#@channelPopupId" data-bs-toggle="modal" class="package-link">Se hele pakkens indhold</a>
-                            <p class="text-two-line">
-                                @package.Disclaimer
-                            </p>
+                            @if (!string.IsNullOrWhiteSpace(package.Disclaimer))
+                            {
+                                <p class="text-two-line">
+                                    @package.Disclaimer
+                                </p>
+                            }
                         </div>
                     </div>
                 </div>

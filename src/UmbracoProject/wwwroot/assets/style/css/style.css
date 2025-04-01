@@ -15907,7 +15907,6 @@ li {
 .pacakge-section .package-list .package-card .package-footer .card-footer .footer-btn .package-link {
   text-decoration: underline;
   margin-top: 8px;
-  margin-bottom: 24px;
   display: flex;
   justify-content: center;
   font-size: 12px;
@@ -15920,6 +15919,7 @@ li {
   color: #292929;
 }
 .pacakge-section .package-list .package-card .package-footer .card-footer .footer-btn p.text-two-line {
+  margin-top: 24px;
   position: relative;
   transition: all 0.3s ease-in-out;
 }
