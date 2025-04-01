@@ -5,7 +5,9 @@
 @{
     var roots = Umbraco?.ContentAtRoot();
     var homeRoots = roots?.Where(x => x.IsDocumentType("purchaseFlow"))?.FirstOrDefault();
+    var globalWebSiteSetting = roots?.Where(x => x.IsDocumentType("globalWebSiteSetting"))?.FirstOrDefault();
     var navigation = homeRoots?.Children<PurchaseNavigation>()?.FirstOrDefault();
+    var globalSetting = globalWebSiteSetting?.Children<GlobalSetting>()?.FirstOrDefault();
 }
 <!DOCTYPE html>
 <html lang="da">
@@ -39,6 +41,10 @@
 </head>
 
 <body>
+    @if (!string.IsNullOrWhiteSpace(globalSetting?.TrackingScript))
+    {
+        @Html.Raw(globalSetting?.TrackingScript)
+    }
     <!---------------------------header--------------------------->
     <header class="header order-header">
         <div class="container-xl">

@@ -83,9 +83,9 @@ namespace UmbracoProject.App_Code.Services
         {
             var body = JsonConvert.SerializeObject(productOrder);
             RestResponse restResponse = await GetResponse($"{PackageHelper.PruductDetailsSendApiEndPoint}", body);
-            if (restResponse.StatusCode == System.Net.HttpStatusCode.OK)
-                return true;
-            return false;
+            if (restResponse.StatusCode == System.Net.HttpStatusCode.InternalServerError)
+                return false;
+            return true;
         }
 
         #endregion Post ordered product data to client api end

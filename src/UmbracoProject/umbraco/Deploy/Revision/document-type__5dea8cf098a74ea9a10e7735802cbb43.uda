@@ -12,10 +12,28 @@
   "CompositionContentTypes": [
     "umb://document-type/2109f566d115483084137e553c199f68"
   ],
-  "PropertyGroups": [],
+  "PropertyGroups": [
+    {
+      "Key": "dfcdbcf3-a77c-42fa-9d70-a1b086c8612c",
+      "Name": "Script Section",
+      "Alias": "scriptSection",
+      "PropertyTypes": [
+        {
+          "Key": "d0b6b31a-84f5-45d0-9b86-ccb135916062",
+          "Alias": "trackingScript",
+          "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+          "Name": "Tracking Script"
+        }
+      ]
+    }
+  ],
   "PropertyTypes": [],
   "Udi": "umb://document-type/5dea8cf098a74ea9a10e7735802cbb43",
   "Dependencies": [
+    {
+      "Udi": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+      "Ordering": true
+    },
     {
       "Udi": "umb://document-type/2109f566d115483084137e553c199f68",
       "Ordering": true

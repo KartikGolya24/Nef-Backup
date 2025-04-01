@@ -9,8 +9,9 @@
     var homeRoots = roots?.Where(x => x.IsDocumentType("home"))?.ToList();
     var globalWebSiteSetting = roots?.Where(x => x.IsDocumentType("globalWebSiteSetting"))?.FirstOrDefault();
     var globalNavigation = globalWebSiteSetting?.Children<Navigation>()?.FirstOrDefault();
+    var globalSetting = globalWebSiteSetting?.Children<GlobalSetting>()?.FirstOrDefault();
 
-    var globalSetting = Model?.Root()?.Children<WebSiteSetting>()?.FirstOrDefault()?.Children<HomeGlobalSetting>()?.FirstOrDefault();
+    var homeGlobalSetting = Model?.Root()?.Children<WebSiteSetting>()?.FirstOrDefault()?.Children<HomeGlobalSetting>()?.FirstOrDefault();
     var homeWebSiteSetting = Model?.Root()?.Children<WebSiteSetting>()?.FirstOrDefault();
     var navigation = homeWebSiteSetting?.Children<HomeNavigation>()?.FirstOrDefault();
 }
@@ -33,23 +34,23 @@
 
     <script src="~/assets/js/jquery.output.min.js"></script>
 
-    
+
     <link rel="apple-touch-icon" sizes="57x57" href="/media/w5zjbrap/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/media/bz4ddvo0/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/media/3lxjv4dh/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/media/ytjeochw/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/media/pdekpcou/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/media/dhidhpsl/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/media/b03pee5c/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/media/3nshoszm/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/media/se2haupg/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/media/onjkwtdi/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/media/5flfry5v/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/media/hovo1y3h/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/media/zbwhdrcx/favicon-16x16.png">
-<link rel="manifest" href="/media/ms2bjgl5/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/media/jc0efpeh/ms-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/media/bz4ddvo0/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/media/3lxjv4dh/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/media/ytjeochw/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/media/pdekpcou/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/media/dhidhpsl/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/media/b03pee5c/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/media/3nshoszm/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/media/se2haupg/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/media/onjkwtdi/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/media/5flfry5v/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/media/hovo1y3h/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/media/zbwhdrcx/favicon-16x16.png">
+    <link rel="manifest" href="/media/ms2bjgl5/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/media/jc0efpeh/ms-icon-144x144.png">
 
 
     @*<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>*@
@@ -57,8 +58,12 @@
 </head>
 
 <body>
+    @if (!string.IsNullOrWhiteSpace(globalSetting?.TrackingScript))
+    {
+        @Html.Raw(globalSetting?.TrackingScript)
+    }
     <!--------------------------- top-header------------------------->
-    <div class="top-header-outer @(globalSetting?.TabBackgroundTheme)">
+    <div class="top-header-outer @(homeGlobalSetting?.TabBackgroundTheme)">
         <div class="container-xl">
             <div class="top-header">
                 <div class="top-header-tabs">
@@ -99,7 +104,7 @@
         </div>
     </div>
     <div class="tab-outer" id="pills-tabContent">
-        <div id="tab_id" class="@(globalSetting?.Tab?.Trim() == "Erhverv" ? "business-tab" : globalSetting?.Tab?.Trim() == "Repræsentantskabsvalg" ? "Repræsentantskabsvalg-tab" :"Privat-tab") fade show active">
+        <div id="tab_id" class="@(homeGlobalSetting?.Tab?.Trim() == "Erhverv" ? "business-tab" : homeGlobalSetting?.Tab?.Trim() == "Repræsentantskabsvalg" ? "Repræsentantskabsvalg-tab" :"Privat-tab") fade show active">
 
             @Html.Partial("_Header", navigation)
 
@@ -129,7 +134,6 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                   
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn dark_blue_btn white" data-bs-dismiss="modal">Close</button>
