@@ -22,14 +22,14 @@
           "Key": "1d055f1f-cba3-4069-b6a1-62fdbee83b23",
           "Alias": "bodyScript",
           "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
-          "Name": "Body Script"
+          "Name": "Body Script",
+          "SortOrder": 1
         },
         {
           "Key": "d0b6b31a-84f5-45d0-9b86-ccb135916062",
           "Alias": "headScript",
           "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
-          "Name": "Head Script",
-          "SortOrder": 1
+          "Name": "Head Script"
         }
       ]
     }
