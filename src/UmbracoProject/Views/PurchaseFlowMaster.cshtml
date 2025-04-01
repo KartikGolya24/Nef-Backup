@@ -37,13 +37,16 @@
     <link rel="manifest" href="/media/ms2bjgl5/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/media/jc0efpeh/ms-icon-144x144.png">
-
+    @if (!string.IsNullOrWhiteSpace(globalSetting?.HeadScript))
+    {
+        @Html.Raw(globalSetting?.HeadScript)
+    }
 </head>
 
 <body>
-    @if (!string.IsNullOrWhiteSpace(globalSetting?.TrackingScript))
+    @if (!string.IsNullOrWhiteSpace(globalSetting?.BodyScript))
     {
-        @Html.Raw(globalSetting?.TrackingScript)
+        @Html.Raw(globalSetting?.BodyScript)
     }
     <!---------------------------header--------------------------->
     <header class="header order-header">

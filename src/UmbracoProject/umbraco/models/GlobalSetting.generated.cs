@@ -50,11 +50,19 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Tracking Script
+		/// Body Script
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("trackingScript")]
-		public virtual string TrackingScript => this.Value<string>(_publishedValueFallback, "trackingScript");
+		[ImplementPropertyType("bodyScript")]
+		public virtual string BodyScript => this.Value<string>(_publishedValueFallback, "bodyScript");
+
+		///<summary>
+		/// Head Script
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("headScript")]
+		public virtual string HeadScript => this.Value<string>(_publishedValueFallback, "headScript");
 	}
 }

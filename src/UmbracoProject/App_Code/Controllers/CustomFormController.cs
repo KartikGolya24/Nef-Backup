@@ -48,19 +48,27 @@ public class CustomFormController(
             };
             foreach (Field field in form.AllFields)
             {
-                var recordField = new RecordField(field)
+                try
                 {
-                    Alias = field.Alias,
-                    FieldId = field.Id,
-                    Key = Guid.NewGuid(),
-                    Record = record.Id,
-                    Values = new List<object>() { string.IsNullOrWhiteSpace(submittedValues[field.Alias]) ? string.Empty : submittedValues[field.Alias] }
-                };
-                record.RecordFields.Add(field.Id, recordField);
+
+                    var recordField = new RecordField(field)
+                    {
+                        Alias = field.Alias,
+                        FieldId = field.Id,
+                        Key = Guid.NewGuid(),
+                        Record = record.Id,
+                        Values = new List<object>() { string.IsNullOrWhiteSpace(submittedValues[field.Alias]) ? string.Empty : submittedValues[field.Alias] }
+                    };
+                    record.RecordFields.Add(field.Id, recordField);
+                }
+                catch (Exception ex)
+                {
+                }
             }
             await recordService.SubmitAsync(record, form);
             return Ok();
         }
+
         return BadRequest();
 
     }
