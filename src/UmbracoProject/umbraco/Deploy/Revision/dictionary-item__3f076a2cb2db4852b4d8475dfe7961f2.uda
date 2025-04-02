@@ -1,0 +1,38 @@
+{
+  "Name": "umb://dictionary-item/3f076a2cb2db4852b4d8475dfe7961f2",
+  "Alias": "",
+  "ItemKey": "PurchaseFlow.SecondStep.InvalidEmailError",
+  "ParentId": "27da38bd-3918-4b9a-8a62-4eb4134ed997",
+  "Translations": [
+    {
+      "Key": "3f076a2c-b2db-4852-b4d8-475dfe7961f2",
+      "Value": "Fejl - Indtast en korrekt emailadresse",
+      "LanguageIsoCode": "da-DK"
+    },
+    {
+      "Key": "3f076a2c-b2db-4852-b4d8-475dfe7961f2",
+      "Value": "",
+      "LanguageIsoCode": "en-US"
+    }
+  ],
+  "Udi": "umb://dictionary-item/3f076a2cb2db4852b4d8475dfe7961f2",
+  "Dependencies": [
+    {
+      "Udi": "umb://dictionary-item/27da38bd39184b9a8a624eb4134ed997",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/da-DK",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://language/en-US",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DictionaryItemArtifact",
+  "__version": "13.4.0"
+}

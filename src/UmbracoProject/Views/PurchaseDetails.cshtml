@@ -60,6 +60,10 @@
 	var D_OtherBillingAddress = Umbraco.GetDictionaryValue("FormFileds.OtherBillingAddress");
 	var D_OtherBillingAddress_P = Umbraco.GetDictionaryValue("FormFileds.OtherBillingAddressPlaceHolder");
 
+	var firstStepHeading = Umbraco.GetDictionaryValue("PurchaseFlow.FirstStep.Heading");
+	var secondStepHeading = Umbraco.GetDictionaryValue("PurchaseFlow.SecondStep.Heading");
+	var invalidEmailError = Umbraco.GetDictionaryValue("PurchaseFlow.SecondStep.InvalidEmailError");
+
 	var addressFormModel = JsonConvert.SerializeObject(new
 	{
 		flowName = flowName,
@@ -290,7 +294,10 @@
 		D_OtherBillingAddress:'@Html.Raw(D_OtherBillingAddress)',
 		D_OtherBillingAddress_P:'@Html.Raw(D_OtherBillingAddress_P)',
 		reviewStepPracticalSectionTitle:'@Html.Raw(reviewStepPracticalSectionTitle)',
-		reviewStepProductSectionTitle:'@Html.Raw(reviewStepProductSectionTitle)'
+		reviewStepProductSectionTitle:'@Html.Raw(reviewStepProductSectionTitle)',
+		firstStepHeading:'@Html.Raw(firstStepHeading)',
+		secondStepHeading:'@Html.Raw(secondStepHeading)',
+		invalidEmailError:'@Html.Raw(invalidEmailError)',
 	}
 </script>
 <purchase-flow :address-form-model="@addressFormModel"

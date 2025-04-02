@@ -164,7 +164,7 @@
               <h4 class="step-name">{{lang('D_FirstStep')}}</h4>
             </div>
             <div class="right">
-              <p class="para">Du har valgt:</p>
+              <p class="para">{{lang('firstStepHeading')}}</p>
               <p class="para"><strong>Bestemme selv ({{selectedCategory.value.CategoryName}})</strong></p>
               <div class="checkmark">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -190,7 +190,7 @@
               <h4 class="step-name">{{lang('D_SecondStep')}}</h4>
             </div>
             <div class="right" v-if="currentStep !=='information'">
-              <p class="para">Du har udfyldt:</p>
+              <p class="para">{{lang('secondStepHeading')}}</p>
               <p class="para"><strong>{{form.deliveryAddress}}</strong></p>
               <div class="checkmark">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -229,7 +229,7 @@
                       <label for="" class="label">{{lang('D_Email')}}<span class="required">*</span></label>
                       <input type="text" class="form-control" :placeholder="lang('D_Email_P')" v-model="form.email">
                       <p v-if="!validateEmail" class="error-text">
-                        Fejl - Indtast en korrekt emailadresse
+                        {{lang('invalidEmailError')}}
                       </p>
                     </div>
                   </div>
@@ -371,7 +371,7 @@
             </div>
 
           </div>
-          <div class="col-md-12">
+          <div class="col-md-12"> 
             <div class="multiple-buttons">
               <a href="javascript:void(0)" type="button" class="btn white_bg_btn" @click="back">
                 Tilbage

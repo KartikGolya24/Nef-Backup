@@ -55,7 +55,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "13.7.2+fd5b8de")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("cardDescription")]
-		public virtual string CardDescription => this.Value<string>(_publishedValueFallback, "cardDescription");
+		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString CardDescription => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "cardDescription");
 
 		///<summary>
 		/// Card Footer

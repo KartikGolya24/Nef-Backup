@@ -34,7 +34,7 @@
         {
           "Key": "43a6798a-3bcf-4e0c-9113-80581a552855",
           "Alias": "cardDescription",
-          "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+          "DataType": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
           "Name": "Card Description",
           "SortOrder": 3
         },
@@ -62,6 +62,10 @@
       "Ordering": true
     },
     {
+      "Udi": "umb://data-type/2689e3c7f6c44c52a2bbf336eaa9c2e2",
+      "Ordering": true
+    },
+    {
       "Udi": "umb://data-type/2f42fd89a2a44d95aece4e93b933793f",
       "Ordering": true
     },
@@ -71,10 +75,6 @@
     },
     {
       "Udi": "umb://data-type/9e5db865664d4c7c871294f4b39840f3",
-      "Ordering": true
-    },
-    {
-      "Udi": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
       "Ordering": true
     },
     {
