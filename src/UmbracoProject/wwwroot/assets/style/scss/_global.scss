@@ -1005,6 +1005,18 @@ li {
                     font-size: 16px;
                     line-height: 27px;
                     color: $black-700;
+
+                    ul, ol {
+                        padding: 12px 0 12px 1rem;
+
+                        li {
+                            list-style: inherit;
+                        }
+                    }
+                    img {
+                        border-radius: 8px;
+                        margin: 12px 12px 12px 0;
+                    }
                 }
             }
         }
@@ -1954,7 +1966,7 @@ li {
         }
 
         &.left-bottom {
-            transform: translate(-22%, -15%);
+            transform: translate(-22%, -20%);
             left: 0;
             top: 50%;
             bottom: auto;

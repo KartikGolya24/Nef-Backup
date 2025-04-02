@@ -11448,6 +11448,7 @@ textarea.form-control {
   height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: #ffffff;
 }
 .service-card .card-outer .card-detail {
   display: flex;
@@ -11462,6 +11463,7 @@ textarea.form-control {
   height: 56px;
   border-radius: 8px;
   padding: 10px;
+  border: 2px solid #37B4B4;
 }
 .service-card .card-outer .card-detail .card-icon svg {
   width: 32px;
@@ -11485,21 +11487,6 @@ textarea.form-control {
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
-}
-.service-card .card-outer.dark_blue_bg {
-  background-color: #284655;
-}
-.service-card .card-outer.dark_blue_bg .card-icon {
-  border: 2px solid #37B4B4;
-}
-.service-card .card-outer.dark_blue_bg .card-icon svg path {
-  stroke: #ffffff;
-}
-.service-card .card-outer.dark_blue_bg .card-body h3, .service-card .card-outer.dark_blue_bg .card-body .h3 {
-  color: #ffffff;
-}
-.service-card .card-outer.dark_blue_bg .card-body p {
-  color: #efefef;
 }
 
 .available-section {
@@ -13849,6 +13836,16 @@ li {
   line-height: 27px;
   color: #525252;
 }
+.accordian-section.accordion .accordion-item .accordion-collapse .accordion-body ul, .accordian-section.accordion .accordion-item .accordion-collapse .accordion-body ol {
+  padding: 12px 0 12px 1rem;
+}
+.accordian-section.accordion .accordion-item .accordion-collapse .accordion-body ul li, .accordian-section.accordion .accordion-item .accordion-collapse .accordion-body ol li {
+  list-style: inherit;
+}
+.accordian-section.accordion .accordion-item .accordion-collapse .accordion-body img {
+  border-radius: 8px;
+  margin: 12px 12px 12px 0;
+}
 
 .top-header-outer .top-header {
   padding: 0px 0 0px 134px;
@@ -14499,7 +14496,7 @@ li {
   top: 50%;
 }
 .alt-section .section-position-img.left-bottom {
-  transform: translate(-22%, -15%);
+  transform: translate(-22%, -20%);
   left: 0;
   top: 50%;
   bottom: auto;
@@ -16281,23 +16278,71 @@ li {
   margin: 0;
 }
 
+.service-card .card-outer ul, .service-card .card-outer ol {
+  padding: 12px 0 12px 1rem;
+}
+.service-card .card-outer ul li, .service-card .card-outer ol li {
+  list-style: inherit;
+}
+.service-card .card-outer .card-body a:not(.btn) {
+  color: inherit;
+  text-decoration: underline;
+}
+.service-card .card-outer .card-body a:not(.btn):hover, .service-card .card-outer .card-body a:not(.btn):focus {
+  text-decoration: none;
+}
+.service-card .card-outer .card-body img {
+  border-radius: 8px;
+  margin: 12px 0;
+}
+.service-card .card-outer.dark_blue_bg {
+  background-color: #284655;
+}
+.service-card .card-outer.dark_blue_bg h1, .service-card .card-outer.dark_blue_bg .h1, .service-card .card-outer.dark_blue_bg h2, .service-card .card-outer.dark_blue_bg .h2, .service-card .card-outer.dark_blue_bg h3, .service-card .card-outer.dark_blue_bg .h3, .service-card .card-outer.dark_blue_bg h4, .service-card .card-outer.dark_blue_bg .h4, .service-card .card-outer.dark_blue_bg h5, .service-card .card-outer.dark_blue_bg .h5, .service-card .card-outer.dark_blue_bg h6, .service-card .card-outer.dark_blue_bg .h6 {
+  color: #ffffff;
+}
+.service-card .card-outer.dark_blue_bg .card-icon {
+  border: 2px solid #37B4B4;
+}
+.service-card .card-outer.dark_blue_bg .card-icon svg path {
+  stroke: #ffffff;
+}
+.service-card .card-outer.dark_blue_bg .card-body h1, .service-card .card-outer.dark_blue_bg .card-body .h1, .service-card .card-outer.dark_blue_bg .card-body h2, .service-card .card-outer.dark_blue_bg .card-body .h2, .service-card .card-outer.dark_blue_bg .card-body h3, .service-card .card-outer.dark_blue_bg .card-body .h3, .service-card .card-outer.dark_blue_bg .card-body h4, .service-card .card-outer.dark_blue_bg .card-body .h4, .service-card .card-outer.dark_blue_bg .card-body h5, .service-card .card-outer.dark_blue_bg .card-body .h5, .service-card .card-outer.dark_blue_bg .card-body h6, .service-card .card-outer.dark_blue_bg .card-body .h6 {
+  color: #ffffff;
+}
+.service-card .card-outer.dark_blue_bg .card-body p {
+  color: #efefef;
+}
+.service-card .card-outer.dark_blue_bg ul li, .service-card .card-outer.dark_blue_bg ol li {
+  color: #efefef;
+}
 .service-card .card-outer.light_purple_bg {
   background-color: #F8F0F7;
 }
+.service-card .card-outer.light_purple_bg h1, .service-card .card-outer.light_purple_bg .h1, .service-card .card-outer.light_purple_bg h2, .service-card .card-outer.light_purple_bg .h2, .service-card .card-outer.light_purple_bg h3, .service-card .card-outer.light_purple_bg .h3, .service-card .card-outer.light_purple_bg h4, .service-card .card-outer.light_purple_bg .h4, .service-card .card-outer.light_purple_bg h5, .service-card .card-outer.light_purple_bg .h5, .service-card .card-outer.light_purple_bg h6, .service-card .card-outer.light_purple_bg .h6 {
+  color: #292929;
+}
 .service-card .card-outer.light_purple_bg .card-icon {
   background-color: #A45699;
+  border-color: #A45699;
 }
 .service-card .card-outer.light_purple_bg .card-icon svg path {
   stroke: #ffffff;
 }
-.service-card .card-outer.light_purple_bg .card-body h3, .service-card .card-outer.light_purple_bg .card-body .h3 {
+.service-card .card-outer.light_purple_bg .card-body h1, .service-card .card-outer.light_purple_bg .card-body .h1, .service-card .card-outer.light_purple_bg .card-body h2, .service-card .card-outer.light_purple_bg .card-body .h2, .service-card .card-outer.light_purple_bg .card-body h3, .service-card .card-outer.light_purple_bg .card-body .h3, .service-card .card-outer.light_purple_bg .card-body h4, .service-card .card-outer.light_purple_bg .card-body .h4, .service-card .card-outer.light_purple_bg .card-body h5, .service-card .card-outer.light_purple_bg .card-body .h5, .service-card .card-outer.light_purple_bg .card-body h6, .service-card .card-outer.light_purple_bg .card-body .h6 {
   color: #292929;
 }
 .service-card .card-outer.light_purple_bg .card-body p {
   color: #464646;
 }
+.service-card .card-outer.light_purple_bg ul li, .service-card .card-outer.light_purple_bg ol li {
+  color: #464646;
+}
 .service-card .card-outer.steel_blue_bg {
   background-color: #4878A2;
+}
+.service-card .card-outer.steel_blue_bg h1, .service-card .card-outer.steel_blue_bg .h1, .service-card .card-outer.steel_blue_bg h2, .service-card .card-outer.steel_blue_bg .h2, .service-card .card-outer.steel_blue_bg h3, .service-card .card-outer.steel_blue_bg .h3, .service-card .card-outer.steel_blue_bg h4, .service-card .card-outer.steel_blue_bg .h4, .service-card .card-outer.steel_blue_bg h5, .service-card .card-outer.steel_blue_bg .h5, .service-card .card-outer.steel_blue_bg h6, .service-card .card-outer.steel_blue_bg .h6 {
+  color: #ffffff;
 }
 .service-card .card-outer.steel_blue_bg .card-icon {
   border: 2px solid #ffffff;
@@ -16305,14 +16350,20 @@ li {
 .service-card .card-outer.steel_blue_bg .card-icon svg path {
   stroke: #ffffff;
 }
-.service-card .card-outer.steel_blue_bg .card-body h3, .service-card .card-outer.steel_blue_bg .card-body .h3 {
+.service-card .card-outer.steel_blue_bg .card-body h1, .service-card .card-outer.steel_blue_bg .card-body .h1, .service-card .card-outer.steel_blue_bg .card-body h2, .service-card .card-outer.steel_blue_bg .card-body .h2, .service-card .card-outer.steel_blue_bg .card-body h3, .service-card .card-outer.steel_blue_bg .card-body .h3, .service-card .card-outer.steel_blue_bg .card-body h4, .service-card .card-outer.steel_blue_bg .card-body .h4, .service-card .card-outer.steel_blue_bg .card-body h5, .service-card .card-outer.steel_blue_bg .card-body .h5, .service-card .card-outer.steel_blue_bg .card-body h6, .service-card .card-outer.steel_blue_bg .card-body .h6 {
   color: #ffffff;
 }
 .service-card .card-outer.steel_blue_bg .card-body p {
   color: #ffffff;
 }
+.service-card .card-outer.steel_blue_bg ul li, .service-card .card-outer.steel_blue_bg ol li {
+  color: #ffffff;
+}
 .service-card .card-outer.turquoise_bg {
   background-color: #EEF4F4;
+}
+.service-card .card-outer.turquoise_bg h1, .service-card .card-outer.turquoise_bg .h1, .service-card .card-outer.turquoise_bg h2, .service-card .card-outer.turquoise_bg .h2, .service-card .card-outer.turquoise_bg h3, .service-card .card-outer.turquoise_bg .h3, .service-card .card-outer.turquoise_bg h4, .service-card .card-outer.turquoise_bg .h4, .service-card .card-outer.turquoise_bg h5, .service-card .card-outer.turquoise_bg .h5, .service-card .card-outer.turquoise_bg h6, .service-card .card-outer.turquoise_bg .h6 {
+  color: #292929;
 }
 .service-card .card-outer.turquoise_bg .card-icon {
   background-color: #37B4B4;
@@ -16320,14 +16371,20 @@ li {
 .service-card .card-outer.turquoise_bg .card-icon svg path {
   stroke: #ffffff;
 }
-.service-card .card-outer.turquoise_bg .card-body h3, .service-card .card-outer.turquoise_bg .card-body .h3 {
+.service-card .card-outer.turquoise_bg .card-body h1, .service-card .card-outer.turquoise_bg .card-body .h1, .service-card .card-outer.turquoise_bg .card-body h2, .service-card .card-outer.turquoise_bg .card-body .h2, .service-card .card-outer.turquoise_bg .card-body h3, .service-card .card-outer.turquoise_bg .card-body .h3, .service-card .card-outer.turquoise_bg .card-body h4, .service-card .card-outer.turquoise_bg .card-body .h4, .service-card .card-outer.turquoise_bg .card-body h5, .service-card .card-outer.turquoise_bg .card-body .h5, .service-card .card-outer.turquoise_bg .card-body h6, .service-card .card-outer.turquoise_bg .card-body .h6 {
   color: #292929;
 }
 .service-card .card-outer.turquoise_bg .card-body p {
   color: #464646;
 }
+.service-card .card-outer.turquoise_bg ul li, .service-card .card-outer.turquoise_bg ol li {
+  color: #464646;
+}
 .service-card .card-outer.space_blue_bg {
   background-color: #192A33;
+}
+.service-card .card-outer.space_blue_bg h1, .service-card .card-outer.space_blue_bg .h1, .service-card .card-outer.space_blue_bg h2, .service-card .card-outer.space_blue_bg .h2, .service-card .card-outer.space_blue_bg h3, .service-card .card-outer.space_blue_bg .h3, .service-card .card-outer.space_blue_bg h4, .service-card .card-outer.space_blue_bg .h4, .service-card .card-outer.space_blue_bg h5, .service-card .card-outer.space_blue_bg .h5, .service-card .card-outer.space_blue_bg h6, .service-card .card-outer.space_blue_bg .h6 {
+  color: #ffffff;
 }
 .service-card .card-outer.space_blue_bg .card-icon {
   border: 2px solid #37B4B4;
@@ -16335,10 +16392,13 @@ li {
 .service-card .card-outer.space_blue_bg .card-icon svg path {
   stroke: #ffffff;
 }
-.service-card .card-outer.space_blue_bg .card-body h3, .service-card .card-outer.space_blue_bg .card-body .h3 {
+.service-card .card-outer.space_blue_bg .card-body h1, .service-card .card-outer.space_blue_bg .card-body .h1, .service-card .card-outer.space_blue_bg .card-body h2, .service-card .card-outer.space_blue_bg .card-body .h2, .service-card .card-outer.space_blue_bg .card-body h3, .service-card .card-outer.space_blue_bg .card-body .h3, .service-card .card-outer.space_blue_bg .card-body h4, .service-card .card-outer.space_blue_bg .card-body .h4, .service-card .card-outer.space_blue_bg .card-body h5, .service-card .card-outer.space_blue_bg .card-body .h5, .service-card .card-outer.space_blue_bg .card-body h6, .service-card .card-outer.space_blue_bg .card-body .h6 {
   color: #ffffff;
 }
 .service-card .card-outer.space_blue_bg .card-body p {
+  color: #efefef;
+}
+.service-card .card-outer.space_blue_bg ul li, .service-card .card-outer.space_blue_bg ol li {
   color: #efefef;
 }
 
